@@ -598,6 +598,138 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
   .owner-in{padding:24px 20px}
   .cp{font-size:12px;padding:7px 10px}
 }
+
+/* ===== Booking controls (mọi kích thước) ===== */
+.days{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.days button{min-height:46px;border-radius:12px;background:var(--bg2);border:1px solid var(--line);font-weight:700;font-size:14px}
+.days button.on{border-color:var(--gold);background:rgba(240,181,69,.14);color:var(--gold2);box-shadow:0 0 0 1px var(--gold)}
+.stepper{grid-column:1/-1;display:grid;grid-template-columns:56px 1fr 56px;align-items:center;gap:8px;padding:6px;border-radius:14px;background:var(--bg2);border:1px solid var(--line)}
+.stepper button{height:46px;border-radius:10px;background:var(--surface2);font-size:24px;font-weight:700;line-height:1}
+.stepper b{text-align:center;font-size:17px}
+.more{grid-column:1/-1;border-radius:14px;background:var(--bg2);border:1px solid var(--line);padding:4px 12px}
+.more summary{cursor:pointer;padding:10px 0;font-weight:600;font-size:13.5px;color:var(--muted)}
+.more[open]{display:flex;flex-direction:column;gap:8px;padding-bottom:12px}
+.more .field{background:var(--surface);border:1px solid var(--line)}
+.m-quick,.fab{display:none}
+.calc-big{display:none}
+
+/* ===== MOBILE-FIRST: một tay, một chạm ===== */
+@media (max-width:720px){
+  body{font-size:16px}
+  .meta{font-size:14px}
+  .sec-head{margin-bottom:14px}
+  .sec-head h2{font-size:30px}
+  .sec-head .muted{display:none}
+  section.block{padding-block:28px}
+
+  /* hero gọn */
+  .hero2-in{padding-block:26px 24px}
+  .hero2 .eyebrow{display:none}
+  .hero2 h1{font-size:40px;margin-top:0;max-width:none}
+  .hero2 .lead{display:none}
+  .hero2 .search{display:none}
+  .trust{display:none}
+  .m-quick{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+  .mq-label{font-size:15px;font-weight:700;color:#ffd98a}
+  .mq-cities{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .mq-cities button{min-height:64px;border-radius:16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;backdrop-filter:blur(6px)}
+  .mq-cities button b{font-size:16px}
+  .mq-cities button small{font-size:11.5px;color:#d9d0e6}
+  .mq-cities button:active{background:#f0b545;color:#1a1206}
+  .mq-acts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .mq-acts button,.mq-acts a{min-height:72px;border-radius:16px;background:linear-gradient(160deg,#ffd98a,#f0b545);color:#1a1206;font-weight:800;font-size:12.5px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;line-height:1.1}
+  .mq-acts i{font-style:normal;font-size:24px}
+
+  /* xếp hạng: mỗi bar một thẻ to */
+  .rk-tabs .chip{min-height:46px;font-size:15px;padding:10px 18px}
+  .rank{gap:14px}
+  .rk1-body h3{font-size:30px}
+  .rk-perks .pk{font-size:14px;padding:7px 12px}
+  .rk-cta{flex-direction:column;align-items:stretch}
+  .rk-cta .price{text-align:center;font-size:14px}
+  .rk-cta .btn,.rk-row .btn{min-height:54px;font-size:17px;border-radius:14px}
+  .rk-list{gap:14px}
+  .rk-row{display:flex;flex-direction:column;padding:0;gap:0;overflow:hidden;position:relative;border-radius:20px}
+  .rk-row:hover{transform:none}
+  .rk-th{width:100%;height:auto;aspect-ratio:16/8;border-radius:0}
+  .rk-n{position:absolute;top:10px;left:14px;z-index:2;font-size:46px;color:#ffd98a;-webkit-text-stroke:0;text-shadow:0 2px 14px rgba(0,0,0,.8)}
+  .rk-info{padding:12px 16px 0;gap:4px}
+  .rk-info b{font-size:24px}
+  .rk-info .meta{display:flex;font-size:14px}
+  .rk-mini{font-size:16px}
+  .rk-row .btn{margin:12px 16px 16px}
+
+  /* ưu đãi: 4 dòng rõ ràng */
+  .perks{grid-template-columns:1fr;gap:10px}
+  .perk{flex-direction:row;align-items:stretch}
+  .perk-ph{width:116px;aspect-ratio:auto;min-height:96px;flex:none}
+  .perk-v{font-size:30px;left:10px;bottom:8px}
+  .perk-b{padding:12px 14px;display:flex;flex-direction:column;justify-content:center}
+  .perk-b h3{font-size:19px}
+  .perk-b p{font-size:13.5px}
+  .calc-big{display:block;font-size:20px;font-weight:700;margin-top:8px;line-height:1.3}
+  .calc-big span{color:var(--muted)}
+  .calc-big b{color:var(--gold2);font-family:var(--font-display);font-size:28px;font-weight:600}
+  .calc-row{display:none}
+
+  /* giờ vàng */
+  .gh-rail{grid-auto-columns:86%}
+  .gh h3{font-size:22px}
+  .gh .foot{flex-direction:column;align-items:stretch}
+  .gh .foot .meta{display:none}
+  .gh .foot .btn{min-height:52px;font-size:16px;border-radius:14px}
+  .gh .slot{font-size:16px}
+
+  /* thành phố, hạng */
+  .ct-txt b{font-size:22px}
+  .tiers2{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:80%;overflow-x:auto;scroll-snap-type:x mandatory;padding-top:14px;padding-bottom:6px;scrollbar-width:none}
+  .tiers2 .tc{scroll-snap-align:start}
+  .tc ul{font-size:15px}
+  .tc-h b{font-size:26px}
+  .owner-in .btn{min-height:52px;font-size:16px}
+
+  /* thẻ bar trong danh sách */
+  .card h3{font-size:26px}
+  .deal,.ghline{font-size:14.5px}
+  .bonus{font-size:14px}
+  .card-foot{flex-direction:column;align-items:stretch;gap:10px}
+  .card-foot .price{text-align:center}
+  .card-foot .btn{min-height:52px;font-size:16px;border-radius:14px}
+  .chip{min-height:46px;font-size:15px}
+  .filters .field{min-height:48px}
+
+  /* nút gọi nổi */
+  .fab{display:flex;position:fixed;right:max(14px,env(safe-area-inset-right,0px));bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:56;flex-direction:column;align-items:center;justify-content:center;width:54px;height:54px;border-radius:50%;background:#22c55e;color:#fff;font-size:11px;font-weight:800;box-shadow:0 10px 30px rgba(34,197,94,.45);line-height:1.1}
+  .fab span{font-size:19px}
+  body:has(.modal:not([hidden])) .fab{display:none}
+
+  /* thanh dưới to hơn */
+  .bnav a{font-size:12px;min-height:56px}
+  .bnav a i{font-size:22px}
+
+  /* trang đặt bàn: form lên đầu, chữ to */
+  .sheet-body{display:flex;flex-direction:column;gap:20px}
+  .book{order:-1;padding:16px;box-shadow:none}
+  .book > .eyebrow,.book > h3{display:none}
+  .form{gap:10px;margin-top:0}
+  .lbl{font-size:12.5px}
+  .lbl .hint{font-size:12.5px}
+  .slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .slot{min-height:56px;font-size:16px;min-width:0}
+  .slot small{font-size:11px}
+  .seg button{min-height:60px;font-size:14.5px}
+  .days button{min-height:52px;font-size:15px}
+  .stepper button{height:52px}
+  .sum{font-size:14.5px}
+  .sum .row.total{font-size:18px}
+  #confirmBtn{display:none}
+  .mob-cta{padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+  .mob-cta .tot b{font-size:24px}
+  .mob-cta .btn{min-height:56px;font-size:17px;padding-inline:22px;border-radius:16px}
+  .sheet-title h2{font-size:34px}
+  .close{width:48px;height:48px;font-size:20px}
+  .deal-row small{font-size:13px}
+}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -639,21 +771,32 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
         <div class="field"><label for="sGuests">Số người</label><select id="sGuests"><option>2 người</option><option selected>4 người</option><option>6 người</option><option>8 người</option><option>10+ người</option></select></div>
         <button class="btn btn-gold" type="submit">Tìm bar</button>
       </form>
+      <div class="m-quick">
+        <div class="mq-label">Tối nay đi đâu? Chạm vào thành phố</div>
+        <div class="mq-cities" id="mqCities"></div>
+        <div class="mq-acts">
+          <button type="button" data-jump="rankSec"><i>🔥</i>Top bar</button>
+          <button type="button" data-jump="ghSec"><i>⚡</i>Giờ vàng</button>
+          <button type="button" data-jump="perksSec"><i>🎁</i>Ưu đãi</button>
+          <a href="tel:19008886"><i>📞</i>Gọi đặt hộ</a>
+        </div>
+      </div>
       <div class="trust"><span>✓ Không cần cọc</span><span>✓ Huỷ miễn phí trước 18:00</span><span>✓ Xác nhận qua Zalo trong 1 phút</span></div>
     </div>
   </section>
 
-  <section class="block"><div class="wrap">
+  <section class="block" id="rankSec"><div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Bảng xếp hạng tuần này</div><h2>Top bar được đặt nhiều nhất</h2></div><a class="lnk" href="#kham-pha">Xem tất cả bar →</a></div>
     <div class="rail rk-tabs" id="rankTabs"></div>
     <div class="rank" id="rank"></div>
   </div></section>
 
-  <section class="block perks-sec"><div class="wrap">
+  <section class="block perks-sec" id="perksSec"><div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Quyền lợi khi đặt qua Bartop</div><h2>4 ưu đãi cộng dồn</h2></div></div>
     <div class="perks" id="perks"></div>
     <div class="calc">
       <div class="calc-h"><b>Ví dụ thực tế</b><span>Bàn 4 người tại Mộc Sky Bar, đến 18:00, bill 3.000.000đ</span></div>
+      <div class="calc-big num">Bill 3 triệu <span>→</span> bạn chỉ trả <b>1,65 triệu</b></div>
       <div class="calc-row num">
         <span class="cp">Bill <b>3.000.000đ</b></span>
         <span class="cp ok">Deal bar <b>-600.000đ</b></span>
@@ -665,7 +808,7 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
     </div>
   </div></section>
 
-  <section class="block"><div class="wrap">
+  <section class="block" id="ghSec"><div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">⚡ Đặt sớm, giảm sâu</div><h2>Giờ vàng tối nay</h2></div><span class="muted" style="font-size:13.5px;max-width:42ch">Đến trong 2 giờ đầu bar mở cửa để giảm thêm 10–20%.</span></div>
     <div class="gh-rail" id="ghRail"></div>
   </div></section>
@@ -866,6 +1009,7 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
   <a href="#chu-bar" data-v="partner"><i>▲</i>Chủ bar</a>
 </nav>
 
+<a class="fab" href="tel:19008886" aria-label="Gọi tổng đài đặt bàn hộ 1900 8886"><span>📞</span>Đặt hộ</a>
 <div class="modal" id="modal" hidden>
   <div class="sheet" role="dialog" aria-modal="true" id="sheet"></div>
 </div>
@@ -1079,6 +1223,10 @@ function initHome(){
   const d=new Date();document.getElementById('sDate').value=d.toISOString().slice(0,10);
   document.getElementById('searchForm').onsubmit=e=>{e.preventDefault();setCity(sc.value)};
   renderRank();renderPerks();renderCityTiles();
+  const mq=document.getElementById('mqCities');
+  mq.innerHTML=['hn','sg','dn','nt','pq','vt'].map(id=>{const c=CITIES.find(x=>x.id===id);return `<button type="button" data-c="${id}"><b>${c.name}</b><small>${c.n} bar</small></button>`}).join('');
+  mq.onclick=e=>{const b=e.target.closest('button');if(b)setCity(b.dataset.c)};
+  document.querySelector('.mq-acts').onclick=e=>{const b=e.target.closest('[data-jump]');if(b){const t=document.getElementById(b.dataset.jump);window.scrollTo({top:t.getBoundingClientRect().top+scrollY-64,behavior:'smooth'})}};
   renderGH();setInterval(renderGH,60000);
 }
 
@@ -1087,7 +1235,7 @@ const TABLE={normal:{label:'Bàn thường',min:0},vip:{label:'Bàn VIP',min:500
 let cur=null,bk={};
 function openBar(id,time){
   cur=BARS.find(b=>b.id===id);
-  bk={table:'normal',guests:4,spend:Math.round((cur.price[0]+cur.price[1])/2*4/100)*100,time:time||cur.slots[Math.min(3,cur.slots.length-1)],usePts:false,pts:0};
+  bk={table:'normal',guests:4,spend:Math.round((cur.price[0]+cur.price[1])/2*4/100)*100,time:time||cur.slots[Math.min(3,cur.slots.length-1)],usePts:false,pts:0,day:0,date:new Date().toISOString().slice(0,10),more:false,note:''};
   const rv=[0,1,2].map(i=>{const r=REVIEWERS[(id+i*3)%REVIEWERS.length];return `<div class="review"><span class="avatar">${r[0].split(' ').map(w=>w[0]).join('')}</span><div><div class="who">${r[0]}<span class="tier-tag">${r[1]}</span></div><div class="stars">${'★'.repeat(5-(i%2))}${'☆'.repeat(i%2)}</div><p>${REVIEW_TEXT[(id+i)%REVIEW_TEXT.length]}</p></div></div>`}).join('');
   document.getElementById('sheet').innerHTML=`
     <div class="sheet-art">${barImg(cur,1400)}<button class="close" id="closeM" aria-label="Đóng">✕</button>
@@ -1115,12 +1263,12 @@ function openBar(id,time){
       </div>
       <aside class="book" id="bookBox"></aside>
     </div>
-    <div class="mob-cta" id="mobCta"><div class="tot">Thanh toán dự kiến<b class="num" id="mobTot"></b></div><button class="btn btn-gold" id="mobGo">Đặt bàn ngay</button></div>`;
+    <div class="mob-cta" id="mobCta"><div class="tot">Thanh toán dự kiến<b class="num" id="mobTot"></b></div><button class="btn btn-gold" id="mobGo">Xác nhận đặt bàn</button></div>`;
   paintCanvases(document.getElementById('sheet'));
   renderBook();
   const m=document.getElementById('modal');m.hidden=false;document.body.style.overflow='hidden';
   document.getElementById('closeM').onclick=closeM;
-  document.getElementById('mobGo').onclick=()=>document.getElementById('bookBox').scrollIntoView({behavior:'smooth',block:'start'});
+  document.getElementById('mobGo').onclick=()=>{const b=document.getElementById('confirmBtn');if(b)b.click()};
   document.getElementById('sheet').scrollTop=0;
 }
 function closeM(){document.getElementById('modal').hidden=true;document.body.style.overflow=''}
@@ -1135,23 +1283,29 @@ function calc(){
   const total=after-ptsK;
   return {spend,d1,d2,d3,golden,after,maxPts,pts,ptsK,total,earn:Math.round(total/10*1.5)};
 }
+function bookDate(){if(bk.day==='p')return bk.date;const d=new Date();d.setDate(d.getDate()+bk.day);return d.toISOString().slice(0,10)}
 function renderBook(){
   const c=calc();const d=new Date();
   document.getElementById('bookBox').innerHTML=`
     <div class="eyebrow">Đặt bàn</div><h3>${cur.name}</h3>
     <form class="form" id="bookForm">
-      <div class="field"><label for="bDate">Ngày</label><input type="date" id="bDate" value="${d.toISOString().slice(0,10)}"></div>
-      <div class="field"><label for="bGuests">Số khách</label><select id="bGuests">${[2,4,6,8,10,12].map(n=>`<option ${n===bk.guests?'selected':''}>${n}</option>`).join('')}</select></div>
+      <div class="lbl">Ngày</div>
+      <div class="days" id="days">${[['0','Tối nay'],['1','Ngày mai'],['p','Chọn ngày']].map(([k,v])=>`<button type="button" data-d="${k}" class="${String(bk.day)===k?'on':''}">${v}</button>`).join('')}</div>
+      ${bk.day==='p'?`<div class="field full"><label for="bDate">Chọn ngày</label><input type="date" id="bDate" value="${bk.date}"></div>`:''}
+      <div class="lbl">Số khách</div>
+      <div class="stepper" id="stepper"><button type="button" data-g="-1" aria-label="Bớt 1 khách">−</button><b class="num">${bk.guests} người</b><button type="button" data-g="1" aria-label="Thêm 1 khách">+</button></div>
       <div class="lbl">Giờ đến<span class="hint">⚡ = giờ vàng, giảm thêm ${cur.gpct}%</span></div>
       <div class="slots" id="slots">${cur.slots.map(s=>`<button type="button" data-s="${s}" class="slot ${cur.golden.includes(s)?'gold':''} ${bk.time===s?'on':''}">${s}${cur.golden.includes(s)?`<small>⚡ -${cur.gpct}%</small>`:''}</button>`).join('')}</div>
       <div class="lbl">Loại bàn</div>
       <div class="seg" id="seg">${Object.entries(TABLE).map(([k,v])=>`<button type="button" data-t="${k}" class="${bk.table===k?'on':''}">${v.label}<small>${v.min?'Từ '+fmt(v.min)+'k':'Không tối thiểu'}</small></button>`).join('')}</div>
-      <div class="field full"><label for="bSpend">Dự kiến chi tiêu (nghìn đồng)</label><input type="number" id="bSpend" min="500" step="100" value="${bk.spend}"></div>
       <div class="pts-box">
         <div class="row"><span class="t">🧾 Dùng điểm trừ bill <b class="num">(${fmt(USER.points)} điểm ≈ ${fmt(USER.points*PT)}đ)</b></span><button type="button" class="sw ${bk.usePts?'on':''}" id="ptsSw" aria-label="Dùng điểm"></button></div>
         ${bk.usePts?`<input type="range" id="ptsRange" min="0" max="${c.maxPts}" step="10" value="${c.pts}"><div class="note num">Dùng <b>${fmt(c.pts)} điểm</b> = trừ <b>${money(c.ptsK)}</b> · tối đa ${fmt(c.maxPts)} điểm (30% bill)</div>`:''}
       </div>
-      <div class="field full"><label for="bNote">Ghi chú</label><textarea id="bNote" placeholder="Sinh nhật, muốn bàn gần DJ, có trẻ em…"></textarea></div>
+      <details class="more" id="more" ${bk.more?'open':''}><summary>Tuỳ chọn thêm: mức chi, ghi chú</summary>
+        <div class="field"><label for="bSpend">Dự kiến chi tiêu (nghìn đồng)</label><input type="number" id="bSpend" inputmode="numeric" min="500" step="100" value="${bk.spend}"></div>
+        <div class="field"><label for="bNote">Ghi chú</label><textarea id="bNote" placeholder="Sinh nhật, muốn bàn gần DJ…">${bk.note}</textarea></div>
+      </details>
     </form>
     <div class="sum num">
       <div class="row"><span>Dự kiến chi tiêu</span><b>${money(c.spend)}</b></div>
@@ -1170,12 +1324,16 @@ function renderBook(){
   box.querySelector('#slots').onclick=e=>{const b=e.target.closest('button');if(!b)return;bk.time=b.dataset.s;renderBook()};
   box.querySelector('#seg').onclick=e=>{const b=e.target.closest('button');if(!b)return;bk.table=b.dataset.t;bk.spend=Math.max(bk.spend,TABLE[bk.table].min);renderBook()};
   box.querySelector('#bSpend').onchange=e=>{bk.spend=+e.target.value||0;renderBook()};
-  box.querySelector('#bGuests').onchange=e=>{bk.guests=+e.target.value};
+  box.querySelector('#days').onclick=e=>{const b=e.target.closest('button');if(!b)return;bk.day=b.dataset.d==='p'?'p':+b.dataset.d;renderBook()};
+  const bd=box.querySelector('#bDate');if(bd)bd.onchange=e=>{bk.date=e.target.value};
+  box.querySelector('#stepper').onclick=e=>{const b=e.target.closest('button');if(!b)return;bk.guests=Math.min(30,Math.max(1,bk.guests+ +b.dataset.g));box.querySelector('#stepper b').textContent=bk.guests+' người'};
+  box.querySelector('#more').ontoggle=e=>{bk.more=e.target.open};
+  box.querySelector('#bNote').oninput=e=>{bk.note=e.target.value};
   box.querySelector('#ptsSw').onclick=()=>{bk.usePts=!bk.usePts;bk.pts=0;renderBook()};
-  const rg=box.querySelector('#ptsRange');if(rg)rg.oninput=e=>{bk.pts=+e.target.value;renderBook();box.querySelector('#ptsRange').focus()};
+  const rg=box.querySelector('#ptsRange');if(rg){rg.oninput=e=>{bk.pts=+e.target.value;const n=box.querySelector('.pts-box .note b');if(n)n.textContent=fmt(bk.pts)+' điểm'};rg.onchange=()=>renderBook()}
   box.querySelector('#confirmBtn').onclick=()=>{
     const code='BT-'+Math.random().toString(36).slice(2,6).toUpperCase()+'-'+String(Math.floor(Math.random()*900+100));
-    const c2=calc();const date=box.querySelector('#bDate').value.split('-').reverse().join('/'),time=bk.time;
+    const c2=calc();const date=bookDate().split('-').reverse().join('/'),time=bk.time;
     USER.points=USER.points-c2.pts+c2.earn;syncPts();
     if(c2.pts)PTS_HIST.unshift([`Trừ bill tại ${cur.name}`,date.slice(0,5),-c2.pts]);PTS_HIST.unshift([`Đặt bàn ${cur.name}`,date.slice(0,5),c2.earn]);renderPtsHist();
     box.innerHTML=`<div class="success"><div class="eyebrow" style="color:var(--ok)">✓ Đặt bàn thành công</div><div class="code">${code}</div>
