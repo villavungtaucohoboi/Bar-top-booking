@@ -1,0 +1,573 @@
+// Bartop – bộ build trang tĩnh chuẩn SEO. Không cần cài thư viện: `node src/build.mjs`
+// Nguồn: src/app.html (app + dữ liệu bar), src/seo-data.mjs (nội dung thành phố), content/blog/*.md (bài viết)
+// Đầu ra: thư mục gốc repo (GitHub Pages phục vụ trực tiếp).
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import { fileURLToPath } from 'node:url';
+import { CITY_SEO } from './seo-data.mjs';
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const CFG = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/config.json'), 'utf8'));
+const SITE = CFG.siteUrl.replace(/\/$/, '');
+const BASE = CFG.basePath.endsWith('/') ? CFG.basePath : CFG.basePath + '/';
+const INDEX = !!CFG.allowIndexing;
+const TODAY = new Date().toISOString().slice(0, 10);
+const GENERATED = []; // các thư mục/tệp do build sinh ra (để dọn sạch khi build lại)
+
+/* ---------- tiện ích ---------- */
+const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const slugify = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'd')
+  .toLowerCase().replace(/&/g, ' va ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+const fmt = n => Number(n).toLocaleString('vi-VN');
+const url = p => SITE + '/' + p.replace(/^\//, '');          // URL tuyệt đối
+const href = p => BASE + p.replace(/^\//, '');              // đường dẫn trong site
+const UNS = (id, w) => /^https?:/.test(id) ? id : `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w || 800}&q=70`;
+function write(rel, html) {
+  const f = path.join(ROOT, rel);
+  fs.mkdirSync(path.dirname(f), { recursive: true });
+  fs.writeFileSync(f, html);
+  GENERATED.push(rel);
+}
+const clip = (s, n) => { s = String(s).replace(/\s+/g, ' ').trim(); if (s.length <= n) return s; const c = s.slice(0, n - 1); return c.slice(0, c.lastIndexOf(' ')).replace(/[,.;:–-]+$/, '') + '…'; };
+const fmtDate = d => { const [y, m, dd] = String(d).split('-'); return `${dd}/${m}/${y}`; };
+
+/* ---------- 1. Dữ liệu từ app ---------- */
+const APP = fs.readFileSync(path.join(ROOT, 'src/app.html'), 'utf8');
+function grab(start, end) {
+  const a = APP.indexOf(start); const b = APP.indexOf(end, a);
+  if (a < 0 || b < 0) throw new Error('Không tìm thấy dữ liệu: ' + start);
+  return APP.slice(a, b);
+}
+const ctx = {};
+vm.createContext(ctx);
+vm.runInContext(
+  grab('const CITIES=[', 'const cityName') +
+  grab('const BARS=[', 'const pad=') +
+  grab('const MENU={', 'const REVIEWERS') +
+  grab('const POOL={', 'function imgTag') +
+  ';this.out={CITIES,BARS,MENU,POOL,TYPE_POOL,CITY_IMG};', ctx);
+const { CITIES, BARS, MENU, POOL, TYPE_POOL, CITY_IMG } = ctx.out;
+const pad = n => String(n).padStart(2, '0');
+for (const b of BARS) {
+  const o = +b.hours.slice(0, 2); let c = +b.hours.slice(8, 10); if (c <= o) c += 24;
+  b.gLabel = `${pad(o)}:00–${pad((o + 2) % 24)}:00`;
+  b.slug = slugify(b.name);
+  b.path = `bar/${b.slug}/`;
+}
+for (const c of CITIES) { c.slug = 'bar-' + slugify(c.name); c.path = c.slug + '/'; c.seo = CITY_SEO[c.id] || {}; }
+const cityOf = id => CITIES.find(c => c.id === id);
+const rankOrder = { top: 0, hot: 1, null: 2 };
+const ranked = list => list.slice().sort((a, b) => (rankOrder[a.boost] - rankOrder[b.boost]) || b.rating - a.rating);
+const barImgs = b => { const p = POOL[TYPE_POOL[b.type]] || POOL.cocktail; const k = b.id % p.length; return p.slice(k).concat(p.slice(0, k)).slice(0, 3); };
+const cityImgs = c => (CITY_IMG[c.id] || []).concat(POOL.club.slice(0, 2));
+const bookHref = b => href('') + '#dat-' + b.id;
+
+/* ảnh có dự phòng: thử lần lượt các ảnh, hết thì ẩn để lộ nền gradient */
+function img(ids, w, alt, { eager = false, ratio = [16, 9] } = {}) {
+  ids = [].concat(ids).filter(Boolean);
+  return `<img src="${esc(UNS(ids[0], w))}" data-c="${esc(ids.slice(1).join('|'))}" data-w="${w}" alt="${esc(alt)}" width="${w}" height="${Math.round(w * ratio[1] / ratio[0])}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
+}
+
+/* ---------- 2. Markdown tối giản ---------- */
+function parseFront(src) {
+  const m = src.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
+  const meta = {}; let body = src;
+  if (m) {
+    body = src.slice(m[0].length);
+    for (const line of m[1].split(/\r?\n/)) {
+      const mm = line.match(/^([a-zA-Z_]+):\s*(.*)$/); if (!mm) continue;
+      let v = mm[2].trim();
+      if (/^\[.*\]$/.test(v)) v = v.slice(1, -1).split(',').map(x => x.trim().replace(/^["']|["']$/g, '')).filter(Boolean);
+      else v = v.replace(/^["']|["']$/g, '').replace(/\\"/g, '"');
+      meta[mm[1]] = v;
+    }
+  }
+  return { meta, body };
+}
+function inline(s) {
+  s = esc(s);
+  s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/(^|[^*])\*(?!\s)(.+?)\*/g, '$1<em>$2</em>');
+  s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, t, u) => {
+    const ext = /^https?:/.test(u) && !u.startsWith(SITE);
+    const h = u.startsWith('/') ? href(u) : u;
+    return `<a href="${h}"${ext ? ' target="_blank" rel="noopener"' : ''}>${t}</a>`;
+  });
+  return s;
+}
+function md(src) {
+  const lines = src.replace(/\r/g, '').split('\n');
+  const out = []; const toc = []; const faq = []; let inFaq = false; let curQ = null;
+  let i = 0;
+  const pushFaqText = t => { if (inFaq && curQ) curQ.a += (curQ.a ? ' ' : '') + t.replace(/<[^>]+>/g, ''); };
+  while (i < lines.length) {
+    let l = lines[i];
+    if (!l.trim()) { i++; continue; }
+    let m;
+    if ((m = l.match(/^(#{2,3})\s+(.*)$/))) {
+      const lvl = m[1].length; const text = m[2].trim(); const id = slugify(text);
+      if (lvl === 2) { toc.push({ id, text }); inFaq = /câu hỏi thường gặp|hỏi đáp|faq/i.test(text); curQ = null; }
+      if (lvl === 3 && inFaq) { curQ = { q: text, a: '' }; faq.push(curQ); }
+      out.push(`<h${lvl} id="${id}">${inline(text)}</h${lvl}>`); i++; continue;
+    }
+    if ((m = l.match(/^!\[([^\]]*)\]\(([^)\s]+)\)/))) {
+      const src = m[2].replace(/^unsplash:/, '');
+      out.push(`<figure><div class="ph-box">${img([src].concat(POOL.cocktail.slice(0, 1)), 1200, m[1])}</div>${m[1] ? `<figcaption>${esc(m[1])}</figcaption>` : ''}</figure>`); i++; continue;
+    }
+    if (/^:::cta/.test(l)) {
+      const buf = []; i++; while (i < lines.length && !/^:::/.test(lines[i])) buf.push(lines[i++]); i++;
+      const [title, ...rest] = buf.filter(x => x.trim());
+      out.push(`<aside class="ctabox"><b>${inline(title || 'Đặt bàn qua Bartop')}</b>${rest.length ? `<p>${inline(rest.join(' '))}</p>` : ''}<a class="btn btn-gold" href="${href('')}">Đặt bàn ngay, giảm đến 40%</a></aside>`);
+      continue;
+    }
+    if (/^>\s?/.test(l)) {
+      const buf = []; while (i < lines.length && /^>\s?/.test(lines[i])) buf.push(lines[i++].replace(/^>\s?/, ''));
+      out.push(`<blockquote>${inline(buf.join(' '))}</blockquote>`); pushFaqText(buf.join(' ')); continue;
+    }
+    if (/^\|/.test(l)) {
+      const rows = []; while (i < lines.length && /^\|/.test(lines[i])) rows.push(lines[i++]);
+      const cells = r => r.replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+      const head = cells(rows[0]); const body = rows.slice(2).map(cells);
+      out.push(`<div class="tbl"><table><thead><tr>${head.map(h => `<th>${inline(h)}</th>`).join('')}</tr></thead><tbody>${body.map(r => `<tr>${r.map(c => `<td>${inline(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);
+      continue;
+    }
+    if (/^\s*([-*]|\d+\.)\s+/.test(l)) {
+      const ordered = /^\s*\d+\./.test(l); const items = [];
+      while (i < lines.length && /^\s*([-*]|\d+\.)\s+/.test(lines[i])) items.push(lines[i++].replace(/^\s*([-*]|\d+\.)\s+/, ''));
+      out.push(`<${ordered ? 'ol' : 'ul'}>${items.map(x => `<li>${inline(x)}</li>`).join('')}</${ordered ? 'ol' : 'ul'}>`);
+      pushFaqText(items.join('. '));
+      continue;
+    }
+    const buf = []; while (i < lines.length && lines[i].trim() && !/^(#{2,3}\s|!\[|>|\||\s*([-*]|\d+\.)\s|:::)/.test(lines[i])) buf.push(lines[i++]);
+    const p = inline(buf.join(' ')); out.push(`<p>${p}</p>`); pushFaqText(p);
+  }
+  const text = src.replace(/[#>*|\-\[\]()!:]/g, ' ');
+  const words = text.split(/\s+/).filter(Boolean).length;
+  return { html: out.join('\n'), toc, faq, words };
+}
+
+/* ---------- 3. Bài viết ---------- */
+const POSTS = fs.readdirSync(path.join(ROOT, 'content/blog')).filter(f => f.endsWith('.md')).map(f => {
+  const { meta, body } = parseFront(fs.readFileSync(path.join(ROOT, 'content/blog', f), 'utf8'));
+  const r = md(body);
+  const slug = meta.slug || f.replace(/\.md$/, '');
+  return {
+    file: f, slug, path: `blog/${slug}/`, title: meta.title || slug, description: meta.description || '',
+    keyword: meta.keyword || '', date: meta.date || TODAY, updated: meta.updated || meta.date || TODAY,
+    cover: meta.cover || POOL.cocktail[0], coverAlt: meta.coverAlt || meta.title, tags: [].concat(meta.tags || []),
+    bars: [].concat(meta.bars || []), city: meta.city || '', author: meta.author || CFG.defaultAuthor,
+    draft: meta.draft === 'true', ...r, minutes: Math.max(2, Math.round(r.words / 220)),
+  };
+}).filter(p => !p.draft).sort((a, b) => b.date.localeCompare(a.date));
+
+/* ---------- 4. Khung trang ---------- */
+const ORG = { '@type': 'Organization', name: CFG.siteName, url: SITE + '/', logo: url('icon-192.png') };
+function breadcrumbLd(items) {
+  return { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: it[0], item: url(it[1]) })) };
+}
+function crumbsHtml(items) {
+  return `<nav class="crumbs" aria-label="Breadcrumb">${items.map((it, i) => i < items.length - 1 ? `<a href="${href(it[1])}">${esc(it[0])}</a><span aria-hidden="true">›</span>` : `<span aria-current="page">${esc(it[0])}</span>`).join('')}</nav>`;
+}
+function faqLd(list) {
+  return list.length ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: list.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) } : null;
+}
+function faqHtml(list) {
+  return `<div class="faq">${list.map(f => `<details><summary>${esc(f.q)}</summary><div>${esc(f.a)}</div></details>`).join('')}</div>`;
+}
+const HEAD_SCRIPT = `<script>try{var t=localStorage.getItem('bartop-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}
+document.addEventListener('error',function(e){var el=e.target;if(!el||el.tagName!=='IMG'||!el.dataset||el.dataset.c===undefined||el.classList.contains('ph'))return;var r=el.dataset.c.split('|').filter(Boolean);if(r.length){el.dataset.c=r.slice(1).join('|');el.src=/^https?:/.test(r[0])?r[0]:'https://images.unsplash.com/photo-'+r[0]+'?auto=format&fit=crop&w='+el.dataset.w+'&q=70'}else{el.style.visibility='hidden'}},true);</script>`;
+
+function headTags({ title, desc, pathRel, image, type = 'website', noindex = false, ld = [] }) {
+  const robots = (!INDEX || noindex) ? 'noindex, nofollow' : 'index, follow, max-image-preview:large';
+  return `<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(desc)}">
+<meta name="robots" content="${robots}">
+<link rel="canonical" href="${url(pathRel)}">
+<meta property="og:type" content="${type}">
+<meta property="og:site_name" content="${esc(CFG.siteName)}">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(desc)}">
+<meta property="og:url" content="${url(pathRel)}">
+<meta property="og:image" content="${esc(UNS(image || POOL.cocktail[0], 1200))}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0912">
+<link rel="icon" href="${href('icon.svg')}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="${href('icon-192.png')}">
+<link rel="manifest" href="${href('manifest.webmanifest')}">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="${href('assets/site.css')}?v=${STAMP}">
+${ld.filter(Boolean).map(x => `<script type="application/ld+json">${JSON.stringify(x)}</script>`).join('\n')}
+${HEAD_SCRIPT}`;
+}
+const STAMP = Date.now().toString(36);
+const NAV = [['bar-ha-noi/', 'Bar Hà Nội'], ['bar-sai-gon/', 'Bar Sài Gòn'], ['bar-da-nang/', 'Bar Đà Nẵng'], ['blog/', 'Cẩm nang']];
+function header(active) {
+  const links = NAV.map(([p, t]) => `<a href="${href(p)}"${active === p ? ' aria-current="page"' : ''}>${t}</a>`).join('');
+  return `<header class="hdr"><div class="wrap hdr-in">
+  <a class="logo" href="${href('')}" aria-label="Bartop trang chủ"><span class="logo-mark">B</span>Bartop<span class="logo-vn">.vn</span></a>
+  <nav class="nav" aria-label="Chính">${links}</nav>
+  <a class="btn btn-gold" href="${href('')}">Đặt bàn</a>
+</div><div class="wrap subnav">${links}</div></header>`;
+}
+function footer() {
+  const cityLinks = CITIES.filter(c => BARS.some(b => b.city === c.id)).map(c => `<a href="${href(c.path)}">Bar ${esc(c.name)}</a>`).join('');
+  const postLinks = POSTS.slice(0, 5).map(p => `<a href="${href(p.path)}">${esc(p.title.split(':')[0])}</a>`).join('');
+  return `<footer class="foot"><div class="wrap foot-grid">
+  <div><a class="logo" href="${href('')}"><span class="logo-mark">B</span>Bartop<span class="logo-vn">.vn</span></a>
+    <p style="margin-top:10px">Đặt bàn bar, lounge, club khắp Việt Nam. Giảm thẳng vào bill, tặng rượu bàn VIP, tích điểm đổi tiền.</p>
+    <p class="note">Bản demo. Tên bar, địa chỉ, số liệu và đánh giá là dữ liệu minh hoạ. Uống có trách nhiệm, không lái xe sau khi uống rượu bia.</p></div>
+  <div><h4>Bar theo thành phố</h4>${cityLinks}</div>
+  <div><h4>Cẩm nang</h4>${postLinks}<a href="${href('blog/')}">Tất cả bài viết</a></div>
+  <div><h4>Bartop</h4><a href="${href('')}#thanh-vien">Hạng thành viên</a><a href="${href('')}#chu-bar">Dành cho chủ bar</a><a href="${href('huy-hieu/')}">Huy hiệu đối tác</a><a href="${href('')}">Hotline ${esc(CFG.hotline)}</a></div>
+</div></footer>`;
+}
+function page(opts, body, { mcta = '' } = {}) {
+  return `<!doctype html>
+<html lang="vi">
+<head>
+${headTags(opts)}
+</head>
+<body>
+${header(opts.active)}
+<main>
+${body}
+</main>
+${footer()}
+${mcta}
+</body>
+</html>
+`;
+}
+const mctaBar = (label, link) => `<div class="mcta"><a class="btn btn-gold" href="${link}">${esc(label)}</a><a class="btn call" href="tel:${CFG.hotline.replace(/\s/g, '')}" aria-label="Gọi tổng đài ${esc(CFG.hotline)}">📞</a></div>`;
+
+/* ---------- 5. Thẻ dùng chung ---------- */
+function postCard(p) {
+  return `<a class="card" href="${href(p.path)}"><div class="card-ph">${img([p.cover, POOL.cocktail[1]], 640, p.coverAlt)}</div><div class="card-b"><span class="meta"><span>${fmtDate(p.updated)}</span><span>${p.minutes} phút đọc</span></span><h3>${esc(p.title)}</h3><p>${esc(p.description)}</p></div></a>`;
+}
+function barCardSmall(b) {
+  const c = cityOf(b.city);
+  return `<a class="card" href="${href(b.path)}"><div class="card-ph">${img(barImgs(b), 640, `${b.name} – ${b.type} ${c.name}`)}</div><div class="card-b"><span class="meta"><span class="rate">★ ${b.rating.toFixed(1)}</span><span>${esc(c.name)}</span><span>${esc(b.type)}</span></span><h3>${esc(b.name)}</h3><p>Giảm ${b.deal}% bill · giờ vàng ${b.gLabel} giảm thêm ${b.gpct}%</p></div></a>`;
+}
+
+/* ---------- 6. Trang thành phố ---------- */
+function cityFaq(c, bars) {
+  if (!bars.length) return [];
+  const minP = Math.min(...bars.map(b => b.price[0])), maxP = Math.max(...bars.map(b => b.price[1]));
+  const late = bars.slice().sort((a, b) => (+b.hours.slice(8, 10) + (+b.hours.slice(8, 10) < 12 ? 24 : 0)) - (+a.hours.slice(8, 10) + (+a.hours.slice(8, 10) < 12 ? 24 : 0)))[0];
+  const gold = bars.slice().sort((a, b) => b.gpct - a.gpct)[0];
+  return [
+    { q: `Giá đi bar ở ${c.name} khoảng bao nhiêu?`, a: `Mức chi phổ biến tại các bar đối tác của Bartop ở ${c.name} từ ${minP}.000đ đến ${maxP}.000đ mỗi người. Bàn VIP thường yêu cầu chi tối thiểu 5.000.000đ, sofa nhóm từ 8.000.000đ. Đặt qua Bartop được giảm thẳng vào bill từ ${Math.min(...bars.map(b => b.deal))}% đến ${Math.max(...bars.map(b => b.deal))}%.` },
+    { q: `Bar ở ${c.name} mở cửa đến mấy giờ?`, a: `Phần lớn bar ở ${c.name} mở từ chiều tối đến 0h–2h sáng. ${late.name} mở muộn nhất trong danh sách, khung giờ ${late.hours}.` },
+    { q: `Đặt bàn bar ${c.name} có cần đặt cọc không?`, a: `Thành viên hạng Gold và Black đặt bàn qua Bartop không cần cọc và được giữ bàn 30 phút. Hạng Newbie và Silver có thể được yêu cầu cọc với bàn VIP vào tối thứ 6, thứ 7.` },
+    { q: `Giờ vàng ở bar ${c.name} là gì?`, a: `Giờ vàng là 2 giờ đầu sau khi bar mở cửa. Đặt bàn và đến trong khung này được giảm thêm 10–20%, cộng dồn với ưu đãi của bar. Hiện ${gold.name} có mức giảm giờ vàng cao nhất: ${gold.gpct}% từ ${gold.gLabel}.` },
+  ];
+}
+function cityPage(c) {
+  const bars = ranked(BARS.filter(b => b.city === c.id));
+  const S = c.seo;
+  const title = bars.length ? clip(`Bar ${c.name}: top ${bars.length} bar, lounge, club giảm đến 40% (${new Date().getFullYear()})`, 65) : `Bar ${c.name}: đặt bàn bar, lounge, club giảm giá`;
+  const desc = S.description || `Danh sách bar ${c.name} được đặt nhiều nhất: rooftop, lounge, club. Xem giá, giờ mở cửa, ưu đãi giờ vàng và đặt bàn giảm đến 40%, tặng rượu bàn VIP.`;
+  const crumbs = [['Trang chủ', ''], [`Bar ${c.name}`, c.path]];
+  const faq = cityFaq(c, bars);
+  const related = POSTS.filter(p => p.city === c.id || p.tags.some(t => slugify(t).includes(slugify(c.name)))).concat(POSTS).filter((p, i, a) => a.indexOf(p) === i).slice(0, 3);
+  const list = bars.map((b, i) => `<li class="bitem ${b.boost === 'top' ? 'top' : ''}">
+    <div class="bitem-ph">${img(barImgs(b), 600, `${b.name} – ${b.type} ở ${b.area}, ${c.name}`, { eager: i === 0 })}<span class="rk">#${i + 1}</span></div>
+    <div class="bitem-b">
+      <span class="meta"><span class="rate">★ ${b.rating.toFixed(1)}</span><span>${fmt(b.reviews)} đánh giá</span><span>${esc(b.area)}</span><span>${esc(b.type)}</span></span>
+      <h3><a href="${href(b.path)}">${esc(b.name)}</a></h3>
+      <p>${esc(b.desc)}</p>
+      <div class="chips on-surface"><span class="chip gold">Giảm ${b.deal}% bill</span><span class="chip neon">⚡ Giờ vàng ${b.gLabel} -${b.gpct}%</span><span class="chip">🎁 ${esc(b.bonus)}</span></div>
+      <span class="meta"><span>Giờ mở ${b.hours}</span><span>${b.price[0]}k–${b.price[1]}k/người</span><span>${esc(b.music)}</span></span>
+      <div class="acts"><a class="btn btn-gold" href="${bookHref(b)}">Đặt bàn</a><a class="btn btn-ghost" href="${href(b.path)}">Xem chi tiết</a></div>
+    </div></li>`).join('');
+  const body = `
+<div class="wrap">${crumbsHtml(crumbs)}
+  <section class="phero">${img(cityImgs(c), 1400, `Bar ${c.name} về đêm`, { eager: true })}
+    <div class="phero-in">
+      <span class="eyebrow">${fmt(c.n)} bar đối tác · cập nhật ${fmtDate(TODAY)}</span>
+      <h1>Bar ${esc(c.name)}</h1>
+      <p class="lead">${esc(S.intro || `Tổng hợp bar, lounge, club ở ${c.name} được khách đặt nhiều nhất trên Bartop.`)}</p>
+      <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${href('')}#tp-${c.id}">Đặt bàn bar ${esc(c.name)}</a></div>
+    </div>
+  </section>
+</div>
+<section class="sec"><div class="wrap">
+  <h2>Top ${bars.length || ''} bar ${esc(c.name)} được đặt nhiều nhất</h2>
+  <p class="lead-p" style="margin-bottom:18px">Xếp hạng theo lượt đặt bàn và đánh giá của khách trên Bartop trong 30 ngày gần nhất. Bar có nhãn vàng là đối tác nổi bật.</p>
+  ${bars.length ? `<ol class="blist">${list}</ol>` : `<p class="muted">Bartop đang cập nhật bar đối tác tại ${esc(c.name)}. Gọi ${esc(CFG.hotline)} để được tư vấn chỗ đi tối nay.</p>`}
+</div></section>
+${S.areas ? `<section class="sec"><div class="wrap narrow">
+  <h2>Khu vực đi bar nổi tiếng ở ${esc(c.name)}</h2>
+  <div class="prose">${S.areas.map(a => `<h3>${esc(a[0])}</h3><p>${esc(a[1])}</p>`).join('')}</div>
+</div></section>` : ''}
+${S.tips ? `<section class="sec"><div class="wrap narrow">
+  <h2>Kinh nghiệm đi bar ${esc(c.name)}</h2>
+  <div class="prose"><ul>${S.tips.map(t => `<li>${esc(t)}</li>`).join('')}</ul></div>
+</div></section>` : ''}
+${faq.length ? `<section class="sec"><div class="wrap narrow"><h2>Câu hỏi thường gặp về bar ${esc(c.name)}</h2>${faqHtml(faq)}</div></section>` : ''}
+${related.length ? `<section class="sec"><div class="wrap"><h2>Cẩm nang đi bar</h2><div class="cards">${related.map(postCard).join('')}</div></div></section>` : ''}
+<section class="sec"><div class="wrap"><h2>Bar ở thành phố khác</h2><div class="citylinks">${CITIES.filter(x => x.id !== c.id && BARS.some(b => b.city === x.id)).map(x => `<a href="${href(x.path)}">Bar ${esc(x.name)}</a>`).join('')}</div></div></section>`;
+  const ld = [
+    breadcrumbLd(crumbs),
+    bars.length ? { '@context': 'https://schema.org', '@type': 'ItemList', name: `Top bar ${c.name}`, itemListElement: bars.map((b, i) => ({ '@type': 'ListItem', position: i + 1, url: url(b.path), name: b.name })) } : null,
+    faqLd(faq),
+  ];
+  write(c.path + 'index.html', page({ title, desc, pathRel: c.path, image: cityImgs(c)[0], ld, active: c.path, noindex: !bars.length }, body, { mcta: bars.length ? mctaBar(`Đặt bàn bar ${c.name}`, href('') + '#tp-' + c.id) : '' }));
+  return { path: c.path, noindex: !bars.length };
+}
+
+/* ---------- 7. Trang bar ---------- */
+function barPage(b) {
+  const c = cityOf(b.city);
+  const title = clip(`${b.name} ${c.name}: giá, menu, đặt bàn giảm ${b.deal}%`, 65);
+  const desc = clip(`${b.name}, ${b.type.toLowerCase()} ở ${b.area}, ${c.name}. Mở ${b.hours}, ${b.price[0]}k–${b.price[1]}k/người. Đặt qua Bartop giảm ${b.deal}%, giờ vàng giảm thêm ${b.gpct}%, ${b.bonus.toLowerCase()}.`, 160);
+  const crumbs = [['Trang chủ', ''], [`Bar ${c.name}`, c.path], [b.name, b.path]];
+  const menu = MENU[b.type] || [];
+  const faq = [
+    { q: `${b.name} mở cửa mấy giờ?`, a: `${b.name} mở cửa từ ${b.hours} hằng ngày. Giờ vàng ${b.gLabel} được giảm thêm ${b.gpct}% khi đặt bàn qua Bartop.` },
+    { q: `Đi ${b.name} hết bao nhiêu tiền?`, a: `Mức chi trung bình ${b.price[0]}.000đ–${b.price[1]}.000đ mỗi người. ${menu.length ? `Đồ uống nổi bật: ${menu.map(m => `${m[0]} ${fmt(m[1])}.000đ`).join(', ')}.` : ''} Đặt qua Bartop được giảm ${b.deal}% tổng bill.` },
+    { q: `${b.name} có dress code không?`, a: `Dress code của ${b.name}: ${b.dress}. Nhạc: ${b.music}.` },
+    { q: `${b.name} ở đâu?`, a: `${b.name} nằm tại ${b.addr}, ${b.area}, ${c.name}.` },
+  ];
+  const others = ranked(BARS.filter(x => x.city === b.city && x.id !== b.id)).slice(0, 3);
+  const morePosts = POSTS.filter(p => p.bars.includes(b.slug) || p.city === b.city).concat(POSTS).filter((p, i, a) => a.indexOf(p) === i).slice(0, 3);
+  const body = `
+<div class="wrap">${crumbsHtml(crumbs)}
+  <section class="phero">${img(barImgs(b), 1400, `${b.name} – ${b.type} ở ${b.area}, ${c.name}`, { eager: true })}
+    <div class="phero-in">
+      <span class="eyebrow">${esc(b.type)} · ${esc(b.area)}, ${esc(c.name)}${b.boost === 'top' ? ' · Top ' + esc(c.name) : ''}</span>
+      <h1>${esc(b.name)}</h1>
+      <p class="lead"><span class="rate">★ ${b.rating.toFixed(1)}</span> · ${fmt(b.reviews)} đánh giá trên Bartop · ${esc(b.music)}</p>
+      <div class="chips"><span class="chip gold">Giảm ${b.deal}% bill</span><span class="chip neon">⚡ Giờ vàng ${b.gLabel} -${b.gpct}%</span><span class="chip">🎁 ${esc(b.bonus)}</span></div>
+      <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${bookHref(b)}">Đặt bàn ${esc(b.name)}</a></div>
+    </div>
+  </section>
+</div>
+<section class="sec"><div class="wrap grid2">
+  <div>
+    <h2>Giới thiệu ${esc(b.name)}</h2>
+    <div class="prose">
+      <p>${esc(b.desc)}</p>
+      <p>${esc(b.name)} là ${b.type.toLowerCase()} tại ${esc(b.area)}, ${esc(c.name)}, phong cách nhạc ${esc(b.music)}. Mức chi phổ biến ${b.price[0]}.000đ–${b.price[1]}.000đ mỗi người. Bar mở cửa ${b.hours}. Muốn ngồi vị trí đẹp vào tối thứ 6 và thứ 7, bạn nên đặt bàn trước ít nhất một ngày.</p>
+    </div>
+    <h2 style="margin-top:28px">Thông tin cần biết</h2>
+    <table class="info"><tbody>
+      <tr><th scope="row">Địa chỉ</th><td>${esc(b.addr)}, ${esc(b.area)}, ${esc(c.name)}</td></tr>
+      <tr><th scope="row">Giờ mở cửa</th><td>${b.hours}</td></tr>
+      <tr><th scope="row">Giờ vàng</th><td>${b.gLabel}, giảm thêm ${b.gpct}%</td></tr>
+      <tr><th scope="row">Mức chi</th><td>${b.price[0]}.000đ – ${b.price[1]}.000đ / người</td></tr>
+      <tr><th scope="row">Nhạc</th><td>${esc(b.music)}</td></tr>
+      <tr><th scope="row">Dress code</th><td>${esc(b.dress)}</td></tr>
+    </tbody></table>
+  </div>
+  <div>
+    <h2>Ưu đãi khi đặt qua Bartop</h2>
+    <div class="perkbox">
+      <div class="perk"><b class="v">-${b.deal}%</b><div><b>Giảm thẳng vào bill</b><small>Quét mã QR tại quầy khi thanh toán.</small></div></div>
+      <div class="perk n"><b class="v">-${b.gpct}%</b><div><b>Giờ vàng ${b.gLabel}</b><small>Đến trong khung này, giảm thêm, cộng dồn.</small></div></div>
+      <div class="perk"><b class="v">🎁</b><div><b>${esc(b.bonus)}</b><small>Tặng tại bàn theo điều kiện của bar.</small></div></div>
+      <div class="perk"><b class="v">+15%</b><div><b>Hoàn điểm đổi tiền</b><small>1 điểm = 500đ, đổi về Momo hoặc trừ bill.</small></div></div>
+    </div>
+    ${menu.length ? `<h2 style="margin-top:28px">Menu nổi bật</h2><table class="info"><tbody>${menu.map(m => `<tr><th scope="row">${esc(m[0])}</th><td class="num">${fmt(m[1] * 1000)}đ</td></tr>`).join('')}</tbody></table>` : ''}
+  </div>
+</div></section>
+<section class="sec"><div class="wrap narrow"><h2>Câu hỏi thường gặp về ${esc(b.name)}</h2>${faqHtml(faq)}</div></section>
+${others.length ? `<section class="sec"><div class="wrap"><h2>Bar khác ở ${esc(c.name)}</h2><div class="cards">${others.map(barCardSmall).join('')}</div><p style="margin-top:16px"><a class="btn btn-ghost" href="${href(c.path)}">Xem tất cả bar ${esc(c.name)}</a></p></div></section>` : ''}
+${morePosts.length ? `<section class="sec"><div class="wrap"><h2>Cẩm nang đi bar</h2><div class="cards">${morePosts.map(postCard).join('')}</div></div></section>` : ''}`;
+  const ld = [
+    breadcrumbLd(crumbs),
+    { '@context': 'https://schema.org', '@type': 'BarOrPub', name: b.name, url: url(b.path), image: UNS(barImgs(b)[0], 1200),
+      address: { '@type': 'PostalAddress', streetAddress: b.addr, addressLocality: `${b.area}, ${c.name}`, addressCountry: 'VN' },
+      openingHours: `Mo-Su ${b.hours.replace(/\s/g, '').replace('–', '-')}`, priceRange: `${b.price[0]}.000đ–${b.price[1]}.000đ`, servesCuisine: 'Đồ uống, cocktail' },
+    faqLd(faq),
+  ];
+  write(b.path + 'index.html', page({ title, desc, pathRel: b.path, image: barImgs(b)[0], ld, active: c.path }, body, { mcta: mctaBar(`Đặt bàn · giảm ${b.deal}%`, bookHref(b)) }));
+}
+
+/* ---------- 8. Blog ---------- */
+function postPage(p, idx) {
+  const crumbs = [['Trang chủ', ''], ['Cẩm nang', 'blog/'], [p.title, p.path]];
+  const barsIn = p.bars.map(s => BARS.find(b => b.slug === s)).filter(Boolean);
+  const related = POSTS.filter(x => x !== p).sort((a, b) => (b.tags.filter(t => p.tags.includes(t)).length - a.tags.filter(t => p.tags.includes(t)).length)).slice(0, 3);
+  const shareUrl = encodeURIComponent(url(p.path));
+  const body = `
+<article>
+<div class="wrap">${crumbsHtml(crumbs)}
+  <header class="post-head narrow">
+    <span class="eyebrow">${esc(p.tags[0] || 'Cẩm nang')}</span>
+    <h1>${esc(p.title)}</h1>
+    <p class="lead">${esc(p.description)}</p>
+    <div class="byline"><span>${esc(p.author)}</span><span>Cập nhật <time datetime="${p.updated}">${fmtDate(p.updated)}</time></span><span>${p.minutes} phút đọc</span></div>
+  </header>
+  <div class="cover">${img([p.cover, POOL.cocktail[0]], 1400, p.coverAlt, { eager: true, ratio: [16, 8] })}</div>
+  <div class="post-grid">
+    <div class="prose">${p.html}
+      <aside class="ctabox"><b>Đặt bàn qua Bartop</b><p>Giảm thẳng vào bill, giờ vàng giảm thêm đến 20%, tặng rượu bàn VIP, không cần cọc với hạng Gold.</p><a class="btn btn-gold" href="${href('')}">Đặt bàn ngay</a></aside>
+      ${p.tags.length ? `<div class="tags">${p.tags.map(t => `<a href="${href('blog/')}#${slugify(t)}">#${esc(t)}</a>`).join('')}</div>` : ''}
+      <div class="share">Chia sẻ:
+        <a class="btn btn-ghost" href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn btn-ghost" href="https://twitter.com/intent/tweet?url=${shareUrl}&text=${encodeURIComponent(p.title)}" target="_blank" rel="noopener">X</a>
+      </div>
+    </div>
+    <aside>${p.toc.length > 2 ? `<nav class="toc" aria-label="Mục lục"><b>Mục lục</b><ol>${p.toc.map(t => `<li><a href="#${t.id}">${esc(t.text)}</a></li>`).join('')}</ol></nav>` : ''}</aside>
+  </div>
+</div>
+</article>
+${barsIn.length ? `<section class="sec"><div class="wrap"><h2>Bar được nhắc trong bài</h2><div class="cards">${barsIn.slice(0, 6).map(barCardSmall).join('')}</div></div></section>` : ''}
+${related.length ? `<section class="sec"><div class="wrap"><h2>Bài viết liên quan</h2><div class="cards">${related.map(postCard).join('')}</div></div></section>` : ''}`;
+  const ld = [
+    breadcrumbLd(crumbs),
+    { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: p.title, description: p.description, image: [UNS(p.cover, 1200)],
+      datePublished: p.date, dateModified: p.updated, author: { '@type': 'Organization', name: p.author, url: SITE + '/' }, publisher: ORG,
+      mainEntityOfPage: url(p.path), keywords: [p.keyword, ...p.tags].filter(Boolean).join(', '), wordCount: p.words, inLanguage: 'vi-VN' },
+    faqLd(p.faq.filter(f => f.a)),
+  ];
+  write(p.path + 'index.html', page({ title: p.title, desc: p.description, pathRel: p.path, image: p.cover, type: 'article', ld, active: 'blog/' }, body, { mcta: mctaBar('Đặt bàn bar giảm đến 40%', href('')) }));
+}
+function blogIndex() {
+  const crumbs = [['Trang chủ', ''], ['Cẩm nang', 'blog/']];
+  const tags = [...new Set(POSTS.flatMap(p => p.tags))];
+  const body = `
+<div class="wrap">${crumbsHtml(crumbs)}
+  <header class="post-head narrow">
+    <span class="eyebrow">Cẩm nang đi bar</span>
+    <h1>Cẩm nang đi bar: kinh nghiệm, bảng giá, review bar</h1>
+    <p class="lead">Kinh nghiệm đi bar lần đầu, bảng giá đặt bàn, top bar Hà Nội, Sài Gòn, Đà Nẵng và cách đặt bàn giảm giá, nhận rượu tặng.</p>
+  </header>
+  ${tags.length ? `<div class="tags" style="margin-bottom:20px">${tags.map(t => `<a id="${slugify(t)}" href="#${slugify(t)}">#${esc(t)}</a>`).join('')}</div>` : ''}
+  <div class="cards">${POSTS.map(postCard).join('')}</div>
+</div>
+<section class="sec"><div class="wrap"><h2>Tìm bar theo thành phố</h2><div class="citylinks">${CITIES.filter(x => BARS.some(b => b.city === x.id)).map(x => `<a href="${href(x.path)}">Bar ${esc(x.name)}</a>`).join('')}</div></div></section>`;
+  const ld = [breadcrumbLd(crumbs), { '@context': 'https://schema.org', '@type': 'Blog', name: 'Cẩm nang đi bar Bartop', url: url('blog/'), publisher: ORG,
+    blogPost: POSTS.map(p => ({ '@type': 'BlogPosting', headline: p.title, url: url(p.path), datePublished: p.date })) }];
+  write('blog/index.html', page({ title: 'Cẩm nang đi bar: kinh nghiệm, bảng giá, review bar | Bartop', desc: 'Kinh nghiệm đi bar lần đầu, giá đặt bàn bar, top bar Hà Nội, Sài Gòn, Đà Nẵng, cách đặt bàn giảm giá đến 40% và nhận rượu tặng bàn VIP.', pathRel: 'blog/', ld, active: 'blog/' }, body));
+}
+
+/* ---------- 9. Huy hiệu đối tác (backlink) ---------- */
+function badgePage() {
+  const crumbs = [['Trang chủ', ''], ['Huy hiệu đối tác', 'huy-hieu/']];
+  const opts = ranked(BARS).map(b => `<option value="${b.slug}" data-name="${esc(b.name)}" data-city="${esc(cityOf(b.city).name)}">${esc(b.name)} – ${esc(cityOf(b.city).name)}</option>`).join('');
+  const body = `
+<div class="wrap narrow">${crumbsHtml(crumbs)}
+  <header class="post-head">
+    <span class="eyebrow">Dành cho chủ bar</span>
+    <h1>Huy hiệu “Top bar trên Bartop”</h1>
+    <p class="lead">Gắn huy hiệu lên website, fanpage hoặc menu QR của bar để khách biết bar đang có ưu đãi khi đặt qua Bartop. Bar gắn huy hiệu được cộng điểm xếp hạng.</p>
+  </header>
+  <div class="prose">
+    <p><img src="${href('assets/badge.svg')}" alt="Huy hiệu Top bar trên Bartop" width="220" height="72" style="position:static"></p>
+    <h2 id="lay-ma">Lấy mã nhúng</h2>
+    <p><label for="bsel"><b>Chọn bar của bạn</b></label></p>
+    <p><select id="bsel" style="width:100%;min-height:48px;padding:8px 12px;border-radius:12px;background:var(--surface);color:var(--fg);border:1px solid var(--line2);font:inherit">${opts}</select></p>
+    <p><textarea id="bcode" readonly rows="5" style="width:100%;padding:12px;border-radius:12px;background:var(--surface);color:var(--fg);border:1px solid var(--line2);font:13px ui-monospace,monospace"></textarea></p>
+    <p><button class="btn btn-gold" id="bcopy" type="button">Sao chép mã</button> <span id="bmsg" class="muted"></span></p>
+    <h2 id="cach-gan">Cách gắn</h2>
+    <ol><li>Website: dán mã vào chân trang hoặc trang giới thiệu.</li><li>Fanpage, Instagram: dán đường dẫn trang bar trên Bartop vào phần giới thiệu.</li><li>Menu QR, standee tại quầy: in huy hiệu kèm mã QR dẫn tới trang bar.</li></ol>
+  </div>
+</div>
+<script>
+(function(){var s=document.getElementById('bsel'),c=document.getElementById('bcode');
+function upd(){var o=s.options[s.selectedIndex];c.value='<a href="${SITE}/bar/'+o.value+'/" title="Đặt bàn '+o.dataset.name+' trên Bartop"><img src="${SITE}/assets/badge.svg" alt="'+o.dataset.name+' – Top bar '+o.dataset.city+' trên Bartop" width="220" height="72"></a>'}
+s.onchange=upd;upd();
+document.getElementById('bcopy').onclick=function(){var m=document.getElementById('bmsg');(navigator.clipboard?navigator.clipboard.writeText(c.value):Promise.reject()).then(function(){m.textContent='Đã sao chép.'}).catch(function(){c.select();m.textContent='Đã chọn mã, nhấn Ctrl+C để sao chép.'})};})();
+</script>`;
+  write('huy-hieu/index.html', page({ title: 'Huy hiệu đối tác Top bar trên Bartop – mã nhúng cho chủ bar', desc: 'Lấy mã nhúng huy hiệu Top bar trên Bartop cho website, fanpage và menu QR của bar. Bar gắn huy hiệu được cộng điểm xếp hạng và tăng lượt đặt bàn.', pathRel: 'huy-hieu/', ld: [breadcrumbLd(crumbs)] }, body));
+  write('assets/badge.svg', `<svg xmlns="http://www.w3.org/2000/svg" width="220" height="72" viewBox="0 0 220 72"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd98a"/><stop offset=".6" stop-color="#f0b545"/><stop offset="1" stop-color="#c47d12"/></linearGradient></defs><rect width="220" height="72" rx="14" fill="#0a0912"/><rect x="1" y="1" width="218" height="70" rx="13" fill="none" stroke="url(#g)" stroke-width="2"/><rect x="12" y="14" width="44" height="44" rx="10" fill="url(#g)"/><text x="34" y="47" text-anchor="middle" font-family="Impact,Arial Narrow,sans-serif" font-size="32" font-weight="700" fill="#1a1206">B</text><text x="68" y="33" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#ffd98a">TOP BAR TRÊN</text><text x="68" y="55" font-family="Impact,Arial Narrow,sans-serif" font-size="22" letter-spacing="1" fill="#ffffff">BARTOP.VN</text></svg>`);
+}
+
+/* ---------- 10. Khu viết bài ---------- */
+function editorPage() {
+  const tpl = fs.readFileSync(path.join(ROOT, 'src/editor.html'), 'utf8');
+  const data = { repo: CFG.repo, branch: CFG.branch, site: SITE, base: BASE,
+    posts: POSTS.map(p => ({ slug: p.slug, title: p.title, file: p.file, keyword: p.keyword, updated: p.updated })),
+    bars: BARS.map(b => ({ slug: b.slug, name: b.name, city: cityOf(b.city).name, path: b.path })),
+    cities: CITIES.filter(c => BARS.some(b => b.city === c.id)).map(c => ({ id: c.id, name: c.name, path: c.path })) };
+  const body = tpl.replace('/*__EDITOR_DATA__*/null', JSON.stringify(data));
+  write('viet-bai/index.html', `<!doctype html>
+<html lang="vi">
+<head>
+${headTags({ title: 'Khu viết bài – Bartop', desc: 'Soạn bài viết chuẩn SEO cho Bartop.', pathRel: 'viet-bai/', noindex: true })}
+</head>
+<body>
+${header('')}
+${body}
+</body>
+</html>
+`);
+}
+
+/* ---------- 11. Trang chủ (app) ---------- */
+function homePage() {
+  let body = APP.replace('<meta name="claude:viewport-fit-sides" content="cover">\n', '');
+  body = body.replace(/<title>[^<]*<\/title>\n?/, '');
+  const citiesWithBars = CITIES.filter(c => BARS.some(b => b.city === c.id));
+  const seoBlock = `<section class="block"><div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Cẩm nang đi bar</div><h2>Kinh nghiệm &amp; review bar</h2></div><a class="lnk" href="blog/">Xem tất cả bài viết →</a></div>
+    <div class="grid">${POSTS.slice(0, 3).map(p => `<a class="card" href="${p.path}" style="text-decoration:none"><div class="art"><img class="ph" src="${esc(UNS(p.cover, 700))}" data-c="${esc(POOL.cocktail[0])}" data-w="700" data-seed="${p.title.length}" data-hue="${p.title.length * 13 % 360}" alt="${esc(p.coverAlt)}" loading="lazy" decoding="async"></div><div class="card-body"><h3 style="font-size:21px">${esc(p.title)}</h3><p class="bonus">${esc(p.description)}</p></div></a>`).join('')}</div>
+  </div></section>
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Đặt bàn bar toàn quốc</div><h2>Bar Hà Nội, Sài Gòn và 63 tỉnh thành</h2></div></div>
+    <p class="muted" style="max-width:75ch;margin-bottom:16px">Bartop là nền tảng đặt bàn bar, lounge, club tại Việt Nam. Bạn xem bảng xếp hạng bar theo lượt đặt và đánh giá thật, so sánh giá, giờ mở cửa, dress code, rồi đặt bàn trong 30 giây. Đặt qua Bartop được giảm thẳng vào bill, giảm thêm khi đến trong giờ vàng, tặng rượu cho bàn VIP và tích điểm đổi ra tiền.</p>
+    <div class="rail" style="flex-wrap:wrap">${citiesWithBars.map(c => `<a class="chip" href="${c.path}">Bar ${esc(c.name)} <small>${c.n}</small></a>`).join('')}</div>
+  </div></section>`;
+  body = body.replace('<!--SEO_HOME-->', seoBlock);
+  const i = body.indexOf('</style>') + 8;
+  const title = 'Bartop – Đặt bàn bar Hà Nội, Sài Gòn giảm đến 40%, tặng rượu';
+  const desc = 'Đặt bàn bar, lounge, club tại Hà Nội, Sài Gòn, Đà Nẵng và 63 tỉnh thành. Giảm thẳng vào bill, giờ vàng giảm thêm 20%, tặng rượu bàn VIP, tích điểm đổi tiền.';
+  const ld = [
+    { '@context': 'https://schema.org', '@type': 'WebSite', name: CFG.siteName, url: SITE + '/', inLanguage: 'vi-VN', publisher: ORG },
+    { '@context': 'https://schema.org', ...ORG, contactPoint: { '@type': 'ContactPoint', telephone: CFG.hotline, contactType: 'customer service', areaServed: 'VN', availableLanguage: 'Vietnamese' } },
+  ];
+  const head = headTags({ title, desc, pathRel: '', image: '1470337458703-46ad1756a187', ld })
+    .replace(/<link rel="stylesheet" href="[^"]*site\.css[^"]*">\n/, '')
+    .replace(/<link rel="preconnect" href="https:\/\/fonts[^\n]*\n/, '').replace(/<link rel="stylesheet" href="https:\/\/fonts[^\n]*\n/, '');
+  write('index.html', `<!doctype html>
+<html lang="vi">
+<head>
+${head}
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Bartop">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+${body.slice(0, i)}
+</head>
+<body>
+${body.slice(i)}
+</body>
+</html>
+`);
+}
+
+/* ---------- 12. 404, sitemap, robots ---------- */
+function misc(pages) {
+  write('404.html', page({ title: 'Không tìm thấy trang – Bartop', desc: 'Trang bạn tìm không tồn tại.', pathRel: '404.html', noindex: true }, `<div class="wrap narrow" style="padding-block:60px"><h1 style="font-size:44px;text-transform:uppercase">Không tìm thấy trang</h1><p class="muted" style="margin-top:12px">Đường dẫn có thể đã đổi. Chọn thành phố để tìm bar tối nay:</p><div class="citylinks" style="margin-top:16px">${CITIES.filter(x => BARS.some(b => b.city === x.id)).map(x => `<a href="${href(x.path)}">Bar ${esc(x.name)}</a>`).join('')}</div><p style="margin-top:20px"><a class="btn btn-gold" href="${href('')}">Về trang chủ</a></p></div>`));
+  const urls = pages.filter(p => !p.noindex).map(p => `  <url><loc>${url(p.path)}</loc><lastmod>${p.lastmod || TODAY}</lastmod>${p.priority ? `<priority>${p.priority}</priority>` : ''}</url>`).join('\n');
+  write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
+  write('robots.txt', INDEX
+    ? `User-agent: *\nAllow: /\nDisallow: ${BASE}viet-bai/\nDisallow: ${BASE}src/\nDisallow: ${BASE}content/\n\nSitemap: ${url('sitemap.xml')}\n`
+    : `# Đang ở chế độ demo: chặn Google lập chỉ mục.\n# Bật "allowIndexing": true trong src/config.json khi đã có dữ liệu bar thật và tên miền chính thức.\nUser-agent: *\nDisallow: /\n`);
+}
+
+/* ---------- 13. Chạy ---------- */
+// dọn đầu ra cũ (chỉ các thư mục do build quản lý)
+for (const d of ['bar', 'blog', 'viet-bai', 'huy-hieu', 'assets', ...CITIES.map(c => c.slug)]) fs.rmSync(path.join(ROOT, d), { recursive: true, force: true });
+for (const f of fs.readdirSync(path.join(ROOT, 'public'))) { fs.copyFileSync(path.join(ROOT, 'public', f), path.join(ROOT, f)); GENERATED.push(f); }
+fs.mkdirSync(path.join(ROOT, 'assets'), { recursive: true });
+fs.copyFileSync(path.join(ROOT, 'src/site.css'), path.join(ROOT, 'assets/site.css'));
+
+const pages = [{ path: '', priority: '1.0' }];
+homePage();
+for (const c of CITIES) { const r = cityPage(c); pages.push({ path: r.path, noindex: r.noindex, priority: '0.9' }); }
+for (const b of BARS) { barPage(b); pages.push({ path: b.path, priority: '0.7' }); }
+blogIndex(); pages.push({ path: 'blog/', priority: '0.8' });
+POSTS.forEach((p, i) => { postPage(p, i); pages.push({ path: p.path, lastmod: p.updated, priority: '0.8' }); });
+badgePage(); pages.push({ path: 'huy-hieu/', priority: '0.3' });
+editorPage();
+misc(pages);
+console.log(`Đã build: ${CITIES.length} trang thành phố, ${BARS.length} trang bar, ${POSTS.length} bài viết. Lập chỉ mục: ${INDEX ? 'BẬT' : 'TẮT (demo)'}.`);

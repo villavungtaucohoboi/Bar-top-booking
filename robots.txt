@@ -1,0 +1,4 @@
+# Đang ở chế độ demo: chặn Google lập chỉ mục.
+# Bật "allowIndexing": true trong src/config.json khi đã có dữ liệu bar thật và tên miền chính thức.
+User-agent: *
+Disallow: /

@@ -1,0 +1,31 @@
+# Tự build lại web khi có bài viết mới hoặc sửa mã nguồn.
+# Bài đăng từ "Khu viết bài" được commit vào content/blog/ → workflow này chạy → commit trang đã build → GitHub Pages cập nhật.
+name: Build site
+on:
+  push:
+    branches: [main]
+    paths: ['content/**', 'src/**', 'public/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: build-site
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build
+        run: node src/build.mjs
+      - name: Commit trang đã build
+        run: |
+          git config user.name "bartop-build"
+          git config user.email "bartop-build@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "Không có thay đổi"; exit 0; fi
+          git commit -m "Build tự động: cập nhật trang"
+          git push
