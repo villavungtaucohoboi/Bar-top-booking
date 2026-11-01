@@ -1,0 +1,1075 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Bartop.vn – Đặt bàn bar, lounge, club khắp Việt Nam. Giờ vàng giảm sâu, tặng rượu, tích điểm đổi tiền. Bản demo.">
+<meta name="theme-color" content="#0a0912">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Bartop">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;font:14px system-ui,sans-serif}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>BARTOP Việt Nam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: sticky glass header · hero + search · giờ vàng rail · city rail · boosted rail · card grid · detail sheet with booking (sticky CTA on mobile) · member / community / partner views. Three themes: Tối (dark, default), Nâu (whisky/leather), Sáng (ivory). */
+:root{
+  color-scheme:dark;
+  --bg:#0a0912; --bg2:#110e1c; --surface:#181424; --surface2:#221c33; --surface3:#2c2543;
+  --fg:#f6f1fb; --muted:#a79fbd; --dim:#6f6886; --line:rgba(255,255,255,.085); --line2:rgba(255,255,255,.16);
+  --gold:#f0b545; --gold2:#ffd98a; --neon:#ff3f8e; --cyan:#45d5ff; --ok:#4ade80; --warn:#fbbf24;
+  --gold-solid:#f0b545; --gold-ink:#1a1206; --btn-grad:linear-gradient(135deg,#ffd98a,#f0b545 60%,#d8921f);
+  --hdr-bg:rgba(10,9,18,.74); --glass:rgba(255,255,255,.04); --strip:linear-gradient(135deg,#1c1530,#0f0c1a 60%,#1a0f1c);
+  --shadow:0 20px 60px rgba(0,0,0,.45); --glow-neon:rgba(255,63,142,.6);
+  --font-display:'Oswald','Arial Narrow',Impact,sans-serif;
+  --font-body:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --r:18px; --r-sm:12px;
+}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]):not([data-theme="brown"]){
+  color-scheme:light;
+  --bg:#f6f1ea; --bg2:#fbf8f3; --surface:#ffffff; --surface2:#f1e9dd; --surface3:#e6dccb;
+  --fg:#1d1526; --muted:#655c75; --dim:#8f879d; --line:rgba(30,20,40,.09); --line2:rgba(30,20,40,.18);
+  --gold:#b97a12; --gold2:#8a5a0a; --neon:#d81b6c; --cyan:#0f8db5; --ok:#15803d; --warn:#b45309;
+  --hdr-bg:rgba(246,241,234,.82); --glass:rgba(30,20,40,.04); --strip:linear-gradient(135deg,#fff7ea,#f6ecdd 60%,#fdeef4);
+  --shadow:0 16px 40px rgba(60,40,20,.12); --glow-neon:rgba(216,27,108,.25);
+}}
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#f6f1ea; --bg2:#fbf8f3; --surface:#ffffff; --surface2:#f1e9dd; --surface3:#e6dccb;
+  --fg:#1d1526; --muted:#655c75; --dim:#8f879d; --line:rgba(30,20,40,.09); --line2:rgba(30,20,40,.18);
+  --gold:#b97a12; --gold2:#8a5a0a; --neon:#d81b6c; --cyan:#0f8db5; --ok:#15803d; --warn:#b45309;
+  --hdr-bg:rgba(246,241,234,.82); --glass:rgba(30,20,40,.04); --strip:linear-gradient(135deg,#fff7ea,#f6ecdd 60%,#fdeef4);
+  --shadow:0 16px 40px rgba(60,40,20,.12); --glow-neon:rgba(216,27,108,.25);
+}
+:root[data-theme="brown"]{
+  color-scheme:dark;
+  --bg:#1b120c; --bg2:#231810; --surface:#2b1d13; --surface2:#372618; --surface3:#46311f;
+  --fg:#f9efe1; --muted:#c7ad8f; --dim:#8d785f; --line:rgba(255,235,210,.09); --line2:rgba(255,235,210,.18);
+  --gold:#e9b85c; --gold2:#ffd98a; --neon:#ff7a3d; --cyan:#7fd1c3; --ok:#6ad08a; --warn:#f3b74b;
+  --hdr-bg:rgba(27,18,12,.8); --glass:rgba(255,235,210,.05); --strip:linear-gradient(135deg,#3a2612,#1b120c 60%,#2d170d);
+  --shadow:0 20px 60px rgba(0,0,0,.5); --glow-neon:rgba(255,122,61,.55);
+}
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0a0912; --bg2:#110e1c; --surface:#181424; --surface2:#221c33; --surface3:#2c2543;
+  --fg:#f6f1fb; --muted:#a79fbd; --dim:#6f6886; --line:rgba(255,255,255,.085); --line2:rgba(255,255,255,.16);
+  --gold:#f0b545; --gold2:#ffd98a; --neon:#ff3f8e; --cyan:#45d5ff; --ok:#4ade80; --warn:#fbbf24;
+  --hdr-bg:rgba(10,9,18,.74); --glass:rgba(255,255,255,.04); --strip:linear-gradient(135deg,#1c1530,#0f0c1a 60%,#1a0f1c);
+  --shadow:0 20px 60px rgba(0,0,0,.45); --glow-neon:rgba(255,63,142,.6);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .3s,color .3s}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none;padding:0}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:6px}
+h1,h2,h3,h4{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing:.01em;text-wrap:balance;line-height:1.05}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:var(--gold);font-weight:600}
+.muted{color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+
+/* Header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--hdr-bg);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.hdr-in{display:flex;align-items:center;gap:22px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:24px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.logo-mark{width:34px;height:34px;border-radius:9px;background:var(--btn-grad);color:var(--gold-ink);display:grid;place-items:center;font-size:22px;box-shadow:0 0 24px rgba(240,181,69,.45);flex:none}
+.logo-vn{color:var(--neon);font-size:16px;align-self:flex-end;margin-bottom:3px}
+.nav{display:flex;gap:4px}
+.nav a{padding:8px 14px;border-radius:999px;font-weight:500;color:var(--muted);transition:.2s}
+.nav a:hover{color:var(--fg);background:var(--surface2)}
+.nav a.on{color:var(--fg);background:var(--surface3)}
+.hdr-r{margin-left:auto;display:flex;align-items:center;gap:10px}
+.theme-sw{display:flex;gap:2px;padding:3px;border-radius:999px;background:var(--surface2);border:1px solid var(--line)}
+.theme-sw button{width:34px;height:30px;border-radius:999px;font-size:14px;color:var(--muted);display:grid;place-items:center;line-height:1}
+.theme-sw button.on{background:var(--surface);color:var(--fg);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.theme-sw button[data-t="brown"].on{color:#e9b85c}.theme-sw button[data-t="light"].on{color:#d97f0e}.theme-sw button[data-t="dark"].on{color:#b98cff}
+.user-pill{display:flex;align-items:center;gap:10px;padding:5px 12px 5px 5px;border:1px solid var(--line2);border-radius:999px;background:var(--surface)}
+.avatar{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:12px;background:linear-gradient(135deg,#6d3bff,#ff3f8e);color:#fff;flex:none}
+.user-pill small{display:block;font-size:11px;color:var(--gold);line-height:1.1;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.user-pill b{font-size:13px;line-height:1.1;display:block}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:700;font-size:14px;transition:.2s;white-space:nowrap;min-height:44px}
+.btn-gold{background:var(--btn-grad);color:var(--gold-ink);box-shadow:0 8px 30px rgba(240,181,69,.3)}
+.btn-gold:hover{transform:translateY(-1px);box-shadow:0 12px 36px rgba(240,181,69,.45)}
+.btn-ghost{border:1px solid var(--line2);color:var(--fg);background:transparent}
+.btn-ghost:hover{background:var(--surface2)}
+.btn-sm{padding:9px 16px;font-size:13px;min-height:40px}
+.btn-block{width:100%}
+
+/* Views */
+.view{padding-block:12px 80px}
+section.block{padding-block:40px}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(28px,4vw,40px);text-transform:uppercase}
+.sec-head .lnk{color:var(--gold);font-weight:600;font-size:14px}
+
+/* Hero */
+.hero{position:relative;padding-block:56px 40px;overflow:hidden}
+.hero-glow{position:absolute;inset:0;pointer-events:none;z-index:-1;background:
+  radial-gradient(600px 400px at 15% 10%,rgba(255,63,142,.18),transparent 60%),
+  radial-gradient(700px 420px at 85% 30%,rgba(240,181,69,.16),transparent 60%),
+  radial-gradient(500px 300px at 60% 100%,rgba(69,213,255,.1),transparent 60%)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(56px,9vw,120px);text-transform:uppercase;line-height:1.04;font-weight:700}
+.hero h1 em{font-style:normal;color:transparent;-webkit-text-stroke:2px var(--gold);display:block}
+.hero h1 .neon{color:var(--neon);text-shadow:0 0 30px var(--glow-neon)}
+.hero .lead{font-size:17px;color:var(--muted);max-width:52ch;margin-top:18px}
+.search{margin-top:28px;display:grid;grid-template-columns:1.3fr 1fr 1fr auto;gap:8px;padding:8px;border-radius:20px;background:var(--surface);border:1px solid var(--line2);box-shadow:var(--shadow)}
+.field{display:flex;flex-direction:column;gap:2px;padding:8px 14px;border-radius:14px;background:var(--bg2);min-width:0}
+.field label{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--dim);font-weight:600}
+.field select,.field input{background:transparent;border:0;padding:0;font-weight:600;font-size:15px;width:100%;min-width:0;outline:none;min-height:24px}
+.field select option{background:var(--surface);color:var(--fg)}
+.search .btn{align-self:stretch;border-radius:14px}
+.stats{display:flex;gap:28px;margin-top:26px;flex-wrap:wrap}
+.stat b{font-family:var(--font-display);font-size:30px;font-weight:600;display:block;line-height:1}
+.stat span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.ticket{position:relative;border-radius:24px;padding:22px;background:linear-gradient(160deg,var(--surface2),var(--surface));border:1px solid var(--line2);box-shadow:var(--shadow)}
+.ticket .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.ticket .live{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ok);font-weight:700}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 12px var(--ok);animation:pulse 1.4s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.feed{display:flex;flex-direction:column;gap:10px;min-height:230px}
+.feed-item{display:flex;gap:12px;align-items:center;padding:10px 12px;border-radius:14px;background:var(--glass);border:1px solid var(--line);animation:slidein .45s ease}
+@keyframes slidein{from{opacity:0;transform:translateY(-8px)}}
+.feed-item .t{font-size:13px}
+.feed-item .t b{color:var(--gold2)}
+.feed-item time{margin-left:auto;font-size:11px;color:var(--dim);white-space:nowrap}
+.ticket-deal{margin-top:16px;padding:14px 16px;border-radius:16px;background:linear-gradient(135deg,rgba(240,181,69,.18),rgba(255,63,142,.12));border:1px dashed rgba(240,181,69,.5)}
+.ticket-deal b{font-family:var(--font-display);font-size:22px;text-transform:uppercase;letter-spacing:.04em;color:var(--gold2)}
+
+/* Giờ vàng */
+.gh-rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(280px,1fr);gap:14px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.gh{scroll-snap-align:start;position:relative;padding:16px 16px 14px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;gap:8px;overflow:hidden;cursor:pointer;transition:.2s}
+.gh:hover{transform:translateY(-3px);border-color:var(--line2);box-shadow:var(--shadow)}
+.gh::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(var(--gold2),var(--neon))}
+.gh .top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.gh h3{font-size:22px;text-transform:uppercase;line-height:1.1}
+.gh .pct{font-family:var(--font-display);font-size:30px;line-height:1;color:var(--neon);text-shadow:0 0 18px var(--glow-neon);white-space:nowrap}
+.gh .pct small{font-family:var(--font-body);font-size:10px;letter-spacing:.12em;text-transform:uppercase;display:block;color:var(--muted);text-shadow:none;text-align:right}
+.gh .slot{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px}
+.gh .slot .cd{margin-left:auto;font-size:12px;font-weight:600;padding:3px 8px;border-radius:7px;background:var(--glass);border:1px solid var(--line);color:var(--muted)}
+.gh .slot .cd.live{color:var(--ok);border-color:rgba(74,222,128,.4)}
+.gh .slot .cd.soon{color:var(--gold2);border-color:rgba(240,181,69,.4)}
+.gh .foot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:4px}
+.gh .foot .meta{font-size:12.5px}
+
+/* City rail */
+.rail{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.chip{flex:none;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;min-height:40px;border-radius:999px;border:1px solid var(--line2);background:var(--surface);font-weight:600;font-size:14px;transition:.2s}
+.chip:hover{border-color:var(--gold);color:var(--gold2)}
+.chip.on{background:var(--gold-solid);color:var(--gold-ink);border-color:var(--gold-solid)}
+.chip small{font-size:11px;color:var(--dim);font-weight:600}
+.chip.on small{color:rgba(26,18,6,.7)}
+
+/* Cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.rail-cards{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(300px,1fr);gap:18px;overflow-x:auto;padding-bottom:10px;scrollbar-width:thin;scroll-snap-type:x mandatory}
+.rail-cards .card{scroll-snap-align:start}
+.card{position:relative;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;transition:.25s;cursor:pointer}
+.card:hover{transform:translateY(-4px);border-color:var(--line2);box-shadow:var(--shadow)}
+.card.top{border-color:rgba(240,181,69,.5);box-shadow:0 0 0 1px rgba(240,181,69,.25),0 16px 40px rgba(240,181,69,.08)}
+.art{position:relative;aspect-ratio:16/10;max-width:100%;background:#120d1c}
+.art canvas{width:100%;height:100%;display:block}
+.art::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--surface),transparent 55%)}
+.badges{position:absolute;top:12px;left:12px;display:flex;gap:6px;z-index:2;flex-wrap:wrap}
+.badge{font-family:var(--font-display);font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:4px 9px;border-radius:7px;font-weight:600}
+.badge.top{background:var(--gold-solid);color:var(--gold-ink)}
+.badge.hot{background:#ff3f8e;color:#fff}
+.badge.type{background:rgba(10,9,18,.7);color:#fff;backdrop-filter:blur(6px)}
+.rating{position:absolute;top:12px;right:12px;z-index:2;background:rgba(10,9,18,.75);color:#fff;backdrop-filter:blur(6px);padding:4px 9px;border-radius:8px;font-weight:700;font-size:13px;display:flex;gap:4px;align-items:center}
+.rating i{color:#f0b545;font-style:normal}.rating span{color:#c9c2d8}
+.card-body{padding:4px 16px 16px;display:flex;flex-direction:column;gap:8px;margin-top:-28px;position:relative;z-index:2}
+.card h3{font-size:24px;text-transform:uppercase;letter-spacing:.02em}
+.meta{font-size:13px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap}
+.meta span+span::before{content:"·";margin-right:8px;color:var(--dim)}
+.deal{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--gold2)}
+.deal .ico{width:22px;height:22px;border-radius:6px;background:rgba(240,181,69,.15);display:grid;place-items:center;font-size:12px;flex:none}
+.ghline{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:var(--neon)}
+.ghline .ico{width:22px;height:22px;border-radius:6px;background:rgba(255,63,142,.12);display:grid;place-items:center;font-size:12px;flex:none}
+.bonus{font-size:12.5px;color:var(--muted)}
+.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:6px;gap:8px}
+.price{font-size:13px;color:var(--muted)}.price b{color:var(--fg);font-size:14px}
+
+/* How it works */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{padding:24px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);position:relative}
+.step .n{font-family:var(--font-display);font-size:48px;color:transparent;-webkit-text-stroke:1.5px var(--gold);line-height:1}
+.step h3{font-size:22px;text-transform:uppercase;margin-top:10px}
+.step p{color:var(--muted);margin-top:8px;font-size:14px}
+
+/* Tier teaser */
+.tier-strip{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center;padding:36px;border-radius:28px;background:var(--strip);border:1px solid var(--line2);position:relative;overflow:hidden}
+.tier-strip::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(240,181,69,.25),transparent 65%);pointer-events:none}
+.tier-strip h2{font-size:clamp(30px,4vw,46px);text-transform:uppercase}
+.tier-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;position:relative;z-index:1}
+.tier{padding:16px 12px;border-radius:14px;background:var(--glass);border:1px solid var(--line);text-align:center}
+.tier b{font-family:var(--font-display);font-size:18px;text-transform:uppercase;letter-spacing:.08em;display:block}
+.tier span{font-size:12px;color:var(--muted)}
+.tier.silver b{color:#9aa3b5}.tier.gold b{color:var(--gold)}.tier.black{background:#000;border-color:#444;color:#fff}.tier.black b{color:#fff}.tier.black span{color:#b5aeb8}
+.pts-note{display:flex;gap:12px;align-items:center;margin-top:16px;padding:12px 14px;border-radius:14px;background:var(--glass);border:1px dashed var(--line2);font-size:13.5px}
+.pts-note b{font-family:var(--font-display);font-size:24px;color:var(--gold2);white-space:nowrap}
+
+/* Filters */
+.filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:18px 0 22px}
+.filters .field{flex-direction:row;align-items:center;gap:10px;padding:8px 14px;background:var(--surface);border:1px solid var(--line);flex:none}
+.filters .field label{white-space:nowrap}
+.filters .field select,.filters .field input{width:auto;min-width:120px}
+.filters .count{margin-left:auto;color:var(--muted);font-size:14px}
+
+/* Modal */
+.modal{position:fixed;inset:0;z-index:100;display:flex;align-items:flex-end;justify-content:center;background:rgba(5,4,10,.78);backdrop-filter:blur(8px);padding:0}
+.modal[hidden]{display:none}
+.sheet{position:relative;width:100%;max-width:1080px;max-height:calc(100% - env(safe-area-inset-top,0px) - 24px);overflow:auto;background:var(--bg2);border-radius:28px 28px 0 0;border:1px solid var(--line2);border-bottom:0;animation:up .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{transform:translateY(40px);opacity:0}}
+.sheet-art{position:relative;aspect-ratio:16/6;min-height:220px;max-width:100%;background:#120d1c}
+.sheet-art canvas{width:100%;height:100%;display:block;object-fit:cover}
+.sheet-art::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--bg2) 5%,transparent 70%)}
+.close{position:absolute;top:14px;right:14px;z-index:3;width:44px;height:44px;border-radius:50%;background:rgba(10,9,18,.7);color:#fff;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;font-size:18px}
+.sheet-title{position:absolute;left:28px;bottom:16px;z-index:2;right:28px}
+.sheet-title h2{font-size:clamp(34px,5vw,60px);text-transform:uppercase;line-height:.95}
+.sheet-body{display:grid;grid-template-columns:1.2fr .85fr;gap:28px;padding:10px 28px 32px}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+.info{padding:12px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+.info small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);font-weight:600}
+.info b{font-weight:600;font-size:14px}
+.deal-list{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.deal-row{display:flex;gap:12px;align-items:center;padding:12px 14px;border-radius:14px;background:linear-gradient(135deg,rgba(240,181,69,.14),rgba(240,181,69,.04));border:1px solid rgba(240,181,69,.3)}
+.deal-row .big{font-family:var(--font-display);font-size:26px;color:var(--gold2);min-width:62px;text-align:center;line-height:1}
+.deal-row.neon{background:linear-gradient(135deg,rgba(255,63,142,.14),rgba(255,63,142,.03));border-color:rgba(255,63,142,.35)}
+.deal-row.neon .big{color:var(--neon);font-size:18px}
+.deal-row.plain{background:var(--surface);border-color:var(--line)}
+.deal-row small{display:block;color:var(--muted);font-size:12.5px}
+.h4{font-family:var(--font-display);font-size:20px;text-transform:uppercase;letter-spacing:.04em;margin-top:26px;margin-bottom:8px}
+.menu{display:flex;gap:8px;flex-wrap:wrap}
+.menu span{padding:7px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:13px}
+.menu span b{color:var(--gold2);margin-left:6px}
+.review{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.review .avatar{width:34px;height:34px}
+.review .who{font-weight:700;font-size:13.5px}
+.review .stars{color:var(--gold);font-size:12px;letter-spacing:2px}
+.review p{font-size:14px;color:var(--muted);margin-top:2px}
+.review .tier-tag{font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:2px 6px;border-radius:5px;background:var(--surface3);color:var(--gold2);margin-left:6px}
+
+/* Booking box */
+.book{position:sticky;top:10px;align-self:start;padding:20px;border-radius:22px;background:var(--surface);border:1px solid var(--line2);box-shadow:var(--shadow)}
+.book h3{font-size:24px;text-transform:uppercase}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.form .field{background:var(--bg2);border:1px solid var(--line)}
+.form .field.full{grid-column:1/-1}
+.form textarea{background:transparent;border:0;resize:vertical;min-height:54px;width:100%;outline:none;font-size:14px}
+.lbl{grid-column:1/-1;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--dim);font-weight:600;margin-top:4px;display:flex;justify-content:space-between;align-items:center}
+.lbl .hint{color:var(--neon);text-transform:none;letter-spacing:0;font-size:12px}
+.slots{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px}
+.slot{padding:8px 11px;min-height:40px;border-radius:11px;background:var(--bg2);border:1px solid var(--line);font-size:13.5px;font-weight:600;line-height:1.15;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:62px}
+.slot small{font-size:10px;color:var(--neon);font-weight:700;letter-spacing:.04em}
+.slot.gold{border-color:rgba(255,63,142,.4);background:rgba(255,63,142,.06)}
+.slot.on{border-color:var(--gold);background:rgba(240,181,69,.14);color:var(--gold2);box-shadow:0 0 0 1px var(--gold)}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;grid-column:1/-1}
+.seg button{padding:10px 6px;min-height:48px;border-radius:12px;background:var(--bg2);border:1px solid var(--line);font-size:13px;font-weight:600;line-height:1.2}
+.seg button small{display:block;font-size:11px;color:var(--dim);font-weight:500}
+.seg button.on{border-color:var(--gold);background:rgba(240,181,69,.12);color:var(--gold2)}
+.pts-box{grid-column:1/-1;padding:12px 14px;border-radius:14px;background:var(--bg2);border:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.pts-box .row{display:flex;align-items:center;gap:10px;font-size:13.5px}
+.pts-box .row .t{flex:1;min-width:0}
+.pts-box .note{font-size:12.5px;color:var(--muted)}
+.pts-box .row b{color:var(--gold2)}
+.sw{margin-left:auto;width:44px;height:26px;border-radius:999px;background:var(--surface3);position:relative;border:1px solid var(--line2);flex:none}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:var(--muted);transition:.2s}
+.sw.on{background:var(--gold-solid);border-color:var(--gold-solid)}
+.sw.on::after{left:21px;background:var(--gold-ink)}
+.pts-box input[type=range]{width:100%;accent-color:var(--gold-solid)}
+.sum{margin-top:14px;padding:14px;border-radius:14px;background:var(--bg2);border:1px dashed var(--line2);display:flex;flex-direction:column;gap:6px;font-size:13.5px}
+.sum .row{display:flex;justify-content:space-between;gap:10px}
+.sum .row.total{border-top:1px solid var(--line);padding-top:8px;margin-top:4px;font-weight:700;font-size:15px}
+.sum .ok{color:var(--ok)}
+.sum .gold{color:var(--gold2)}
+.sum .neon{color:var(--neon)}
+.success{text-align:center;padding:14px 4px}
+.success .code{font-family:var(--font-display);font-size:40px;letter-spacing:.1em;color:var(--gold2);margin:8px 0}
+.qr{width:150px;height:150px;margin:14px auto;border-radius:12px;background:#fff;padding:8px}
+.qr canvas{width:100%;height:100%;image-rendering:pixelated;display:block}
+.mob-cta{display:none;position:sticky;bottom:0;z-index:5;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--hdr-bg);backdrop-filter:blur(14px);border-top:1px solid var(--line);align-items:center;gap:12px}
+.mob-cta .tot{font-size:12px;color:var(--muted);line-height:1.2}
+.mob-cta .tot b{display:block;font-family:var(--font-display);font-size:20px;color:var(--fg)}
+.mob-cta .btn{margin-left:auto}
+
+/* Member view */
+.member-hero{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.mcard{border-radius:24px;padding:28px;background:linear-gradient(135deg,#3a2a08,#17120a 50%,#2b1d0c);border:1px solid rgba(240,181,69,.4);position:relative;overflow:hidden;min-height:230px;display:flex;flex-direction:column;justify-content:space-between;color:#f6f1fb}
+.mcard::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 200px at 90% 10%,rgba(240,181,69,.35),transparent 60%);pointer-events:none}
+.mcard .brand{font-family:var(--font-display);letter-spacing:.2em;font-size:14px;color:#ffd98a;text-transform:uppercase}
+.mcard .name{font-family:var(--font-display);font-size:34px;text-transform:uppercase;margin-top:auto}
+.mcard .sub{font-family:var(--font-body);font-size:14px;text-transform:none;font-weight:500;color:#b9ad9a}
+.mcard .tierbig{position:absolute;right:24px;bottom:18px;font-family:var(--font-display);font-size:64px;color:transparent;-webkit-text-stroke:1.5px #f0b545;line-height:1;opacity:.9}
+.progress{height:10px;border-radius:999px;background:var(--surface3);overflow:hidden}
+.progress i{display:block;height:100%;width:47%;background:linear-gradient(90deg,#f0b545,#ffd98a);border-radius:999px;box-shadow:0 0 16px rgba(240,181,69,.6)}
+.panel{padding:22px;border-radius:22px;background:var(--surface);border:1px solid var(--line)}
+.panel h3{font-size:22px;text-transform:uppercase;margin-bottom:12px}
+.kv{display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid var(--line);font-size:14px;gap:10px}
+.kv:first-of-type{border-top:0}
+.wallet{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+.wallet-big{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.wallet-big b{font-family:var(--font-display);font-size:52px;line-height:1;color:var(--gold2)}
+.wallet-big span{font-size:15px;color:var(--muted)}
+.wallet-acts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.wallet-acts button{padding:14px 12px;border-radius:14px;background:var(--bg2);border:1px solid var(--line2);text-align:left;line-height:1.25;min-height:64px}
+.wallet-acts button b{display:block;font-size:14px}
+.wallet-acts button small{color:var(--muted);font-size:12px}
+.wallet-acts button:hover,.wallet-acts button.on{border-color:var(--gold);background:rgba(240,181,69,.1)}
+.redeem{margin-top:14px;padding:14px;border-radius:14px;background:var(--bg2);border:1px dashed var(--line2);display:flex;flex-direction:column;gap:10px}
+.redeem .field{background:var(--surface);border:1px solid var(--line)}
+.redeem .opts{display:flex;gap:6px;flex-wrap:wrap}
+.redeem .opts button{padding:8px 12px;min-height:38px;border-radius:10px;background:var(--surface);border:1px solid var(--line);font-size:13px;font-weight:600}
+.redeem .opts button.on{border-color:var(--gold);color:var(--gold2)}
+.pts-hist{display:flex;flex-direction:column}
+.pts-hist .kv b.plus{color:var(--ok)}.pts-hist .kv b.minus{color:var(--neon)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:12px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11.5px;text-transform:uppercase;letter-spacing:.12em;color:var(--dim)}
+td.c{text-align:center}
+.tbl-wrap{overflow-x:auto}
+.ok-ico{color:var(--ok)}.no-ico{color:var(--dim)}
+.hist{display:flex;flex-direction:column;gap:10px}
+.hist-item{display:flex;gap:12px;align-items:center;padding:12px;border-radius:14px;background:var(--bg2);border:1px solid var(--line)}
+.hist-item .sq{width:44px;height:44px;border-radius:10px;flex:none}
+.hist-item .st{margin-left:auto;font-size:12px;font-weight:700;padding:4px 9px;border-radius:7px;white-space:nowrap}
+.st.done{background:rgba(74,222,128,.15);color:var(--ok)}.st.soon{background:rgba(240,181,69,.15);color:var(--gold2)}
+
+/* Community */
+.community{display:grid;grid-template-columns:260px 1fr 300px;gap:18px;min-height:560px}
+.groups{display:flex;flex-direction:column;gap:6px}
+.group{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:14px;border:1px solid transparent;text-align:left;width:100%}
+.group:hover{background:var(--surface)}
+.group.on{background:var(--surface2);border-color:var(--line2)}
+.gi{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-family:var(--font-display);font-size:18px;flex:none}
+.group b{display:block;font-size:14px}.group small{color:var(--muted);font-size:12px}
+.chat{display:flex;flex-direction:column;border-radius:22px;background:var(--surface);border:1px solid var(--line);overflow:hidden;min-width:0}
+.chat-head{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px}
+.chat-head .gi{width:34px;height:34px;border-radius:10px}
+.chat-head h3{font-size:20px;text-transform:uppercase}
+.chat-head .online{margin-left:auto;font-size:12px;color:var(--ok);display:flex;align-items:center;gap:6px;white-space:nowrap}
+.msgs{flex:1;overflow:auto;padding:16px 18px;display:flex;flex-direction:column;gap:12px;max-height:440px;min-height:320px}
+.msg{display:flex;gap:10px;max-width:85%}
+.msg .avatar{width:32px;height:32px;font-size:11px}
+.msg .b{padding:9px 13px;border-radius:14px 14px 14px 4px;background:var(--surface2);font-size:14px;min-width:0}
+.msg .b small{display:block;font-size:11px;color:var(--dim);margin-bottom:2px}
+.msg .b small b{color:var(--gold2);font-weight:600}
+.msg.me{align-self:flex-end;flex-direction:row-reverse}
+.msg.me .b{background:rgba(240,181,69,.16);border:1px solid rgba(240,181,69,.3);border-radius:14px 14px 4px 14px}
+.chat-in{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+.chat-in input{flex:1;padding:11px 14px;border-radius:12px;background:var(--bg2);border:1px solid var(--line);outline:none;min-width:0;min-height:44px}
+.reviews-feed{display:flex;flex-direction:column;gap:10px}
+.rv{padding:12px 14px;border-radius:14px;background:var(--surface);border:1px solid var(--line)}
+.rv .bar{font-weight:700;font-size:13.5px;color:var(--gold2)}
+.rv .stars{color:var(--gold);font-size:12px;letter-spacing:2px}
+.rv p{font-size:13px;color:var(--muted);margin-top:4px}
+.rv .by{font-size:11.5px;color:var(--dim);margin-top:6px}
+
+/* Partner */
+.partner-hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.partner-hero h2{font-size:clamp(36px,5vw,64px);text-transform:uppercase;line-height:.95}
+.partner-hero h2 em{font-style:normal;color:var(--gold)}
+.dash{padding:20px;border-radius:22px;background:var(--surface);border:1px solid var(--line2);box-shadow:var(--shadow)}
+.dash-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.tile{padding:14px;border-radius:14px;background:var(--bg2);border:1px solid var(--line)}
+.tile small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);font-weight:600;display:block}
+.tile b{font-family:var(--font-display);font-size:28px;font-weight:600;display:block;line-height:1.1;margin-top:4px}
+.tile .up{font-size:12px;color:var(--ok);font-weight:600}
+.spark{margin-top:14px;height:90px;border-radius:12px;background:var(--bg2);border:1px solid var(--line);padding:8px}
+.spark svg{width:100%;height:100%;display:block;overflow:visible}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.plan{padding:26px;border-radius:22px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;gap:14px;position:relative}
+.plan.best{border-color:var(--gold);box-shadow:0 0 0 1px rgba(240,181,69,.4),0 20px 50px rgba(240,181,69,.12)}
+.plan .tag{position:absolute;top:-12px;left:22px;background:var(--gold-solid);color:var(--gold-ink);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:7px}
+.plan h3{font-size:26px;text-transform:uppercase}
+.plan .pr{font-family:var(--font-display);font-size:36px;color:var(--gold2)}
+.plan .pr small{font-family:var(--font-body);font-size:13px;color:var(--muted)}
+.plan ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--muted)}
+.plan li::before{content:"✓";color:var(--ok);margin-right:8px;font-weight:700}
+.reg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+.reg .field{background:var(--surface);border:1px solid var(--line)}
+.reg .btn{border-radius:14px}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--muted);font-size:13.5px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+.foot h4{font-size:15px;text-transform:uppercase;letter-spacing:.12em;color:var(--fg);margin-bottom:10px}
+.foot a{display:block;padding:3px 0}
+.foot a:hover{color:var(--gold2)}
+.foot .note{margin-top:18px;font-size:12px;color:var(--dim)}
+
+/* Bottom nav (mobile) */
+.bnav{display:none;position:fixed;left:0;right:0;bottom:0;z-index:55;background:var(--hdr-bg);backdrop-filter:blur(16px);border-top:1px solid var(--line);padding:6px max(12px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.bnav a{flex:1;text-align:center;font-size:11px;color:var(--muted);padding:6px 2px;border-radius:10px;display:flex;flex-direction:column;gap:2px;align-items:center;min-height:50px;justify-content:center}
+.bnav a i{font-style:normal;font-size:19px}
+.bnav a.on{color:var(--gold2);background:var(--glass)}
+
+/* Toast */
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);background:var(--surface3);border:1px solid var(--line2);padding:12px 18px;border-radius:14px;box-shadow:var(--shadow);opacity:0;transition:.3s;z-index:200;font-size:14px;max-width:calc(100% - 32px);text-align:center}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media (max-width:980px){
+  .hero-grid,.tier-strip,.member-hero,.partner-hero,.sheet-body,.wallet{grid-template-columns:1fr}
+  .steps,.plans{grid-template-columns:1fr}
+  .community{grid-template-columns:1fr}
+  .groups{flex-direction:row;overflow-x:auto;scrollbar-width:none}
+  .group{width:auto;flex:none}
+  .reg{grid-template-columns:1fr 1fr}
+  .foot{grid-template-columns:1fr 1fr}
+  .book{position:static}
+  .mob-cta{display:flex}
+}
+@media (max-width:720px){
+  .nav,.hdr-r .btn-ghost{display:none}
+  .hdr-in{height:60px;gap:12px}
+  .theme-sw button{width:30px;height:28px;font-size:13px}
+  .user-pill{padding:4px 10px 4px 4px;gap:7px}.user-pill b,.user-pill .tier-l{display:none}.user-pill small{font-size:12px}.hdr-in{gap:8px}.logo{font-size:20px;gap:7px}.logo-mark{width:30px;height:30px;font-size:19px}.theme-sw button{width:30px;height:28px}.theme-sw button:not(.on){display:none}
+  .bnav{display:flex}
+  .view{padding-bottom:110px}
+  footer{padding-bottom:100px}
+  .search{grid-template-columns:1fr 1fr}
+  .search .btn{grid-column:1/-1}
+  .tier-cards{grid-template-columns:1fr 1fr}
+  .sheet{max-height:calc(100% - env(safe-area-inset-top,0px) - 8px);border-radius:20px 20px 0 0}
+  .sheet-art{aspect-ratio:16/9;min-height:0}
+  .sheet-body{padding:6px 16px 24px}
+  .sheet-title{left:16px;right:16px;bottom:12px}
+  .dash-grid{grid-template-columns:1fr 1fr}
+  .reg{grid-template-columns:1fr}
+  .form{grid-template-columns:1fr 1fr}
+  .seg{grid-template-columns:1fr 1fr 1fr}
+  .hero{padding-block:32px 28px}
+  .hero h1{font-size:clamp(54px,17vw,80px)}
+  .stats{gap:18px 28px}
+  .filters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-bottom:8px;padding-bottom:4px}
+  .filters .count{margin-left:0;flex:none}
+  .filters + .grid{margin-top:12px}
+  .wallet-big b{font-size:44px}
+  .gh-rail{grid-auto-columns:minmax(260px,85%)}
+  .rail-cards{grid-auto-columns:minmax(260px,85%)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+
+<header class="hdr"><div class="wrap hdr-in">
+  <a class="logo" href="#home"><span class="logo-mark">B</span>Bartop<span class="logo-vn">.vn</span></a>
+  <nav class="nav" id="nav">
+    <a href="#home" data-v="home">Trang chủ</a>
+    <a href="#kham-pha" data-v="bars">Khám phá bar</a>
+    <a href="#thanh-vien" data-v="member">Thành viên</a>
+    <a href="#hoi-nhom" data-v="community">Hội nhóm</a>
+    <a href="#chu-bar" data-v="partner">Chủ bar</a>
+  </nav>
+  <div class="hdr-r">
+    <div class="theme-sw" id="themeSw" role="group" aria-label="Giao diện">
+      <button type="button" data-t="light" title="Giao diện sáng" aria-label="Giao diện sáng">☀</button>
+      <button type="button" data-t="brown" title="Giao diện nâu" aria-label="Giao diện nâu">◐</button>
+      <button type="button" data-t="dark" title="Giao diện tối" aria-label="Giao diện tối">☾</button>
+    </div>
+    <button class="btn btn-ghost btn-sm" id="btnLogin">Đăng nhập</button>
+    <a class="user-pill" href="#thanh-vien"><span class="avatar">TA</span><span><small><span class="tier-l">Gold · </span><span class="num" id="pillPts">2.350</span> điểm</small><b>Tuấn Anh</b></span></a>
+  </div>
+</div></header>
+
+<!-- ============ HOME ============ -->
+<main id="v-home" class="view">
+  <section class="hero"><div class="hero-glow"></div><div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Nền tảng đặt bàn bar số 1 Việt Nam</div>
+      <h1 style="margin-top:20px">Đêm nay<em>Đi đâu</em><span class="neon">Quẩy?</span></h1>
+      <p class="lead">Đặt bàn tại hơn 1.200 bar, lounge, club khắp 63 tỉnh thành. Đặt đúng khung giờ vàng giảm tới 40%, tặng rượu bàn VIP, tích điểm trừ thẳng vào bill.</p>
+      <form class="search" id="searchForm">
+        <div class="field"><label for="sCity">Thành phố</label><select id="sCity"></select></div>
+        <div class="field"><label for="sDate">Ngày</label><input type="date" id="sDate"></div>
+        <div class="field"><label for="sGuests">Số người</label><select id="sGuests"><option>2 người</option><option selected>4 người</option><option>6 người</option><option>8 người</option><option>10+ người</option></select></div>
+        <button class="btn btn-gold" type="submit">Tìm bar</button>
+      </form>
+      <div class="stats">
+        <div class="stat"><b class="num" id="statTonight">1.248</b><span>bàn đặt tối nay</span></div>
+        <div class="stat"><b class="num">1.200+</b><span>bar &amp; lounge</span></div>
+        <div class="stat"><b class="num">38.400</b><span>thành viên</span></div>
+        <div class="stat"><b class="num">63</b><span>tỉnh thành</span></div>
+      </div>
+    </div>
+    <aside class="ticket">
+      <div class="top"><span class="live"><span class="dot"></span>Đang diễn ra</span><span class="muted" style="font-size:12px">Cập nhật theo thời gian thực</span></div>
+      <div class="feed" id="feed"></div>
+      <div class="ticket-deal"><div class="eyebrow" style="color:var(--neon)">Deal giờ vàng · <span id="dealCd">còn 02:14:36</span></div><b>Tặng 1 chai Chivas 18</b><div class="muted" style="font-size:13px">Cho bàn VIP từ 5 triệu tại Mộc Sky Bar · Tối nay</div></div>
+    </aside>
+  </div></section>
+
+  <section class="block" style="padding-top:8px"><div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">⚡ Đặt sớm, giảm sâu</div><h2>Khung giờ vàng tối nay</h2></div><span class="muted" style="font-size:13.5px">Giảm thêm khi đặt bàn trong 2 giờ đầu bar mở cửa. Cộng dồn với deal bar và hạng thành viên.</span></div>
+    <div class="gh-rail" id="ghRail"></div>
+  </div></section>
+
+  <section class="block" style="padding-top:8px"><div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Chọn thành phố</div><h2>Bar theo tỉnh thành</h2></div><a class="lnk" href="#kham-pha">Xem tất cả 63 tỉnh →</a></div>
+    <div class="rail" id="cityRail"></div>
+  </div></section>
+
+  <section class="block" style="padding-top:8px"><div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Được đẩy top bởi chủ bar</div><h2>Top bar tối nay</h2></div><a class="lnk" href="#chu-bar">Bạn là chủ bar? Đẩy top ngay →</a></div>
+    <div class="rail-cards" id="featured"></div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Đơn giản 3 bước</div><h2>Đặt bàn, nhận quà</h2></div></div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>Chọn bar hợp gu</h3><p>Lọc theo thành phố, phong cách nhạc, mức giá. Đọc review thật từ hội nhóm trước khi quyết.</p></div>
+      <div class="step"><div class="n">02</div><h3>Chọn giờ vàng, đặt bàn</h3><p>Chọn khung giờ vàng để giảm thêm 10–20%. Dùng điểm trừ bill ngay lúc đặt. Nhận mã QR xác nhận.</p></div>
+      <div class="step"><div class="n">03</div><h3>Đến quẩy, nhận ưu đãi</h3><p>Quét QR tại quầy: giảm giá bill, nhận rượu tặng, tích điểm thăng hạng thành viên.</p></div>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Khách đặt nhiều nhất tuần này</div><h2>Đang hot</h2></div><a class="lnk" href="#kham-pha">Khám phá tất cả →</a></div>
+    <div class="grid" id="hotGrid"></div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="tier-strip">
+      <div>
+        <div class="eyebrow">Hạng thành viên &amp; ví điểm</div>
+        <h2 style="margin-top:10px">Càng chơi càng được tặng</h2>
+        <p class="muted" style="margin-top:12px;max-width:48ch">Mỗi 10.000đ chi tiêu qua Bartop = 1 điểm. Điểm đổi được ra tiền mặt về ví Momo, ngân hàng, hoặc trừ thẳng vào bill lần đặt sau.</p>
+        <div class="pts-note"><b>1 điểm = 500đ</b><span>Đổi tối thiểu 200 điểm. Trừ bill tối đa 30% giá trị bàn. Điểm không hết hạn trong 12 tháng.</span></div>
+        <a class="btn btn-gold" href="#thanh-vien" style="margin-top:20px">Xem ví điểm của bạn</a>
+      </div>
+      <div class="tier-cards">
+        <div class="tier"><b>Newbie</b><span>Giảm 5% đơn đầu</span></div>
+        <div class="tier silver"><b>Silver</b><span>Giảm 5% mọi bill</span></div>
+        <div class="tier gold"><b>Gold</b><span>Giảm 10% · bàn ưu tiên</span></div>
+        <div class="tier black"><b>Black</b><span>Giảm 15% · rượu tặng</span></div>
+      </div>
+    </div>
+  </div></section>
+</main>
+
+<!-- ============ BARS ============ -->
+<main id="v-bars" class="view" hidden>
+  <section class="block" style="padding-top:28px"><div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Khám phá</div><h2 id="barsTitle">Tất cả bar</h2></div></div>
+    <div class="rail" id="cityRail2"></div>
+    <div class="filters">
+      <div class="field"><label for="fType">Loại hình</label><select id="fType"><option value="">Tất cả</option><option>Rooftop</option><option>Lounge</option><option>Club</option><option>Cocktail bar</option><option>Beach club</option><option>Pub</option><option>Jazz bar</option><option>Whisky bar</option><option>Garden bar</option></select></div>
+      <div class="field"><label for="fSort">Sắp xếp</label><select id="fSort"><option value="top">Nổi bật</option><option value="golden">Giờ vàng giảm sâu</option><option value="rating">Đánh giá cao</option><option value="deal">Ưu đãi lớn</option><option value="reviews">Nhiều review</option></select></div>
+      <div class="field"><label for="fQ">Tìm</label><input id="fQ" placeholder="Tên bar, khu vực…"></div>
+      <div class="count num" id="barsCount"></div>
+    </div>
+    <div class="grid" id="barsGrid"></div>
+  </div></section>
+</main>
+
+<!-- ============ MEMBER ============ -->
+<main id="v-member" class="view" hidden>
+  <section class="block" style="padding-top:28px"><div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Tài khoản của bạn</div><h2>Hạng thành viên</h2></div></div>
+    <div class="member-hero">
+      <div class="mcard">
+        <div class="brand">Bartop Member</div>
+        <div class="name">Tuấn Anh<br><span class="sub">Thành viên từ 03/2025 · ID BT-082417</span></div>
+        <div class="tierbig">GOLD</div>
+      </div>
+      <div class="panel">
+        <h3>Tiến độ lên hạng Black</h3>
+        <div class="kv"><span>Chi tiêu năm nay</span><b class="num">23.500.000 / 50.000.000đ</b></div>
+        <div class="progress"><i></i></div>
+        <p class="muted" style="font-size:13px;margin-top:10px">Cần thêm <b class="num" style="color:var(--gold2)">26.500.000đ</b> chi tiêu qua Bartop để lên Black.</p>
+        <div class="kv" style="margin-top:8px"><span>Ưu đãi hiện tại</span><b style="color:var(--gold2)">Giảm 10% + bàn ưu tiên</b></div>
+        <div class="kv"><span>Voucher khả dụng</span><b>3 voucher · 1 chai rượu tặng</b></div>
+        <div class="kv"><span>Lần đặt gần nhất</span><b>Saigon 52 Rooftop · 24/10</b></div>
+      </div>
+    </div>
+
+    <div class="wallet">
+      <div class="panel">
+        <div class="eyebrow">Ví điểm</div>
+        <div class="wallet-big" style="margin-top:8px"><b class="num" id="walletPts">2.350</b><span>điểm ≈ <b class="num" id="walletMoney" style="font-family:var(--font-body);font-size:15px;color:var(--fg)">1.175.000đ</b></span></div>
+        <p class="muted" style="font-size:13px;margin-top:6px">1 điểm = 500đ. Tích 1 điểm cho mỗi 10.000đ chi qua Bartop.</p>
+        <div class="wallet-acts">
+          <button type="button" id="actCash"><b>💸 Đổi sang tiền</b><small>Về Momo, ZaloPay hoặc ngân hàng trong 24h</small></button>
+          <button type="button" id="actBill"><b>🧾 Trừ vào bill</b><small>Bật "Dùng điểm" khi đặt bàn, trừ tối đa 30%</small></button>
+        </div>
+        <div class="redeem" id="redeem" hidden>
+          <div class="field"><label for="rdPts">Số điểm muốn đổi (tối thiểu 200)</label><input type="number" id="rdPts" min="200" step="50" value="1000"></div>
+          <div class="opts" id="rdOpts"><button type="button" class="on" data-m="Momo">Momo</button><button type="button" data-m="ZaloPay">ZaloPay</button><button type="button" data-m="Ngân hàng">Ngân hàng</button></div>
+          <div class="kv" style="border:0;padding:4px 0"><span>Bạn nhận về</span><b class="num" style="color:var(--ok)" id="rdOut">500.000đ</b></div>
+          <button class="btn btn-gold btn-block" type="button" id="rdGo">Xác nhận đổi điểm</button>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Lịch sử điểm</h3>
+        <div class="pts-hist" id="ptsHist"></div>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-top:44px"><div><h2>So sánh quyền lợi</h2></div></div>
+    <div class="panel tbl-wrap"><table>
+      <thead><tr><th>Quyền lợi</th><th class="c">Newbie</th><th class="c">Silver<br><small class="muted">5tr/năm</small></th><th class="c" style="color:var(--gold)">Gold<br><small class="muted">20tr/năm</small></th><th class="c">Black<br><small class="muted">50tr/năm</small></th></tr></thead>
+      <tbody>
+        <tr><td>Giảm giá bill khi đặt qua Bartop</td><td class="c">5% đơn đầu</td><td class="c">5%</td><td class="c">10%</td><td class="c">15%</td></tr>
+        <tr><td>Tỷ lệ tích điểm</td><td class="c">1 điểm / 10k</td><td class="c">1 điểm / 10k</td><td class="c">1,5 điểm / 10k</td><td class="c">2 điểm / 10k</td></tr>
+        <tr><td>Đổi điểm sang tiền</td><td class="c">Từ 500 điểm</td><td class="c">Từ 300 điểm</td><td class="c">Từ 200 điểm</td><td class="c">Không tối thiểu</td></tr>
+        <tr><td>Đặt bàn không cần cọc</td><td class="c"><span class="no-ico">—</span></td><td class="c"><span class="no-ico">—</span></td><td class="c"><span class="ok-ico">✓</span></td><td class="c"><span class="ok-ico">✓</span></td></tr>
+        <tr><td>Bàn ưu tiên vị trí đẹp (view, gần DJ)</td><td class="c"><span class="no-ico">—</span></td><td class="c"><span class="no-ico">—</span></td><td class="c"><span class="ok-ico">✓</span></td><td class="c"><span class="ok-ico">✓</span></td></tr>
+        <tr><td>Rượu tặng khi đặt bàn VIP</td><td class="c"><span class="no-ico">—</span></td><td class="c">Theo deal bar</td><td class="c">Theo deal bar + 1 cocktail</td><td class="c">1 chai/tháng mọi bar đối tác</td></tr>
+        <tr><td>Free vào cửa, bỏ qua xếp hàng</td><td class="c"><span class="no-ico">—</span></td><td class="c"><span class="ok-ico">✓</span></td><td class="c"><span class="ok-ico">✓</span></td><td class="c"><span class="ok-ico">✓</span></td></tr>
+        <tr><td>Hội nhóm kín, sự kiện riêng</td><td class="c"><span class="no-ico">—</span></td><td class="c"><span class="no-ico">—</span></td><td class="c">Hội Gold</td><td class="c">Black Lounge + concierge</td></tr>
+        <tr><td>Sinh nhật</td><td class="c"><span class="no-ico">—</span></td><td class="c">Voucher 200k</td><td class="c">Voucher 500k</td><td class="c">1 chai Macallan 12</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="sec-head" style="margin-top:44px"><div><h2>Lịch sử đặt bàn</h2></div></div>
+    <div class="hist" id="hist"></div>
+  </div></section>
+</main>
+
+<!-- ============ COMMUNITY ============ -->
+<main id="v-community" class="view" hidden>
+  <section class="block" style="padding-top:28px"><div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Hội nhóm dân chơi</div><h2>Chat &amp; review bar</h2></div><button class="btn btn-ghost btn-sm" id="btnNewGroup">+ Tạo hội mới</button></div>
+    <div class="community">
+      <div class="groups" id="groups"></div>
+      <div class="chat">
+        <div class="chat-head"><span class="gi" id="chatIcon"></span><h3 id="chatTitle">Hội Rooftop Hà Nội</h3><span class="online"><span class="dot"></span><span id="chatOnline">312 online</span></span></div>
+        <div class="msgs" id="msgs"></div>
+        <form class="chat-in" id="chatForm"><input id="chatInput" placeholder="Nhắn gì đó cho hội… (vd: tối nay ai đi Mộc không?)" autocomplete="off"><button class="btn btn-gold btn-sm" type="submit">Gửi</button></form>
+      </div>
+      <div>
+        <div class="eyebrow" style="margin-bottom:10px">Review mới nhất</div>
+        <div class="reviews-feed" id="reviewsFeed"></div>
+      </div>
+    </div>
+  </div></section>
+</main>
+
+<!-- ============ PARTNER ============ -->
+<main id="v-partner" class="view" hidden>
+  <section class="block" style="padding-top:28px"><div class="wrap partner-hero">
+    <div>
+      <div class="eyebrow">Dành cho chủ bar</div>
+      <h2 style="margin-top:10px">Đẩy bar của bạn lên <em>Top 1</em> thành phố</h2>
+      <p class="muted" style="margin-top:14px;max-width:52ch;font-size:16px">Mỗi tháng hơn 420.000 lượt tìm kiếm "bar Hà Nội", "bar Sài Gòn", "rooftop Đà Nẵng" trên Google. Bartop chạy quảng cáo đưa khách về cho bạn, bạn chỉ trả hoa hồng khi có bàn thật. Khung giờ vàng giúp lấp bàn trống 2 giờ đầu mở cửa.</p>
+      <div class="stats" style="margin-top:22px">
+        <div class="stat"><b class="num">420K</b><span>lượt search / tháng</span></div>
+        <div class="stat"><b class="num">x3,4</b><span>lượt đặt khi lên top</span></div>
+        <div class="stat"><b class="num">8%</b><span>hoa hồng / bàn</span></div>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:22px;flex-wrap:wrap"><a class="btn btn-gold" href="#chu-bar" onclick="document.getElementById('regName').focus();return true">Đăng ký bar miễn phí</a><button class="btn btn-ghost" onclick="toast('Đội ngũ Bartop sẽ gọi lại trong 15 phút.')">Nhận tư vấn</button></div>
+    </div>
+    <div class="dash">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><div><div class="eyebrow">Bảng điều khiển chủ bar</div><b style="font-family:var(--font-display);font-size:22px;text-transform:uppercase">Mộc Sky Bar</b></div><span class="badge top">Top 1 Hà Nội</span></div>
+      <div class="dash-grid">
+        <div class="tile"><small>Lượt xem 7 ngày</small><b class="num">18.420</b><span class="up">▲ 212% khi lên top</span></div>
+        <div class="tile"><small>Bàn đã đặt</small><b class="num">342</b><span class="up">▲ 3,4 lần</span></div>
+        <div class="tile"><small>Bàn giờ vàng lấp đầy</small><b class="num">86%</b><span class="up">▲ từ 31%</span></div>
+      </div>
+      <div class="spark"><svg viewBox="0 0 300 70" preserveAspectRatio="none" aria-label="Lượt đặt bàn 14 ngày gần nhất">
+        <defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0b545" stop-opacity=".5"/><stop offset="1" stop-color="#f0b545" stop-opacity="0"/></linearGradient></defs>
+        <path d="M0,58 L23,54 L46,56 L69,50 L92,52 L115,46 L138,44 L161,30 L184,26 L207,22 L230,18 L253,14 L276,12 L300,8 L300,70 L0,70 Z" fill="url(#sg)"/>
+        <path d="M0,58 L23,54 L46,56 L69,50 L92,52 L115,46 L138,44 L161,30 L184,26 L207,22 L230,18 L253,14 L276,12 L300,8" fill="none" stroke="#f0b545" stroke-width="2.2" stroke-linejoin="round"/>
+        <line x1="138" y1="0" x2="138" y2="70" stroke="#ff3f8e" stroke-dasharray="3 3" stroke-width="1"/>
+        <circle cx="300" cy="8" r="3.5" fill="#ffd98a"/>
+        <text x="142" y="10" font-size="8" fill="#ff3f8e" font-family="sans-serif">Bật đẩy top</text>
+      </svg></div>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Gói đẩy top</div><h2>Chọn vị trí hiển thị</h2></div></div>
+    <div class="plans">
+      <div class="plan"><h3>Nổi bật</h3><div class="pr num">2.000.000đ<small> / tuần</small></div><ul><li>Nhãn "HOT" trên thẻ bar</li><li>Ưu tiên trong danh sách quận/huyện</li><li>Tự đặt khung giờ vàng &amp; mức giảm</li><li>Báo cáo lượt xem, lượt đặt</li></ul><button class="btn btn-ghost" onclick="toast('Đã gửi yêu cầu gói Nổi bật. Bartop sẽ liên hệ xác nhận.')">Chọn gói</button></div>
+      <div class="plan best"><span class="tag">Chủ bar chọn nhiều nhất</span><h3>Top thành phố</h3><div class="pr num">5.000.000đ<small> / tuần</small></div><ul><li>Nhãn "TOP" vàng, viền nổi bật</li><li>Top 3 mục "Top bar tối nay" của thành phố</li><li>Lên mục "Khung giờ vàng" trang chủ</li><li>Xuất hiện trong quảng cáo Google của Bartop</li><li>Đẩy tin vào hội nhóm thành phố</li></ul><button class="btn btn-gold" onclick="toast('Đã gửi yêu cầu gói Top thành phố. Bartop sẽ liên hệ xác nhận.')">Chọn gói</button></div>
+      <div class="plan"><h3>Top toàn quốc</h3><div class="pr num">12.000.000đ<small> / tuần</small></div><ul><li>Vị trí số 1 trang chủ toàn quốc</li><li>Banner deal giờ vàng</li><li>Chiến dịch quảng cáo riêng (Google + Meta)</li><li>Quản lý tài khoản chuyên trách</li></ul><button class="btn btn-ghost" onclick="toast('Đã gửi yêu cầu gói Top toàn quốc. Bartop sẽ liên hệ xác nhận.')">Chọn gói</button></div>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Miễn phí lên sàn</div><h2>Đăng ký bar của bạn</h2></div></div>
+    <form class="reg" id="regForm">
+      <div class="field"><label for="regName">Tên bar</label><input id="regName" placeholder="VD: Saigon 52 Rooftop" required></div>
+      <div class="field"><label for="regCity">Thành phố</label><select id="regCity"></select></div>
+      <div class="field"><label for="regPhone">Số điện thoại / Zalo</label><input id="regPhone" placeholder="09xx xxx xxx" required></div>
+      <button class="btn btn-gold" type="submit">Gửi đăng ký</button>
+    </form>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="foot">
+    <div><div class="logo" style="font-size:20px"><span class="logo-mark" style="width:28px;height:28px;font-size:17px">B</span>Bartop<span class="logo-vn" style="font-size:13px">.vn</span></div><p style="margin-top:10px;max-width:38ch">Đặt bàn bar, lounge, club khắp Việt Nam. Giờ vàng giảm sâu, tặng rượu, tích điểm đổi tiền.</p><p class="note">Bản demo giao diện. Tên bar, số liệu và review là dữ liệu minh hoạ. Uống có trách nhiệm, không lái xe sau khi uống.</p></div>
+    <div><h4>Thành phố</h4><a href="#kham-pha">Bar Hà Nội</a><a href="#kham-pha">Bar Sài Gòn</a><a href="#kham-pha">Bar Đà Nẵng</a><a href="#kham-pha">Bar Nha Trang</a><a href="#kham-pha">Bar Phú Quốc</a></div>
+    <div><h4>Khám phá</h4><a href="#kham-pha">Rooftop bar</a><a href="#kham-pha">Club &amp; EDM</a><a href="#kham-pha">Cocktail bar</a><a href="#kham-pha">Beach club</a><a href="#hoi-nhom">Hội nhóm review</a></div>
+    <div><h4>Bartop</h4><a href="#thanh-vien">Hạng thành viên</a><a href="#thanh-vien">Ví điểm</a><a href="#chu-bar">Dành cho chủ bar</a><a href="#home">Liên hệ: 1900 8886</a></div>
+  </div>
+</div></footer>
+
+<nav class="bnav" id="bnav">
+  <a href="#home" data-v="home"><i>⌂</i>Trang chủ</a>
+  <a href="#kham-pha" data-v="bars"><i>◎</i>Khám phá</a>
+  <a href="#hoi-nhom" data-v="community"><i>✎</i>Hội nhóm</a>
+  <a href="#thanh-vien" data-v="member"><i>★</i>Ví điểm</a>
+  <a href="#chu-bar" data-v="partner"><i>▲</i>Chủ bar</a>
+</nav>
+
+<div class="modal" id="modal" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" id="sheet"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------- THEME ---------- */
+const THEMES=['light','brown','dark'];
+function applyTheme(t,save){document.documentElement.setAttribute('data-theme',t);document.querySelectorAll('#themeSw button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));if(save){try{localStorage.setItem('bartop-theme',t)}catch(e){}}}
+(function(){let s=null;try{s=localStorage.getItem('bartop-theme')}catch(e){}
+  if(THEMES.includes(s))applyTheme(s,false);
+  else{const cur=document.documentElement.getAttribute('data-theme');const eff=THEMES.includes(cur)?cur:(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.querySelectorAll('#themeSw button').forEach(b=>b.classList.toggle('on',b.dataset.t===eff))}
+  document.getElementById('themeSw').onclick=e=>{const b=e.target.closest('button');if(!b)return;const mob=matchMedia('(max-width:720px)').matches;const t=mob&&b.classList.contains('on')?THEMES[(THEMES.indexOf(b.dataset.t)+1)%THEMES.length]:b.dataset.t;applyTheme(t,true);toast({light:'Giao diện Sáng',brown:'Giao diện Nâu',dark:'Giao diện Tối'}[t])};
+})();
+
+/* ---------- DỮ LIỆU MINH HOẠ ---------- */
+const CITIES=[
+ {id:'hn',name:'Hà Nội',n:214},{id:'sg',name:'Sài Gòn',n:368},{id:'dn',name:'Đà Nẵng',n:96},{id:'nt',name:'Nha Trang',n:72},
+ {id:'pq',name:'Phú Quốc',n:54},{id:'dl',name:'Đà Lạt',n:41},{id:'hp',name:'Hải Phòng',n:38},{id:'vt',name:'Vũng Tàu',n:35},
+ {id:'ql',name:'Hạ Long',n:27},{id:'ct',name:'Cần Thơ',n:22},{id:'hue',name:'Huế',n:19},{id:'bd',name:'Bình Dương',n:16}];
+const cityName=id=>CITIES.find(c=>c.id===id)?.name||'';
+
+const BARS=[
+ {id:1,name:'Mộc Sky Bar',city:'hn',area:'Tây Hồ',type:'Rooftop',rating:4.8,reviews:1240,price:[350,700],deal:20,bonus:'Tặng 1 chai Chivas 18 cho bàn VIP từ 5 triệu',boost:'top',hue:42,music:'Deep house · R&B',dress:'Smart casual',hours:'18:00 – 02:00',addr:'Tầng 26, phố Trích Sài',desc:'View toàn cảnh Hồ Tây 360°, DJ quốc tế cuối tuần. Bar rooftop được đặt nhiều nhất Hà Nội 3 tháng liên tiếp.',gpct:15},
+ {id:2,name:'Ngõ Nhỏ Cocktail',city:'hn',area:'Hoàn Kiếm',type:'Cocktail bar',rating:4.7,reviews:860,price:[180,350],deal:15,bonus:'Free 2 cocktail signature cho nhóm từ 4 người',boost:'hot',hue:300,music:'Jazz-hop · Soul',dress:'Tự do',hours:'17:00 – 01:00',addr:'Ngõ Hàng Bạc',desc:'Bar giấu mình trong ngõ phố cổ, 12 ghế quầy, bartender từng thi World Class. Hợp hẹn hò và nhóm nhỏ.',gpct:10},
+ {id:3,name:'Tạ Hiện Underground',city:'hn',area:'Hoàn Kiếm',type:'Club',rating:4.5,reviews:2100,price:[250,600],deal:10,bonus:'Tặng tháp bia 3L cho bàn từ 6 người',boost:null,hue:190,music:'EDM · Hip-hop',dress:'Tự do',hours:'21:00 – 04:00',addr:'Phố Tạ Hiện',desc:'Club hầm 400 chỗ, âm thanh Funktion-One, line-up DJ đổi mỗi tối. Cuối tuần luôn kín bàn trước 23h.',gpct:20},
+ {id:4,name:'Hồ Tây Sunset Lounge',city:'hn',area:'Tây Hồ',type:'Lounge',rating:4.6,reviews:540,price:[300,600],deal:15,bonus:'Tặng khay tapas cho bàn check-in trước 20:00',boost:null,hue:20,music:'Chill · Acoustic',dress:'Smart casual',hours:'16:00 – 00:00',addr:'Đường Nguyễn Đình Thi',desc:'Lounge sát mặt hồ, ngắm hoàng hôn với cocktail và tapas. Có acoustic live tối thứ 5 và chủ nhật.',gpct:20},
+ {id:5,name:'Saigon 52 Rooftop',city:'sg',area:'Quận 1',type:'Rooftop',rating:4.9,reviews:3400,price:[400,900],deal:20,bonus:'Tặng 1 chai Macallan 12 cho bàn VIP',boost:'top',hue:210,music:'House · Afro · Hip-hop',dress:'Smart casual, không dép lê',hours:'18:00 – 02:00',addr:'Tầng 52, phố đi bộ Nguyễn Huệ',desc:'Rooftop cao nhất Sài Gòn, view sông và skyline Landmark. Bar có điểm đánh giá cao nhất toàn hệ thống.',gpct:15},
+ {id:6,name:'Bùi Viện Neon Club',city:'sg',area:'Quận 1',type:'Club',rating:4.4,reviews:2800,price:[200,500],deal:10,bonus:'Free vào cửa + 1 shot chào mừng mỗi khách',boost:'hot',hue:330,music:'EDM · Vinahouse',dress:'Tự do',hours:'21:00 – 05:00',addr:'Phố Tây Bùi Viện',desc:'Club 3 tầng ngay phố Tây, sàn mở đến 5h sáng. Hợp nhóm đông muốn quẩy tới bến.',gpct:20},
+ {id:7,name:'Thảo Điền Garden Bar',city:'sg',area:'Thủ Đức',type:'Garden bar',rating:4.7,reviews:920,price:[250,500],deal:15,bonus:'Tặng khay tapas cho bàn từ 4 người',boost:null,hue:120,music:'Indie · Lo-fi',dress:'Tự do',hours:'17:00 – 01:00',addr:'Đường Xuân Thuỷ, Thảo Điền',desc:'Sân vườn 600m², nhiều cây, bia craft và cocktail trái cây. Hợp tụ tập tối thứ 6 không ồn ào.',gpct:10},
+ {id:8,name:'Bến Nghé Jazz House',city:'sg',area:'Quận 1',type:'Jazz bar',rating:4.8,reviews:610,price:[300,600],deal:10,bonus:'Tặng 1 ly whisky sour cho mỗi khách đặt trước',boost:null,hue:40,music:'Jazz live mỗi tối',dress:'Smart casual',hours:'19:00 – 01:00',addr:'Đường Lê Lợi',desc:'Ban nhạc jazz live 21:00 mỗi tối, 180 chỗ. Dàn whisky hơn 120 chai.',gpct:10},
+ {id:9,name:'Mỹ Khê Beach Club',city:'dn',area:'Sơn Trà',type:'Beach club',rating:4.7,reviews:1500,price:[300,700],deal:20,bonus:'Tặng bucket 6 chai bia cho bàn từ 4 người',boost:'top',hue:185,music:'Tropical house · Pool party',dress:'Beachwear',hours:'15:00 – 02:00',addr:'Bãi biển Mỹ Khê',desc:'Beach club sát biển, hồ bơi vô cực, DJ từ 20h. Pool party mỗi thứ 7.',gpct:15},
+ {id:10,name:'Cầu Rồng Sky Lounge',city:'dn',area:'Hải Châu',type:'Rooftop',rating:4.6,reviews:780,price:[350,650],deal:15,bonus:'Tặng 1 chai vang cho cặp đôi',boost:null,hue:10,music:'R&B · Chill',dress:'Smart casual',hours:'18:00 – 01:00',addr:'Tầng 36, đường Bạch Đằng',desc:'Ngắm cầu Rồng phun lửa 21h thứ 7, chủ nhật ngay từ bàn. Cocktail theo mùa.',gpct:15},
+ {id:11,name:'Trần Phú Sea Lounge',city:'nt',area:'Lộc Thọ',type:'Lounge',rating:4.5,reviews:430,price:[250,500],deal:15,bonus:'Free khay hải sản nướng cho bàn từ 6',boost:null,hue:200,music:'Chill · Live band',dress:'Tự do',hours:'17:00 – 01:00',addr:'Đường Trần Phú',desc:'Lounge mặt biển, gió thổi suốt đêm, live band Philippines từ 21h.',gpct:10},
+ {id:12,name:'Sương Mù Whisky Bar',city:'dl',area:'Phường 1',type:'Whisky bar',rating:4.9,reviews:390,price:[200,450],deal:10,bonus:'Tặng tasting set 3 loại whisky cho bàn đặt trước',boost:null,hue:30,music:'Blues · Acoustic',dress:'Ấm áp, tự do',hours:'18:00 – 00:00',addr:'Dốc Nhà Làng',desc:'Lò sưởi, 200 chai whisky, nhạc blues. Chỗ ngồi hợp tối lạnh Đà Lạt.',gpct:10},
+ {id:13,name:'Sunset Sành Beach Bar',city:'pq',area:'Dương Đông',type:'Beach club',rating:4.8,reviews:1100,price:[300,700],deal:20,bonus:'Tặng 1 chai vang sủi cho cặp đôi, bucket bia cho nhóm',boost:'hot',hue:350,music:'Sunset session · House',dress:'Beachwear',hours:'15:00 – 01:00',addr:'Bãi Trường',desc:'Hoàng hôn đẹp nhất Phú Quốc, sunset session 17:30 mỗi ngày, fire show cuối tuần.',gpct:20},
+ {id:14,name:'Cát Bi Pub & Grill',city:'hp',area:'Ngô Quyền',type:'Pub',rating:4.4,reviews:320,price:[150,300],deal:10,bonus:'Tặng khay nướng cho bàn từ 4',boost:null,hue:90,music:'Rock · Bóng đá',dress:'Tự do',hours:'17:00 – 01:00',addr:'Đường Lê Hồng Phong',desc:'Pub chiếu bóng đá màn hình lớn, bia tươi, đồ nướng. Hợp hội anh em.',gpct:15},
+ {id:15,name:'Bãi Sau Beach Pub',city:'vt',area:'Phường 2',type:'Pub',rating:4.3,reviews:280,price:[150,350],deal:15,bonus:'Free 1 tháp bia cho bàn từ 8 người',boost:null,hue:170,music:'Pop · Live acoustic',dress:'Tự do',hours:'16:00 – 01:00',addr:'Đường Thuỳ Vân',desc:'Pub bãi biển, bàn ngoài trời, acoustic cuối tuần. Giá mềm nhất Vũng Tàu.',gpct:10},
+ {id:16,name:'Ninh Kiều Night Lounge',city:'ct',area:'Ninh Kiều',type:'Lounge',rating:4.5,reviews:210,price:[200,400],deal:15,bonus:'Tặng 2 cocktail cho bàn đặt trước 20h',boost:null,hue:270,music:'R&B · Chill',dress:'Smart casual',hours:'18:00 – 01:00',addr:'Bến Ninh Kiều',desc:'Lounge ven sông Hậu, view bến Ninh Kiều về đêm.',gpct:15},
+ {id:17,name:'Bãi Cháy Marina Club',city:'ql',area:'Bãi Cháy',type:'Club',rating:4.4,reviews:260,price:[250,500],deal:10,bonus:'Tặng tháp bia 3L cho nhóm từ 6',boost:null,hue:230,music:'EDM · Vinahouse',dress:'Tự do',hours:'21:00 – 03:00',addr:'Bến du thuyền Bãi Cháy',desc:'Club lớn nhất Hạ Long, ngay bến du thuyền. Hợp nhóm du lịch.',gpct:20},
+ {id:18,name:'Huế Night Garden',city:'hue',area:'Phú Hội',type:'Garden bar',rating:4.6,reviews:190,price:[150,300],deal:15,bonus:'Tặng khay nem lụi cho bàn từ 4',boost:null,hue:110,music:'Acoustic · Indie',dress:'Tự do',hours:'17:00 – 00:00',addr:'Đường Phạm Ngũ Lão',desc:'Sân vườn yên tĩnh bên bờ sông Hương, cocktail hương trà và nhạc acoustic.',gpct:10},
+];
+const pad=n=>String(n).padStart(2,'0');
+/* Khung giờ: mở cửa → đóng cửa, 2 giờ đầu là giờ vàng */
+BARS.forEach(b=>{const o=+b.hours.slice(0,2);let c=+b.hours.slice(8,10);if(c<=o)c+=24;b.open=o;b.close=c;b.slots=[];for(let t=o;t<c;t++)b.slots.push(pad(t%24)+':00');b.golden=b.slots.slice(0,2);b.gLabel=`${b.golden[0]}–${pad((o+2)%24)}:00`});
+
+const MENU={
+ 'Rooftop':[['Chivas 18',2900],['Macallan 12',3900],['Signature cocktail',220],['Tháp bia Heineken 3L',650]],
+ 'Lounge':[['Hennessy VSOP',2600],['Cocktail theo mùa',190],['Tapas set',350],['Vang đỏ Chile',890]],
+ 'Club':[['Chivas 12',1900],['Belvedere',2400],['Tháp bia 3L',550],['Combo 10 shot',600]],
+ 'Cocktail bar':[['Signature cocktail',180],['Old Fashioned',200],['Negroni',190],['Mocktail',120]],
+ 'Beach club':[['Bucket 6 bia',420],['Mojito jug 1.5L',520],['Vang sủi Prosecco',990],['Hải sản nướng',480]],
+ 'Pub':[['Bia tươi 1L',140],['Tháp bia 3L',380],['Khay nướng 4 người',350],['Cánh gà BBQ',150]],
+ 'Jazz bar':[['Whisky sour',180],['Glenfiddich 12',2200],['Phô mai & jambon',320],['Vang trắng Pháp',850]],
+ 'Whisky bar':[['Tasting set 3 loại',290],['Lagavulin 16',3200],['Nikka from the barrel',2100],['Highball',150]],
+ 'Garden bar':[['Bia craft Pasteur',110],['Cocktail trái cây',160],['Tapas set',300],['Vang vải',750]],
+};
+const REVIEWERS=[['Minh Trí','Gold'],['Hà Linh','Black'],['Quốc Bảo','Silver'],['Thu Trang','Gold'],['Đức Anh','Newbie'],['Ngọc Mai','Gold'],['Hoàng Nam','Silver'],['Khánh Vy','Black']];
+const REVIEW_TEXT=['Bàn đẹp đúng như đặt, nhân viên ra đón tận cửa. Rượu tặng có thật, không phải chiêu trò.','Đặt giờ vàng 18h được giảm thêm 15%, cộng hạng Gold nữa là bớt gần 1 triệu cho nhóm 6 người.','Nhạc hay, âm thanh ổn, giá hơi cao nhưng xứng đáng. Sẽ quay lại.','Check-in QR nhanh, không phải xếp hàng. Dùng 600 điểm trừ luôn 300k vào bill.','Bartender ok, cocktail signature khá đỉnh. Chỗ ngồi hơi chật tối thứ 7.','Đi hẹn hò hợp. Có góc chụp ảnh đẹp, bill có giảm giá thành viên.'];
+const GROUPS=[
+ {id:'g1',name:'Hội Rooftop Hà Nội',members:'12.4k',online:312,hue:42,ico:'HN'},
+ {id:'g2',name:'Sài Gòn By Night',members:'28.1k',online:874,hue:210,ico:'SG'},
+ {id:'g3',name:'Review Bar Đà Nẵng',members:'6.2k',online:98,hue:185,ico:'ĐN'},
+ {id:'g4',name:'Whisky Lovers VN',members:'9.8k',online:140,hue:30,ico:'W'},
+ {id:'g5',name:'Hội Đi Bar Một Mình',members:'4.1k',online:66,hue:300,ico:'1'},
+];
+const MSGS={
+ g1:[['Minh Trí','Gold','Tối nay ai đi Mộc không? Giờ vàng 18–20h giảm thêm 15%, bàn VIP còn 2 slot.','17:02'],['Hà Linh','Black','Mình đặt 19h rồi, bàn gần DJ. Ai đi thì ghép bàn cho vui.','17:04'],['Đức Anh','Newbie','Hồ Tây Sunset Lounge giờ vàng là mấy giờ mọi người?','17:05'],['Ngọc Mai','Gold','16–18h bạn ơi, giảm thêm 20%. Mai thứ 5 có acoustic, đi sớm là được.','17:06'],['Quốc Bảo','Silver','Tạ Hiện Underground tối qua line-up đỉnh, nhưng 23h là kín bàn, nhớ đặt trước.','17:10']],
+ g2:[['Khánh Vy','Black','Saigon 52 tối nay có guest DJ từ Bangkok, ai chưa đặt thì nhanh.','20:41'],['Hoàng Nam','Silver','Bùi Viện Neon vẫn free vào cửa chứ? Nhóm mình 8 người.','20:45'],['Thu Trang','Gold','Free + 1 shot mỗi người nhé, mình vừa đi hôm qua. Tháp bia 3L 550k.','20:46'],['Minh Trí','Gold','Thảo Điền Garden hợp ngồi chill, không ồn. Tapas tặng kèm ngon.','20:52']],
+ g3:[['Ngọc Mai','Gold','Mỹ Khê Beach Club pool party thứ 7 này, bucket bia tặng cho bàn 4 người.','19:30'],['Đức Anh','Newbie','Cầu Rồng Sky Lounge xem phun lửa từ bàn luôn hả?','19:33'],['Hà Linh','Black','Đúng rồi, tầng 36 nhìn thẳng. Đặt bàn sát kính nhé.','19:35']],
+ g4:[['Quốc Bảo','Silver','Sương Mù Đà Lạt có Lagavulin 16 giá 3.2tr, rẻ hơn Hà Nội.','18:20'],['Khánh Vy','Black','Tasting set 290k 3 loại, đáng thử cho người mới.','18:25'],['Minh Trí','Gold','Bến Nghé Jazz House dàn whisky 120 chai, nhạc live hay, hợp tối thứ 4.','18:40']],
+ g5:[['Thu Trang','Gold','Đi bar một mình thì Ngõ Nhỏ Cocktail là nhất, ngồi quầy nói chuyện với bartender.','22:10'],['Hoàng Nam','Silver','Mình hay ngồi Hồ Tây Sunset Lounge, ghế đơn view hồ, không ai làm phiền.','22:14']],
+};
+const FEED=[['Minh T.','vừa đặt bàn VIP giờ vàng tại','Mộc Sky Bar','Hà Nội'],['Hà L.','vừa nhận','1 chai Macallan 12','Saigon 52 Rooftop'],['Quốc B.','vừa đổi','1.000 điểm = 500.000đ','về Momo'],['Ngọc M.','lên hạng','Gold','Tích 2.000 điểm'],['Đức A.','vừa đặt bàn tại','Bùi Viện Neon Club','Sài Gòn'],['Thu T.','vừa review 5★','Sunset Sành Beach Bar','Phú Quốc'],['Khánh V.','vừa dùng 800 điểm trừ bill tại','Tạ Hiện Underground','Hà Nội']];
+
+const PT=500;            // 1 điểm = 500đ
+const PT_CAP=.3;         // trừ bill tối đa 30%
+const USER={name:'Tuấn Anh',tier:'Gold',tierPct:10,points:2350};
+const PTS_HIST=[['Đặt bàn Saigon 52 Rooftop','24/10',118],['Trừ bill tại Mộc Sky Bar','11/10',-400],['Đặt bàn Mộc Sky Bar','11/10',150],['Đổi điểm về Momo','05/10',-1000],['Đặt bàn Ngõ Nhỏ Cocktail','03/10',36],['Thưởng lên hạng Gold','28/09',500]];
+const fmt=n=>n.toLocaleString('vi-VN');
+const money=k=>fmt(Math.round(k*1000))+'đ';
+function syncPts(){document.getElementById('pillPts').textContent=fmt(USER.points);document.getElementById('walletPts').textContent=fmt(USER.points);document.getElementById('walletMoney').textContent=fmt(USER.points*PT)+'đ'}
+
+/* ---------- ART (canvas skyline neon) ---------- */
+function drawArt(cv,seed,hue){
+  const w=cv.width=560,h=cv.height=350,g=cv.getContext('2d');
+  let s=seed*7919+13;const rnd=()=>{s=(s*9301+49297)%233280;return s/233280};
+  const sky=g.createLinearGradient(0,0,0,h);sky.addColorStop(0,`hsl(${hue} 55% 7%)`);sky.addColorStop(1,`hsl(${(hue+50)%360} 60% 16%)`);g.fillStyle=sky;g.fillRect(0,0,w,h);
+  for(let i=0;i<3;i++){const x=rnd()*w,y=rnd()*h*.7,r=120+rnd()*160;const rg=g.createRadialGradient(x,y,0,x,y,r);rg.addColorStop(0,`hsl(${(hue+i*70)%360} 95% 60% / .42)`);rg.addColorStop(1,'transparent');g.fillStyle=rg;g.fillRect(0,0,w,h)}
+  for(let i=0;i<40;i++){g.fillStyle=`rgba(255,255,255,${.2+rnd()*.6})`;g.fillRect(rnd()*w,rnd()*h*.5,1.5,1.5)}
+  let x=-10;while(x<w){const bw=22+rnd()*58,bh=70+rnd()*180;g.fillStyle=`hsl(${hue} 30% ${4+rnd()*4}%)`;g.fillRect(x,h-bh,bw,bh);
+    for(let yy=h-bh+8;yy<h-10;yy+=14)for(let xx=x+5;xx<x+bw-8;xx+=11)if(rnd()>.55){g.fillStyle=`hsl(${rnd()>.85?(hue+180)%360:hue+20} 95% 70% / ${.35+rnd()*.6})`;g.fillRect(xx,yy,6,8)}
+    x+=bw+2+rnd()*8}
+  g.strokeStyle=`hsl(${(hue+310)%360} 100% 68%)`;g.lineWidth=4;g.lineCap='round';g.shadowBlur=22;g.shadowColor=g.strokeStyle;
+  const nx=60+rnd()*(w-260),ny=60+rnd()*90;g.beginPath();g.moveTo(nx,ny);for(let i=1;i<6;i++)g.lineTo(nx+i*34,ny+(rnd()-.5)*40);g.stroke();
+  g.shadowBlur=0;const fl=g.createLinearGradient(0,h-40,0,h);fl.addColorStop(0,'transparent');fl.addColorStop(1,`hsl(${(hue+310)%360} 90% 55% / .35)`);g.fillStyle=fl;g.fillRect(0,h-40,w,40);
+}
+
+/* ---------- CARD ---------- */
+function cardHTML(b){
+  return `<article class="card ${b.boost==='top'?'top':''}" data-id="${b.id}" tabindex="0" role="button" aria-label="${b.name}">
+    <div class="art"><canvas data-seed="${b.id}" data-hue="${b.hue}"></canvas>
+      <div class="badges">${b.boost==='top'?'<span class="badge top">★ Top</span>':''}${b.boost==='hot'?'<span class="badge hot">Hot</span>':''}<span class="badge type">${b.type}</span></div>
+      <div class="rating"><i>★</i>${b.rating.toFixed(1)} <span class="num">(${fmt(b.reviews)})</span></div></div>
+    <div class="card-body">
+      <h3>${b.name}</h3>
+      <div class="meta"><span>${cityName(b.city)}</span><span>${b.area}</span><span>${b.music}</span></div>
+      <div class="deal"><span class="ico">%</span>Giảm ${b.deal}% bill khi đặt qua Bartop</div>
+      <div class="ghline"><span class="ico">⚡</span>Giờ vàng ${b.gLabel} · giảm thêm ${b.gpct}%</div>
+      <div class="bonus">🎁 ${b.bonus}</div>
+      <div class="card-foot"><div class="price num">Từ <b>${b.price[0]}k</b> – ${b.price[1]}k / người</div><button class="btn btn-gold btn-sm" data-book="${b.id}">Đặt bàn</button></div>
+    </div></article>`;
+}
+function paintCanvases(root){root.querySelectorAll('canvas[data-seed]').forEach(c=>{if(!c.dataset.done){drawArt(c,+c.dataset.seed,+c.dataset.hue);c.dataset.done=1}})}
+function mountCards(el,list){el.innerHTML=list.map(cardHTML).join('')||'<p class="muted">Chưa có bar nào khớp bộ lọc. Thử đổi thành phố hoặc loại hình.</p>';paintCanvases(el)}
+
+/* ---------- GIỜ VÀNG ---------- */
+function ghStatus(b){
+  const now=new Date();const m=now.getHours()*60+now.getMinutes();
+  let start=b.open*60,end=(b.open+2)*60;let cur=m;if(cur<start-12*60)cur+=24*60; // qua nửa đêm
+  if(cur>=start&&cur<end){const left=end-cur;return {cls:'live',txt:`Đang diễn ra · còn ${Math.floor(left/60)?Math.floor(left/60)+'h':''}${left%60}'`}}
+  if(cur<start){const d=start-cur;return {cls:'soon',txt:`Còn ${Math.floor(d/60)}h${pad(d%60)}'`}}
+  return {cls:'',txt:'Mai lại có'};
+}
+function renderGH(){
+  const list=BARS.slice().sort((a,b)=>{const sa=ghStatus(a),sb=ghStatus(b);const r={live:0,soon:1,'':2};return (r[sa.cls]-r[sb.cls])||b.gpct-a.gpct||b.rating-a.rating}).slice(0,8);
+  document.getElementById('ghRail').innerHTML=list.map(b=>{const s=ghStatus(b);return `<div class="gh" data-gh="${b.id}" role="button" tabindex="0">
+    <div class="top"><div><h3>${b.name}</h3><div class="meta" style="margin-top:2px"><span>${cityName(b.city)}</span><span>${b.type}</span></div></div><div class="pct">-${b.gpct}%<small>giảm thêm</small></div></div>
+    <div class="slot">⚡ ${b.gLabel}<span class="cd ${s.cls}">${s.txt}</span></div>
+    <div class="foot"><span class="meta">Cộng dồn deal -${b.deal}% + hạng Gold -10%</span><button class="btn btn-gold btn-sm" data-book="${b.id}" data-time="${b.golden[0]}">Đặt giờ vàng</button></div>
+  </div>`}).join('');
+}
+function tickCd(){const el=document.getElementById('dealCd');const n=new Date();let s=(20*60+0)*60-(n.getHours()*3600+n.getMinutes()*60+n.getSeconds());if(s<0)s+=86400;el.textContent='còn '+pad(Math.floor(s/3600))+':'+pad(Math.floor(s%3600/60))+':'+pad(s%60)}
+
+/* ---------- HOME ---------- */
+function cityChips(el,active,onPick){
+  el.innerHTML=`<button class="chip ${!active?'on':''}" data-c="">Toàn quốc <small>${fmt(CITIES.reduce((a,c)=>a+c.n,0))}</small></button>`+CITIES.map(c=>`<button class="chip ${active===c.id?'on':''}" data-c="${c.id}">${c.name} <small>${c.n}</small></button>`).join('');
+  el.onclick=e=>{const b=e.target.closest('.chip');if(b)onPick(b.dataset.c)};
+}
+const F={city:'',type:'',sort:'top',q:''};
+function setCity(id){F.city=id;location.hash='#kham-pha';renderBars();}
+function renderBars(){
+  cityChips(document.getElementById('cityRail2'),F.city,id=>{F.city=id;renderBars()});
+  let list=BARS.filter(b=>(!F.city||b.city===F.city)&&(!F.type||b.type===F.type)&&(!F.q||(b.name+b.area+cityName(b.city)).toLowerCase().includes(F.q.toLowerCase())));
+  const rank={top:0,hot:1,null:2};
+  list.sort((a,b)=>F.sort==='rating'?b.rating-a.rating:F.sort==='deal'?b.deal-a.deal:F.sort==='reviews'?b.reviews-a.reviews:F.sort==='golden'?(b.gpct-a.gpct)||b.rating-a.rating:(rank[a.boost]-rank[b.boost])||b.rating-a.rating);
+  document.getElementById('barsTitle').textContent=F.city?`Bar ${cityName(F.city)}`:'Tất cả bar';
+  document.getElementById('barsCount').textContent=`${list.length} bar${F.city?' · '+(CITIES.find(c=>c.id===F.city).n)+' bar đối tác tại '+cityName(F.city):''}`;
+  mountCards(document.getElementById('barsGrid'),list);
+}
+function initHome(){
+  const sc=document.getElementById('sCity');sc.innerHTML=CITIES.map(c=>`<option value="${c.id}">${c.name}</option>`).join('');
+  document.getElementById('regCity').innerHTML=sc.innerHTML;
+  const d=new Date();document.getElementById('sDate').value=d.toISOString().slice(0,10);
+  document.getElementById('searchForm').onsubmit=e=>{e.preventDefault();setCity(sc.value)};
+  cityChips(document.getElementById('cityRail'),null,setCity);
+  mountCards(document.getElementById('featured'),BARS.filter(b=>b.boost==='top'));
+  mountCards(document.getElementById('hotGrid'),BARS.filter(b=>b.boost==='hot').concat(BARS.filter(b=>!b.boost).slice(0,3)));
+  renderGH();setInterval(renderGH,30000);tickCd();setInterval(tickCd,1000);
+  const feed=document.getElementById('feed');let fi=0;
+  const push=()=>{const f=FEED[fi++%FEED.length];const el=document.createElement('div');el.className='feed-item';el.innerHTML=`<span class="avatar" style="width:28px;height:28px;font-size:10px">${f[0].slice(0,1)}</span><span class="t">${f[0]} ${f[1]} <b>${f[2]}</b> · ${f[3]}</span><time>vừa xong</time>`;feed.prepend(el);while(feed.children.length>4)feed.lastChild.remove();feed.querySelectorAll('time').forEach((t,i)=>t.textContent=i?`${i*2} phút`:'vừa xong')};
+  push();push();push();push();setInterval(push,4200);
+  let tonight=1248;setInterval(()=>{tonight+=Math.random()>.5?1:0;document.getElementById('statTonight').textContent=fmt(tonight)},5000);
+}
+
+/* ---------- DETAIL + BOOKING ---------- */
+const TABLE={normal:{label:'Bàn thường',min:0},vip:{label:'Bàn VIP',min:5000},sofa:{label:'Sofa nhóm',min:8000}};
+let cur=null,bk={};
+function openBar(id,time){
+  cur=BARS.find(b=>b.id===id);
+  bk={table:'normal',guests:4,spend:Math.round((cur.price[0]+cur.price[1])/2*4/100)*100,time:time||cur.slots[Math.min(3,cur.slots.length-1)],usePts:false,pts:0};
+  const rv=[0,1,2].map(i=>{const r=REVIEWERS[(id+i*3)%REVIEWERS.length];return `<div class="review"><span class="avatar">${r[0].split(' ').map(w=>w[0]).join('')}</span><div><div class="who">${r[0]}<span class="tier-tag">${r[1]}</span></div><div class="stars">${'★'.repeat(5-(i%2))}${'☆'.repeat(i%2)}</div><p>${REVIEW_TEXT[(id+i)%REVIEW_TEXT.length]}</p></div></div>`}).join('');
+  document.getElementById('sheet').innerHTML=`
+    <div class="sheet-art"><canvas data-seed="${id}" data-hue="${cur.hue}"></canvas><button class="close" id="closeM" aria-label="Đóng">✕</button>
+      <div class="sheet-title"><div class="badges" style="position:static;margin-bottom:8px">${cur.boost==='top'?'<span class="badge top">★ Top '+cityName(cur.city)+'</span>':''}${cur.boost==='hot'?'<span class="badge hot">Hot</span>':''}<span class="badge type">${cur.type}</span></div><h2>${cur.name}</h2>
+      <div class="meta" style="margin-top:6px;font-size:14px"><span>★ ${cur.rating.toFixed(1)} (${fmt(cur.reviews)} đánh giá)</span><span>${cur.area}, ${cityName(cur.city)}</span><span>${cur.addr}</span></div></div></div>
+    <div class="sheet-body">
+      <div style="min-width:0">
+        <p style="font-size:15.5px">${cur.desc}</p>
+        <div class="info-grid">
+          <div class="info"><small>Giờ mở cửa</small><b>${cur.hours}</b></div>
+          <div class="info"><small>⚡ Giờ vàng</small><b style="color:var(--neon)">${cur.gLabel} · giảm thêm ${cur.gpct}%</b></div>
+          <div class="info"><small>Nhạc</small><b>${cur.music}</b></div>
+          <div class="info"><small>Dress code</small><b>${cur.dress}</b></div>
+        </div>
+        <div class="h4">Ưu đãi khi đặt qua Bartop</div>
+        <div class="deal-list">
+          <div class="deal-row"><div class="big">-${cur.deal}%</div><div><b>Giảm ${cur.deal}% tổng bill</b><small>Áp dụng cho mọi bàn đặt trước, quét QR tại quầy.</small></div></div>
+          <div class="deal-row neon"><div class="big">⚡ -${cur.gpct}%</div><div><b>Khung giờ vàng ${cur.gLabel}</b><small>Đến trong 2 giờ đầu mở cửa, giảm thêm ${cur.gpct}%. Cộng dồn với deal bar.</small></div></div>
+          <div class="deal-row neon"><div class="big">🎁</div><div><b>${cur.bonus}</b><small>Tặng tại bàn, không cộng dồn với voucher khác.</small></div></div>
+          <div class="deal-row plain"><div class="big" style="color:var(--gold)">+${USER.tierPct}%</div><div><b>Hạng ${USER.tier} của bạn giảm thêm ${USER.tierPct}%</b><small>Không cần cọc · bàn ưu tiên · dùng điểm trừ bill tối đa 30%.</small></div></div>
+        </div>
+        <div class="h4">Menu nổi bật</div>
+        <div class="menu">${MENU[cur.type].map(m=>`<span>${m[0]}<b class="num">${m[1]}k</b></span>`).join('')}</div>
+        <div class="h4">Review từ hội nhóm</div>${rv}
+      </div>
+      <aside class="book" id="bookBox"></aside>
+    </div>
+    <div class="mob-cta" id="mobCta"><div class="tot">Thanh toán dự kiến<b class="num" id="mobTot"></b></div><button class="btn btn-gold" id="mobGo">Đặt bàn ngay</button></div>`;
+  paintCanvases(document.getElementById('sheet'));
+  renderBook();
+  const m=document.getElementById('modal');m.hidden=false;document.body.style.overflow='hidden';
+  document.getElementById('closeM').onclick=closeM;
+  document.getElementById('mobGo').onclick=()=>document.getElementById('bookBox').scrollIntoView({behavior:'smooth',block:'start'});
+  document.getElementById('sheet').scrollTop=0;
+}
+function closeM(){document.getElementById('modal').hidden=true;document.body.style.overflow=''}
+function calc(){
+  const t=TABLE[bk.table];const spend=Math.max(bk.spend,t.min);
+  const golden=cur.golden.includes(bk.time);
+  const d1=Math.round(spend*cur.deal/100),d2=Math.round(spend*USER.tierPct/100),d3=golden?Math.round(spend*cur.gpct/100):0;
+  const after=spend-d1-d2-d3;
+  const maxPts=Math.min(USER.points,Math.floor(after*1000*PT_CAP/PT));
+  const pts=bk.usePts?Math.min(bk.pts||maxPts,maxPts):0;
+  const ptsK=pts*PT/1000;
+  const total=after-ptsK;
+  return {spend,d1,d2,d3,golden,after,maxPts,pts,ptsK,total,earn:Math.round(total/10*1.5)};
+}
+function renderBook(){
+  const c=calc();const d=new Date();
+  document.getElementById('bookBox').innerHTML=`
+    <div class="eyebrow">Đặt bàn</div><h3>${cur.name}</h3>
+    <form class="form" id="bookForm">
+      <div class="field"><label for="bDate">Ngày</label><input type="date" id="bDate" value="${d.toISOString().slice(0,10)}"></div>
+      <div class="field"><label for="bGuests">Số khách</label><select id="bGuests">${[2,4,6,8,10,12].map(n=>`<option ${n===bk.guests?'selected':''}>${n}</option>`).join('')}</select></div>
+      <div class="lbl">Giờ đến<span class="hint">⚡ = giờ vàng, giảm thêm ${cur.gpct}%</span></div>
+      <div class="slots" id="slots">${cur.slots.map(s=>`<button type="button" data-s="${s}" class="slot ${cur.golden.includes(s)?'gold':''} ${bk.time===s?'on':''}">${s}${cur.golden.includes(s)?`<small>⚡ -${cur.gpct}%</small>`:''}</button>`).join('')}</div>
+      <div class="lbl">Loại bàn</div>
+      <div class="seg" id="seg">${Object.entries(TABLE).map(([k,v])=>`<button type="button" data-t="${k}" class="${bk.table===k?'on':''}">${v.label}<small>${v.min?'Từ '+fmt(v.min)+'k':'Không tối thiểu'}</small></button>`).join('')}</div>
+      <div class="field full"><label for="bSpend">Dự kiến chi tiêu (nghìn đồng)</label><input type="number" id="bSpend" min="500" step="100" value="${bk.spend}"></div>
+      <div class="pts-box">
+        <div class="row"><span class="t">🧾 Dùng điểm trừ bill <b class="num">(${fmt(USER.points)} điểm ≈ ${fmt(USER.points*PT)}đ)</b></span><button type="button" class="sw ${bk.usePts?'on':''}" id="ptsSw" aria-label="Dùng điểm"></button></div>
+        ${bk.usePts?`<input type="range" id="ptsRange" min="0" max="${c.maxPts}" step="10" value="${c.pts}"><div class="note num">Dùng <b>${fmt(c.pts)} điểm</b> = trừ <b>${money(c.ptsK)}</b> · tối đa ${fmt(c.maxPts)} điểm (30% bill)</div>`:''}
+      </div>
+      <div class="field full"><label for="bNote">Ghi chú</label><textarea id="bNote" placeholder="Sinh nhật, muốn bàn gần DJ, có trẻ em…"></textarea></div>
+    </form>
+    <div class="sum num">
+      <div class="row"><span>Dự kiến chi tiêu</span><b>${money(c.spend)}</b></div>
+      <div class="row"><span>Giảm ${cur.deal}% deal bar</span><b class="ok">-${money(c.d1)}</b></div>
+      <div class="row"><span>⚡ Giờ vàng ${bk.time}${c.golden?' · -'+cur.gpct+'%':''}</span><b class="${c.golden?'neon':'muted'}">${c.golden?'-'+money(c.d3):'Chọn '+cur.gLabel+' để giảm thêm'}</b></div>
+      <div class="row"><span>Giảm ${USER.tierPct}% hạng ${USER.tier}</span><b class="ok">-${money(c.d2)}</b></div>
+      ${bk.usePts?`<div class="row"><span>Trừ ${fmt(c.pts)} điểm</span><b class="gold">-${money(c.ptsK)}</b></div>`:''}
+      <div class="row"><span>Rượu tặng</span><b class="gold">${bk.table!=='normal'||c.spend>=5000?'🎁 Có':'Bàn VIP'}</b></div>
+      <div class="row total"><span>Thanh toán tại bar</span><b>${money(c.total)}</b></div>
+      <div class="row" style="font-size:12px;color:var(--muted)"><span>Tích điểm (Gold x1,5)</span><b>+${fmt(c.earn)} điểm</b></div>
+    </div>
+    <button class="btn btn-gold btn-block" id="confirmBtn" style="margin-top:14px">Xác nhận đặt bàn · không cần cọc</button>
+    <p class="muted" style="font-size:11.5px;text-align:center;margin-top:8px">Hạng Gold được giữ bàn 30 phút. Huỷ miễn phí trước 18:00.</p>`;
+  const box=document.getElementById('bookBox');
+  const mt=document.getElementById('mobTot');if(mt)mt.textContent=money(c.total);
+  box.querySelector('#slots').onclick=e=>{const b=e.target.closest('button');if(!b)return;bk.time=b.dataset.s;renderBook()};
+  box.querySelector('#seg').onclick=e=>{const b=e.target.closest('button');if(!b)return;bk.table=b.dataset.t;bk.spend=Math.max(bk.spend,TABLE[bk.table].min);renderBook()};
+  box.querySelector('#bSpend').onchange=e=>{bk.spend=+e.target.value||0;renderBook()};
+  box.querySelector('#bGuests').onchange=e=>{bk.guests=+e.target.value};
+  box.querySelector('#ptsSw').onclick=()=>{bk.usePts=!bk.usePts;bk.pts=0;renderBook()};
+  const rg=box.querySelector('#ptsRange');if(rg)rg.oninput=e=>{bk.pts=+e.target.value;renderBook();box.querySelector('#ptsRange').focus()};
+  box.querySelector('#confirmBtn').onclick=()=>{
+    const code='BT-'+Math.random().toString(36).slice(2,6).toUpperCase()+'-'+String(Math.floor(Math.random()*900+100));
+    const c2=calc();const date=box.querySelector('#bDate').value.split('-').reverse().join('/'),time=bk.time;
+    USER.points=USER.points-c2.pts+c2.earn;syncPts();
+    if(c2.pts)PTS_HIST.unshift([`Trừ bill tại ${cur.name}`,date.slice(0,5),-c2.pts]);PTS_HIST.unshift([`Đặt bàn ${cur.name}`,date.slice(0,5),c2.earn]);renderPtsHist();
+    box.innerHTML=`<div class="success"><div class="eyebrow" style="color:var(--ok)">✓ Đặt bàn thành công</div><div class="code">${code}</div>
+      <div class="qr"><canvas id="qr" width="21" height="21"></canvas></div>
+      <p><b>${cur.name}</b> · ${TABLE[bk.table].label}</p><p class="muted">${date} · ${time}${c2.golden?' ⚡ giờ vàng':''} · ${bk.guests} khách</p>
+      <div class="sum num" style="text-align:left"><div class="row"><span>Giảm giá đã khoá</span><b class="ok">-${money(c2.d1+c2.d2+c2.d3)}</b></div>${c2.pts?`<div class="row"><span>Đã trừ ${fmt(c2.pts)} điểm</span><b class="gold">-${money(c2.ptsK)}</b></div>`:''}<div class="row"><span>Rượu tặng</span><b class="gold">${bk.table!=='normal'||c2.spend>=5000?cur.bonus:'Nâng lên bàn VIP để nhận'}</b></div><div class="row total"><span>Thanh toán tại bar</span><b>${money(c2.total)}</b></div></div>
+      <p class="muted" style="font-size:12.5px;margin-top:12px">Đưa mã QR cho nhân viên khi đến. Đã gửi xác nhận qua Zalo. Sau check-in bạn nhận +${fmt(c2.earn)} điểm.</p>
+      <button class="btn btn-ghost btn-block" style="margin-top:12px" onclick="closeM()">Đóng</button></div>`;
+    const mc=document.getElementById('mobCta');if(mc)mc.hidden=true;
+    const q=box.querySelector('#qr').getContext('2d');let s=code.length*131;for(let y=0;y<21;y++)for(let x=0;x<21;x++){s=(s*9301+49297)%233280;const fin=(x<7&&y<7)||(x>13&&y<7)||(x<7&&y>13);const edge=fin&&(x%7===0||x%7===6||y%7===0||y%7===6||(x%7>1&&x%7<5&&y%7>1&&y%7<5));q.fillStyle=(fin?edge:(s/233280>.5))?'#0a0912':'#fff';q.fillRect(x,y,1,1)}
+    HIST.unshift({bar:cur.name,hue:cur.hue,date:date+' · '+time,st:'soon',save:c2.d1+c2.d2+c2.d3+c2.ptsK});renderHist();
+    box.scrollIntoView({behavior:'smooth',block:'start'});
+    toast(`Đã đặt bàn tại ${cur.name}. Mã ${code}.`);
+  };
+}
+document.addEventListener('click',e=>{
+  const bb=e.target.closest('[data-book]');if(bb){e.stopPropagation();openBar(+bb.dataset.book,bb.dataset.time);return}
+  const c=e.target.closest('.card[data-id]');if(c){openBar(+c.dataset.id);return}
+  const g=e.target.closest('.gh[data-gh]');if(g){const b=BARS.find(x=>x.id===+g.dataset.gh);openBar(b.id,b.golden[0]);return}
+  if(e.target.id==='modal')closeM();
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeM();if(e.key==='Enter'&&e.target.classList?.contains('card'))openBar(+e.target.dataset.id)});
+
+/* ---------- MEMBER ---------- */
+const HIST=[{bar:'Saigon 52 Rooftop',hue:210,date:'24/10 · 21:00',st:'done',save:1180},{bar:'Mộc Sky Bar',hue:42,date:'11/10 · 18:00 ⚡',st:'done',save:1700},{bar:'Ngõ Nhỏ Cocktail',hue:300,date:'03/10 · 20:00',st:'done',save:360}];
+function renderHist(){document.getElementById('hist').innerHTML=HIST.map(h=>`<div class="hist-item"><div class="sq" style="background:linear-gradient(135deg,hsl(${h.hue} 80% 55%),hsl(${(h.hue+60)%360} 80% 35%))"></div><div><b>${h.bar}</b><div class="muted" style="font-size:12.5px">${h.date} · tiết kiệm <span class="num">${money(h.save)}</span></div></div><span class="st ${h.st}">${h.st==='done'?'Đã đến':'Sắp tới'}</span></div>`).join('')}
+function renderPtsHist(){document.getElementById('ptsHist').innerHTML=PTS_HIST.slice(0,7).map(p=>`<div class="kv"><span>${p[0]}<br><small class="muted">${p[1]}</small></span><b class="num ${p[2]>0?'plus':'minus'}">${p[2]>0?'+':''}${fmt(p[2])} điểm</b></div>`).join('')}
+(function wallet(){
+  const rd=document.getElementById('redeem'),inp=document.getElementById('rdPts'),out=document.getElementById('rdOut');let method='Momo';
+  const upd=()=>{const v=Math.max(0,+inp.value||0);out.textContent=fmt(v*PT)+'đ'};
+  document.getElementById('actCash').onclick=()=>{rd.hidden=!rd.hidden;document.getElementById('actCash').classList.toggle('on',!rd.hidden);upd()};
+  document.getElementById('actBill').onclick=()=>{location.hash='#kham-pha';toast('Chọn bar, bật "Dùng điểm trừ bill" trong phần đặt bàn.')};
+  inp.oninput=upd;
+  document.getElementById('rdOpts').onclick=e=>{const b=e.target.closest('button');if(!b)return;method=b.dataset.m;document.querySelectorAll('#rdOpts button').forEach(x=>x.classList.toggle('on',x===b))};
+  document.getElementById('rdGo').onclick=()=>{const v=Math.floor(+inp.value||0);
+    if(v<200){toast('Đổi tối thiểu 200 điểm (100.000đ).');return}
+    if(v>USER.points){toast(`Bạn chỉ có ${fmt(USER.points)} điểm.`);return}
+    USER.points-=v;syncPts();PTS_HIST.unshift([`Đổi điểm về ${method}`,'Hôm nay',-v]);renderPtsHist();rd.hidden=true;document.getElementById('actCash').classList.remove('on');
+    toast(`Đã đổi ${fmt(v)} điểm = ${fmt(v*PT)}đ về ${method}. Tiền về trong 24h.`)};
+})();
+
+/* ---------- COMMUNITY ---------- */
+let curG='g1';
+function renderGroups(){
+  document.getElementById('groups').innerHTML=GROUPS.map(g=>`<button class="group ${g.id===curG?'on':''}" data-g="${g.id}"><span class="gi" style="background:hsl(${g.hue} 70% 22%);color:hsl(${g.hue} 90% 75%)">${g.ico}</span><span><b>${g.name}</b><small>${g.members} thành viên</small></span></button>`).join('');
+  document.getElementById('groups').onclick=e=>{const b=e.target.closest('.group');if(b){curG=b.dataset.g;renderGroups();renderChat()}};
+}
+function renderChat(){
+  const g=GROUPS.find(x=>x.id===curG);document.getElementById('chatTitle').textContent=g.name;document.getElementById('chatOnline').textContent=g.online+' online';
+  const ic=document.getElementById('chatIcon');ic.style.background=`hsl(${g.hue} 70% 22%)`;ic.style.color=`hsl(${g.hue} 90% 75%)`;ic.textContent=g.ico;
+  const el=document.getElementById('msgs');el.innerHTML=MSGS[curG].map(m=>`<div class="msg ${m[0]===USER.name?'me':''}"><span class="avatar">${m[0].split(' ').map(w=>w[0]).join('')}</span><div class="b"><small>${m[0]} <b>· ${m[1]}</b> · ${m[3]}</small>${m[2]}</div></div>`).join('');el.scrollTop=el.scrollHeight;
+}
+document.getElementById('chatForm').onsubmit=e=>{e.preventDefault();const i=document.getElementById('chatInput');if(!i.value.trim())return;const t=new Date();MSGS[curG].push([USER.name,USER.tier,i.value.trim(),`${t.getHours()}:${pad(t.getMinutes())}`]);i.value='';renderChat();
+  setTimeout(()=>{const r=REVIEWERS[Math.floor(Math.random()*REVIEWERS.length)];MSGS[curG].push([r[0],r[1],['Đi đi, tối nay mình cũng đi!','Đặt giờ vàng đi, giảm thêm 15% nữa.','Nhóm mình 6 người, ghép bàn không?','Bàn VIP còn slot không bạn?'][Math.floor(Math.random()*4)],'vừa xong']);renderChat()},1500)};
+document.getElementById('btnNewGroup').onclick=()=>toast('Tính năng tạo hội sẽ mở cho hạng Gold trở lên.');
+function renderReviews(){
+  document.getElementById('reviewsFeed').innerHTML=[5,9,13,2,8].map((id,i)=>{const b=BARS.find(x=>x.id===id),r=REVIEWERS[(i*2+1)%REVIEWERS.length];return `<div class="rv"><div class="bar">${b.name} <span class="muted" style="font-weight:500">· ${cityName(b.city)}</span></div><div class="stars">${'★'.repeat(5-(i%3?0:1))}${i%3?'':'☆'}</div><p>${REVIEW_TEXT[(i+2)%REVIEW_TEXT.length]}</p><div class="by">${r[0]} · hạng ${r[1]} · ${i+1} giờ trước</div></div>`}).join('');
+}
+
+/* ---------- PARTNER ---------- */
+document.getElementById('regForm').onsubmit=e=>{e.preventDefault();const n=document.getElementById('regName').value.trim();if(!n)return;toast(`Đã nhận đăng ký "${n}". Bartop sẽ gọi xác nhận trong 24h.`);e.target.reset()};
+document.getElementById('btnLogin').onclick=()=>toast('Bạn đang đăng nhập với tài khoản demo Tuấn Anh (hạng Gold).');
+
+/* ---------- ROUTER + TOAST ---------- */
+const ROUTES={'home':'home','kham-pha':'bars','thanh-vien':'member','hoi-nhom':'community','chu-bar':'partner'};
+function route(){
+  const h=location.hash.replace('#','')||'home';const v=ROUTES[h]||'home';
+  document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!=='v-'+v);
+  document.querySelectorAll('[data-v]').forEach(a=>a.classList.toggle('on',a.dataset.v===v));
+  if(v==='bars')renderBars();
+  window.scrollTo({top:0,behavior:'instant'});
+}
+let tt;function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),3200)}
+document.getElementById('fType').onchange=e=>{F.type=e.target.value;renderBars()};
+document.getElementById('fSort').onchange=e=>{F.sort=e.target.value;renderBars()};
+document.getElementById('fQ').oninput=e=>{F.q=e.target.value;renderBars()};
+window.addEventListener('hashchange',route);
+initHome();renderHist();renderPtsHist();syncPts();renderGroups();renderChat();renderReviews();route();
+</script>
+
+</body>
+</html>
