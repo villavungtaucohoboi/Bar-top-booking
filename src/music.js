@@ -195,39 +195,89 @@
     }
   }
   function tick() {
-    var ST = 60 / TRACKS[ti].bpm / 4;
-    while (nextT < ctx.currentTime + .12) { schedule(step, nextT); nextT += ST; step++; if (step === 16) { step = 0; bar++; } }
+    var ST = 60 / TRACKS[ti].bpm / 4, now = ctx.currentTime;
+    if (nextT < now - .05) nextT = now + .05;              // máy bận làm trễ: bỏ nhịp đã lỡ, không dồn cục
+    while (nextT < now + .2) { schedule(step, nextT); nextT += ST; step++; if (step === 16) { step = 0; bar++; } }
   }
   function fade(to, sec) { master.gain.cancelScheduledValues(ctx.currentTime); master.gain.setValueAtTime(master.gain.value, ctx.currentTime); master.gain.linearRampToValueAtTime(to, ctx.currentTime + sec); }
-  function start() {
-    if (!ctx && !init()) return;
-    ctx.resume(); fxIn._delay.delayTime.value = 60 / TRACKS[ti].bpm * .75;
-    nextT = ctx.currentTime + .06; step = 0; bar = 0;
+
+  /* iPhone: Web Audio bị tắt theo nút gạt im lặng. Phát kèm một thẻ <audio> im lặng để chuyển sang chế độ phát nhạc. */
+  var keep = null;
+  function silentWav() {
+    var n = 8000, buf = new ArrayBuffer(44 + n * 2), v = new DataView(buf), w = function (o, t) { for (var i = 0; i < t.length; i++) v.setUint8(o + i, t.charCodeAt(i)); };
+    w(0, 'RIFF'); v.setUint32(4, 36 + n * 2, true); w(8, 'WAVE'); w(12, 'fmt '); v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true);
+    v.setUint32(24, 8000, true); v.setUint32(28, 16000, true); v.setUint16(32, 2, true); v.setUint16(34, 16, true); w(36, 'data'); v.setUint32(40, n * 2, true);
+    return URL.createObjectURL(new Blob([buf], { type: 'audio/wav' }));
+  }
+  function unlockIOS() {
+    try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) {}
+    try {
+      if (!keep) { keep = document.createElement('audio'); keep.src = silentWav(); keep.loop = true; keep.setAttribute('playsinline', ''); keep.setAttribute('aria-hidden', 'true'); keep.volume = 0.01; }
+      var p = keep.play(); if (p && p.catch) p.catch(function () {});
+    } catch (e) {}
+  }
+  function running() { return ctx && ctx.state === 'running'; }
+  function begin() {
+    fxIn._delay.delayTime.value = 60 / TRACKS[ti].bpm * .75;
+    nextT = ctx.currentTime + .08; step = 0; bar = 0;
     if (!timer) timer = setInterval(tick, 25);
-    fade(.75, 1.2); on = true; paint();
+    fade(.75, 1.2);
+  }
+  var hintEl = null;
+  function hint(t) {
+    if (!hintEl) { hintEl = document.createElement('div'); hintEl.style.cssText = 'position:fixed;left:50%;bottom:calc(150px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:200;background:rgba(20,12,28,.95);color:#fff;padding:10px 16px;border-radius:12px;font:600 14px "Be Vietnam Pro",system-ui,sans-serif;border:1px solid rgba(255,63,174,.5);max-width:calc(100% - 32px);text-align:center;transition:opacity .3s'; document.body.appendChild(hintEl); }
+    hintEl.textContent = t; hintEl.style.opacity = '1'; clearTimeout(hintEl._t); hintEl._t = setTimeout(function () { hintEl.style.opacity = '0'; }, 2600);
+  }
+  function start(fromGesture) {
+    if (!ctx && !init()) { hint('Trình duyệt này không hỗ trợ phát nhạc.'); return; }
+    if (fromGesture) unlockIOS();
+    on = true; paint();
+    var p = ctx.resume();
+    var after = function () {
+      if (!on) return;
+      if (running()) { begin(); }
+      else { on = false; paint(); if (fromGesture) hint('Chưa bật được nhạc. Chạm nút nhạc lần nữa.'); }
+    };
+    if (p && p.then) p.then(after, after); else setTimeout(after, 60);
+    // Trình duyệt có thể treo lệnh resume (không báo lỗi) khi chưa có thao tác chạm: sau 1 giây vẫn chưa chạy thì trả nút về
+    setTimeout(function () { if (on && !running()) { on = false; paint(); if (fromGesture) hint('Chưa bật được nhạc. Chạm nút nhạc lần nữa.'); } }, 1000);
   }
   function stop() {
-    if (ctx) { fade(0, .35); setTimeout(function () { if (!on) { clearInterval(timer); timer = null; ctx.suspend(); } }, 400); }
     on = false; paint();
+    if (keep) try { keep.pause(); } catch (e) {}
+    if (ctx) { fade(0, .3); setTimeout(function () { if (!on) { clearInterval(timer); timer = null; ctx.suspend(); } }, 350); }
   }
   function next() {
     ti = (ti + 1) % TRACKS.length; try { localStorage.setItem(TKEY, ti); } catch (e) {}
-    if (on && ctx) { fade(0, .2); setTimeout(function () { fxIn._delay.delayTime.value = 60 / TRACKS[ti].bpm * .75; nextT = ctx.currentTime + .05; step = 0; bar = 0; fade(.75, .6); }, 220); }
+    if (on && running()) { fade(0, .2); setTimeout(function () { if (!on) return; fxIn._delay.delayTime.value = 60 / TRACKS[ti].bpm * .75; nextT = ctx.currentTime + .05; step = 0; bar = 0; fade(.75, .6); }, 220); }
     paint();
   }
   function save(v) { try { localStorage.setItem(KEY, v ? 'on' : 'off'); } catch (e) {} }
-  tg.addEventListener('click', function () { if (on) { stop(); save(false); } else { start(); save(true); } });
+  // Bấm nút: nếu đang báo bật mà thực tế không phát (bị chặn, bị ngắt) thì coi là bật lại, không tắt
+  tg.addEventListener('click', function () { if (on && running()) { stop(); save(false); } else { start(true); save(true); } });
   nx.addEventListener('click', next);
 
+  // Đã bật lần trước: phát lại ở lần chạm đầu tiên. Chỉ "nhấc tay", "click", phím mới được trình duyệt cho phép phát.
   var pref = null; try { pref = localStorage.getItem(KEY); } catch (e) {}
   if (pref === 'on') {
-    var first = function (e) { if (e.target.closest && e.target.closest('.tcm')) return; document.removeEventListener('pointerdown', first, true); if (!on) start(); };
-    document.addEventListener('pointerdown', first, true);
+    var EV = ['pointerup', 'touchend', 'click', 'keydown'];
+    var first = function (e) {
+      if (e.target && e.target.closest && e.target.closest('.tcm')) return;
+      if (e.type === 'keydown' && e.key === 'Escape') return;
+      EV.forEach(function (n) { document.removeEventListener(n, first, true); });
+      if (!running()) start(true);
+    };
+    EV.forEach(function (n) { document.addEventListener(n, first, true); });
   }
+  // Bị cuộc gọi / chuyển app ngắt: quay lại thì thử phát tiếp, không được thì đưa nút về "Bật nhạc"
   document.addEventListener('visibilitychange', function () {
     if (!ctx || !on) return;
-    if (document.hidden) { clearInterval(timer); timer = null; ctx.suspend(); }
-    else { ctx.resume(); nextT = ctx.currentTime + .06; if (!timer) timer = setInterval(tick, 25); }
+    if (document.hidden) { clearInterval(timer); timer = null; ctx.suspend(); return; }
+    var p = ctx.resume(), after = function () { if (!on) return; if (running()) { nextT = ctx.currentTime + .08; if (!timer) timer = setInterval(tick, 25); } else { on = false; paint(); } };
+    if (p && p.then) p.then(after, after); else setTimeout(after, 60);
   });
+  window.addEventListener('pageshow', function (e) { if (e.persisted && on && !running()) { on = false; paint(); } });
+  function watchState() { if (!ctx || ctx._w) return; ctx._w = 1; ctx.addEventListener && ctx.addEventListener('statechange', function () { if (on && !document.hidden && ctx.state !== 'running' && ctx.state !== 'suspended') { on = false; paint(); } }); }
+  var _init = init; init = function () { var r = _init(); if (r) watchState(); return r; };
   window.TCMusic = { start: start, stop: stop, next: next };
 })();

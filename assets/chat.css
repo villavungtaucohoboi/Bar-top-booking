@@ -68,7 +68,9 @@ body:has(.modal:not([hidden])) .tcc-fab{display:none}
 
 /* Nút Tư vấn bung ngang 4 lựa chọn */
 .tcw{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:90;display:flex;flex-direction:row-reverse;align-items:center;gap:12px}
-.tcw .tcc-fab{position:relative;right:auto;bottom:auto}
+.tcw{pointer-events:none}
+.tcw .tcc-fab{position:relative;right:auto;bottom:auto;pointer-events:auto}
+.tcw:not(.open) .tcq{visibility:hidden;transition:visibility 0s .4s}
 .tcc-fab .av{overflow:hidden}
 .tcc-fab .av .i1,.tcc-fab .av .i2{position:absolute;inset:0;display:grid;place-items:center;transition:transform .3s cubic-bezier(.2,.8,.2,1),opacity .2s}
 .tcc-fab .av .i2{transform:rotate(-90deg) scale(.4);opacity:0;color:#b0368f;font-size:20px;font-weight:800}
