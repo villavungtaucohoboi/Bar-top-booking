@@ -909,9 +909,9 @@ html.on-hero{background:#0b0710}
 @media (max-width:720px){.nw-sign.nw-logo{margin:10px 0 .3em}}
 
 /* ===== Hiệu ứng trong các tab ===== */
-.rv{animation:rvUp .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0) * 70ms)}
+.an-up{animation:rvUp .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0) * 70ms)}
 @keyframes rvUp{from{opacity:0;transform:translateY(24px) scale(.97)}}
-.rv-l{animation:rvLeft .5s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0) * 60ms)}
+.an-l{animation:rvLeft .5s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0) * 60ms)}
 @keyframes rvLeft{from{opacity:0;transform:translateX(-22px)}}
 .card{position:relative}
 .card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.12) 50%,transparent 65%);transform:translateX(-120%);transition:transform .8s ease}
@@ -934,14 +934,14 @@ html.on-hero{background:#0b0710}
 @keyframes cardShine{0%,55%{transform:translateX(-80%)}100%{transform:translateX(80%)}}
 .mcard .tierbig{animation:tierGlow 3s ease-in-out infinite}
 @keyframes tierGlow{50%{filter:drop-shadow(0 0 14px rgba(240,181,69,.8))}}
-.progress.rv i{animation:fillW 1.6s .3s cubic-bezier(.2,.8,.2,1) both}
+.progress.an-up i{animation:fillW 1.6s .3s cubic-bezier(.2,.8,.2,1) both}
 @keyframes fillW{from{width:0}}
 .wallet-acts button{transition:transform .2s,border-color .2s,background .2s}
 .wallet-acts button:hover{transform:translateY(-3px)}
 /* Chủ bar */
-.spark.rv path[fill="none"]{stroke-dasharray:420;stroke-dashoffset:420;animation:drawSp 1.8s .3s ease-out forwards}
-.spark.rv path[fill^="url"]{animation:fadeIn 1s 1.2s both}
-.spark.rv circle{animation:fadeIn .4s 2s both}
+.spark.an-up path[fill="none"]{stroke-dasharray:420;stroke-dashoffset:420;animation:drawSp 1.8s .3s ease-out forwards}
+.spark.an-up path[fill^="url"]{animation:fadeIn 1s 1.2s both}
+.spark.an-up circle{animation:fadeIn .4s 2s both}
 @keyframes drawSp{to{stroke-dashoffset:0}}
 @keyframes fadeIn{from{opacity:0}}
 .plan{transition:transform .25s,box-shadow .25s}
@@ -950,6 +950,10 @@ html.on-hero{background:#0b0710}
 @keyframes bestGlow{50%{box-shadow:0 0 0 1px rgba(240,181,69,.6),0 20px 60px rgba(255,63,142,.28)}}
 .tile{transition:transform .2s}
 .tile:hover{transform:translateY(-3px)}
+
+/* ===== Lớp hạt bay nền theo từng tab ===== */
+#fxBg{position:fixed;inset:0;width:100%;height:100%;z-index:40;pointer-events:none;opacity:.85}
+@media (prefers-reduced-motion:reduce){#fxBg{display:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.nw-glass path,.nw-glass circle{stroke-dashoffset:0}}
 </style>
 </head>
@@ -1253,6 +1257,7 @@ html.on-hero{background:#0b0710}
   <a href="#chu-bar" data-v="partner"><i>▲</i>Chủ bar</a>
 </nav>
 
+<canvas id="fxBg" aria-hidden="true"></canvas>
 <div class="modal" id="modal" hidden>
   <div class="sheet" role="dialog" aria-modal="true" id="sheet"></div>
 </div>
@@ -1684,10 +1689,52 @@ function animateView(v){
   const root=document.getElementById('v-'+v);if(!root||!ANIM[v])return;
   if(!('IntersectionObserver' in window))return;
   if(!animIO)animIO=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;animIO.unobserve(el);
-    el.classList.remove('rv','rv-l');void el.offsetWidth;el.classList.add(el.classList.contains('hist-item')||el.classList.contains('group')?'rv-l':'rv');
+    el.classList.remove('an-up','an-l');void el.offsetWidth;el.classList.add(el.classList.contains('hist-item')||el.classList.contains('group')?'an-l':'an-up');
     el.querySelectorAll('[data-count]').forEach(countUp);if(el.dataset.count!==undefined)countUp(el)}),{threshold:.12});
   ANIM[v].forEach(sel=>root.querySelectorAll(sel).forEach((el,i)=>{el.style.setProperty('--i',Math.min(i,8));animIO.observe(el)}));
 }
+/* Hạt bay nền: home=bụi neon, bars=pháo giấy, community=bong bóng, member=sao vàng, partner=bọt champagne */
+const FX=(function(){
+  const cv=document.getElementById('fxBg');if(!cv||!cv.getContext)return{set(){}};
+  const g=cv.getContext('2d');let W=0,H=0,dpr=1,P=[],mode='',raf=0,last=0;
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)');
+  const rnd=(a,b)=>a+Math.random()*(b-a),pick=a=>a[Math.floor(Math.random()*a.length)];
+  function size(){dpr=Math.min(1.5,devicePixelRatio||1);W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;g.setTransform(dpr,0,0,dpr,0,0)}
+  const CONF=['#ff3fae','#ffd98a','#45d5ff','#b146ff','#4ade80','#ff8a3d'];
+  function make(m,init){
+    const y0=init?rnd(0,H):null;
+    if(m==='bars')return{x:rnd(0,W),y:init?y0:-20,vy:rnd(.35,.9),vx:rnd(-.2,.2),w:rnd(5,9),h:rnd(9,15),r:rnd(0,6.28),vr:rnd(-.04,.04),flip:rnd(0,6.28),vf:rnd(.03,.08),sw:rnd(.5,1.5),ph:rnd(0,6.28),c:pick(CONF),a:rnd(.45,.8)};
+    if(m==='community')return{x:rnd(0,W),y:init?y0:H+20,vy:-rnd(.25,.7),r:rnd(4,15),sw:rnd(.3,1),ph:rnd(0,6.28),a:rnd(.25,.55),c:pick(['255,63,174','69,213,255','177,70,255'])};
+    if(m==='member')return{x:rnd(0,W),y:init?y0:H+10,vy:-rnd(.2,.55),s:rnd(3,8),tw:rnd(0,6.28),vt:rnd(.03,.08),sw:rnd(.2,.7),ph:rnd(0,6.28)};
+    if(m==='partner')return Math.random()<.85?{k:'b',x:rnd(0,W),y:init?y0:H+10,vy:-rnd(.6,1.6),r:rnd(1.5,4.5),sw:rnd(.2,.6),ph:rnd(0,6.28),a:rnd(.35,.75)}:{k:'s',x:rnd(0,W),y:init?y0:H+10,vy:-rnd(1,2),s:rnd(3,6),tw:rnd(0,6.28),vt:.12,sw:.3,ph:0};
+    return{x:rnd(0,W),y:init?y0:H+10,vy:-rnd(.15,.45),r:rnd(1,2.6),sw:rnd(.2,.8),ph:rnd(0,6.28),c:pick(['255,79,163','79,227,255','255,217,138']),a:rnd(.25,.6)};
+  }
+  function star(x,y,s,a,col){g.globalAlpha=a;g.fillStyle=col;g.beginPath();g.moveTo(x,y-s);g.quadraticCurveTo(x,y,x+s,y);g.quadraticCurveTo(x,y,x,y+s);g.quadraticCurveTo(x,y,x-s,y);g.quadraticCurveTo(x,y,x,y-s);g.fill()}
+  function draw(p,t){
+    if(mode==='bars'){g.save();g.translate(p.x+Math.sin(t/900+p.ph)*p.sw*12,p.y);g.rotate(p.r);g.scale(1,Math.cos(p.flip));g.globalAlpha=p.a;g.fillStyle=p.c;g.fillRect(-p.w/2,-p.h/2,p.w,p.h);g.restore();return}
+    if(mode==='community'){const x=p.x+Math.sin(t/1100+p.ph)*p.sw*16;g.globalAlpha=p.a;g.strokeStyle='rgba('+p.c+',.9)';g.lineWidth=1.2;g.beginPath();g.arc(x,p.y,p.r,0,6.28);g.stroke();g.globalAlpha=p.a*.5;g.fillStyle='rgba('+p.c+',.25)';g.fill();g.globalAlpha=p.a;g.fillStyle='rgba(255,255,255,.8)';g.beginPath();g.arc(x-p.r*.35,p.y-p.r*.35,p.r*.22,0,6.28);g.fill();return}
+    if(mode==='member'){const a=.35+.55*Math.abs(Math.sin(p.tw));star(p.x+Math.sin(t/1000+p.ph)*p.sw*14,p.y,p.s,a,'#ffd98a');g.globalAlpha=a*.35;g.fillStyle='#f0b545';g.beginPath();g.arc(p.x+Math.sin(t/1000+p.ph)*p.sw*14,p.y,p.s*1.6,0,6.28);g.fill();return}
+    if(mode==='partner'){const x=p.x+Math.sin(t/700+p.ph)*p.sw*8;if(p.k==='s'){star(x,p.y,p.s,.4+.5*Math.abs(Math.sin(p.tw)),'#fff3d6');return}g.globalAlpha=p.a;g.strokeStyle='rgba(255,228,170,.9)';g.lineWidth=1;g.beginPath();g.arc(x,p.y,p.r,0,6.28);g.stroke();g.fillStyle='rgba(255,240,200,.18)';g.fill();return}
+    const x=p.x+Math.sin(t/1300+p.ph)*p.sw*18;g.globalAlpha=p.a*(.6+.4*Math.sin(t/500+p.ph));g.fillStyle='rgba('+p.c+',1)';g.shadowColor='rgba('+p.c+',1)';g.shadowBlur=8;g.beginPath();g.arc(x,p.y,p.r,0,6.28);g.fill();g.shadowBlur=0;
+  }
+  function loop(t){
+    raf=requestAnimationFrame(loop);if(t-last<30)return;last=t;
+    g.clearRect(0,0,W,H);
+    for(let i=0;i<P.length;i++){const p=P[i];p.y+=p.vy;if(p.vx)p.x+=p.vx;if(p.vr)p.r+=p.vr;if(p.vf)p.flip+=p.vf;if(p.vt)p.tw+=p.vt;
+      if(p.y<-30||p.y>H+30)P[i]=make(mode,false);else draw(p,t)}
+    g.globalAlpha=1;
+  }
+  function set(m){
+    if(reduce.matches){cancelAnimationFrame(raf);g.clearRect(0,0,W,H);return}
+    if(m===mode&&raf)return;mode=m;size();
+    const n=Math.round(Math.max(m==='home'?18:28,Math.min(m==='partner'?60:48,W*H/(m==='home'?26000:17000))));
+    P=Array.from({length:n},()=>make(m,true));
+    cancelAnimationFrame(raf);raf=requestAnimationFrame(loop);
+  }
+  addEventListener('resize',()=>{if(mode){const m=mode;mode='';set(m)}});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(raf);else if(mode){raf=requestAnimationFrame(loop)}});
+  return{set};
+})();
 function showView(v){
   document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!=='v-'+v);
   document.querySelectorAll('[data-v]').forEach(a=>a.classList.toggle('on',a.dataset.v===v));
@@ -1695,6 +1742,7 @@ function showView(v){
   window.scrollTo({top:0,behavior:'instant'});
   updHdr();
   requestAnimationFrame(()=>animateView(v));
+  FX.set(v);
 }
 let tt;function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),3200)}
 document.getElementById('fType').onchange=e=>{F.type=e.target.value;renderBars()};
@@ -1704,10 +1752,10 @@ window.addEventListener('hashchange',route);
 initHome();renderHist();renderPtsHist();syncPts();renderGroups();renderChat();renderReviews();route();
 </script>
 
-<link rel="stylesheet" href="/assets/chat.css?v=mvz4u4r4">
-<script src="/assets/chat-data.js?v=mvz4u4r4" defer></script>
-<script src="/assets/chat.js?v=mvz4u4r4" defer></script>
-<script src="/assets/music.js?v=mvz4u4r4" defer></script>
-<script src="/assets/install.js?v=mvz4u4r4" defer></script>
+<link rel="stylesheet" href="/assets/chat.css?v=mvz56s4m">
+<script src="/assets/chat-data.js?v=mvz56s4m" defer></script>
+<script src="/assets/chat.js?v=mvz56s4m" defer></script>
+<script src="/assets/music.js?v=mvz56s4m" defer></script>
+<script src="/assets/install.js?v=mvz56s4m" defer></script>
 </body>
 </html>
