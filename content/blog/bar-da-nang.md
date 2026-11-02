@@ -9,7 +9,7 @@ coverAlt: "Beach club Đà Nẵng với hồ bơi vô cực nhìn ra biển Mỹ
 tags: [Đà Nẵng, Beach club, Rooftop]
 city: dn
 bars: [my-khe-beach-club, cau-rong-sky-lounge]
-author: "Ban biên tập Bartop"
+author: "Ban biên tập TopChill"
 ---
 **Bar Đà Nẵng** khác hẳn Hà Nội và Sài Gòn: gần biển, giá mềm hơn và có những trải nghiệm chỉ ở đây mới có, như ngồi rooftop xem cầu Rồng phun lửa hay pool party bên biển Mỹ Khê. Bài này gợi ý hai kiểu bar đáng đi nhất và kinh nghiệm đặt bàn.
 
@@ -23,7 +23,7 @@ Bờ biển Mỹ Khê dài và đẹp, nhiều beach club mở từ 15h để kh
 
 - Giờ mở: 15:00–02:00. Giờ vàng 15:00–17:00 giảm thêm 15%.
 - Mức chi: 300.000đ–700.000đ mỗi người.
-- Ưu đãi qua Bartop: giảm 20% bill, bàn từ 4 người được tặng bucket 6 chai bia.
+- Ưu đãi qua TopChill: giảm 20% bill, bàn từ 4 người được tặng bucket 6 chai bia.
 - Dress code: đồ đi biển. Nhớ mang đồ bơi.
 
 ![Hồ bơi beach club Đà Nẵng lúc hoàng hôn](1507525428034-b723cf961d3e)

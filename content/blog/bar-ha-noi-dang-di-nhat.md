@@ -9,9 +9,9 @@ coverAlt: "Không gian bar Hà Nội về đêm với quầy rượu và ánh đ
 tags: [Hà Nội, Rooftop, Cocktail, Club]
 city: hn
 bars: [moc-sky-bar, ngo-nho-cocktail, ta-hien-underground, ho-tay-sunset-lounge]
-author: "Ban biên tập Bartop"
+author: "Ban biên tập TopChill"
 ---
-Tìm **bar Hà Nội** để đi tối nay nhưng không biết chọn rooftop, quán cocktail hay club? Bài này gom các bar được khách đặt bàn nhiều nhất trên Bartop, chia theo phong cách, kèm mức giá, giờ vàng và mẹo chọn bàn đẹp. Đọc xong bạn chọn được chỗ đi trong 5 phút.
+Tìm **bar Hà Nội** để đi tối nay nhưng không biết chọn rooftop, quán cocktail hay club? Bài này gom các bar được khách đặt bàn nhiều nhất trên TopChill, chia theo phong cách, kèm mức giá, giờ vàng và mẹo chọn bàn đẹp. Đọc xong bạn chọn được chỗ đi trong 5 phút.
 
 ## Bar Hà Nội nào đáng đi nhất?
 
@@ -33,7 +33,7 @@ Rooftop là lựa chọn số một khi bạn muốn view đẹp, chụp ảnh v
 [Mộc Sky Bar](/bar/moc-sky-bar/) nằm trên tầng 26, view Hồ Tây 360 độ. Cuối tuần có DJ quốc tế chơi deep house và R&B. Đây là rooftop được đặt nhiều nhất Hà Nội ba tháng liên tiếp.
 
 - Mức chi: 350.000đ–700.000đ mỗi người.
-- Ưu đãi qua Bartop: giảm 20% bill, tặng 1 chai Chivas 18 cho bàn VIP từ 5 triệu.
+- Ưu đãi qua TopChill: giảm 20% bill, tặng 1 chai Chivas 18 cho bàn VIP từ 5 triệu.
 - Mẹo: đặt bàn sát kính trước 19h tối thứ 6 và thứ 7.
 
 ![Rooftop bar Hà Nội nhìn ra Hồ Tây lúc hoàng hôn](1519501025264-65ba15a82390)
@@ -48,7 +48,7 @@ Phố cổ Hoàn Kiếm có nhiều quán cocktail nhỏ giấu trong ngõ. Khô
 
 ### Ngõ Nhỏ Cocktail
 
-[Ngõ Nhỏ Cocktail](/bar/ngo-nho-cocktail/) chỉ có 12 ghế quầy. Bartender từng thi World Class, menu signature đổi theo mùa. Hợp hẹn hò hoặc đi một mình muốn trò chuyện. Nhóm từ 4 người đặt qua Bartop được tặng 2 cocktail signature.
+[Ngõ Nhỏ Cocktail](/bar/ngo-nho-cocktail/) chỉ có 12 ghế quầy. Bartender từng thi World Class, menu signature đổi theo mùa. Hợp hẹn hò hoặc đi một mình muốn trò chuyện. Nhóm từ 4 người đặt qua TopChill được tặng 2 cocktail signature.
 
 ## Club Hà Nội: quẩy tới sáng ở Tạ Hiện
 

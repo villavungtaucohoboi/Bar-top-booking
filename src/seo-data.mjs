@@ -4,7 +4,7 @@
 export const CITY_SEO = {
   hn: {
     description: 'Bar Hà Nội được đặt nhiều nhất: rooftop Tây Hồ, cocktail phố cổ, club Tạ Hiện. Xem giá, giờ mở cửa, đặt bàn giảm đến 40%, tặng rượu bàn VIP.',
-    intro: 'Từ rooftop nhìn Hồ Tây đến quán cocktail giấu trong ngõ phố cổ, bar Hà Nội có đủ phong cách cho hẹn hò, tụ tập bạn bè hay quẩy tới sáng. Đây là bảng xếp hạng theo lượt đặt bàn thật trên Bartop.',
+    intro: 'Từ rooftop nhìn Hồ Tây đến quán cocktail giấu trong ngõ phố cổ, bar Hà Nội có đủ phong cách cho hẹn hò, tụ tập bạn bè hay quẩy tới sáng. Đây là bảng xếp hạng theo lượt đặt bàn thật trên TopChill.',
     areas: [
       ['Tây Hồ', 'Khu của rooftop và lounge ven hồ. Không khí sang, nhạc deep house và R&B, hợp ngắm hoàng hôn rồi ngồi tới khuya. Nên đặt bàn sát kính trước 19h vào cuối tuần.'],
       ['Phố cổ Hoàn Kiếm', 'Tạ Hiện, Hàng Bạc, Hàng Buồm tập trung club, pub và cocktail bar nhỏ. Đông nhất từ 21h, nhiều bar mở muộn. Đi bộ được giữa các quán nên hợp đi bar tăng hai.'],
@@ -19,7 +19,7 @@ export const CITY_SEO = {
   },
   sg: {
     description: 'Bar Sài Gòn hot nhất: rooftop Quận 1, club Bùi Viện, garden bar Thảo Điền. Xem giá, menu, giờ mở cửa và đặt bàn giảm đến 40%, tặng rượu.',
-    intro: 'Sài Gòn có nhiều bar nhất cả nước, từ rooftop tầng 50 nhìn sông đến club phố Tây mở tới 5h sáng. Bảng xếp hạng dưới đây dựa trên lượt đặt bàn và đánh giá của khách trên Bartop.',
+    intro: 'Sài Gòn có nhiều bar nhất cả nước, từ rooftop tầng 50 nhìn sông đến club phố Tây mở tới 5h sáng. Bảng xếp hạng dưới đây dựa trên lượt đặt bàn và đánh giá của khách trên TopChill.',
     areas: [
       ['Quận 1 – Nguyễn Huệ, Lê Lợi', 'Trung tâm của rooftop và lounge cao cấp. Dress code smart casual, không dép lê. Giá cao hơn mặt bằng chung nhưng view đẹp nhất thành phố.'],
       ['Bùi Viện – phố Tây', 'Club và pub nối nhau, nhạc EDM, Vinahouse, mở tới sáng. Hợp nhóm đông muốn quẩy. Free vào cửa ở nhiều club khi đặt trước.'],
@@ -33,7 +33,7 @@ export const CITY_SEO = {
     ],
   },
   dn: {
-    description: 'Bar Đà Nẵng: beach club Mỹ Khê, rooftop ngắm cầu Rồng phun lửa. Giá, giờ mở cửa, kinh nghiệm và đặt bàn giảm đến 40% qua Bartop.',
+    description: 'Bar Đà Nẵng: beach club Mỹ Khê, rooftop ngắm cầu Rồng phun lửa. Giá, giờ mở cửa, kinh nghiệm và đặt bàn giảm đến 40% qua TopChill.',
     intro: 'Bar Đà Nẵng gắn với biển: beach club Mỹ Khê có pool party cuối tuần, rooftop bên sông Hàn nhìn thẳng cầu Rồng phun lửa. Giá dễ chịu hơn Hà Nội và Sài Gòn.',
     areas: [
       ['Biển Mỹ Khê, Sơn Trà', 'Beach club, hồ bơi vô cực, DJ từ 20h. Hợp đi từ chiều để tắm biển rồi ở lại tiệc tối.'],
@@ -46,7 +46,7 @@ export const CITY_SEO = {
     ],
   },
   nt: {
-    description: 'Bar Nha Trang: lounge mặt biển đường Trần Phú, live band, hải sản nướng. Xem giá và đặt bàn bar Nha Trang giảm giá, tặng quà qua Bartop.',
+    description: 'Bar Nha Trang: lounge mặt biển đường Trần Phú, live band, hải sản nướng. Xem giá và đặt bàn bar Nha Trang giảm giá, tặng quà qua TopChill.',
     intro: 'Bar Nha Trang tập trung dọc đường Trần Phú, nhìn ra biển, nhiều nơi có live band từ 21h. Phù hợp cho nhóm du lịch muốn ngồi chill sau bữa tối.',
     areas: [['Đường Trần Phú, Lộc Thọ', 'Lounge và beach bar sát biển, gió mát cả đêm, nhiều quán phục vụ hải sản nướng kèm đồ uống.']],
     tips: ['Đặt bàn ngoài trời vào mùa khô (tháng 1–8) để ngắm biển đêm.', 'Hỏi lịch live band khi đặt bàn, thường từ 21h.'],
@@ -64,13 +64,13 @@ export const CITY_SEO = {
     tips: ['Đà Lạt về đêm 14–17 độ, mang áo ấm.', 'Bar ở đây thường đóng cửa sớm, khoảng 23h–0h.'],
   },
   hp: {
-    description: 'Bar Hải Phòng: pub chiếu bóng đá, bia tươi, đồ nướng khu Ngô Quyền. Đặt bàn bar Hải Phòng giảm giá, tặng khay nướng qua Bartop.',
+    description: 'Bar Hải Phòng: pub chiếu bóng đá, bia tươi, đồ nướng khu Ngô Quyền. Đặt bàn bar Hải Phòng giảm giá, tặng khay nướng qua TopChill.',
     intro: 'Bar Hải Phòng mang chất phố cảng: pub chiếu bóng đá màn hình lớn, bia tươi, đồ nướng, hợp hội anh em tụ tập.',
     areas: [['Ngô Quyền, Lê Hồng Phong', 'Pub, beer club và bar thể thao tập trung dọc trục Lê Hồng Phong.']],
     tips: ['Đặt bàn sớm vào tối có trận bóng lớn.', 'Nhiều pub có combo bia và đồ nướng cho nhóm 4–6 người.'],
   },
   vt: {
-    description: 'Bar Vũng Tàu: beach pub Bãi Sau, bàn ngoài trời, acoustic cuối tuần. Giá mềm, đặt bàn bar Vũng Tàu giảm giá, tặng tháp bia qua Bartop.',
+    description: 'Bar Vũng Tàu: beach pub Bãi Sau, bàn ngoài trời, acoustic cuối tuần. Giá mềm, đặt bàn bar Vũng Tàu giảm giá, tặng tháp bia qua TopChill.',
     intro: 'Bar Vũng Tàu giá mềm, ngồi sát biển Bãi Sau, nhiều nơi có acoustic cuối tuần. Hợp nhóm bạn đi biển cuối tuần từ Sài Gòn.',
     areas: [['Bãi Sau – đường Thuỳ Vân', 'Pub và beach bar ngoài trời nhìn ra biển, đông nhất tối thứ 7.']],
     tips: ['Cuối tuần khách Sài Gòn đổ về đông, đặt bàn trước.', 'Kết hợp thuê villa gần biển để đi bộ ra bar, không phải lái xe.'],
@@ -82,19 +82,19 @@ export const CITY_SEO = {
     tips: ['Đặt bàn nhóm từ 6 người để nhận tháp bia tặng.', 'Hỏi khách sạn về xe đưa đón về sau 0h.'],
   },
   ct: {
-    description: 'Bar Cần Thơ: lounge ven sông Hậu, view bến Ninh Kiều về đêm. Đặt bàn bar Cần Thơ giảm giá, tặng cocktail qua Bartop.',
+    description: 'Bar Cần Thơ: lounge ven sông Hậu, view bến Ninh Kiều về đêm. Đặt bàn bar Cần Thơ giảm giá, tặng cocktail qua TopChill.',
     intro: 'Bar Cần Thơ nằm dọc bến Ninh Kiều, ngồi ngắm sông Hậu về đêm, nhạc R&B và chill.',
     areas: [['Bến Ninh Kiều', 'Lounge và rooftop nhìn ra sông Hậu, cầu đi bộ Ninh Kiều lên đèn đẹp nhất từ 19h.']],
     tips: ['Đặt trước 20h để nhận 2 cocktail tặng.'],
   },
   hue: {
-    description: 'Bar Huế: garden bar bên sông Hương, cocktail hương trà, acoustic. Đặt bàn bar Huế giảm giá, tặng nem lụi qua Bartop.',
+    description: 'Bar Huế: garden bar bên sông Hương, cocktail hương trà, acoustic. Đặt bàn bar Huế giảm giá, tặng nem lụi qua TopChill.',
     intro: 'Bar Huế nhẹ nhàng: sân vườn yên tĩnh, cocktail hương trà, nhạc acoustic. Hợp ngồi chậm sau một ngày đi lăng tẩm.',
     areas: [['Phạm Ngũ Lão, Phú Hội', 'Phố Tây của Huế, nhiều bar sân vườn và pub nhỏ, đi bộ từ khách sạn ven sông Hương.']],
     tips: ['Bar ở Huế đóng cửa khoảng 0h.', 'Thử cocktail pha trà cung đình, đặc sản riêng của bar Huế.'],
   },
   bd: {
-    description: 'Bar Bình Dương: đang cập nhật danh sách bar, lounge đối tác. Gọi hotline Bartop để được tư vấn chỗ đi tối nay.',
-    intro: 'Bartop đang mở rộng mạng lưới bar đối tác tại Bình Dương.',
+    description: 'Bar Bình Dương: đang cập nhật danh sách bar, lounge đối tác. Gọi hotline TopChill để được tư vấn chỗ đi tối nay.',
+    intro: 'TopChill đang mở rộng mạng lưới bar đối tác tại Bình Dương.',
   },
 };

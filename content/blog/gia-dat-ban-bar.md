@@ -8,7 +8,7 @@ cover: 1569529465841-dfecdab7503b
 coverAlt: "Ly whisky trên bàn VIP, minh hoạ giá đặt bàn bar"
 tags: [Bảng giá, Kinh nghiệm]
 bars: [moc-sky-bar, saigon-52-rooftop, ta-hien-underground, bui-vien-neon-club]
-author: "Ban biên tập Bartop"
+author: "Ban biên tập TopChill"
 ---
 Hỏi **giá đặt bàn bar** thì câu trả lời phụ thuộc vào loại bàn, loại bar và ngày đi. Bài này tổng hợp bảng giá phổ biến năm 2026, giải thích “chi tối thiểu” là gì và chỉ cách đặt bàn rẻ hơn mà vẫn ngồi chỗ đẹp.
 
@@ -39,11 +39,11 @@ Mức trên là tham khảo cho rooftop và club ở Hà Nội, Sài Gòn. Bar �
 
 ## Đặt bàn bar có cần đặt cọc không?
 
-Tuỳ bar và tuỳ ngày. Bàn VIP tối thứ 6, thứ 7 thường yêu cầu cọc 20–50% mức tối thiểu. Thành viên hạng Gold và Black đặt qua Bartop được miễn cọc và giữ bàn 30 phút.
+Tuỳ bar và tuỳ ngày. Bàn VIP tối thứ 6, thứ 7 thường yêu cầu cọc 20–50% mức tối thiểu. Thành viên hạng Gold và Black đặt qua TopChill được miễn cọc và giữ bàn 30 phút.
 
 ## 4 cách giảm giá đặt bàn bar
 
-1. **Đặt qua nền tảng có ưu đãi.** Đặt qua Bartop giảm thẳng 10–25% bill tuỳ bar.
+1. **Đặt qua nền tảng có ưu đãi.** Đặt qua TopChill giảm thẳng 10–25% bill tuỳ bar.
 2. **Đến trong giờ vàng.** 2 giờ đầu sau khi bar mở cửa được giảm thêm 10–20%.
 3. **Dùng hạng thành viên.** Hạng Gold giảm thêm 10%, hạng Black 15%.
 4. **Dùng điểm trừ bill.** 1 điểm = 500đ, trừ tối đa 30% giá trị bàn.

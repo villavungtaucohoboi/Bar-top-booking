@@ -8,7 +8,7 @@ cover: 1470337458703-46ad1756a187
 coverAlt: "Bartender pha chế tại quầy bar, kinh nghiệm đi bar lần đầu"
 tags: [Kinh nghiệm, Người mới]
 bars: [ngo-nho-cocktail, ho-tay-sunset-lounge, thao-dien-garden-bar]
-author: "Ban biên tập Bartop"
+author: "Ban biên tập TopChill"
 ---
 Lần đầu đi bar, ai cũng lo: mặc gì cho đúng, mang bao nhiêu tiền, gọi đồ thế nào để không bị lúng túng. Bài **kinh nghiệm đi bar** này trả lời đủ từ lúc chọn quán đến lúc về nhà an toàn.
 
@@ -31,7 +31,7 @@ Quy tắc an toàn là **smart casual**: gọn gàng nhưng không quá trang tr
 - Nữ: váy, đầm hoặc quần âu với áo kiểu. Mang giày dễ đi vì có thể phải đứng lâu.
 - Beach club: đồ đi biển được chấp nhận, mang theo đồ bơi nếu có hồ bơi.
 
-Mỗi trang bar trên Bartop đều ghi rõ dress code để bạn kiểm tra trước.
+Mỗi trang bar trên TopChill đều ghi rõ dress code để bạn kiểm tra trước.
 
 ## Đi bar mang bao nhiêu tiền?
 
@@ -51,7 +51,7 @@ Nên, nhất là tối thứ 6 và thứ 7. Đặt trước giúp bạn:
 
 1. Chắc chắn có chỗ, không phải đứng chờ ở cửa.
 2. Chọn được vị trí: sát kính, gần DJ hay góc yên tĩnh.
-3. Nhận ưu đãi: đặt qua Bartop được giảm thẳng vào bill, giảm thêm trong giờ vàng và tặng rượu với bàn VIP.
+3. Nhận ưu đãi: đặt qua TopChill được giảm thẳng vào bill, giảm thêm trong giờ vàng và tặng rượu với bàn VIP.
 
 :::cta
 Đặt bàn lần đầu, giảm ngay đơn đầu tiên

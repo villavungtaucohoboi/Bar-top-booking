@@ -9,7 +9,7 @@ coverAlt: "Rooftop bar Sài Gòn nhìn ra skyline Quận 1 về đêm"
 tags: [Sài Gòn, Rooftop]
 city: sg
 bars: [saigon-52-rooftop, ben-nghe-jazz-house, thao-dien-garden-bar, bui-vien-neon-club]
-author: "Ban biên tập Bartop"
+author: "Ban biên tập TopChill"
 ---
 **Rooftop bar Sài Gòn** là nơi đẹp nhất để ngắm thành phố lên đèn. Nhưng chọn sai giờ hoặc sai bàn, bạn có thể ngồi sau cột, mất view và trả nhiều hơn cần thiết. Bài này chỉ cách chọn rooftop, chọn bàn và chọn giờ để có trải nghiệm đáng tiền nhất.
 
@@ -19,11 +19,11 @@ Phần lớn rooftop đẹp tập trung ở Quận 1, quanh phố đi bộ Nguy�
 
 ### Saigon 52 Rooftop
 
-[Saigon 52 Rooftop](/bar/saigon-52-rooftop/) nằm trên tầng 52, là rooftop cao nhất trung tâm và có điểm đánh giá cao nhất toàn hệ thống Bartop: 4,9 trên 5 với hơn 3.400 lượt đánh giá.
+[Saigon 52 Rooftop](/bar/saigon-52-rooftop/) nằm trên tầng 52, là rooftop cao nhất trung tâm và có điểm đánh giá cao nhất toàn hệ thống TopChill: 4,9 trên 5 với hơn 3.400 lượt đánh giá.
 
 - Nhạc: house, afro, hip-hop. Cuối tuần có guest DJ.
 - Mức chi: 400.000đ–900.000đ mỗi người.
-- Ưu đãi qua Bartop: giảm 20% bill, tặng 1 chai Macallan 12 cho bàn VIP.
+- Ưu đãi qua TopChill: giảm 20% bill, tặng 1 chai Macallan 12 cho bàn VIP.
 - Giờ vàng: 18:00–20:00, giảm thêm 15%.
 
 ![Cocktail trên quầy rooftop bar Sài Gòn](1551024709-8f23befc6f87)
@@ -36,7 +36,7 @@ Không phải bàn nào trên rooftop cũng nhìn được skyline. Khi đặt, 
 2. **Bàn gần DJ:** sôi động, hợp nhóm muốn nhảy, nhưng khó nói chuyện.
 3. **Sofa góc:** riêng tư, hợp nhóm 6–10 người, thường yêu cầu chi tối thiểu từ 8 triệu.
 
-Thành viên hạng Gold trở lên trên Bartop được ưu tiên xếp bàn view. Xem quyền lợi tại [bảng hạng thành viên](/#thanh-vien).
+Thành viên hạng Gold trở lên trên TopChill được ưu tiên xếp bàn view. Xem quyền lợi tại [bảng hạng thành viên](/#thanh-vien).
 
 ## Giá đồ uống ở rooftop Sài Gòn
 

@@ -1,4 +1,4 @@
-// Bartop – bộ build trang tĩnh chuẩn SEO. Không cần cài thư viện: `node src/build.mjs`
+// TopChill – bộ build trang tĩnh chuẩn SEO. Không cần cài thư viện: `node src/build.mjs`
 // Nguồn: src/app.html (app + dữ liệu bar), src/seo-data.mjs (nội dung thành phố), content/blog/*.md (bài viết)
 // Đầu ra: thư mục gốc repo (GitHub Pages phục vụ trực tiếp).
 import fs from 'node:fs';
@@ -117,7 +117,7 @@ function md(src) {
     if (/^:::cta/.test(l)) {
       const buf = []; i++; while (i < lines.length && !/^:::/.test(lines[i])) buf.push(lines[i++]); i++;
       const [title, ...rest] = buf.filter(x => x.trim());
-      out.push(`<aside class="ctabox"><b>${inline(title || 'Đặt bàn qua Bartop')}</b>${rest.length ? `<p>${inline(rest.join(' '))}</p>` : ''}<a class="btn btn-gold" href="${href('')}">Đặt bàn ngay, giảm đến 40%</a></aside>`);
+      out.push(`<aside class="ctabox"><b>${inline(title || 'Đặt bàn qua TopChill')}</b>${rest.length ? `<p>${inline(rest.join(' '))}</p>` : ''}<a class="btn btn-gold" href="${href('')}">Đặt bàn ngay, giảm đến 40%</a></aside>`);
       continue;
     }
     if (/^>\s?/.test(l)) {
@@ -174,7 +174,7 @@ function faqLd(list) {
 function faqHtml(list) {
   return `<div class="faq">${list.map(f => `<details><summary>${esc(f.q)}</summary><div>${esc(f.a)}</div></details>`).join('')}</div>`;
 }
-const HEAD_SCRIPT = `<script>try{var t=localStorage.getItem('bartop-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}
+const HEAD_SCRIPT = `<script>var t='dark';try{t=localStorage.getItem('topchill-theme')||'dark'}catch(e){}document.documentElement.setAttribute('data-theme',t);
 document.addEventListener('error',function(e){var el=e.target;if(!el||el.tagName!=='IMG'||!el.dataset||el.dataset.c===undefined||el.classList.contains('ph'))return;var r=el.dataset.c.split('|').filter(Boolean);if(r.length){el.dataset.c=r.slice(1).join('|');el.src=/^https?:/.test(r[0])?r[0]:'https://images.unsplash.com/photo-'+r[0]+'?auto=format&fit=crop&w='+el.dataset.w+'&q=70'}else{el.style.visibility='hidden'}},true);</script>`;
 
 function headTags({ title, desc, pathRel, image, type = 'website', noindex = false, ld = [] }) {
@@ -205,11 +205,12 @@ ${ld.filter(Boolean).map(x => `<script type="application/ld+json">${JSON.stringi
 ${HEAD_SCRIPT}`;
 }
 const STAMP = Date.now().toString(36);
+const CHAT_TAGS = () => `<link rel="stylesheet" href="${href('assets/chat.css')}?v=${STAMP}">\n<script src="${href('assets/chat-data.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/chat.js')}?v=${STAMP}" defer></script>`;
 const NAV = [['bar-ha-noi/', 'Bar Hà Nội'], ['bar-sai-gon/', 'Bar Sài Gòn'], ['bar-da-nang/', 'Bar Đà Nẵng'], ['blog/', 'Cẩm nang']];
 function header(active) {
   const links = NAV.map(([p, t]) => `<a href="${href(p)}"${active === p ? ' aria-current="page"' : ''}>${t}</a>`).join('');
   return `<header class="hdr"><div class="wrap hdr-in">
-  <a class="logo" href="${href('')}" aria-label="Bartop trang chủ"><span class="logo-mark">B</span>Bartop<span class="logo-vn">.vn</span></a>
+  <a class="logo" href="${href('')}" aria-label="TopChill trang chủ"><span class="logo-mark">T</span>TopChill<span class="logo-vn">.vn</span></a>
   <nav class="nav" aria-label="Chính">${links}</nav>
   <a class="btn btn-gold" href="${href('')}">Đặt bàn</a>
 </div><div class="wrap subnav">${links}</div></header>`;
@@ -218,12 +219,12 @@ function footer() {
   const cityLinks = CITIES.filter(c => BARS.some(b => b.city === c.id)).map(c => `<a href="${href(c.path)}">Bar ${esc(c.name)}</a>`).join('');
   const postLinks = POSTS.slice(0, 5).map(p => `<a href="${href(p.path)}">${esc(p.title.split(':')[0])}</a>`).join('');
   return `<footer class="foot"><div class="wrap foot-grid">
-  <div><a class="logo" href="${href('')}"><span class="logo-mark">B</span>Bartop<span class="logo-vn">.vn</span></a>
+  <div><a class="logo" href="${href('')}"><span class="logo-mark">T</span>TopChill<span class="logo-vn">.vn</span></a>
     <p style="margin-top:10px">Đặt bàn bar, lounge, club khắp Việt Nam. Giảm thẳng vào bill, tặng rượu bàn VIP, tích điểm đổi tiền.</p>
     <p class="note">Bản demo. Tên bar, địa chỉ, số liệu và đánh giá là dữ liệu minh hoạ. Uống có trách nhiệm, không lái xe sau khi uống rượu bia.</p></div>
   <div><h4>Bar theo thành phố</h4>${cityLinks}</div>
   <div><h4>Cẩm nang</h4>${postLinks}<a href="${href('blog/')}">Tất cả bài viết</a></div>
-  <div><h4>Bartop</h4><a href="${href('')}#thanh-vien">Hạng thành viên</a><a href="${href('')}#chu-bar">Dành cho chủ bar</a><a href="${href('huy-hieu/')}">Huy hiệu đối tác</a><a href="${href('')}">Hotline ${esc(CFG.hotline)}</a></div>
+  <div><h4>TopChill</h4><a href="${href('')}#thanh-vien">Hạng thành viên</a><a href="${href('')}#chu-bar">Dành cho chủ bar</a><a href="${href('huy-hieu/')}">Huy hiệu đối tác</a><a href="${href('')}">Hotline ${esc(CFG.hotline)}</a></div>
 </div></footer>`;
 }
 function page(opts, body, { mcta = '' } = {}) {
@@ -239,6 +240,7 @@ ${body}
 </main>
 ${footer()}
 ${mcta}
+${CHAT_TAGS()}
 </body>
 </html>
 `;
@@ -261,9 +263,9 @@ function cityFaq(c, bars) {
   const late = bars.slice().sort((a, b) => (+b.hours.slice(8, 10) + (+b.hours.slice(8, 10) < 12 ? 24 : 0)) - (+a.hours.slice(8, 10) + (+a.hours.slice(8, 10) < 12 ? 24 : 0)))[0];
   const gold = bars.slice().sort((a, b) => b.gpct - a.gpct)[0];
   return [
-    { q: `Giá đi bar ở ${c.name} khoảng bao nhiêu?`, a: `Mức chi phổ biến tại các bar đối tác của Bartop ở ${c.name} từ ${minP}.000đ đến ${maxP}.000đ mỗi người. Bàn VIP thường yêu cầu chi tối thiểu 5.000.000đ, sofa nhóm từ 8.000.000đ. Đặt qua Bartop được giảm thẳng vào bill từ ${Math.min(...bars.map(b => b.deal))}% đến ${Math.max(...bars.map(b => b.deal))}%.` },
+    { q: `Giá đi bar ở ${c.name} khoảng bao nhiêu?`, a: `Mức chi phổ biến tại các bar đối tác của TopChill ở ${c.name} từ ${minP}.000đ đến ${maxP}.000đ mỗi người. Bàn VIP thường yêu cầu chi tối thiểu 5.000.000đ, sofa nhóm từ 8.000.000đ. Đặt qua TopChill được giảm thẳng vào bill từ ${Math.min(...bars.map(b => b.deal))}% đến ${Math.max(...bars.map(b => b.deal))}%.` },
     { q: `Bar ở ${c.name} mở cửa đến mấy giờ?`, a: `Phần lớn bar ở ${c.name} mở từ chiều tối đến 0h–2h sáng. ${late.name} mở muộn nhất trong danh sách, khung giờ ${late.hours}.` },
-    { q: `Đặt bàn bar ${c.name} có cần đặt cọc không?`, a: `Thành viên hạng Gold và Black đặt bàn qua Bartop không cần cọc và được giữ bàn 30 phút. Hạng Newbie và Silver có thể được yêu cầu cọc với bàn VIP vào tối thứ 6, thứ 7.` },
+    { q: `Đặt bàn bar ${c.name} có cần đặt cọc không?`, a: `Thành viên hạng Gold và Black đặt bàn qua TopChill không cần cọc và được giữ bàn 30 phút. Hạng Newbie và Silver có thể được yêu cầu cọc với bàn VIP vào tối thứ 6, thứ 7.` },
     { q: `Giờ vàng ở bar ${c.name} là gì?`, a: `Giờ vàng là 2 giờ đầu sau khi bar mở cửa. Đặt bàn và đến trong khung này được giảm thêm 10–20%, cộng dồn với ưu đãi của bar. Hiện ${gold.name} có mức giảm giờ vàng cao nhất: ${gold.gpct}% từ ${gold.gLabel}.` },
   ];
 }
@@ -291,15 +293,15 @@ function cityPage(c) {
     <div class="phero-in">
       <span class="eyebrow">${fmt(c.n)} bar đối tác · cập nhật ${fmtDate(TODAY)}</span>
       <h1>Bar ${esc(c.name)}</h1>
-      <p class="lead">${esc(S.intro || `Tổng hợp bar, lounge, club ở ${c.name} được khách đặt nhiều nhất trên Bartop.`)}</p>
+      <p class="lead">${esc(S.intro || `Tổng hợp bar, lounge, club ở ${c.name} được khách đặt nhiều nhất trên TopChill.`)}</p>
       <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${href('')}#tp-${c.id}">Đặt bàn bar ${esc(c.name)}</a></div>
     </div>
   </section>
 </div>
 <section class="sec"><div class="wrap">
   <h2>Top ${bars.length || ''} bar ${esc(c.name)} được đặt nhiều nhất</h2>
-  <p class="lead-p" style="margin-bottom:18px">Xếp hạng theo lượt đặt bàn và đánh giá của khách trên Bartop trong 30 ngày gần nhất. Bar có nhãn vàng là đối tác nổi bật.</p>
-  ${bars.length ? `<ol class="blist">${list}</ol>` : `<p class="muted">Bartop đang cập nhật bar đối tác tại ${esc(c.name)}. Gọi ${esc(CFG.hotline)} để được tư vấn chỗ đi tối nay.</p>`}
+  <p class="lead-p" style="margin-bottom:18px">Xếp hạng theo lượt đặt bàn và đánh giá của khách trên TopChill trong 30 ngày gần nhất. Bar có nhãn vàng là đối tác nổi bật.</p>
+  ${bars.length ? `<ol class="blist">${list}</ol>` : `<p class="muted">TopChill đang cập nhật bar đối tác tại ${esc(c.name)}. Gọi ${esc(CFG.hotline)} để được tư vấn chỗ đi tối nay.</p>`}
 </div></section>
 ${S.areas ? `<section class="sec"><div class="wrap narrow">
   <h2>Khu vực đi bar nổi tiếng ở ${esc(c.name)}</h2>
@@ -325,12 +327,12 @@ ${related.length ? `<section class="sec"><div class="wrap"><h2>Cẩm nang đi ba
 function barPage(b) {
   const c = cityOf(b.city);
   const title = clip(`${b.name} ${c.name}: giá, menu, đặt bàn giảm ${b.deal}%`, 65);
-  const desc = clip(`${b.name}, ${b.type.toLowerCase()} ở ${b.area}, ${c.name}. Mở ${b.hours}, ${b.price[0]}k–${b.price[1]}k/người. Đặt qua Bartop giảm ${b.deal}%, giờ vàng giảm thêm ${b.gpct}%, ${b.bonus.toLowerCase()}.`, 160);
+  const desc = clip(`${b.name}, ${b.type.toLowerCase()} ở ${b.area}, ${c.name}. Mở ${b.hours}, ${b.price[0]}k–${b.price[1]}k/người. Đặt qua TopChill giảm ${b.deal}%, giờ vàng giảm thêm ${b.gpct}%, ${b.bonus.toLowerCase()}.`, 160);
   const crumbs = [['Trang chủ', ''], [`Bar ${c.name}`, c.path], [b.name, b.path]];
   const menu = MENU[b.type] || [];
   const faq = [
-    { q: `${b.name} mở cửa mấy giờ?`, a: `${b.name} mở cửa từ ${b.hours} hằng ngày. Giờ vàng ${b.gLabel} được giảm thêm ${b.gpct}% khi đặt bàn qua Bartop.` },
-    { q: `Đi ${b.name} hết bao nhiêu tiền?`, a: `Mức chi trung bình ${b.price[0]}.000đ–${b.price[1]}.000đ mỗi người. ${menu.length ? `Đồ uống nổi bật: ${menu.map(m => `${m[0]} ${fmt(m[1])}.000đ`).join(', ')}.` : ''} Đặt qua Bartop được giảm ${b.deal}% tổng bill.` },
+    { q: `${b.name} mở cửa mấy giờ?`, a: `${b.name} mở cửa từ ${b.hours} hằng ngày. Giờ vàng ${b.gLabel} được giảm thêm ${b.gpct}% khi đặt bàn qua TopChill.` },
+    { q: `Đi ${b.name} hết bao nhiêu tiền?`, a: `Mức chi trung bình ${b.price[0]}.000đ–${b.price[1]}.000đ mỗi người. ${menu.length ? `Đồ uống nổi bật: ${menu.map(m => `${m[0]} ${fmt(m[1])}.000đ`).join(', ')}.` : ''} Đặt qua TopChill được giảm ${b.deal}% tổng bill.` },
     { q: `${b.name} có dress code không?`, a: `Dress code của ${b.name}: ${b.dress}. Nhạc: ${b.music}.` },
     { q: `${b.name} ở đâu?`, a: `${b.name} nằm tại ${b.addr}, ${b.area}, ${c.name}.` },
   ];
@@ -342,7 +344,7 @@ function barPage(b) {
     <div class="phero-in">
       <span class="eyebrow">${esc(b.type)} · ${esc(b.area)}, ${esc(c.name)}${b.boost === 'top' ? ' · Top ' + esc(c.name) : ''}</span>
       <h1>${esc(b.name)}</h1>
-      <p class="lead"><span class="rate">★ ${b.rating.toFixed(1)}</span> · ${fmt(b.reviews)} đánh giá trên Bartop · ${esc(b.music)}</p>
+      <p class="lead"><span class="rate">★ ${b.rating.toFixed(1)}</span> · ${fmt(b.reviews)} đánh giá trên TopChill · ${esc(b.music)}</p>
       <div class="chips"><span class="chip gold">Giảm ${b.deal}% bill</span><span class="chip neon">⚡ Giờ vàng ${b.gLabel} -${b.gpct}%</span><span class="chip">🎁 ${esc(b.bonus)}</span></div>
       <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${bookHref(b)}">Đặt bàn ${esc(b.name)}</a></div>
     </div>
@@ -366,7 +368,7 @@ function barPage(b) {
     </tbody></table>
   </div>
   <div>
-    <h2>Ưu đãi khi đặt qua Bartop</h2>
+    <h2>Ưu đãi khi đặt qua TopChill</h2>
     <div class="perkbox">
       <div class="perk"><b class="v">-${b.deal}%</b><div><b>Giảm thẳng vào bill</b><small>Quét mã QR tại quầy khi thanh toán.</small></div></div>
       <div class="perk n"><b class="v">-${b.gpct}%</b><div><b>Giờ vàng ${b.gLabel}</b><small>Đến trong khung này, giảm thêm, cộng dồn.</small></div></div>
@@ -407,7 +409,7 @@ function postPage(p, idx) {
   <div class="cover">${img([p.cover, POOL.cocktail[0]], 1400, p.coverAlt, { eager: true, ratio: [16, 8] })}</div>
   <div class="post-grid">
     <div class="prose">${p.html}
-      <aside class="ctabox"><b>Đặt bàn qua Bartop</b><p>Giảm thẳng vào bill, giờ vàng giảm thêm đến 20%, tặng rượu bàn VIP, không cần cọc với hạng Gold.</p><a class="btn btn-gold" href="${href('')}">Đặt bàn ngay</a></aside>
+      <aside class="ctabox"><b>Đặt bàn qua TopChill</b><p>Giảm thẳng vào bill, giờ vàng giảm thêm đến 20%, tặng rượu bàn VIP, không cần cọc với hạng Gold.</p><a class="btn btn-gold" href="${href('')}">Đặt bàn ngay</a></aside>
       ${p.tags.length ? `<div class="tags">${p.tags.map(t => `<a href="${href('blog/')}#${slugify(t)}">#${esc(t)}</a>`).join('')}</div>` : ''}
       <div class="share">Chia sẻ:
         <a class="btn btn-ghost" href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" rel="noopener">Facebook</a>
@@ -443,9 +445,9 @@ function blogIndex() {
   <div class="cards">${POSTS.map(postCard).join('')}</div>
 </div>
 <section class="sec"><div class="wrap"><h2>Tìm bar theo thành phố</h2><div class="citylinks">${CITIES.filter(x => BARS.some(b => b.city === x.id)).map(x => `<a href="${href(x.path)}">Bar ${esc(x.name)}</a>`).join('')}</div></div></section>`;
-  const ld = [breadcrumbLd(crumbs), { '@context': 'https://schema.org', '@type': 'Blog', name: 'Cẩm nang đi bar Bartop', url: url('blog/'), publisher: ORG,
+  const ld = [breadcrumbLd(crumbs), { '@context': 'https://schema.org', '@type': 'Blog', name: 'Cẩm nang đi bar TopChill', url: url('blog/'), publisher: ORG,
     blogPost: POSTS.map(p => ({ '@type': 'BlogPosting', headline: p.title, url: url(p.path), datePublished: p.date })) }];
-  write('blog/index.html', page({ title: 'Cẩm nang đi bar: kinh nghiệm, bảng giá, review bar | Bartop', desc: 'Kinh nghiệm đi bar lần đầu, giá đặt bàn bar, top bar Hà Nội, Sài Gòn, Đà Nẵng, cách đặt bàn giảm giá đến 40% và nhận rượu tặng bàn VIP.', pathRel: 'blog/', ld, active: 'blog/' }, body));
+  write('blog/index.html', page({ title: 'Cẩm nang đi bar: kinh nghiệm, bảng giá, review bar | TopChill', desc: 'Kinh nghiệm đi bar lần đầu, giá đặt bàn bar, top bar Hà Nội, Sài Gòn, Đà Nẵng, cách đặt bàn giảm giá đến 40% và nhận rượu tặng bàn VIP.', pathRel: 'blog/', ld, active: 'blog/' }, body));
 }
 
 /* ---------- 9. Huy hiệu đối tác (backlink) ---------- */
@@ -456,28 +458,28 @@ function badgePage() {
 <div class="wrap narrow">${crumbsHtml(crumbs)}
   <header class="post-head">
     <span class="eyebrow">Dành cho chủ bar</span>
-    <h1>Huy hiệu “Top bar trên Bartop”</h1>
-    <p class="lead">Gắn huy hiệu lên website, fanpage hoặc menu QR của bar để khách biết bar đang có ưu đãi khi đặt qua Bartop. Bar gắn huy hiệu được cộng điểm xếp hạng.</p>
+    <h1>Huy hiệu “Top bar trên TopChill”</h1>
+    <p class="lead">Gắn huy hiệu lên website, fanpage hoặc menu QR của bar để khách biết bar đang có ưu đãi khi đặt qua TopChill. Bar gắn huy hiệu được cộng điểm xếp hạng.</p>
   </header>
   <div class="prose">
-    <p><img src="${href('assets/badge.svg')}" alt="Huy hiệu Top bar trên Bartop" width="220" height="72" style="position:static"></p>
+    <p><img src="${href('assets/badge.svg')}" alt="Huy hiệu Top bar trên TopChill" width="220" height="72" style="position:static"></p>
     <h2 id="lay-ma">Lấy mã nhúng</h2>
     <p><label for="bsel"><b>Chọn bar của bạn</b></label></p>
     <p><select id="bsel" style="width:100%;min-height:48px;padding:8px 12px;border-radius:12px;background:var(--surface);color:var(--fg);border:1px solid var(--line2);font:inherit">${opts}</select></p>
     <p><textarea id="bcode" readonly rows="5" style="width:100%;padding:12px;border-radius:12px;background:var(--surface);color:var(--fg);border:1px solid var(--line2);font:13px ui-monospace,monospace"></textarea></p>
     <p><button class="btn btn-gold" id="bcopy" type="button">Sao chép mã</button> <span id="bmsg" class="muted"></span></p>
     <h2 id="cach-gan">Cách gắn</h2>
-    <ol><li>Website: dán mã vào chân trang hoặc trang giới thiệu.</li><li>Fanpage, Instagram: dán đường dẫn trang bar trên Bartop vào phần giới thiệu.</li><li>Menu QR, standee tại quầy: in huy hiệu kèm mã QR dẫn tới trang bar.</li></ol>
+    <ol><li>Website: dán mã vào chân trang hoặc trang giới thiệu.</li><li>Fanpage, Instagram: dán đường dẫn trang bar trên TopChill vào phần giới thiệu.</li><li>Menu QR, standee tại quầy: in huy hiệu kèm mã QR dẫn tới trang bar.</li></ol>
   </div>
 </div>
 <script>
 (function(){var s=document.getElementById('bsel'),c=document.getElementById('bcode');
-function upd(){var o=s.options[s.selectedIndex];c.value='<a href="${SITE}/bar/'+o.value+'/" title="Đặt bàn '+o.dataset.name+' trên Bartop"><img src="${SITE}/assets/badge.svg" alt="'+o.dataset.name+' – Top bar '+o.dataset.city+' trên Bartop" width="220" height="72"></a>'}
+function upd(){var o=s.options[s.selectedIndex];c.value='<a href="${SITE}/bar/'+o.value+'/" title="Đặt bàn '+o.dataset.name+' trên TopChill"><img src="${SITE}/assets/badge.svg" alt="'+o.dataset.name+' – Top bar '+o.dataset.city+' trên TopChill" width="220" height="72"></a>'}
 s.onchange=upd;upd();
 document.getElementById('bcopy').onclick=function(){var m=document.getElementById('bmsg');(navigator.clipboard?navigator.clipboard.writeText(c.value):Promise.reject()).then(function(){m.textContent='Đã sao chép.'}).catch(function(){c.select();m.textContent='Đã chọn mã, nhấn Ctrl+C để sao chép.'})};})();
 </script>`;
-  write('huy-hieu/index.html', page({ title: 'Huy hiệu đối tác Top bar trên Bartop – mã nhúng cho chủ bar', desc: 'Lấy mã nhúng huy hiệu Top bar trên Bartop cho website, fanpage và menu QR của bar. Bar gắn huy hiệu được cộng điểm xếp hạng và tăng lượt đặt bàn.', pathRel: 'huy-hieu/', ld: [breadcrumbLd(crumbs)] }, body));
-  write('assets/badge.svg', `<svg xmlns="http://www.w3.org/2000/svg" width="220" height="72" viewBox="0 0 220 72"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd98a"/><stop offset=".6" stop-color="#f0b545"/><stop offset="1" stop-color="#c47d12"/></linearGradient></defs><rect width="220" height="72" rx="14" fill="#0a0912"/><rect x="1" y="1" width="218" height="70" rx="13" fill="none" stroke="url(#g)" stroke-width="2"/><rect x="12" y="14" width="44" height="44" rx="10" fill="url(#g)"/><text x="34" y="47" text-anchor="middle" font-family="Impact,Arial Narrow,sans-serif" font-size="32" font-weight="700" fill="#1a1206">B</text><text x="68" y="33" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#ffd98a">TOP BAR TRÊN</text><text x="68" y="55" font-family="Impact,Arial Narrow,sans-serif" font-size="22" letter-spacing="1" fill="#ffffff">BARTOP.VN</text></svg>`);
+  write('huy-hieu/index.html', page({ title: 'Huy hiệu đối tác Top bar trên TopChill – mã nhúng cho chủ bar', desc: 'Lấy mã nhúng huy hiệu Top bar trên TopChill cho website, fanpage và menu QR của bar. Bar gắn huy hiệu được cộng điểm xếp hạng và tăng lượt đặt bàn.', pathRel: 'huy-hieu/', ld: [breadcrumbLd(crumbs)] }, body));
+  write('assets/badge.svg', `<svg xmlns="http://www.w3.org/2000/svg" width="220" height="72" viewBox="0 0 220 72"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd98a"/><stop offset=".6" stop-color="#f0b545"/><stop offset="1" stop-color="#c47d12"/></linearGradient></defs><rect width="220" height="72" rx="14" fill="#0a0912"/><rect x="1" y="1" width="218" height="70" rx="13" fill="none" stroke="url(#g)" stroke-width="2"/><rect x="12" y="14" width="44" height="44" rx="10" fill="url(#g)"/><text x="34" y="47" text-anchor="middle" font-family="Impact,Arial Narrow,sans-serif" font-size="32" font-weight="700" fill="#1a1206">T</text><text x="68" y="33" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" fill="#ffd98a">TOP BAR TRÊN</text><text x="68" y="55" font-family="Impact,Arial Narrow,sans-serif" font-size="22" letter-spacing="1" fill="#ffffff">TOPCHILL.VN</text></svg>`);
 }
 
 /* ---------- 10. Khu viết bài ---------- */
@@ -491,7 +493,7 @@ function editorPage() {
   write('viet-bai/index.html', `<!doctype html>
 <html lang="vi">
 <head>
-${headTags({ title: 'Khu viết bài – Bartop', desc: 'Soạn bài viết chuẩn SEO cho Bartop.', pathRel: 'viet-bai/', noindex: true })}
+${headTags({ title: 'Khu viết bài – TopChill', desc: 'Soạn bài viết chuẩn SEO cho TopChill.', pathRel: 'viet-bai/', noindex: true })}
 </head>
 <body>
 ${header('')}
@@ -512,12 +514,12 @@ function homePage() {
   </div></section>
   <section class="block"><div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Đặt bàn bar toàn quốc</div><h2>Bar Hà Nội, Sài Gòn và 63 tỉnh thành</h2></div></div>
-    <p class="muted" style="max-width:75ch;margin-bottom:16px">Bartop là nền tảng đặt bàn bar, lounge, club tại Việt Nam. Bạn xem bảng xếp hạng bar theo lượt đặt và đánh giá thật, so sánh giá, giờ mở cửa, dress code, rồi đặt bàn trong 30 giây. Đặt qua Bartop được giảm thẳng vào bill, giảm thêm khi đến trong giờ vàng, tặng rượu cho bàn VIP và tích điểm đổi ra tiền.</p>
+    <p class="muted" style="max-width:75ch;margin-bottom:16px">TopChill là nền tảng đặt bàn bar, lounge, club tại Việt Nam. Bạn xem bảng xếp hạng bar theo lượt đặt và đánh giá thật, so sánh giá, giờ mở cửa, dress code, rồi đặt bàn trong 30 giây. Đặt qua TopChill được giảm thẳng vào bill, giảm thêm khi đến trong giờ vàng, tặng rượu cho bàn VIP và tích điểm đổi ra tiền.</p>
     <div class="rail" style="flex-wrap:wrap">${citiesWithBars.map(c => `<a class="chip" href="${c.path}">Bar ${esc(c.name)} <small>${c.n}</small></a>`).join('')}</div>
   </div></section>`;
   body = body.replace('<!--SEO_HOME-->', seoBlock);
   const i = body.indexOf('</style>') + 8;
-  const title = 'Bartop – Đặt bàn bar Hà Nội, Sài Gòn giảm đến 40%, tặng rượu';
+  const title = 'TopChill – Đặt bàn bar Hà Nội, Sài Gòn giảm đến 40%, tặng rượu';
   const desc = 'Đặt bàn bar, lounge, club tại Hà Nội, Sài Gòn, Đà Nẵng và 63 tỉnh thành. Giảm thẳng vào bill, giờ vàng giảm thêm 20%, tặng rượu bàn VIP, tích điểm đổi tiền.';
   const ld = [
     { '@context': 'https://schema.org', '@type': 'WebSite', name: CFG.siteName, url: SITE + '/', inLanguage: 'vi-VN', publisher: ORG },
@@ -533,12 +535,13 @@ ${head}
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Bartop">
+<meta name="apple-mobile-web-app-title" content="TopChill">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 ${body.slice(0, i)}
 </head>
 <body>
 ${body.slice(i)}
+${CHAT_TAGS()}
 </body>
 </html>
 `);
@@ -546,7 +549,7 @@ ${body.slice(i)}
 
 /* ---------- 12. 404, sitemap, robots ---------- */
 function misc(pages) {
-  write('404.html', page({ title: 'Không tìm thấy trang – Bartop', desc: 'Trang bạn tìm không tồn tại.', pathRel: '404.html', noindex: true }, `<div class="wrap narrow" style="padding-block:60px"><h1 style="font-size:44px;text-transform:uppercase">Không tìm thấy trang</h1><p class="muted" style="margin-top:12px">Đường dẫn có thể đã đổi. Chọn thành phố để tìm bar tối nay:</p><div class="citylinks" style="margin-top:16px">${CITIES.filter(x => BARS.some(b => b.city === x.id)).map(x => `<a href="${href(x.path)}">Bar ${esc(x.name)}</a>`).join('')}</div><p style="margin-top:20px"><a class="btn btn-gold" href="${href('')}">Về trang chủ</a></p></div>`));
+  write('404.html', page({ title: 'Không tìm thấy trang – TopChill', desc: 'Trang bạn tìm không tồn tại.', pathRel: '404.html', noindex: true }, `<div class="wrap narrow" style="padding-block:60px"><h1 style="font-size:44px;text-transform:uppercase">Không tìm thấy trang</h1><p class="muted" style="margin-top:12px">Đường dẫn có thể đã đổi. Chọn thành phố để tìm bar tối nay:</p><div class="citylinks" style="margin-top:16px">${CITIES.filter(x => BARS.some(b => b.city === x.id)).map(x => `<a href="${href(x.path)}">Bar ${esc(x.name)}</a>`).join('')}</div><p style="margin-top:20px"><a class="btn btn-gold" href="${href('')}">Về trang chủ</a></p></div>`));
   const urls = pages.filter(p => !p.noindex).map(p => `  <url><loc>${url(p.path)}</loc><lastmod>${p.lastmod || TODAY}</lastmod>${p.priority ? `<priority>${p.priority}</priority>` : ''}</url>`).join('\n');
   write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
   write('robots.txt', INDEX
@@ -560,6 +563,16 @@ for (const d of ['bar', 'blog', 'viet-bai', 'huy-hieu', 'assets', ...CITIES.map(
 for (const f of fs.readdirSync(path.join(ROOT, 'public'))) { fs.copyFileSync(path.join(ROOT, 'public', f), path.join(ROOT, f)); GENERATED.push(f); }
 fs.mkdirSync(path.join(ROOT, 'assets'), { recursive: true });
 fs.copyFileSync(path.join(ROOT, 'src/site.css'), path.join(ROOT, 'assets/site.css'));
+fs.copyFileSync(path.join(ROOT, 'src/chat.css'), path.join(ROOT, 'assets/chat.css'));
+fs.copyFileSync(path.join(ROOT, 'src/chat.js'), path.join(ROOT, 'assets/chat.js'));
+{
+  const order = ranked(BARS);
+  const data = { base: BASE, hotline: CFG.hotline, demo: !!CFG.chatDemo && !(CFG.tawkPropertyId && CFG.tawkWidgetId), zalo: CFG.zalo || '', messenger: CFG.messenger || '',
+    tawkPropertyId: CFG.tawkPropertyId || '', tawkWidgetId: CFG.tawkWidgetId || '',
+    cities: CITIES.map(c => ({ id: c.id, name: c.name })),
+    bars: BARS.map(b => ({ id: b.id, name: b.name, slug: b.slug, city: b.city, cityName: cityOf(b.city).name, type: b.type, rating: b.rating, price: b.price, deal: b.deal, gpct: b.gpct, gLabel: b.gLabel, hours: b.hours, bonus: b.bonus, rank: order.indexOf(b) })) };
+  fs.writeFileSync(path.join(ROOT, 'assets/chat-data.js'), 'window.TC_CHAT=' + JSON.stringify(data) + ';\n');
+}
 
 const pages = [{ path: '', priority: '1.0' }];
 homePage();

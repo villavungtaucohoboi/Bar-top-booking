@@ -1,4 +1,4 @@
-<title>BARTOP Việt Nam</title>
+<title>TOPCHILL Việt Nam</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,14 +17,6 @@
   --font-body:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
   --r:18px; --r-sm:12px;
 }
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]):not([data-theme="brown"]){
-  color-scheme:light;
-  --bg:#f6f1ea; --bg2:#fbf8f3; --surface:#ffffff; --surface2:#f1e9dd; --surface3:#e6dccb;
-  --fg:#1d1526; --muted:#655c75; --dim:#8f879d; --line:rgba(30,20,40,.09); --line2:rgba(30,20,40,.18);
-  --gold:#b97a12; --gold2:#8a5a0a; --neon:#d81b6c; --cyan:#0f8db5; --ok:#15803d; --warn:#b45309;
-  --hdr-bg:rgba(246,241,234,.82); --glass:rgba(30,20,40,.04); --strip:linear-gradient(135deg,#fff7ea,#f6ecdd 60%,#fdeef4);
-  --shadow:0 16px 40px rgba(60,40,20,.12); --glow-neon:rgba(216,27,108,.25);
-}}
 :root[data-theme="light"]{
   color-scheme:light;
   --bg:#f6f1ea; --bg2:#fbf8f3; --surface:#ffffff; --surface2:#f1e9dd; --surface3:#e6dccb;
@@ -56,7 +48,7 @@ a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit;color:inherit}
 button{cursor:pointer;border:0;background:none;padding:0}
 :focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:6px}
-h1,h2,h3,h4{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing:.01em;text-wrap:balance;line-height:1.05}
+h1,h2,h3,h4{margin:0;font-family:var(--font-display);font-weight:600;letter-spacing:.015em;text-wrap:balance;line-height:1.18}
 p{margin:0}
 .wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:var(--gold);font-weight:600}
@@ -708,11 +700,50 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
   .close{width:48px;height:48px;font-size:20px}
   .deal-row small{font-size:13px}
 }
+
+/* ===== Bìa TopChill: chữ thoáng, đèn sân khấu, hạt sáng ===== */
+.hero2 h1{font-family:var(--font-body);text-transform:none;font-weight:800;font-size:clamp(44px,6.4vw,88px);line-height:1.12;letter-spacing:-.025em;margin-top:18px;max-width:none;display:flex;flex-direction:column;gap:.04em}
+.hero2 h1 .h-a{color:#fff}
+.hero2 h1 .h-b{background:linear-gradient(90deg,#ff3f8e,#ffb347 35%,#ffd98a 55%,#45d5ff 85%,#ff3f8e);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 26px rgba(255,63,142,.45));animation:shine 7s linear infinite;padding-bottom:.08em}
+@keyframes shine{to{background-position:-220% 0}}
+.live-pill{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border-radius:999px;background:rgba(10,8,18,.55);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);font-size:14px;color:#ece6f5;font-weight:500}
+.live-pill b{color:#fff;font-weight:800}
+.hero-deal{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.hero-deal span{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);font-size:15px;color:#e9e3f2;font-weight:600;backdrop-filter:blur(6px)}
+.hero-deal b{font-family:var(--font-display);font-size:22px;font-weight:600;color:#ffd98a;letter-spacing:.02em}
+.hero-shade{background:linear-gradient(90deg,rgba(8,5,16,.9) 0%,rgba(8,5,16,.66) 48%,rgba(8,5,16,.3) 100%),linear-gradient(0deg,rgba(8,5,16,.85),transparent 45%)}
+.hero-fx{position:absolute;inset:0;overflow:hidden;pointer-events:none;mix-blend-mode:screen}
+.beam{position:absolute;top:-30%;width:140px;height:150%;transform-origin:50% 0;filter:blur(22px);opacity:.5}
+.beam.b1{left:12%;background:linear-gradient(rgba(255,63,142,.9),transparent 75%);animation:sway 9s ease-in-out infinite}
+.beam.b2{left:42%;background:linear-gradient(rgba(69,213,255,.75),transparent 70%);animation:sway 11s ease-in-out infinite reverse}
+.beam.b3{left:68%;background:linear-gradient(rgba(240,181,69,.8),transparent 72%);animation:sway 8s ease-in-out -3s infinite}
+.beam.b4{left:86%;background:linear-gradient(rgba(170,90,255,.8),transparent 70%);animation:sway 12s ease-in-out -5s infinite reverse}
+@keyframes sway{0%,100%{transform:rotate(-22deg)}50%{transform:rotate(22deg)}}
+.spk{position:absolute;bottom:-10px;width:6px;height:6px;border-radius:50%;background:#ffd98a;box-shadow:0 0 12px 3px rgba(255,217,138,.8);animation:rise 9s linear infinite;opacity:0}
+.spk:nth-child(5){left:8%;animation-delay:0s}.spk:nth-child(6){left:22%;animation-delay:2.5s;background:#ff8cbc;box-shadow:0 0 12px 3px rgba(255,63,142,.8)}
+.spk:nth-child(7){left:37%;animation-delay:5s}.spk:nth-child(8){left:51%;animation-delay:1.2s;background:#8ce6ff;box-shadow:0 0 12px 3px rgba(69,213,255,.8)}
+.spk:nth-child(9){left:63%;animation-delay:3.8s}.spk:nth-child(10){left:74%;animation-delay:6.4s;background:#ff8cbc;box-shadow:0 0 12px 3px rgba(255,63,142,.8)}
+.spk:nth-child(11){left:85%;animation-delay:.7s}.spk:nth-child(12){left:94%;animation-delay:4.4s;background:#c9a2ff;box-shadow:0 0 12px 3px rgba(170,90,255,.8)}
+@keyframes rise{0%{transform:translateY(0) scale(.6);opacity:0}10%{opacity:.9}80%{opacity:.6}100%{transform:translateY(-560px) scale(1.1);opacity:0}}
+.hero2-in{padding-block:76px 56px}
+@media (max-width:720px){
+  .hero2-in{padding-block:22px 24px}
+  .hero2 h1{font-size:42px;line-height:1.14;margin-top:14px}
+  .live-pill{font-size:13px;padding:7px 12px}
+  .hero-deal{gap:6px;margin-top:14px}
+  .hero-deal span{font-size:12.5px;padding:7px 10px;border-radius:12px}
+  .hero-deal b{font-size:17px}
+  .beam{width:90px}
+}
+.hdr-r .btn-ghost{display:none}
+@media (max-width:1240px){.nav a{padding:8px 10px;font-size:14px}.hdr-in{gap:14px}.user-pill b{display:none}.user-pill{padding:4px 12px 4px 4px}}
+@media (max-width:1100px){.nav{display:none}.bnav{display:flex}.view{padding-bottom:110px}footer{padding-bottom:100px}.user-pill b{display:block}}
+@media (max-width:380px){.logo{font-size:18px;letter-spacing:.05em}.logo-vn{display:none}.user-pill small{font-size:11px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 
 <header class="hdr"><div class="wrap hdr-in">
-  <a class="logo" href="#home"><span class="logo-mark">B</span>Bartop<span class="logo-vn">.vn</span></a>
+  <a class="logo" href="#home"><span class="logo-mark">T</span>TopChill<span class="logo-vn">.vn</span></a>
   <nav class="nav" id="nav">
     <a href="#home" data-v="home">Trang chủ</a>
     <a href="#kham-pha" data-v="bars">Khám phá bar</a>
@@ -735,12 +766,13 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
 <!-- ============ HOME ============ -->
 <main id="v-home" class="view home">
   <section class="hero2">
-    <img class="hero-bg" src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1800&q=70" alt="" onerror="this.remove()">
+    <img class="hero-bg" src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=1800&q=70" alt="" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1800&q=70'}else this.remove()">
     <div class="hero-shade"></div>
+    <div class="hero-fx" aria-hidden="true"><i class="beam b1"></i><i class="beam b2"></i><i class="beam b3"></i><i class="beam b4"></i><span class="spk"></span><span class="spk"></span><span class="spk"></span><span class="spk"></span><span class="spk"></span><span class="spk"></span><span class="spk"></span><span class="spk"></span></div>
     <div class="wrap hero2-in">
-      <div class="eyebrow">1.200+ bar · lounge · club · 63 tỉnh thành</div>
-      <h1>Đặt bàn bar top đầu.<br><span>Rẻ hơn tới 40%.</span></h1>
-      <p class="lead">Đặt qua Bartop để được giảm thẳng vào bill, tặng rượu bàn VIP và tích điểm đổi ra tiền.</p>
+      <div class="live-pill"><span class="dot"></span><b class="num" id="liveCount">1.248</b> bàn đang được đặt tối nay</div>
+      <h1><span class="h-a">Đặt bàn bar xịn,</span><span class="h-b">chill đúng gu.</span></h1>
+      <p class="hero-deal"><span><b>-40%</b> bill</span><span><b>🍾</b> tặng rượu VIP</span><span><b>0đ</b> tiền cọc</span></p>
       <form class="search" id="searchForm">
         <div class="field"><label for="sCity">Thành phố</label><select id="sCity"></select></div>
         <div class="field"><label for="sDate">Ngày</label><input type="date" id="sDate"></div>
@@ -754,7 +786,7 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
           <button type="button" data-jump="rankSec"><i>🔥</i>Top bar</button>
           <button type="button" data-jump="ghSec"><i>⚡</i>Giờ vàng</button>
           <button type="button" data-jump="perksSec"><i>🎁</i>Ưu đãi</button>
-          <a href="tel:19008886"><i>📞</i>Gọi đặt hộ</a>
+          <button type="button" data-chat="1"><i>💬</i>Chat tổng đài</button>
         </div>
       </div>
       <div class="trust"><span>✓ Không cần cọc</span><span>✓ Huỷ miễn phí trước 18:00</span><span>✓ Xác nhận qua Zalo trong 1 phút</span></div>
@@ -768,7 +800,7 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
   </div></section>
 
   <section class="block perks-sec" id="perksSec"><div class="wrap">
-    <div class="sec-head"><div><div class="eyebrow">Quyền lợi khi đặt qua Bartop</div><h2>4 ưu đãi cộng dồn</h2></div></div>
+    <div class="sec-head"><div><div class="eyebrow">Quyền lợi khi đặt qua TopChill</div><h2>4 ưu đãi cộng dồn</h2></div></div>
     <div class="perks" id="perks"></div>
     <div class="calc">
       <div class="calc-h"><b>Ví dụ thực tế</b><span>Bàn 4 người tại Mộc Sky Bar, đến 18:00, bill 3.000.000đ</span></div>
@@ -840,7 +872,7 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
     <div class="sec-head"><div><div class="eyebrow">Tài khoản của bạn</div><h2>Hạng thành viên</h2></div></div>
     <div class="member-hero">
       <div class="mcard">
-        <div class="brand">Bartop Member</div>
+        <div class="brand">TopChill Member</div>
         <div class="name">Tuấn Anh<br><span class="sub">Thành viên từ 03/2025 · ID BT-082417</span></div>
         <div class="tierbig">GOLD</div>
       </div>
@@ -848,7 +880,7 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
         <h3>Tiến độ lên hạng Black</h3>
         <div class="kv"><span>Chi tiêu năm nay</span><b class="num">23.500.000 / 50.000.000đ</b></div>
         <div class="progress"><i></i></div>
-        <p class="muted" style="font-size:13px;margin-top:10px">Cần thêm <b class="num" style="color:var(--gold2)">26.500.000đ</b> chi tiêu qua Bartop để lên Black.</p>
+        <p class="muted" style="font-size:13px;margin-top:10px">Cần thêm <b class="num" style="color:var(--gold2)">26.500.000đ</b> chi tiêu qua TopChill để lên Black.</p>
         <div class="kv" style="margin-top:8px"><span>Ưu đãi hiện tại</span><b style="color:var(--gold2)">Giảm 10% + bàn ưu tiên</b></div>
         <div class="kv"><span>Voucher khả dụng</span><b>3 voucher · 1 chai rượu tặng</b></div>
         <div class="kv"><span>Lần đặt gần nhất</span><b>Saigon 52 Rooftop · 24/10</b></div>
@@ -859,7 +891,7 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
       <div class="panel">
         <div class="eyebrow">Ví điểm</div>
         <div class="wallet-big" style="margin-top:8px"><b class="num" id="walletPts">2.350</b><span>điểm ≈ <b class="num" id="walletMoney" style="font-family:var(--font-body);font-size:15px;color:var(--fg)">1.175.000đ</b></span></div>
-        <p class="muted" style="font-size:13px;margin-top:6px">1 điểm = 500đ. Tích 1 điểm cho mỗi 10.000đ chi qua Bartop.</p>
+        <p class="muted" style="font-size:13px;margin-top:6px">1 điểm = 500đ. Tích 1 điểm cho mỗi 10.000đ chi qua TopChill.</p>
         <div class="wallet-acts">
           <button type="button" id="actCash"><b>💸 Đổi sang tiền</b><small>Về Momo, ZaloPay hoặc ngân hàng trong 24h</small></button>
           <button type="button" id="actBill"><b>🧾 Trừ vào bill</b><small>Bật "Dùng điểm" khi đặt bàn, trừ tối đa 30%</small></button>
@@ -881,7 +913,7 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
     <div class="panel tbl-wrap"><table>
       <thead><tr><th>Quyền lợi</th><th class="c">Newbie</th><th class="c">Silver<br><small class="muted">5tr/năm</small></th><th class="c" style="color:var(--gold)">Gold<br><small class="muted">20tr/năm</small></th><th class="c">Black<br><small class="muted">50tr/năm</small></th></tr></thead>
       <tbody>
-        <tr><td>Giảm giá bill khi đặt qua Bartop</td><td class="c">5% đơn đầu</td><td class="c">5%</td><td class="c">10%</td><td class="c">15%</td></tr>
+        <tr><td>Giảm giá bill khi đặt qua TopChill</td><td class="c">5% đơn đầu</td><td class="c">5%</td><td class="c">10%</td><td class="c">15%</td></tr>
         <tr><td>Tỷ lệ tích điểm</td><td class="c">1 điểm / 10k</td><td class="c">1 điểm / 10k</td><td class="c">1,5 điểm / 10k</td><td class="c">2 điểm / 10k</td></tr>
         <tr><td>Đổi điểm sang tiền</td><td class="c">Từ 500 điểm</td><td class="c">Từ 300 điểm</td><td class="c">Từ 200 điểm</td><td class="c">Không tối thiểu</td></tr>
         <tr><td>Đặt bàn không cần cọc</td><td class="c"><span class="no-ico">—</span></td><td class="c"><span class="no-ico">—</span></td><td class="c"><span class="ok-ico">✓</span></td><td class="c"><span class="ok-ico">✓</span></td></tr>
@@ -923,13 +955,13 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
     <div>
       <div class="eyebrow">Dành cho chủ bar</div>
       <h2 style="margin-top:10px">Đẩy bar của bạn lên <em>Top 1</em> thành phố</h2>
-      <p class="muted" style="margin-top:14px;max-width:52ch;font-size:16px">Mỗi tháng hơn 420.000 lượt tìm kiếm "bar Hà Nội", "bar Sài Gòn", "rooftop Đà Nẵng" trên Google. Bartop chạy quảng cáo đưa khách về cho bạn, bạn chỉ trả hoa hồng khi có bàn thật. Khung giờ vàng giúp lấp bàn trống 2 giờ đầu mở cửa.</p>
+      <p class="muted" style="margin-top:14px;max-width:52ch;font-size:16px">Mỗi tháng hơn 420.000 lượt tìm kiếm "bar Hà Nội", "bar Sài Gòn", "rooftop Đà Nẵng" trên Google. TopChill chạy quảng cáo đưa khách về cho bạn, bạn chỉ trả hoa hồng khi có bàn thật. Khung giờ vàng giúp lấp bàn trống 2 giờ đầu mở cửa.</p>
       <div class="stats" style="margin-top:22px">
         <div class="stat"><b class="num">420K</b><span>lượt search / tháng</span></div>
         <div class="stat"><b class="num">x3,4</b><span>lượt đặt khi lên top</span></div>
         <div class="stat"><b class="num">8%</b><span>hoa hồng / bàn</span></div>
       </div>
-      <div style="display:flex;gap:10px;margin-top:22px;flex-wrap:wrap"><a class="btn btn-gold" href="#chu-bar" onclick="document.getElementById('regName').focus();return true">Đăng ký bar miễn phí</a><button class="btn btn-ghost" onclick="toast('Đội ngũ Bartop sẽ gọi lại trong 15 phút.')">Nhận tư vấn</button></div>
+      <div style="display:flex;gap:10px;margin-top:22px;flex-wrap:wrap"><a class="btn btn-gold" href="#chu-bar" onclick="document.getElementById('regName').focus();return true">Đăng ký bar miễn phí</a><button class="btn btn-ghost" onclick="toast('Đội ngũ TopChill sẽ gọi lại trong 15 phút.')">Nhận tư vấn</button></div>
     </div>
     <div class="dash">
       <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><div><div class="eyebrow">Bảng điều khiển chủ bar</div><b style="font-family:var(--font-display);font-size:22px;text-transform:uppercase">Mộc Sky Bar</b></div><span class="badge top">Top 1 Hà Nội</span></div>
@@ -952,9 +984,9 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
   <section class="block"><div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Gói đẩy top</div><h2>Chọn vị trí hiển thị</h2></div></div>
     <div class="plans">
-      <div class="plan"><h3>Nổi bật</h3><div class="pr num">2.000.000đ<small> / tuần</small></div><ul><li>Nhãn "HOT" trên thẻ bar</li><li>Ưu tiên trong danh sách quận/huyện</li><li>Tự đặt khung giờ vàng &amp; mức giảm</li><li>Báo cáo lượt xem, lượt đặt</li></ul><button class="btn btn-ghost" onclick="toast('Đã gửi yêu cầu gói Nổi bật. Bartop sẽ liên hệ xác nhận.')">Chọn gói</button></div>
-      <div class="plan best"><span class="tag">Chủ bar chọn nhiều nhất</span><h3>Top thành phố</h3><div class="pr num">5.000.000đ<small> / tuần</small></div><ul><li>Nhãn "TOP" vàng, viền nổi bật</li><li>Top 3 mục "Top bar tối nay" của thành phố</li><li>Lên mục "Khung giờ vàng" trang chủ</li><li>Xuất hiện trong quảng cáo Google của Bartop</li><li>Đẩy tin vào hội nhóm thành phố</li></ul><button class="btn btn-gold" onclick="toast('Đã gửi yêu cầu gói Top thành phố. Bartop sẽ liên hệ xác nhận.')">Chọn gói</button></div>
-      <div class="plan"><h3>Top toàn quốc</h3><div class="pr num">12.000.000đ<small> / tuần</small></div><ul><li>Vị trí số 1 trang chủ toàn quốc</li><li>Banner deal giờ vàng</li><li>Chiến dịch quảng cáo riêng (Google + Meta)</li><li>Quản lý tài khoản chuyên trách</li></ul><button class="btn btn-ghost" onclick="toast('Đã gửi yêu cầu gói Top toàn quốc. Bartop sẽ liên hệ xác nhận.')">Chọn gói</button></div>
+      <div class="plan"><h3>Nổi bật</h3><div class="pr num">2.000.000đ<small> / tuần</small></div><ul><li>Nhãn "HOT" trên thẻ bar</li><li>Ưu tiên trong danh sách quận/huyện</li><li>Tự đặt khung giờ vàng &amp; mức giảm</li><li>Báo cáo lượt xem, lượt đặt</li></ul><button class="btn btn-ghost" onclick="toast('Đã gửi yêu cầu gói Nổi bật. TopChill sẽ liên hệ xác nhận.')">Chọn gói</button></div>
+      <div class="plan best"><span class="tag">Chủ bar chọn nhiều nhất</span><h3>Top thành phố</h3><div class="pr num">5.000.000đ<small> / tuần</small></div><ul><li>Nhãn "TOP" vàng, viền nổi bật</li><li>Top 3 mục "Top bar tối nay" của thành phố</li><li>Lên mục "Khung giờ vàng" trang chủ</li><li>Xuất hiện trong quảng cáo Google của TopChill</li><li>Đẩy tin vào hội nhóm thành phố</li></ul><button class="btn btn-gold" onclick="toast('Đã gửi yêu cầu gói Top thành phố. TopChill sẽ liên hệ xác nhận.')">Chọn gói</button></div>
+      <div class="plan"><h3>Top toàn quốc</h3><div class="pr num">12.000.000đ<small> / tuần</small></div><ul><li>Vị trí số 1 trang chủ toàn quốc</li><li>Banner deal giờ vàng</li><li>Chiến dịch quảng cáo riêng (Google + Meta)</li><li>Quản lý tài khoản chuyên trách</li></ul><button class="btn btn-ghost" onclick="toast('Đã gửi yêu cầu gói Top toàn quốc. TopChill sẽ liên hệ xác nhận.')">Chọn gói</button></div>
     </div>
   </div></section>
 
@@ -971,10 +1003,10 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
 
 <footer><div class="wrap">
   <div class="foot">
-    <div><div class="logo" style="font-size:20px"><span class="logo-mark" style="width:28px;height:28px;font-size:17px">B</span>Bartop<span class="logo-vn" style="font-size:13px">.vn</span></div><p style="margin-top:10px;max-width:38ch">Đặt bàn bar, lounge, club khắp Việt Nam. Giờ vàng giảm sâu, tặng rượu, tích điểm đổi tiền.</p><p class="note">Bản demo giao diện. Tên bar, số liệu và review là dữ liệu minh hoạ. Uống có trách nhiệm, không lái xe sau khi uống.</p></div>
+    <div><div class="logo" style="font-size:20px"><span class="logo-mark" style="width:28px;height:28px;font-size:17px">T</span>TopChill<span class="logo-vn" style="font-size:13px">.vn</span></div><p style="margin-top:10px;max-width:38ch">Đặt bàn bar, lounge, club khắp Việt Nam. Giờ vàng giảm sâu, tặng rượu, tích điểm đổi tiền.</p><p class="note">Bản demo giao diện. Tên bar, số liệu và review là dữ liệu minh hoạ. Uống có trách nhiệm, không lái xe sau khi uống.</p></div>
     <div><h4>Thành phố</h4><a href="bar-ha-noi/">Bar Hà Nội</a><a href="bar-sai-gon/">Bar Sài Gòn</a><a href="bar-da-nang/">Bar Đà Nẵng</a><a href="bar-nha-trang/">Bar Nha Trang</a><a href="bar-phu-quoc/">Bar Phú Quốc</a></div>
     <div><h4>Khám phá</h4><a href="#kham-pha">Rooftop bar</a><a href="#kham-pha">Club &amp; EDM</a><a href="#kham-pha">Cocktail bar</a><a href="#kham-pha">Beach club</a><a href="#hoi-nhom">Hội nhóm review</a><a href="blog/">Cẩm nang đi bar</a></div>
-    <div><h4>Bartop</h4><a href="#thanh-vien">Hạng thành viên</a><a href="#thanh-vien">Ví điểm</a><a href="#chu-bar">Dành cho chủ bar</a><a href="huy-hieu/">Huy hiệu đối tác</a><a href="#home">Liên hệ: 1900 8886</a></div>
+    <div><h4>TopChill</h4><a href="#thanh-vien">Hạng thành viên</a><a href="#thanh-vien">Ví điểm</a><a href="#chu-bar">Dành cho chủ bar</a><a href="huy-hieu/">Huy hiệu đối tác</a><a href="#home">Liên hệ: 1900 8886</a></div>
   </div>
 </div></footer>
 
@@ -986,7 +1018,6 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
   <a href="#chu-bar" data-v="partner"><i>▲</i>Chủ bar</a>
 </nav>
 
-<a class="fab" href="tel:19008886" aria-label="Gọi tổng đài đặt bàn hộ 1900 8886"><span>📞</span>Đặt hộ</a>
 <div class="modal" id="modal" hidden>
   <div class="sheet" role="dialog" aria-modal="true" id="sheet"></div>
 </div>
@@ -995,10 +1026,10 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
 <script>
 /* ---------- THEME ---------- */
 const THEMES=['light','brown','dark'];
-function applyTheme(t,save){document.documentElement.setAttribute('data-theme',t);document.querySelectorAll('#themeSw button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));if(save){try{localStorage.setItem('bartop-theme',t)}catch(e){}}}
-(function(){let s=null;try{s=localStorage.getItem('bartop-theme')}catch(e){}
+function applyTheme(t,save){document.documentElement.setAttribute('data-theme',t);document.querySelectorAll('#themeSw button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));if(save){try{localStorage.setItem('topchill-theme',t)}catch(e){}}}
+(function(){let s=null;try{s=localStorage.getItem('topchill-theme')}catch(e){}
   if(THEMES.includes(s))applyTheme(s,false);
-  else{const cur=document.documentElement.getAttribute('data-theme');const eff=THEMES.includes(cur)?cur:(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.querySelectorAll('#themeSw button').forEach(b=>b.classList.toggle('on',b.dataset.t===eff))}
+  else applyTheme('dark',false);
   document.getElementById('themeSw').onclick=e=>{const b=e.target.closest('button');if(!b)return;const mob=matchMedia('(max-width:720px)').matches;const t=mob&&b.classList.contains('on')?THEMES[(THEMES.indexOf(b.dataset.t)+1)%THEMES.length]:b.dataset.t;applyTheme(t,true);toast({light:'Giao diện Sáng',brown:'Giao diện Nâu',dark:'Giao diện Tối'}[t])};
 })();
 
@@ -1151,7 +1182,7 @@ function cardHTML(b){
     <div class="card-body">
       <h3>${b.name}</h3>
       <div class="meta"><span>${cityName(b.city)}</span><span>${b.area}</span><span>${b.music}</span></div>
-      <div class="deal"><span class="ico">%</span>Giảm ${b.deal}% bill khi đặt qua Bartop</div>
+      <div class="deal"><span class="ico">%</span>Giảm ${b.deal}% bill khi đặt qua TopChill</div>
       <div class="ghline"><span class="ico">⚡</span>Giờ vàng ${b.gLabel} · giảm thêm ${b.gpct}%</div>
       <div class="bonus">🎁 ${b.bonus}</div>
       <div class="card-foot"><div class="price num">Từ <b>${b.price[0]}k</b> – ${b.price[1]}k / người</div><button class="btn btn-gold btn-sm" data-book="${b.id}">Đặt bàn</button></div>
@@ -1203,8 +1234,9 @@ function initHome(){
   const mq=document.getElementById('mqCities');
   mq.innerHTML=['hn','sg','dn','nt','pq','vt'].map(id=>{const c=CITIES.find(x=>x.id===id);return `<button type="button" data-c="${id}"><b>${c.name}</b><small>${c.n} bar</small></button>`}).join('');
   mq.onclick=e=>{const b=e.target.closest('button');if(b)setCity(b.dataset.c)};
-  document.querySelector('.mq-acts').onclick=e=>{const b=e.target.closest('[data-jump]');if(b){const t=document.getElementById(b.dataset.jump);window.scrollTo({top:t.getBoundingClientRect().top+scrollY-64,behavior:'smooth'})}};
+  document.querySelector('.mq-acts').onclick=e=>{if(e.target.closest('[data-chat]')){window.TCChat&&TCChat.open();return}const b=e.target.closest('[data-jump]');if(b){const t=document.getElementById(b.dataset.jump);window.scrollTo({top:t.getBoundingClientRect().top+scrollY-64,behavior:'smooth'})}};
   renderGH();setInterval(renderGH,60000);
+  let live=1248;setInterval(()=>{live+=Math.random()>.45?1:0;const el=document.getElementById('liveCount');if(el)el.textContent=fmt(live)},4000);
 }
 
 /* ---------- DETAIL + BOOKING ---------- */
@@ -1227,7 +1259,7 @@ function openBar(id,time){
           <div class="info"><small>Nhạc</small><b>${cur.music}</b></div>
           <div class="info"><small>Dress code</small><b>${cur.dress}</b></div>
         </div>
-        <div class="h4">Ưu đãi khi đặt qua Bartop</div>
+        <div class="h4">Ưu đãi khi đặt qua TopChill</div>
         <div class="deal-list">
           <div class="deal-row"><div class="big">-${cur.deal}%</div><div><b>Giảm ${cur.deal}% tổng bill</b><small>Áp dụng cho mọi bàn đặt trước, quét QR tại quầy.</small></div></div>
           <div class="deal-row neon"><div class="big">⚡ -${cur.gpct}%</div><div><b>Khung giờ vàng ${cur.gLabel}</b><small>Đến trong 2 giờ đầu mở cửa, giảm thêm ${cur.gpct}%. Cộng dồn với deal bar.</small></div></div>
@@ -1371,7 +1403,7 @@ function renderReviews(){
 }
 
 /* ---------- PARTNER ---------- */
-document.getElementById('regForm').onsubmit=e=>{e.preventDefault();const n=document.getElementById('regName').value.trim();if(!n)return;toast(`Đã nhận đăng ký "${n}". Bartop sẽ gọi xác nhận trong 24h.`);e.target.reset()};
+document.getElementById('regForm').onsubmit=e=>{e.preventDefault();const n=document.getElementById('regName').value.trim();if(!n)return;toast(`Đã nhận đăng ký "${n}". TopChill sẽ gọi xác nhận trong 24h.`);e.target.reset()};
 document.getElementById('btnLogin').onclick=()=>toast('Bạn đang đăng nhập với tài khoản demo Tuấn Anh (hạng Gold).');
 
 /* ---------- ROUTER + TOAST ---------- */

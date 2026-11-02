@@ -1,4 +1,4 @@
-# SEO Bartop: kiểm tra, cấu trúc, từ khóa, backlink
+# SEO TopChill: kiểm tra, cấu trúc, từ khóa, backlink
 
 ## 1. Kết quả kiểm tra bản cũ
 
@@ -7,7 +7,7 @@
 | Cả web là một trang duy nhất, chuyển màn bằng `#`. Google chỉ thấy 1 URL. | Nghiêm trọng | Sinh trang tĩnh riêng cho 12 thành phố, 18 bar, blog |
 | Nội dung do JavaScript vẽ, HTML gốc gần như trống chữ | Nghiêm trọng | Trang thành phố, bar, bài viết là HTML thuần |
 | Không có thẻ mô tả, canonical, Open Graph | Cao | Có đủ trên mọi trang |
-| Tiêu đề chung chung “BARTOP Việt Nam” | Cao | Tiêu đề chứa từ khóa, 45–65 ký tự |
+| Tiêu đề chung chung “TOPCHILL Việt Nam” | Cao | Tiêu đề chứa từ khóa, 45–65 ký tự |
 | Không có sitemap, robots | Cao | `sitemap.xml`, `robots.txt` tự sinh |
 | Không có dữ liệu cấu trúc | Trung bình | WebSite, Organization, BreadcrumbList, ItemList, BarOrPub, BlogPosting, FAQPage |
 | Không có nội dung bài viết | Cao | Blog + 6 bài mẫu + khu viết bài |
@@ -59,11 +59,11 @@ Bài lưu tại `content/blog/*.md`. Thêm `draft: true` vào phần đầu file
 
 Backlink không tạo được bằng code. Đây là các nguồn nên làm theo thứ tự hiệu quả.
 
-1. **Huy hiệu đối tác.** Mỗi bar đối tác gắn huy hiệu “Top bar trên Bartop” lên website, fanpage, menu QR. Mã nhúng lấy ở `/huy-hieu/`. Nguồn link liên quan, tự nhiên, tăng theo số bar.
+1. **Huy hiệu đối tác.** Mỗi bar đối tác gắn huy hiệu “Top bar trên TopChill” lên website, fanpage, menu QR. Mã nhúng lấy ở `/huy-hieu/`. Nguồn link liên quan, tự nhiên, tăng theo số bar.
 2. **Website trong hệ sinh thái Vivatrip.** Bài “bar gần villa Vũng Tàu”, “đi chơi đêm ở Phú Quốc” trên vivatrip.vn link về trang thành phố tương ứng. Cùng chủ đề du lịch, liên quan cao.
 3. **Hồ sơ doanh nghiệp.** Google Business Profile, Facebook, Instagram, TikTok, YouTube, Zalo OA, LinkedIn. Mỗi hồ sơ đặt link web.
 4. **Danh bạ, nền tảng địa phương.** Foody, Tripadvisor, Trang Vàng, Cốc Cốc Map, Apple Maps.
-5. **Báo chí, PR.** Bài về giải thưởng “Top bar của năm” do Bartop bình chọn, gửi báo giải trí và du lịch. Bài trả phí phải gắn `rel="sponsored"` theo quy định của Google.
+5. **Báo chí, PR.** Bài về giải thưởng “Top bar của năm” do TopChill bình chọn, gửi báo giải trí và du lịch. Bài trả phí phải gắn `rel="sponsored"` theo quy định của Google.
 6. **Cộng đồng.** Trả lời câu hỏi “đi bar ở đâu” trên các group du lịch, Reddit, Voz, Tinhte kèm link bài viết liên quan. Viết như người thật, không spam.
 7. **Blogger, TikToker đêm.** Mời trải nghiệm miễn phí, đổi lại bài review có link.
 
@@ -75,7 +75,7 @@ Hiện web đang ở chế độ demo: mọi trang có `noindex`, `robots.txt` c
 
 Khi ra mắt thật:
 
-1. Mua tên miền riêng, ví dụ `bartop.vn`, trỏ vào GitHub Pages hoặc hosting khác.
+1. Mua tên miền riêng, ví dụ `topchill.vn`, trỏ vào GitHub Pages hoặc hosting khác.
 2. Trong `src/config.json`: đổi `siteUrl` sang tên miền mới, `basePath` thành `/`, `allowIndexing` thành `true`.
 3. Thay dữ liệu bar minh hoạ trong `src/app.html` bằng bar thật. Dùng ảnh thật do chủ bar cung cấp, tự lưu dạng WebP thay vì ảnh Unsplash.
 4. Chỉ thêm điểm đánh giá vào dữ liệu cấu trúc khi có đánh giá thật từ khách.

@@ -8,17 +8,17 @@ cover: 1543007630-9710e4a00a20
 coverAlt: "Cocktail trên quầy, minh hoạ đặt bàn bar giảm giá"
 tags: [Ưu đãi, Kinh nghiệm]
 bars: [saigon-52-rooftop, moc-sky-bar, ta-hien-underground, bui-vien-neon-club]
-author: "Ban biên tập Bartop"
+author: "Ban biên tập TopChill"
 ---
-**Đặt bàn bar** qua đúng kênh và đúng giờ có thể giúp bạn trả ít hơn gần một nửa so với đến thẳng. Bài này chỉ cách cộng dồn 4 loại ưu đãi trên Bartop, kèm ví dụ tính tiền cụ thể.
+**Đặt bàn bar** qua đúng kênh và đúng giờ có thể giúp bạn trả ít hơn gần một nửa so với đến thẳng. Bài này chỉ cách cộng dồn 4 loại ưu đãi trên TopChill, kèm ví dụ tính tiền cụ thể.
 
 ## 4 ưu đãi cộng dồn khi đặt bàn bar
 
-Trên Bartop, các ưu đãi dưới đây **cộng dồn với nhau**. Mỗi cái áp dụng trên giá trị bill.
+Trên TopChill, các ưu đãi dưới đây **cộng dồn với nhau**. Mỗi cái áp dụng trên giá trị bill.
 
 | Ưu đãi | Mức giảm | Điều kiện |
 |---|---|---|
-| Deal của bar | 10–25% | Đặt qua Bartop, quét QR khi thanh toán |
+| Deal của bar | 10–25% | Đặt qua TopChill, quét QR khi thanh toán |
 | Giờ vàng | 10–20% | Đến trong 2 giờ đầu bar mở cửa |
 | Hạng thành viên | 5–15% | Silver 5%, Gold 10%, Black 15% |
 | Điểm thưởng | Tối đa 30% | 1 điểm = 500đ |
@@ -38,7 +38,7 @@ Giờ vàng là 2 giờ đầu sau khi bar mở cửa, lúc bar còn vắng. Tro
 
 ## Bước 3: lên hạng thành viên
 
-Mỗi 10.000đ chi tiêu qua Bartop được 1 điểm. Chi đủ 20 triệu trong năm lên hạng Gold: giảm thêm 10% mọi bill, không cần cọc, được ưu tiên bàn view.
+Mỗi 10.000đ chi tiêu qua TopChill được 1 điểm. Chi đủ 20 triệu trong năm lên hạng Gold: giảm thêm 10% mọi bill, không cần cọc, được ưu tiên bàn view.
 
 ## Bước 4: dùng điểm trừ bill
 
@@ -69,9 +69,9 @@ Muốn hiểu rõ bàn VIP và chi tối thiểu, đọc bài [giá đặt bàn 
 
 ## Câu hỏi thường gặp
 
-### Đặt bàn bar qua Bartop có mất phí không?
+### Đặt bàn bar qua TopChill có mất phí không?
 
-Không. Khách đặt bàn miễn phí. Bartop nhận hoa hồng từ bar.
+Không. Khách đặt bàn miễn phí. TopChill nhận hoa hồng từ bar.
 
 ### Huỷ bàn có bị phạt không?
 

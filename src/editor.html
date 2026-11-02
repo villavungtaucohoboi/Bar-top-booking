@@ -97,7 +97,7 @@ var slugTouched=false,editing=null;
 function slug(s){return String(s).normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d').replace(/Đ/g,'d').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
 function UNS(id,w){return /^https?:/.test(id)?id:'https://images.unsplash.com/photo-'+id+'?auto=format&fit=crop&w='+(w||900)+'&q=70'}
-var TEMPLATE='Mở bài 2–3 câu: nêu ngay vấn đề người đọc đang tìm và có **từ khóa chính** trong 100 từ đầu.\n\n## Mục 1: trả lời thẳng câu hỏi chính\n\nViết đoạn ngắn, mỗi đoạn 2–4 câu. Chèn link nội bộ tới [bar Hà Nội](/bar-ha-noi/) hoặc trang bar cụ thể.\n\n## Mục 2: bảng giá hoặc danh sách\n\n| Loại bàn | Chi tối thiểu | Ưu đãi |\n|---|---|---|\n| Bàn thường | Không | Giảm 10–20% |\n| Bàn VIP | 5.000.000đ | Tặng rượu |\n\n## Mục 3: kinh nghiệm\n\n- Ý 1\n- Ý 2\n\n:::cta\nĐặt bàn qua Bartop\nGiảm thẳng vào bill, giờ vàng giảm thêm đến 20%.\n:::\n\n## Câu hỏi thường gặp\n\n### Câu hỏi 1?\n\nTrả lời ngắn 1–3 câu.\n\n### Câu hỏi 2?\n\nTrả lời ngắn 1–3 câu.\n';
+var TEMPLATE='Mở bài 2–3 câu: nêu ngay vấn đề người đọc đang tìm và có **từ khóa chính** trong 100 từ đầu.\n\n## Mục 1: trả lời thẳng câu hỏi chính\n\nViết đoạn ngắn, mỗi đoạn 2–4 câu. Chèn link nội bộ tới [bar Hà Nội](/bar-ha-noi/) hoặc trang bar cụ thể.\n\n## Mục 2: bảng giá hoặc danh sách\n\n| Loại bàn | Chi tối thiểu | Ưu đãi |\n|---|---|---|\n| Bàn thường | Không | Giảm 10–20% |\n| Bàn VIP | 5.000.000đ | Tặng rượu |\n\n## Mục 3: kinh nghiệm\n\n- Ý 1\n- Ý 2\n\n:::cta\nĐặt bàn qua TopChill\nGiảm thẳng vào bill, giờ vàng giảm thêm đến 20%.\n:::\n\n## Câu hỏi thường gặp\n\n### Câu hỏi 1?\n\nTrả lời ngắn 1–3 câu.\n\n### Câu hỏi 2?\n\nTrả lời ngắn 1–3 câu.\n';
 
 /* dữ liệu chọn */
 D.cities.forEach(function(c){var o=document.createElement('option');o.value=c.id;o.textContent=c.name;$('ct').appendChild(o)});
@@ -108,9 +108,9 @@ D.bars.forEach(function(b){var o=document.createElement('option');o.value='['+b.
 D.posts.forEach(function(p){var o=document.createElement('option');o.value='['+p.title+'](/blog/'+p.slug+'/)';o.textContent='Bài: '+p.title;lk.appendChild(o)});
 
 /* lưu nháp */
-function save(){try{var o={};F.forEach(function(f){o[f]=$(f).value});o.br=[].slice.call($('br').selectedOptions).map(function(x){return x.value});o.editing=editing;o.slugTouched=slugTouched;localStorage.setItem('bartop-draft',JSON.stringify(o))}catch(e){}}
+function save(){try{var o={};F.forEach(function(f){o[f]=$(f).value});o.br=[].slice.call($('br').selectedOptions).map(function(x){return x.value});o.editing=editing;o.slugTouched=slugTouched;localStorage.setItem('topchill-draft',JSON.stringify(o))}catch(e){}}
 function load(o){F.forEach(function(f){$(f).value=o[f]||''});[].forEach.call($('br').options,function(x){x.selected=(o.br||[]).indexOf(x.value)>=0});editing=o.editing||null;slugTouched=!!o.slugTouched}
-try{var dr=JSON.parse(localStorage.getItem('bartop-draft')||'null');if(dr)load(dr);else $('body').value=TEMPLATE}catch(e){$('body').value=TEMPLATE}
+try{var dr=JSON.parse(localStorage.getItem('topchill-draft')||'null');if(dr)load(dr);else $('body').value=TEMPLATE}catch(e){$('body').value=TEMPLATE}
 
 /* markdown xem trước */
 function inl(s){s=esc(s);return s.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,'<a href="$2">$1</a>')}
@@ -171,7 +171,7 @@ $('s').addEventListener('input',function(){slugTouched=!!$('s').value.trim()});
 /* thanh công cụ */
 function insert(txt,sel){var a=$('body'),st=a.selectionStart,en=a.selectionEnd,v=a.value,pick=v.slice(st,en)||sel||'';
  var out=txt.replace('$',pick);a.value=v.slice(0,st)+out+v.slice(en);a.focus();a.selectionStart=a.selectionEnd=st+out.length;run()}
-var SN={h2:'\n## $\n',h3:'\n### $\n',b:'**$**',ul:'\n- $\n- \n- \n',img:'\n![$](1514933651103-005eec06c04b)\n',tbl:'\n| Loại bàn | Chi tối thiểu | Ưu đãi |\n|---|---|---|\n| Bàn thường | Không | Giảm 10–20% |\n| Bàn VIP | 5.000.000đ | Tặng rượu |\n',cta:'\n:::cta\nĐặt bàn qua Bartop\nGiảm thẳng vào bill, giờ vàng giảm thêm đến 20%.\n:::\n',faq:'\n## Câu hỏi thường gặp\n\n### $?\n\nTrả lời ngắn 1–3 câu.\n'};
+var SN={h2:'\n## $\n',h3:'\n### $\n',b:'**$**',ul:'\n- $\n- \n- \n',img:'\n![$](1514933651103-005eec06c04b)\n',tbl:'\n| Loại bàn | Chi tối thiểu | Ưu đãi |\n|---|---|---|\n| Bàn thường | Không | Giảm 10–20% |\n| Bàn VIP | 5.000.000đ | Tặng rượu |\n',cta:'\n:::cta\nĐặt bàn qua TopChill\nGiảm thẳng vào bill, giờ vàng giảm thêm đến 20%.\n:::\n',faq:'\n## Câu hỏi thường gặp\n\n### $?\n\nTrả lời ngắn 1–3 câu.\n'};
 var DEF={h2:'Tiêu đề mục',h3:'Tiêu đề nhỏ',b:'chữ đậm',ul:'Ý thứ nhất',img:'Mô tả ảnh có từ khóa',faq:'Câu hỏi'};
 document.querySelector('.tb').addEventListener('click',function(e){var b=e.target.closest('[data-ins]');if(b)insert(SN[b.dataset.ins],DEF[b.dataset.ins])});
 lk.addEventListener('change',function(){if(lk.value){var m=lk.value.match(/^\[([^\]]+)\]\((.*)\)$/);insert('[$]('+m[2]+')',m[1]);lk.value=''}});
@@ -180,7 +180,7 @@ lk.addEventListener('change',function(){if(lk.value){var m=lk.value.match(/^\[([
 function fm(){var today=new Date().toISOString().slice(0,10);var brs=[].slice.call($('br').selectedOptions).map(function(x){return x.value});
  var tags=$('g').value.split(',').map(function(x){return x.trim()}).filter(Boolean);
  var q=function(v){return'"'+String(v).replace(/"/g,'\\"')+'"'};
- return['---','title: '+q($('t').value.trim()),'description: '+q($('d').value.trim()),'keyword: '+q($('k').value.trim()),'date: '+(editing&&editing.date||today),'updated: '+today,'cover: '+($('c').value.trim()||'1470337458703-46ad1756a187'),'coverAlt: '+q($('ca').value.trim()||$('t').value.trim()),'tags: ['+tags.join(', ')+']',$('ct').value?'city: '+$('ct').value:'','bars: ['+brs.join(', ')+']','author: '+q('Ban biên tập Bartop'),'---',''].filter(function(x,i){return x!==''||i>11}).join('\n')+'\n'+$('body').value.trim()+'\n'}
+ return['---','title: '+q($('t').value.trim()),'description: '+q($('d').value.trim()),'keyword: '+q($('k').value.trim()),'date: '+(editing&&editing.date||today),'updated: '+today,'cover: '+($('c').value.trim()||'1470337458703-46ad1756a187'),'coverAlt: '+q($('ca').value.trim()||$('t').value.trim()),'tags: ['+tags.join(', ')+']',$('ct').value?'city: '+$('ct').value:'','bars: ['+brs.join(', ')+']','author: '+q('Ban biên tập TopChill'),'---',''].filter(function(x,i){return x!==''||i>11}).join('\n')+'\n'+$('body').value.trim()+'\n'}
 function say(t,cls){var m=$('msg');m.className='msg '+(cls||'');m.textContent=t}
 function copyText(t){return navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()}
 $('copy').onclick=function(){copyText(fm()).then(function(){say('Đã sao chép bài vào bộ nhớ tạm.','ok')}).catch(function(){say('Trình duyệt không cho sao chép. Dùng “Tải file .md”.','bad')})};
