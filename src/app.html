@@ -924,6 +924,48 @@ html.on-hero{background:#0b0710}
 /* ===== Lớp hạt bay nền theo từng tab ===== */
 #fxBg{position:fixed;inset:0;width:100%;height:100%;z-index:40;pointer-events:none;opacity:.85}
 @media (prefers-reduced-motion:reduce){#fxBg{display:none}}
+
+/* ===== Tài khoản: khách / đăng nhập / đăng ký ===== */
+button.user-pill{cursor:pointer;font:inherit;color:inherit;text-align:left}
+.modal.auth{align-items:center;padding:16px;z-index:115}
+.auth-sheet{max-width:440px;border-radius:24px;border-bottom:1px solid var(--line2)}
+.auth-in{padding:30px 24px 22px;display:flex;flex-direction:column;gap:12px}
+.auth-in h2{font-size:30px;text-transform:uppercase}
+.auth-lead{font-size:14px;margin-top:-4px}
+.auth-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border-radius:14px;background:var(--bg);border:1px solid var(--line)}
+.auth-tabs button{min-height:44px;border-radius:10px;font-weight:700;color:var(--muted)}
+.auth-tabs button.on{background:var(--surface2);color:var(--fg);box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.auth-form{display:flex;flex-direction:column;gap:10px}
+.auth-form .field{background:var(--bg);border:1px solid var(--line)}
+.auth-form .field input{font-size:16px;min-height:28px}
+.auth-form .field:focus-within{border-color:var(--neon)}
+.auth-perks{list-style:none;margin:2px 0;padding:12px 14px;border-radius:14px;background:rgba(255,63,142,.08);border:1px dashed rgba(255,63,142,.4);display:flex;flex-direction:column;gap:6px;font-size:14px}
+.auth-msg{min-height:20px;font-size:14px;font-weight:600}
+.auth-msg.err{color:#ff7a9c}.auth-msg.ok{color:var(--ok)}
+.auth-guest{align-self:center;color:var(--muted);font-size:14px;text-decoration:underline;text-underline-offset:3px;min-height:40px}
+.auth-note{font-size:12px;color:var(--dim);text-align:center}
+.auth-sheet .close{background:var(--surface2);color:var(--fg);border-color:var(--line2)}
+@media (max-width:720px){.modal.auth{align-items:flex-end;padding:0}.auth-sheet{border-radius:24px 24px 0 0;border-bottom:0}.auth-in{padding-bottom:calc(22px + env(safe-area-inset-bottom,0px))}}
+.mcard.guest{background:linear-gradient(135deg,#2c2a38,#15141c 55%,#25222f);border-color:rgba(200,195,225,.3)}
+.mcard.guest::before{background:radial-gradient(400px 200px at 90% 10%,rgba(200,190,255,.22),transparent 60%)}
+.mcard.guest .brand{color:#cfc8e8}
+.mcard.guest .tierbig{-webkit-text-stroke-color:#bdb6d8}
+.mcard.t-Black{background:linear-gradient(135deg,#1a1a1f,#000 55%,#1d1d24);border-color:#555}
+.mcard.t-Black .tierbig{-webkit-text-stroke-color:#fff}
+.mcard.t-Silver .tierbig{-webkit-text-stroke-color:#c9cfdc}
+.guest-perks{list-style:none;margin:6px 0 14px;padding:0;display:flex;flex-direction:column;gap:9px;font-size:15px}
+.guest-perks li{display:flex;gap:10px}
+.row-btns{display:flex;gap:10px;flex-wrap:wrap}
+.row-btns .btn{flex:1;min-width:140px}
+.acct-out{margin-top:12px;color:var(--muted);font-size:13.5px;text-decoration:underline;text-underline-offset:3px}
+.tiers2{grid-template-columns:repeat(5,1fr)}
+.tc.t-guest .tc-h b{color:#bdb6d8}
+.tc.me{border-color:var(--neon);box-shadow:0 0 0 1px rgba(255,63,142,.35),0 16px 40px rgba(255,63,142,.12)}
+.tc .tc-me{background:var(--btn-grad);color:var(--btn-ink)}
+.lnk-btn{color:var(--neon);font-weight:700;text-decoration:underline;text-underline-offset:2px;padding:0;background:none;border:0;cursor:pointer;font:inherit}
+.mcard .tierbig.long{font-size:44px;bottom:auto;top:22px}
+.hist-empty{padding:18px;border-radius:14px;background:var(--bg2);border:1px dashed var(--line2);color:var(--muted);font-size:14px}
+@media (max-width:980px){.tiers2{grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.nw-glass path,.nw-glass circle{stroke-dashoffset:0}}
 </style>
 
@@ -944,7 +986,7 @@ html.on-hero{background:#0b0710}
       <button type="button" data-t="dark" title="Giao diện tối" aria-label="Giao diện tối">☾</button>
     </div>
     <button class="btn btn-ghost btn-sm" id="btnLogin">Đăng nhập</button>
-    <a class="user-pill" href="#thanh-vien"><span class="avatar">TA</span><span><small><span class="tier-l">Gold · </span><span class="num" id="pillPts">2.350</span> điểm</small><b>Tuấn Anh</b></span></a>
+    <button type="button" class="user-pill" id="userPill"><span class="avatar" id="pillAv">G</span><span><small id="pillSmall">Đăng nhập</small><b id="pillName">Khách</b></span></button>
   </div>
 </div></header>
 
@@ -1027,10 +1069,11 @@ html.on-hero{background:#0b0710}
   <section class="block"><div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Hạng thành viên</div><h2>Lên hạng, ưu đãi lớn hơn</h2></div><a class="lnk" href="#thanh-vien">Xem ví điểm của bạn →</a></div>
     <div class="tiers2">
-      <div class="tc t-new"><div class="tc-h"><b>Newbie</b><small>Khi đăng ký</small></div><ul><li><b>Giảm 5%</b> đơn đầu tiên</li><li>Tích 1 điểm / 10.000đ</li><li>Đổi điểm từ 500 điểm</li></ul></div>
-      <div class="tc t-silver"><div class="tc-h"><b>Silver</b><small>Chi 5 triệu / năm</small></div><ul><li><b>Giảm 5%</b> mọi bill</li><li>Free vào cửa, không xếp hàng</li><li>Voucher sinh nhật 200k</li></ul></div>
-      <div class="tc t-gold me"><span class="tc-me">Hạng của bạn</span><div class="tc-h"><b>Gold</b><small>Chi 20 triệu / năm</small></div><ul><li><b>Giảm 10%</b> mọi bill</li><li>Không cần cọc, bàn ưu tiên</li><li>Tích điểm x1,5</li></ul></div>
-      <div class="tc t-black"><div class="tc-h"><b>Black</b><small>Chi 50 triệu / năm</small></div><ul><li><b>Giảm 15%</b> mọi bill</li><li>1 chai rượu tặng mỗi tháng</li><li>Tích điểm x2, concierge riêng</li></ul></div>
+      <div class="tc t-guest" data-tier="Guest"><div class="tc-h"><b>Khách</b><small>Không cần đăng ký</small></div><ul><li>Đặt bàn, nhận deal bar</li><li>Giờ vàng giảm thêm</li><li>Chat tổng đài 24/7</li></ul></div>
+      <div class="tc t-new" data-tier="Newbie"><div class="tc-h"><b>Newbie</b><small>Khi đăng ký</small></div><ul><li><b>Giảm 5%</b> đơn đầu tiên</li><li>Tích 1 điểm / 10.000đ</li><li>Đổi điểm từ 500 điểm</li></ul></div>
+      <div class="tc t-silver" data-tier="Silver"><div class="tc-h"><b>Silver</b><small>Chi 5 triệu / năm</small></div><ul><li><b>Giảm 5%</b> mọi bill</li><li>Free vào cửa, không xếp hàng</li><li>Voucher sinh nhật 200k</li></ul></div>
+      <div class="tc t-gold" data-tier="Gold"><div class="tc-h"><b>Gold</b><small>Chi 20 triệu / năm</small></div><ul><li><b>Giảm 10%</b> mọi bill</li><li>Không cần cọc, bàn ưu tiên</li><li>Tích điểm x1,5</li></ul></div>
+      <div class="tc t-black" data-tier="Black"><div class="tc-h"><b>Black</b><small>Chi 50 triệu / năm</small></div><ul><li><b>Giảm 15%</b> mọi bill</li><li>1 chai rượu tặng mỗi tháng</li><li>Tích điểm x2, concierge riêng</li></ul></div>
     </div>
     <p class="muted" style="font-size:13px;margin-top:12px">1 điểm = 500đ. Đổi ra tiền về Momo, ZaloPay, ngân hàng hoặc trừ thẳng vào bill, tối đa 30% giá trị bàn.</p>
   </div></section>
@@ -1071,18 +1114,10 @@ html.on-hero{background:#0b0710}
     <div class="member-hero">
       <div class="mcard">
         <div class="brand">TopChill Member</div>
-        <div class="name">Tuấn Anh<br><span class="sub">Thành viên từ 03/2025 · ID BT-082417</span></div>
-        <div class="tierbig">GOLD</div>
+        <div class="name"><span id="mName">Khách</span><br><span class="sub" id="mSub"></span></div>
+        <div class="tierbig" id="mTier">GUEST</div>
       </div>
-      <div class="panel">
-        <h3>Tiến độ lên hạng Black</h3>
-        <div class="kv"><span>Chi tiêu năm nay</span><b class="num">23.500.000 / 50.000.000đ</b></div>
-        <div class="progress"><i></i></div>
-        <p class="muted" style="font-size:13px;margin-top:10px">Cần thêm <b class="num" style="color:var(--gold2)">26.500.000đ</b> chi tiêu qua TopChill để lên Black.</p>
-        <div class="kv" style="margin-top:8px"><span>Ưu đãi hiện tại</span><b style="color:var(--gold2)">Giảm 10% + bàn ưu tiên</b></div>
-        <div class="kv"><span>Voucher khả dụng</span><b>3 voucher · 1 chai rượu tặng</b></div>
-        <div class="kv"><span>Lần đặt gần nhất</span><b>Saigon 52 Rooftop · 24/10</b></div>
-      </div>
+      <div class="panel" id="mPanel"></div>
     </div>
 
     <div class="wallet">
@@ -1217,6 +1252,33 @@ html.on-hero{background:#0b0710}
 </nav>
 
 <canvas id="fxBg" aria-hidden="true"></canvas>
+<div class="modal auth" id="authModal" hidden>
+  <div class="sheet auth-sheet" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <button class="close" id="authClose" type="button" aria-label="Đóng">✕</button>
+    <div class="auth-in">
+      <div class="eyebrow">Tài khoản TopChill</div>
+      <h2 id="authTitle">Đăng nhập</h2>
+      <p class="muted auth-lead">Không bắt buộc. Khách vẫn đặt bàn và nhận deal bình thường.</p>
+      <div class="auth-tabs" role="tablist"><button type="button" role="tab" data-at="login" class="on">Đăng nhập</button><button type="button" role="tab" data-at="register">Đăng ký</button></div>
+      <form id="fLogin" class="auth-form" novalidate>
+        <div class="field"><label for="lPhone">Số điện thoại</label><input id="lPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx"></div>
+        <div class="field"><label for="lPass">Mật khẩu</label><input id="lPass" type="password" autocomplete="current-password" placeholder="Ít nhất 6 ký tự"></div>
+        <button class="btn btn-gold btn-block" type="submit">Đăng nhập</button>
+        <button class="btn btn-ghost btn-block" type="button" id="demoLogin">Dùng tài khoản mẫu hạng Gold</button>
+      </form>
+      <form id="fReg" class="auth-form" novalidate hidden>
+        <div class="field"><label for="rName">Tên hiển thị</label><input id="rName" autocomplete="name" placeholder="VD: Minh Anh" maxlength="30"></div>
+        <div class="field"><label for="rPhone">Số điện thoại</label><input id="rPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx"></div>
+        <div class="field"><label for="rPass">Mật khẩu</label><input id="rPass" type="password" autocomplete="new-password" placeholder="Ít nhất 6 ký tự"></div>
+        <ul class="auth-perks"><li>🎁 Tặng ngay 100 điểm ≈ 50.000đ</li><li>💸 Giảm 5% mọi bill hạng Newbie</li><li>⭐ Tích điểm đổi tiền, lên Gold không cần cọc</li></ul>
+        <button class="btn btn-gold btn-block" type="submit">Đăng ký miễn phí</button>
+      </form>
+      <p class="auth-msg" id="authMsg" role="status"></p>
+      <button class="auth-guest" type="button" id="authGuest">Tiếp tục với tư cách khách</button>
+      <p class="auth-note">Bản demo: tài khoản lưu trên máy này, chưa gửi lên máy chủ.</p>
+    </div>
+  </div>
+</div>
 <div class="modal" id="modal" hidden>
   <div class="sheet" role="dialog" aria-modal="true" id="sheet"></div>
 </div>
@@ -1294,11 +1356,16 @@ const FEED=[['Minh T.','vừa đặt bàn VIP giờ vàng tại','Mộc Sky Bar'
 
 const PT=500;            // 1 điểm = 500đ
 const PT_CAP=.3;         // trừ bill tối đa 30%
-const USER={name:'Tuấn Anh',tier:'Gold',tierPct:10,points:2350};
-const PTS_HIST=[['Đặt bàn Saigon 52 Rooftop','24/10',118],['Trừ bill tại Mộc Sky Bar','11/10',-400],['Đặt bàn Mộc Sky Bar','11/10',150],['Đổi điểm về Momo','05/10',-1000],['Đặt bàn Ngõ Nhỏ Cocktail','03/10',36],['Thưởng lên hạng Gold','28/09',500]];
+const TIERS={Guest:{pct:0,earn:0,min:0},Newbie:{pct:5,earn:1,min:0},Silver:{pct:5,earn:1,min:5e6},Gold:{pct:10,earn:1.5,min:20e6},Black:{pct:15,earn:2,min:50e6}};
+const TIER_PERK={Newbie:'Giảm 5% mọi bill',Silver:'Giảm 5% + free vào cửa',Gold:'Giảm 10% + bàn ưu tiên, không cọc',Black:'Giảm 15% + 1 chai rượu mỗi tháng'};
+const USER={name:'Khách',tier:'Guest',tierPct:0,points:0,guest:true,phone:'',id:'',since:'',spend:0};
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v===null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}},del(k){try{localStorage.removeItem(k)}catch(e){}}};
+const GUEST_NO=(()=>{let n=LS.get('topchill-guest-no',0);if(!n){n=1000+Math.floor(Math.random()*9000);LS.set('topchill-guest-no',n)}return n})();
+const DEMO_PHONE='0900000000';
+const DEMO_PTS=[['Đặt bàn Saigon 52 Rooftop','24/10',118],['Trừ bill tại Mộc Sky Bar','11/10',-400],['Đặt bàn Mộc Sky Bar','11/10',150],['Đổi điểm về Momo','05/10',-1000],['Đặt bàn Ngõ Nhỏ Cocktail','03/10',36],['Thưởng lên hạng Gold','28/09',500]];
 const fmt=n=>n.toLocaleString('vi-VN');
 const money=k=>fmt(Math.round(k*1000))+'đ';
-function syncPts(){document.getElementById('pillPts').textContent=fmt(USER.points);document.getElementById('walletPts').textContent=fmt(USER.points);document.getElementById('walletMoney').textContent=fmt(USER.points*PT)+'đ'}
+function syncPts(){const pp=document.getElementById('pillPts');if(pp)pp.textContent=fmt(USER.points);saveAcct();document.getElementById('walletPts').textContent=fmt(USER.points);document.getElementById('walletMoney').textContent=fmt(USER.points*PT)+'đ'}
 
 /* ---------- ART (canvas skyline neon) ---------- */
 function drawArt(cv,seed,hue){
@@ -1478,7 +1545,7 @@ function openBar(id,time){
           <div class="deal-row"><div class="big">-${cur.deal}%</div><div><b>Giảm ${cur.deal}% tổng bill</b><small>Áp dụng cho mọi bàn đặt trước, quét QR tại quầy.</small></div></div>
           <div class="deal-row neon"><div class="big">⚡ -${cur.gpct}%</div><div><b>Khung giờ vàng ${cur.gLabel}</b><small>Đến trong 2 giờ đầu mở cửa, giảm thêm ${cur.gpct}%. Cộng dồn với deal bar.</small></div></div>
           <div class="deal-row neon"><div class="big">🎁</div><div><b>${cur.bonus}</b><small>Tặng tại bàn, không cộng dồn với voucher khác.</small></div></div>
-          <div class="deal-row plain"><div class="big" style="color:var(--gold)">+${USER.tierPct}%</div><div><b>Hạng ${USER.tier} của bạn giảm thêm ${USER.tierPct}%</b><small>Không cần cọc · bàn ưu tiên · dùng điểm trừ bill tối đa 30%.</small></div></div>
+          ${USER.guest?'<div class="deal-row plain"><div class="big" style="color:var(--gold)">+5%</div><div><b>Đăng ký miễn phí để giảm thêm 5%</b><small>Tặng 100 điểm, tích điểm đổi tiền. <button type="button" class="lnk-btn" data-auth="register">Đăng ký ngay</button></small></div></div>':''}<div class="deal-row plain"${USER.guest?' hidden':''}><div class="big" style="color:var(--gold)">+${USER.tierPct}%</div><div><b>Hạng ${USER.tier} của bạn giảm thêm ${USER.tierPct}%</b><small>Không cần cọc · bàn ưu tiên · dùng điểm trừ bill tối đa 30%.</small></div></div>
         </div>
         <div class="h4">Menu nổi bật</div>
         <div class="menu">${MENU[cur.type].map(m=>`<span>${m[0]}<b class="num">${m[1]}k</b></span>`).join('')}</div>
@@ -1504,7 +1571,7 @@ function calc(){
   const pts=bk.usePts?Math.min(bk.pts||maxPts,maxPts):0;
   const ptsK=pts*PT/1000;
   const total=after-ptsK;
-  return {spend,d1,d2,d3,golden,after,maxPts,pts,ptsK,total,earn:Math.round(total/10*1.5)};
+  return {spend,d1,d2,d3,golden,after,maxPts,pts,ptsK,total,earn:Math.round(total/10*TIERS[USER.tier].earn),earnIf:Math.round(total/10)};
 }
 function bookDate(){if(bk.day==='p')return bk.date;const d=new Date();d.setDate(d.getDate()+bk.day);return d.toISOString().slice(0,10)}
 function renderBook(){
@@ -1521,7 +1588,8 @@ function renderBook(){
       <div class="slots" id="slots">${cur.slots.map(s=>`<button type="button" data-s="${s}" class="slot ${cur.golden.includes(s)?'gold':''} ${bk.time===s?'on':''}">${s}${cur.golden.includes(s)?`<small>⚡ -${cur.gpct}%</small>`:''}</button>`).join('')}</div>
       <div class="lbl">Loại bàn</div>
       <div class="seg" id="seg">${Object.entries(TABLE).map(([k,v])=>`<button type="button" data-t="${k}" class="${bk.table===k?'on':''}">${v.label}<small>${v.min?'Từ '+fmt(v.min)+'k':'Không tối thiểu'}</small></button>`).join('')}</div>
-      <div class="pts-box">
+      ${USER.guest?`<div class="field full"><label for="bPhone">Số điện thoại nhận xác nhận</label><input id="bPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx" value="${bk.phone||''}"></div>`:''}
+      <div class="pts-box"${USER.guest?' hidden':''}>
         <div class="row"><span class="t">🧾 Dùng điểm trừ bill <b class="num">(${fmt(USER.points)} điểm ≈ ${fmt(USER.points*PT)}đ)</b></span><button type="button" class="sw ${bk.usePts?'on':''}" id="ptsSw" aria-label="Dùng điểm"></button></div>
         ${bk.usePts?`<input type="range" id="ptsRange" min="0" max="${c.maxPts}" step="10" value="${c.pts}"><div class="note num">Dùng <b>${fmt(c.pts)} điểm</b> = trừ <b>${money(c.ptsK)}</b> · tối đa ${fmt(c.maxPts)} điểm (30% bill)</div>`:''}
       </div>
@@ -1534,14 +1602,14 @@ function renderBook(){
       <div class="row"><span>Dự kiến chi tiêu</span><b>${money(c.spend)}</b></div>
       <div class="row"><span>Giảm ${cur.deal}% deal bar</span><b class="ok">-${money(c.d1)}</b></div>
       <div class="row"><span>⚡ Giờ vàng ${bk.time}${c.golden?' · -'+cur.gpct+'%':''}</span><b class="${c.golden?'neon':'muted'}">${c.golden?'-'+money(c.d3):'Chọn '+cur.gLabel+' để giảm thêm'}</b></div>
-      <div class="row"><span>Giảm ${USER.tierPct}% hạng ${USER.tier}</span><b class="ok">-${money(c.d2)}</b></div>
+      ${USER.guest?'':`<div class="row"><span>Giảm ${USER.tierPct}% hạng ${USER.tier}</span><b class="ok">-${money(c.d2)}</b></div>`}
       ${bk.usePts?`<div class="row"><span>Trừ ${fmt(c.pts)} điểm</span><b class="gold">-${money(c.ptsK)}</b></div>`:''}
       <div class="row"><span>Rượu tặng</span><b class="gold">${bk.table!=='normal'||c.spend>=5000?'🎁 Có':'Bàn VIP'}</b></div>
       <div class="row total"><span>Thanh toán tại bar</span><b>${money(c.total)}</b></div>
-      <div class="row" style="font-size:12px;color:var(--muted)"><span>Tích điểm (Gold x1,5)</span><b>+${fmt(c.earn)} điểm</b></div>
+      <div class="row" style="font-size:12px;color:var(--muted)">${USER.guest?`<span>Đăng ký để tích điểm</span><b>+${fmt(c.earnIf)} điểm</b>`:`<span>Tích điểm (${USER.tier} x${String(TIERS[USER.tier].earn).replace('.',',')})</span><b>+${fmt(c.earn)} điểm</b>`}</div>
     </div>
-    <button class="btn btn-gold btn-block" id="confirmBtn" style="margin-top:14px">Xác nhận đặt bàn · không cần cọc</button>
-    <p class="muted" style="font-size:11.5px;text-align:center;margin-top:8px">Hạng Gold được giữ bàn 30 phút. Huỷ miễn phí trước 18:00.</p>`;
+    <button class="btn btn-gold btn-block" id="confirmBtn" style="margin-top:14px">Xác nhận đặt bàn</button>
+    <p class="muted" style="font-size:11.5px;text-align:center;margin-top:8px">${USER.tier==='Gold'||USER.tier==='Black'?'Hạng '+USER.tier+' được giữ bàn 30 phút, không cần cọc.':'Giữ bàn 15 phút.'} Huỷ miễn phí trước 18:00.</p>`;
   const box=document.getElementById('bookBox');
   const mt=document.getElementById('mobTot');if(mt)mt.textContent=money(c.total);
   box.querySelector('#slots').onclick=e=>{const b=e.target.closest('button');if(!b)return;bk.time=b.dataset.s;renderBook()};
@@ -1554,20 +1622,22 @@ function renderBook(){
   box.querySelector('#bNote').oninput=e=>{bk.note=e.target.value};
   box.querySelector('#ptsSw').onclick=()=>{bk.usePts=!bk.usePts;bk.pts=0;renderBook()};
   const rg=box.querySelector('#ptsRange');if(rg){rg.oninput=e=>{bk.pts=+e.target.value;const n=box.querySelector('.pts-box .note b');if(n)n.textContent=fmt(bk.pts)+' điểm'};rg.onchange=()=>renderBook()}
+  const bph=box.querySelector('#bPhone');if(bph)bph.oninput=e=>{bk.phone=e.target.value};
   box.querySelector('#confirmBtn').onclick=()=>{
+    if(USER.guest){const ph=(bk.phone||'').replace(/\D/g,'');if(!/^0\d{9}$/.test(ph)){toast('Nhập số điện thoại 10 số để nhận xác nhận đặt bàn.');const f=box.querySelector('#bPhone');if(f){f.focus();f.scrollIntoView({block:'center',behavior:'smooth'})}return}}
     const code='BT-'+Math.random().toString(36).slice(2,6).toUpperCase()+'-'+String(Math.floor(Math.random()*900+100));
     const c2=calc();const date=bookDate().split('-').reverse().join('/'),time=bk.time;
-    USER.points=USER.points-c2.pts+c2.earn;syncPts();
-    if(c2.pts)PTS_HIST.unshift([`Trừ bill tại ${cur.name}`,date.slice(0,5),-c2.pts]);PTS_HIST.unshift([`Đặt bàn ${cur.name}`,date.slice(0,5),c2.earn]);renderPtsHist();
+    USER.points=USER.points-c2.pts+c2.earn;USER.spend+=c2.total*1000;syncPts();
+    if(c2.pts)PTS_HIST.unshift([`Trừ bill tại ${cur.name}`,date.slice(0,5),-c2.pts]);if(c2.earn)PTS_HIST.unshift([`Đặt bàn ${cur.name}`,date.slice(0,5),c2.earn]);renderPtsHist();
     box.innerHTML=`<div class="success"><div class="eyebrow" style="color:var(--ok)">✓ Đặt bàn thành công</div><div class="code">${code}</div>
       <div class="qr"><canvas id="qr" width="21" height="21"></canvas></div>
       <p><b>${cur.name}</b> · ${TABLE[bk.table].label}</p><p class="muted">${date} · ${time}${c2.golden?' ⚡ giờ vàng':''} · ${bk.guests} khách</p>
       <div class="sum num" style="text-align:left"><div class="row"><span>Giảm giá đã khoá</span><b class="ok">-${money(c2.d1+c2.d2+c2.d3)}</b></div>${c2.pts?`<div class="row"><span>Đã trừ ${fmt(c2.pts)} điểm</span><b class="gold">-${money(c2.ptsK)}</b></div>`:''}<div class="row"><span>Rượu tặng</span><b class="gold">${bk.table!=='normal'||c2.spend>=5000?cur.bonus:'Nâng lên bàn VIP để nhận'}</b></div><div class="row total"><span>Thanh toán tại bar</span><b>${money(c2.total)}</b></div></div>
-      <p class="muted" style="font-size:12.5px;margin-top:12px">Đưa mã QR cho nhân viên khi đến. Đã gửi xác nhận qua Zalo. Sau check-in bạn nhận +${fmt(c2.earn)} điểm.</p>
+      <p class="muted" style="font-size:12.5px;margin-top:12px">Đưa mã QR cho nhân viên khi đến. ${USER.guest?'Đã gửi xác nhận qua Zalo tới '+bk.phone+'. <button type="button" class="lnk-btn" data-auth="register">Đăng ký</button> để lần sau tích +'+fmt(c2.earnIf)+' điểm.':'Đã gửi xác nhận qua Zalo. Sau check-in bạn nhận +'+fmt(c2.earn)+' điểm.'}</p>
       <button class="btn btn-ghost btn-block" style="margin-top:12px" onclick="closeM()">Đóng</button></div>`;
     const mc=document.getElementById('mobCta');if(mc)mc.hidden=true;
     const q=box.querySelector('#qr').getContext('2d');let s=code.length*131;for(let y=0;y<21;y++)for(let x=0;x<21;x++){s=(s*9301+49297)%233280;const fin=(x<7&&y<7)||(x>13&&y<7)||(x<7&&y>13);const edge=fin&&(x%7===0||x%7===6||y%7===0||y%7===6||(x%7>1&&x%7<5&&y%7>1&&y%7<5));q.fillStyle=(fin?edge:(s/233280>.5))?'#0a0912':'#fff';q.fillRect(x,y,1,1)}
-    HIST.unshift({bar:cur.name,hue:cur.hue,date:date+' · '+time,st:'soon',save:c2.d1+c2.d2+c2.d3+c2.ptsK});renderHist();
+    HIST.unshift({bar:cur.name,hue:cur.hue,date:date+' · '+time,st:'soon',save:c2.d1+c2.d2+c2.d3+c2.ptsK});renderHist();saveAcct();
     box.scrollIntoView({behavior:'smooth',block:'start'});
     toast(`Đã đặt bàn tại ${cur.name}. Mã ${code}.`);
   };
@@ -1578,12 +1648,13 @@ document.addEventListener('click',e=>{
   const g=e.target.closest('.gh[data-gh]');if(g){const b=BARS.find(x=>x.id===+g.dataset.gh);openBar(b.id,b.golden[0]);return}
   if(e.target.id==='modal')closeM();
 });
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeM();if(e.key==='Enter'&&e.target.dataset?.id&&e.target.matches?.('.card,.rk1,.rk-row'))openBar(+e.target.dataset.id)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!document.getElementById('authModal').hidden){closeAuth();return}closeM()}if(e.key==='Enter'&&e.target.dataset?.id&&e.target.matches?.('.card,.rk1,.rk-row'))openBar(+e.target.dataset.id)});
 
 /* ---------- MEMBER ---------- */
-const HIST=[{bar:'Saigon 52 Rooftop',hue:210,date:'24/10 · 21:00',st:'done',save:1180},{bar:'Mộc Sky Bar',hue:42,date:'11/10 · 18:00 ⚡',st:'done',save:1700},{bar:'Ngõ Nhỏ Cocktail',hue:300,date:'03/10 · 20:00',st:'done',save:360}];
-function renderHist(){document.getElementById('hist').innerHTML=HIST.map(h=>`<div class="hist-item"><div class="sq" style="background:linear-gradient(135deg,hsl(${h.hue} 80% 55%),hsl(${(h.hue+60)%360} 80% 35%))"></div><div><b>${h.bar}</b><div class="muted" style="font-size:12.5px">${h.date} · tiết kiệm <span class="num">${money(h.save)}</span></div></div><span class="st ${h.st}">${h.st==='done'?'Đã đến':'Sắp tới'}</span></div>`).join('')}
-function renderPtsHist(){document.getElementById('ptsHist').innerHTML=PTS_HIST.slice(0,7).map(p=>`<div class="kv"><span>${p[0]}<br><small class="muted">${p[1]}</small></span><b class="num ${p[2]>0?'plus':'minus'}">${p[2]>0?'+':''}${fmt(p[2])} điểm</b></div>`).join('')}
+const DEMO_HIST=[{bar:'Saigon 52 Rooftop',hue:210,date:'24/10 · 21:00',st:'done',save:1180},{bar:'Mộc Sky Bar',hue:42,date:'11/10 · 18:00 ⚡',st:'done',save:1700},{bar:'Ngõ Nhỏ Cocktail',hue:300,date:'03/10 · 20:00',st:'done',save:360}];
+const HIST=[],PTS_HIST=[];
+function renderHist(){if(!HIST.length){document.getElementById('hist').innerHTML='<div class="hist-empty">Chưa có lần đặt bàn nào. Chọn bar ở mục Khám phá để đặt bàn đầu tiên.</div>';return}document.getElementById('hist').innerHTML=HIST.map(h=>`<div class="hist-item"><div class="sq" style="background:linear-gradient(135deg,hsl(${h.hue} 80% 55%),hsl(${(h.hue+60)%360} 80% 35%))"></div><div><b>${h.bar}</b><div class="muted" style="font-size:12.5px">${h.date} · tiết kiệm <span class="num">${money(h.save)}</span></div></div><span class="st ${h.st}">${h.st==='done'?'Đã đến':'Sắp tới'}</span></div>`).join('')}
+function renderPtsHist(){if(!PTS_HIST.length){document.getElementById('ptsHist').innerHTML='<div class="hist-empty">'+(USER.guest?'Đăng ký để bắt đầu tích điểm. Tặng ngay 100 điểm.':'Chưa có giao dịch điểm.')+'</div>';return}document.getElementById('ptsHist').innerHTML=PTS_HIST.slice(0,7).map(p=>`<div class="kv"><span>${p[0]}<br><small class="muted">${p[1]}</small></span><b class="num ${p[2]>0?'plus':'minus'}">${p[2]>0?'+':''}${fmt(p[2])} điểm</b></div>`).join('')}
 (function wallet(){
   const rd=document.getElementById('redeem'),inp=document.getElementById('rdPts'),out=document.getElementById('rdOut');let method='Momo';
   const upd=()=>{const v=Math.max(0,+inp.value||0);out.textContent=fmt(v*PT)+'đ'};
@@ -1619,7 +1690,68 @@ function renderReviews(){
 
 /* ---------- PARTNER ---------- */
 document.getElementById('regForm').onsubmit=e=>{e.preventDefault();const n=document.getElementById('regName').value.trim();if(!n)return;toast(`Đã nhận đăng ký "${n}". TopChill sẽ gọi xác nhận trong 24h.`);e.target.reset()};
-document.getElementById('btnLogin').onclick=()=>toast('Bạn đang đăng nhập với tài khoản demo Tuấn Anh (hạng Gold).');
+document.getElementById('btnLogin').onclick=()=>openAuth('login');
+/* ---------- Tài khoản: khách / đăng nhập / đăng ký (demo, lưu trên máy) ---------- */
+function accts(){return LS.get('topchill-accounts',{})}
+async function hashPw(p){try{const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('topchill:'+p));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}catch(e){let h=0;for(const ch of p)h=(h*31+ch.charCodeAt(0))|0;return 'x'+h}}
+function tierFor(spend){return spend>=5e7?'Black':spend>=2e7?'Gold':spend>=5e6?'Silver':'Newbie'}
+function saveAcct(){if(USER.guest||!USER.phone)return;const A=accts();const a=A[USER.phone];if(!a)return;Object.assign(a,{name:USER.name,points:USER.points,spend:USER.spend,hist:HIST.slice(0,20),pts:PTS_HIST.slice(0,30)});if(USER.phone!==DEMO_PHONE){a.tier=tierFor(USER.spend);if(a.tier!==USER.tier){USER.tier=a.tier;USER.tierPct=TIERS[a.tier].pct;setTimeout(applyUser)}}LS.set('topchill-accounts',A)}
+function loadUser(){
+  const ph=LS.get('topchill-session','');let a=ph&&accts()[ph];
+  if(ph===DEMO_PHONE&&!a){a=demoAcct()}
+  HIST.length=0;PTS_HIST.length=0;
+  if(a){Object.assign(USER,{name:a.name,tier:a.tier,tierPct:TIERS[a.tier].pct,points:a.points,guest:false,phone:ph,id:a.id,since:a.since,spend:a.spend});HIST.push(...(a.hist||[]));PTS_HIST.push(...(a.pts||[]))}
+  else Object.assign(USER,{name:'Khách #'+GUEST_NO,tier:'Guest',tierPct:0,points:0,guest:true,phone:'',id:'',since:'',spend:0});
+}
+function demoAcct(){const A=accts();A[DEMO_PHONE]={name:'Tuấn Anh',tier:'Gold',points:2350,spend:23500000,id:'TC-082417',since:'03/2025',pw:'',hist:DEMO_HIST,pts:DEMO_PTS};LS.set('topchill-accounts',A);return A[DEMO_PHONE]}
+function initials(n){return n.startsWith('Khách')?'G':n.trim().split(/\s+/).slice(-2).map(w=>w[0]).join('').toUpperCase()}
+function renderTierPanel(){
+  const P=document.getElementById('mPanel');
+  if(USER.guest){P.innerHTML=`<h3>Bạn đang là Khách #${GUEST_NO}</h3><p class="muted" style="font-size:14px">Không cần tài khoản vẫn đặt bàn và nhận deal của bar. Đăng ký miễn phí để nhận thêm:</p><ul class="guest-perks"><li>🎁 <span>Tặng ngay <b>100 điểm</b> ≈ 50.000đ</span></li><li>💸 <span><b>Giảm 5%</b> mọi bill ở hạng Newbie</span></li><li>⭐ <span>Tích điểm đổi tiền mỗi lần đặt bàn</span></li><li>🍾 <span>Lên Gold: không cần cọc, bàn ưu tiên, rượu tặng</span></li></ul><div class="row-btns"><button type="button" class="btn btn-gold" data-auth="register">Đăng ký miễn phí</button><button type="button" class="btn btn-ghost" data-auth="login">Đăng nhập</button></div>`;return}
+  const order=['Newbie','Silver','Gold','Black'],i=order.indexOf(USER.tier),next=order[i+1];
+  const lastBk=HIST[0]?HIST[0].bar+' · '+HIST[0].date.split(' · ')[0]:'Chưa có';
+  if(!next){P.innerHTML=`<h3>Hạng cao nhất: Black</h3><div class="kv"><span>Chi tiêu năm nay</span><b class="num">${fmt(USER.spend)}đ</b></div><div class="progress"><i style="width:100%"></i></div><div class="kv" style="margin-top:8px"><span>Ưu đãi hiện tại</span><b style="color:var(--gold2)">${TIER_PERK[USER.tier]}</b></div><div class="kv"><span>Lần đặt gần nhất</span><b>${lastBk}</b></div><button type="button" class="acct-out" data-logout>Đăng xuất</button>`;return}
+  const goal=TIERS[next].min,pct=Math.min(100,Math.round(USER.spend/goal*100)),left=Math.max(0,goal-USER.spend);
+  P.innerHTML=`<h3>Tiến độ lên hạng ${next}</h3><div class="kv"><span>Chi tiêu năm nay</span><b class="num">${fmt(USER.spend)} / ${fmt(goal)}đ</b></div><div class="progress"><i style="width:${Math.max(2,pct)}%"></i></div><p class="muted" style="font-size:13px;margin-top:10px">Cần thêm <b class="num" style="color:var(--gold2)">${fmt(left)}đ</b> chi tiêu qua TopChill để lên ${next}.</p><div class="kv" style="margin-top:8px"><span>Ưu đãi hiện tại</span><b style="color:var(--gold2)">${TIER_PERK[USER.tier]}</b></div><div class="kv"><span>Số điện thoại</span><b class="num">${USER.phone}</b></div><div class="kv"><span>Lần đặt gần nhất</span><b>${lastBk}</b></div><button type="button" class="acct-out" data-logout>Đăng xuất</button>`;
+}
+function applyUser(){
+  document.getElementById('pillAv').textContent=initials(USER.name);
+  document.getElementById('pillName').textContent=USER.name;
+  document.getElementById('pillSmall').innerHTML=USER.guest?'Đăng nhập':`<span class="tier-l">${USER.tier} · </span><span class="num" id="pillPts">${fmt(USER.points)}</span> điểm`;
+  document.getElementById('userPill').setAttribute('aria-label',USER.guest?'Khách #'+GUEST_NO+', bấm để đăng nhập hoặc đăng ký':'Tài khoản '+USER.name+', hạng '+USER.tier);
+  const mc=document.querySelector('.mcard');mc.className='mcard'+(USER.guest?' guest':' t-'+USER.tier);
+  document.getElementById('mName').textContent=USER.name;
+  document.getElementById('mSub').textContent=USER.guest?'Đặt bàn không cần tài khoản':'Thành viên từ '+USER.since+' · ID '+USER.id;
+  const mt=document.getElementById('mTier');mt.textContent=USER.guest?'GUEST':USER.tier.toUpperCase();mt.classList.toggle('long',mt.textContent.length>4);
+  document.querySelectorAll('.tiers2 .tc').forEach(t=>{t.classList.toggle('me',t.dataset.tier===USER.tier);const old=t.querySelector('.tc-me');if(old)old.remove();if(t.dataset.tier===USER.tier)t.insertAdjacentHTML('afterbegin','<span class="tc-me">'+(USER.guest?'Bạn: Khách #'+GUEST_NO:'Hạng của bạn')+'</span>')});
+  renderTierPanel();syncPts();renderHist();renderPtsHist();
+}
+let authMode='login';
+function setAuthMode(m){authMode=m;document.querySelectorAll('.auth-tabs button').forEach(b=>b.classList.toggle('on',b.dataset.at===m));document.getElementById('fLogin').hidden=m!=='login';document.getElementById('fReg').hidden=m!=='register';document.getElementById('authTitle').textContent=m==='login'?'Đăng nhập':'Đăng ký';document.getElementById('authMsg').textContent='';document.getElementById('authGuest').textContent='Tiếp tục với tư cách Khách #'+GUEST_NO}
+function openAuth(m){setAuthMode(m||'login');const am=document.getElementById('authModal');am.hidden=false;document.body.style.overflow='hidden';setTimeout(()=>{const f=document.querySelector(m==='register'?'#rName':'#lPhone');if(f&&matchMedia('(min-width:721px)').matches)f.focus()},80)}
+function closeAuth(){document.getElementById('authModal').hidden=true;if(document.getElementById('modal').hidden)document.body.style.overflow=''}
+function authMsg(t,ok){const m=document.getElementById('authMsg');m.textContent=t;m.className='auth-msg '+(ok?'ok':'err')}
+function signIn(ph,welcome){LS.set('topchill-session',ph);loadUser();applyUser();closeAuth();toast(welcome);if(cur&&!document.getElementById('modal').hidden&&!document.querySelector('#bookBox .success'))renderBook()}
+document.getElementById('userPill').onclick=()=>{if(USER.guest)openAuth('login');else location.hash='#thanh-vien'};
+document.querySelector('.auth-tabs').onclick=e=>{const b=e.target.closest('[data-at]');if(b)setAuthMode(b.dataset.at)};
+document.getElementById('authClose').onclick=closeAuth;
+document.getElementById('authGuest').onclick=closeAuth;
+document.getElementById('authModal').addEventListener('click',e=>{if(e.target.id==='authModal')closeAuth()});
+document.getElementById('demoLogin').onclick=()=>{if(!accts()[DEMO_PHONE])demoAcct();signIn(DEMO_PHONE,'Đã đăng nhập tài khoản mẫu Tuấn Anh, hạng Gold.')};
+document.getElementById('fLogin').onsubmit=async e=>{e.preventDefault();const ph=document.getElementById('lPhone').value.replace(/\D/g,''),pw=document.getElementById('lPass').value;
+  if(!/^0\d{9}$/.test(ph))return authMsg('Số điện thoại cần đủ 10 số, bắt đầu bằng 0.');
+  const a=accts()[ph];if(!a||ph===DEMO_PHONE&&!a.pw)return authMsg('Số này chưa đăng ký. Chuyển sang tab Đăng ký để tạo tài khoản.');
+  if(a.pw!==await hashPw(pw))return authMsg('Mật khẩu chưa đúng. Thử lại nhé.');
+  signIn(ph,'Chào '+a.name+', bạn đang ở hạng '+a.tier+'.')};
+document.getElementById('fReg').onsubmit=async e=>{e.preventDefault();const name=document.getElementById('rName').value.trim(),ph=document.getElementById('rPhone').value.replace(/\D/g,''),pw=document.getElementById('rPass').value;
+  if(name.length<2)return authMsg('Nhập tên hiển thị, ít nhất 2 ký tự.');
+  if(!/^0\d{9}$/.test(ph))return authMsg('Số điện thoại cần đủ 10 số, bắt đầu bằng 0.');
+  if(pw.length<6)return authMsg('Mật khẩu cần ít nhất 6 ký tự.');
+  const A=accts();if(A[ph])return authMsg('Số này đã có tài khoản. Chuyển sang tab Đăng nhập.');
+  const d=new Date();A[ph]={name,tier:'Newbie',points:100,spend:0,id:'TC-'+String(Math.floor(100000+Math.random()*900000)),since:String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear(),pw:await hashPw(pw),hist:[],pts:[['Quà đăng ký thành viên',String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0'),100]]};
+  LS.set('topchill-accounts',A);signIn(ph,'Đăng ký thành công. Tặng bạn 100 điểm và giảm 5% mọi bill.')};
+document.addEventListener('click',e=>{const a=e.target.closest('[data-auth]');if(a){e.preventDefault();openAuth(a.dataset.auth);return}
+  if(e.target.closest('[data-logout]')){LS.del('topchill-session');loadUser();applyUser();toast('Đã đăng xuất. Bạn đang là Khách #'+GUEST_NO+'.')}});
 
 /* ---------- ROUTER + TOAST ---------- */
 const ROUTES={'home':'home','kham-pha':'bars','thanh-vien':'member','hoi-nhom':'community','chu-bar':'partner'};
@@ -1627,6 +1759,7 @@ function route(){
   const h=location.hash.replace('#','')||'home';
   let m=h.match(/^dat-(\d+)$/);if(m&&BARS.some(b=>b.id===+m[1])){showView('home');openBar(+m[1]);return}
   m=h.match(/^tp-([a-z]+)$/);if(m&&CITIES.some(c=>c.id===m[1])){F.city=m[1];showView('bars');renderBars();return}
+  if(!document.getElementById('modal').hidden)closeM();
   showView(ROUTES[h]||'home');
 }
 function updHdr(){const h=document.getElementById('v-home');document.documentElement.classList.toggle('on-hero',!!h&&!h.hidden&&scrollY<30)}
@@ -1708,5 +1841,5 @@ document.getElementById('fType').onchange=e=>{F.type=e.target.value;renderBars()
 document.getElementById('fSort').onchange=e=>{F.sort=e.target.value;renderBars()};
 document.getElementById('fQ').oninput=e=>{F.q=e.target.value;renderBars()};
 window.addEventListener('hashchange',route);
-initHome();renderHist();renderPtsHist();syncPts();renderGroups();renderChat();renderReviews();route();
+loadUser();initHome();applyUser();renderGroups();renderChat();renderReviews();route();
 </script>
