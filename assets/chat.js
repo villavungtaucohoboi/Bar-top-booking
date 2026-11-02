@@ -28,14 +28,33 @@
     '<div class="tcc-q"></div>' +
     '<form class="tcc-f"><input type="text" placeholder="Nhắn cho tổng đài…" aria-label="Tin nhắn" autocomplete="off" enterkeyhint="send"><button type="submit" aria-label="Gửi">➤</button></form>' +
     (C.demo ? '<div class="tcc-note">Bản demo: trả lời tự động, nhân viên là mô phỏng.</div>' : '');
-  /* cụm nút gọi / Zalo / Telegram phía trên nút chat */
+  /* Nút Tư vấn: bấm vào bung ngang 4 lựa chọn Gọi · Zalo · Telegram · Chat */
   var tel = C.hotline.replace(/\s/g, '');
-  var qk = document.createElement('div'); qk.className = 'tcq'; qk.setAttribute('aria-label', 'Liên hệ đặt bàn');
-  qk.innerHTML = '<a class="q-call" href="tel:' + tel + '" aria-label="Gọi đặt bàn ' + esc(C.hotline) + '"><span class="ic">📞</span><span class="lb">Gọi đặt bàn<small>' + esc(C.hotline) + '</small></span></a>' +
-    (C.zalo ? '<a class="q-zalo" href="https://zalo.me/' + esc(C.zalo) + '" target="_blank" rel="noopener" aria-label="Nhắn Zalo ' + esc(C.hotline) + '"><span class="ic">Zalo</span><span class="lb">Nhắn Zalo</span></a>' : '') +
-    (C.telegram ? '<a class="q-tg" href="https://t.me/' + esc(C.telegram) + '" target="_blank" rel="noopener" aria-label="Nhắn Telegram ' + esc(C.hotline) + '"><span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="#fff" d="M21.4 4.6 2.9 11.7c-1.3.5-1.2 1.3-.2 1.6l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.9-1.5-1.4Zm-3.3 3.6-8.6 7.8-.3 3.3-1.5-4.8 9.8-6.1c.5-.3.9 0 .6-.2Z"/></svg></span><span class="lb">Nhắn Telegram</span></a>' : '');
-  document.body.appendChild(qk);
-  document.body.appendChild(fab); document.body.appendChild(box);
+  var wrap = document.createElement('div'); wrap.className = 'tcw';
+  var menu = document.createElement('div'); menu.className = 'tcq'; menu.id = 'tcqMenu'; menu.setAttribute('role', 'menu'); menu.setAttribute('aria-label', 'Chọn cách liên hệ');
+  var items = [
+    '<a role="menuitem" class="q-call" href="tel:' + tel + '"><span class="ic">📞</span><span class="lb">Gọi ngay</span></a>',
+    C.zalo ? '<a role="menuitem" class="q-zalo" href="https://zalo.me/' + esc(C.zalo) + '" target="_blank" rel="noopener"><span class="ic">Zalo</span><span class="lb">Zalo</span></a>' : '',
+    C.telegram ? '<a role="menuitem" class="q-tg" href="https://t.me/' + esc(C.telegram) + '" target="_blank" rel="noopener"><span class="ic"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path fill=\"#fff\" d=\"M21.4 4.6 2.9 11.7c-1.3.5-1.2 1.3-.2 1.6l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.9-1.5-1.4Zm-3.3 3.6-8.6 7.8-.3 3.3-1.5-4.8 9.8-6.1c.5-.3.9 0 .6-.2Z\"/></svg></span><span class="lb">Telegram</span></a>' : '',
+    '<button role="menuitem" type="button" class="q-chat"><span class="ic">💬</span><span class="lb">Chat</span></button>'
+  ].filter(Boolean);
+  menu.innerHTML = items.map(function (h, i) { return h.replace('class="q-', 'style="--i:' + i + '" class="q-'); }).join('');
+  fab.setAttribute('aria-label', 'Tư vấn đặt bàn: gọi, Zalo, Telegram hoặc chat'); fab.setAttribute('aria-haspopup', 'menu'); fab.setAttribute('aria-expanded', 'false'); fab.setAttribute('aria-controls', 'tcqMenu');
+  fab.querySelector('.lb').textContent = 'Tư vấn';
+  fab.querySelector('.av').innerHTML = '<span class="i1">🎧</span><span class="i2">✕</span>';
+  wrap.appendChild(fab); wrap.appendChild(menu);
+  function menuOpen(v) {
+    wrap.classList.toggle('open', v); fab.setAttribute('aria-expanded', v ? 'true' : 'false');
+    if (v) { st.seen = true; fab.querySelector('.badge').hidden = true; save(); }
+  }
+  menu.addEventListener('click', function (e) {
+    if (e.target.closest('.q-chat')) { menuOpen(false); open(); return; }
+    if (e.target.closest('a')) setTimeout(function () { menuOpen(false); }, 300);
+  });
+  document.addEventListener('click', function (e) { if (wrap.classList.contains('open') && !wrap.contains(e.target)) menuOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && wrap.classList.contains('open')) { menuOpen(false); fab.focus(); } });
+  document.body.appendChild(wrap); document.body.appendChild(box);
+
   var M = box.querySelector('.tcc-m'), Q = box.querySelector('.tcc-q'), IN = box.querySelector('input');
 
   function barCard(b) {
@@ -204,7 +223,7 @@
     if (matchMedia('(min-width:721px)').matches) setTimeout(function () { IN.focus(); }, 300);
   }
   function close() { box.hidden = true; document.body.classList.remove('tcc-open'); }
-  fab.addEventListener('click', open);
+  fab.addEventListener('click', function () { menuOpen(!wrap.classList.contains('open')); });
   box.querySelector('.tcc-x').addEventListener('click', close);
   box.querySelector('form').addEventListener('submit', function (e) { e.preventDefault(); send(IN.value); IN.value = ''; IN.removeAttribute('inputmode'); });
   Q.addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) send(b.textContent); });

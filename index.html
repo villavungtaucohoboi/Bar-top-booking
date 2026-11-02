@@ -907,6 +907,49 @@ html.on-hero{background:#0b0710}
 
 .nw-sign.nw-logo{font-family:inherit;font-size:inherit;line-height:1;margin:18px 0 .35em;color:inherit;text-shadow:none;display:inline-block}
 @media (max-width:720px){.nw-sign.nw-logo{margin:10px 0 .3em}}
+
+/* ===== Hiệu ứng trong các tab ===== */
+.rv{animation:rvUp .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0) * 70ms)}
+@keyframes rvUp{from{opacity:0;transform:translateY(24px) scale(.97)}}
+.rv-l{animation:rvLeft .5s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0) * 60ms)}
+@keyframes rvLeft{from{opacity:0;transform:translateX(-22px)}}
+.card{position:relative}
+.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.12) 50%,transparent 65%);transform:translateX(-120%);transition:transform .8s ease}
+.card:hover::after{transform:translateX(120%)}
+.card .art .ph{transition:transform .6s ease}
+.card:hover .art .ph{transform:scale(1.06)}
+.chip.on{animation:chipPop .35s cubic-bezier(.34,1.56,.64,1)}
+@keyframes chipPop{from{transform:scale(.88)}}
+/* Hội nhóm */
+.msg.pop{animation:msgPop .4s cubic-bezier(.34,1.56,.64,1) both;animation-delay:calc(var(--i,0) * 55ms);transform-origin:0 100%}
+.msg.me.pop{transform-origin:100% 100%}
+@keyframes msgPop{from{opacity:0;transform:scale(.6) translateY(10px)}}
+.group{transition:transform .2s,background .2s}
+.group:hover{transform:translateX(4px)}
+.group.on .gi{animation:giPulse 2s ease-in-out infinite}
+@keyframes giPulse{50%{box-shadow:0 0 0 6px rgba(255,63,142,.15)}}
+/* Ví điểm */
+.mcard{isolation:isolate}
+.mcard::after{content:"";position:absolute;inset:-20%;background:linear-gradient(115deg,transparent 40%,rgba(255,240,200,.28) 50%,transparent 60%);transform:translateX(-80%);animation:cardShine 4.5s ease-in-out infinite;pointer-events:none}
+@keyframes cardShine{0%,55%{transform:translateX(-80%)}100%{transform:translateX(80%)}}
+.mcard .tierbig{animation:tierGlow 3s ease-in-out infinite}
+@keyframes tierGlow{50%{filter:drop-shadow(0 0 14px rgba(240,181,69,.8))}}
+.progress.rv i{animation:fillW 1.6s .3s cubic-bezier(.2,.8,.2,1) both}
+@keyframes fillW{from{width:0}}
+.wallet-acts button{transition:transform .2s,border-color .2s,background .2s}
+.wallet-acts button:hover{transform:translateY(-3px)}
+/* Chủ bar */
+.spark.rv path[fill="none"]{stroke-dasharray:420;stroke-dashoffset:420;animation:drawSp 1.8s .3s ease-out forwards}
+.spark.rv path[fill^="url"]{animation:fadeIn 1s 1.2s both}
+.spark.rv circle{animation:fadeIn .4s 2s both}
+@keyframes drawSp{to{stroke-dashoffset:0}}
+@keyframes fadeIn{from{opacity:0}}
+.plan{transition:transform .25s,box-shadow .25s}
+.plan:hover{transform:translateY(-6px)}
+.plan.best{animation:bestGlow 2.6s ease-in-out infinite}
+@keyframes bestGlow{50%{box-shadow:0 0 0 1px rgba(240,181,69,.6),0 20px 60px rgba(255,63,142,.28)}}
+.tile{transition:transform .2s}
+.tile:hover{transform:translateY(-3px)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.nw-glass path,.nw-glass circle{stroke-dashoffset:0}}
 </style>
 </head>
@@ -1082,7 +1125,7 @@ html.on-hero{background:#0b0710}
     <div class="wallet">
       <div class="panel">
         <div class="eyebrow">Ví điểm</div>
-        <div class="wallet-big" style="margin-top:8px"><b class="num" id="walletPts">2.350</b><span>điểm ≈ <b class="num" id="walletMoney" style="font-family:var(--font-body);font-size:15px;color:var(--fg)">1.175.000đ</b></span></div>
+        <div class="wallet-big" style="margin-top:8px"><b class="num" id="walletPts" data-count>2.350</b><span>điểm ≈ <b class="num" id="walletMoney" style="font-family:var(--font-body);font-size:15px;color:var(--fg)">1.175.000đ</b></span></div>
         <p class="muted" style="font-size:13px;margin-top:6px">1 điểm = 500đ. Tích 1 điểm cho mỗi 10.000đ chi qua TopChill.</p>
         <div class="wallet-acts">
           <button type="button" id="actCash"><b>💸 Đổi sang tiền</b><small>Về Momo, ZaloPay hoặc ngân hàng trong 24h</small></button>
@@ -1158,9 +1201,9 @@ html.on-hero{background:#0b0710}
     <div class="dash">
       <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><div><div class="eyebrow">Bảng điều khiển chủ bar</div><b style="font-family:var(--font-display);font-size:22px;text-transform:uppercase">Mộc Sky Bar</b></div><span class="badge top">Top 1 Hà Nội</span></div>
       <div class="dash-grid">
-        <div class="tile"><small>Lượt xem 7 ngày</small><b class="num">18.420</b><span class="up">▲ 212% khi lên top</span></div>
-        <div class="tile"><small>Bàn đã đặt</small><b class="num">342</b><span class="up">▲ 3,4 lần</span></div>
-        <div class="tile"><small>Bàn giờ vàng lấp đầy</small><b class="num">86%</b><span class="up">▲ từ 31%</span></div>
+        <div class="tile"><small>Lượt xem 7 ngày</small><b class="num" data-count>18.420</b><span class="up">▲ 212% khi lên top</span></div>
+        <div class="tile"><small>Bàn đã đặt</small><b class="num" data-count>342</b><span class="up">▲ 3,4 lần</span></div>
+        <div class="tile"><small>Bàn giờ vàng lấp đầy</small><b class="num" data-count>86%</b><span class="up">▲ từ 31%</span></div>
       </div>
       <div class="spark"><svg viewBox="0 0 300 70" preserveAspectRatio="none" aria-label="Lượt đặt bàn 14 ngày gần nhất">
         <defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0b545" stop-opacity=".5"/><stop offset="1" stop-color="#f0b545" stop-opacity="0"/></linearGradient></defs>
@@ -1416,6 +1459,7 @@ function renderBars(){
   document.getElementById('barsTitle').textContent=F.city?`Bar ${cityName(F.city)}`:'Tất cả bar';
   document.getElementById('barsCount').textContent=`${list.length} bar${F.city?' · '+(CITIES.find(c=>c.id===F.city).n)+' bar đối tác tại '+cityName(F.city):''}`;
   mountCards(document.getElementById('barsGrid'),list);
+  if(!document.getElementById('v-bars').hidden)animateView('bars');
 }
 function buildCrowd(){
   const svg=document.getElementById('crowd');if(!svg)return;let h='',x=10,i=0;
@@ -1596,13 +1640,14 @@ function renderGroups(){
   document.getElementById('groups').innerHTML=GROUPS.map(g=>`<button class="group ${g.id===curG?'on':''}" data-g="${g.id}"><span class="gi" style="background:hsl(${g.hue} 70% 22%);color:hsl(${g.hue} 90% 75%)">${g.ico}</span><span><b>${g.name}</b><small>${g.members} thành viên</small></span></button>`).join('');
   document.getElementById('groups').onclick=e=>{const b=e.target.closest('.group');if(b){curG=b.dataset.g;renderGroups();renderChat()}};
 }
-function renderChat(){
+function renderChat(mode){
   const g=GROUPS.find(x=>x.id===curG);document.getElementById('chatTitle').textContent=g.name;document.getElementById('chatOnline').textContent=g.online+' online';
   const ic=document.getElementById('chatIcon');ic.style.background=`hsl(${g.hue} 70% 22%)`;ic.style.color=`hsl(${g.hue} 90% 75%)`;ic.textContent=g.ico;
   const el=document.getElementById('msgs');el.innerHTML=MSGS[curG].map(m=>`<div class="msg ${m[0]===USER.name?'me':''}"><span class="avatar">${m[0].split(' ').map(w=>w[0]).join('')}</span><div class="b"><small>${m[0]} <b>· ${m[1]}</b> · ${m[3]}</small>${m[2]}</div></div>`).join('');el.scrollTop=el.scrollHeight;
+  const ms=[...el.querySelectorAll('.msg')];(mode==='last'?ms.slice(-1):ms).forEach((m,i)=>{m.style.setProperty('--i',mode==='last'?0:i);m.classList.add('pop')});
 }
-document.getElementById('chatForm').onsubmit=e=>{e.preventDefault();const i=document.getElementById('chatInput');if(!i.value.trim())return;const t=new Date();MSGS[curG].push([USER.name,USER.tier,i.value.trim(),`${t.getHours()}:${pad(t.getMinutes())}`]);i.value='';renderChat();
-  setTimeout(()=>{const r=REVIEWERS[Math.floor(Math.random()*REVIEWERS.length)];MSGS[curG].push([r[0],r[1],['Đi đi, tối nay mình cũng đi!','Đặt giờ vàng đi, giảm thêm 15% nữa.','Nhóm mình 6 người, ghép bàn không?','Bàn VIP còn slot không bạn?'][Math.floor(Math.random()*4)],'vừa xong']);renderChat()},1500)};
+document.getElementById('chatForm').onsubmit=e=>{e.preventDefault();const i=document.getElementById('chatInput');if(!i.value.trim())return;const t=new Date();MSGS[curG].push([USER.name,USER.tier,i.value.trim(),`${t.getHours()}:${pad(t.getMinutes())}`]);i.value='';renderChat('last');
+  setTimeout(()=>{const r=REVIEWERS[Math.floor(Math.random()*REVIEWERS.length)];MSGS[curG].push([r[0],r[1],['Đi đi, tối nay mình cũng đi!','Đặt giờ vàng đi, giảm thêm 15% nữa.','Nhóm mình 6 người, ghép bàn không?','Bàn VIP còn slot không bạn?'][Math.floor(Math.random()*4)],'vừa xong']);renderChat('last')},1500)};
 document.getElementById('btnNewGroup').onclick=()=>toast('Tính năng tạo hội sẽ mở cho hạng Gold trở lên.');
 function renderReviews(){
   document.getElementById('reviewsFeed').innerHTML=[5,9,13,2,8].map((id,i)=>{const b=BARS.find(x=>x.id===id),r=REVIEWERS[(i*2+1)%REVIEWERS.length];return `<div class="rv"><div class="bar">${b.name} <span class="muted" style="font-weight:500">· ${cityName(b.city)}</span></div><div class="stars">${'★'.repeat(5-(i%3?0:1))}${i%3?'':'☆'}</div><p>${REVIEW_TEXT[(i+2)%REVIEW_TEXT.length]}</p><div class="by">${r[0]} · hạng ${r[1]} · ${i+1} giờ trước</div></div>`}).join('');
@@ -1622,12 +1667,34 @@ function route(){
 }
 function updHdr(){const h=document.getElementById('v-home');document.documentElement.classList.toggle('on-hero',!!h&&!h.hidden&&scrollY<30)}
 addEventListener('scroll',updHdr,{passive:true});
+const ANIM={
+  bars:['#barsGrid .card','.filters .field'],
+  member:['.mcard','.member-hero .panel','.progress','.wallet .panel','.panel.tbl-wrap','.hist-item'],
+  community:['.group','.chat','.rv-feed .rv-i','.reviews-feed .rv'],
+  partner:['.partner-hero > div','.dash .tile','.spark','.plan','.reg .field','.reg .btn']
+};
+let animIO=null;
+function countUp(el){
+  if(el.dataset.cu)return;const m=el.textContent.trim().match(/^([^\d]*)([\d.]+)(\D*)$/);if(!m)return;
+  const to=+m[2].replace(/\./g,'');if(!to)return;el.dataset.cu=1;const t0=performance.now(),D=1200;
+  (function f(t){const k=Math.min(1,(t-t0)/D),e=1-Math.pow(1-k,3);el.textContent=m[1]+fmt(Math.round(to*e))+m[3];if(k<1)requestAnimationFrame(f)})(t0);
+}
+function animateView(v){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const root=document.getElementById('v-'+v);if(!root||!ANIM[v])return;
+  if(!('IntersectionObserver' in window))return;
+  if(!animIO)animIO=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;animIO.unobserve(el);
+    el.classList.remove('rv','rv-l');void el.offsetWidth;el.classList.add(el.classList.contains('hist-item')||el.classList.contains('group')?'rv-l':'rv');
+    el.querySelectorAll('[data-count]').forEach(countUp);if(el.dataset.count!==undefined)countUp(el)}),{threshold:.12});
+  ANIM[v].forEach(sel=>root.querySelectorAll(sel).forEach((el,i)=>{el.style.setProperty('--i',Math.min(i,8));animIO.observe(el)}));
+}
 function showView(v){
   document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!=='v-'+v);
   document.querySelectorAll('[data-v]').forEach(a=>a.classList.toggle('on',a.dataset.v===v));
   if(v==='bars')renderBars();
   window.scrollTo({top:0,behavior:'instant'});
   updHdr();
+  requestAnimationFrame(()=>animateView(v));
 }
 let tt;function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),3200)}
 document.getElementById('fType').onchange=e=>{F.type=e.target.value;renderBars()};
@@ -1637,10 +1704,10 @@ window.addEventListener('hashchange',route);
 initHome();renderHist();renderPtsHist();syncPts();renderGroups();renderChat();renderReviews();route();
 </script>
 
-<link rel="stylesheet" href="/assets/chat.css?v=mvz4nn9t">
-<script src="/assets/chat-data.js?v=mvz4nn9t" defer></script>
-<script src="/assets/chat.js?v=mvz4nn9t" defer></script>
-<script src="/assets/music.js?v=mvz4nn9t" defer></script>
-<script src="/assets/install.js?v=mvz4nn9t" defer></script>
+<link rel="stylesheet" href="/assets/chat.css?v=mvz4tmal">
+<script src="/assets/chat-data.js?v=mvz4tmal" defer></script>
+<script src="/assets/chat.js?v=mvz4tmal" defer></script>
+<script src="/assets/music.js?v=mvz4tmal" defer></script>
+<script src="/assets/install.js?v=mvz4tmal" defer></script>
 </body>
 </html>
