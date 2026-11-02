@@ -206,7 +206,7 @@ ${ld.filter(Boolean).map(x => `<script type="application/ld+json">${JSON.stringi
 ${HEAD_SCRIPT}`;
 }
 const STAMP = Date.now().toString(36);
-const CHAT_TAGS = () => `<link rel="stylesheet" href="${href('assets/chat.css')}?v=${STAMP}">\n<script src="${href('assets/chat-data.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/chat.js')}?v=${STAMP}" defer></script>`;
+const CHAT_TAGS = () => `<link rel="stylesheet" href="${href('assets/chat.css')}?v=${STAMP}">\n<script src="${href('assets/chat-data.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/chat.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/music.js')}?v=${STAMP}" defer></script>`;
 const NAV = [['bar-ha-noi/', 'Bar Hà Nội'], ['bar-sai-gon/', 'Bar Sài Gòn'], ['bar-da-nang/', 'Bar Đà Nẵng'], ['blog/', 'Cẩm nang']];
 function header(active) {
   const links = NAV.map(([p, t]) => `<a href="${href(p)}"${active === p ? ' aria-current="page"' : ''}>${t}</a>`).join('');
@@ -566,6 +566,7 @@ fs.mkdirSync(path.join(ROOT, 'assets'), { recursive: true });
 fs.copyFileSync(path.join(ROOT, 'src/site.css'), path.join(ROOT, 'assets/site.css'));
 fs.copyFileSync(path.join(ROOT, 'src/chat.css'), path.join(ROOT, 'assets/chat.css'));
 fs.copyFileSync(path.join(ROOT, 'src/chat.js'), path.join(ROOT, 'assets/chat.js'));
+fs.copyFileSync(path.join(ROOT, 'src/music.js'), path.join(ROOT, 'assets/music.js'));
 {
   const order = ranked(BARS);
   const data = { base: BASE, hotline: CFG.hotline, demo: !!CFG.chatDemo && !(CFG.tawkPropertyId && CFG.tawkWidgetId), zalo: CFG.zalo || '', messenger: CFG.messenger || '',
