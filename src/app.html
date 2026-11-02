@@ -832,6 +832,27 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
   .mq-acts button,.mq-acts a{background:linear-gradient(160deg,#ff6fb5,#ff3f8e);color:#fff;box-shadow:0 0 16px rgba(255,79,163,.45)}
   .mq-cities button{border-color:rgba(255,79,163,.45);background:rgba(255,79,163,.1)}
 }
+
+/* ===== Header trong suốt trên bìa, mờ kính khi cuộn ===== */
+:root{--hdr-h:67px}
+@media (max-width:720px){:root{--hdr-h:61px}}
+.hdr{transition:background .35s,border-color .35s,backdrop-filter .35s}
+.view.home .hero2{margin-top:calc(-1 * var(--hdr-h));padding-top:var(--hdr-h)}
+html.on-hero .hdr{background:transparent;border-bottom-color:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
+html.on-hero .hdr .logo{color:#fff;text-shadow:0 0 14px rgba(255,79,163,.65)}
+html.on-hero .hdr .nav a{color:rgba(255,255,255,.85)}
+html.on-hero .hdr .nav a.on,html.on-hero .hdr .nav a:hover{color:#fff;background:rgba(255,255,255,.12)}
+html.on-hero .user-pill,html.on-hero .theme-sw{background:rgba(10,6,16,.32);border-color:rgba(255,255,255,.2);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+html.on-hero .user-pill b{color:#fff}
+html.on-hero .theme-sw button{color:rgba(255,255,255,.75)}
+html.on-hero .theme-sw button.on{background:rgba(255,255,255,.16);color:#fff}
+html.on-hero body::before{background:#0b0710}
+.disco{top:var(--hdr-h)}
+@media (max-width:720px){
+  .nw-glass{display:none}
+  .nw-side{gap:14px}
+  .disco{right:5%}
+}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.nw-glass path,.nw-glass circle{stroke-dashoffset:0}}
 </style>
 
@@ -1534,11 +1555,14 @@ function route(){
   m=h.match(/^tp-([a-z]+)$/);if(m&&CITIES.some(c=>c.id===m[1])){F.city=m[1];showView('bars');renderBars();return}
   showView(ROUTES[h]||'home');
 }
+function updHdr(){const h=document.getElementById('v-home');document.documentElement.classList.toggle('on-hero',!!h&&!h.hidden&&scrollY<30)}
+addEventListener('scroll',updHdr,{passive:true});
 function showView(v){
   document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!=='v-'+v);
   document.querySelectorAll('[data-v]').forEach(a=>a.classList.toggle('on',a.dataset.v===v));
   if(v==='bars')renderBars();
   window.scrollTo({top:0,behavior:'instant'});
+  updHdr();
 }
 let tt;function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),3200)}
 document.getElementById('fType').onchange=e=>{F.type=e.target.value;renderBars()};
