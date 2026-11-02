@@ -4,7 +4,7 @@
   --bg:#0a0912;--bg2:#110e1c;--surface:#181424;--surface2:#221c33;--surface3:#2c2543;
   --fg:#f6f1fb;--muted:#a79fbd;--dim:#6f6886;--line:rgba(255,255,255,.085);--line2:rgba(255,255,255,.16);
   --gold:#f0b545;--gold2:#ffd98a;--neon:#ff3f8e;--ok:#4ade80;--link:#ffd98a;
-  --gold-solid:#f0b545;--gold-ink:#1a1206;--btn-grad:linear-gradient(135deg,#ffd98a,#f0b545 60%,#d8921f);
+  --gold-solid:#f0b545;--gold-ink:#1a1206;--btn-grad:linear-gradient(135deg,#ff6fb5,#ff3f8e 55%,#d42a7a);--btn-ink:#fff;--btn-glow:rgba(255,63,142,.4);
   --hdr-bg:rgba(10,9,18,.82);--shadow:0 18px 50px rgba(0,0,0,.4);
   --font-display:'Oswald','Arial Narrow',Impact,sans-serif;
   --font-body:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
@@ -13,7 +13,7 @@
   color-scheme:light;--bg:#f6f1ea;--bg2:#fbf8f3;--surface:#fff;--surface2:#f1e9dd;--surface3:#e6dccb;
   --fg:#1d1526;--muted:#5f566f;--dim:#8f879d;--line:rgba(30,20,40,.09);--line2:rgba(30,20,40,.18);
   --gold:#a86c0c;--gold2:#8a5a0a;--neon:#d81b6c;--ok:#15803d;--link:#8a4f00;--hdr-bg:rgba(246,241,234,.88);--shadow:0 14px 36px rgba(60,40,20,.12)}
-:root[data-theme="brown"]{
+:root[data-theme="brown"]{--btn-grad:linear-gradient(135deg,#ffd98a,#f0b545 60%,#d8921f);--btn-ink:#1a1206;--btn-glow:rgba(240,181,69,.28);
   color-scheme:dark;--bg:#1b120c;--bg2:#231810;--surface:#2b1d13;--surface2:#372618;--surface3:#46311f;
   --fg:#f9efe1;--muted:#c7ad8f;--dim:#8d785f;--line:rgba(255,235,210,.09);--line2:rgba(255,235,210,.18);
   --gold:#e9b85c;--gold2:#ffd98a;--neon:#ff7a3d;--ok:#6ad08a;--link:#ffd98a;--hdr-bg:rgba(27,18,12,.86);--shadow:0 18px 50px rgba(0,0,0,.5)}
@@ -40,7 +40,7 @@ p{margin:0}
 .hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--hdr-bg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .hdr-in{display:flex;align-items:center;gap:20px;height:62px}
 .logo{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-size:22px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
-.logo-mark{width:32px;height:32px;border-radius:9px;background:var(--btn-grad);color:var(--gold-ink);display:grid;place-items:center;font-size:20px}
+.logo-mark{width:32px;height:32px;border-radius:9px;background:var(--btn-grad);color:var(--btn-ink);display:grid;place-items:center;font-size:20px}
 .logo-vn{color:var(--neon);font-size:14px;align-self:flex-end;margin-bottom:2px}
 .nav{display:flex;gap:2px;margin-left:8px}
 .nav a{padding:8px 13px;border-radius:999px;color:var(--muted);font-weight:500;font-size:15px;text-decoration:none;white-space:nowrap}
@@ -50,7 +50,7 @@ p{margin:0}
 
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 20px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;border:0;cursor:pointer;white-space:nowrap;font-family:inherit}
-.btn-gold{background:var(--btn-grad);color:var(--gold-ink);box-shadow:0 8px 26px rgba(240,181,69,.28)}
+.btn-gold{background:var(--btn-grad);color:var(--btn-ink);box-shadow:0 8px 26px var(--btn-glow)}
 .btn-ghost{border:1px solid var(--line2);color:var(--fg);background:transparent}
 .btn-lg{min-height:54px;font-size:17px;padding-inline:26px}
 
