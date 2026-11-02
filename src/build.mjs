@@ -559,7 +559,7 @@ function misc(pages) {
 
 /* ---------- 13. Chạy ---------- */
 // dọn đầu ra cũ (chỉ các thư mục do build quản lý)
-for (const d of ['bar', 'blog', 'viet-bai', 'huy-hieu', 'assets', ...CITIES.map(c => c.slug)]) fs.rmSync(path.join(ROOT, d), { recursive: true, force: true });
+for (const d of ['bar', 'blog', 'viet-bai', 'huy-hieu', 'assets', 'mau-bia', ...CITIES.map(c => c.slug)]) fs.rmSync(path.join(ROOT, d), { recursive: true, force: true });
 for (const f of fs.readdirSync(path.join(ROOT, 'public'))) { fs.copyFileSync(path.join(ROOT, 'public', f), path.join(ROOT, f)); GENERATED.push(f); }
 fs.mkdirSync(path.join(ROOT, 'assets'), { recursive: true });
 fs.copyFileSync(path.join(ROOT, 'src/site.css'), path.join(ROOT, 'assets/site.css'));
@@ -582,5 +582,10 @@ blogIndex(); pages.push({ path: 'blog/', priority: '0.8' });
 POSTS.forEach((p, i) => { postPage(p, i); pages.push({ path: p.path, lastmod: p.updated, priority: '0.8' }); });
 badgePage(); pages.push({ path: 'huy-hieu/', priority: '0.3' });
 editorPage();
+{ // trang so sánh mẫu bìa (nội bộ, noindex)
+  const src = fs.readFileSync(path.join(ROOT, 'src/mau-bia.html'), 'utf8').replace('<meta name="claude:viewport-fit-sides" content="cover">\n', '');
+  const i = src.indexOf('</style>') + 8;
+  write('mau-bia/index.html', '<!doctype html>\n<html lang="vi">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n<link rel="icon" href="' + href('icon.svg') + '" type="image/svg+xml">\n' + src.slice(0, i) + '\n</head>\n<body>\n' + src.slice(i) + '\n</body>\n</html>\n');
+}
 misc(pages);
 console.log(`Đã build: ${CITIES.length} trang thành phố, ${BARS.length} trang bar, ${POSTS.length} bài viết. Lập chỉ mục: ${INDEX ? 'BẬT' : 'TẮT (demo)'}.`);
