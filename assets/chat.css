@@ -65,3 +65,26 @@ body:has(.modal:not([hidden])) .tcc-fab{display:none}
   .tcc-b{font-size:16px}
 }
 @media (prefers-reduced-motion:reduce){.tcc-fab::before,.tcc,.tcc-typing i{animation:none}}
+
+/* Cụm nút gọi / Zalo / Telegram */
+.tcq{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(96px + env(safe-area-inset-bottom,0px));z-index:90;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.tcq a{display:flex;align-items:center;gap:10px;height:52px;padding:0 18px 0 4px;border-radius:999px;color:#fff;text-decoration:none;font:700 14.5px/1.15 'Be Vietnam Pro',system-ui,sans-serif;box-shadow:0 10px 26px rgba(0,0,0,.35)}
+.tcq .ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:20px;flex:none;background:rgba(255,255,255,.2)}
+.tcq .lb small{display:block;font-size:12px;font-weight:600;opacity:.9}
+.tcq .q-call{background:linear-gradient(135deg,#22c55e,#16a34a)}
+.tcq .q-call .ic{position:relative;animation:tcqRing 1.6s ease-in-out infinite}
+.tcq .q-call .ic::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(255,255,255,.7);animation:tccPulse 1.6s ease-out infinite}
+@keyframes tcqRing{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(-14deg)}20%,40%{transform:rotate(14deg)}}
+.tcq .q-zalo{background:#0068ff}
+.tcq .q-zalo .ic{font:800 12px 'Be Vietnam Pro',system-ui,sans-serif;background:#fff;color:#0068ff}
+.tcq .q-tg{background:#229ed9}
+.tcq a:focus-visible{outline:2px solid #fff;outline-offset:2px}
+body.tcc-open .tcq,body:has(.modal:not([hidden])) .tcq{display:none}
+@media (max-width:1100px){.tcq{bottom:calc(160px + env(safe-area-inset-bottom,0px))}}
+@media (max-width:720px){
+  .tcq{right:max(14px,env(safe-area-inset-right,0px));bottom:calc(152px + env(safe-area-inset-bottom,0px));gap:8px}
+  .tcq a{height:50px;padding:0 3px;width:50px;justify-content:center}
+  .tcq .lb{display:none}
+  .tcq .ic{width:44px;height:44px}
+}
+@media (prefers-reduced-motion:reduce){.tcq .q-call .ic,.tcq .q-call .ic::after{animation:none}}

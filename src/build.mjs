@@ -226,7 +226,7 @@ function footer() {
     <p class="note">Bản demo. Tên bar, địa chỉ, số liệu và đánh giá là dữ liệu minh hoạ. Uống có trách nhiệm, không lái xe sau khi uống rượu bia.</p></div>
   <div><h4>Bar theo thành phố</h4>${cityLinks}</div>
   <div><h4>Cẩm nang</h4>${postLinks}<a href="${href('blog/')}">Tất cả bài viết</a></div>
-  <div><h4>TopChill</h4><a href="${href('')}#thanh-vien">Hạng thành viên</a><a href="${href('')}#chu-bar">Dành cho chủ bar</a><a href="${href('huy-hieu/')}">Huy hiệu đối tác</a><a href="${href('')}">Hotline ${esc(CFG.hotline)}</a></div>
+  <div><h4>TopChill</h4><a href="${href('')}#thanh-vien">Hạng thành viên</a><a href="${href('')}#chu-bar">Dành cho chủ bar</a><a href="${href('huy-hieu/')}">Huy hiệu đối tác</a><a href="tel:${CFG.hotline.replace(/\s/g, '')}">Hotline ${esc(CFG.hotline)}</a><a href="https://zalo.me/${CFG.zalo}" target="_blank" rel="noopener">Zalo ${esc(CFG.hotline)}</a><a href="https://t.me/${CFG.telegram}" target="_blank" rel="noopener">Telegram ${esc(CFG.hotline)}</a></div>
 </div></footer>`;
 }
 function page(opts, body, { mcta = '' } = {}) {
@@ -571,7 +571,7 @@ fs.copyFileSync(path.join(ROOT, 'src/music.js'), path.join(ROOT, 'assets/music.j
 fs.copyFileSync(path.join(ROOT, 'src/install.js'), path.join(ROOT, 'assets/install.js'));
 {
   const order = ranked(BARS);
-  const data = { base: BASE, hotline: CFG.hotline, demo: !!CFG.chatDemo && !(CFG.tawkPropertyId && CFG.tawkWidgetId), zalo: CFG.zalo || '', messenger: CFG.messenger || '',
+  const data = { base: BASE, hotline: CFG.hotline, demo: !!CFG.chatDemo && !(CFG.tawkPropertyId && CFG.tawkWidgetId), zalo: CFG.zalo || '', messenger: CFG.messenger || '', telegram: CFG.telegram || '',
     tawkPropertyId: CFG.tawkPropertyId || '', tawkWidgetId: CFG.tawkWidgetId || '',
     cities: CITIES.map(c => ({ id: c.id, name: c.name })),
     bars: BARS.map(b => ({ id: b.id, name: b.name, slug: b.slug, city: b.city, cityName: cityOf(b.city).name, type: b.type, rating: b.rating, price: b.price, deal: b.deal, gpct: b.gpct, gLabel: b.gLabel, hours: b.hours, bonus: b.bonus, rank: order.indexOf(b) })) };

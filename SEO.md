@@ -80,7 +80,7 @@ Khi ra mắt thật:
 3. Thay dữ liệu bar minh hoạ trong `src/app.html` bằng bar thật. Dùng ảnh thật do chủ bar cung cấp, tự lưu dạng WebP thay vì ảnh Unsplash.
 4. Chỉ thêm điểm đánh giá vào dữ liệu cấu trúc khi có đánh giá thật từ khách.
 5. Thêm web vào Google Search Console, gửi `sitemap.xml`.
-6. Đổi hotline `1900 8886` minh hoạ thành số thật.
+6. Hotline, Zalo, Telegram đã dùng số thật 0838 000 222.
 
 Lưu ý: trên địa chỉ con dạng `github.io/Bar-top-booking`, Google không đọc file `robots.txt` của thư mục con. Thẻ `noindex` trên từng trang mới là thứ đang chặn lập chỉ mục. Khi có tên miền riêng, cả hai sẽ cùng có hiệu lực.
 

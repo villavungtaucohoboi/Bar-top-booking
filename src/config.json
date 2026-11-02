@@ -4,12 +4,13 @@
   "basePath": "/",
   "repo": "villavungtaucohoboi/Bar-top-booking",
   "branch": "main",
-  "hotline": "1900 8886",
+  "hotline": "0838 000 222",
   "allowIndexing": false,
   "defaultAuthor": "Ban biên tập TopChill",
   "chatDemo": true,
-  "zalo": "",
+  "zalo": "0838000222",
   "messenger": "",
   "tawkPropertyId": "",
-  "tawkWidgetId": ""
+  "tawkWidgetId": "",
+  "telegram": "+84838000222"
 }

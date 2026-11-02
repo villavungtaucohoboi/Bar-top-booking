@@ -28,6 +28,13 @@
     '<div class="tcc-q"></div>' +
     '<form class="tcc-f"><input type="text" placeholder="Nhắn cho tổng đài…" aria-label="Tin nhắn" autocomplete="off" enterkeyhint="send"><button type="submit" aria-label="Gửi">➤</button></form>' +
     (C.demo ? '<div class="tcc-note">Bản demo: trả lời tự động, nhân viên là mô phỏng.</div>' : '');
+  /* cụm nút gọi / Zalo / Telegram phía trên nút chat */
+  var tel = C.hotline.replace(/\s/g, '');
+  var qk = document.createElement('div'); qk.className = 'tcq'; qk.setAttribute('aria-label', 'Liên hệ đặt bàn');
+  qk.innerHTML = '<a class="q-call" href="tel:' + tel + '" aria-label="Gọi đặt bàn ' + esc(C.hotline) + '"><span class="ic">📞</span><span class="lb">Gọi đặt bàn<small>' + esc(C.hotline) + '</small></span></a>' +
+    (C.zalo ? '<a class="q-zalo" href="https://zalo.me/' + esc(C.zalo) + '" target="_blank" rel="noopener" aria-label="Nhắn Zalo ' + esc(C.hotline) + '"><span class="ic">Zalo</span><span class="lb">Nhắn Zalo</span></a>' : '') +
+    (C.telegram ? '<a class="q-tg" href="https://t.me/' + esc(C.telegram) + '" target="_blank" rel="noopener" aria-label="Nhắn Telegram ' + esc(C.hotline) + '"><span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="#fff" d="M21.4 4.6 2.9 11.7c-1.3.5-1.2 1.3-.2 1.6l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.9-1.5-1.4Zm-3.3 3.6-8.6 7.8-.3 3.3-1.5-4.8 9.8-6.1c.5-.3.9 0 .6-.2Z"/></svg></span><span class="lb">Nhắn Telegram</span></a>' : '');
+  document.body.appendChild(qk);
   document.body.appendChild(fab); document.body.appendChild(box);
   var M = box.querySelector('.tcc-m'), Q = box.querySelector('.tcc-q'), IN = box.querySelector('input');
 
@@ -40,6 +47,7 @@
     var h = '<div class="tcc-contacts">';
     h += '<a href="tel:' + C.hotline.replace(/\s/g, '') + '"><span>📞</span>Gọi tổng đài ' + esc(C.hotline) + '</a>';
     if (C.zalo) h += '<a href="https://zalo.me/' + esc(C.zalo) + '" target="_blank" rel="noopener"><span>💙</span>Chat qua Zalo</a>';
+    if (C.telegram) h += '<a href="https://t.me/' + esc(C.telegram) + '" target="_blank" rel="noopener"><span>✈️</span>Nhắn qua Telegram</a>';
     if (C.messenger) h += '<a href="https://m.me/' + esc(C.messenger) + '" target="_blank" rel="noopener"><span>💬</span>Chat qua Messenger</a>';
     return h + '</div>';
   }
