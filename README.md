@@ -1,6 +1,6 @@
 # TopChill.vn – demo đặt bàn bar toàn quốc
 
-Web: https://villavungtaucohoboi.github.io/Bar-top-booking/
+Web: https://topchill.vn/
 
 - App đặt bàn: khung giờ vàng, 3 giao diện Sáng / Nâu / Tối, ví điểm đổi tiền hoặc trừ bill, hạng thành viên, hội nhóm, gói đẩy top.
 - Trang SEO tĩnh: 12 thành phố, 18 bar, blog Cẩm nang, huy hiệu đối tác.

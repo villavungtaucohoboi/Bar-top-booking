@@ -75,8 +75,8 @@ Hiện web đang ở chế độ demo: mọi trang có `noindex`, `robots.txt` c
 
 Khi ra mắt thật:
 
-1. Mua tên miền riêng, ví dụ `topchill.vn`, trỏ vào GitHub Pages hoặc hosting khác.
-2. Trong `src/config.json`: đổi `siteUrl` sang tên miền mới, `basePath` thành `/`, `allowIndexing` thành `true`.
+1. Tên miền `topchill.vn` đã trỏ vào GitHub Pages.
+2. Trong `src/config.json`: đổi `allowIndexing` thành `true`.
 3. Thay dữ liệu bar minh hoạ trong `src/app.html` bằng bar thật. Dùng ảnh thật do chủ bar cung cấp, tự lưu dạng WebP thay vì ảnh Unsplash.
 4. Chỉ thêm điểm đánh giá vào dữ liệu cấu trúc khi có đánh giá thật từ khách.
 5. Thêm web vào Google Search Console, gửi `sitemap.xml`.
