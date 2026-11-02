@@ -6,6 +6,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 import { CITY_SEO } from './seo-data.mjs';
+import { LOGO } from './logo.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CFG = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/config.json'), 'utf8'));
@@ -161,7 +162,7 @@ const POSTS = fs.readdirSync(path.join(ROOT, 'content/blog')).filter(f => f.ends
 }).filter(p => !p.draft).sort((a, b) => b.date.localeCompare(a.date));
 
 /* ---------- 4. Khung trang ---------- */
-const ORG = { '@type': 'Organization', name: CFG.siteName, url: SITE + '/', logo: url('icon-192.png') };
+const ORG = { '@type': 'Organization', name: CFG.siteName, url: SITE + '/', logo: url('logo-topchill.jpg') };
 function breadcrumbLd(items) {
   return { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: it[0], item: url(it[1]) })) };
 }
@@ -199,7 +200,7 @@ function headTags({ title, desc, pathRel, image, type = 'website', noindex = fal
 <link rel="manifest" href="${href('manifest.webmanifest')}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Fredoka:wght@600;700&display=swap">
 <link rel="stylesheet" href="${href('assets/site.css')}?v=${STAMP}">
 ${ld.filter(Boolean).map(x => `<script type="application/ld+json">${JSON.stringify(x)}</script>`).join('\n')}
 ${HEAD_SCRIPT}`;
@@ -210,7 +211,7 @@ const NAV = [['bar-ha-noi/', 'Bar Hà Nội'], ['bar-sai-gon/', 'Bar Sài Gòn']
 function header(active) {
   const links = NAV.map(([p, t]) => `<a href="${href(p)}"${active === p ? ' aria-current="page"' : ''}>${t}</a>`).join('');
   return `<header class="hdr"><div class="wrap hdr-in">
-  <a class="logo" href="${href('')}" aria-label="TopChill trang chủ"><span class="logo-mark">T</span>TopChill<span class="logo-vn">.vn</span></a>
+  <a class="logo" href="${href('')}" aria-label="TopChill trang chủ">${LOGO('')}</a>
   <nav class="nav" aria-label="Chính">${links}</nav>
   <a class="btn btn-gold" href="${href('')}">Đặt bàn</a>
 </div><div class="wrap subnav">${links}</div></header>`;
@@ -219,7 +220,7 @@ function footer() {
   const cityLinks = CITIES.filter(c => BARS.some(b => b.city === c.id)).map(c => `<a href="${href(c.path)}">Bar ${esc(c.name)}</a>`).join('');
   const postLinks = POSTS.slice(0, 5).map(p => `<a href="${href(p.path)}">${esc(p.title.split(':')[0])}</a>`).join('');
   return `<footer class="foot"><div class="wrap foot-grid">
-  <div><a class="logo" href="${href('')}"><span class="logo-mark">T</span>TopChill<span class="logo-vn">.vn</span></a>
+  <div><a class="logo" href="${href('')}">${LOGO('')}</a>
     <p style="margin-top:10px">Đặt bàn bar, lounge, club khắp Việt Nam. Giảm thẳng vào bill, tặng rượu bàn VIP, tích điểm đổi tiền.</p>
     <p class="note">Bản demo. Tên bar, địa chỉ, số liệu và đánh giá là dữ liệu minh hoạ. Uống có trách nhiệm, không lái xe sau khi uống rượu bia.</p></div>
   <div><h4>Bar theo thành phố</h4>${cityLinks}</div>

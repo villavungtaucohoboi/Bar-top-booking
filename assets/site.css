@@ -214,3 +214,24 @@ p{margin:0}
   .mcta .call{flex:none;width:54px;padding:0;border-radius:16px;background:#22c55e;color:#fff;font-size:22px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ===== Logo động TopChill ===== */
+.tc-logo{--lf:22px;display:inline-flex;flex-direction:column;align-items:center;font-size:var(--lf);line-height:1;gap:.06em;filter:drop-shadow(0 0 .28em rgba(255,63,174,.45))}
+.tc-eq{display:flex;align-items:flex-end;gap:.07em;height:.78em}
+.tc-eq i{display:block;width:.17em;height:100%;border-radius:.1em;background:linear-gradient(180deg,#fff 0%,var(--c) 38%,var(--c) 100%);box-shadow:0 0 .22em var(--c),0 0 .5em var(--c);transform-origin:50% 100%;transform:scaleY(var(--h));animation:tcEq var(--d) ease-in-out var(--dl) infinite alternate}
+.tc-eq i:nth-child(3n){width:.1em}
+@keyframes tcEq{0%{transform:scaleY(var(--h))}35%{transform:scaleY(calc(var(--h) * .45))}70%{transform:scaleY(calc(var(--h) * 1.15))}100%{transform:scaleY(calc(var(--h) * .7))}}
+.tc-word{font-family:'Fredoka','Be Vietnam Pro',system-ui,sans-serif;font-weight:700;font-size:1em;letter-spacing:-.01em;color:#fff;transform:skewX(-7deg);white-space:nowrap;text-shadow:0 0 .2em rgba(255,255,255,.35)}
+.tc-word em{font-style:normal;background:linear-gradient(90deg,#ff9bd6,#ff4fb0 45%,#ff2d8f);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 .15em rgba(255,63,174,.8))}
+.tc-sw{width:5.2em;height:.42em;margin-top:-.05em;animation:tcSw 2.4s ease-in-out infinite alternate}
+@keyframes tcSw{from{opacity:.65}to{opacity:1}}
+.logo{text-decoration:none}
+.logo .tc-logo{--lf:22px}
+.logo .tc-eq{height:1em}
+.logo .tc-word{text-transform:none;letter-spacing:-.01em}
+.logo .tc-logo{font-family:var(--font-body)}
+
+.tc-logo.big{--lf:clamp(54px,7.4vw,108px);filter:drop-shadow(0 0 .2em rgba(255,63,174,.55)) drop-shadow(0 0 .6em rgba(180,70,255,.35))}
+.tc-logo.big .tc-eq{height:.9em;gap:.08em}
+@media (max-width:720px){.logo .tc-logo{--lf:19px}.tc-logo.big{--lf:56px}}
+@media (prefers-reduced-motion:reduce){.tc-eq i,.tc-sw{animation:none}}
