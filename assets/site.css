@@ -24,7 +24,8 @@
 
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{background:var(--bg)}
 a{color:inherit}
 img{max-width:100%}
 :focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:6px}
@@ -37,7 +38,7 @@ p{margin:0}
 .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);font-weight:700}
 
 /* Header */
-.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--hdr-bg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.hdr{position:sticky;top:0;padding-top:env(safe-area-inset-top,0px);z-index:50;background:var(--hdr-bg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .hdr-in{display:flex;align-items:center;gap:20px;height:62px}
 .logo{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-size:22px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
 .logo-mark{width:32px;height:32px;border-radius:9px;background:var(--btn-grad);color:var(--btn-ink);display:grid;place-items:center;font-size:20px}

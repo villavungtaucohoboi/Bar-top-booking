@@ -194,7 +194,8 @@ function headTags({ title, desc, pathRel, image, type = 'website', noindex = fal
 <meta property="og:url" content="${url(pathRel)}">
 <meta property="og:image" content="${esc(UNS(image || POOL.cocktail[0], 1200))}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0a0912">
+<meta name="theme-color" content="#0b0710">
+<meta name="color-scheme" content="dark">
 <link rel="icon" href="${href('icon.svg')}" type="image/svg+xml">
 <link rel="apple-touch-icon" href="${href('icon-192.png')}">
 <link rel="manifest" href="${href('manifest.webmanifest')}">
@@ -537,7 +538,7 @@ ${head}
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="TopChill">
-<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>:root{color-scheme:dark}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 ${body.slice(0, i)}
 </head>
 <body>
