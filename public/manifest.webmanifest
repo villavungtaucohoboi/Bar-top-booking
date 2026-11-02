@@ -1,10 +1,10 @@
 {
   "name": "TopChill Việt Nam",
   "short_name": "TopChill",
-  "start_url": "./",
-  "display": "standalone",
-  "background_color": "#0b0610",
-  "theme_color": "#0b0610",
+  "start_url": "/",
+  "display": "fullscreen",
+  "background_color": "#0b0710",
+  "theme_color": "#0b0710",
   "icons": [
     {
       "src": "icon-192.png",
@@ -22,5 +22,14 @@
       "sizes": "any",
       "type": "image/svg+xml"
     }
-  ]
+  ],
+  "id": "/",
+  "scope": "/",
+  "display_override": [
+    "fullscreen",
+    "standalone"
+  ],
+  "orientation": "portrait",
+  "description": "Đặt bàn bar, lounge, club khắp Việt Nam. Giảm thẳng vào bill, tặng rượu, tích điểm đổi tiền.",
+  "lang": "vi"
 }
