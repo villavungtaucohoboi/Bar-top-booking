@@ -1549,15 +1549,14 @@ function openBar(id,time){
         </div>
         ${isP(cur)?`<div class="h4">Ưu đãi khi đặt qua TopChill</div>
         <div class="deal-list">
-          <div class="deal-row"><div class="big">-\${cur.deal}%</div><div><b>Giảm \${cur.deal}% tổng bill</b><small>Áp dụng cho mọi bàn đặt trước, quét QR tại quầy.</small></div></div>
-          <div class="deal-row neon"><div class="big">⚡ -\${cur.gpct}%</div><div><b>Khung giờ vàng \${cur.gLabel}</b><small>Đến trong 2 giờ đầu mở cửa, giảm thêm \${cur.gpct}%. Cộng dồn với deal bar.</small></div></div>
-          <div class="deal-row neon"><div class="big">🎁</div><div><b>\${escH(cur.bonus)}</b><small>\${escH(cur.bonusNote||'Tặng tại bàn, không cộng dồn với voucher khác.')}\${cur.promoUntil?' · Hạn đến '+cur.promoUntil.split('-').reverse().join('/'):''}</small></div></div>
-          \${USER.guest?'<div class="deal-row plain"><div class="big" style="color:var(--gold)">+5%</div><div><b>Đăng ký miễn phí để giảm thêm 5%</b><small>Tặng 100 điểm, tích điểm đổi tiền. <button type="button" class="lnk-btn" data-auth="register">Đăng ký ngay</button></small></div></div>':''}<div class="deal-row plain"\${USER.guest?' hidden':''}><div class="big" style="color:var(--gold)">+\${USER.tierPct}%</div><div><b>Hạng \${USER.tier} của bạn giảm thêm \${USER.tierPct}%</b><small>Không cần cọc · bàn ưu tiên · dùng điểm trừ bill tối đa 30%.</small></div></div>
-        </div>
-`:`<div class="h4">Đặt bàn qua TopChill</div><div class="deal-list"><div class="deal-row plain"><div class="big">📞</div><div><b>Tổng đài giữ bàn giúp bạn</b><small>Bar chưa áp dụng ưu đãi qua TopChill. Gửi yêu cầu, tổng đài gọi lại xác nhận trong vài phút.</small></div></div>`}        </div>
+          <div class="deal-row"><div class="big">-${cur.deal}%</div><div><b>Giảm ${cur.deal}% tổng bill</b><small>Áp dụng khi đặt trước qua TopChill, quét QR tại quầy.</small></div></div>
+          ${cur.gpct?`<div class="deal-row neon"><div class="big">⚡ -${cur.gpct}%</div><div><b>Khung giờ vàng ${cur.gLabel}</b><small>Đến trong 2 giờ đầu mở cửa, giảm thêm ${cur.gpct}%. Cộng dồn với deal bar.</small></div></div>`:''}
+          ${cur.bonus?`<div class="deal-row neon"><div class="big">🎁</div><div><b>${escH(cur.bonus)}</b><small>${escH(cur.bonusNote||'Tặng tại bàn, không cộng dồn với voucher khác.')}${cur.promoUntil?' · Hạn đến '+cur.promoUntil.split('-').reverse().join('/'):''}</small></div></div>`:''}
+          ${USER.guest?`<div class="deal-row plain"><div class="big" style="color:var(--gold)">+5%</div><div><b>Đăng ký miễn phí để giảm thêm 5%</b><small>Tặng 100 điểm, tích điểm đổi tiền. <button type="button" class="lnk-btn" data-auth="register">Đăng ký ngay</button></small></div></div>`:`<div class="deal-row plain"><div class="big" style="color:var(--gold)">+${USER.tierPct}%</div><div><b>Hạng ${USER.tier} của bạn giảm thêm ${USER.tierPct}%</b><small>Áp dụng tại bar đối tác khi đặt qua TopChill.</small></div></div>`}
+        </div>`:`<div class="h4">Đặt bàn qua TopChill</div><div class="deal-list"><div class="deal-row plain"><div class="big">📞</div><div><b>Tổng đài giữ bàn giúp bạn</b><small>Bar chưa áp dụng ưu đãi qua TopChill. Gửi yêu cầu, tổng đài gọi lại xác nhận trong vài phút.</small></div></div></div>`}
         <div class="h4">Menu nổi bật</div>
         <div class="menu">${(cur.menu&&cur.menu.length?cur.menu:isP(cur)?MENU[cur.type]||[]:[]).map(m=>`<span>${m[0]}<b class="num">${m[1]}k</b></span>`).join('')}</div>
-        ${isP(cur)?`<div class="h4">Review từ hội nhóm</div>${rv}`:''}
+        
       </div>
       <aside class="book" id="bookBox"></aside>
     </div>
