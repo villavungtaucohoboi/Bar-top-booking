@@ -1,0 +1,274 @@
+<style>
+.ad{display:grid;grid-template-columns:300px minmax(0,1fr);gap:20px;padding-block:18px 80px;align-items:start}
+.ad h1{font-size:30px;text-transform:uppercase}
+.box{padding:18px;border-radius:18px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;gap:12px}
+.box h2{font-size:20px;text-transform:uppercase;margin:0}
+.fld{display:flex;flex-direction:column;gap:5px;min-width:0}
+.fld label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700;display:flex;justify-content:space-between;gap:6px}
+.fld label small{text-transform:none;letter-spacing:0;font-weight:500}
+.fld input,.fld select,.fld textarea{width:100%;min-height:46px;padding:10px 12px;border-radius:12px;background:var(--bg2);color:var(--fg);border:1px solid var(--line2);font:inherit;font-size:16px;outline:none}
+.fld textarea{min-height:96px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--neon)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.list{display:flex;flex-direction:column;gap:6px;max-height:62vh;overflow:auto}
+.it{display:flex;gap:10px;align-items:center;padding:8px;border-radius:12px;border:1px solid transparent;cursor:pointer;text-align:left;background:none;color:inherit;font:inherit;width:100%}
+.it:hover{background:var(--surface2)}.it.on{background:var(--surface2);border-color:var(--neon)}
+.it img,.it .ph0{width:46px;height:46px;border-radius:10px;object-fit:cover;flex:none;background:linear-gradient(135deg,#5a1d4a,#1d1430)}
+.it b{display:block;font-size:14.5px;line-height:1.25}.it small{color:var(--muted);font-size:12.5px}
+.it .tag{margin-left:auto;font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:6px;flex:none}
+.tag.top{background:#f0b545;color:#1a1206}.tag.hot{background:#ff3f8e;color:#fff}.tag.off{background:var(--surface3);color:var(--muted)}
+.pics{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}
+.pic{position:relative;aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:var(--bg2);border:1px solid var(--line)}
+.pic img{width:100%;height:100%;object-fit:cover;display:block}
+.pic .cv{position:absolute;left:6px;top:6px;font-size:10.5px;font-weight:800;background:var(--neon);color:#fff;padding:2px 7px;border-radius:6px}
+.pic .acts{position:absolute;right:4px;top:4px;display:flex;gap:4px}
+.pic .acts button{width:30px;height:30px;border-radius:8px;background:rgba(0,0,0,.65);color:#fff;border:0;cursor:pointer;font-size:14px}
+.pic.new::after{content:"Mới";position:absolute;left:6px;bottom:6px;font-size:10.5px;font-weight:800;background:#22c55e;color:#fff;padding:2px 7px;border-radius:6px}
+.drop{display:grid;place-items:center;text-align:center;aspect-ratio:4/3;border-radius:12px;border:2px dashed var(--line2);color:var(--muted);font-size:13px;cursor:pointer;padding:8px}
+.drop:hover,.drop.over{border-color:var(--neon);color:var(--fg)}
+.mrow{display:grid;grid-template-columns:1fr 130px 44px;gap:8px}
+.mrow button{border-radius:10px;background:var(--surface2);border:1px solid var(--line);color:var(--fg);cursor:pointer;font-size:16px}
+.bar-acts{display:flex;gap:10px;flex-wrap:wrap;position:sticky;bottom:0;padding:12px 0 calc(12px + env(safe-area-inset-bottom,0px));background:linear-gradient(transparent,var(--bg) 30%);z-index:5}
+.bar-acts .btn{flex:1;min-width:150px}
+.btn-del{background:transparent;border:1px solid #ff6b8a;color:#ff8fa6}
+.msg{font-size:14.5px;font-weight:600;min-height:20px}.msg.ok{color:var(--ok)}.msg.err{color:#ff7a9c}.msg.wait{color:var(--gold2)}
+.chk{display:flex;gap:10px;align-items:center;font-size:15px;min-height:44px}
+.chk input{width:22px;height:22px;accent-color:#ff3f8e}
+.help{font-size:13.5px;color:var(--muted)}.help ol{margin:6px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
+.help a{color:var(--link)}
+.tabs{display:flex;gap:6px}.tabs button{flex:1;min-height:42px;border-radius:12px;background:var(--surface2);border:1px solid var(--line);color:var(--muted);font:inherit;font-weight:700;cursor:pointer}
+.tabs button.on{color:var(--fg);border-color:var(--neon)}
+[hidden]{display:none!important}
+@media (max-width:900px){.ad{grid-template-columns:1fr}.list{max-height:none}.g3{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.g2,.g3{grid-template-columns:1fr}.mrow{grid-template-columns:1fr 100px 44px}}
+</style>
+<main class="wrap">
+  <div style="padding-top:14px"><span class="eyebrow">Nội bộ · không hiện trên Google</span><h1>Quản lý bar &amp; khuyến mãi</h1></div>
+
+  <section class="box" id="login" style="margin-top:14px" hidden>
+    <h2>Kết nối tài khoản đăng bài</h2>
+    <div class="help">Dán khoá truy cập GitHub (chỉ làm một lần trên máy này).
+      <ol><li>Mở <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">trang tạo khoá GitHub</a>.</li>
+      <li>Token name: <b>topchill-admin</b>. Expiration: <b>1 năm</b>.</li>
+      <li>Repository access: <b>Only select repositories</b> → chọn <b id="repoName"></b>.</li>
+      <li>Permissions → Repository permissions → <b>Contents: Read and write</b>.</li>
+      <li>Bấm Generate token, copy rồi dán vào ô dưới.</li></ol></div>
+    <div class="fld"><label for="tok">Khoá truy cập</label><input id="tok" type="password" autocomplete="off" placeholder="github_pat_…"></div>
+    <label class="chk"><input type="checkbox" id="remember" checked> Ghi nhớ trên máy này (không bật trên máy dùng chung)</label>
+    <button class="btn btn-gold" id="connect" type="button">Kết nối</button>
+    <p class="msg" id="loginMsg" role="status"></p>
+  </section>
+
+  <div class="ad" id="app" hidden>
+    <aside class="box">
+      <div class="tabs" role="tablist"><button type="button" class="on" data-tab="bars">Bar</button><button type="button" data-tab="ticker">Dải tin</button></div>
+      <div id="tabBars" style="display:flex;flex-direction:column;gap:10px">
+        <button class="btn btn-gold" id="newBar" type="button">+ Thêm bar mới</button>
+        <div class="fld"><label for="q">Tìm bar</label><input id="q" placeholder="Tên, khu vực…"></div>
+        <div class="list" id="list"></div>
+      </div>
+      <div class="help">Đăng nhập: <b id="who"></b> · <button type="button" id="logout" style="background:none;border:0;color:var(--link);cursor:pointer;font:inherit;text-decoration:underline">Ngắt kết nối</button></div>
+    </aside>
+
+    <section id="paneTicker" class="box" hidden>
+      <h2>Dải tin chạy trên bìa trang chủ</h2>
+      <div class="fld"><label for="tk">Mỗi dòng một tin <small>tối đa 15 dòng</small></label><textarea id="tk" style="min-height:260px"></textarea></div>
+      <div class="bar-acts"><button class="btn btn-gold" id="saveTk" type="button">Lưu &amp; đăng dải tin</button></div>
+      <p class="msg" id="tkMsg" role="status"></p>
+    </section>
+
+    <form id="form" class="box" novalidate>
+      <h2 id="fTitle">Sửa bar</h2>
+      <div class="g2">
+        <div class="fld"><label for="f_name">Tên bar *</label><input id="f_name" maxlength="60" required></div>
+        <div class="fld"><label for="f_type">Loại hình</label><select id="f_type"></select></div>
+      </div>
+      <div class="g3">
+        <div class="fld"><label for="f_city">Thành phố</label><select id="f_city"></select></div>
+        <div class="fld"><label for="f_area">Khu vực / quận</label><input id="f_area" maxlength="40" placeholder="Quận 1"></div>
+        <div class="fld"><label for="f_addr">Địa chỉ</label><input id="f_addr" maxlength="120"></div>
+      </div>
+      <div class="g3">
+        <div class="fld"><label for="f_open">Giờ mở cửa</label><select id="f_open"></select></div>
+        <div class="fld"><label for="f_close">Giờ đóng cửa</label><select id="f_close"></select></div>
+        <div class="fld"><label for="f_dress">Dress code</label><input id="f_dress" maxlength="60"></div>
+      </div>
+      <div class="g3">
+        <div class="fld"><label for="f_pmin">Giá từ <small>nghìn đ/người</small></label><input id="f_pmin" type="number" inputmode="numeric" min="0" step="10"></div>
+        <div class="fld"><label for="f_pmax">Giá đến <small>nghìn đ/người</small></label><input id="f_pmax" type="number" inputmode="numeric" min="0" step="10"></div>
+        <div class="fld"><label for="f_music">Nhạc</label><input id="f_music" maxlength="60" placeholder="House · R&amp;B"></div>
+      </div>
+      <div class="fld"><label for="f_desc">Mô tả <small id="descC">0/400</small></label><textarea id="f_desc" maxlength="400"></textarea></div>
+
+      <h2 style="margin-top:6px">Ảnh bar</h2>
+      <p class="help" style="margin:0">Ảnh đầu tiên là ảnh bìa. Ảnh tự nén còn khoảng 150–300KB, không làm chậm web.</p>
+      <div class="pics" id="pics"></div>
+      <input type="file" id="file" accept="image/*" multiple hidden>
+
+      <h2 style="margin-top:6px">Menu nổi bật</h2>
+      <div id="menu" style="display:flex;flex-direction:column;gap:8px"></div>
+      <button class="btn btn-ghost" type="button" id="addMenu">+ Thêm món</button>
+
+      <h2 style="margin-top:6px">Khuyến mãi &amp; quà tặng</h2>
+      <div class="g3">
+        <div class="fld"><label for="f_deal">Giảm bill (%)</label><input id="f_deal" type="number" inputmode="numeric" min="0" max="60"></div>
+        <div class="fld"><label for="f_gpct">Giờ vàng giảm thêm (%)</label><input id="f_gpct" type="number" inputmode="numeric" min="0" max="50"></div>
+        <div class="fld"><label for="f_until">Hạn khuyến mãi <small>để trống = không hạn</small></label><input id="f_until" type="date"></div>
+      </div>
+      <div class="fld"><label for="f_bonus">Quà tặng</label><input id="f_bonus" maxlength="120" placeholder="Tặng 1 chai Chivas 18 cho bàn VIP từ 5 triệu"></div>
+      <div class="fld"><label for="f_note">Điều kiện nhận quà</label><input id="f_note" maxlength="160" placeholder="Áp dụng thứ 2 – thứ 5, đặt trước 20h"></div>
+      <div class="g3">
+        <div class="fld"><label for="f_boost">Đẩy top</label><select id="f_boost"><option value="">Không</option><option value="hot">HOT</option><option value="top">TOP (đứng đầu)</option></select></div>
+        <div class="fld"><label for="f_rating">Điểm đánh giá</label><input id="f_rating" type="number" inputmode="decimal" min="1" max="5" step="0.1"></div>
+        <div class="fld"><label for="f_reviews">Số đánh giá</label><input id="f_reviews" type="number" inputmode="numeric" min="0"></div>
+      </div>
+      <label class="chk"><input type="checkbox" id="f_hidden"> Ẩn bar này khỏi web (tạm ngưng hợp tác)</label>
+
+      <div class="bar-acts">
+        <button class="btn btn-gold" type="submit" id="save">Lưu &amp; đăng lên web</button>
+        <button class="btn btn-del" type="button" id="del">Xoá bar</button>
+      </div>
+      <p class="msg" id="msg" role="status"></p>
+    </form>
+  </div>
+</main>
+<script>
+(function(){
+var D=/*__ADMIN_DATA__*/null;
+var $=function(i){return document.getElementById(i)};
+var API='https://api.github.com/repos/'+D.repo, BR=D.branch, DATA_PATH='content/data.json', IMG_DIR='content/img/bars/';
+var TK_KEY='topchill-admin-token', tok='', data=null, cur=null, pics=[], dirty=false;
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function slug(s){return String(s).normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d').replace(/Đ/g,'d').toLowerCase().replace(/&/g,' va ').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')}
+function say(el,t,cls){el.textContent=t;el.className='msg '+(cls||'')}
+function b64utf8(s){var b=new TextEncoder().encode(s),o='';for(var i=0;i<b.length;i+=32768)o+=String.fromCharCode.apply(null,b.subarray(i,i+32768));return btoa(o)}
+function utf8b64(s){var bin=atob(s.replace(/\n/g,'')),u=new Uint8Array(bin.length);for(var i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);return new TextDecoder().decode(u)}
+function blobB64(blob){return new Promise(function(r,j){var fr=new FileReader();fr.onload=function(){r(String(fr.result).split(',')[1])};fr.onerror=j;fr.readAsDataURL(blob)})}
+function gh(path,opt){opt=opt||{};return fetch(API+path,{method:opt.method||'GET',headers:{'Authorization':'Bearer '+tok,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','Content-Type':'application/json'},body:opt.body?JSON.stringify(opt.body):undefined,cache:'no-store'}).then(function(r){if(!r.ok)return r.json().catch(function(){return{}}).then(function(j){var e=new Error(j.message||('HTTP '+r.status));e.status=r.status;throw e});return r.status===204?{}:r.json()})}
+function ghErr(e){if(e.status===401)return 'Khoá truy cập sai hoặc đã hết hạn. Bấm Ngắt kết nối rồi dán khoá mới.';if(e.status===403||e.status===404)return 'Khoá chưa có quyền ghi vào kho '+D.repo+'. Kiểm tra mục Contents: Read and write.';if(!navigator.onLine)return 'Mất mạng. Kiểm tra kết nối rồi thử lại.';return 'Lỗi: '+e.message}
+
+/* ---------- đăng nhập ---------- */
+$('repoName').textContent=D.repo;
+try{tok=localStorage.getItem(TK_KEY)||sessionStorage.getItem(TK_KEY)||''}catch(e){}
+function boot(){if(!tok){$('login').hidden=false;$('app').hidden=true;return}
+  say($('loginMsg'),'Đang kết nối…','wait');
+  load().then(function(){$('login').hidden=true;$('app').hidden=false}).catch(function(e){$('login').hidden=false;$('app').hidden=true;say($('loginMsg'),ghErr(e),'err')})}
+$('connect').onclick=function(){var t=$('tok').value.trim();if(!/^(github_pat_|ghp_)[A-Za-z0-9_]{20,}$/.test(t)){say($('loginMsg'),'Khoá không đúng dạng. Khoá bắt đầu bằng github_pat_','err');return}
+  tok=t;try{($('remember').checked?localStorage:sessionStorage).setItem(TK_KEY,t)}catch(e){}$('tok').value='';boot()};
+$('logout').onclick=function(){try{localStorage.removeItem(TK_KEY);sessionStorage.removeItem(TK_KEY)}catch(e){}tok='';location.reload()};
+
+/* ---------- tải dữ liệu ---------- */
+function load(){return gh('/contents/'+DATA_PATH+'?ref='+BR).then(function(f){data=JSON.parse(utf8b64(f.content));$('who').textContent=D.repo;renderList();$('tk').value=(data.ticker||[]).join('\n');if(!cur)edit(data.bars[0]?data.bars[0].id:null)})}
+function imgUrl(p){return /^https?:|^blob:|^data:/.test(p)?p:p}
+
+/* ---------- danh sách ---------- */
+function cityName(id){var c=D.cities.filter(function(x){return x.id===id})[0];return c?c.name:id}
+function renderList(){var q=slug($('q').value||'');
+  $('list').innerHTML=data.bars.filter(function(b){return !q||slug(b.name+' '+b.area+' '+cityName(b.city)).indexOf(q)>=0}).map(function(b){
+    var th=b.images&&b.images[0]?'<img src="'+esc(imgUrl(b.images[0]))+'" alt="">':'<span class="ph0"></span>';
+    var tg=b.hidden?'<span class="tag off">ẨN</span>':b.boost==='top'?'<span class="tag top">TOP</span>':b.boost==='hot'?'<span class="tag hot">HOT</span>':'';
+    return '<button type="button" class="it'+(cur&&cur.id===b.id?' on':'')+'" data-id="'+b.id+'">'+th+'<span><b>'+esc(b.name)+'</b><small>'+esc(cityName(b.city))+' · '+esc(b.type)+' · -'+b.deal+'%</small></span>'+tg+'</button>'}).join('')||'<p class="help">Không có bar nào khớp.</p>'}
+$('q').oninput=renderList;
+$('list').onclick=function(e){var b=e.target.closest('[data-id]');if(!b)return;if(dirty&&!confirmLeave())return;edit(+b.dataset.id);if(matchMedia('(max-width:900px)').matches)$('form').scrollIntoView({behavior:'smooth'})};
+var leaveArmed=0;function confirmLeave(){if(leaveArmed&&Date.now()-leaveArmed<4000){leaveArmed=0;return true}leaveArmed=Date.now();say($('msg'),'Bar đang sửa chưa lưu. Bấm lại lần nữa để bỏ thay đổi.','err');return false}
+
+/* ---------- form ---------- */
+D.types.forEach(function(t){$('f_type').insertAdjacentHTML('beforeend','<option>'+esc(t)+'</option>')});
+D.cities.forEach(function(c){$('f_city').insertAdjacentHTML('beforeend','<option value="'+c.id+'">'+esc(c.name)+'</option>')});
+for(var h=0;h<24;h++){var v=String(h).padStart(2,'0')+':00';$('f_open').insertAdjacentHTML('beforeend','<option>'+v+'</option>');$('f_close').insertAdjacentHTML('beforeend','<option>'+v+'</option>')}
+var F=['name','type','city','area','addr','dress','music','desc','deal','gpct','bonus','rating','reviews'];
+function edit(id){
+  var b=data.bars.filter(function(x){return x.id===id})[0];
+  cur=b?JSON.parse(JSON.stringify(b)):{id:0,name:'',type:D.types[0],city:D.cities[0].id,area:'',addr:'',hours:'18:00 – 02:00',price:[200,500],music:'',dress:'Tự do',desc:'',rating:4.5,reviews:0,deal:15,gpct:10,bonus:'',bonusNote:'',promoUntil:'',boost:null,hue:Math.floor(Math.random()*360),menu:[],images:[],hidden:false};
+  $('fTitle').textContent=b?'Sửa: '+b.name:'Thêm bar mới';$('del').hidden=!b;
+  F.forEach(function(k){$('f_'+k).value=cur[k]==null?'':cur[k]});
+  $('f_open').value=cur.hours.slice(0,5);$('f_close').value=cur.hours.slice(8,13);
+  $('f_pmin').value=cur.price[0];$('f_pmax').value=cur.price[1];
+  $('f_note').value=cur.bonusNote||'';$('f_until').value=cur.promoUntil||'';$('f_boost').value=cur.boost||'';$('f_hidden').checked=!!cur.hidden;
+  pics=(cur.images||[]).map(function(p){return{path:p,url:imgUrl(p)}});
+  renderPics();renderMenu();$('descC').textContent=($('f_desc').value.length)+'/400';
+  say($('msg'),'');dirty=false;renderList();
+}
+$('newBar').onclick=function(){if(dirty&&!confirmLeave())return;edit(null);$('f_name').focus()};
+$('form').addEventListener('input',function(e){dirty=true;if(e.target.id==='f_desc')$('descC').textContent=e.target.value.length+'/400'});
+
+/* ---------- ảnh ---------- */
+function renderPics(){
+  $('pics').innerHTML=pics.map(function(p,i){return '<div class="pic'+(p.blob?' new':'')+'"><img src="'+esc(p.url)+'" alt="Ảnh '+(i+1)+'">'+(i===0?'<span class="cv">Ảnh bìa</span>':'')+'<span class="acts">'+(i>0?'<button type="button" data-cover="'+i+'" aria-label="Đặt làm ảnh bìa">★</button>':'')+'<button type="button" data-rm="'+i+'" aria-label="Xoá ảnh">✕</button></span></div>'}).join('')+
+  (pics.length<10?'<div class="drop" id="drop" role="button" tabindex="0">+ Thêm ảnh<br><small>bấm hoặc kéo thả, tối đa 10</small></div>':'');
+  var dz=$('drop');if(dz){dz.onclick=function(){$('file').click()};dz.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();$('file').click()}};
+    dz.ondragover=function(e){e.preventDefault();dz.classList.add('over')};dz.ondragleave=function(){dz.classList.remove('over')};dz.ondrop=function(e){e.preventDefault();dz.classList.remove('over');addFiles(e.dataTransfer.files)}}
+}
+$('pics').addEventListener('click',function(e){var r=e.target.closest('[data-rm]'),c=e.target.closest('[data-cover]');
+  if(r){pics.splice(+r.dataset.rm,1);dirty=true;renderPics()}
+  if(c){var i=+c.dataset.cover;pics.unshift(pics.splice(i,1)[0]);dirty=true;renderPics()}});
+$('file').onchange=function(){addFiles(this.files);this.value=''};
+function shrink(file){return createImageBitmap(file).then(function(bm){var W=1600,s=Math.min(1,W/Math.max(bm.width,bm.height)),w=Math.round(bm.width*s),h=Math.round(bm.height*s);
+  var cv=document.createElement('canvas');cv.width=w;cv.height=h;cv.getContext('2d').drawImage(bm,0,0,w,h);
+  return new Promise(function(r){cv.toBlob(function(b){if(b&&b.type==='image/webp')r(b);else cv.toBlob(function(j){r(j)},'image/jpeg',.84)},'image/webp',.82)})})}
+function addFiles(list){var arr=[].slice.call(list).filter(function(f){return /^image\//.test(f.type)}).slice(0,10-pics.length);if(!arr.length)return;
+  say($('msg'),'Đang nén '+arr.length+' ảnh…','wait');
+  Promise.all(arr.map(function(f){return shrink(f).then(function(b){return{blob:b,url:URL.createObjectURL(b)}}).catch(function(){return null})})).then(function(rs){
+    var ok=rs.filter(Boolean);pics=pics.concat(ok);dirty=true;renderPics();
+    say($('msg'),ok.length<arr.length?'Có '+(arr.length-ok.length)+' ảnh không đọc được, hãy thử ảnh JPG hoặc PNG.':'Đã thêm '+ok.length+' ảnh. Bấm Lưu để đăng.',ok.length<arr.length?'err':'ok')})}
+
+/* ---------- menu ---------- */
+function renderMenu(){$('menu').innerHTML=(cur.menu||[]).map(function(m,i){return '<div class="mrow"><div class="fld"><input aria-label="Tên món" data-mn="'+i+'" value="'+esc(m[0])+'" maxlength="50" placeholder="Tên món"></div><div class="fld"><input aria-label="Giá (nghìn đồng)" data-mp="'+i+'" type="number" inputmode="numeric" min="0" value="'+esc(m[1])+'" placeholder="Giá (nghìn đ)"></div><button type="button" data-mr="'+i+'" aria-label="Xoá món">✕</button></div>'}).join('')||'<p class="help" style="margin:0">Chưa có món. Bấm Thêm món.</p>'}
+$('addMenu').onclick=function(){cur.menu=cur.menu||[];if(cur.menu.length>=12)return;cur.menu.push(['',0]);dirty=true;renderMenu();var ins=$('menu').querySelectorAll('[data-mn]');ins[ins.length-1].focus()};
+$('menu').addEventListener('input',function(e){var t=e.target;if(t.dataset.mn)cur.menu[+t.dataset.mn][0]=t.value;if(t.dataset.mp)cur.menu[+t.dataset.mp][1]=+t.value||0});
+$('menu').addEventListener('click',function(e){var b=e.target.closest('[data-mr]');if(b){cur.menu.splice(+b.dataset.mr,1);dirty=true;renderMenu()}});
+
+/* ---------- lưu: gom ảnh + dữ liệu thành 1 lần đăng ---------- */
+function commit(files,message,mutate){
+  return gh('/git/ref/heads/'+BR).then(function(ref){var head=ref.object.sha;
+    return gh('/git/commits/'+head).then(function(c){
+      return gh('/contents/'+DATA_PATH+'?ref='+head).then(function(f){
+        var fresh=JSON.parse(utf8b64(f.content));mutate(fresh);fresh.updated=new Date().toISOString().slice(0,10);
+        var all=files.concat([{path:DATA_PATH,content:JSON.stringify(fresh,null,1)+'\n',enc:'utf-8'}]);
+        return Promise.all(all.map(function(x){return gh('/git/blobs',{method:'POST',body:{content:x.content,encoding:x.enc||'base64'}}).then(function(b){return{path:x.path,mode:'100644',type:'blob',sha:b.sha}})}))
+        .then(function(tree){return gh('/git/trees',{method:'POST',body:{base_tree:c.tree.sha,tree:tree}})})
+        .then(function(t){return gh('/git/commits',{method:'POST',body:{message:message,tree:t.sha,parents:[head]}})})
+        .then(function(nc){return gh('/git/refs/heads/'+BR,{method:'PATCH',body:{sha:nc.sha}})})
+        .then(function(){data=fresh;return fresh})})})})}
+function commitRetry(files,msg,mutate){return commit(files,msg,mutate).catch(function(e){if(e.status===422||e.status===409)return commit(files,msg,mutate);throw e})}
+
+$('form').onsubmit=function(e){e.preventDefault();
+  var name=$('f_name').value.trim();if(name.length<2){say($('msg'),'Nhập tên bar.','err');$('f_name').focus();return}
+  var pmin=+$('f_pmin').value||0,pmax=+$('f_pmax').value||0;if(pmax&&pmin>pmax){say($('msg'),'Giá từ đang lớn hơn giá đến.','err');return}
+  var deal=Math.max(0,Math.min(60,+$('f_deal').value||0)),gp=Math.max(0,Math.min(50,+$('f_gpct').value||0));
+  var dup=data.bars.some(function(b){return b.id!==cur.id&&slug(b.name)===slug(name)});if(dup){say($('msg'),'Đã có bar trùng tên. Thêm khu vực vào tên để phân biệt.','err');return}
+  var b={};F.forEach(function(k){b[k]=$('f_'+k).value.trim()});
+  b.name=name;b.deal=deal;b.gpct=gp;b.rating=Math.max(1,Math.min(5,+b.rating||4.5));b.reviews=Math.max(0,parseInt(b.reviews)||0);
+  b.hours=$('f_open').value+' – '+$('f_close').value;b.price=[pmin,pmax||pmin];
+  b.bonusNote=$('f_note').value.trim();b.promoUntil=$('f_until').value||'';b.boost=$('f_boost').value||null;b.hidden=$('f_hidden').checked;
+  b.menu=(cur.menu||[]).filter(function(m){return String(m[0]).trim()}).map(function(m){return[String(m[0]).trim(),+m[1]||0]});
+  var isNew=!cur.id,sl=slug(name)||'bar',files=[],stamp=Date.now().toString(36);
+  var btn=$('save');btn.disabled=true;say($('msg'),'Đang tải ảnh và đăng…','wait');
+  Promise.all(pics.map(function(p,i){if(!p.blob)return Promise.resolve(p.path);var ext=p.blob.type==='image/webp'?'webp':'jpg',path='/img/bars/'+sl+'-'+stamp+'-'+(i+1)+'.'+ext;
+    return blobB64(p.blob).then(function(b64){files.push({path:IMG_DIR+path.split('/').pop(),content:b64});return path})}))
+  .then(function(paths){b.images=paths;
+    return commitRetry(files,(isNew?'Thêm bar ':'Cập nhật bar ')+name,function(fresh){
+      if(isNew){b.id=fresh.bars.reduce(function(m,x){return Math.max(m,x.id)},0)+1;b.hue=cur.hue;fresh.bars.push(b)}
+      else{var i=fresh.bars.findIndex(function(x){return x.id===cur.id});b.id=cur.id;b.hue=cur.hue;if(i<0)fresh.bars.push(b);else fresh.bars[i]=Object.assign(fresh.bars[i],b)}})})
+  .then(function(){dirty=false;edit(b.id);say($('msg'),'Đã đăng. Web cập nhật sau 1–2 phút tại /bar/'+slug(name)+'/','ok')})
+  .catch(function(e){say($('msg'),ghErr(e),'err')}).then(function(){btn.disabled=false})};
+
+var delArmed=0;
+$('del').onclick=function(){if(!cur||!cur.id)return;
+  if(!delArmed||Date.now()-delArmed>5000){delArmed=Date.now();say($('msg'),'Bấm Xoá bar lần nữa trong 5 giây để xoá hẳn '+cur.name+'. Muốn tạm ẩn thì tích ô Ẩn bar.','err');return}
+  delArmed=0;var name=cur.name,id=cur.id;say($('msg'),'Đang xoá…','wait');
+  commitRetry([],'Xoá bar '+name,function(fresh){fresh.bars=fresh.bars.filter(function(x){return x.id!==id})})
+  .then(function(){cur=null;dirty=false;renderList();edit(data.bars[0]?data.bars[0].id:null);say($('msg'),'Đã xoá '+name+'.','ok')})
+  .catch(function(e){say($('msg'),ghErr(e),'err')})};
+
+/* ---------- dải tin ---------- */
+document.querySelector('.tabs').onclick=function(e){var b=e.target.closest('[data-tab]');if(!b)return;document.querySelectorAll('.tabs button').forEach(function(x){x.classList.toggle('on',x===b)});
+  var tk=b.dataset.tab==='ticker';$('tabBars').style.display=tk?'none':'flex';$('form').hidden=tk;$('paneTicker').hidden=!tk};
+$('saveTk').onclick=function(){var lines=$('tk').value.split('\n').map(function(s){return s.trim().slice(0,140)}).filter(Boolean).slice(0,15);
+  say($('tkMsg'),'Đang đăng…','wait');commitRetry([],'Cập nhật dải tin',function(fresh){fresh.ticker=lines})
+  .then(function(){say($('tkMsg'),'Đã đăng '+lines.length+' tin. Web cập nhật sau 1–2 phút.','ok')}).catch(function(e){say($('tkMsg'),ghErr(e),'err')})};
+
+addEventListener('beforeunload',function(e){if(dirty){e.preventDefault();e.returnValue=''}});
+boot();
+})();
+</script>

@@ -6,6 +6,8 @@ on:
     branches: [main]
     paths: ['content/**', 'src/**', 'public/**']
   workflow_dispatch:
+  schedule:
+    - cron: '5 17 * * *'   # 0h05 giờ Việt Nam: gỡ khuyến mãi hết hạn
 permissions:
   contents: write
 concurrency:

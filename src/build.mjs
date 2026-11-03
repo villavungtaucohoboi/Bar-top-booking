@@ -25,7 +25,7 @@ const slugify = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').replace(
 const fmt = n => Number(n).toLocaleString('vi-VN');
 const url = p => SITE + '/' + p.replace(/^\//, '');          // URL tuyệt đối
 const href = p => BASE + p.replace(/^\//, '');              // đường dẫn trong site
-const UNS = (id, w) => /^https?:/.test(id) ? id : `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w || 800}&q=70`;
+const UNS = (id, w) => /^(https?:|\/)/.test(id) ? id : `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w || 800}&q=70`;
 function write(rel, html) {
   const f = path.join(OUT, rel);
   fs.mkdirSync(path.dirname(f), { recursive: true });
@@ -36,7 +36,20 @@ const clip = (s, n) => { s = String(s).replace(/\s+/g, ' ').trim(); if (s.length
 const fmtDate = d => { const [y, m, dd] = String(d).split('-'); return `${dd}/${m}/${y}`; };
 
 /* ---------- 1. Dữ liệu từ app ---------- */
-const APP = fs.readFileSync(path.join(ROOT, 'src/app.html'), 'utf8');
+/* Dữ liệu bar, khuyến mãi, dải tin: content/data.json (sửa bằng trang /quan-ly/) */
+const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/data.json'), 'utf8'));
+const TODAY_ISO = new Date().toISOString().slice(0, 10);
+const LIVE_BARS = DATA.bars.filter(b => !b.hidden).map(b => {
+  const x = { ...b };
+  if (x.promoUntil && x.promoUntil < TODAY_ISO) { x.bonus = 'Ưu đãi mới đang cập nhật, chat tổng đài để hỏi'; x.bonusNote = ''; }
+  x.images = (x.images || []).map(p => p.startsWith('/') ? (CFG.basePath.replace(/\/$/, '') + p) : p);
+  return x;
+});
+let APP = fs.readFileSync(path.join(ROOT, 'src/app.html'), 'utf8');
+{ const a = APP.indexOf('const BARS=['), z = APP.indexOf('\n];\n', a);
+  if (a < 0 || z < 0) throw new Error('Không tìm thấy BARS trong app.html');
+  APP = APP.slice(0, a) + 'const BARS=' + JSON.stringify(LIVE_BARS) + ';' + APP.slice(z + 3);
+  APP = APP.replace('const TICKER=[];', 'const TICKER=' + JSON.stringify(DATA.ticker || []).replace(/</g, '\\u003c') + ';'); }
 function grab(start, end) {
   const a = APP.indexOf(start); const b = APP.indexOf(end, a);
   if (a < 0 || b < 0) throw new Error('Không tìm thấy dữ liệu: ' + start);
@@ -62,7 +75,7 @@ for (const c of CITIES) { c.slug = 'bar-' + slugify(c.name); c.path = c.slug + '
 const cityOf = id => CITIES.find(c => c.id === id);
 const rankOrder = { top: 0, hot: 1, null: 2 };
 const ranked = list => list.slice().sort((a, b) => (rankOrder[a.boost] - rankOrder[b.boost]) || b.rating - a.rating);
-const barImgs = b => { const p = POOL[TYPE_POOL[b.type]] || POOL.cocktail; const k = b.id % p.length; return p.slice(k).concat(p.slice(0, k)).slice(0, 3); };
+const barImgs = b => { if (b.images && b.images.length) return b.images.concat((POOL[TYPE_POOL[b.type]] || POOL.cocktail).slice(0, 1)); const p = POOL[TYPE_POOL[b.type]] || POOL.cocktail; const k = b.id % p.length; return p.slice(k).concat(p.slice(0, k)).slice(0, 3); };
 const cityImgs = c => (CITY_IMG[c.id] || []).concat(POOL.club.slice(0, 2));
 const bookHref = b => href('') + '#dat-' + b.id;
 
@@ -185,7 +198,7 @@ const CSP = [
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.tawk.to",
   "font-src 'self' data: https://fonts.gstatic.com https://*.tawk.to",
   "img-src 'self' data: blob: https://images.unsplash.com https://*.tawk.to https://*.googleusercontent.com",
-  "connect-src 'self' https://raw.githubusercontent.com https://*.tawk.to wss://*.tawk.to https://*.googleapis.com https://*.firebaseio.com",
+  "connect-src 'self' https://api.github.com https://raw.githubusercontent.com https://*.tawk.to wss://*.tawk.to https://*.googleapis.com https://*.firebaseio.com",
   "media-src 'self' data: blob:",
   "frame-src https://*.tawk.to https://*.firebaseapp.com https://accounts.google.com",
   "worker-src 'self' blob:",
@@ -359,7 +372,7 @@ function barPage(b) {
   const title = clip(`${b.name} ${c.name}: giá, menu, đặt bàn giảm ${b.deal}%`, 65);
   const desc = clip(`${b.name}, ${b.type.toLowerCase()} ở ${b.area}, ${c.name}. Mở ${b.hours}, ${b.price[0]}k–${b.price[1]}k/người. Đặt qua TopChill giảm ${b.deal}%, giờ vàng giảm thêm ${b.gpct}%, ${b.bonus.toLowerCase()}.`, 160);
   const crumbs = [['Trang chủ', ''], [`Bar ${c.name}`, c.path], [b.name, b.path]];
-  const menu = MENU[b.type] || [];
+  const menu = (b.menu && b.menu.length) ? b.menu : (MENU[b.type] || []);
   const faq = [
     { q: `${b.name} mở cửa mấy giờ?`, a: `${b.name} mở cửa từ ${b.hours} hằng ngày. Giờ vàng ${b.gLabel} được giảm thêm ${b.gpct}% khi đặt bàn qua TopChill.` },
     { q: `Đi ${b.name} hết bao nhiêu tiền?`, a: `Mức chi trung bình ${b.price[0]}.000đ–${b.price[1]}.000đ mỗi người. ${menu.length ? `Đồ uống nổi bật: ${menu.map(m => `${m[0]} ${fmt(m[1])}.000đ`).join(', ')}.` : ''} Đặt qua TopChill được giảm ${b.deal}% tổng bill.` },
@@ -402,7 +415,7 @@ function barPage(b) {
     <div class="perkbox">
       <div class="perk"><b class="v">-${b.deal}%</b><div><b>Giảm thẳng vào bill</b><small>Quét mã QR tại quầy khi thanh toán.</small></div></div>
       <div class="perk n"><b class="v">-${b.gpct}%</b><div><b>Giờ vàng ${b.gLabel}</b><small>Đến trong khung này, giảm thêm, cộng dồn.</small></div></div>
-      <div class="perk"><b class="v">🎁</b><div><b>${esc(b.bonus)}</b><small>Tặng tại bàn theo điều kiện của bar.</small></div></div>
+      <div class="perk"><b class="v">🎁</b><div><b>${esc(b.bonus)}</b><small>${esc(b.bonusNote || 'Tặng tại bàn theo điều kiện của bar.')}${b.promoUntil ? ' · Hạn đến ' + fmtDate(b.promoUntil) : ''}</small></div></div>
       <div class="perk"><b class="v">+15%</b><div><b>Hoàn điểm đổi tiền</b><small>1 điểm = 500đ, đổi về Momo hoặc trừ bill.</small></div></div>
     </div>
     ${menu.length ? `<h2 style="margin-top:28px">Menu nổi bật</h2><table class="info"><tbody>${menu.map(m => `<tr><th scope="row">${esc(m[0])}</th><td class="num">${fmt(m[1] * 1000)}đ</td></tr>`).join('')}</tbody></table>` : ''}
@@ -533,6 +546,23 @@ ${body}
 `);
 }
 
+/* ---------- 10b. Trang quản lý bar ---------- */
+function adminPage() {
+  const tpl = fs.readFileSync(path.join(ROOT, 'src/admin.html'), 'utf8');
+  const data = { repo: CFG.repo, branch: CFG.branch, cities: CITIES.map(c => ({ id: c.id, name: c.name })), types: Object.keys(MENU) };
+  write('quan-ly/index.html', `<!doctype html>
+<html lang="vi">
+<head>
+${headTags({ title: 'Quản lý bar – TopChill', desc: 'Trang quản lý nội bộ.', pathRel: 'quan-ly/', noindex: true })}
+</head>
+<body>
+${header('')}
+${tpl.replace('/*__ADMIN_DATA__*/null', JSON.stringify(data))}
+</body>
+</html>
+`);
+}
+
 /* ---------- 11. Trang chủ (app) ---------- */
 function homePage() {
   let body = APP.replace('<meta name="claude:viewport-fit-sides" content="cover">\n', '');
@@ -583,7 +613,7 @@ function misc(pages) {
   const urls = pages.filter(p => !p.noindex).map(p => `  <url><loc>${url(p.path)}</loc><lastmod>${p.lastmod || TODAY}</lastmod>${p.priority ? `<priority>${p.priority}</priority>` : ''}</url>`).join('\n');
   write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
   write('robots.txt', INDEX
-    ? `User-agent: *\nAllow: /\nDisallow: ${BASE}viet-bai/\nDisallow: ${BASE}src/\nDisallow: ${BASE}content/\n\nSitemap: ${url('sitemap.xml')}\n`
+    ? `User-agent: *\nAllow: /\nDisallow: ${BASE}viet-bai/\nDisallow: ${BASE}quan-ly/\nDisallow: ${BASE}src/\nDisallow: ${BASE}content/\n\nSitemap: ${url('sitemap.xml')}\n`
     : `# Đang ở chế độ demo: chặn Google lập chỉ mục.\n# Bật "allowIndexing": true trong src/config.json khi đã có dữ liệu bar thật và tên miền chính thức.\nUser-agent: *\nDisallow: /\n`);
 }
 
@@ -619,7 +649,7 @@ async function minifyAll() {
 // dọn đầu ra cũ (chỉ các thư mục do build quản lý)
 if (OUT !== ROOT) fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
-for (const d of ['bar', 'blog', 'viet-bai', 'huy-hieu', 'assets', 'mau-bia', ...CITIES.map(c => c.slug)]) fs.rmSync(path.join(OUT, d), { recursive: true, force: true });
+for (const d of ['bar', 'blog', 'viet-bai', 'huy-hieu', 'assets', 'mau-bia', 'img', 'quan-ly', ...CITIES.map(c => c.slug)]) fs.rmSync(path.join(OUT, d), { recursive: true, force: true });
 for (const f of fs.readdirSync(path.join(ROOT, 'public'))) { fs.copyFileSync(path.join(ROOT, 'public', f), path.join(OUT, f)); GENERATED.push(f); }
 fs.mkdirSync(path.join(OUT, 'assets'), { recursive: true });
 fs.copyFileSync(path.join(ROOT, 'src/site.css'), path.join(OUT, 'assets/site.css'));
@@ -627,6 +657,9 @@ fs.copyFileSync(path.join(ROOT, 'src/chat.css'), path.join(OUT, 'assets/chat.css
 fs.copyFileSync(path.join(ROOT, 'src/chat.js'), path.join(OUT, 'assets/chat.js'));
 fs.copyFileSync(path.join(ROOT, 'src/music.js'), path.join(OUT, 'assets/music.js'));
 fs.copyFileSync(path.join(ROOT, 'src/install.js'), path.join(OUT, 'assets/install.js'));
+// ảnh bar đã up
+{ const src = path.join(ROOT, 'content/img/bars'), dst = path.join(OUT, 'img/bars');
+  if (fs.existsSync(src)) { fs.mkdirSync(dst, { recursive: true }); for (const f of fs.readdirSync(src)) if (/\.(webp|jpe?g|png)$/i.test(f)) fs.copyFileSync(path.join(src, f), path.join(dst, f)); } }
 GENERATED.push('assets/site.css', 'assets/chat.css', 'assets/chat.js', 'assets/music.js', 'assets/install.js');
 {
   const order = ranked(BARS);
@@ -645,6 +678,7 @@ blogIndex(); pages.push({ path: 'blog/', priority: '0.8' });
 POSTS.forEach((p, i) => { postPage(p, i); pages.push({ path: p.path, lastmod: p.updated, priority: '0.8' }); });
 badgePage(); pages.push({ path: 'huy-hieu/', priority: '0.3' });
 editorPage();
+adminPage();
 { // trang so sánh mẫu bìa (nội bộ, noindex)
   const src = fs.readFileSync(path.join(ROOT, 'src/mau-bia.html'), 'utf8').replace('<meta name="claude:viewport-fit-sides" content="cover">\n', '');
   const i = src.indexOf('</style>') + 8;
@@ -668,6 +702,10 @@ write('_headers', `/*
 
 /viet-bai/*
   X-Robots-Tag: noindex, nofollow
+
+/quan-ly/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
 `);
 await minifyAll();
 console.log(`Đã build: ${CITIES.length} trang thành phố, ${BARS.length} trang bar, ${POSTS.length} bài viết. Lập chỉ mục: ${INDEX ? 'BẬT' : 'TẮT (demo)'}.`);

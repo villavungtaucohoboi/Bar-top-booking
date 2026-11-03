@@ -1,0 +1,824 @@
+{
+ "updated": "2026-11-03",
+ "ticker": [
+  "🔥 Minh T. vừa đặt bàn VIP tại Mộc Sky Bar",
+  "⚡ Giờ vàng Tạ Hiện Underground giảm thêm 20%",
+  "🍾 Hà L. vừa nhận 1 chai Macallan 12",
+  "🎧 Guest DJ Bangkok tối nay tại Saigon 52 Rooftop",
+  "💸 Quốc B. vừa đổi 1.000 điểm = 500.000đ",
+  "🌊 Pool party thứ 7 tại Mỹ Khê Beach Club",
+  "🔥 Khánh V. vừa đặt sofa 8 người tại Bùi Viện Neon Club"
+ ],
+ "bars": [
+  {
+   "id": 1,
+   "name": "Mộc Sky Bar",
+   "city": "hn",
+   "area": "Tây Hồ",
+   "addr": "Tầng 26, phố Trích Sài",
+   "type": "Rooftop",
+   "hours": "18:00 – 02:00",
+   "price": [
+    350,
+    700
+   ],
+   "music": "Deep house · R&B",
+   "dress": "Smart casual",
+   "desc": "View toàn cảnh Hồ Tây 360°, DJ quốc tế cuối tuần. Bar rooftop được đặt nhiều nhất Hà Nội 3 tháng liên tiếp.",
+   "rating": 4.8,
+   "reviews": 1240,
+   "deal": 20,
+   "gpct": 15,
+   "bonus": "Tặng 1 chai Chivas 18 cho bàn VIP từ 5 triệu",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": "top",
+   "hue": 42,
+   "menu": [
+    [
+     "Chivas 18",
+     2900
+    ],
+    [
+     "Macallan 12",
+     3900
+    ],
+    [
+     "Signature cocktail",
+     220
+    ],
+    [
+     "Tháp bia Heineken 3L",
+     650
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 2,
+   "name": "Ngõ Nhỏ Cocktail",
+   "city": "hn",
+   "area": "Hoàn Kiếm",
+   "addr": "Ngõ Hàng Bạc",
+   "type": "Cocktail bar",
+   "hours": "17:00 – 01:00",
+   "price": [
+    180,
+    350
+   ],
+   "music": "Jazz-hop · Soul",
+   "dress": "Tự do",
+   "desc": "Bar giấu mình trong ngõ phố cổ, 12 ghế quầy, bartender từng thi World Class. Hợp hẹn hò và nhóm nhỏ.",
+   "rating": 4.7,
+   "reviews": 860,
+   "deal": 15,
+   "gpct": 10,
+   "bonus": "Free 2 cocktail signature cho nhóm từ 4 người",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": "hot",
+   "hue": 300,
+   "menu": [
+    [
+     "Signature cocktail",
+     180
+    ],
+    [
+     "Old Fashioned",
+     200
+    ],
+    [
+     "Negroni",
+     190
+    ],
+    [
+     "Mocktail",
+     120
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 3,
+   "name": "Tạ Hiện Underground",
+   "city": "hn",
+   "area": "Hoàn Kiếm",
+   "addr": "Phố Tạ Hiện",
+   "type": "Club",
+   "hours": "21:00 – 04:00",
+   "price": [
+    250,
+    600
+   ],
+   "music": "EDM · Hip-hop",
+   "dress": "Tự do",
+   "desc": "Club hầm 400 chỗ, âm thanh Funktion-One, line-up DJ đổi mỗi tối. Cuối tuần luôn kín bàn trước 23h.",
+   "rating": 4.5,
+   "reviews": 2100,
+   "deal": 10,
+   "gpct": 20,
+   "bonus": "Tặng tháp bia 3L cho bàn từ 6 người",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": null,
+   "hue": 190,
+   "menu": [
+    [
+     "Chivas 12",
+     1900
+    ],
+    [
+     "Belvedere",
+     2400
+    ],
+    [
+     "Tháp bia 3L",
+     550
+    ],
+    [
+     "Combo 10 shot",
+     600
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 4,
+   "name": "Hồ Tây Sunset Lounge",
+   "city": "hn",
+   "area": "Tây Hồ",
+   "addr": "Đường Nguyễn Đình Thi",
+   "type": "Lounge",
+   "hours": "16:00 – 00:00",
+   "price": [
+    300,
+    600
+   ],
+   "music": "Chill · Acoustic",
+   "dress": "Smart casual",
+   "desc": "Lounge sát mặt hồ, ngắm hoàng hôn với cocktail và tapas. Có acoustic live tối thứ 5 và chủ nhật.",
+   "rating": 4.6,
+   "reviews": 540,
+   "deal": 15,
+   "gpct": 20,
+   "bonus": "Tặng khay tapas cho bàn check-in trước 20:00",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": null,
+   "hue": 20,
+   "menu": [
+    [
+     "Hennessy VSOP",
+     2600
+    ],
+    [
+     "Cocktail theo mùa",
+     190
+    ],
+    [
+     "Tapas set",
+     350
+    ],
+    [
+     "Vang đỏ Chile",
+     890
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 5,
+   "name": "Saigon 52 Rooftop",
+   "city": "sg",
+   "area": "Quận 1",
+   "addr": "Tầng 52, phố đi bộ Nguyễn Huệ",
+   "type": "Rooftop",
+   "hours": "18:00 – 02:00",
+   "price": [
+    400,
+    900
+   ],
+   "music": "House · Afro · Hip-hop",
+   "dress": "Smart casual, không dép lê",
+   "desc": "Rooftop cao nhất Sài Gòn, view sông và skyline Landmark. Bar có điểm đánh giá cao nhất toàn hệ thống.",
+   "rating": 4.9,
+   "reviews": 3400,
+   "deal": 20,
+   "gpct": 15,
+   "bonus": "Tặng 1 chai Macallan 12 cho bàn VIP",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": "top",
+   "hue": 210,
+   "menu": [
+    [
+     "Chivas 18",
+     2900
+    ],
+    [
+     "Macallan 12",
+     3900
+    ],
+    [
+     "Signature cocktail",
+     220
+    ],
+    [
+     "Tháp bia Heineken 3L",
+     650
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 6,
+   "name": "Bùi Viện Neon Club",
+   "city": "sg",
+   "area": "Quận 1",
+   "addr": "Phố Tây Bùi Viện",
+   "type": "Club",
+   "hours": "21:00 – 05:00",
+   "price": [
+    200,
+    500
+   ],
+   "music": "EDM · Vinahouse",
+   "dress": "Tự do",
+   "desc": "Club 3 tầng ngay phố Tây, sàn mở đến 5h sáng. Hợp nhóm đông muốn quẩy tới bến.",
+   "rating": 4.4,
+   "reviews": 2800,
+   "deal": 10,
+   "gpct": 20,
+   "bonus": "Free vào cửa + 1 shot chào mừng mỗi khách",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": "hot",
+   "hue": 330,
+   "menu": [
+    [
+     "Chivas 12",
+     1900
+    ],
+    [
+     "Belvedere",
+     2400
+    ],
+    [
+     "Tháp bia 3L",
+     550
+    ],
+    [
+     "Combo 10 shot",
+     600
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 7,
+   "name": "Thảo Điền Garden Bar",
+   "city": "sg",
+   "area": "Thủ Đức",
+   "addr": "Đường Xuân Thuỷ, Thảo Điền",
+   "type": "Garden bar",
+   "hours": "17:00 – 01:00",
+   "price": [
+    250,
+    500
+   ],
+   "music": "Indie · Lo-fi",
+   "dress": "Tự do",
+   "desc": "Sân vườn 600m², nhiều cây, bia craft và cocktail trái cây. Hợp tụ tập tối thứ 6 không ồn ào.",
+   "rating": 4.7,
+   "reviews": 920,
+   "deal": 15,
+   "gpct": 10,
+   "bonus": "Tặng khay tapas cho bàn từ 4 người",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": null,
+   "hue": 120,
+   "menu": [
+    [
+     "Bia craft Pasteur",
+     110
+    ],
+    [
+     "Cocktail trái cây",
+     160
+    ],
+    [
+     "Tapas set",
+     300
+    ],
+    [
+     "Vang vải",
+     750
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 8,
+   "name": "Bến Nghé Jazz House",
+   "city": "sg",
+   "area": "Quận 1",
+   "addr": "Đường Lê Lợi",
+   "type": "Jazz bar",
+   "hours": "19:00 – 01:00",
+   "price": [
+    300,
+    600
+   ],
+   "music": "Jazz live mỗi tối",
+   "dress": "Smart casual",
+   "desc": "Ban nhạc jazz live 21:00 mỗi tối, 180 chỗ. Dàn whisky hơn 120 chai.",
+   "rating": 4.8,
+   "reviews": 610,
+   "deal": 10,
+   "gpct": 10,
+   "bonus": "Tặng 1 ly whisky sour cho mỗi khách đặt trước",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": null,
+   "hue": 40,
+   "menu": [
+    [
+     "Whisky sour",
+     180
+    ],
+    [
+     "Glenfiddich 12",
+     2200
+    ],
+    [
+     "Phô mai & jambon",
+     320
+    ],
+    [
+     "Vang trắng Pháp",
+     850
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 9,
+   "name": "Mỹ Khê Beach Club",
+   "city": "dn",
+   "area": "Sơn Trà",
+   "addr": "Bãi biển Mỹ Khê",
+   "type": "Beach club",
+   "hours": "15:00 – 02:00",
+   "price": [
+    300,
+    700
+   ],
+   "music": "Tropical house · Pool party",
+   "dress": "Beachwear",
+   "desc": "Beach club sát biển, hồ bơi vô cực, DJ từ 20h. Pool party mỗi thứ 7.",
+   "rating": 4.7,
+   "reviews": 1500,
+   "deal": 20,
+   "gpct": 15,
+   "bonus": "Tặng bucket 6 chai bia cho bàn từ 4 người",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": "top",
+   "hue": 185,
+   "menu": [
+    [
+     "Bucket 6 bia",
+     420
+    ],
+    [
+     "Mojito jug 1.5L",
+     520
+    ],
+    [
+     "Vang sủi Prosecco",
+     990
+    ],
+    [
+     "Hải sản nướng",
+     480
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 10,
+   "name": "Cầu Rồng Sky Lounge",
+   "city": "dn",
+   "area": "Hải Châu",
+   "addr": "Tầng 36, đường Bạch Đằng",
+   "type": "Rooftop",
+   "hours": "18:00 – 01:00",
+   "price": [
+    350,
+    650
+   ],
+   "music": "R&B · Chill",
+   "dress": "Smart casual",
+   "desc": "Ngắm cầu Rồng phun lửa 21h thứ 7, chủ nhật ngay từ bàn. Cocktail theo mùa.",
+   "rating": 4.6,
+   "reviews": 780,
+   "deal": 15,
+   "gpct": 15,
+   "bonus": "Tặng 1 chai vang cho cặp đôi",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": null,
+   "hue": 10,
+   "menu": [
+    [
+     "Chivas 18",
+     2900
+    ],
+    [
+     "Macallan 12",
+     3900
+    ],
+    [
+     "Signature cocktail",
+     220
+    ],
+    [
+     "Tháp bia Heineken 3L",
+     650
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 11,
+   "name": "Trần Phú Sea Lounge",
+   "city": "nt",
+   "area": "Lộc Thọ",
+   "addr": "Đường Trần Phú",
+   "type": "Lounge",
+   "hours": "17:00 – 01:00",
+   "price": [
+    250,
+    500
+   ],
+   "music": "Chill · Live band",
+   "dress": "Tự do",
+   "desc": "Lounge mặt biển, gió thổi suốt đêm, live band Philippines từ 21h.",
+   "rating": 4.5,
+   "reviews": 430,
+   "deal": 15,
+   "gpct": 10,
+   "bonus": "Free khay hải sản nướng cho bàn từ 6",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": null,
+   "hue": 200,
+   "menu": [
+    [
+     "Hennessy VSOP",
+     2600
+    ],
+    [
+     "Cocktail theo mùa",
+     190
+    ],
+    [
+     "Tapas set",
+     350
+    ],
+    [
+     "Vang đỏ Chile",
+     890
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 12,
+   "name": "Sương Mù Whisky Bar",
+   "city": "dl",
+   "area": "Phường 1",
+   "addr": "Dốc Nhà Làng",
+   "type": "Whisky bar",
+   "hours": "18:00 – 00:00",
+   "price": [
+    200,
+    450
+   ],
+   "music": "Blues · Acoustic",
+   "dress": "Ấm áp, tự do",
+   "desc": "Lò sưởi, 200 chai whisky, nhạc blues. Chỗ ngồi hợp tối lạnh Đà Lạt.",
+   "rating": 4.9,
+   "reviews": 390,
+   "deal": 10,
+   "gpct": 10,
+   "bonus": "Tặng tasting set 3 loại whisky cho bàn đặt trước",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": null,
+   "hue": 30,
+   "menu": [
+    [
+     "Tasting set 3 loại",
+     290
+    ],
+    [
+     "Lagavulin 16",
+     3200
+    ],
+    [
+     "Nikka from the barrel",
+     2100
+    ],
+    [
+     "Highball",
+     150
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 13,
+   "name": "Sunset Sành Beach Bar",
+   "city": "pq",
+   "area": "Dương Đông",
+   "addr": "Bãi Trường",
+   "type": "Beach club",
+   "hours": "15:00 – 01:00",
+   "price": [
+    300,
+    700
+   ],
+   "music": "Sunset session · House",
+   "dress": "Beachwear",
+   "desc": "Hoàng hôn đẹp nhất Phú Quốc, sunset session 17:30 mỗi ngày, fire show cuối tuần.",
+   "rating": 4.8,
+   "reviews": 1100,
+   "deal": 20,
+   "gpct": 20,
+   "bonus": "Tặng 1 chai vang sủi cho cặp đôi, bucket bia cho nhóm",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": "hot",
+   "hue": 350,
+   "menu": [
+    [
+     "Bucket 6 bia",
+     420
+    ],
+    [
+     "Mojito jug 1.5L",
+     520
+    ],
+    [
+     "Vang sủi Prosecco",
+     990
+    ],
+    [
+     "Hải sản nướng",
+     480
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 14,
+   "name": "Cát Bi Pub & Grill",
+   "city": "hp",
+   "area": "Ngô Quyền",
+   "addr": "Đường Lê Hồng Phong",
+   "type": "Pub",
+   "hours": "17:00 – 01:00",
+   "price": [
+    150,
+    300
+   ],
+   "music": "Rock · Bóng đá",
+   "dress": "Tự do",
+   "desc": "Pub chiếu bóng đá màn hình lớn, bia tươi, đồ nướng. Hợp hội anh em.",
+   "rating": 4.4,
+   "reviews": 320,
+   "deal": 10,
+   "gpct": 15,
+   "bonus": "Tặng khay nướng cho bàn từ 4",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": null,
+   "hue": 90,
+   "menu": [
+    [
+     "Bia tươi 1L",
+     140
+    ],
+    [
+     "Tháp bia 3L",
+     380
+    ],
+    [
+     "Khay nướng 4 người",
+     350
+    ],
+    [
+     "Cánh gà BBQ",
+     150
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 15,
+   "name": "Bãi Sau Beach Pub",
+   "city": "vt",
+   "area": "Phường 2",
+   "addr": "Đường Thuỳ Vân",
+   "type": "Pub",
+   "hours": "16:00 – 01:00",
+   "price": [
+    150,
+    350
+   ],
+   "music": "Pop · Live acoustic",
+   "dress": "Tự do",
+   "desc": "Pub bãi biển, bàn ngoài trời, acoustic cuối tuần. Giá mềm nhất Vũng Tàu.",
+   "rating": 4.3,
+   "reviews": 280,
+   "deal": 15,
+   "gpct": 10,
+   "bonus": "Free 1 tháp bia cho bàn từ 8 người",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": null,
+   "hue": 170,
+   "menu": [
+    [
+     "Bia tươi 1L",
+     140
+    ],
+    [
+     "Tháp bia 3L",
+     380
+    ],
+    [
+     "Khay nướng 4 người",
+     350
+    ],
+    [
+     "Cánh gà BBQ",
+     150
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 16,
+   "name": "Ninh Kiều Night Lounge",
+   "city": "ct",
+   "area": "Ninh Kiều",
+   "addr": "Bến Ninh Kiều",
+   "type": "Lounge",
+   "hours": "18:00 – 01:00",
+   "price": [
+    200,
+    400
+   ],
+   "music": "R&B · Chill",
+   "dress": "Smart casual",
+   "desc": "Lounge ven sông Hậu, view bến Ninh Kiều về đêm.",
+   "rating": 4.5,
+   "reviews": 210,
+   "deal": 15,
+   "gpct": 15,
+   "bonus": "Tặng 2 cocktail cho bàn đặt trước 20h",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": null,
+   "hue": 270,
+   "menu": [
+    [
+     "Hennessy VSOP",
+     2600
+    ],
+    [
+     "Cocktail theo mùa",
+     190
+    ],
+    [
+     "Tapas set",
+     350
+    ],
+    [
+     "Vang đỏ Chile",
+     890
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 17,
+   "name": "Bãi Cháy Marina Club",
+   "city": "ql",
+   "area": "Bãi Cháy",
+   "addr": "Bến du thuyền Bãi Cháy",
+   "type": "Club",
+   "hours": "21:00 – 03:00",
+   "price": [
+    250,
+    500
+   ],
+   "music": "EDM · Vinahouse",
+   "dress": "Tự do",
+   "desc": "Club lớn nhất Hạ Long, ngay bến du thuyền. Hợp nhóm du lịch.",
+   "rating": 4.4,
+   "reviews": 260,
+   "deal": 10,
+   "gpct": 20,
+   "bonus": "Tặng tháp bia 3L cho nhóm từ 6",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": null,
+   "hue": 230,
+   "menu": [
+    [
+     "Chivas 12",
+     1900
+    ],
+    [
+     "Belvedere",
+     2400
+    ],
+    [
+     "Tháp bia 3L",
+     550
+    ],
+    [
+     "Combo 10 shot",
+     600
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": 18,
+   "name": "Huế Night Garden",
+   "city": "hue",
+   "area": "Phú Hội",
+   "addr": "Đường Phạm Ngũ Lão",
+   "type": "Garden bar",
+   "hours": "17:00 – 00:00",
+   "price": [
+    150,
+    300
+   ],
+   "music": "Acoustic · Indie",
+   "dress": "Tự do",
+   "desc": "Sân vườn yên tĩnh bên bờ sông Hương, cocktail hương trà và nhạc acoustic.",
+   "rating": 4.6,
+   "reviews": 190,
+   "deal": 15,
+   "gpct": 10,
+   "bonus": "Tặng khay nem lụi cho bàn từ 4",
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": null,
+   "hue": 110,
+   "menu": [
+    [
+     "Bia craft Pasteur",
+     110
+    ],
+    [
+     "Cocktail trái cây",
+     160
+    ],
+    [
+     "Tapas set",
+     300
+    ],
+    [
+     "Vang vải",
+     750
+    ]
+   ],
+   "images": [],
+   "hidden": false
+  }
+ ]
+}
