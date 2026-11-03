@@ -1,0 +1,63 @@
+{
+  "id": 180,
+  "name": "Stir",
+  "city": "sg",
+  "addr": "Tầng 1, 136 Lê Thánh Tôn",
+  "images": [
+    {
+      "url": "https://cdn.enprimeurclub.com/storage/v1/object/public/images/locations/rec2bhCtKouo2wdRG/hero4.jpg?aspect_ratio=1.91%3A1&crop_gravity=center&quality=85&width=1200",
+      "source": "https://www.enprimeurclub.com/bars/stir-ho-chi-minh-city",
+      "alt": "Stir Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/180-stir/01.webp",
+      "width": 1200,
+      "height": 628,
+      "sha256": "70612a114be2285f2bf5d1184c3138a897a128b4e3d924d331633079252a4517"
+    },
+    {
+      "url": "https://cdn.enprimeurclub.com/storage/v1/object/public/images/locations/recMUKYth4SHvYlDk/hero1.jpg",
+      "source": "https://www.enprimeurclub.com/bars/stir-ho-chi-minh-city",
+      "alt": "Stir Cocktail Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/180-stir/02.webp",
+      "width": 1120,
+      "height": 648,
+      "sha256": "89e3e8b33ad3c0d0fea95312ba6e682afdcc916f0fb8e4d8d1920840a03f9036"
+    },
+    {
+      "url": "https://sanhruou.com/media/8316/file/blog/Stir-menu.jpg",
+      "source": "https://sanhruou.com/stir-cocktail-bar-quan-1/",
+      "alt": "STIR Cocktail Bar Menu",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "sg/180-stir/03.webp",
+      "width": 960,
+      "height": 800,
+      "sha256": "96b88ee1d279b2b22443bb092781270e9dbc7f541e33ef56e1d287c11d297e7b"
+    },
+    {
+      "url": "https://ak-d.tripcdn.com/images/1mi07224x8uk8bzpt891F.jpg?proc=source%2Ftrip",
+      "source": "https://www.trip.com/moments/detail/ho-chi-minh-city-434-121207752/",
+      "alt": "STIR Cocktail Bar Entrance",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "sg/180-stir/04.webp",
+      "width": 1227,
+      "height": 920,
+      "sha256": "e91b8b6893637382baf50b8ccfb8631aea2e88195cc1e2822933b38f7f64a9b3"
+    },
+    {
+      "url": "https://www.vietnamonline.com/media/uploads/froala_editor/images/Stir%20Saigon.jpeg",
+      "source": "https://www.vietnamonline.com/news/hcmc-stir-bar-listed-among-asias-100-best-bars.html",
+      "alt": "Stir Bar’s Signature Red Cocktail",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "sg/180-stir/05.webp",
+      "width": 1080,
+      "height": 1080,
+      "sha256": "0bd588a22c85444fe82cbcb630bded8bfa57c9ea13e9b6adc04b9f66b856352f"
+    }
+  ]
+}

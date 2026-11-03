@@ -1,0 +1,41 @@
+{
+  "id": 137,
+  "name": "Oasis Bar & Restaurant",
+  "city": "nt",
+  "addr": "3 Trần Quang Khải",
+  "images": [
+    {
+      "url": "https://cdn2.tuoitre.vn/471584752817336320/2026/7/26/8-17850539010111831786151.png",
+      "source": "https://news.tuoitre.vn/vietnams-nha-trang-tackles-foreign-language-only-shop-signs-103260726161107584.htm",
+      "alt": "Oasis Restaurant Signage in Nha Trang",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "nt/137-oasis-bar-restaurant/01.webp",
+      "width": 730,
+      "height": 548,
+      "sha256": "240b7cf965db6bc02c7404d6db811e0c9be8bd7172cbda813395841c56cb5097"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lw97rj3mpq6xe9@resize_ss640x400",
+      "source": "https://www.foody.vn/khanh-hoa/bar-pub-phuc-vu-thit-bo?vt=row",
+      "alt": "Oasis Bar & Restaurant",
+      "score": 100,
+      "basis": "alt",
+      "file": "nt/137-oasis-bar-restaurant/02.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "67318319226e90438cc2cc357cc5b232474989017eda3a1db239ee110e1a83b7"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lw9aj2rggjix10@resize_ss640x400",
+      "source": "https://www.foody.vn/khanh-hoa/bar-pub-phuc-vu-thit-bo?vt=row",
+      "alt": "Hush-Hush Bar",
+      "score": 70,
+      "basis": "section",
+      "file": "nt/137-oasis-bar-restaurant/03.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "f9d8a8e3866f9ea3bbd7fff79de77b38cf9d66d694d87ecf9ba359ec45da6062"
+    }
+  ]
+}

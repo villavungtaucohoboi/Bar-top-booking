@@ -1,0 +1,63 @@
+{
+  "id": 61,
+  "name": "New Phương Đông",
+  "city": "dn",
+  "addr": "20 Đống Đa",
+  "images": [
+    {
+      "url": "https://images2.thanhnien.vn/528068263637045248/2023/3/9/new-phuong-dong-3-16783503934351426355434.jpg",
+      "source": "https://thanhnien.vn/da-nang-vu-truong-new-phuong-dong-cham-dut-kinh-doanh-sau-hon-20-nam-hoat-dong-185230309153515922.htm",
+      "alt": "Closure of New Phương Đông Nightclub",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dn/61-new-phuong-dong/01.webp",
+      "width": 2000,
+      "height": 1500,
+      "sha256": "b4a8ee50f0061ec966720489071c806e36aea3a1714ee36430c0b338d8202c42"
+    },
+    {
+      "url": "https://gcs.tripi.vn/public-tripi/tripi-feed/img/486623odb/anh-mo-ta.png",
+      "source": "https://tripi.vn/blog/vi/xep-hang/5-danh-gia-chat-luong-nhat-ve-new-phuong-dong-club-tripi",
+      "alt": "Night Out at New Phương Đông Club",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dn/61-new-phuong-dong/02.webp",
+      "width": 1440,
+      "height": 960,
+      "sha256": "74caeafc9a9c4615f2238dbc95336fe57e74ac5c19246e1deb74fecf8adf0762"
+    },
+    {
+      "url": "https://focusasiatravel.com/wp-content/uploads/2019/04/new-phuong-dong.png",
+      "source": "https://focusasiatravel.com/drinking-and-nightlife-in-da-nang-bars-clubs-and-craft-beer/",
+      "alt": "New Phương Đông Nightclub Entrance",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dn/61-new-phuong-dong/03.webp",
+      "width": 1000,
+      "height": 800,
+      "sha256": "fa9d98b70cbe8380fefcb02cf00e7170332777471a5b726dc486f04a9174a20f"
+    },
+    {
+      "url": "https://images2.thanhnien.vn/zoom/686_429/528068263637045248/2023/2/1/12e53e99-d8f1-4d56-a5fa-d1082db2f67e-1675240801338472455234-158-0-956-1276-crop-167524082108052489204.jpeg",
+      "source": "https://thanhnien.vn/vu-truong-new-phuong-dong-tags744557.html",
+      "alt": "New Phương Đông Nightclub Inspection",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dn/61-new-phuong-dong/04.webp",
+      "width": 686,
+      "height": 429,
+      "sha256": "e124b0fdd1d4d9deee40741f63b5739f6dd417e3fb00a497ca2e024364f0e8c1"
+    },
+    {
+      "url": "https://www.charmingled.net/data/kindeditor/attached/image/20201023/20201023110341_79704.jpg",
+      "source": "https://www.charmingled.net/case/131.html",
+      "alt": "New Phuong Dong Club 23rd Anniversary Celebration",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "dn/61-new-phuong-dong/05.webp",
+      "width": 1024,
+      "height": 682,
+      "sha256": "1d092f6e518e5dfffa024c4f468f5552ad37d1e78ae2cb3182d8c3f04f49b091"
+    }
+  ]
+}

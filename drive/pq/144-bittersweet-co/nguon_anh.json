@@ -1,0 +1,41 @@
+{
+  "id": 144,
+  "name": "Bittersweet & Co.",
+  "city": "pq",
+  "addr": "185 Trần Hưng Đạo",
+  "images": [
+    {
+      "url": "https://cdn.wowweekend.vn/uploads/557632062_1384038940390020_2475412357715337369_n-iikmx.jpg",
+      "source": "https://wowweekend.vn/5-quan-bar-ton-vinh-phu-nu-khap-ba-mien.html",
+      "alt": "Bittersweet & Co. Bar Front",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/144-bittersweet-co/01.webp",
+      "width": 2048,
+      "height": 2048,
+      "sha256": "f207549895657bf2de650e2c689f8c0d9205d8773499f1a0768f338a251b0044"
+    },
+    {
+      "url": "https://ak-d.tripcdn.com/images/1mi4s224x8uk3i6lv56B9_W_640_0_R5_Q80.jpg?proc=source%2Ftrip",
+      "source": "https://www.trip.com/moments/detail/phu-quoc-island-24779-121199163/",
+      "alt": "Bittersweet&Co Speakeasy Bar Interior",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "pq/144-bittersweet-co/02.webp",
+      "width": 640,
+      "height": 853,
+      "sha256": "8f129bacbb2e98c2a1e152db15968caa03417f1e0d46a3187a3177d8838245ef"
+    },
+    {
+      "url": "https://sun-ecommerce-cdn.azureedge.net/ecommerce/service-sites/asset/SunParadiseLandPhuQuoc/google-doc/post_id_20367/AD_4nXdat4uvibBm9NOHnz6FVuNO1nt0y1cD6kdQPSSZgYa4WbZCGS5_dc-qDcVeoxgkd-EVfMO9VuKUybroX2BlyfNWXeXyTJ119r1K-2xhAAYrPze2LZ97D-r2hT--uMhyinICxUYiw4I_AEF43sbtwivf6TwTa0UL1e7JbUpeldxUs74iRX8tBFI%3Ds2048.webp",
+      "source": "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/goi-y-top-10-quan-bar-phu-quoc-chill-cho-du-khach-20367",
+      "alt": "Bittersweet & Co mang đến không gian bar riêng tư và yên tĩnh",
+      "score": 115,
+      "basis": "alt",
+      "file": "pq/144-bittersweet-co/03.webp",
+      "width": 1200,
+      "height": 900,
+      "sha256": "607752ab9b9563207ae278646b2e826169bf327f503dad9c6fad26b40fa21655"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 164,
+  "name": "FOM Club",
+  "city": "ql",
+  "addr": "Đối diện khách sạn Novotel, Bãi Cháy",
+  "images": [
+    {
+      "url": "https://bizweb.dktcdn.net/100/562/154/files/quan-bar-soi-dong-o-ha-long-fom-club-jpg.jpg?v=1756438209040",
+      "source": "https://elitetour.com.vn/top-10-quan-bar-soi-dong-duoc-yeu-thich-nhat-tai-ha-long",
+      "alt": "FOM Club Hạ Long Summer Party",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ql/164-fom-club/01.webp",
+      "width": 600,
+      "height": 400,
+      "sha256": "b92a303c5b37d783d7898c96e30698a6f5c9eb942a32d0b86a4809ed03e0d85c"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/474607rFy/fom-club-1117783.jpg",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-10-most-famous-beer-clubs-in-quang-ninh-province.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "ql/164-fom-club/02.webp",
+      "width": 700,
+      "height": 466,
+      "sha256": "2e9868fc3566168f1b9f3b036cd30bcc198548405e82acb7964f729bbe3d0e36"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/45/8c/d3/outside-the-bar.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g13163470-d27142847-Reviews-FOM_Club_H_Long-Bai_Chay_H_Long_Bay_Quang_Ninh_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "ql/164-fom-club/03.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "4abcc25339da3d2adec56a9bbab640a3ff6116ce66da4f9a76ae8b7a0abe3402"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/45/cc/cb/inside-the-bar.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g13163470-d27142847-Reviews-FOM_Club_H_Long-Bai_Chay_H_Long_Bay_Quang_Ninh_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "ql/164-fom-club/04.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "067498e69bf788729b6e1ece826dc16a6e7b1df12ad8c71998e001e735dda5bf"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/45/cc/c9/inside-the-bar.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g13163470-d27142847-Reviews-FOM_Club_H_Long-Bai_Chay_H_Long_Bay_Quang_Ninh_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "ql/164-fom-club/05.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "f46e5ede1167ebc229758b0a13d3db13b500404984eaa0fb80bf6a234e48ca82"
+    }
+  ]
+}

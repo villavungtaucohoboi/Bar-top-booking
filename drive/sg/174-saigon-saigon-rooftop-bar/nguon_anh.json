@@ -1,0 +1,63 @@
+{
+  "id": 174,
+  "name": "Saigon Saigon Rooftop Bar",
+  "city": "sg",
+  "addr": "Tầng thượng khách sạn Caravelle, 19-23 Công trường Lam Sơn",
+  "images": [
+    {
+      "url": "https://www.asia-bars.com/wp-content/uploads/2016/10/Caravelle-in-the-Heart-of-Saigon-2016.jpg",
+      "source": "https://www.asia-bars.com/?p=75375",
+      "alt": "Caravelle Saigon-Saigon ",
+      "score": 100,
+      "basis": "alt",
+      "file": "sg/174-saigon-saigon-rooftop-bar/01.webp",
+      "width": 1600,
+      "height": 1076,
+      "sha256": "c721dfe31cf828862212431674a5a92eca0622713e7672868a051ccac0035d6f"
+    },
+    {
+      "url": "https://www.asia-bars.com/wp-content/uploads/2016/10/Caravelle-Saigon-Saigon-Saigon-Bar-01-1140x641.jpg",
+      "source": "https://www.asia-bars.com/?p=75375",
+      "alt": "Caravelle Saigon-Saigon",
+      "score": 100,
+      "basis": "alt",
+      "file": "sg/174-saigon-saigon-rooftop-bar/02.webp",
+      "width": 1140,
+      "height": 641,
+      "sha256": "bd7b56713b1ecb803c0a7bf456c121489a697ae91ace17a36326b703c8372d0d"
+    },
+    {
+      "url": "https://www.asia-bars.com/wp-content/uploads/2016/10/Caravelle-Saigon-Saigon-Saigon-Bar-02-818x535.jpg",
+      "source": "https://www.asia-bars.com/?p=75375",
+      "alt": "Caravelle Saigon-Saigon",
+      "score": 100,
+      "basis": "alt",
+      "file": "sg/174-saigon-saigon-rooftop-bar/03.webp",
+      "width": 818,
+      "height": 535,
+      "sha256": "72c364036fb62bc2c9b7abd5f0f07aa341df857103c9e524038d5fcbab92705b"
+    },
+    {
+      "url": "https://www.asia-bars.com/wp-content/uploads/2016/10/IMG_4626-818x535.jpg",
+      "source": "https://www.asia-bars.com/?p=75375",
+      "alt": "Caravelle Saigon-Saigon",
+      "score": 100,
+      "basis": "alt",
+      "file": "sg/174-saigon-saigon-rooftop-bar/04.webp",
+      "width": 818,
+      "height": 535,
+      "sha256": "0a176ac7f3d4c49fde014b4ae49463b189ca4effa8b782e0b18d1311a8ddc9aa"
+    },
+    {
+      "url": "https://www.asia-bars.com/wp-content/uploads/2016/10/Standard-Cocktail_03-818x535.jpg",
+      "source": "https://www.asia-bars.com/?p=75375",
+      "alt": "Caravelle Saigon-Saigon",
+      "score": 100,
+      "basis": "alt",
+      "file": "sg/174-saigon-saigon-rooftop-bar/05.webp",
+      "width": 818,
+      "height": 535,
+      "sha256": "cd997a18ab181689003464609e6b22038c6e2b7fccee2f30a8dd4ee43d8f82dc"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 159,
+  "name": "Circle Mixology & Bar",
+  "city": "ql",
+  "addr": "Đường Đinh Liệt",
+  "images": [
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/8e/b5/d7/circle-mixology-bar.jpg?w=1200&h=1200&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g14776299-d25173739-Reviews-Circle_Mixology_Bar-Ha_Long_City_H_Long_Bay_Quang_Ninh_Province.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "ql/159-circle-mixology-bar/01.webp",
+      "width": 1200,
+      "height": 1200,
+      "sha256": "a00cbb1c4dfc06b79f0e700fec5ced8953c5febc742e36c8f75303f8ce29f1a1"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/8f/78/f9/circle-mixology-bar.jpg?w=1100&h=1100&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g14776299-d25173739-Reviews-Circle_Mixology_Bar-Ha_Long_City_H_Long_Bay_Quang_Ninh_Province.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "ql/159-circle-mixology-bar/02.webp",
+      "width": 1100,
+      "height": 1100,
+      "sha256": "425a2dbd856f73cbbf990fd0491fb503940f76007f4940fdf3acb40beae3900b"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/10/e6/0e/caption.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g14776299-d25173739-Reviews-Circle_Mixology_Bar-Ha_Long_City_H_Long_Bay_Quang_Ninh_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "ql/159-circle-mixology-bar/03.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "c7893dd652acebdd42bc8a8cc14331ea0531c5cad50504c5f722b4eb28ad1c64"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/e3/98/4f/if-you-want-to-experience.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g14776299-d25173739-Reviews-Circle_Mixology_Bar-Ha_Long_City_H_Long_Bay_Quang_Ninh_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "ql/159-circle-mixology-bar/04.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "5c45e96cd18993824ca9f6ca4746417e98dc73aa6184bd7a32c555d98abe5301"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/d0/3f/83/caption.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g14776299-d25173739-Reviews-Circle_Mixology_Bar-Ha_Long_City_H_Long_Bay_Quang_Ninh_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "ql/159-circle-mixology-bar/05.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "3efc3b001bd1bd5980dd33587975b72b2602a9a396ece9106788ed825ffdc736"
+    }
+  ]
+}

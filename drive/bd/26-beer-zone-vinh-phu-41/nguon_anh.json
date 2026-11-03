@@ -1,0 +1,30 @@
+{
+  "id": 26,
+  "name": "Beer Zone - Vĩnh Phú 41",
+  "city": "bd",
+  "addr": "25 Vĩnh Phú 41, P. Lái Thiêu, Thuận An, Bình Dương",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwhpg5i55n8b72@resize_ss640x400",
+      "source": "https://www.foody.vn/binh-duong/food/beer-club",
+      "alt": "Beer Zone - Vĩnh Phú 41",
+      "score": 100,
+      "basis": "alt",
+      "file": "bd/26-beer-zone-vinh-phu-41/01.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "ac9385da7e1bcd4ef719550bd3ba3228f325a7b0df23cb7f18f1fdbbd3e2b070"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwhabx5g8c0p9e@resize_ss640x400",
+      "source": "https://www.foody.vn/binh-duong/food/beer-club",
+      "alt": "Vita Beer Garden - Becamex Tower",
+      "score": 70,
+      "basis": "section",
+      "file": "bd/26-beer-zone-vinh-phu-41/02.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "15d911bfc8494b1cdedbbaa224cafaea2401bf7247a30c971a15be04f04ae8f5"
+    }
+  ]
+}

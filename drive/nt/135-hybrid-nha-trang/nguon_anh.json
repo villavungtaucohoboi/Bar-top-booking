@@ -1,0 +1,52 @@
+{
+  "id": 135,
+  "name": "Hybrid Nha Trang",
+  "city": "nt",
+  "addr": "",
+  "images": [
+    {
+      "url": "https://www.the50.com/discovery/filestore/jpg/Hybrid-Nha-Trang-Vietnam-1.jpg",
+      "source": "https://theworlds50best.com/discovery/Establishments/Vietnam/Nha-Trang/Hybrid.html",
+      "alt": "Hybrid-Nha-Trang-Vietnam-1",
+      "score": 100,
+      "basis": "alt",
+      "file": "nt/135-hybrid-nha-trang/01.webp",
+      "width": 920,
+      "height": 600,
+      "sha256": "ce4d7e4d351ed3b328da28e072a38d03fe2a2daecdf6d9f73acf20f81d8f370d"
+    },
+    {
+      "url": "https://www.the50.com/discovery/filestore/jpg/Hybrid-Nha-Trang-Vietnam-3.jpg",
+      "source": "https://theworlds50best.com/discovery/Establishments/Vietnam/Nha-Trang/Hybrid.html",
+      "alt": "Hybrid-Nha-Trang-Vietnam-3",
+      "score": 100,
+      "basis": "alt",
+      "file": "nt/135-hybrid-nha-trang/02.webp",
+      "width": 920,
+      "height": 600,
+      "sha256": "572db1f1e3c768f519e7c2fc4350afea96d4d69640214d3f113688871baca7b6"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/hybrid-nha-trang-1298443.jpg",
+      "source": "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-nha-trang-57083.htm",
+      "alt": "Hybrid Nha Trang",
+      "score": 100,
+      "basis": "alt",
+      "file": "nt/135-hybrid-nha-trang/03.webp",
+      "width": 800,
+      "height": 533,
+      "sha256": "eda9ace9a4236e099060d2e758e47151ef27cc8a3df7acdeaa55594e3c83b360"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/hybrid-nha-trang-1298444.jpg",
+      "source": "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-nha-trang-57083.htm",
+      "alt": "Hybrid Nha Trang",
+      "score": 100,
+      "basis": "alt",
+      "file": "nt/135-hybrid-nha-trang/04.webp",
+      "width": 800,
+      "height": 800,
+      "sha256": "c82da8e77861014cc4abc731f03b2e693f84c09105f7f10d98d93425b1f9351d"
+    }
+  ]
+}

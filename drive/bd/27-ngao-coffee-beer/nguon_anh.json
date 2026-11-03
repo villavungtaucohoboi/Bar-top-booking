@@ -1,0 +1,19 @@
+{
+  "id": 27,
+  "name": "Ngáo - Coffee & Beer",
+  "city": "bd",
+  "addr": "105 Đường GS1, P. Đông Hòa, Dĩ An, Bình Dương",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwep9cwncp976d@resize_ss640x400",
+      "source": "https://www.foody.vn/binh-duong/food/beer-club",
+      "alt": "Ngáo - Coffee & Beer",
+      "score": 100,
+      "basis": "alt",
+      "file": "bd/27-ngao-coffee-beer/01.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "129e4db077cba993f37b865c4a9b25eb57e943f1d864d1a381d03abf9d828591"
+    }
+  ]
+}

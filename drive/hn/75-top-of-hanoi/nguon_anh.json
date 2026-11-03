@@ -1,0 +1,63 @@
+{
+  "id": 75,
+  "name": "Top of Hanoi",
+  "city": "hn",
+  "addr": "Tầng 65, Lotte Hotel Hanoi, 54 Liễu Giai, Ba Đình",
+  "images": [
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/top-of-hanoi-600-1.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/top-of-hanoi-at-lotte-hotel-hanoi.html",
+      "alt": "Rooftop bar Top of Hanoi in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/75-top-of-hanoi/01.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "df040a88a9cd844a25efaa307162feffc31afa75c82c05a85d0ab445f5dcf800"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/top-of-hanoi-600-2.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/top-of-hanoi-at-lotte-hotel-hanoi.html",
+      "alt": "Rooftop bar Top of Hanoi in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/75-top-of-hanoi/02.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "d0608b194d85af56c8bafbaa9919db5e50ef7436a91444b50623130421039412"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/top-of-hanoi-600-3.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/top-of-hanoi-at-lotte-hotel-hanoi.html",
+      "alt": "Rooftop bar Top of Hanoi in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/75-top-of-hanoi/03.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "fd7c531f78b04ca80dea16e2c39e3bed5881930d86e3f83a3679e9d9994f88c7"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/top-of-hanoi-600-4.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/top-of-hanoi-at-lotte-hotel-hanoi.html",
+      "alt": "Rooftop bar Top of Hanoi in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/75-top-of-hanoi/04.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "1c50bf5087b50241ec2875f40afd3fbf8b516df75d9301bb0364b470a6c7369e"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/top-of-hanoi-600-5.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/top-of-hanoi-at-lotte-hotel-hanoi.html",
+      "alt": "Rooftop bar Top of Hanoi in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/75-top-of-hanoi/05.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "024663f5efb5cd74e41832c09fba214b9ab6eca0c64c85595152e4d500374f96"
+    }
+  ]
+}

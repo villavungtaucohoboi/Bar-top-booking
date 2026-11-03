@@ -1,0 +1,63 @@
+{
+  "id": 48,
+  "name": "Gemination Eatery & Bar",
+  "city": "dl",
+  "addr": "24 Trương Công Định",
+  "images": [
+    {
+      "url": "https://thedotmagazine.com/wp-content/uploads/2023/07/Chưa-có-tên-6000-×-4000-px.png",
+      "source": "https://thedotmagazine.com/we-go-native-at-dalats-gemination-cocktail-bar/",
+      "alt": "Gemination Dalat",
+      "score": 100,
+      "basis": "alt",
+      "file": "dl/48-gemination-eatery-bar/01.webp",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "f3a9c33647bfabbbd29d3eeae4376d3d258fa2c44412370420d24325276e616f"
+    },
+    {
+      "url": "https://thedotmagazine.com/wp-content/uploads/2023/07/DUON4622-scaled.jpg",
+      "source": "https://thedotmagazine.com/we-go-native-at-dalats-gemination-cocktail-bar/",
+      "alt": "Gemination Cocktail Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "dl/48-gemination-eatery-bar/02.webp",
+      "width": 2560,
+      "height": 1707,
+      "sha256": "2b9f250be7a203a3ab4e2b64fa769679419ba08b2a77c0d0166392bb2f0560ba"
+    },
+    {
+      "url": "https://thedotmagazine.com/wp-content/uploads/2023/07/DUON4933-scaled.jpg",
+      "source": "https://thedotmagazine.com/we-go-native-at-dalats-gemination-cocktail-bar/",
+      "alt": "Bar counter at Dalat's Gemination",
+      "score": 100,
+      "basis": "alt",
+      "file": "dl/48-gemination-eatery-bar/03.webp",
+      "width": 2560,
+      "height": 1707,
+      "sha256": "746caedb89ba4051939574b41436dbd6f1e8edc34a036a5b64140da5a3a7ce30"
+    },
+    {
+      "url": "https://thedotmagazine.com/wp-content/uploads/2023/07/DUON4770-scaled.jpg",
+      "source": "https://thedotmagazine.com/we-go-native-at-dalats-gemination-cocktail-bar/",
+      "alt": "Dalat-based bartenders at Gemination cocktail bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "dl/48-gemination-eatery-bar/04.webp",
+      "width": 2560,
+      "height": 1707,
+      "sha256": "6a7c961637c05499e0d5d49d9f5f770e06c7173ce8f265a50023a7dbd70ede57"
+    },
+    {
+      "url": "https://photo2.tinhte.vn/data/attachment-files/2025/12/8923461_bar-chill-da-lat_4.jpg",
+      "source": "https://tinhte.vn/thread/kham-pha-nhung-quan-bar-chill-da-lat-dang-trai-nghiem.4084801/",
+      "alt": "bar-chill-da-lat (4).jpg",
+      "score": 70,
+      "basis": "section",
+      "file": "dl/48-gemination-eatery-bar/05.webp",
+      "width": 962,
+      "height": 962,
+      "sha256": "7ff00af3e3ea06440bdb2c3ca7215ac8d920e9feee4044fc38b343fcc8d160c7"
+    }
+  ]
+}

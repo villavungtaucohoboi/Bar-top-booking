@@ -1,0 +1,30 @@
+{
+  "id": 53,
+  "name": "Rain Night Club",
+  "city": "dl",
+  "addr": "1 Lê Hồng Phong",
+  "images": [
+    {
+      "url": "https://toplist.vn/images/800px/rain-night-club-bar-1297042.jpg",
+      "source": "https://toplist.vn/top-list/quan-bar-noi-tieng-nhat-o-lam-dong-22859.htm",
+      "alt": "Rain Night Club Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "dl/53-rain-night-club/01.webp",
+      "width": 800,
+      "height": 800,
+      "sha256": "40f4560437dc75295135f042353349fd7e45f3b6a898b751bad651ded519f562"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/rain-night-club-bar-1297041.jpg",
+      "source": "https://toplist.vn/top-list/quan-bar-noi-tieng-nhat-o-lam-dong-22859.htm",
+      "alt": "Rain Night Club Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "dl/53-rain-night-club/02.webp",
+      "width": 800,
+      "height": 800,
+      "sha256": "bcf033c15db28c7e2efa6ee30d1beb19237bf9123eb5ebea5a8f11453031da7a"
+    }
+  ]
+}

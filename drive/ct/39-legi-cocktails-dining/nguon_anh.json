@@ -1,0 +1,30 @@
+{
+  "id": 39,
+  "name": "LEGI Cocktails & Dining",
+  "city": "ct",
+  "addr": "160 Đồng Văn Cống, Q. Bình Thủy, Cần Thơ",
+  "images": [
+    {
+      "url": "https://media.evendo.com/locations-resized/BarImages/1440x800/7a90bcc1-5c41-40f2-9b26-3e87e7c4d963",
+      "source": "https://evendo.com/locations/vietnam/can-tho/bar/legi-cocktails-dining",
+      "alt": "LEGI Cocktails & Dining",
+      "score": 100,
+      "basis": "alt",
+      "file": "ct/39-legi-cocktails-dining/01.webp",
+      "width": 1440,
+      "height": 800,
+      "sha256": "dc4e58a3f0a7d23cd7de6438983ebb4291b862ac351c91320f22217c8a54ec6f"
+    },
+    {
+      "url": "https://media.evendo.com/locations-resized/BarImages/440x780/7a90bcc1-5c41-40f2-9b26-3e87e7c4d963?type=webp",
+      "source": "https://evendo.com/locations/vietnam/can-tho/bar/legi-cocktails-dining",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "ct/39-legi-cocktails-dining/02.webp",
+      "width": 440,
+      "height": 780,
+      "sha256": "9d4c06a3caf9b657256421d4263211169101fb8fedbd0bc4c3028654475d3ff9"
+    }
+  ]
+}

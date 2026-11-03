@@ -1,0 +1,41 @@
+{
+  "id": 155,
+  "name": "Scorpio Bar (VinHolidays Fiesta)",
+  "city": "pq",
+  "addr": "VinHolidays Fiesta Phú Quốc",
+  "images": [
+    {
+      "url": "https://statics.vinpearl.com/vinholidays-fiesta-phu-quoc-7_1629106293_1696404826.jpg",
+      "source": "https://vinpearl.com/en/hotels/vinholidays-fiesta-phu-quoc/foods",
+      "alt": "Scorpio Bar Lounge at VinHolidays Fiesta Phu Quoc",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "pq/155-scorpio-bar-vinholidays-fiesta/01.webp",
+      "width": 1500,
+      "height": 1001,
+      "sha256": "19a66ad5f5713ee08b14fce8696b3dbe992c038d42dcf7d5538775f2e0cf2f43"
+    },
+    {
+      "url": "https://statics.vinpearl.com/d0b4512b1a8e94d0cd9f_1773807931.jpg",
+      "source": "https://vinpearl.com/ru/hotels/vinholidays-fiesta-phu-quoc",
+      "alt": "Scorpio Bar Lounge",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "pq/155-scorpio-bar-vinholidays-fiesta/02.webp",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "f49e71bbe4c3fe30deeb5f6f99e9771fdf5c4a72370d067a95bf65855dd2c718"
+    },
+    {
+      "url": "https://statics.vinpearl.com/Vinpearl-Phu-Quoc_1747666951.jpg",
+      "source": "https://vinpearl.com/en/best-bars-in-phu-quoc",
+      "alt": "Vinpearl Phu Quoc",
+      "score": 70,
+      "basis": "section",
+      "file": "pq/155-scorpio-bar-vinholidays-fiesta/03.webp",
+      "width": 1000,
+      "height": 626,
+      "sha256": "a4137190a1390620aa17f796aaf78df933b9406046d731430fa08801a1018ce2"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 168,
+  "name": "Funky Bar Halong",
+  "city": "ql",
+  "addr": "78 Hạ Long, Bãi Cháy",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwba243vkul586@resize_ss640x400",
+      "source": "https://www.foody.vn/quang-ninh/bar-pub",
+      "alt": "Funky Bar Halong - Hạ Long",
+      "score": 100,
+      "basis": "alt",
+      "file": "ql/168-funky-bar-halong/01.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "dd3205612abe90cd87912c6a527d0b6679c6e15ed3a0957481d610c5805364f0"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwa78tnktc61bf@resize_ss640x400",
+      "source": "https://www.foody.vn/quang-ninh/bar-pub",
+      "alt": "3Vins Wine - Bar & Restaurant",
+      "score": 70,
+      "basis": "section",
+      "file": "ql/168-funky-bar-halong/02.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "e32c977a70cc56734420c3003b60d52573e111ad41bc711c5e64fe8d432fe33d"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 138,
+  "name": "Aqualine Bar",
+  "city": "nt",
+  "addr": "Tầng 2 khách sạn InterContinental Nha Trang, Trần Phú",
+  "images": [
+    {
+      "url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/30639631.jpg?k=37dc489127ebf4efae816b64ea3fe5b56a899c5839d3908afdcfc35c9d462e1d&o=",
+      "source": "https://www.agoda.com/intercontinental-nha-trang/hotel/nha-trang-vn.html",
+      "alt": "Aqualine Bar at InterContinental Nha Trang",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "nt/138-aqualine-bar/01.webp",
+      "width": 1024,
+      "height": 683,
+      "sha256": "b1dc18087ea4598685c3da85e2eddab4df37ccaf33c6dbc88f6e14c95441ad75"
+    },
+    {
+      "url": "https://cdn.enprimeurclub.com/storage/v1/object/public/images/bars/28682899-8c7d-41fb-95cd-3e89d0662d2a/hero1.jpg?width=2560&quality=80",
+      "source": "https://joinpearl.co/bars/nha-trang/aqualine-bar",
+      "alt": "Aqualine bar, Bar in Nha Trang",
+      "score": 100,
+      "basis": "alt",
+      "file": "nt/138-aqualine-bar/02.webp",
+      "width": 2000,
+      "height": 1000,
+      "sha256": "b71436bee80a0687d7632d1d60fce7d1885b7d8633df0aa63cdbe203ec1de73a"
+    }
+  ]
+}

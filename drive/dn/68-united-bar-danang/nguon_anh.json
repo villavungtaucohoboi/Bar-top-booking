@@ -1,0 +1,63 @@
+{
+  "id": 68,
+  "name": "United Bar Danang",
+  "city": "dn",
+  "addr": "02 Nguyễn Chí Thanh",
+  "images": [
+    {
+      "url": "https://d3fphkxyf5o5bm.cloudfront.net/image-resize/format%3Dwebp%2Cw%3D720/Q524tReNnAnmuqp47gcuVqy8WSAYT3WZcunrsKiOlL",
+      "source": "https://mindtrip.ai/restaurant/da-nang-vietnam/united-bar/re-MRl2iW0f",
+      "alt": "United Bar Speakeasy Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dn/68-united-bar-danang/01.webp",
+      "width": 720,
+      "height": 481,
+      "sha256": "2a550a9b433cfb60d8575315e846d27e54a570c944d15aa7ebf00bf06b6a27c2"
+    },
+    {
+      "url": "https://danang.style/uploads/articles/contents/images/2025/11/img_ja5_699_61efc59a-8e70-477a-acbc-7f019d07c69f.jpg",
+      "source": "https://danang.style/tourism/699",
+      "alt": "Hidden Bánh Mì Bar Entrance",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dn/68-united-bar-danang/02.webp",
+      "width": 800,
+      "height": 599,
+      "sha256": "0bcd5e7b92bd64aab8802e67876bd133e7b0bcfcc9901a791e025b7b41b5472a"
+    },
+    {
+      "url": "https://img02.restaurantguru.com/c8a7-United-Bar-Da-Nang-interior.jpg",
+      "source": "https://restaurantguru.com/UNITED-BAR-Da-Nang",
+      "alt": "United Bar Interior and Bánh Mì Stand",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "dn/68-united-bar-danang/03.webp",
+      "width": 661,
+      "height": 645,
+      "sha256": "6e5d1299fef4dddbcd81fa833c3a95413d507a2642a4e946240c9c94b2181b31"
+    },
+    {
+      "url": "https://img02.restaurantguru.com/c537-United-Bar-Da-Nang-design.jpg",
+      "source": "https://restaurantguru.com/UNITED-BAR-Da-Nang",
+      "alt": "United Bar Interior in Da Nang",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "dn/68-united-bar-danang/04.webp",
+      "width": 579,
+      "height": 645,
+      "sha256": "36da70dda0bfe450b2c77d4df2da86539d112d168b91e1d3a0997465061f13f7"
+    },
+    {
+      "url": "https://img02.restaurantguru.com/c1dc-United-Bar-Da-Nang-meals.jpg",
+      "source": "https://restaurantguru.com/UNITED-BAR-Da-Nang",
+      "alt": "United Bar’s Signature Cocktails",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "dn/68-united-bar-danang/05.webp",
+      "width": 492,
+      "height": 645,
+      "sha256": "752c3cee010b41a900622e7d000fa9ed6c3a9341886aa95222cdc05c33ec983c"
+    }
+  ]
+}

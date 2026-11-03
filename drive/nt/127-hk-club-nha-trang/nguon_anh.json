@@ -1,0 +1,63 @@
+{
+  "id": 127,
+  "name": "HK Club Nha Trang",
+  "city": "nt",
+  "addr": "38 Trần Phú",
+  "images": [
+    {
+      "url": "https://media.triple.guide/triple-cms/c_limit%2Cf_auto%2Ch_2048%2Cw_2048/a216565d-e5c3-4ac5-a22c-19cdcb85c144.jpeg",
+      "source": "https://triple.guide/attractions/10d7db1a-d173-4b99-a900-5b266d194679",
+      "alt": "HK Club Nha Trang Nightlife Scene",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "nt/127-hk-club-nha-trang/01.webp",
+      "width": 2048,
+      "height": 1354,
+      "sha256": "2adae66d27d93edd44170f0413bba163cf5de7c3c8e090e1dfa8260203ce1f51"
+    },
+    {
+      "url": "https://vietnamnightlife.com/uploads/images/2023/03/1678885049-multi_product20-3230966097184869165077243073069114705107274n.jpg",
+      "source": "https://vietnamnightlife.com/en/hk-club-formerly-havana-club-nha-trang-309-16.html",
+      "alt": "HK Club Rooftop Nightlife",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "nt/127-hk-club-nha-trang/02.webp",
+      "width": 1440,
+      "height": 1081,
+      "sha256": "59f0c073a096227c2e104e438d4e2a69cb218353c4304e5153b31d679df45d76"
+    },
+    {
+      "url": "https://clubinvietnam.com/images/nhatrang-hk-club/cover.webp",
+      "source": "https://clubinvietnam.com/nhatrang/hk-club/",
+      "alt": "HK Club Birthday Celebration",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "nt/127-hk-club-nha-trang/03.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "92c5c28b088cf8ba87c4143aaab8c61d99ad879991c5ff7f472278d3b077d60c"
+    },
+    {
+      "url": "https://vietnamnightlife.com/uploads/images/2023/01/1674020770-multi_product21-havanaclubnhatrangguests6.jpg",
+      "source": "https://vietnamnightlife.com/en/hk-club-formerly-havana-club-nha-trang-309-16.html",
+      "alt": "Night Out at Havana Club Nha Trang",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "nt/127-hk-club-nha-trang/04.webp",
+      "width": 645,
+      "height": 400,
+      "sha256": "931dc40b158494e3c7b3b40751972e3598395739ac9df16707359a321eb242e7"
+    },
+    {
+      "url": "https://product.hstatic.net/1000268128/product/455912545_896689165818644_5918664958066044147_n_c22388f98fc34a6880c6ed637374bfa5_master.jpg",
+      "source": "https://www.9life.com.vn/products/hk-club-38-tran-phu",
+      "alt": "HK Club Underground DJ Performance",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "nt/127-hk-club-nha-trang/05.webp",
+      "width": 2048,
+      "height": 1367,
+      "sha256": "5fb48aa26bb4ac9bbeeae4d55ec941b5d592871ba11e5b8d7e0f6c0ccdc6328c"
+    }
+  ]
+}

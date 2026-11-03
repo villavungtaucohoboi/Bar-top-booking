@@ -1,0 +1,52 @@
+{
+  "id": 179,
+  "name": "Rooftop Garden Bar – Rex Hotel",
+  "city": "sg",
+  "addr": "Tầng 5, khách sạn Rex, đầu phố đi bộ Nguyễn Huệ",
+  "images": [
+    {
+      "url": "https://static.toiimg.com/thumb/44850417/Rex-Hotel-Rooftop-Garden.jpg?height=900&width=1200",
+      "source": "https://timesofindia.indiatimes.com/travel/ho-chi-minh-city/travel-guide/rex-hotel-rooftop-garden/gs44850412.cms",
+      "alt": "Rex Hotel Rooftop Garden",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/179-rooftop-garden-bar-rex-hotel/01.webp",
+      "width": 1200,
+      "height": 900,
+      "sha256": "1ef430b095895f63cbd5e41a5f4ef794679139576f7087d54bc62262ba4b2128"
+    },
+    {
+      "url": "https://image.sggp.org.vn/w1000/Uploaded/2026/fwcgmzsfdazs/2022_10_05/308826769_8768077563218048_7097395234765635805_n_YTEA.jpg.webp",
+      "source": "https://dttc.sggp.org.vn/rex-hotel-saigon-gioi-thieu-chuong-trinh-combo-happy-hour-dac-biet-tai-rooftop-garden-bar-post98452.html",
+      "alt": "Rooftop Garden Bar Evening Setup",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/179-rooftop-garden-bar-rex-hotel/02.webp",
+      "width": 650,
+      "height": 486,
+      "sha256": "78693c644b3a3e6214fa3c1e12af1d9d6226fb4aab777190c5a1574b0b63f672"
+    },
+    {
+      "url": "https://dnsg.1cdn.vn/2022/10/05/i.doanhnhansaigon.vn-2022-10-05-_7226-1664956535.jpg",
+      "source": "https://doanhnhansaigon.vn/rex-hotel-saigon-gioi-thieu-chuong-trinh-happy-hour-203495.html",
+      "alt": "Rooftop Garden Bar at Rex Hotel Saigon",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/179-rooftop-garden-bar-rex-hotel/03.webp",
+      "width": 750,
+      "height": 874,
+      "sha256": "acbd69f3d49b76097f1927979d6401bc1bf9c2ac8d92d4cb43c1bd053067f73f"
+    },
+    {
+      "url": "https://cdn.wowweekend.vn/uploads/202006_846_featured__news20200612143624_02-1600x900.webp",
+      "source": "https://wowweekend.vn/rooftop-garden-bar-trai-nghiem-am-thuc-sang-trong-tai-tang-thuong-khach-san-5-sao-rex-hotel-saigon.html",
+      "alt": "Rex Hotel Saigon Rooftop Stage",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "sg/179-rooftop-garden-bar-rex-hotel/04.webp",
+      "width": 1600,
+      "height": 900,
+      "sha256": "1809feda7f62dbac7a92d3571cad16aeb88fa4ab7602d574b63804dedd1028b9"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 181,
+  "name": "The Enigma Mansion",
+  "city": "sg",
+  "addr": "5H Tôn Đức Thắng",
+  "images": [
+    {
+      "url": "https://ak-d.tripcdn.com/images/1mi2w224x91itgs3wD6F7.jpg?proc=source%2Ftrip",
+      "source": "https://www.trip.com/moments/detail/ho-chi-minh-city-434-132189381/",
+      "alt": "The Enigma Mansion Lounge",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/181-the-enigma-mansion/01.webp",
+      "width": 540,
+      "height": 720,
+      "sha256": "40e2ac83affa94ffa3838a1effb78a70cdaad91b5c02341ffe45adad8f586c0f"
+    },
+    {
+      "url": "https://static.tecnichenuove.it/bargiornale/2025/09/Enigma-Mansion-Saigon-1-scaled.jpg",
+      "source": "https://www.bargiornale.it/spirit/il-triangolo-doro-della-mixology-i-migliori-indirizzi-fra-thailandia-vietnam-e-cambogia/",
+      "alt": "The Enigma Mansion Saigon",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "sg/181-the-enigma-mansion/02.webp",
+      "width": 2560,
+      "height": 1707,
+      "sha256": "f659fa0de797d6f5e95496bd96d1b4c08ba1b1fba4bbee54ab5b517ebe81d5ac"
+    },
+    {
+      "url": "https://www.ufostravel.com/data/attachment/image/000/02/18/28_600_1000.jpg",
+      "source": "https://www.ufostravel.com/thread-1603-1-1.html",
+      "alt": "The Enigma Mansion Cocktail Service",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "sg/181-the-enigma-mansion/03.webp",
+      "width": 600,
+      "height": 800,
+      "sha256": "ae5263390678e213753710ac957125c4fabd1c84bb64d3e69a3ea5ddcf470e25"
+    },
+    {
+      "url": "https://cdn.enprimeurclub.com/storage/v1/object/public/images/bars/6339c1bc-2368-4bde-84ba-e851aae57127/hero1.jpg?width=3840&quality=75",
+      "source": "https://www.enprimeurclub.com/bars/the-enigma-mansion-ho-chi-minh-city-bar",
+      "alt": "2 Lam Son bar in Ho Chi Minh City",
+      "score": 60,
+      "basis": "article",
+      "file": "sg/181-the-enigma-mansion/04.webp",
+      "width": 1200,
+      "height": 752,
+      "sha256": "2dac417ed680070e3806cf92f9940da70a855cf962dafaf90f6d6e89b2819c91"
+    },
+    {
+      "url": "https://cdn.enprimeurclub.com/storage/v1/object/public/images/bars/3535f87f-e859-41ea-9788-94142d259501/hero1.jpg?width=3840&quality=75",
+      "source": "https://www.enprimeurclub.com/bars/the-enigma-mansion-ho-chi-minh-city-bar",
+      "alt": "7 Bridges Saigon Craft Beer Taproom & Restaurant / Đông Du bar in Ho Chi Minh City",
+      "score": 60,
+      "basis": "article",
+      "file": "sg/181-the-enigma-mansion/05.webp",
+      "width": 1200,
+      "height": 675,
+      "sha256": "f99564a707a6b01a783ed21e2680b62b4adc3419f962c21cb3da5e923f79da61"
+    }
+  ]
+}

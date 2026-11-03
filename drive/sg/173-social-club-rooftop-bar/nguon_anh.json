@@ -1,0 +1,63 @@
+{
+  "id": 173,
+  "name": "Social Club Rooftop Bar",
+  "city": "sg",
+  "addr": "Tầng 24, Hôtel des Arts Saigon, 76-78 Nguyễn Thị Minh Khai",
+  "images": [
+    {
+      "url": "https://s3.us-west-1.amazonaws.com/assets.curatorstravel.com/original/hotels/1237/1686652381601.webp",
+      "source": "https://www.curatorstravel.com/hotel/detail/hotel-des-arts-saigon",
+      "alt": "Hotel Des Arts Saigon Rooftop Lounge",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/173-social-club-rooftop-bar/01.webp",
+      "width": 2048,
+      "height": 1536,
+      "sha256": "d8eb5101b301913fc16405f3cdcfa104d73d514915b64ca2110cc1794e929262"
+    },
+    {
+      "url": "https://noithatkendesign.vn/storage/app/media/uploaded-files/Social-Club-Rooftop-1.jpg",
+      "source": "https://noithatkendesign.vn/social-club-rooftop-bar.html",
+      "alt": "Social Club Rooftop Bar Experience",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/173-social-club-rooftop-bar/02.webp",
+      "width": 2000,
+      "height": 1318,
+      "sha256": "2254de0fb453c2c9694858c26f1e2ce297e5b3a094bf65a976354f65dc6a19e3"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/665822757475b5037ec24462/6a078dc3cebe6e96ffc941f3_f-b-f-b-social-club-rooftop-bar-131838.jpeg",
+      "source": "https://www.tourasia.ch/de/hotel/hotel-des-arts-saigon-saigon",
+      "alt": "Social Club Rooftop Bar at Hôtel des Arts Saigon",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/173-social-club-rooftop-bar/03.webp",
+      "width": 2000,
+      "height": 1333,
+      "sha256": "47e44b21d11d47f0d51adbd7fa4fe18e5bd81eba6c2a0eb9dfe48b9d55099bf6"
+    },
+    {
+      "url": "https://rsxviymsdbpvtgkzufxr.supabase.co/storage/v1/object/public/venues/ho-chi-minh/social-club-rooftop-bar.jpg",
+      "source": "https://www.skylevels.co/en/asia/vietnam/ho-chi-minh/social-club-rooftop-bar",
+      "alt": "Social Club Rooftop Bar in Ho Chi Minh City",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/173-social-club-rooftop-bar/04.webp",
+      "width": 1200,
+      "height": 675,
+      "sha256": "ef2a9efebbfdca7e94be8f4a38aa0961f6fcaf9416f7746f6b4d57f0ca41e796"
+    },
+    {
+      "url": "https://epicurevietnam.com/Data/Sites/1/News/2922/social-club-rooftop-bar-1.jpg",
+      "source": "https://epicurevietnam.com/bars-clubs-1/social-club-rooftop-bar",
+      "alt": "Social Club Rooftop Bar Above Saigon",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "sg/173-social-club-rooftop-bar/05.webp",
+      "width": 8192,
+      "height": 5464,
+      "sha256": "4d135a8b0244b5917634ecefaaacfbf698c2eda468ba5839d2cc2501b292d519"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 195,
+  "name": "Breeze Rooftop Bar",
+  "city": "vt",
+  "addr": "Tầng 20, Fusion Suites, 2 Trương Công Định",
+  "images": [
+    {
+      "url": "https://t.cmx-cdn.com/tiepthigiadinh.vn/files/thutrangctvseo/2023/04/21/bia-175521.jpg",
+      "source": "https://tiepthigiadinh.vn/breeze-vung-tau-d3258.html",
+      "alt": "Rooftop Sunset Lounge",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "vt/195-breeze-rooftop-bar/01.webp",
+      "width": 1920,
+      "height": 1311,
+      "sha256": "fc680b2f9b3c3a0de8c4c0ee1c487a96a7f0d3b66ece7f13eb7fc102b7b44bc6"
+    },
+    {
+      "url": "https://t.cmx-cdn.com/tiepthigiadinh.vn/files/thutrangctvseo/2023/04/21/breeze-vung-tau-tiep-thi-gia-dinh-7-175721.jpg",
+      "source": "https://tiepthigiadinh.vn/breeze-vung-tau-d3258.html",
+      "alt": "Sunset at Breeze Rooftop Bar",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "vt/195-breeze-rooftop-bar/02.webp",
+      "width": 640,
+      "height": 799,
+      "sha256": "2f12f359d254d3381b323f2e372d2f0aff13559f73f37c0552ab93c9fc07c675"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/rooftop-bar-breeze-1082796.jpg",
+      "source": "https://toplist.vn/top-list/quan-rooftop-bar-noi-tieng-o-vung-tau-56885.htm",
+      "alt": "Rooftop bar Breeze",
+      "score": 115,
+      "basis": "alt",
+      "file": "vt/195-breeze-rooftop-bar/03.webp",
+      "width": 800,
+      "height": 515,
+      "sha256": "74af049c419e185dbe93cb7515c834876c9cf52e0b2db68de3ca5c2fc6f6b7b0"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/rooftop-bar-breeze-1082797.jpg",
+      "source": "https://toplist.vn/top-list/quan-rooftop-bar-noi-tieng-o-vung-tau-56885.htm",
+      "alt": "Rooftop bar Breeze",
+      "score": 115,
+      "basis": "alt",
+      "file": "vt/195-breeze-rooftop-bar/04.webp",
+      "width": 800,
+      "height": 1090,
+      "sha256": "04daeab3939b21e870f5c6ac98cf9d0d1d6d3e5332bbac89e442c960bd2483fe"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/2f/5a/02/caption.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g303946-d28099856-Reviews-Breeze_Rooftop_Bar-Vung_Tau_Ba_Ria_Vung_Tau_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "vt/195-breeze-rooftop-bar/05.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "48d06298c3fc4e67286d13779be0367af780cc56a0d39e8b293caa27c76e02e2"
+    }
+  ]
+}

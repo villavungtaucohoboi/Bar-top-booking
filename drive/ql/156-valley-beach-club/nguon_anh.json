@@ -1,0 +1,63 @@
+{
+  "id": 156,
+  "name": "Valley Beach Club",
+  "city": "ql",
+  "addr": "Đường bao biển bãi tắm Sun Group, Bãi Cháy",
+  "images": [
+    {
+      "url": "https://media.yeah1.com/files/diemmy/2025/07/29/img_9090-103306.jpeg",
+      "source": "https://yeah1.com/am-nhac/valley-beach-club-cau-lac-bo-bai-bien-dau-tien-tai-chau-a-trang-bi-loa-lacoustics-k1-a430-d125652.html",
+      "alt": "Valley Beach Club Night Festival",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "ql/156-valley-beach-club/01.webp",
+      "width": 1920,
+      "height": 1279,
+      "sha256": "b1af897b20fc8a8e88bcecdbf25776fb5e9a6799064bb1821562f40d1226b08d"
+    },
+    {
+      "url": "https://channel.mediacdn.vn/2019/8/13/photo-1-15656586066121270772056.jpg",
+      "source": "https://kenh14.vn/diem-den-thang-hoa-cung-am-nhac-tai-vinh-ha-long-20190813081324046.chn",
+      "alt": "Valley Beach Club Entrance",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "ql/156-valley-beach-club/02.webp",
+      "width": 1280,
+      "height": 588,
+      "sha256": "2f3235933c8037827c2a675de3320abf8aacc60babcf68fff9b76f910e5bab0d"
+    },
+    {
+      "url": "https://bizweb.dktcdn.net/thumb/grande/100/562/154/articles/quan-bar-soi-dong-o-ha-long-valley-beach-club-3.jpg?v=1752745094790",
+      "source": "https://elitetour.com.vn/top-10-quan-bar-soi-dong-duoc-yeu-thich-nhat-tai-ha-long",
+      "alt": "Valley Beach Club Night Party",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "ql/156-valley-beach-club/03.webp",
+      "width": 600,
+      "height": 400,
+      "sha256": "d1a7cf940886246b02f5afa24815cd84ccd84c861418f6c89f9a1a49ba096cdc"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/481165pTq/anh-mo-ta.png",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-9-most-popular-bars-in-ha-long-quang-ninh-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "ql/156-valley-beach-club/04.webp",
+      "width": 700,
+      "height": 420,
+      "sha256": "77caf6151d081b5d13018cfcdd4688cf5f9ae696512e3b736b0cde936b65bec5"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/481165UFS/anh-mo-ta.png",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-9-most-popular-bars-in-ha-long-quang-ninh-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "ql/156-valley-beach-club/05.webp",
+      "width": 700,
+      "height": 453,
+      "sha256": "123a5bafa557bfaf1c1951e4d74e8f29fda654e5391deb67accb987b3cee5f34"
+    }
+  ]
+}

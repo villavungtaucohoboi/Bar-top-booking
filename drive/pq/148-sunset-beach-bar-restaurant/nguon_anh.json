@@ -1,0 +1,63 @@
+{
+  "id": 148,
+  "name": "Sunset Beach Bar & Restaurant",
+  "city": "pq",
+  "addr": "100C/2 Trần Hưng Đạo",
+  "images": [
+    {
+      "url": "https://photo.znews.vn/Uploaded/spuoouo/2025_12_25/Phu_quoc_znews_07619.jpg",
+      "source": "https://znews.vn/kin-cho-ngam-dac-san-hoang-hon-tai-beach-bar-phu-quoc-post1614037.html",
+      "alt": "Sunset Beach Bar Sunset Session",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "pq/148-sunset-beach-bar-restaurant/01.webp",
+      "width": 2048,
+      "height": 1366,
+      "sha256": "b2f5ce7a2ca51470cfd45ca7136601d2ac4e78c5fb4106d527090bb960195f39"
+    },
+    {
+      "url": "https://sunsetbeach.vn/storage/photos/7/8.png",
+      "source": "https://sunsetbeach.vn/sunset-beach-bar-restaurant",
+      "alt": "Sunset Beach Bar at Dusk",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "pq/148-sunset-beach-bar-restaurant/02.webp",
+      "width": 1280,
+      "height": 800,
+      "sha256": "058350d1b5ed9b7234ec97c86655d699fb70bff9530cf4be8987c279d6e20491"
+    },
+    {
+      "url": "https://media.vov.vn/sites/default/files/styles/large/public/2026-04/rs-dscf2946.jpg",
+      "source": "https://vov.vn/du-lich/tu-van/phu-quoc-hut-khach-dip-304-15-va-sunset-beach-la-diem-den-dang-trai-nghiem-post1286335.vov",
+      "alt": "Sunset Beach Bar at Dương Đông, Phú Quốc",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "pq/148-sunset-beach-bar-restaurant/03.webp",
+      "width": 1170,
+      "height": 780,
+      "sha256": "6a79019904af82e963ee4976dda01e589ce080abb465acbe4b9c4e6b61437194"
+    },
+    {
+      "url": "https://media.vov.vn/sites/default/files/styles/large/public/2025-03/sun_set_beach_phu_quoc_thang_2_2025_10.jpg",
+      "source": "https://vov.vn/du-lich/phu-quoc-bung-no-du-lich-du-khach-bao-chi-trai-nghiem-dang-cap-len-ngoi-post1158309.vov",
+      "alt": "Sunset Beach Bar at Dusk",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "pq/148-sunset-beach-bar-restaurant/04.webp",
+      "width": 1170,
+      "height": 878,
+      "sha256": "c34def614261589bf0e278e9ba5c5836d758034dd955f9822df6be2463201513"
+    },
+    {
+      "url": "https://kenh14cdn.com/zoom/700_438/pr/2023/photo1681442491632-16814424924581909253997-63817069646432.jpg",
+      "source": "https://kenh14.vn/dam-chim-trong-dieu-techno-house-tai-quan-bar-bien-o-phu-quoc-20230414114726346.chn",
+      "alt": "Sunset Beach Bar Nightlife",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "pq/148-sunset-beach-bar-restaurant/05.webp",
+      "width": 700,
+      "height": 438,
+      "sha256": "fc18ba84876443afd03462289f9d58804af9a938b86a09b7acc021d820303188"
+    }
+  ]
+}

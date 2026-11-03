@@ -1,0 +1,41 @@
+{
+  "id": 86,
+  "name": "Bee'Znees",
+  "city": "hn",
+  "addr": "163 Phùng Hưng, Hoàn Kiếm",
+  "images": [
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/8b/58/74/bee-znees.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g293924-d16698522-Reviews-Bee_znees_Speakeasy_Bar-Hanoi.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "hn/86-bee-znees/01.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "6a652dd8b94001a24b89ac17f42102a049a00a9662599fa21d0bd3a250467373"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/2f/13/91/bee-znees.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g293924-d16698522-Reviews-Bee_znees_Speakeasy_Bar-Hanoi.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "hn/86-bee-znees/02.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "179ad61f02ea0a9c7069fdb7570f9925995bca816f7fa2d74164995eb325f06f"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/2f/13/8e/our-bartender.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g293924-d16698522-Reviews-Bee_znees_Speakeasy_Bar-Hanoi.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "hn/86-bee-znees/03.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "95d20399e572adbf6f37e7cc16d4efebd4b2b3a450ef21779d6306ae78c65a06"
+    }
+  ]
+}

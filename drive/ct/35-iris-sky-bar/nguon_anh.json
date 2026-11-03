@@ -1,0 +1,63 @@
+{
+  "id": 35,
+  "name": "Iris Sky Bar",
+  "city": "ct",
+  "addr": "Sân thượng Iris Hotel, 224 Đường 30 Tháng 4, P. Xuân Khánh, Q. Ninh Kiều, Cần Thơ",
+  "images": [
+    {
+      "url": "https://du-lich.chudu24.com/f/m/2105/17/khach-san-iris-can-tho-51.jpg",
+      "source": "https://khachsan.chudu24.com/ks.2180.khach-san-iris-can-tho.html",
+      "alt": "Iris Hotel Cần Thơ Rooftop Bar",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ct/35-iris-sky-bar/01.webp",
+      "width": 1280,
+      "height": 851,
+      "sha256": "8dd6d00c03a9fdad195528ce8338276f21e41b964144115741b1fa507253a135"
+    },
+    {
+      "url": "https://cdn.elleman.vn/0zeoxW8fTmkYVKvSVSDvm11wNXh7LnnzT8gCP68sDUY/rs%3Afit%3A1280%3A0/quality%3A82/2020/03/27/174422/sky-bar-iris_quan-cafe-can-tho_elle-man_0320.jpg%40webp",
+      "source": "https://www.elleman.vn/van-hoa-giai-tri/quan-cafe-can-tho-view-dep/",
+      "alt": "Sky Bar Iris Rooftop Terrace",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ct/35-iris-sky-bar/02.webp",
+      "width": 960,
+      "height": 720,
+      "sha256": "d11ed4b741c59a32aeaf290b36d49da73677ad0375c541b5d134a3badb677f5d"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/sky-bar-iris-1073047.jpg",
+      "source": "https://toplist.vn/top-list/cafe-san-thuong-ngam-nhin-ve-dep-can-tho-18642.htm",
+      "alt": "Iris Sky Bar Sunset Terrace",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ct/35-iris-sky-bar/03.webp",
+      "width": 800,
+      "height": 600,
+      "sha256": "80508beb40ae6afff394fe5cc7432ceca4c8f9be8433f42c4ccfafb32cc1aa59"
+    },
+    {
+      "url": "https://media.evendo.com/locations-resized/BarImages/1440x800/38fb70c4-f48e-4f41-9a03-9df3e0b05da9",
+      "source": "https://evendo.com/locations/vietnam/mekong-delta/bar/iris-sky-bar",
+      "alt": "Iris Sky Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "ct/35-iris-sky-bar/04.webp",
+      "width": 1440,
+      "height": 800,
+      "sha256": "6bf5949189e137367dd32f3a79c5bcb2180d232d8df3a3e82ded37547c5648b3"
+    },
+    {
+      "url": "https://media.evendo.com/locations-resized/BarImages/440x780/38fb70c4-f48e-4f41-9a03-9df3e0b05da9?type=webp",
+      "source": "https://evendo.com/locations/vietnam/mekong-delta/bar/iris-sky-bar",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "ct/35-iris-sky-bar/05.webp",
+      "width": 440,
+      "height": 780,
+      "sha256": "4c985ec8a25abc1e8cb031d4d897f356e9f5181299a2a081a916bcfa51196b13"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 162,
+  "name": "New Hạ Long Club",
+  "city": "ql",
+  "addr": "Tổ 6, Khu 6, Yết Kiêu",
+  "images": [
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/473684oiN/new-ha-long-club-711924.jpg",
+      "source": "https://mytour.vn/vi/blog/bai-viet/top-10-quan-beer-club-noi-tieng-o-tinh-quang-ninh.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "ql/162-new-ha-long-club/01.webp",
+      "width": 700,
+      "height": 466,
+      "sha256": "2e0a0f701b69072833d84f24bb7bc549039cbf24281a954eaa79552557832695"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/473684mwU/new-ha-long-club-711928.jpg",
+      "source": "https://mytour.vn/vi/blog/bai-viet/top-10-quan-beer-club-noi-tieng-o-tinh-quang-ninh.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "ql/162-new-ha-long-club/02.webp",
+      "width": 700,
+      "height": 466,
+      "sha256": "8c2bf7ff39d54096c647b28802455190950433dd1a343b37ddd67337f2f55198"
+    }
+  ]
+}

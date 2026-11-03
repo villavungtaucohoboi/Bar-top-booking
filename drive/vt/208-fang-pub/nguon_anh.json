@@ -1,0 +1,52 @@
+{
+  "id": 208,
+  "name": "Fang Pub",
+  "city": "vt",
+  "addr": "3 Lý Tự Trọng",
+  "images": [
+    {
+      "url": "https://vnguide.vn/uploads/vnguide-content/space/quan-fang-pub/inline-02-food.jpg",
+      "source": "https://vnguide.vn/restaurant/quan-fang-pub",
+      "alt": "Quán Fang Pub - Cocktail, rooftop và nhịp tối ở Vũng Tàu – ảnh 3",
+      "score": 115,
+      "basis": "alt",
+      "file": "vt/208-fang-pub/01.webp",
+      "width": 2048,
+      "height": 1536,
+      "sha256": "95685461fa172d65515d4a4daee5c76f5a6faac9ab433aefdd947296a2b986dc"
+    },
+    {
+      "url": "https://vnguide.vn/uploads/vnguide-content/space/quan-fang-pub/inline-03-dish-detail.jpg",
+      "source": "https://vnguide.vn/restaurant/quan-fang-pub",
+      "alt": "Quán Fang Pub - Cocktail, rooftop và nhịp tối ở Vũng Tàu – ảnh 4",
+      "score": 115,
+      "basis": "alt",
+      "file": "vt/208-fang-pub/02.webp",
+      "width": 1008,
+      "height": 756,
+      "sha256": "b34642e478377766527d91d3169c5b9fdaef15cdc7330049bf36ee5ee279ebe2"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwbx07ih8wyj1a%40resize_w800",
+      "source": "https://www.foody.vn/vung-tau/fang-pub-vung-tau",
+      "alt": "Live Music at Fang Pub Vũng Tàu",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "vt/208-fang-pub/03.webp",
+      "width": 800,
+      "height": 600,
+      "sha256": "9f383b4f16d08518fa95cde394894f61bad7284ee1b300f684fa586acf6a4685"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwbx07p4z6c9ee@resize_ss640x400",
+      "source": "https://www.foody.vn/vung-tau/bar-pub",
+      "alt": "Fang Pub - Vũng Tàu",
+      "score": 100,
+      "basis": "alt",
+      "file": "vt/208-fang-pub/04.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "cfb3d812c39c161966a98cbbe019abfd3aa947ea05399e4dfcd9ed927b7fcd7c"
+    }
+  ]
+}

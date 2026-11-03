@@ -1,0 +1,19 @@
+{
+  "id": 129,
+  "name": "Booze Cruise Sports Bar & Grill",
+  "city": "nt",
+  "addr": "110 Nguyễn Thiện Thuật",
+  "images": [
+    {
+      "url": "https://d122axpxm39woi.cloudfront.net/images/guides/origin/60d45a9ce4520.jpg",
+      "source": "https://www.bestpricetravel.com/travel-guide/nha-trang-nightlife-2710.html",
+      "alt": "Booze Cruise Sports Bar and Grill Nha Trang",
+      "score": 100,
+      "basis": "alt",
+      "file": "nt/129-booze-cruise-sports-bar-grill/01.webp",
+      "width": 800,
+      "height": 450,
+      "sha256": "b8a80f66ad91ab9ffa0da40bbf3510028144b7016b8b457a55fde0b548d0aa3f"
+    }
+  ]
+}

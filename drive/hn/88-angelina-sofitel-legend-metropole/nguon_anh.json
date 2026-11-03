@@ -1,0 +1,63 @@
+{
+  "id": 88,
+  "name": "Angelina (Sofitel Legend Metropole)",
+  "city": "hn",
+  "addr": "15 Ngô Quyền, Tràng Tiền, Hoàn Kiếm",
+  "images": [
+    {
+      "url": "https://media.cntraveler.com/photos/673f6c344bcddc97f41f2c0b/master/w_1600%2Cc_limit/Sofitel%2520Legend%2520Metropole%2520Hanoi_SOFITEL-LEGEND-METROPOLE-HANOI-VIETNAM-angelina-bar-Gold-List-Oct24-PR-Global.jpg",
+      "source": "https://www.cntraveler.com/story/gold-list-top-hotels-and-resorts-in-the-world",
+      "alt": "Angelina Bar at Sofitel Legend Metropole Hanoi",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "hn/88-angelina-sofitel-legend-metropole/01.webp",
+      "width": 1600,
+      "height": 1126,
+      "sha256": "3688f8b5926c076fdb3c9aec724f973de06f73a7361b1d9c5fb793b6cda62fc3"
+    },
+    {
+      "url": "https://peaklife.in/uploads/2018/10/Spices-Garden-at-Sofitel-Legend-Metropole-Hanoi.jpg",
+      "source": "https://peaklife.in/metropole-hanoi-debuts-new-angelina-restaurant/",
+      "alt": "Angelina Restaurant at Sofitel Legend Metropole Hanoi",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "hn/88-angelina-sofitel-legend-metropole/02.webp",
+      "width": 1000,
+      "height": 667,
+      "sha256": "036740618054226aeadfe3a0b195944f9a96b580dbb774e86982faa20048734f"
+    },
+    {
+      "url": "https://3.bp.blogspot.com/-sF59nzx2SB0/W7MaUuL-FhI/AAAAAAABHWA/j-d1msRy5ssTnLTsMF9ll6KliRc66y0SACLcBGAs/s1600/mat%2Btien%2Bangelina.jpg",
+      "source": "https://www.everydayfoodilove.co/2018/10/metropole-hanois-angelina-cocktail-bar.html",
+      "alt": "Reopening of Angelina Bar at Metropole Hanoi",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "hn/88-angelina-sofitel-legend-metropole/03.webp",
+      "width": 800,
+      "height": 561,
+      "sha256": "ac986066894efde27dbc86602063274493e302affe6d57422c5cd30f283a0b69"
+    },
+    {
+      "url": "https://restaurantandbardesignawards.com/_next/image?q=75&url=https%3A%2F%2Fd3cw4f1nejd90x.cloudfront.net%2Fimages%2Fimages%2F44966%2Flarge%2F3.jpg&w=2048",
+      "source": "https://restaurantandbardesignawards.com/entry/7481",
+      "alt": "Angelina Bar at Sofitel Legend Metropole Hanoi",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "hn/88-angelina-sofitel-legend-metropole/04.webp",
+      "width": 700,
+      "height": 466,
+      "sha256": "2d43b9141d533f9286ef1ad5b552c3047d5f721a41ab70200b4566afc1cccbaf"
+    },
+    {
+      "url": "https://3.bp.blogspot.com/-IHhyIGLjPEc/W7MaVCedPBI/AAAAAAABHWE/fy-cDig1B08BiH4nCAa1-6ZoDdS0k9jLQCLcBGAs/s1600/thumbnail_2_whisky%2Blounge%2Bangelina.jpg",
+      "source": "https://www.everydayfoodilove.co/2018/10/metropole-hanois-angelina-cocktail-bar.html",
+      "alt": "Metropole Hanoi’s Redesigned Angelina Whisky Lounge",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "hn/88-angelina-sofitel-legend-metropole/05.webp",
+      "width": 800,
+      "height": 442,
+      "sha256": "d369d803011296816d9cbb6f24aff6eae3255c283e4d54b4f9723ca916d5664c"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 94,
+  "name": "Standing Bar",
+  "city": "hn",
+  "addr": "170 Trấn Vũ, Trúc Bạch, Ba Đình",
+  "images": [
+    {
+      "url": "https://www.beerandbrewing.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F75079%2F1710563632-standing-bar-2.jpg%3Fw%3D1920%26fit%3Dmax%26auto%3Dformat%252Ccompress%26q%3D75&w=3840&q=75&dpl=dpl_BLa2oTVUW5KyfYk79JzQvAZyN7C8",
+      "source": "https://www.beerandbrewing.com/love-handles-standing-bar",
+      "alt": "Photo: Joe Stange",
+      "score": 90,
+      "basis": "filename",
+      "file": "hn/94-standing-bar/01.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "8b51801cb82b220e01200dae9a687e3c0721c7b63aabd9289ad265b287c1eb9d"
+    },
+    {
+      "url": "https://image.vietnamnews.vn/uploadvnnews/Article/2022/12/8/254065_200221%20Winking%20Seal%20X%20Standing%20Bar%20Tap%20Takeover-52.jpg",
+      "source": "https://vietnamnews.vn/sunday/restaurant-review/1402815/still-standing-bar-brings-craft-beer-and-bites-galore.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "hn/94-standing-bar/02.webp",
+      "width": 640,
+      "height": 426,
+      "sha256": "3aa61c2e097411526d0c4640d54181817c475b9e6df3343f44cd89589ffae9e2"
+    },
+    {
+      "url": "https://image.vietnamnews.vn/uploadvnnews/Article/2026/10/29/541178_Picture1(4).jpg",
+      "source": "https://vietnamnews.vn/sunday/restaurant-review/1402815/still-standing-bar-brings-craft-beer-and-bites-galore.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "hn/94-standing-bar/03.webp",
+      "width": 640,
+      "height": 465,
+      "sha256": "534ad6f99e89bc3a2f6422b5b324e19387a6250e5454d1a44c4ccd0b952d5b5c"
+    },
+    {
+      "url": "https://image.vietnamnews.vn/uploadvnnews/Article/2026/10/1/534054_IMG_6184.jpeg",
+      "source": "https://vietnamnews.vn/sunday/restaurant-review/1402815/still-standing-bar-brings-craft-beer-and-bites-galore.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "hn/94-standing-bar/04.webp",
+      "width": 640,
+      "height": 480,
+      "sha256": "e035bb72c47a12c0366a0b962fdcea511007d031635cfbcba5322f2a44a37e9d"
+    },
+    {
+      "url": "https://image.vietnamnews.vn/uploadvnnews/Article/2026/10/8/535785_5605699345784308_xoi com1.jpeg",
+      "source": "https://vietnamnews.vn/sunday/restaurant-review/1402815/still-standing-bar-brings-craft-beer-and-bites-galore.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "hn/94-standing-bar/05.webp",
+      "width": 600,
+      "height": 600,
+      "sha256": "2c27a547100054bd1bcfa16be067fce541f6c561681885aa54a5e3ca5a442367"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 183,
+  "name": "2 Lam Son",
+  "city": "sg",
+  "addr": "Sảnh khách sạn Park Hyatt Saigon, 2 Công trường Lam Sơn",
+  "images": [
+    {
+      "url": "https://image-tc.galaxy.tf/wijpeg-c9wjt8p0m08i8uwb1g3jgicp1/2-lam-son-bar-photos-6.jpg?width=860",
+      "source": "https://www.parkhyattsaigonrestaurants.com/2-lam-son",
+      "alt": "2 Lam Son interior featuring intricate wooden screens, cozy seating, and a modern bar at Park Hyatt Saigon",
+      "score": 115,
+      "basis": "alt",
+      "file": "sg/183-2-lam-son/01.webp",
+      "width": 860,
+      "height": 1291,
+      "sha256": "8766bcfac5cd6bd6465045bc37f9dfc02a270596007440128ed1c36f55db8659"
+    },
+    {
+      "url": "https://image-tc.galaxy.tf/wijpeg-liqos6n90ieecm1t9fyylkan/2-lam-son-bar-photos-2.jpg?width=860",
+      "source": "https://www.parkhyattsaigonrestaurants.com/2-lam-son",
+      "alt": "2 Lam Son aglow with decorative bulbs as guests enjoy drinks by the elegant tables at Park Hyatt Saigon",
+      "score": 100,
+      "basis": "alt",
+      "file": "sg/183-2-lam-son/02.webp",
+      "width": 860,
+      "height": 1289,
+      "sha256": "815d0d6314faff8cfc95992f5ca81ac474cae085a51c431c522fc3abc5b15fd4"
+    },
+    {
+      "url": "https://image-tc.galaxy.tf/wijpeg-5u9shthc7pix5f6yyjecclsjl/2lamson-wov7.jpg?width=860",
+      "source": "https://www.parkhyattsaigonrestaurants.com/2-lam-son/wonders-of-vietnam-cocktail-collection",
+      "alt": "Refreshing cocktail garnished with a pink petal and a stick in 2 Lam Son at Park Hyatt Saigon",
+      "score": 100,
+      "basis": "alt",
+      "file": "sg/183-2-lam-son/03.webp",
+      "width": 860,
+      "height": 860,
+      "sha256": "32cc6d6c1ffb8427bb616af066c0aaf6754c3ffea4521af0a5fbebd48befa099"
+    },
+    {
+      "url": "https://image-tc.galaxy.tf/wijpeg-fvjzttw86qnr1z2dfbctp8j2/2lamson-wov6.jpg?width=860",
+      "source": "https://www.parkhyattsaigonrestaurants.com/2-lam-son/wonders-of-vietnam-cocktail-collection",
+      "alt": "Translucent pink cocktail in a glass, cradled by a pale ceramic hand in 2 Lam Son at Park Hyatt Saigon",
+      "score": 100,
+      "basis": "alt",
+      "file": "sg/183-2-lam-son/04.webp",
+      "width": 860,
+      "height": 860,
+      "sha256": "2fdf9f9483e4b68bc1c051fe1006e5fbe1a22a62505592d83391dbac5c3d3b33"
+    },
+    {
+      "url": "https://image-tc.galaxy.tf/wijpeg-32owki23iz20ge5qg78yf16gw/2lamson-wov5.jpg?width=860",
+      "source": "https://www.parkhyattsaigonrestaurants.com/2-lam-son/wonders-of-vietnam-cocktail-collection",
+      "alt": "Black ceramic bowl filled with creamy liquid sits on a textured dark stone surface in 2 Lam Son at Park Hyatt Saigon",
+      "score": 100,
+      "basis": "alt",
+      "file": "sg/183-2-lam-son/05.webp",
+      "width": 860,
+      "height": 860,
+      "sha256": "3269983a4316ca12bd5f61105990f65175c7d997fb9a947d393944b92a4ba600"
+    }
+  ]
+}

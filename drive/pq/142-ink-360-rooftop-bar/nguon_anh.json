@@ -1,0 +1,52 @@
+{
+  "id": 142,
+  "name": "INK 360 Rooftop Bar",
+  "city": "pq",
+  "addr": "Tầng 19, InterContinental Phu Quoc Long Beach Resort",
+  "images": [
+    {
+      "url": "https://vietnamisawesome.com/wp-content/uploads/2024/02/ink-360-rooftop-bar-phu-quoc-4.jpeg?class=ratio43",
+      "source": "https://vietnamisawesome.com/?p=18872",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "pq/142-ink-360-rooftop-bar/01.webp",
+      "width": 1600,
+      "height": 1200,
+      "sha256": "dbf79fed09b409e411eab74b2eecb52ceac0bab026004503d4a49980ab97e267"
+    },
+    {
+      "url": "https://vietnamisawesome.com/wp-content/uploads/2024/02/ink-360-rooftop-bar-phu-quoc-3.jpeg?class=ratio43",
+      "source": "https://vietnamisawesome.com/?p=18872",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "pq/142-ink-360-rooftop-bar/02.webp",
+      "width": 1600,
+      "height": 1200,
+      "sha256": "775cb340ee9a1d25f4df051e7d02146450ed188a4efd802576b72f63ec6d80f3"
+    },
+    {
+      "url": "https://vietnamisawesome.com/wp-content/uploads/2024/02/ink-360-rooftop-bar-phu-quoc-2.jpeg?class=ratio43",
+      "source": "https://vietnamisawesome.com/?p=18872",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "pq/142-ink-360-rooftop-bar/03.webp",
+      "width": 1600,
+      "height": 1200,
+      "sha256": "7ff12c108fb8a8e52e48de689ee1e87f771cc266ab14e63932a31d9fa5f4e3e2"
+    },
+    {
+      "url": "https://vietnamisawesome.com/wp-content/uploads/2024/02/ink-360-rooftop-bar-phu-quoc-1.jpeg?class=ratio43",
+      "source": "https://vietnamisawesome.com/?p=18872",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "pq/142-ink-360-rooftop-bar/04.webp",
+      "width": 1600,
+      "height": 1200,
+      "sha256": "2158fd2724ada11c44cd02e9ec10a574c035b8d024a022c678e4d5267d61a3bc"
+    }
+  ]
+}

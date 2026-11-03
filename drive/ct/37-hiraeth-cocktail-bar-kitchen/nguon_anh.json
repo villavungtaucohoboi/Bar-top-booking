@@ -1,0 +1,19 @@
+{
+  "id": 37,
+  "name": "Hiraeth Cocktail Bar & Kitchen",
+  "city": "ct",
+  "addr": "199 Nguyễn Thị Minh Khai, Q. Ninh Kiều, Cần Thơ",
+  "images": [
+    {
+      "url": "https://impresstravel.com/wp-content/uploads/2025/06/top-5-can-tho-bars-near-ninh-kieu-for-mekong-tours-4.jpg",
+      "source": "https://impresstravel.com/?p=54991",
+      "alt": "Hiraeth Cocktail Bar & Kitchen",
+      "score": 100,
+      "basis": "alt",
+      "file": "ct/37-hiraeth-cocktail-bar-kitchen/01.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "154e82d551a647ec86025b8edbd570481f0ffb180a9e77c3585081fd1329318d"
+    }
+  ]
+}

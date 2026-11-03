@@ -1,0 +1,52 @@
+{
+  "id": 191,
+  "name": "Apocalypse Now",
+  "city": "sg",
+  "addr": "2B Thi Sách",
+  "images": [
+    {
+      "url": "https://vietnamisawesome.com/wp-content/uploads/2024/11/340628539_5829261327201463_7698601694139691405_n.jpg",
+      "source": "https://vietnamisawesome.com/articles/night-clubs-in-saigon/",
+      "alt": "Apocalypse Now, a night club in Saigon",
+      "score": 100,
+      "basis": "alt",
+      "file": "sg/191-apocalypse-now/01.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "45ef7dd45f4d00670d81e81b195f87b68d15eca784af4f3b845b36c7890178d8"
+    },
+    {
+      "url": "https://vietnamisawesome.com/wp-content/uploads/2024/11/340530774_745097737250167_3493629897615341312_n-1.jpg",
+      "source": "https://vietnamisawesome.com/articles/night-clubs-in-saigon/",
+      "alt": "340530774 745097737250167 3493629897615341312 n 1 - Night Clubs in Saigon: 2024 Guide for Nightlife Magic",
+      "score": 70,
+      "basis": "section",
+      "file": "sg/191-apocalypse-now/02.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "9690f3be373f555b0b67c8e372fcdae08cc234d439efff92798edf6b2b463613"
+    },
+    {
+      "url": "https://vietnamisawesome.com/wp-content/uploads/2024/11/340075431_3010459155914879_361019378039687991_n.jpg",
+      "source": "https://vietnamisawesome.com/articles/night-clubs-in-saigon/",
+      "alt": "340075431 3010459155914879 361019378039687991 n - Night Clubs in Saigon: 2024 Guide for Nightlife Magic",
+      "score": 70,
+      "basis": "section",
+      "file": "sg/191-apocalypse-now/03.webp",
+      "width": 1200,
+      "height": 801,
+      "sha256": "4a5cb694510da5cf4b4445c2534313c89fa00d417ebcce76b57ad66c0fb78ec7"
+    },
+    {
+      "url": "https://app-api.glodival.vn/storage/o/images/ncOU6UoPoa3jLb2kXqLHBeF5Qc0AVf5CZIuTvbR8.jpg",
+      "source": "https://gtrip.vn/travel-blogs/night-clubs-in-ho-chi-minh-city",
+      "alt": "Cu Chi Tunnels Historical 1-Day Tour",
+      "score": 70,
+      "basis": "section",
+      "file": "sg/191-apocalypse-now/04.webp",
+      "width": 1080,
+      "height": 720,
+      "sha256": "3f0e9c32b5398ad7d406933f554b407b1a235cd818b11aad177c9f82dd89148b"
+    }
+  ]
+}

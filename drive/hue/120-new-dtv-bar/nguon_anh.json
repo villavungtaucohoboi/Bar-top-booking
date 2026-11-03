@@ -1,0 +1,52 @@
+{
+  "id": 120,
+  "name": "New DTV Bar",
+  "city": "hue",
+  "addr": "102 Lê Lợi",
+  "images": [
+    {
+      "url": "https://khamphahue.com.vn/Portals/0/Medias/Nam2022/T9/Khamphahue_NewDTBar12.jpg",
+      "source": "https://khamphahue.com.vn/Du-lich/Chi-tiet/tid/New-DTV-Bar.html/pid/8565/cid/372",
+      "alt": "Nightlife Beats at New DTV Bar",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "hue/120-new-dtv-bar/01.webp",
+      "width": 2048,
+      "height": 1367,
+      "sha256": "aab6c4a6064844733ce784d8b81c673a878cd4a4c9778abd155d691a1b39f3ae"
+    },
+    {
+      "url": "https://khamphahue.com.vn/Portals/0/Medias/Nam2022/T9/Khamphahue_NewDTBar3.jpg",
+      "source": "https://khamphahue.com.vn/Du-lich/Chi-tiet/tid/New-DTV-Bar.html/pid/8565/cid/372",
+      "alt": "New DTV Bar Nightlife",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "hue/120-new-dtv-bar/02.webp",
+      "width": 2048,
+      "height": 1365,
+      "sha256": "24cf45f8e461b000dccb13f84881582a91da00021d76f2f9a133f3fd0aed60cc"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://inhat.vn/wp-content/uploads/2022/05/quan-bar-hue-3-min.png",
+      "source": "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html",
+      "alt": "New DTV Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "hue/120-new-dtv-bar/03.webp",
+      "width": 700,
+      "height": 467,
+      "sha256": "e53cfa76798ac5ae4aefe762ea3deb9f7b08590e9e114fdb28ffc28c5aaf588e"
+    },
+    {
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6p_QuibrwT5RqUX9aPh0O3z3H-iNwliz0sSCqT0-cX92Y5A7vBMo3SXGnTsg84F73tu6-Tiv6cq1r2VQbazxMlzZ9yiSTQNHaZEcnFm81cCcKipfmo4r3fum1U_Dy9chMW192gMjuT7k/w640-h426/new+dtv+hue+sexy+dancer.jpg",
+      "source": "https://www.jakarta100bars.com/hue-nightlife",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "hue/120-new-dtv-bar/04.webp",
+      "width": 639,
+      "height": 426,
+      "sha256": "acfd48b0bf50467eaca1a4367143878fa607bd7ff31069b32645edfbf63504e8"
+    }
+  ]
+}

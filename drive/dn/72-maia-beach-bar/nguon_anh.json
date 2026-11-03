@@ -1,0 +1,63 @@
+{
+  "id": 72,
+  "name": "Maia Beach Bar",
+  "city": "dn",
+  "addr": "290 Võ Nguyên Giáp",
+  "images": [
+    {
+      "url": "https://tcdn.mindtrip.ai/images/508561/rlfa86.png",
+      "source": "https://mindtrip.ai/restaurant/my-vietnam/maia-beach-bar/re-Jxbnay3J",
+      "alt": "Maia Beach Bar Cocktails",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dn/72-maia-beach-bar/01.webp",
+      "width": 1280,
+      "height": 853,
+      "sha256": "42aa4f5908326af98c1360d092f6ac0c03dcc50a21f8b9f03354ce4c2a67214f"
+    },
+    {
+      "url": "https://suongtuyet.com/media/news/691_maia_beach_bar_da_nang_city.jpg",
+      "source": "https://suongtuyet.com/dem-ghe-bai-bien-maia-beach-bar-da-nang.html",
+      "alt": "Maia Beach Bar Night Sign",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dn/72-maia-beach-bar/02.webp",
+      "width": 1200,
+      "height": 630,
+      "sha256": "154d896f8031d81187afd6785f2f4a1d76ea2018bf5a7a7053de74448b325aff"
+    },
+    {
+      "url": "https://i2.ex-cdn.com/crystalbay.com/files/content/2026/06/16/quan-bar-bo-bien-da-nang-5-1146.jpg",
+      "source": "https://crystalbay.com/62-bat-mi-5-quan-bar-bo-bien-da-nang-dep-chill-het-nac-cho-hoi-me-check-in-n65059.html",
+      "alt": "Maia Beach Bar Seaside Chill Spot",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "dn/72-maia-beach-bar/03.webp",
+      "width": 1200,
+      "height": 799,
+      "sha256": "674622f82d6ba43238e4a6cf471c3e9f8a90ed6c9d5cce56702fa1562ed34b23"
+    },
+    {
+      "url": "https://lifeofdanang.com/_next/image?url=%2Fdemos%2Fmaia%2Fhero.jpg&w=3840&q=75&dpl=dpl_9bdfQ4zkNLtmqRKkwSSF1dVhAc9L",
+      "source": "https://lifeofdanang.com/places/maia",
+      "alt": "Maia Beach Bar on My Khe Beach",
+      "score": 100,
+      "basis": "alt",
+      "file": "dn/72-maia-beach-bar/04.webp",
+      "width": 1136,
+      "height": 816,
+      "sha256": "2359c96e1ae7420ad191027a6def89bd411b4d16b74b02efba4f4a551756c871"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/v2/photo-o/34/77/85/d2/image.jpg?w=900&h=500&s=1",
+      "source": "https://www.tripadvisor.com.vn/Restaurant_Review-g298085-d34342063-Reviews-Maia_Beach_Bar-Da_Nang.html",
+      "alt": "Chicken with sauce ",
+      "score": 60,
+      "basis": "article",
+      "file": "dn/72-maia-beach-bar/05.webp",
+      "width": 900,
+      "height": 500,
+      "sha256": "4a0581c2a6b624f46c6a3838874746ebe6db70a8e62a0182adf23d144451fe67"
+    }
+  ]
+}

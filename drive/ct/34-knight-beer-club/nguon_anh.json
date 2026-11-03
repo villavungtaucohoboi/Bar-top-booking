@@ -1,0 +1,19 @@
+{
+  "id": 34,
+  "name": "Knight Beer Club",
+  "city": "ct",
+  "addr": "27 Lê Lợi, P. Cái Khế, Q. Ninh Kiều, Cần Thơ",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwa2p90y3y6z69@resize_ss640x400",
+      "source": "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu",
+      "alt": "Knight Beer Club",
+      "score": 100,
+      "basis": "alt",
+      "file": "ct/34-knight-beer-club/01.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "7b8cc36cd6ed582215ab236c29f7e01ba57c2c84cbc21e700e2faced9d38f8d1"
+    }
+  ]
+}

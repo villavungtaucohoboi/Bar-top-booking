@@ -1,0 +1,63 @@
+{
+  "id": 80,
+  "name": "Nê Cocktail Bar",
+  "city": "hn",
+  "addr": "3B Tống Duy Tân, Hàng Bông, Hoàn Kiếm",
+  "images": [
+    {
+      "url": "https://www.rustycompass.com/uploads/destinations/ne-cocktails-hanoi-0118-8-of-8_15154692848.jpg",
+      "source": "https://rustycompass.com/vietnam-travel-guide-233/hanoi-5/nightlife-17/ne-cocktail-bar-hanoi-1381",
+      "alt": "Ne Cocktail Bar, Hanoi",
+      "score": 100,
+      "basis": "alt",
+      "file": "hn/80-ne-cocktail-bar/01.webp",
+      "width": 630,
+      "height": 355,
+      "sha256": "8c575b53d9c9278887ef538694f57cfc4b34fd2655cf43338b04c7c6b2432430"
+    },
+    {
+      "url": "https://www.rustycompass.com/uploads/destinations/ne-cocktails-hanoi-0118-1-of-8_15154692846.jpg",
+      "source": "https://rustycompass.com/vietnam-travel-guide-233/hanoi-5/nightlife-17/ne-cocktail-bar-hanoi-1381",
+      "alt": "Ne Cocktail Bar, Hanoi",
+      "score": 100,
+      "basis": "alt",
+      "file": "hn/80-ne-cocktail-bar/02.webp",
+      "width": 630,
+      "height": 355,
+      "sha256": "4be3cd1d44ed01319f6cc98233ae3440d730cba4d83f31745478de0b423a98f3"
+    },
+    {
+      "url": "https://www.rustycompass.com/uploads/destinations/ne-cocktails-hanoi-0118-2-of-8_15154692840.jpg",
+      "source": "https://rustycompass.com/vietnam-travel-guide-233/hanoi-5/nightlife-17/ne-cocktail-bar-hanoi-1381",
+      "alt": "Ne Cocktail Bar, Hanoi",
+      "score": 100,
+      "basis": "alt",
+      "file": "hn/80-ne-cocktail-bar/03.webp",
+      "width": 630,
+      "height": 355,
+      "sha256": "7115d4d6038542b5264c559dfb8a3a8bf7a4a32bea42280f92712889bdc00a2d"
+    },
+    {
+      "url": "https://www.rustycompass.com/uploads/destinations/ne-cocktails-hanoi-0118-3-of-8_15154692840.jpg",
+      "source": "https://rustycompass.com/vietnam-travel-guide-233/hanoi-5/nightlife-17/ne-cocktail-bar-hanoi-1381",
+      "alt": "Ne Cocktail Bar, Hanoi",
+      "score": 100,
+      "basis": "alt",
+      "file": "hn/80-ne-cocktail-bar/04.webp",
+      "width": 630,
+      "height": 355,
+      "sha256": "b5fc660391774c129321ddc48b59d5f627628dc951ded29b5892489a7fd79b48"
+    },
+    {
+      "url": "https://www.rustycompass.com/uploads/destinations/ne-cocktails-hanoi-0118-4-of-8_15154692848.jpg",
+      "source": "https://rustycompass.com/vietnam-travel-guide-233/hanoi-5/nightlife-17/ne-cocktail-bar-hanoi-1381",
+      "alt": "Ne Cocktail Bar, Hanoi",
+      "score": 100,
+      "basis": "alt",
+      "file": "hn/80-ne-cocktail-bar/05.webp",
+      "width": 630,
+      "height": 355,
+      "sha256": "b74d2f015b8c9ad76beec2dcb0efb8be188d5e5cd3c4f2a9b2b1e66bc03b477a"
+    }
+  ]
+}

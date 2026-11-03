@@ -1,0 +1,63 @@
+{
+  "id": 82,
+  "name": "Workshop14",
+  "city": "hn",
+  "addr": "6 Ngõ 5 Từ Hoa, Quảng An, Tây Hồ",
+  "images": [
+    {
+      "url": "https://i.pinimg.com/736x/af/cc/41/afcc4128b7348ec4c486ab80ca800f47.jpg",
+      "source": "https://au.pinterest.com/pin/softer-volumes-on-instagram-workshop14-is-a-bar-in-hanoi-that-merges-traditional-vietnamese-spatial-principles-with-contemporary-hospitality-the-veranda-serv-in-2025--13933080092185531/",
+      "alt": "Workshop14 Veranda Seating",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "hn/82-workshop14/01.webp",
+      "width": 736,
+      "height": 920,
+      "sha256": "ca831ab25818c2a9a08e08162e9ba3eb06dcbb01caf3d73fcb7255f7809e94b3"
+    },
+    {
+      "url": "https://i.pinimg.com/736x/36/db/d9/36dbd96eb8a886f74d2e739ff5ab34f6.jpg",
+      "source": "https://au.pinterest.com/pin/softer-volumes-on-instagram-workshop14-is-a-bar-in-hanoi-that-merges-traditional-vietnamese-spatial-principles-with-contemporary-hospitality-the-veranda-serv-in-2025--12525705208711299/",
+      "alt": "Workshop14 Veranda Seating",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "hn/82-workshop14/02.webp",
+      "width": 736,
+      "height": 920,
+      "sha256": "c24021a4d48066b7b94f4a153ac3df2d3663bd536dc7a7f7adbfadc82e4a75b2"
+    },
+    {
+      "url": "https://cdn.enprimeurclub.com/storage/v1/object/public/images/bars/2791daaf-bbdd-4d62-8e09-54145679ce74/hero1.jpg?width=2560&quality=80",
+      "source": "https://joinpearl.co/bars/hanoi/workshop14",
+      "alt": "Workshop14, Bar in Hanoi",
+      "score": 100,
+      "basis": "alt",
+      "file": "hn/82-workshop14/03.webp",
+      "width": 2400,
+      "height": 1599,
+      "sha256": "041c924cfa1630ac8a261fc1379dfdf98894356022d0887e9387592c0926c7c0"
+    },
+    {
+      "url": "https://ak-d.tripcdn.com/images/0106b12000oki2epqEDED_D_1200_675_R5_Q70.jpg?proc=autoorient",
+      "source": "https://www.trip.com/restaurant/vietnam/hanoi/detail/workshop14-152768423/",
+      "alt": "Workshop14",
+      "score": 100,
+      "basis": "alt",
+      "file": "hn/82-workshop14/04.webp",
+      "width": 1200,
+      "height": 675,
+      "sha256": "19e2651acce29c66a52f170f3f4c1f9a56c95ed93740b829c0d25ab719e859f1"
+    },
+    {
+      "url": "https://cdn.enprimeurclub.com/storage/v1/object/public/images/award%20sources/top500bars.png?width=1200&quality=80",
+      "source": "https://joinpearl.co/bars/hanoi/workshop14",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "hn/82-workshop14/05.webp",
+      "width": 600,
+      "height": 300,
+      "sha256": "9afc23e93b4ddead728e4ebe6dd705820ba25ed001c18cecaf31af75420ff40f"
+    }
+  ]
+}

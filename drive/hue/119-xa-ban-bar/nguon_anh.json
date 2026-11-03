@@ -1,0 +1,30 @@
+{
+  "id": 119,
+  "name": "Xà Bần Bar",
+  "city": "hue",
+  "addr": "40 Nguyễn Tri Phương",
+  "images": [
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://inhat.vn/wp-content/uploads/2022/05/quan-bar-hue-1-min.png",
+      "source": "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html",
+      "alt": "Xà Bần Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "hue/119-xa-ban-bar/01.webp",
+      "width": 700,
+      "height": 525,
+      "sha256": "329d76e79f0f53ded644ccc92ef70913420a00f97923a316983ed5295f6d6cfd"
+    },
+    {
+      "url": "https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/10_2022/batch_xa-ban-eatingwithchangchang.jpg",
+      "source": "https://luhanhvietnam.com.vn/du-lich/checklist-nhung-quan-ngon-khu-pho-tay-hue.html",
+      "alt": "Xà Bần Feast in Tây Huế",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "hue/119-xa-ban-bar/02.webp",
+      "width": 700,
+      "height": 875,
+      "sha256": "94b9f06774638663eb9db344a51f48c3e6f592d0eed776363f3633863b8ea348"
+    }
+  ]
+}

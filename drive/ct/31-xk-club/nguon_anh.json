@@ -1,0 +1,52 @@
+{
+  "id": 31,
+  "name": "XK Club",
+  "city": "ct",
+  "addr": "108B Trần Văn Khéo, Q. Ninh Kiều, Cần Thơ",
+  "images": [
+    {
+      "url": "https://toplist.vn/images/800px/xk-club-279827.jpg",
+      "source": "https://thietbisaonam.com/tin-san-pham/quan-bar-can-tho.html",
+      "alt": "XK Club Neon Entrance",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ct/31-xk-club/01.webp",
+      "width": 800,
+      "height": 800,
+      "sha256": "7048f2e9ea4e20890e2417547ac70825ebefe77dd726b8cb6e2ca9e71f56f461"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/xk-club-279830.jpg",
+      "source": "https://thietbisaonam.com/tin-san-pham/quan-bar-can-tho.html",
+      "alt": "Vibrant Nightclub Gathering",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "ct/31-xk-club/02.webp",
+      "width": 800,
+      "height": 626,
+      "sha256": "d025191d0a40a4f79c8f7e2a57d7d985c344725969f672c928b6e1c573bf1b05"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width%3D700%2Cheight%3D700/https%3A/gcs.tripi.vn/public-tripi/tripi-feed/img/474722hXM/xk-club-quan-bar-can-tho-1024x683.jpeg",
+      "source": "https://mytour.vn/en/blog/bai-viet/discover-6-vibrant-bars-in-can-tho-for-unforgettable-nights-mytour.html",
+      "alt": "Christmas Celebration at K Club",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "ct/31-xk-club/03.webp",
+      "width": 700,
+      "height": 467,
+      "sha256": "03718a9ace360ef22dffbf50c9ba97ff3b7f0f6b480489d44a170f970f2a85cd"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwdkqwrur6c934@resize_ss640x400",
+      "source": "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu",
+      "alt": "XK Club",
+      "score": 100,
+      "basis": "alt",
+      "file": "ct/31-xk-club/04.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "d5c5c68032323bf344fb2d439fd00c0ca2385515ca45e4a9d045daef8fdc0c2c"
+    }
+  ]
+}

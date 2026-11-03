@@ -1,0 +1,63 @@
+{
+  "id": 153,
+  "name": "Shri Beach Club & Bar",
+  "city": "pq",
+  "addr": "Đường Trần Hưng Đạo",
+  "images": [
+    {
+      "url": "https://statics.vincom.com.vn/xu-huong/shri-beach-1657605346.jpg",
+      "source": "https://vincom.com.vn/trend/quan-cafe-dep-o-phu-quoc",
+      "alt": "Shri Beach Club & Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/153-shri-beach-club-bar/01.webp",
+      "width": 800,
+      "height": 450,
+      "sha256": "b3016ebde3d8a5e01205310bdd38323dba5324d2d86ea4e91dc951e42dec3da1"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwh0g7fluk7td2%40resize_ss640x400",
+      "source": "https://www.foody.vn/phu-quoc/shri-beach-bar",
+      "alt": "Shri Beach Bar Night Ambiance",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/153-shri-beach-club-bar/02.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "50bc6e566f30a9e854e8d9712da27f37419d04ee78fcf0579f190254d55facfc"
+    },
+    {
+      "url": "https://image-us.eva.vn/upload/3-2023/images/2023-08-15/7-quan-cafe-dep-nhat-phu-quoc-so-huu-view-dep-than-thanh-cho-cac-tin-do-song-ao-shri-beach-club-13-1692112881-129-width780height724.jpg",
+      "source": "https://eva.vn/di-dau-xem-gi/6-quan-cafe-dep-nhat-phu-quoc-so-huu-view-dep-than-thanh-cho-cac-tin-do-song-ao-chup-anh-chay-may-c40a567547.html",
+      "alt": "Sunset Gathering at a Phú Quốc Beach Café",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/153-shri-beach-club-bar/03.webp",
+      "width": 780,
+      "height": 724,
+      "sha256": "63389a1ac87a00c3d08d681ab0098ed66feb6b69cb0ea59435b872f8000ac994"
+    },
+    {
+      "url": "https://cdn-i.doisongphapluat.com.vn/resize/th/upload/2024/04/15/he-lo-top-9-quan-cafe-view-dep-ngam-hoang-hon-cuc-chill-tai-phu-quoc-11-16465693.jpg",
+      "source": "https://doisongphapluat.com.vn/top-9-quan-cafe-view-dep-ngam-hoang-hon-cuc-chill-tai-phu-quoc-a619103.html",
+      "alt": "Shri Beach Club & Bar at Sunset",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/153-shri-beach-club-bar/04.webp",
+      "width": 720,
+      "height": 517,
+      "sha256": "82432913cd18f388686f31a5292bca477a16b181a4ef2fb142c15c1012b39a83"
+    },
+    {
+      "url": "https://file.hstatic.net/200000504041/file/shri-baeach-club-bar-4_1d2fbae65d784d798956fc0cc51abdcc_grande.jpeg",
+      "source": "https://joysholiday.com/blogs/cam-nang-du-lich/du-lich-phu-quoc-top-15-quan-bar-ve-dem-dep-nhat-phu-quoc",
+      "alt": "Sunset Beach Dinner at Shri Phú Quốc",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/153-shri-beach-club-bar/05.webp",
+      "width": 600,
+      "height": 495,
+      "sha256": "853310f9485af94654127f7f284a3069d3b577d838bad8a9a678862b705c32fb"
+    }
+  ]
+}

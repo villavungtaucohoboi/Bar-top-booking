@@ -1,0 +1,63 @@
+{
+  "id": 128,
+  "name": "Louisiane Brewhouse",
+  "city": "nt",
+  "addr": "Lô 29 Trần Phú",
+  "images": [
+    {
+      "url": "https://louisianebrewhouse.com.vn/wp-content/uploads/2022/09/300162904_5474211942658121_6826344977272985828_n.jpg",
+      "source": "https://louisianebrewhouse.com.vn/lien-he-voi-chung-toi/",
+      "alt": "Lousiane Brewhouse Entrance",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "nt/128-louisiane-brewhouse/01.webp",
+      "width": 2048,
+      "height": 1367,
+      "sha256": "b05b3edd971bea8e5d98ef8db9adbe44d7bd5b81eda6922973c13d91452e0f1b"
+    },
+    {
+      "url": "https://www.tgroup.vn/uploads/images/Nha%20Trang/louisiane-brewhouse-nha-trang-tgroup-travel-10.jpg",
+      "source": "https://www.tgroup.vn/service/louisiane-brewhouse-nha-trang",
+      "alt": "Beachfront Craft Beer and Grilled Pork",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "nt/128-louisiane-brewhouse/02.webp",
+      "width": 876,
+      "height": 585,
+      "sha256": "8307fc7846d29c7ba4a8691c04c30bcae297a6061f71b93b3e894390929a3eb7"
+    },
+    {
+      "url": "https://ta-img.tatinta.com/resize/1024/webp/destination/file-1609148724571.jpg",
+      "source": "https://tatinta.com/en/diem-den/nha-hang-bia-tuoi-louisiane-nha-trang/2797",
+      "alt": "Louisiane Brew House Beer Flight",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "nt/128-louisiane-brewhouse/03.webp",
+      "width": 1024,
+      "height": 640,
+      "sha256": "ba3942f1d4f3fedac56541ec1bff793533e036e6b0be559f04456c4c7b7163e8"
+    },
+    {
+      "url": "https://images.untp.beer/crop?height=640&stripmeta=true&url=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fphotos%2F2026_03_31%2F6872fc9fc5d8231459d21abf786b41e8_c_1559315656_raw.jpg&width=640",
+      "source": "https://untappd.com/louisianebrewhouse",
+      "alt": "Beer Flight at Louisiane Brewhouse",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "nt/128-louisiane-brewhouse/04.webp",
+      "width": 640,
+      "height": 640,
+      "sha256": "178f67c38c2735109735e9e06fcf20ab28d9c249b7ecd49f6bed5fddcc4a0b24"
+    },
+    {
+      "url": "https://epicurevietnam.com/Data/Sites/1/News/281/louisiane-photo-website-%286%29.jpg",
+      "source": "https://epicurevietnam.com/dining/other-cities/louisiane-brewhouse-where-hops-and-dreams-come-true-6-1",
+      "alt": "Beachfront Craft Beer and Sushi Feast",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "nt/128-louisiane-brewhouse/05.webp",
+      "width": 1152,
+      "height": 768,
+      "sha256": "a240b7393b2bae347002143fe405a63fc2fc1af16d1ac3c2c051f10208ab3a8e"
+    }
+  ]
+}

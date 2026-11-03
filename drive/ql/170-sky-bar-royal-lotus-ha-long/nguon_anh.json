@@ -1,0 +1,63 @@
+{
+  "id": 170,
+  "name": "Sky Bar – Royal Lotus Hạ Long",
+  "city": "ql",
+  "addr": "Tầng 16, khách sạn Royal Lotus, A13 Lô 1, Đông Hùng Thắng 2, Bãi Cháy",
+  "images": [
+    {
+      "url": "https://vietnamtravel.com/images/2018/10/royal-lotus-hotel-ha-long-1.jpg",
+      "source": "https://vietnamtravel.com/hotel/royal-lotus-hotel-ha-long",
+      "alt": "royal-lotus-hotel-ha-long-1",
+      "score": 100,
+      "basis": "alt",
+      "file": "ql/170-sky-bar-royal-lotus-ha-long/01.webp",
+      "width": 740,
+      "height": 400,
+      "sha256": "c72921266fb6291a00e2f932b9da1099c9a3d8f0b27edfb72ca700f4f68eea89"
+    },
+    {
+      "url": "https://vietnamtravel.com/images/2018/10/royal-lotus-hotel-ha-long-3.jpg",
+      "source": "https://vietnamtravel.com/hotel/royal-lotus-hotel-ha-long",
+      "alt": "royal-lotus-hotel-ha-long-3",
+      "score": 100,
+      "basis": "alt",
+      "file": "ql/170-sky-bar-royal-lotus-ha-long/02.webp",
+      "width": 740,
+      "height": 400,
+      "sha256": "bca74595ad42e056f9fee4ffe9d28a1cd87f417dea03396132756525b2aee76e"
+    },
+    {
+      "url": "https://vietnamtravel.com/images/2018/10/royal-lotus-hotel-ha-long-4.jpg",
+      "source": "https://vietnamtravel.com/hotel/royal-lotus-hotel-ha-long",
+      "alt": "royal-lotus-hotel-ha-long-4",
+      "score": 100,
+      "basis": "alt",
+      "file": "ql/170-sky-bar-royal-lotus-ha-long/03.webp",
+      "width": 740,
+      "height": 400,
+      "sha256": "7e188538308bbb9ff7e0f30a3d6e44e0f7b8552cdafb76f9fbc8d799eab4a1cc"
+    },
+    {
+      "url": "https://vietnamtravel.com/images/2018/10/royal-lotus-hotel-ha-long-5.jpg",
+      "source": "https://vietnamtravel.com/hotel/royal-lotus-hotel-ha-long",
+      "alt": "royal-lotus-hotel-ha-long-5",
+      "score": 100,
+      "basis": "alt",
+      "file": "ql/170-sky-bar-royal-lotus-ha-long/04.webp",
+      "width": 740,
+      "height": 400,
+      "sha256": "203ede8a207bace615b65a3c4bacf199e07f68affa796fe51dfc1b5d2767619f"
+    },
+    {
+      "url": "https://vietnamtravel.com/images/2018/10/royal-lotus-hotel-ha-long-6.jpg",
+      "source": "https://vietnamtravel.com/hotel/royal-lotus-hotel-ha-long",
+      "alt": "royal-lotus-hotel-ha-long-6",
+      "score": 100,
+      "basis": "alt",
+      "file": "ql/170-sky-bar-royal-lotus-ha-long/05.webp",
+      "width": 740,
+      "height": 400,
+      "sha256": "c5ad8911c7372c62502dc86979c154191c9fd328db68236beaab65de7734d9c4"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 97,
+  "name": "Atelier Cocktail Bar",
+  "city": "hp",
+  "addr": "9 Trần Nguyên Hãn, Lê Chân",
+  "images": [
+    {
+      "url": "https://vnguide.vn/uploads/0000/11/2024/09/24/atelier-cocktail-bar-1.jpg",
+      "source": "https://vnguide.vn/restaurant/atelier-cocktail-bar",
+      "alt": "Atelier Cocktail Bar Hải Phòng — Craft bar giữa phố cảng",
+      "score": 100,
+      "basis": "alt",
+      "file": "hp/97-atelier-cocktail-bar/01.webp",
+      "width": 1365,
+      "height": 1706,
+      "sha256": "8fa70eb46242066ec4b6a8b0d33312442389b0e9909a7e1563709a91ed301acd"
+    },
+    {
+      "url": "https://vnguide.vn/uploads/0000/11/2024/09/24/atelier-cocktail-bar-3.jpg",
+      "source": "https://vnguide.vn/restaurant/atelier-cocktail-bar",
+      "alt": "Atelier Cocktail Bar Hải Phòng — Craft bar giữa phố cảng – ảnh 2",
+      "score": 100,
+      "basis": "alt",
+      "file": "hp/97-atelier-cocktail-bar/02.webp",
+      "width": 1092,
+      "height": 1365,
+      "sha256": "1887e3107db1c429eab75f9747cb7d3dada01dbb9205620511a72777ea5d0ed8"
+    },
+    {
+      "url": "https://vnguide.vn/uploads/0000/11/2024/09/24/atelier-cocktail-bar-5.jpg",
+      "source": "https://vnguide.vn/restaurant/atelier-cocktail-bar",
+      "alt": "Atelier Cocktail Bar Hải Phòng — Craft bar giữa phố cảng – ảnh 3",
+      "score": 100,
+      "basis": "alt",
+      "file": "hp/97-atelier-cocktail-bar/03.webp",
+      "width": 955,
+      "height": 1195,
+      "sha256": "fe15c9599d3bf99740eddbb47929eb7041f8a82cdd9df5ac88cf58ec8bd7d36e"
+    },
+    {
+      "url": "https://wink-hotels.com/wp-content/uploads/2025/10/518326687_590909760758144_474762033930105148_n-1024x684.jpg",
+      "source": "https://wink-hotels.com/?p=6053",
+      "alt": "Best Bars In Hai Phong",
+      "score": 70,
+      "basis": "section",
+      "file": "hp/97-atelier-cocktail-bar/04.webp",
+      "width": 1024,
+      "height": 684,
+      "sha256": "3a8f6689a2ec550ed3a249e6180aaa1997179008706a88baf7448b01f1b756a5"
+    },
+    {
+      "url": "https://wink-hotels.com/wp-content/uploads/2025/10/z7087039623740_7587aa88f921f8cbea67e2e5350a7e87-683x1024.jpg",
+      "source": "https://wink-hotels.com/?p=6053",
+      "alt": "Best Bars In Hai Phong",
+      "score": 70,
+      "basis": "section",
+      "file": "hp/97-atelier-cocktail-bar/05.webp",
+      "width": 683,
+      "height": 1024,
+      "sha256": "1f4c2e8f9b54c9b69b1b6d26fc283926975ef7d69dea244f07aa56512e9a676e"
+    }
+  ]
+}

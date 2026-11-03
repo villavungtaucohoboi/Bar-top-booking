@@ -1,0 +1,63 @@
+{
+  "id": 184,
+  "name": "Snuffbox Speakeasy",
+  "city": "sg",
+  "addr": "",
+  "images": [
+    {
+      "url": "https://tknt.vn/images/2022/07/16/review-snuffbox-bar-12.jpg",
+      "source": "https://tknt.vn/review-snuffbox-bar-kham-pha-ve-dep-bi-an-va-long-lay-523.htm",
+      "alt": "Snuffbox Speakeasy Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/184-snuffbox-speakeasy/01.webp",
+      "width": 2048,
+      "height": 1365,
+      "sha256": "264d1b84fd399358c5c6d771a04d601fd48a93932b09fb939593a0a901c8897d"
+    },
+    {
+      "url": "https://noithatkendesign.vn/storage/app/media/uploaded-files/snuffbox-bar-7.jpg",
+      "source": "https://noithatkendesign.vn/review-snuffbox-bar-speakeasybar-an-minh.html",
+      "alt": "Snuffbox Speakeasy Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/184-snuffbox-speakeasy/02.webp",
+      "width": 1600,
+      "height": 1060,
+      "sha256": "a814850acbbb1d0ad728ae5c4e50fe8c8dafea53447f34167546443b7e312ef0"
+    },
+    {
+      "url": "https://noithatkendesign.vn/storage/app/media/uploaded-files/snuffbox-bar-6.jpg",
+      "source": "https://noithatkendesign.vn/review-snuffbox-bar-speakeasybar-an-minh.html",
+      "alt": "Snuffbox Speakeasy Bar Gathering",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "sg/184-snuffbox-speakeasy/03.webp",
+      "width": 904,
+      "height": 706,
+      "sha256": "b63d26c068f3617b84d725e1a0c67fdbf03841df2ab36a31518db41ecf92e827"
+    },
+    {
+      "url": "https://noithatkendesign.vn/storage/app/media/uploaded-files/snuffbox-bar-10.jpg",
+      "source": "https://noithatkendesign.vn/review-snuffbox-bar-speakeasybar-an-minh.html",
+      "alt": "Snuffbox Speakeasy Bar",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "sg/184-snuffbox-speakeasy/04.webp",
+      "width": 1024,
+      "height": 772,
+      "sha256": "1604a6feb985e2aae91bc104f5ec31af4c9a7f3905fd90249b96f09fa2fce570"
+    },
+    {
+      "url": "https://www.trvlogue.com/_next/image?url=https%3A%2F%2Frmrjnibxulbdixuqguwc.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fpost-content%2Fimported-naver%2Fimage-1786118639280-1786118639280-23825199.jpg&w=3840&q=75",
+      "source": "https://www.trvlogue.com/en/snuffbox-saigon-bar-live-music",
+      "alt": "Runam Restaurant Ho Chi Minh Review 2026: French Cafe Charm",
+      "score": 75,
+      "basis": "article",
+      "file": "sg/184-snuffbox-speakeasy/05.webp",
+      "width": 1080,
+      "height": 1080,
+      "sha256": "6c5a58a7b59501eaa2ac850a2cf849121d7f79b9ccc5ddef653c07f3fc962160"
+    }
+  ]
+}

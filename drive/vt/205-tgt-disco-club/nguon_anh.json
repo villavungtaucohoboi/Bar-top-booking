@@ -1,0 +1,30 @@
+{
+  "id": 205,
+  "name": "TGT Disco Club",
+  "city": "vt",
+  "addr": "158 Hạ Long",
+  "images": [
+    {
+      "url": "https://ak-d.tripcdn.com/images/0HJ1c12000i63enjr57A6_D_750_520_Q90.jpg?proc=autoorient",
+      "source": "https://pk.trip.com/restaurant/vietnam/vung-tau/detail/tgt-disco-club-142652164/",
+      "alt": "TGT Disco Club Neon Lounge",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "vt/205-tgt-disco-club/01.webp",
+      "width": 750,
+      "height": 520,
+      "sha256": "d45dbd6e614d30b54f7b4f716d3a6e1074b0e852c95a4497d34ca9281a120aca"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwajuqqxlql52a",
+      "source": "https://www.foody.vn/vung-tau/tgt-disco-club-ha-long",
+      "alt": "TGT Disco Club Entrance",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "vt/205-tgt-disco-club/02.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "6f9453f12f244d02cae36809585cfb6e78bfee645a16034e940dcd66a2b82cca"
+    }
+  ]
+}

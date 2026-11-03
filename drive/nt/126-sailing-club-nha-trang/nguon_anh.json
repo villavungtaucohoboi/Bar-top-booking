@@ -1,0 +1,52 @@
+{
+  "id": 126,
+  "name": "Sailing Club Nha Trang",
+  "city": "nt",
+  "addr": "72–74 Trần Phú",
+  "images": [
+    {
+      "url": "https://toplist.vn/images/800px/sailing-club-1090034.jpg",
+      "source": "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-nha-trang-57083.htm",
+      "alt": "Sailing Club",
+      "score": 100,
+      "basis": "alt",
+      "file": "nt/126-sailing-club-nha-trang/01.webp",
+      "width": 800,
+      "height": 529,
+      "sha256": "8ce9eebadffa23acf424e701c72c455a19f32b0ba594658024139078a9f71f74"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/sailing-club-1090033.jpg",
+      "source": "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-nha-trang-57083.htm",
+      "alt": "Sailing Club",
+      "score": 100,
+      "basis": "alt",
+      "file": "nt/126-sailing-club-nha-trang/02.webp",
+      "width": 800,
+      "height": 400,
+      "sha256": "2eb7f0687bf5c5ed64f47877690049d9cab877f7b44e4a7d8f36e7f76877d3f3"
+    },
+    {
+      "url": "https://d2mgzmtdeipcjp.cloudfront.net/files/magazine/2025/08/10/17548122311590.jpg",
+      "source": "https://www.waug.com/en/magazines/1329",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "nt/126-sailing-club-nha-trang/03.webp",
+      "width": 1080,
+      "height": 720,
+      "sha256": "a1d65ab7dac2203abe396272c4c0c70ae28bdaf1903e37ccbbe472458036a93f"
+    },
+    {
+      "url": "https://d2mgzmtdeipcjp.cloudfront.net/files/magazine/2025/08/10/17548122547247.jpg",
+      "source": "https://www.waug.com/en/magazines/1329",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "nt/126-sailing-club-nha-trang/04.webp",
+      "width": 1080,
+      "height": 1350,
+      "sha256": "98b98339743a5c39fcf26c8f6de2e940ea910678861783a0cc02d4ecc6fcf59c"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 29,
+  "name": "Golf Club",
+  "city": "ct",
+  "addr": "16A Lê Lợi, P. Cái Khế, Q. Ninh Kiều, Cần Thơ",
+  "images": [
+    {
+      "url": "https://thanhnien.mediacdn.vn/Uploaded/tuyenld/2021_05_17/sangolfimg_8909_MFKS.jpg?width=500",
+      "source": "https://thanhnien.vn/san-tap-golf-xin-xo-bac-nhat-mien-nam-mo-cua-tai-can-tho-1851365255.htm",
+      "alt": "New Cần Thơ Golf Practice Facility",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "ct/29-golf-club/01.webp",
+      "width": 3370,
+      "height": 2613,
+      "sha256": "2e5a04973e666c2e94c1f24802f51bf9eac9a5e6a9ed7897d27fb8ea27f52d7c"
+    },
+    {
+      "url": "https://lugiaco.com.vn/uploads/project/2021_05/mkgolf10.jpg",
+      "source": "https://lugiaco.com.vn/vi/project/du-an-hoan-thanh/tru-luoi-san-tap-mekong-golf-75.html",
+      "alt": "Mekong Golf Driving Range Practice Bays",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "ct/29-golf-club/02.webp",
+      "width": 1280,
+      "height": 960,
+      "sha256": "84464402bd7f3e85538ba9855acc74895e8a538cb0143b5a65a9f498f3f6097d"
+    },
+    {
+      "url": "https://impresstravel.com/wp-content/uploads/2025/06/top-5-can-tho-bars-near-ninh-kieu-for-mekong-tours-3.jpg",
+      "source": "https://impresstravel.com/?p=54991",
+      "alt": "Golf Club",
+      "score": 100,
+      "basis": "alt",
+      "file": "ct/29-golf-club/03.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "f998f772ca934a3aacd330f3e0e59d6461d17c7cb877ee6cfd4137f9b6a81074"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/474648YZx/golf-club-1278870.jpg",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-6-largest-bars-in-can-tho.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "ct/29-golf-club/04.webp",
+      "width": 700,
+      "height": 466,
+      "sha256": "cdb8b80405b089d92469e5fe5abfbe231ea6b4c0f4a5fbca96ed7db8dff7ac15"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/474648gTh/golf-club-1278871.jpg",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-6-largest-bars-in-can-tho.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "ct/29-golf-club/05.webp",
+      "width": 700,
+      "height": 466,
+      "sha256": "b850d01a724751a2ce93a62fcaad33257af9010539f25c7d193839b5d14edc39"
+    }
+  ]
+}

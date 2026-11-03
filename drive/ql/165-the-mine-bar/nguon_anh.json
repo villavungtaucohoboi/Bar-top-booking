@@ -1,0 +1,19 @@
+{
+  "id": 165,
+  "name": "The Mine Bar",
+  "city": "ql",
+  "addr": "Kiot C107–C108, Phố cổ Bãi Cháy, Sun World Halong Park",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwevofz7czq167@resize_ss640x400",
+      "source": "https://www.foody.vn/quang-ninh/bar-pub",
+      "alt": "6S The Mine Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "ql/165-the-mine-bar/01.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "b9a31a0959f97c9b7b35ae414311c87ddeeb1f94e1b1d06268b4245cad89e3f9"
+    }
+  ]
+}

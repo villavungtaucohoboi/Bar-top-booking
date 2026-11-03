@@ -1,0 +1,63 @@
+{
+  "id": 204,
+  "name": "Black Pearl Bar",
+  "city": "vt",
+  "addr": "64 Hạ Long",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lw9yfp7tgtll2f%40resize_ss640x400",
+      "source": "https://www.foody.vn/vung-tau/black-pearl-bar",
+      "alt": "Black Pearl Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "vt/204-black-pearl-bar/01.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "7ef805e914626190ec3a0813ca8cc913b7213526da7cb0a8bed8ea19a8790b18"
+    },
+    {
+      "url": "https://static.muanhanh.com/images/dia-diem/ba-ria-vung-tau/bar/bp-1.jpg",
+      "source": "https://danhsach.vn/ba-ria-vung-tau/dia-diem-uy-tin/black-pearl-bar-64-ha-long-phuong-2-thanh-pho-vung-tau-ba-ria-vung-tau-3435333264.html",
+      "alt": "Nightlife at the Pirates of the Caribbean Bar",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "vt/204-black-pearl-bar/02.webp",
+      "width": 650,
+      "height": 433,
+      "sha256": "869d8692c434e092f61776cbd646793703f13e68cfa7437b63c8fb51070a4efd"
+    },
+    {
+      "url": "https://triphunter.vn/media/W1siZiIsIjIwMTYvMDgvMDUvNWJmaTdmcnZhY19tYXhyZXNkZWZhdWx0LmpwZyJdXQ/maxresdefault.jpg?sha=80aa07f7f74d0b45",
+      "source": "https://triphunter.vn/places/vung-tau/items/black-pearl-bar",
+      "alt": "Live Performance at Black Pearl Bar",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "vt/204-black-pearl-bar/03.webp",
+      "width": 1280,
+      "height": 720,
+      "sha256": "3e36a7fe47c13556f93fe4005e87fb97d69390acd90a0c327ba60c71e6cfe0f6"
+    },
+    {
+      "url": "https://qvungtau.com/wp-content/uploads/2022/08/black-pearl-bar-vung-tau1.jpg",
+      "source": "https://qvungtau.com/black-pearl-bar-vung-tau/",
+      "alt": "Black Pearl Bar Entrance at Night",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "vt/204-black-pearl-bar/04.webp",
+      "width": 1200,
+      "height": 630,
+      "sha256": "03fe0d9630e23b075429f0d0ca500a7c924bd2141cf6515b9bd9b01a2d4b8061"
+    },
+    {
+      "url": "https://static.muanhanh.com/images/dia-diem/ba-ria-vung-tau/bar/bp-3.jpg",
+      "source": "https://danhsach.vn/ba-ria-vung-tau/dia-diem-uy-tin/black-pearl-bar-64-ha-long-phuong-2-thanh-pho-vung-tau-ba-ria-vung-tau-3435333264.html",
+      "alt": "Live Anniversary Performance at Black Pearl Bar",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "vt/204-black-pearl-bar/05.webp",
+      "width": 650,
+      "height": 433,
+      "sha256": "1d8b2a55f4b5a0f92a793255ec8b1750c43f0539da98258a312fca1d23544d81"
+    }
+  ]
+}

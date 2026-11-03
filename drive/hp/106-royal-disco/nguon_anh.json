@@ -1,0 +1,30 @@
+{
+  "id": 106,
+  "name": "Royal Disco",
+  "city": "hp",
+  "addr": "53 Lạch Tray, Ngô Quyền",
+  "images": [
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/474730dAi/quan-bar-hai-phong-king-disco.jpg",
+      "source": "https://mytour.vn/en/blog/bai-viet/indulge-in-the-vibrant-nightlife-scene-at-9-top-notch-bars-in-hai-phong-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "hp/106-royal-disco/01.webp",
+      "width": 700,
+      "height": 467,
+      "sha256": "73751b4fea6acaa955d1b594f452fca9fb5f4504f328c2dbffd364c2060bdcfd"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/474730ShY/hoang-gia-disco.jpg",
+      "source": "https://mytour.vn/en/blog/bai-viet/indulge-in-the-vibrant-nightlife-scene-at-9-top-notch-bars-in-hai-phong-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "hp/106-royal-disco/02.webp",
+      "width": 700,
+      "height": 467,
+      "sha256": "e20201d2d3052c99dd289f9c0182249ae947118161d73dd21d72e241c6a853ff"
+    }
+  ]
+}

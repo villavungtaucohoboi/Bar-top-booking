@@ -1,0 +1,63 @@
+{
+  "id": 28,
+  "name": "INU Beer Club & Lounge",
+  "city": "ct",
+  "addr": "81A Trần Phú, P. Cái Khế, Q. Ninh Kiều, Cần Thơ",
+  "images": [
+    {
+      "url": "https://fme.travel/uploads/2022/12/INU-beer-club-lounge.jpg",
+      "source": "https://fme.travel/places-for-christmas-in-can-tho/",
+      "alt": "INU Beer Club & Lounge in Can Tho",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ct/28-inu-beer-club-lounge/01.webp",
+      "width": 1280,
+      "height": 720,
+      "sha256": "7aa2c121ec99fc47fd8f27ec1df98269af4118e7f450c1a175d9ab664e7912ca"
+    },
+    {
+      "url": "https://menuonline.vn/public/responsive_filemanager/source/tin-tuc/bar-can-tho/quan-bar-can-tho%20%282%29.jpg",
+      "source": "https://menuonline.vn/quan-bar-can-tho.html",
+      "alt": "INU Beer Club & Lounge Online Menu",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "ct/28-inu-beer-club-lounge/02.webp",
+      "width": 600,
+      "height": 485,
+      "sha256": "7e2377da28818cf8f2cd77ce45d1489b5c54e4f221fd8ff5a00c1b87fd8be35b"
+    },
+    {
+      "url": "https://impresstravel.com/wp-content/uploads/2025/05/Best-Club-Can-Tho-Nightlife-Top-Spots-for-Party-Lovers-6.jpg",
+      "source": "https://impresstravel.com/?p=50435",
+      "alt": "Discover INU Beer Club & Lounge with Club Can Tho",
+      "score": 100,
+      "basis": "alt",
+      "file": "ct/28-inu-beer-club-lounge/03.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "8d3785eede01ce426d59354cb1797763f93f311c767aabcd6133df3497c5fcbc"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/474648VWs/inu-beer-club-amp-lounge-1270342.jpg",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-6-largest-bars-in-can-tho.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "ct/28-inu-beer-club-lounge/04.webp",
+      "width": 700,
+      "height": 466,
+      "sha256": "ecdc1e4691c73c17bd4ba4830a57a244e04b5099f6d2a427988a859d889f5b1f"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/474648ACS/inu-beer-club-amp-lounge-1270332.jpg",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-6-largest-bars-in-can-tho.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "ct/28-inu-beer-club-lounge/05.webp",
+      "width": 700,
+      "height": 700,
+      "sha256": "c41c13a08837faa3e94fdf69a888db54ecfcaf7af883d2b4f70bf1ef6278aab3"
+    }
+  ]
+}

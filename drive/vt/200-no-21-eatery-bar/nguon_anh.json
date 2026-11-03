@@ -1,0 +1,30 @@
+{
+  "id": 200,
+  "name": "No 21 Eatery & Bar",
+  "city": "vt",
+  "addr": "73 Lý Tự Trọng",
+  "images": [
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/481178FzA/anh-mo-ta.png",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-7-popular-cocktail-bars-in-vung-tau-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "vt/200-no-21-eatery-bar/01.webp",
+      "width": 700,
+      "height": 700,
+      "sha256": "221274e12afe8b9971ab039a1fbf15c180f9e43b051ad2fa5eb912c459666fad"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/481178rjp/anh-mo-ta.png",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-7-popular-cocktail-bars-in-vung-tau-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "vt/200-no-21-eatery-bar/02.webp",
+      "width": 560,
+      "height": 700,
+      "sha256": "a03638f3238be56c03663d13b46a29a681588c6da02e82f8ef3bc8cb6e8b542f"
+    }
+  ]
+}

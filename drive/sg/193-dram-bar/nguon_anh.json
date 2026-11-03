@@ -1,0 +1,63 @@
+{
+  "id": 193,
+  "name": "Dram Bar",
+  "city": "sg",
+  "addr": "Tầng 1, 2 Đặng Hữu Phổ",
+  "images": [
+    {
+      "url": "https://sanhruou.com/media/18888/content/quan-Dram-bar.jpg",
+      "source": "https://sanhruou.com/dram-bar-thao-dien-tp-thu-duc-q2/",
+      "alt": "Dram Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/193-dram-bar/01.webp",
+      "width": 900,
+      "height": 675,
+      "sha256": "c3ef6a078291d0d77af7e2888c7df9e1388dcd44088675637b23d04b3329c417"
+    },
+    {
+      "url": "https://www.zonevietnam.com/uploads/userreviews/yen-tinh-bar-62f9705d62fa9.jpg",
+      "source": "https://www.zonevietnam.com/food/4343/dram-bar",
+      "alt": "Evening Cocktails at Dram Bar",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "sg/193-dram-bar/02.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "5b5acbb893e85391751902b9b6694cb2815d309d1fdee4f7398a1df510a9baa3"
+    },
+    {
+      "url": "https://epicurevietnam.com/Data/Sites/1/media/dining/saigon/104/h2.jpg",
+      "source": "https://epicurevietnam.com/bars-clubs-1/saigon-1/reviving-forgotten-cocktail-classics-in-thao-dien",
+      "alt": "Dram Bar’s Classic Cocktail Lineup",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "sg/193-dram-bar/03.webp",
+      "width": 1080,
+      "height": 694,
+      "sha256": "7788354f5ab02b4ae25f9adcaf0c33b163676940131ad874d582bdb8ddc2a73d"
+    },
+    {
+      "url": "https://www.ruoungoaisg.vn/uploads/source/dia-diem-chill/cocktail-bar-saigon/dram-bar/489822007-648479354736343-3995502159398745256-n-17458398371891230796.jpg",
+      "source": "https://www.ruoungoaisg.vn/dram-bar-thao-dien-tp-thu-duc-quan-2",
+      "alt": "Dram Bar Lounge Corner",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "sg/193-dram-bar/04.webp",
+      "width": 1080,
+      "height": 1080,
+      "sha256": "5d85ca435099cfd04db2b17deea9eb37d20728ec099f32502bd4cd94b60cd90f"
+    },
+    {
+      "url": "https://www.ruoungoaisg.vn/uploads/source/dia-diem-chill/cocktail-bar-saigon/dram-bar/489909755-647770518140560-1040223705594522233-n.jpg",
+      "source": "https://www.ruoungoaisg.vn/dram-bar-thao-dien-tp-thu-duc-quan-2",
+      "alt": "Dram Bar’s Fiery Cocktail Craft",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "sg/193-dram-bar/05.webp",
+      "width": 1080,
+      "height": 1080,
+      "sha256": "b1c90c3f6c8f69c4aa1bde080d5894069151c0f72b776b15767a35de2154ded6"
+    }
+  ]
+}

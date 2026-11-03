@@ -1,0 +1,63 @@
+{
+  "id": 172,
+  "name": "Chill Skybar",
+  "city": "sg",
+  "addr": "Tầng 26–27, AB Tower, 76A Lê Lai, Quận 1",
+  "images": [
+    {
+      "url": "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/Bilder/chill-skybar-600-1.jpg",
+      "source": "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/chill-sky-bar.html",
+      "alt": "Rooftop bar Chill SkyBar Saigon in Ho Chi Minh",
+      "score": 115,
+      "basis": "alt",
+      "file": "sg/172-chill-skybar/01.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "06a8d2e76afd621fc6537385662573278f7a6151c48f928c20c6fefbd93efc38"
+    },
+    {
+      "url": "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/Bilder/chill-skybar-600-2.jpg",
+      "source": "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/chill-sky-bar.html",
+      "alt": "Rooftop bar Chill SkyBar Saigon in Ho Chi Minh",
+      "score": 115,
+      "basis": "alt",
+      "file": "sg/172-chill-skybar/02.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "bb4265cd47033c1edc33045bd2d8a1d2dc24e0d6b546ecd7245a8f19c2e3edfa"
+    },
+    {
+      "url": "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/Bilder/chill-skybar-600-3.jpg",
+      "source": "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/chill-sky-bar.html",
+      "alt": "Rooftop bar Chill SkyBar Saigon in Ho Chi Minh",
+      "score": 115,
+      "basis": "alt",
+      "file": "sg/172-chill-skybar/03.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "2110890ad4b565e84d7eb5a4ee8f5e3cd70d4b31eee25ea4c73223404b1d6fc8"
+    },
+    {
+      "url": "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/Bilder/chill-skybar-600-4.jpg",
+      "source": "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/chill-sky-bar.html",
+      "alt": "Rooftop bar Chill SkyBar Saigon in Ho Chi Minh",
+      "score": 115,
+      "basis": "alt",
+      "file": "sg/172-chill-skybar/04.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "08ec01fc8017672becf92137aa9f76395ca068eea7bbe44040110e10a1c55c8b"
+    },
+    {
+      "url": "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/Bilder/chill-skybar-600-5.jpg",
+      "source": "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/chill-sky-bar.html",
+      "alt": "Rooftop bar Chill SkyBar Saigon in Ho Chi Minh",
+      "score": 115,
+      "basis": "alt",
+      "file": "sg/172-chill-skybar/05.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "9ca97e4d740af0628a4a118ecee15203556afd8a1a0384d6f26dd1aab9dd39ba"
+    }
+  ]
+}

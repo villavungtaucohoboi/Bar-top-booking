@@ -1,0 +1,63 @@
+{
+  "id": 111,
+  "name": "Đông Bar",
+  "city": "hue",
+  "addr": "3 Phạm Ngũ Lão",
+  "images": [
+    {
+      "url": "https://khamphahue.com.vn/Portals/0/Medias/Nam2022/T9/Khamphahue_DongBar5.jpg",
+      "source": "https://khamphahue.com.vn/Du-lich/Chi-tiet/tid/DONG-BAR-Unlock-the-vibes.html/pid/284/cid/372",
+      "alt": "Lion Dance at Đông Bar",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "hue/111-dong-bar/01.webp",
+      "width": 2048,
+      "height": 1536,
+      "sha256": "7ec0f4fad2a4ac598e09909f273a01a72696952db203a702d3fe2acdc66458a0"
+    },
+    {
+      "url": "https://khamphahue.com.vn/Portals/0/Medias/Nam2022/T9/Khamphahue_DongBar7.jpg",
+      "source": "https://khamphahue.com.vn/Du-lich/Chi-tiet/tid/DONG-BAR-Unlock-the-vibes.html/pid/284/cid/372",
+      "alt": "ĐÔNG BAR Huế: Không gian retro sôi động",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "hue/111-dong-bar/02.webp",
+      "width": 1365,
+      "height": 1365,
+      "sha256": "cea2c0132e1804d752393afff9f5f8f05f65528a2b12e1883da8ac7a33f7b2f5"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://inhat.vn/wp-content/uploads/2022/05/quan-bar-hue-5-min.png",
+      "source": "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html",
+      "alt": "quán bar đẳng cấp và sang trọng",
+      "score": 70,
+      "basis": "section",
+      "file": "hue/111-dong-bar/03.webp",
+      "width": 700,
+      "height": 467,
+      "sha256": "fb19a1f038b05b352e5cbd1bc3813febf10d51ace8c2354c3ae81013c5ee356d"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/84/91/0f/photo0jpg.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g293926-d15232601-Reviews-Dong_Bar_Unlock_The_Vibes-Hue_Thua_Thien_Hue_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "hue/111-dong-bar/04.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "6e7b5c2561e88a5e13c83db654b3b8a5a123c6481dd23595d9b524a83e2af63c"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/26/48/1b/have-just-got-a-new-thang.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g293926-d15232601-Reviews-Dong_Bar_Unlock_The_Vibes-Hue_Thua_Thien_Hue_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "hue/111-dong-bar/05.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "929aeb75375fa5a728684395bc59d73ed4df50edd30ac67973cf7c76995723c0"
+    }
+  ]
+}

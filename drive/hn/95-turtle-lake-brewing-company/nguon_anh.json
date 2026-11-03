@@ -1,0 +1,63 @@
+{
+  "id": 95,
+  "name": "Turtle Lake Brewing Company",
+  "city": "hn",
+  "addr": "105 Quảng Khánh, Quảng An, Tây Hồ",
+  "images": [
+    {
+      "url": "https://www.vietnamonline.com/media/uploads/froala_editor/images/VNO-Tay%20Ho%20-%20Live%20Your%20Best%20Nightlife%20In%20Hanoi%2C%20A%20Thorough%20Guide%20To%20The%20City%E2%80%99s%20Clubbing%20Scene.jpg",
+      "source": "https://www.vietnamonline.com/destination/hanoi/tay-ho/tay-ho-nightlife.html",
+      "alt": "Turtle Lake Vietnam Pale Ale Showcase",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "hn/95-turtle-lake-brewing-company/01.webp",
+      "width": 1289,
+      "height": 1289,
+      "sha256": "058a85282a943b8cc0f105b36dd308150cff6c973447233a55b9ba1efcc1f0d4"
+    },
+    {
+      "url": "https://images.untp.beer/crop?height=640&stripmeta=true&url=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fphotos%2F2025_12_27%2Fe8c69494fd2ea715f46d0c4d00003e3b_c_1539053746_raw.jpg&width=640",
+      "source": "https://untappd.com/b/turtle-lake-brewing-company-hanoi-ipa/3565369",
+      "alt": "Turtle Lake Brewing Company Hazy IPA",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "hn/95-turtle-lake-brewing-company/02.webp",
+      "width": 640,
+      "height": 640,
+      "sha256": "60374f06aede2958b833a39471d9df6f4bfd2eaed3759d4a5640acdf89084dbc"
+    },
+    {
+      "url": "https://images.untp.beer/crop?height=640&stripmeta=true&url=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fphotos%2F2025_12_27%2Fb6558e40219654b845d6e0e42cd029a7_c_1539080596_raw.jpg&width=640",
+      "source": "https://untappd.com/b/turtle-lake-brewing-company-hanoi-ipa/3565369",
+      "alt": "Penguin Beer Flight",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "hn/95-turtle-lake-brewing-company/03.webp",
+      "width": 640,
+      "height": 640,
+      "sha256": "8e5f4c35e2a29857c95b8568b58354848e9dd5ec68afbf4527322cc4eddb8fe3"
+    },
+    {
+      "url": "https://cdn-resize-img.vietcetera.com/_next/image?url=https%3A%2F%2Fimg.vietcetera.com%2Fwp-content%2Fuploads%2F2018%2F08%2FTurtle-Lake-Brewing-Featured-768x432.jpg&q=80&w=768",
+      "source": "https://vietcetera.com/en/turtle-lake-brewing-co-vietnam-craft-beer-built-around-community",
+      "alt": "Turtle Lake Brewing Co: Vietnam Craft Beer Built Around Community",
+      "score": 100,
+      "basis": "alt",
+      "file": "hn/95-turtle-lake-brewing-company/04.webp",
+      "width": 768,
+      "height": 432,
+      "sha256": "471c262bd6f9ce2f5006adf387abf07387ceb8beac585bcfaf4ccf9dfeb5c26a"
+    },
+    {
+      "url": "https://sanhotelseries.com/wp-content/uploads/2024/06/Turtle-Lake-Brewing.jpg",
+      "source": "https://sanhotelseries.com/craft-beer-bars-in-hanoi/",
+      "alt": "Turtle Lake Brewing Company",
+      "score": 100,
+      "basis": "alt",
+      "file": "hn/95-turtle-lake-brewing-company/05.webp",
+      "width": 600,
+      "height": 400,
+      "sha256": "82166ea26cb98596cc2b7ce1d0f8bc9fac23828e90bdb3dabb465f8cad0d853f"
+    }
+  ]
+}

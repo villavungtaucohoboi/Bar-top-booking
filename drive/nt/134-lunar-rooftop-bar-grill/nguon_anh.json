@@ -1,0 +1,30 @@
+{
+  "id": 134,
+  "name": "Lunar Rooftop Bar & Grill",
+  "city": "nt",
+  "addr": "Tầng 4 Nha Trang Center, 20 Trần Phú",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwdu30zzktsp34@resize_ss640x400",
+      "source": "https://www.foody.vn/khanh-hoa/bar-pub-phu-hop-hen-ho",
+      "alt": "Lunar Rooftop Bar & Grill",
+      "score": 115,
+      "basis": "alt",
+      "file": "nt/134-lunar-rooftop-bar-grill/01.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "7c5d5250f3b5195230e4486e0a313417d04d11dc3394c2c02d0a2f190ce441d5"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwgx9g5xf6572e@resize_ss640x400",
+      "source": "https://www.foody.vn/khanh-hoa/bar-pub-phu-hop-hen-ho",
+      "alt": "Riveria Rooftop Bar & Restaurant",
+      "score": 85,
+      "basis": "section",
+      "file": "nt/134-lunar-rooftop-bar-grill/02.webp",
+      "width": 697,
+      "height": 400,
+      "sha256": "31d415f271bd7b5d904038da03800f8f5ab6162b673ac9000b86437fa0ffa9c2"
+    }
+  ]
+}

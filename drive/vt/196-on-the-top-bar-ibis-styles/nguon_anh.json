@@ -1,0 +1,63 @@
+{
+  "id": 196,
+  "name": "On The Top Bar – ibis Styles",
+  "city": "vt",
+  "addr": "117 Thùy Vân",
+  "images": [
+    {
+      "url": "https://du-lich.chudu24.com/f/m/2406/04/img-1650.jpeg?c=1&w=800",
+      "source": "https://khachsan.chudu24.com/review.ks.6347.350013.khach-san-ibis-styles-vung-tau.html",
+      "alt": "Rooftop Lounge at ibis Styles Vũng Tàu",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "vt/196-on-the-top-bar-ibis-styles/01.webp",
+      "width": 800,
+      "height": 473,
+      "sha256": "dfefb86e8d80c72010620a0ad6a6f73c99fb2931dcfc7717f5f91b2cb7523c64"
+    },
+    {
+      "url": "https://cdn.tgdd.vn/Files/2022/12/22/1498319/top-10-khach-san-vung-tau-duong-thuy-van-view-cuc-dinh-khong-nen-bo-qua-202212221541188575.jpg",
+      "source": "https://tnhelearning.edu.vn/top-10-vung-tau-hotels-on-thuy-van-street-with-the-best-view-should-not-be-missed/",
+      "alt": "Rooftop Infinity Pool at Ibis Styles Vung Tau",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "vt/196-on-the-top-bar-ibis-styles/02.webp",
+      "width": 800,
+      "height": 450,
+      "sha256": "128ad68201a444a52c1a40d93fd2c2fde77f36288b299f9ea29ee18334e51082"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/on-the-top-bar-ibis-styles-vung-tau-1325014.jpg",
+      "source": "https://toplist.vn/top-list/quan-rooftop-bar-noi-tieng-o-vung-tau-56885.htm",
+      "alt": "On The Top Bar - ibis Styles Vũng Tàu",
+      "score": 100,
+      "basis": "alt",
+      "file": "vt/196-on-the-top-bar-ibis-styles/03.webp",
+      "width": 800,
+      "height": 670,
+      "sha256": "53c37be0344f951ba5c1434a54c23e9338946febcf1d16cccf73d003483f0664"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/on-the-top-bar-ibis-styles-vung-tau-1325015.jpg",
+      "source": "https://toplist.vn/top-list/quan-rooftop-bar-noi-tieng-o-vung-tau-56885.htm",
+      "alt": "On The Top Bar - ibis Styles Vũng Tàu",
+      "score": 100,
+      "basis": "alt",
+      "file": "vt/196-on-the-top-bar-ibis-styles/04.webp",
+      "width": 800,
+      "height": 800,
+      "sha256": "668932002022ba9e7d282d4f868ddc7ae054786898d0b87960b3c2bfd69f65a0"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/on-the-top-bar-ibis-styles-vung-tau-1316992.jpg",
+      "source": "https://toplist.vn/top-list/quan-bar-ngoai-troi-cuc-chill-noi-tieng-o-vung-tau-56917.htm",
+      "alt": "On The Top Bar - ibis Styles Vũng Tàu",
+      "score": 100,
+      "basis": "alt",
+      "file": "vt/196-on-the-top-bar-ibis-styles/05.webp",
+      "width": 800,
+      "height": 800,
+      "sha256": "38f5076eeda397ba61028b439dcdf37211e69d43998b06d5f0775b2172b89e22"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": 33,
+  "name": "Mode DJ Lounge",
+  "city": "ct",
+  "addr": "354 Đường 30 Tháng 4, P. Xuân Khánh, Q. Ninh Kiều, Cần Thơ",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwb4dremwontaf@resize_ss640x400",
+      "source": "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu",
+      "alt": "Mode DJ Lounge Can Tho",
+      "score": 100,
+      "basis": "alt",
+      "file": "ct/33-mode-dj-lounge/01.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "b2a0b42e2a2e5597d541fbc3387cfb53c0ce643e69cb0ce520b213f23376e2d2"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 109,
+  "name": "Oasis Bar Cát Bà",
+  "city": "hp",
+  "addr": "228 đường 1/4, thị trấn Cát Bà",
+  "images": [
+    {
+      "url": "https://sun-ecommerce-cdn.azureedge.net/ecommerce/service-sites/asset/SunParadiseLandCatBa/B%C3%A0i%20SEO%202025/Th%C3%A1ng%209/oasis%20bar/1-gioi-thieu-Oasis-Bar-Cat-Ba.jpg",
+      "source": "https://sunparadiseland.com/SunParadiseLandCatBa/tin-tuc/oasis-bar-cat-ba-dia-diem-an-choi-quen-loi-ve-2025-7692",
+      "alt": "Oasis Bar Cát Bà là địa chỉ chơi đêm thú vị.",
+      "score": 100,
+      "basis": "alt",
+      "file": "hp/109-oasis-bar-cat-ba/01.webp",
+      "width": 1200,
+      "height": 900,
+      "sha256": "fa80cc343a10bc8820059582cd1367912309d556a17872de3546ed1c80616a0d"
+    },
+    {
+      "url": "https://sun-ecommerce-cdn.azureedge.net/ecommerce/service-sites/asset/SunParadiseLandCatBa/B%C3%A0i%20SEO%202025/Th%C3%A1ng%209/oasis%20bar/2-khong-gian-Oasis-Bar-Cat-Ba.jpg",
+      "source": "https://sunparadiseland.com/SunParadiseLandCatBa/tin-tuc/oasis-bar-cat-ba-dia-diem-an-choi-quen-loi-ve-2025-7692",
+      "alt": "Oasis Bar Cát Bà có hồ bơi ngoài trời.",
+      "score": 100,
+      "basis": "alt",
+      "file": "hp/109-oasis-bar-cat-ba/02.webp",
+      "width": 1200,
+      "height": 900,
+      "sha256": "c2aae6aaf2f6980ef52b91f28ed55e482feade18adc7c2dbaae27d9afa5f6bda"
+    },
+    {
+      "url": "https://sun-ecommerce-cdn.azureedge.net/ecommerce/service-sites/asset/SunParadiseLandCatBa/B%C3%A0i%20SEO%202025/Th%C3%A1ng%209/oasis%20bar/3-menu-do-uong-Oasis-Bar-Cat-Ba.jpg",
+      "source": "https://sunparadiseland.com/SunParadiseLandCatBa/tin-tuc/oasis-bar-cat-ba-dia-diem-an-choi-quen-loi-ve-2025-7692",
+      "alt": "Oasis Bar Cát Bà có nhiều đồ uống sáng tạo.",
+      "score": 100,
+      "basis": "alt",
+      "file": "hp/109-oasis-bar-cat-ba/03.webp",
+      "width": 1200,
+      "height": 900,
+      "sha256": "d3ed3ed1bb8cc94e4aeb34cd4df529b06afb0ff1a95fead290ae65989a0f4de1"
+    },
+    {
+      "url": "https://sun-ecommerce-cdn.azureedge.net/ecommerce/service-sites/asset/SunParadiseLandCatBa/B%C3%A0i%20SEO%202025/Th%C3%A1ng%209/oasis%20bar/5-kinh-nghiem-di-Oasis-Bar-Cat-Ba.jpg",
+      "source": "https://sunparadiseland.com/SunParadiseLandCatBa/tin-tuc/oasis-bar-cat-ba-dia-diem-an-choi-quen-loi-ve-2025-7692",
+      "alt": "Nên đặt bàn trước tại Oasis Bar Cát Bà.",
+      "score": 100,
+      "basis": "alt",
+      "file": "hp/109-oasis-bar-cat-ba/04.webp",
+      "width": 1200,
+      "height": 900,
+      "sha256": "2ebdc37b433add3a9bfb45babcd428fe85a1e830614354d47c5589720c6fa2d7"
+    },
+    {
+      "url": "https://sun-ecommerce-cdn.azureedge.net/ecommerce/service-sites/thumbnail/SunParadiseLandCatBa/B%C3%A0i%20SEO%202025/Th%C3%A1ng%209/oasis%20bar/48273/image-thumb__48273__1920/1-thumb-Oasis-Bar-Cat-Ba.jpg",
+      "source": "https://sunparadiseland.com/SunParadiseLandCatBa/tin-tuc/oasis-bar-cat-ba-dia-diem-an-choi-quen-loi-ve-2025-7692",
+      "alt": "Sun Paradise Land",
+      "score": 90,
+      "basis": "filename",
+      "file": "hp/109-oasis-bar-cat-ba/05.webp",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "555cc25c00551328b66a234d50d941032b637ecab8d78f1a611d921dbfd91f1a"
+    }
+  ]
+}

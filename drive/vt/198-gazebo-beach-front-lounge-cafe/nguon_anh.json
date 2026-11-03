@@ -1,0 +1,63 @@
+{
+  "id": 198,
+  "name": "Gazebo Beach Front Lounge & Cafe",
+  "city": "vt",
+  "addr": "Đường Hạ Long (Bãi Trước)",
+  "images": [
+    {
+      "url": "https://triphunter.vn/media/W1siZiIsIjIwMTkvMDUvMTMvM2h5aXk5YTE0NV9JTUdfMDQzMi5QTkciXV0/IMG_0432.PNG?sha=623c01fce0ef2a06",
+      "source": "https://triphunter.vn/places/vung-tau/items/gazebo-beach-front-lounge-cafe-vung-tau",
+      "alt": "Gazebo Beach Front Lounge & Cafe",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "vt/198-gazebo-beach-front-lounge-cafe/01.webp",
+      "width": 1242,
+      "height": 913,
+      "sha256": "5b21a682963dc8e8755dddf8c8998d83c8c1c2c8186565d49cd778b5460fcee8"
+    },
+    {
+      "url": "https://gcs.tripi.vn/public-tripi/tripi-feed/img/473486Kgb/image-gazebo-beach-front-lounge-cafe-sang-xin-min-164486757562550.jpg",
+      "source": "https://mytour.vn/vi/blog/bai-viet/gazebo-quan-lounge-and-cafe-ven-bien-sang-trong.html",
+      "alt": "Gazebo Beach Front Lounge & Cafe",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "vt/198-gazebo-beach-front-lounge-cafe/02.webp",
+      "width": 850,
+      "height": 566,
+      "sha256": "0e9f90c116a0fb5081bde652d91d0aa3d8367c8469006fb69684e15347e20569"
+    },
+    {
+      "url": "https://cdn.justfly.vn/2048x1365/media/202109/08/1631098372-gazebo-beach-front-lounge-cafe-quan-cafe-view-bien-vung-tau.jpg",
+      "source": "https://justfly.vn/discovery/vietnam/vung-tau/quan-cafe-view-bien",
+      "alt": "Gazebo Beach Front Lounge Café",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "vt/198-gazebo-beach-front-lounge-cafe/03.webp",
+      "width": 2048,
+      "height": 1365,
+      "sha256": "04003d2c030d1abe0b3f83dbe74373a9c87e4e26dacb0adc9b8ff9e21b7e4d1a"
+    },
+    {
+      "url": "https://cattour.vn/images/upload/images/vung-tau/bar-o-vung-tau/GazeboBeachFrontLoungeCafe2.jpg",
+      "source": "https://cattour.vn/blog/quay-banh-vung-tau-voi-12-quan-bar-duoc-yeu-thich-nhat-1752.html",
+      "alt": "Gazebo Beach Front Lounge Cafe",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "vt/198-gazebo-beach-front-lounge-cafe/04.webp",
+      "width": 1600,
+      "height": 1069,
+      "sha256": "baec9dd14286c795172e5553377ff999dce41f2e8a7049f8ec12d920b20f9cd9"
+    },
+    {
+      "url": "https://hotelio.vn/upload/202406/14/gazebo-beach-front-lounge-amp-cafe-198.jpg",
+      "source": "https://hotelio.vn/cafe-vung-tau.html",
+      "alt": "Beachfront Breakfast at Gazebo Café",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "vt/198-gazebo-beach-front-lounge-cafe/05.webp",
+      "width": 1400,
+      "height": 1050,
+      "sha256": "855027991179fd17cf4b75e21a131072a133fe20f9b23966607c2ba1cdefa450"
+    }
+  ]
+}

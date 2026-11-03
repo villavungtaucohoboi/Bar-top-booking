@@ -1,0 +1,63 @@
+{
+  "id": 187,
+  "name": "Firkin Bar",
+  "city": "sg",
+  "addr": "20 Mạc Thị Bưởi",
+  "images": [
+    {
+      "url": "https://asiatop80.com/submit/uploads/21304/91-98497-25/full/dad59dfbde39f45622ed112f8507069c.jpg",
+      "source": "https://asiatop80.com/top80lists/91-98497-25/view/Firkin-Bar-1-2",
+      "alt": "Firkin Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/187-firkin-bar/01.webp",
+      "width": 2048,
+      "height": 1365,
+      "sha256": "ed80cf135adda2d8a5c4c592a473ac74228fe953a66f91b6d3e82a221493058a"
+    },
+    {
+      "url": "https://vietnamnightlife.com/uploads/images/2020/06/1591072096-multi_product20-firkinbaroverview3.jpg",
+      "source": "https://vietnamnightlife.com/firkin-bar-215-16.html",
+      "alt": "Firkin Bar Lounge Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/187-firkin-bar/02.webp",
+      "width": 645,
+      "height": 400,
+      "sha256": "990043c92d1566dcdee6b0ea150286450b3ddfb6dfd2148b30ed9b1878c5fed5"
+    },
+    {
+      "url": "https://vietnamnightlife.com/uploads/images/2020/06/1591072096-multi_product20-firkinbaroverview2.jpg",
+      "source": "https://vietnamnightlife.com/firkin-bar-215-16.html",
+      "alt": "Firkin Bar Interior in Ho Chi Minh City",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "sg/187-firkin-bar/03.webp",
+      "width": 645,
+      "height": 400,
+      "sha256": "115dbcfa9214188e920611c8693ce602f56f6b6b0ab7455445cc90e809bf46eb"
+    },
+    {
+      "url": "https://www.ruoungoaisg.vn/uploads/source/tintucruou/firkinbar.jpg",
+      "source": "https://www.ruoungoaisg.vn/firkin-bar-mac-thi-buoi-ben-nghe-quan-1-tphcm",
+      "alt": "Firkin Bar Whisky and Charcuterie Experience",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "sg/187-firkin-bar/04.webp",
+      "width": 1440,
+      "height": 960,
+      "sha256": "2940da0ed31f97e13b3e5518296636325b2e61544981af1517847596486b038b"
+    },
+    {
+      "url": "https://ak-d.tripcdn.com/images/1mi4t224x8uk2di111A15.jpg?proc=source%2Ftrip",
+      "source": "https://my.trip.com/moments/detail/ho-chi-minh-city-434-121196097?locale=en-MY",
+      "alt": "Firkin Bar Whiskey Counter",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "sg/187-firkin-bar/05.webp",
+      "width": 1227,
+      "height": 920,
+      "sha256": "a4c408fa2b807280fd6c64995039bd4ff87368bd9971f82f9311fc3a3029294f"
+    }
+  ]
+}

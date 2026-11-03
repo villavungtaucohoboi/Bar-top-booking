@@ -1,0 +1,63 @@
+{
+  "id": 177,
+  "name": "EON Heli Bar",
+  "city": "sg",
+  "addr": "Tầng 52, Bitexco Financial Tower",
+  "images": [
+    {
+      "url": "https://static.muanhanh.com/images/2019/07/eon-52-heli-bar/eon-52-heli-bar-6.jpg",
+      "source": "https://danhsach.vn/ho-chi-minh/dia-diem-uy-tin/eon-52-heli-bar-bitexco-towel-tang-50-51-52-so-02-hai-trieu-p-ben-nghe-quan-1-ho-chi-minh-3131353264.html",
+      "alt": "EON 52 Heli Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/177-eon-heli-bar/01.webp",
+      "width": 650,
+      "height": 433,
+      "sha256": "aff3c6753b31d667acbe11ab87338e5ab5e216f93ad9536967147002a9112d9d"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwe6d7wo58m13c",
+      "source": "https://www.foody.vn/ho-chi-minh/eon-heli-bar-bitexco-tower",
+      "alt": "EON 52 Heli Bar Rooftop Experience",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/177-eon-heli-bar/02.webp",
+      "width": 960,
+      "height": 600,
+      "sha256": "89728b907461b614b2ca745981f347fe5a36c37e8cc608d49d724420c2d17384"
+    },
+    {
+      "url": "https://cdn.4travel.jp/img/thumbnails/imk/tips_pict/15/99/20/650x450_15992031.jpg?updated_at=1542097203",
+      "source": "https://4travel.jp/os_shisetsu/10492674",
+      "alt": "Nighttime Rooftop Bar in Ho Chi Minh City",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/177-eon-heli-bar/03.webp",
+      "width": 650,
+      "height": 450,
+      "sha256": "4acd37e4e1d6837926935d163497ac64d733378f2d2bac493ae94a9a8029e105"
+    },
+    {
+      "url": "https://lalakuo.com/wp-content/uploads/IMG_3248.jpg",
+      "source": "https://lalakuo.com/2019/05/vietnam-ho-chi-minh-city-bar-eon-52-heli/",
+      "alt": "Rooftop Night Drinks in Ho Chi Minh City",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/177-eon-heli-bar/04.webp",
+      "width": 900,
+      "height": 1200,
+      "sha256": "b57eb03cd803e25bd92cf94b6f194d49e4e623ab59cac0278f488f6c3c09ac53"
+    },
+    {
+      "url": "https://vietfuntravel.com/image/data/Blog/HCMC/eonhelibarmindblowingviewa.jpg",
+      "source": "https://vietfuntravel.com/blog/eon-heli-bar-saigon.html",
+      "alt": "eon heli bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "sg/177-eon-heli-bar/05.webp",
+      "width": 800,
+      "height": 534,
+      "sha256": "5d63071abc1f84ed2f546048a4b73e22072a4cd427951adcd0ff6dd14f83db8f"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": 167,
+  "name": "Hot Pub - Cafe & Lounge",
+  "city": "ql",
+  "addr": "Kiot B151–B152A–B152B, Sun World Halong Park",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwi9ffu5xnmh6d@resize_ss640x400",
+      "source": "https://www.foody.vn/quang-ninh/bar-pub-tai-tp-ha-long",
+      "alt": "Hot Pub - Cafe & Lounge",
+      "score": 100,
+      "basis": "alt",
+      "file": "ql/167-hot-pub-cafe-lounge/01.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "2b62bd88d3b9fde1ceaf32775736032aa4269abf650eea873193e6a293d09602"
+    }
+  ]
+}

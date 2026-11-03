@@ -1,0 +1,19 @@
+{
+  "id": 149,
+  "name": "Luna Bar",
+  "city": "pq",
+  "addr": "100 Trần Hưng Đạo",
+  "images": [
+    {
+      "url": "https://www.expatolife.com/wp-content/uploads/2021/01/Luna-Bar-Phu-Quoc-Vietnam.jpg",
+      "source": "https://www.expatolife.com/bars-clubs-phu-quoc-vietnam/",
+      "alt": "Luna Bar Night Ambiance",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/149-luna-bar/01.webp",
+      "width": 800,
+      "height": 796,
+      "sha256": "1e69bd9c6facde00c553b10020c8dc332506f1fcd0921ce5986243fb1946bcd0"
+    }
+  ]
+}

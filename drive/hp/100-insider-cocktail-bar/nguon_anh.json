@@ -1,0 +1,30 @@
+{
+  "id": 100,
+  "name": "Insider Cocktail Bar",
+  "city": "hp",
+  "addr": "80 Hoàng Văn Thụ, Quang Trung, Hồng Bàng",
+  "images": [
+    {
+      "url": "https://wink-hotels.com/wp-content/uploads/2025/10/482006677_653148514027455_5951443086207299115_n-1024x634.jpg",
+      "source": "https://wink-hotels.com/?p=6053",
+      "alt": "Best Bars In Hai Phong",
+      "score": 70,
+      "basis": "section",
+      "file": "hp/100-insider-cocktail-bar/01.webp",
+      "width": 1024,
+      "height": 634,
+      "sha256": "140a36d3de0c28911fdc0710b6c2e74ce391c330d81c71b387ae10082304a3d3"
+    },
+    {
+      "url": "https://wink-hotels.com/wp-content/uploads/2025/10/497687664_720758703933102_7215809811650183887_n-683x1024.jpg",
+      "source": "https://wink-hotels.com/?p=6053",
+      "alt": "Best Bars In Hai Phong",
+      "score": 70,
+      "basis": "section",
+      "file": "hp/100-insider-cocktail-bar/02.webp",
+      "width": 683,
+      "height": 1024,
+      "sha256": "648f554c4b9ef63638341885391d343ac86155a39c2f323e7f348054dd422129"
+    }
+  ]
+}

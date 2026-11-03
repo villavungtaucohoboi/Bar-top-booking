@@ -1,0 +1,41 @@
+{
+  "id": 206,
+  "name": "Anchor Bar – Thùy Vân",
+  "city": "vt",
+  "addr": "164 Thùy Vân",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwfugh2cfm5722@resize_ss640x400",
+      "source": "https://www.foody.vn/vung-tau/bar-pub-phuc-vu-bia",
+      "alt": "Anchor Bar - Thùy Vân",
+      "score": 100,
+      "basis": "alt",
+      "file": "vt/206-anchor-bar-thuy-van/01.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "0e3bffc36c37f3ca7b1ba1d6128d2611ad82b5f766317b7b7ef199fc80a603ed"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/13/84/9c/anchor-bar.jpg?w=900&h=500&s=1",
+      "source": "https://www.tripadvisor.com.vn/Restaurant_Review-g303946-d8071331-Reviews-Anchor_Bar-Vung_Tau_Ba_Ria_Vung_Tau_Province.html",
+      "alt": "Якорь при входе",
+      "score": 90,
+      "basis": "filename",
+      "file": "vt/206-anchor-bar-thuy-van/02.webp",
+      "width": 900,
+      "height": 500,
+      "sha256": "388f9dc41e86f16432ba82f44c8d962394b7da95bf0cd1dce71035cf5622d856"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/0f/4f/24/anchor-bar.jpg?w=1000&h=1000&s=1",
+      "source": "https://www.tripadvisor.com.vn/Restaurant_Review-g303946-d8071331-Reviews-Anchor_Bar-Vung_Tau_Ba_Ria_Vung_Tau_Province.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "vt/206-anchor-bar-thuy-van/03.webp",
+      "width": 960,
+      "height": 1000,
+      "sha256": "b146abb3e98d01ee1618bb5956327c30fd9f8cc0634c01122508effd9948ad3c"
+    }
+  ]
+}

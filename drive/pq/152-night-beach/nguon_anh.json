@@ -1,0 +1,41 @@
+{
+  "id": 152,
+  "name": "Night Beach",
+  "city": "pq",
+  "addr": "34–36 Trần Hưng Đạo",
+  "images": [
+    {
+      "url": "https://kenhhomestay.com/wp-content/uploads/2020/07/bar-phu-quoc-9.jpg",
+      "source": "https://kenhhomestay.com/bar-phu-quoc/",
+      "alt": "Top 30 Quán pub, beer club bar Phú Quốc đẹp nhất cực sôi động về đêm",
+      "score": 135,
+      "basis": "name-address-manual-source",
+      "file": "pq/152-night-beach/01.webp",
+      "width": 960,
+      "height": 720,
+      "sha256": "1d70e75cf4a4b6d8575eeb0fcb301004aa36ac7228a312e20cca85f8ccb0342c"
+    },
+    {
+      "url": "https://kenhhomestay.com/wp-content/uploads/2020/07/bar-phu-quoc-10.jpg",
+      "source": "https://kenhhomestay.com/bar-phu-quoc/",
+      "alt": "Top 30 Quán pub, beer club bar Phú Quốc đẹp nhất cực sôi động về đêm",
+      "score": 135,
+      "basis": "name-address-manual-source",
+      "file": "pq/152-night-beach/02.webp",
+      "width": 960,
+      "height": 720,
+      "sha256": "6d0b523c9a40858f9ef87908db06e43168ff14029e5ce793db94ea7848f6ecd3"
+    },
+    {
+      "url": "https://cdn3.ivivu.com/2021/01/top-quan-bar-phu-quoc-ivivu-15.png",
+      "source": "https://www.ivivu.com/blog/2021/02/du-lich-phu-quoc-check-in-top-10-quan-bar-ngam-hoang-hon-tuyet-dep/",
+      "alt": "Ảnh: FB Night beach bar ",
+      "score": 135,
+      "basis": "name-address-manual-source",
+      "file": "pq/152-night-beach/03.webp",
+      "width": 720,
+      "height": 720,
+      "sha256": "3bc738dd6d769913e0b1eda4ab85bd9b22c1d5efd6d4b9a7a6285a53ac9b2da6"
+    }
+  ]
+}

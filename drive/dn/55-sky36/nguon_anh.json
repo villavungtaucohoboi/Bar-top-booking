@@ -1,0 +1,63 @@
+{
+  "id": 55,
+  "name": "Sky36",
+  "city": "dn",
+  "addr": "Tầng 35–37, Novotel Danang Premier Han River, 36 Bạch Đằng",
+  "images": [
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/sky36-600-1.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/sky36.html",
+      "alt": "Rooftop bar Sky36 in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/55-sky36/01.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "1f76c75e6a2e1fe3d34a19875008389db575eeb384dd992ff949f46552f9961b"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/sky36-600-2.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/sky36.html",
+      "alt": "Rooftop bar Sky36 in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/55-sky36/02.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "7c77519f48d7206985d93eb6428bd8cc62cf4df7a70a87da2bf3e5cf60fbe5cf"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/sky36-600-3.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/sky36.html",
+      "alt": "Rooftop bar Sky36 in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/55-sky36/03.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "005dbcd83da86bb76e6bcb82aff2d3491a1dfe223c715570a00e807375358a8a"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/sky36-600-4.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/sky36.html",
+      "alt": "Rooftop bar Sky36 in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/55-sky36/04.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "5d8a2a6966769d46dcfc86fd6bfff6bd633760a1661188c1f7f5bc1f03e20e01"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/sky36-600-5.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/sky36.html",
+      "alt": "Rooftop bar Sky36 in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/55-sky36/05.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "7938af3e112c219512937c223b0fee8bad17cbeba1f1dbb67975693d85311077"
+    }
+  ]
+}

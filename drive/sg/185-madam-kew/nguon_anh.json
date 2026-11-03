@@ -1,0 +1,41 @@
+{
+  "id": 185,
+  "name": "Madam Kew",
+  "city": "sg",
+  "addr": "37bis Ký Con",
+  "images": [
+    {
+      "url": "https://static.where-e.com/Viet_Nam/Madam-Kew-Saigon_6a62f27243d4203d0e610b68a3689a23.jpg",
+      "source": "https://madam-kew-saigon.wheree.com/",
+      "alt": "Madam Kew Saigon Interior Lounge",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/185-madam-kew/01.webp",
+      "width": 1000,
+      "height": 750,
+      "sha256": "5ee429e783159f338279b639d2ce46669c0a638e92b775cbffaa6eb60078f610"
+    },
+    {
+      "url": "https://cdn.tatlerasia.com/tatlerasia/i/2025/05/07151623-490808715-1478751879917154-7323416343617878441-n_cover_1080x1080.jpg",
+      "source": "https://www.tatlerasia.com/dining/madam-kew",
+      "alt": "Madam Kew Signature Cocktail",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "sg/185-madam-kew/02.webp",
+      "width": 1080,
+      "height": 1080,
+      "sha256": "2507e2fa94e31d8acafe2e88130c8e923624965b3ae1007fb21b7029a0009fd4"
+    },
+    {
+      "url": "https://cdn.tatlerasia.com/tatlerasia/i/2025/05/05193237-472875486-1140101904247463-3681860475924850829-n_cover_1600x1067.jpg",
+      "source": "https://www.tatlerasia.com/lifestyle/travel/tatler-best-in-class-bar-vietnam-2025-bar-vn",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "sg/185-madam-kew/03.webp",
+      "width": 1600,
+      "height": 1067,
+      "sha256": "2045c5736fbd9f7cfa632bfc1f31fc60296d3be25aa126ddca2a595a45b17e1f"
+    }
+  ]
+}

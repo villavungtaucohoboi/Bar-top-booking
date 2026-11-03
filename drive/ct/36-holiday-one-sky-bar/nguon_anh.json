@@ -1,0 +1,30 @@
+{
+  "id": 36,
+  "name": "Holiday One Sky Bar",
+  "city": "ct",
+  "addr": "Tầng 15 Khách sạn Holiday One, 59-65 Phạm Ngọc Thạch, P. Cái Khế, Q. Ninh Kiều, Cần Thơ",
+  "images": [
+    {
+      "url": "https://galatravel.vn/pic/hotel/600-400_636845506147988310_HasThumb.jpg",
+      "source": "https://galatravel.vn/holiday-one-can-tho-hotel.htm",
+      "alt": "Holiday One Can Tho Hotel Rooftop Pool and Sky Bar",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ct/36-holiday-one-sky-bar/01.webp",
+      "width": 600,
+      "height": 400,
+      "sha256": "766a1adb6030d487cf81315e3c896592387c1690559376e69e337167fe963708"
+    },
+    {
+      "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/276398542.jpg?hp=1&k=97540777d631200f64e0664c565a9dd68c8b1f67f29007275d36955bd26e24f3&o=",
+      "source": "https://www.booking.com/hotel/vn/holiday-one-can-tho.html",
+      "alt": "Rooftop Celebration at Holiday One Can Tho Hotel",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "ct/36-holiday-one-sky-bar/02.webp",
+      "width": 1024,
+      "height": 768,
+      "sha256": "4145e53a12a355c5666e694a140dd922ea5d37ee0348bc864b8adcf1b9523dec"
+    }
+  ]
+}

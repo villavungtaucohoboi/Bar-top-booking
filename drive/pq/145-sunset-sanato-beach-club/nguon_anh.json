@@ -1,0 +1,63 @@
+{
+  "id": 145,
+  "name": "Sunset Sanato Beach Club",
+  "city": "pq",
+  "addr": "Ấp 3, đường Bào, Dương Tơ",
+  "images": [
+    {
+      "url": "https://rootytrip.com/wp-content/uploads/2022/11/ve-sunset-sanato-phu-quoc-1024x576.jpg",
+      "source": "https://rootytrip.com/en/product/sunset-sanato-beach-club-ticket/",
+      "alt": "Sunset Sculptures at Sanato Beach Club",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/145-sunset-sanato-beach-club/01.webp",
+      "width": 1024,
+      "height": 576,
+      "sha256": "834436af9aa5b08064235d40ed600204837bf856225c0e8df1a706dcf107b496"
+    },
+    {
+      "url": "https://sun-ecommerce-cdn.azureedge.net/ecommerce/service-sites/asset/SunWorldHonThom/swold/top-20-dia-diem-ngam-hoang-hon-phu-quoc-dep-ngat-ngay-5890/41-sunset-sanato-beach-club.jpg",
+      "source": "https://sunworld.vn/vi/hon-thom/check-in/top-20-dia-diem-ngam-hoang-hon-phu-quoc-dep-ngat-ngay-5890",
+      "alt": "Sunset Sanato Beach Club at Dusk",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/145-sunset-sanato-beach-club/02.webp",
+      "width": 800,
+      "height": 600,
+      "sha256": "22dab0c2e229f2ad58343ada5478a298137d378de26d4a7611118b2419fd4588"
+    },
+    {
+      "url": "https://thetravelintern.com/wp-content/uploads/2022/08/Sunset-Sanato-Jellyfish-Southern-Vietnam-Itinerary-1024x576.jpg",
+      "source": "https://thetravelintern.com/phu-quoc-itinerary/",
+      "alt": "Sunset Jellyfish Art on Phu Quoc Pier",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "pq/145-sunset-sanato-beach-club/03.webp",
+      "width": 1024,
+      "height": 576,
+      "sha256": "b7a9a31483ed7ac8043fd956f9dbaedd0815d357d5de38b5364e25cad9d15500"
+    },
+    {
+      "url": "https://ik.imagekit.io/tvlk/blog/2025/03/sunset-sanato-phu-quoc-4-1024x767.jpeg?tr=q-70%2Cc-at_max%2Cw-1000%2Ch-600",
+      "source": "https://www.traveloka.com/vi-vn/explore/activities/review-sunset-sanato-phu-quoc/510825",
+      "alt": "Sunset Sanato Beach Club Aerial View",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "pq/145-sunset-sanato-beach-club/04.webp",
+      "width": 801,
+      "height": 600,
+      "sha256": "95a82cc7b668f61bd00468980b26fc16f6776800f0259062a55495f84643f173"
+    },
+    {
+      "url": "https://static.halongopentour.vn/uploads/2023/03/7d5d4993-9cab-4898-b5fe-ac7bfb4610cb/conversions/quan-ca-phe-ngam-hoang-hon-phu-quoc-sunset-beach-club-large.jpg?height=483&width=724",
+      "source": "https://halongopentour.vn/blog/top-5-toa-do-ngam-hoang-hon-khi-du-lich-phu-quoc_641d60dd23450.html",
+      "alt": "Sunset Elephants on Phú Quốc Beach",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "pq/145-sunset-sanato-beach-club/05.webp",
+      "width": 724,
+      "height": 483,
+      "sha256": "7b73252bd29f6634fe09e7765cccef7046a9d5dea4d983f7ae7181ce01682cfc"
+    }
+  ]
+}

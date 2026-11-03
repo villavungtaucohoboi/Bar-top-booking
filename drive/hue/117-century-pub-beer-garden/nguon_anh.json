@@ -1,0 +1,52 @@
+{
+  "id": 117,
+  "name": "Century Pub & Beer Garden",
+  "city": "hue",
+  "addr": "49 Lê Lợi",
+  "images": [
+    {
+      "url": "https://khamphahue.com.vn/Portals/0/Medias/Nam2022/T9/Khamphahue_CenturyPubBeerGarden17.jpg",
+      "source": "https://khamphahue.com.vn/Du-lich/Chi-tiet/tid/Century-Pub-Beer-Garden.html/pid/11840/cid/372",
+      "alt": "Century Pub Beer Garden Nightlife",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "hue/117-century-pub-beer-garden/01.webp",
+      "width": 2048,
+      "height": 1357,
+      "sha256": "8d8f0b387a46790bfacc68157b26f47253eaaddf4495bc413fd7f84063b826da"
+    },
+    {
+      "url": "https://static.danhsach.vn/images/2019/10/03/1d23277552dc7b651857778742265637.jpg",
+      "source": "https://danhsach.vn/hue/dia-diem-uy-tin/century-beer-garden-49-le-loi-thanh-pho-hue-313036343264.html",
+      "alt": "Century Beer Garden Pub in Huế",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "hue/117-century-pub-beer-garden/02.webp",
+      "width": 800,
+      "height": 600,
+      "sha256": "acdc6a3c571f44f7caaf9a22399099510f470e3bdfaa7488e682597e31892b47"
+    },
+    {
+      "url": "https://khamphahue.com.vn/Portals/0/Medias/Nam2022/T9/Khamphahue_CenturyPubBeerGarden18.jpg",
+      "source": "https://khamphahue.com.vn/Du-lich/Chi-tiet/tid/Century-Pub-Beer-Garden.html/pid/11840/cid/372",
+      "alt": "Century Pub Beer Garden Night Gathering",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "hue/117-century-pub-beer-garden/03.webp",
+      "width": 2048,
+      "height": 1357,
+      "sha256": "11eda24383285111d4af7a971b6b305c203e7b855382b00f23dbb901722e850d"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134513-7r98o-lstsy3nlllfo26@resize_ss640x400",
+      "source": "https://www.foody.vn/hue/bar-pub",
+      "alt": "Century Pub & Beer Garden",
+      "score": 100,
+      "basis": "alt",
+      "file": "hue/117-century-pub-beer-garden/04.webp",
+      "width": 800,
+      "height": 500,
+      "sha256": "950a3249b9c1ad6309e9ac71c7cc0e3f66fffc8f4c046f533f1c4013a6c02d5b"
+    }
+  ]
+}

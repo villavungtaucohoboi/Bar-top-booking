@@ -1,0 +1,63 @@
+{
+  "id": 102,
+  "name": "T-Pub Craft Beer Station",
+  "city": "hp",
+  "addr": "BH03-05 Manhattan 10, Vinhomes Imperia, Hồng Bàng",
+  "images": [
+    {
+      "url": "https://vnguide.vn/uploads/0000/11/2024/09/21/t-pub-craft-beer-station-4.jpg",
+      "source": "https://vnguide.vn/restaurant/t-pub-craft-beer-station",
+      "alt": "T-Pub Craft Beer Station — Bia thủ công Hải Phòng",
+      "score": 100,
+      "basis": "alt",
+      "file": "hp/102-t-pub-craft-beer-station/01.webp",
+      "width": 2048,
+      "height": 2048,
+      "sha256": "c4e6f5b6a2611c56450d79e4ae76f29705ad0a01c836ecb88f4b4a1f79ac1821"
+    },
+    {
+      "url": "https://vnguide.vn/uploads/0000/11/2024/09/21/t-pub-craft-beer-station-2.jpg",
+      "source": "https://vnguide.vn/restaurant/t-pub-craft-beer-station",
+      "alt": "T-Pub Craft Beer Station — Bia thủ công Hải Phòng – ảnh 2",
+      "score": 100,
+      "basis": "alt",
+      "file": "hp/102-t-pub-craft-beer-station/02.webp",
+      "width": 2048,
+      "height": 2048,
+      "sha256": "906118adc6addbe07b06d05d37afa1ce10842857e2d2eccd4285eae24dada2e2"
+    },
+    {
+      "url": "https://vnguide.vn/uploads/0000/11/2024/09/21/t-pub-craft-beer-station-1.jpg",
+      "source": "https://vnguide.vn/restaurant/t-pub-craft-beer-station",
+      "alt": "T-Pub Craft Beer Station — Bia thủ công Hải Phòng – ảnh 3",
+      "score": 100,
+      "basis": "alt",
+      "file": "hp/102-t-pub-craft-beer-station/03.webp",
+      "width": 2048,
+      "height": 2048,
+      "sha256": "4101804eb86936d413e429d44e287971ac6eb68e7cb9108bb8eb810977a001f4"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/481137VUZ/anh-mo-ta.png",
+      "source": "https://mytour.vn/vi/blog/bai-viet/top-7-most-famous-bars-in-hai-phong-mytour",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "hp/102-t-pub-craft-beer-station/04.webp",
+      "width": 700,
+      "height": 525,
+      "sha256": "a37bbcb87d13edd6b8d1db808000aefa41ef3473284d877156eae29e6bd5dcc3"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/481137cLT/anh-mo-ta.png",
+      "source": "https://mytour.vn/vi/blog/bai-viet/top-7-most-famous-bars-in-hai-phong-mytour",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "hp/102-t-pub-craft-beer-station/05.webp",
+      "width": 700,
+      "height": 394,
+      "sha256": "f205f30be6913ca16ee42baccecfb35ae63791b7b1c38e6132ae03495e62cde0"
+    }
+  ]
+}

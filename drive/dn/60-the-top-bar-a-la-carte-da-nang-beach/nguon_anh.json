@@ -1,0 +1,63 @@
+{
+  "id": 60,
+  "name": "The Top Bar – A La Carte Da Nang Beach",
+  "city": "dn",
+  "addr": "Tầng 23, A La Carte Da Nang Beach, 200 Võ Nguyên Giáp",
+  "images": [
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/top-bar-at-a-la-carte-da-nang-beach-600-1.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/top-bar-at-a-la-carte-da-nang-beach.html",
+      "alt": "Rooftop bar The Top Bar at A La Carte Da Nang Beach in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/60-the-top-bar-a-la-carte-da-nang-beach/01.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "cd11c3881059d1729a4d11d6494c2cc491cca73b7264af3e265e8330f879b466"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/top-bar-at-a-la-carte-da-nang-beach-600-2.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/top-bar-at-a-la-carte-da-nang-beach.html",
+      "alt": "Rooftop bar The Top Bar at A La Carte Da Nang Beach in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/60-the-top-bar-a-la-carte-da-nang-beach/02.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "f10839779ada620767e97bf26f41cc40de23a87665a0011e12199e1e306496c4"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/top-bar-at-a-la-carte-da-nang-beach-600-3.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/top-bar-at-a-la-carte-da-nang-beach.html",
+      "alt": "Rooftop bar The Top Bar at A La Carte Da Nang Beach in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/60-the-top-bar-a-la-carte-da-nang-beach/03.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "24425741ea516985a4220266f6b13cd23f33f1b260046c6f05fe28c95af91115"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/top-bar-at-a-la-carte-da-nang-beach-600-4.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/top-bar-at-a-la-carte-da-nang-beach.html",
+      "alt": "Rooftop bar The Top Bar at A La Carte Da Nang Beach in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/60-the-top-bar-a-la-carte-da-nang-beach/04.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "74e702780099ff5d18006384c45bd7a3b235f8b538da9095268590ec52708d04"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/top-bar-at-a-la-carte-da-nang-beach-600-5.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/top-bar-at-a-la-carte-da-nang-beach.html",
+      "alt": "Rooftop bar The Top Bar at A La Carte Da Nang Beach in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/60-the-top-bar-a-la-carte-da-nang-beach/05.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "ae161eac4225f471ad0a4d634e5b2351d20fb066cb50160ea3801d7ec8c95df6"
+    }
+  ]
+}

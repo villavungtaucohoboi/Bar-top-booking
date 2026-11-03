@@ -1,0 +1,63 @@
+{
+  "id": 123,
+  "name": "Tà Vẹt Coffee & Pub",
+  "city": "hue",
+  "addr": "11 Võ Thị Sáu",
+  "images": [
+    {
+      "url": "https://hue.gov.vn/Portals/0/Uploads/00.00.H57/Nam2025/Thang7/481679429_1122303576361660_5925358800140071527_n.jpg",
+      "source": "https://hue.gov.vn/Du-khach/Thong-tin-du-khach/Thong-tin-can-biet/tb/Ta-Vet-Pub-Diem-hen-doc-dao-tren-pho-Vo-Thi-Sau-773053",
+      "alt": "Nighttime Festivities at Tà Vẹt Pub",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "hue/123-ta-vet-coffee-pub/01.webp",
+      "width": 1000,
+      "height": 750,
+      "sha256": "be8b7106988cddbb061ef59add43bd98b4b5b11cfb90218d9dd8e3818b62d1b6"
+    },
+    {
+      "url": "https://aeonmall-review-rikkei.cdn.vccloud.vn/website/21/articles/November2025/07a619d3-f2e7-4948-b59c-7d4777ef26a6.jpg",
+      "source": "https://hue.aeonmall-vietnam.com/cam-nang-aeon-mall-hue/pho-tay-hue.html",
+      "alt": "Tà Vẹt Coffee & Pub Nightlife Spot",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "hue/123-ta-vet-coffee-pub/02.webp",
+      "width": 700,
+      "height": 394,
+      "sha256": "e63802175ca09d219a47000a68692513f0db7a42396247e63a9335fe3816a220"
+    },
+    {
+      "url": "https://cms.vietnamcoracle.com/wp-content/uploads/2022/07/Drink-in-Hue-39-scaled.jpg",
+      "source": "https://www.vietnamcoracle.com/drinking-nightlife-in-hue/",
+      "alt": "Nightlife at Tà Vẹt Beer Restaurant",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "hue/123-ta-vet-coffee-pub/03.webp",
+      "width": 2560,
+      "height": 1920,
+      "sha256": "7461360bc3b209d1fcbdb8d235672715af4334f3d384af175171543abdd8cdfb"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134513-7r98o-lstzr6j6dy9w4c@resize_ss640x400",
+      "source": "https://www.foody.vn/hue/bar-pub-phuc-vu-thuc-uong",
+      "alt": "Tà Vẹt Coffee & Pub",
+      "score": 100,
+      "basis": "alt",
+      "file": "hue/123-ta-vet-coffee-pub/04.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "d88b040112a21ce210dcb03be5369bf85a437debfb1a1d1f22b2769f1f0b5515"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134513-7r98o-lsu1iosaqdhg52@resize_ss640x400",
+      "source": "https://www.foody.vn/hue/bar-pub-phuc-vu-thuc-uong",
+      "alt": "912 Factory Bar",
+      "score": 70,
+      "basis": "section",
+      "file": "hue/123-ta-vet-coffee-pub/05.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "5c0b5d1e9b5f996e72bea31f09641612ff62eec227c1f3c439ce6f05b7bd22a3"
+    }
+  ]
+}

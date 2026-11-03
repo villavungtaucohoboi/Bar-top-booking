@@ -1,0 +1,52 @@
+{
+  "id": 38,
+  "name": "Déjà Vu - Cocktail & Wine Bar",
+  "city": "ct",
+  "addr": "142 Huỳnh Cương, P. An Cư, Q. Ninh Kiều, Cần Thơ",
+  "images": [
+    {
+      "url": "https://toplist.vn/images/800px/deja-vu-cocktail-amp-wine-bar-742791.jpg",
+      "source": "https://toplist.vn/top-list/quan-bar-lon-nhat-tai-can-tho-14699.htm",
+      "alt": "Déjà Vu Cocktail & Wine Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ct/38-deja-vu-cocktail-wine-bar/01.webp",
+      "width": 800,
+      "height": 800,
+      "sha256": "484cc5a113c970371020dc013c5402befbd77f4aad0923723e26209fe5315151"
+    },
+    {
+      "url": "https://fme.travel/uploads/2022/12/Deja-Vu-cocktail-beer.jpg",
+      "source": "https://fme.travel/places-for-christmas-in-can-tho/",
+      "alt": "Déjà Vu Cocktail & Beer Bar",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ct/38-deja-vu-cocktail-wine-bar/02.webp",
+      "width": 1280,
+      "height": 720,
+      "sha256": "a0b67189ead494c3cf5c9a89772e30f4e80b2146ba9fcb2ed8dcc142952dd63e"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/deja-vu-cocktail-amp-wine-bar-1278872.jpg",
+      "source": "https://toplist.vn/top-list/quan-bar-lon-nhat-tai-can-tho-14699.htm",
+      "alt": "Déjà Vu - Cocktail & Wine Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "ct/38-deja-vu-cocktail-wine-bar/03.webp",
+      "width": 800,
+      "height": 800,
+      "sha256": "09ea3c41083ef89ac8a6a6c2d4611f35f8f999fc875a0436dbff9a477cf48502"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/deja-vu-cocktail-amp-wine-bar-1278873.jpg",
+      "source": "https://toplist.vn/top-list/quan-bar-lon-nhat-tai-can-tho-14699.htm",
+      "alt": "Déjà Vu - Cocktail & Wine Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "ct/38-deja-vu-cocktail-wine-bar/04.webp",
+      "width": 800,
+      "height": 1069,
+      "sha256": "14b149d7a5b8c91e8eea46437c2e3db2937a849cc520c4d229fcb5d064a91010"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 194,
+  "name": "OASKY Restaurant & Lounge",
+  "city": "vt",
+  "addr": "Tầng 36 tòa Oasky (Sơn Thịnh 2), 02 Lê Hồng Phong",
+  "images": [
+    {
+      "url": "https://media.mia.vn/uploads/blog-du-lich/ngam-canh-ngoan-muc-tren-tang-cao-oasky-restaurant-lounge-vung-tau-3-1634069444.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/ngam-canh-ngoan-muc-tren-tang-cao-oasky-restaurant-lounge-vung-tau-1263",
+      "alt": "OASKY Rooftop Lounge at Night",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "vt/194-oasky-restaurant-lounge/01.webp",
+      "width": 2000,
+      "height": 1363,
+      "sha256": "bc624a274d86d1a8259542436d2cfd76c17dc8e97b114d3105afa02192781884"
+    },
+    {
+      "url": "https://mia.vn/media/uploads/blog-du-lich/ngam-canh-ngoan-muc-tren-tang-cao-oasky-restaurant-lounge-vung-tau-1634069643.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/ngam-canh-ngoan-muc-tren-tang-cao-oasky-restaurant-lounge-vung-tau-1263",
+      "alt": "OASKY Restaurant & Lounge Vũng Tàu Rooftop View",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "vt/194-oasky-restaurant-lounge/02.webp",
+      "width": 2000,
+      "height": 1318,
+      "sha256": "8289fd31b0c80ae9025cf0034a3de0e5e1d04c456b35720901a148c717009cc9"
+    },
+    {
+      "url": "https://cdn.hita.com.vn/storage/blog/am-thuc-doi-song/quan-bar-vung-tau-20.jpeg",
+      "source": "https://hita.com.vn/10-quan-bar-vung-tau-soi-dong-cuc-chay-ve-dem-nen-thu-mot-lan-post-2869.html",
+      "alt": "Sunset at Oasky Bar Rooftop",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "vt/194-oasky-restaurant-lounge/03.webp",
+      "width": 1926,
+      "height": 1445,
+      "sha256": "ef7bb0878586677bd4248e8e1a8b9ec2d84db9422472198d9bf2aa10b8504330"
+    },
+    {
+      "url": "https://media.mia.vn/uploads/blog-du-lich/ngam-canh-ngoan-muc-tren-tang-cao-oasky-restaurant-lounge-vung-tau-9-1634069679.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/ngam-canh-ngoan-muc-tren-tang-cao-oasky-restaurant-lounge-vung-tau-1263",
+      "alt": "OASKY Rooftop Nightscape",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "vt/194-oasky-restaurant-lounge/04.webp",
+      "width": 2000,
+      "height": 1496,
+      "sha256": "6ffa3e9160a6ca9eacfa58aa18024ec79d17a8c03bb1d367cf86c25634e91ce2"
+    },
+    {
+      "url": "https://media.mia.vn/uploads/blog-du-lich/ngam-canh-ngoan-muc-tren-tang-cao-oasky-restaurant-lounge-vung-tau-2-1634069444.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/ngam-canh-ngoan-muc-tren-tang-cao-oasky-restaurant-lounge-vung-tau-1263",
+      "alt": "OASKY Rooftop Lounge in Vũng Tàu",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "vt/194-oasky-restaurant-lounge/05.webp",
+      "width": 2000,
+      "height": 1367,
+      "sha256": "a067c1371e8842b2fc3f5eef9d3bcab84151424fc4fe6eeef5dab1549d1af350"
+    }
+  ]
+}

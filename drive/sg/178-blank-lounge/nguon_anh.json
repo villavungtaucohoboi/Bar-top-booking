@@ -1,0 +1,63 @@
+{
+  "id": 178,
+  "name": "Blank Lounge",
+  "city": "sg",
+  "addr": "Tầng 75–76, Landmark 81, 720A Điện Biên Phủ",
+  "images": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/5a6ea045268b96417e6277d1/ccce0d14-ae89-4ead-8b5a-981f4174c5fe/Blank_Sky_Lounge-2000x1359.jpg?format=1500w",
+      "source": "https://www.blank-lounge.com/",
+      "alt": "Blank Sky Lounge Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/178-blank-lounge/01.webp",
+      "width": 1500,
+      "height": 1019,
+      "sha256": "49395947105eeb7e6c1de3ddc2b302cbcff7b9ec8aba3c139bebd15964eb64de"
+    },
+    {
+      "url": "https://www.vietfuntravel.com.vn/image/data/sai-gon/landmark81/sai-gon-xuat-hien-quan-cafe-bar-cao-nhat-dong-nam-bo-cafe-o-landmark81-h4.jpg",
+      "source": "https://www.vietfuntravel.com.vn/blog/quan-cafe-bar-cao-nhat-dong-nam-bo-cafe-o-landmark-81-sai-gon.html",
+      "alt": "Blank Lounge Rooftop Experience",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/178-blank-lounge/02.webp",
+      "width": 2800,
+      "height": 1568,
+      "sha256": "9d59e1b44f196db2d569822dfb5a783204cbb9acaa0d71655776b3caf67849f0"
+    },
+    {
+      "url": "https://www.vietfuntravel.com.vn/image/data/sai-gon/landmark81/ShriRestaurantandLoungeHoChiMinhVietFunTravel.jpg",
+      "source": "https://www.vietfuntravel.com.vn/blog/quan-cafe-bar-cao-nhat-dong-nam-bo-cafe-o-landmark-81-sai-gon.html",
+      "alt": "Blank Lounge at Landmark 81",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/178-blank-lounge/03.webp",
+      "width": 800,
+      "height": 504,
+      "sha256": "d9c0c4648b321ef2999699c71b86983bbcd7a30e8aecffb2d9b057605acd98f2"
+    },
+    {
+      "url": "https://d1u7goitqk7klj.cloudfront.net/ky6bvhqsr8f9d5zlaponww60v85r",
+      "source": "https://www.hcm-cityguide.com/c/sights/articles/1028",
+      "alt": "Blank Lounge at Landmark81",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/178-blank-lounge/04.webp",
+      "width": 722,
+      "height": 542,
+      "sha256": "cc446439c52c62e636b9f2a858efffc8b15593b03e254c21aedd0159cf79fb63"
+    },
+    {
+      "url": "https://thelandmark81.com.vn/wp-content/uploads/2025/10/khong-gian-sang-trong-va-hien-dai-cua-blank-lounge-landmark-81-ly-tuong-de-len-landmark-81-uong-cafe-va-chup-anh.jpg",
+      "source": "https://thelandmark81.com.vn/len-landmark-81-uong-cafe/",
+      "alt": "Blank Lounge High-Rise Café Experience",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/178-blank-lounge/05.webp",
+      "width": 960,
+      "height": 1200,
+      "sha256": "722927eeea4a6e8c032cb8c4fbd181013b53ffb72a9290e87afafd009d378ce0"
+    }
+  ]
+}

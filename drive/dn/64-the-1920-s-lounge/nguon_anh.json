@@ -1,0 +1,63 @@
+{
+  "id": 64,
+  "name": "The 1920's Lounge",
+  "city": "dn",
+  "addr": "53 Trần Quốc Toản",
+  "images": [
+    {
+      "url": "https://vnguide.vn/uploads/vnguide-content/space/the-1920-s-lounge/hero.jpg",
+      "source": "https://vnguide.vn/restaurant/the-1920-s-lounge",
+      "alt": "The 1920's Lounge",
+      "score": 100,
+      "basis": "alt",
+      "file": "dn/64-the-1920-s-lounge/01.webp",
+      "width": 2560,
+      "height": 1695,
+      "sha256": "155d6f949d0c70615a7f28b9b9fc84fab9dd0129ffef6dd89a509b187e9427ee"
+    },
+    {
+      "url": "https://vnguide.vn/uploads/vnguide-content/space/the-1920-s-lounge/inline-02-food.jpg",
+      "source": "https://vnguide.vn/restaurant/the-1920-s-lounge",
+      "alt": "The 1920's Lounge – ảnh 3",
+      "score": 100,
+      "basis": "alt",
+      "file": "dn/64-the-1920-s-lounge/02.webp",
+      "width": 2048,
+      "height": 1365,
+      "sha256": "689be0180e79c859fbae5ca7aaaff048b6ac69efb09f1f22fd4bc33e504a5cdd"
+    },
+    {
+      "url": "https://vnguide.vn/uploads/vnguide-content/space/the-1920-s-lounge/inline-01-space.jpg",
+      "source": "https://vnguide.vn/restaurant/the-1920-s-lounge",
+      "alt": "The 1920's Lounge – ảnh 2",
+      "score": 100,
+      "basis": "alt",
+      "file": "dn/64-the-1920-s-lounge/03.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "9b6b3b112f5d09b917582017e08df33ffa2515e1d5e82fbeef4df61479e08cd4"
+    },
+    {
+      "url": "https://vnguide.vn/uploads/vnguide-content/space/the-1920-s-lounge/inline-03-dish-detail.jpg",
+      "source": "https://vnguide.vn/restaurant/the-1920-s-lounge",
+      "alt": "The 1920's Lounge – ảnh 4",
+      "score": 100,
+      "basis": "alt",
+      "file": "dn/64-the-1920-s-lounge/04.webp",
+      "width": 1200,
+      "height": 900,
+      "sha256": "a94975b34254ddc600e435f57e6ed28c21f9e5dc7376f650e872e0bfa4fe9b3b"
+    },
+    {
+      "url": "https://danang.style/uploads/articles/contents/images/2025/11/img_ja1_164_5d88709c-f51c-4466-89f4-50ba9d07c69f.jpeg",
+      "source": "https://danang.style/tourism/164",
+      "alt": "The 1920's Lounge",
+      "score": 100,
+      "basis": "alt",
+      "file": "dn/64-the-1920-s-lounge/05.webp",
+      "width": 800,
+      "height": 533,
+      "sha256": "8271bace855397ab54edead784f297c91b45ebad07193ed892f94ec3c0483201"
+    }
+  ]
+}

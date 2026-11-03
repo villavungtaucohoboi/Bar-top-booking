@@ -1,0 +1,63 @@
+{
+  "id": 118,
+  "name": "Asta The Club",
+  "city": "hue",
+  "addr": "9 Hùng Vương",
+  "images": [
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/97/10/78/asta-the-club.jpg?w=1200&h=1200&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g293926-d7950962-Reviews-Asta_The_Club-Hue_Thua_Thien_Hue_Province.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "hue/118-asta-the-club/01.webp",
+      "width": 1200,
+      "height": 720,
+      "sha256": "5f2482c0d1bdbc719d6ccf7ecd3a58dd88f6ecf7a199e8d301400180d29930ac"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/97/10/76/asta-the-club.jpg?w=1200&h=1200&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g293926-d7950962-Reviews-Asta_The_Club-Hue_Thua_Thien_Hue_Province.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "hue/118-asta-the-club/02.webp",
+      "width": 1200,
+      "height": 720,
+      "sha256": "c8cb9f617b872f896c67fc40fb42a0a13bb0028d2955d0820ee9d021bd17262c"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/97/10/72/asta-the-club.jpg?w=1200&h=1200&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g293926-d7950962-Reviews-Asta_The_Club-Hue_Thua_Thien_Hue_Province.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "hue/118-asta-the-club/03.webp",
+      "width": 1200,
+      "height": 720,
+      "sha256": "1390823857a226424ad876b95f9f7728cc99e2b43f89899c197af235e2bdc335"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/97/10/6e/asta-the-club.jpg?w=700&h=-1&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g293926-d7950962-Reviews-Asta_The_Club-Hue_Thua_Thien_Hue_Province.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "hue/118-asta-the-club/04.webp",
+      "width": 700,
+      "height": 394,
+      "sha256": "ed6c7cdb765ee3373db52e126824942a47b689bac64fa3d4bf941719da539be0"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://inhat.vn/wp-content/uploads/2022/05/quan-bar-hue-2-min.png",
+      "source": "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html",
+      "alt": "quán bar tại Huế",
+      "score": 70,
+      "basis": "section",
+      "file": "hue/118-asta-the-club/05.webp",
+      "width": 700,
+      "height": 466,
+      "sha256": "f00c903f2d6bacb8cc821dc2ab7c8e2d22fe68cbb0a8df6c77583e2261bcd0c9"
+    }
+  ]
+}

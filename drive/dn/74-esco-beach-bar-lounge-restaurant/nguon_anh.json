@@ -1,0 +1,63 @@
+{
+  "id": 74,
+  "name": "Esco Beach Bar, Lounge & Restaurant",
+  "city": "dn",
+  "addr": "Lô 12 Võ Nguyên Giáp",
+  "images": [
+    {
+      "url": "https://khamphadanang.vn/wp-content/uploads/2024/10/esco-beach.jpg",
+      "source": "https://khamphadanang.vn/dia-diem/esco-beach/",
+      "alt": "Fire Show at Esco Beach",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "dn/74-esco-beach-bar-lounge-restaurant/01.webp",
+      "width": 1920,
+      "height": 1194,
+      "sha256": "e0363ca5f269932f839a0f7d0ecc42f531054c816123c31d3f4db8ba6565ea98"
+    },
+    {
+      "url": "https://app-api.glodival.vn/storage/4/images/da-nang-beach-clubs-and-bars-1778567289YuhAt.jpg",
+      "source": "https://gtrip.vn/travel-blogs/da-nang-beach-clubs-and-bars",
+      "alt": "Beachside Evening at Esco Beach Bar",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "dn/74-esco-beach-bar-lounge-restaurant/02.webp",
+      "width": 1080,
+      "height": 720,
+      "sha256": "2fc0255e7f0f6106b70cfbb6420307f2d1a7356da074b241d86a6111d9f7360a"
+    },
+    {
+      "url": "https://ak-d.tripcdn.com/images/1mi66224x8uk2gj9vE191_R_600_400_R5_Q90.jpg?proc=source%2Ftrip",
+      "source": "https://www.trip.com/moments/detail/da-nang-669-121196825/",
+      "alt": "Esco Beach Bar Lounge & Restaurant",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "dn/74-esco-beach-bar-lounge-restaurant/03.webp",
+      "width": 600,
+      "height": 400,
+      "sha256": "21f159c604f9cca2cebd9a2dd95411733d0f30ab9e0af56d7d84336433c8df13"
+    },
+    {
+      "url": "https://media.eoding.com/media/travelagent/148/imagecontent/KakaoTalk_20251125_180340099.jpg?f=cover&h=600&q=90&w=600",
+      "source": "https://www.pieceofcreative.com/fit/37824",
+      "alt": "Esco Beach Bar Interior",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "dn/74-esco-beach-bar-lounge-restaurant/04.webp",
+      "width": 600,
+      "height": 600,
+      "sha256": "b7dca2c1326acebe78bc06d670a2bdce2487e6dc3b6831be30186424a5c901a7"
+    },
+    {
+      "url": "https://suongtuyet.com/media/news/371_ghe_luoi_du_lich_bai_bien_esco_beach_da_nang.jpg",
+      "source": "https://suongtuyet.com/ghe-luoi-bean-bag-tai-esco-beach-da-nang.html",
+      "alt": "ESCO BEACH Seaside Lounge",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "dn/74-esco-beach-bar-lounge-restaurant/05.webp",
+      "width": 1360,
+      "height": 938,
+      "sha256": "ac3b9f98d0535d561f3209df2e4d568d4c98bb40f3f9ace4821d0af815f1aed0"
+    }
+  ]
+}

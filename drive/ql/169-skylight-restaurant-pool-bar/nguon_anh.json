@@ -1,0 +1,63 @@
+{
+  "id": 169,
+  "name": "Skylight Restaurant & Pool Bar",
+  "city": "ql",
+  "addr": "Tầng 22, Central Luxury Ha Long Hotel, Lô H29, Hùng Thắng",
+  "images": [
+    {
+      "url": "https://centralluxuryhalonghotel.com/uploads/images/2024/04/1713259102-multi_news10-sky3.jpg",
+      "source": "https://centralluxuryhalonghotel.com/skylight-restaurant-pool-bar-1-28.html",
+      "alt": "Skylight Restaurant & Pool Bar Sign",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ql/169-skylight-restaurant-pool-bar/01.webp",
+      "width": 5760,
+      "height": 3840,
+      "sha256": "a163d2c25b2aa0d7015c7e0485d9a7d8aced7ab14b4e0b31da056ee8e4ea769c"
+    },
+    {
+      "url": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/190097047.jpg?k=fc5a0065b929f6e74d258bd4b26f1ea1822cf877e1526fd003226545c3bfa3ff&o=",
+      "source": "https://www.agoda.com/central-luxury-ha-long-hotel/hotel/halong-vn.html",
+      "alt": "Skylight Rooftop Pool Bar",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ql/169-skylight-restaurant-pool-bar/02.webp",
+      "width": 1024,
+      "height": 768,
+      "sha256": "1f549db0c138be1f5a2a262d6b29758690fa58b6ffcbf7a83ae6f83c91cd9e51"
+    },
+    {
+      "url": "https://centralluxuryhalonghotel.com/uploads/images/2024/04/1713259106-multi_news10-sky1.jpg",
+      "source": "https://centralluxuryhalonghotel.com/en/skylight-restaurant-pool-bar-1-28.html",
+      "alt": "Skylight Restaurant & Pool Bar",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ql/169-skylight-restaurant-pool-bar/03.webp",
+      "width": 4348,
+      "height": 6491,
+      "sha256": "2974b292ff0829abddb2e7f86e35ede4567d1e809b93a99c03e8cecec015d30c"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/474163ROQ/skylight-restaurant-and-pool-bar-tai-central-luxury-ha-long-hotel-969133.jpg",
+      "source": "https://mytour.vn/en/blog/bai-viet/experience-the-top-3-most-famous-sky-bars-in-ha-long-city-quang-ninh.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "ql/169-skylight-restaurant-pool-bar/04.webp",
+      "width": 700,
+      "height": 525,
+      "sha256": "d8feca9b54d21ac47126a264010e2465a1fd57424314f6ed59cd1bc835577ece"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/474163KOA/skylight-restaurant-and-pool-bar-tai-central-luxury-ha-long-hotel-969134.jpg",
+      "source": "https://mytour.vn/en/blog/bai-viet/experience-the-top-3-most-famous-sky-bars-in-ha-long-city-quang-ninh.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "ql/169-skylight-restaurant-pool-bar/05.webp",
+      "width": 700,
+      "height": 466,
+      "sha256": "7d5ee6ef251f7b58db9bb762e5b82c8eea1ec50682966eca6a5ad1e14e13631f"
+    }
+  ]
+}

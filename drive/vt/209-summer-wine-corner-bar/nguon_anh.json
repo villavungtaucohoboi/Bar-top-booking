@@ -1,0 +1,30 @@
+{
+  "id": 209,
+  "name": "Summer Wine Corner Bar",
+  "city": "vt",
+  "addr": "26 Quang Trung",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwbixuazhihl73@resize_ss640x400",
+      "source": "https://www.foody.vn/vung-tau/bar-pub-phuc-vu-ruou-vang",
+      "alt": "Summer Wine Corner Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "vt/209-summer-wine-corner-bar/01.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "a0045c06c4e6e267dc09babbb131445367117dea50f8b18983ee9687d461638c"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwcdzhga7xzvf6@resize_ss640x400",
+      "source": "https://www.foody.vn/vung-tau/bar-pub-phuc-vu-ruou-vang",
+      "alt": "Offshore Bar - Hoàng Diệu",
+      "score": 70,
+      "basis": "section",
+      "file": "vt/209-summer-wine-corner-bar/02.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "7e837dbf238d3b86bb7ab96ab7dd5974d3caafaf5090fa75bed660e0956f7fd8"
+    }
+  ]
+}

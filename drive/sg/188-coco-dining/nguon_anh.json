@@ -1,0 +1,63 @@
+{
+  "id": 188,
+  "name": "CoCo Dining",
+  "city": "sg",
+  "addr": "143 Nam Kỳ Khởi Nghĩa",
+  "images": [
+    {
+      "url": "https://izitour.com/media/ckeditor/coco-dining-michelin-star-vietnam.webp",
+      "source": "https://izitour.com/en/blog/michelin-star-restaurants-vietnam",
+      "alt": "CoCo Dining’s Signature Crab Presentation",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "sg/188-coco-dining/01.webp",
+      "width": 1000,
+      "height": 896,
+      "sha256": "d35bec14becd77b116fd589a26a457fdf0be0e7086a18dc69385d32344424c2b"
+    },
+    {
+      "url": "https://epicurevietnam.com/Data/Sites/1/media/event-vn/62/h3.jpg",
+      "source": "https://epicurevietnam.com/events-1/vietnam/saigon-meets-bangkok-at-coco-dining-a-culinary-celebration-beyond-borders",
+      "alt": "Saigon Meets Bangkok Culinary Celebration",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "sg/188-coco-dining/02.webp",
+      "width": 1920,
+      "height": 960,
+      "sha256": "8d1cb80bb8128a544d8e577cd4c479251a60d13f11f61fe900db659e034b0490"
+    },
+    {
+      "url": "https://d3h1lg3ksw6i6b.cloudfront.net/media/image/2025/12/19/66677017301c454ca3d4662632672288_the-art-of-atmosphere-at-coco-dining-ho-chi-minh-city-chef-Vo-Thanh-Vuong-and-team.jpg",
+      "source": "https://guide.michelin.com/vn/en/article/features/the-art-of-atmosphere-at-coco-dining-ho-chi-minh-city",
+      "alt": "CoCo Dining Team Briefing",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "sg/188-coco-dining/03.webp",
+      "width": 1120,
+      "height": 630,
+      "sha256": "7e8c7d23852491e2a8b914286394e0d6a83828d76afb73bc093ea0d8ca924476"
+    },
+    {
+      "url": "https://d3h1lg3ksw6i6b.cloudfront.net/media/image/2025/12/19/ffedf5b0334141679812c927c9608240_the-art-of-atmosphere-at-coco-dining-ho-chi-minh-city-michelin-star-dishes.jpg",
+      "source": "https://guide.michelin.com/vn/en/article/features/the-art-of-atmosphere-at-coco-dining-ho-chi-minh-city",
+      "alt": "CoCo Dining’s Refined Vietnamese Tasting Experience",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "sg/188-coco-dining/04.webp",
+      "width": 736,
+      "height": 920,
+      "sha256": "9bb86fed91053ce0867c15aef35d1981eff0372266c74ad712285a1504aeeee6"
+    },
+    {
+      "url": "https://cdn.enprimeurclub.com/storage/v1/object/public/images/locations/recF33ughTbyp63Oz/hero1.jpg?width=3840&quality=75",
+      "source": "https://www.enprimeurclub.com/restaurants/coco-dining-ho-chi-minh-city-restaurant",
+      "alt": "Coco Dining restaurant in Ho Chi Minh City, Vietnam",
+      "score": 100,
+      "basis": "alt",
+      "file": "sg/188-coco-dining/05.webp",
+      "width": 900,
+      "height": 500,
+      "sha256": "d1225d67c5075b3c0b84945683e7bbb8eedd7c3f763a48eae5bd58c29d71685f"
+    }
+  ]
+}

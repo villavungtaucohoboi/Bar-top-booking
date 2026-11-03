@@ -1,0 +1,63 @@
+{
+  "id": 58,
+  "name": "Brilliant Top Bar",
+  "city": "dn",
+  "addr": "Tầng 17, Brilliant Hotel, 162 Bạch Đằng",
+  "images": [
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/brilliant-top-bar-600-1.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/brilliant-top-bar.html",
+      "alt": "Rooftop bar Brilliant Top Bar in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/58-brilliant-top-bar/01.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "4d0fb3eff25ba77c9db868f245fc877cf84830da12bb19955be20878a7b8e936"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/brilliant-top-bar-600-2.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/brilliant-top-bar.html",
+      "alt": "Rooftop bar Brilliant Top Bar in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/58-brilliant-top-bar/02.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "d2a1bff71dc2e7047890f12558836dd2b210c11f498a80fbf1381e3df40c158c"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/brilliant-top-bar-600-3.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/brilliant-top-bar.html",
+      "alt": "Rooftop bar Brilliant Top Bar in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/58-brilliant-top-bar/03.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "5f763ab2ace26e3867fbc4c7625a09b9e69412564aa5f5bde6cb2d9a2d0ce332"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/brilliant-top-bar-600-4.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/brilliant-top-bar.html",
+      "alt": "Rooftop bar Brilliant Top Bar in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/58-brilliant-top-bar/04.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "34116e7ad19415a7c3beb2bfa9634e7d084a85e1658a394c3fc1cf0e58940fdc"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/brilliant-top-bar-600-5.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/brilliant-top-bar.html",
+      "alt": "Rooftop bar Brilliant Top Bar in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/58-brilliant-top-bar/05.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "0196a8c8e844b951dd336b150d497581afa277527d5004a68dbc01735c69e8ad"
+    }
+  ]
+}

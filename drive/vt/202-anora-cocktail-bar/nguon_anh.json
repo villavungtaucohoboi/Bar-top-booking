@@ -1,0 +1,19 @@
+{
+  "id": 202,
+  "name": "Anora Cocktail Bar",
+  "city": "vt",
+  "addr": "",
+  "images": [
+    {
+      "url": "https://mia.vn/media/uploads/blog-du-lich/bar-vung-tau-anora-coctail-1789519749.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/top-bar-vung-tau-de-chill-va-vui-choi-21526",
+      "alt": "Top 10 bar Vũng Tàu lý tưởng để chill và vui chơi về đêm 6",
+      "score": 90,
+      "basis": "filename",
+      "file": "vt/202-anora-cocktail-bar/01.webp",
+      "width": 800,
+      "height": 600,
+      "sha256": "bec0d920667cc2193fb549290c4c91b7788020ce6d60e077bd0fb8d2b86bbdb5"
+    }
+  ]
+}

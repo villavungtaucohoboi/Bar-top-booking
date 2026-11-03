@@ -1,0 +1,63 @@
+{
+  "id": 57,
+  "name": "Horizon Bar",
+  "city": "dn",
+  "addr": "Tầng 36, Four Points by Sheraton Danang, 118–120 Võ Nguyên Giáp",
+  "images": [
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/horizon-bar-600-1.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/horizon-bar.html",
+      "alt": "Rooftop bar Horizon Bar in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/57-horizon-bar/01.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "d421dad6070d84f8cd8744075a55e68ea5e7260319def1ebe7d86747dca66804"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/horizon-bar-600-2.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/horizon-bar.html",
+      "alt": "Rooftop bar Horizon Bar in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/57-horizon-bar/02.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "7d9426202d195c5a2dc12873ed56b37146d03454df666b0219790b11e36fa6f3"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/horizon-bar-600-3.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/horizon-bar.html",
+      "alt": "Rooftop bar Horizon Bar in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/57-horizon-bar/03.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "b1c4f6f14957ae1f5c1a2cf303cf712a02d0afb52a5f50757f0450f2a86f8544"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/horizon-bar-600-4.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/horizon-bar.html",
+      "alt": "Rooftop bar Horizon Bar in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/57-horizon-bar/04.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "fa907998df6cfcb7e0e9355cadb544558de97f9c691bfe2281b4d9a8d363aac8"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-da-nang/Bilder/horizon-bar-600-5.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-da-nang/horizon-bar.html",
+      "alt": "Rooftop bar Horizon Bar in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/57-horizon-bar/05.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "534e1978908d36adb6005aea78c6ab0dcf8a1d0d3e29059f45cc9b80666412f6"
+    }
+  ]
+}

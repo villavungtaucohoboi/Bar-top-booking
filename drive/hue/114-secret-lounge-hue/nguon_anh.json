@@ -1,0 +1,30 @@
+{
+  "id": 114,
+  "name": "Secret Lounge Hue",
+  "city": "hue",
+  "addr": "15/42 Nguyễn Công Trứ",
+  "images": [
+    {
+      "url": "https://vnguide.vn/uploads/vnguide-content/space/secret-lounge-hue/hero.jpg",
+      "source": "https://vnguide.vn/restaurant/secret-lounge-hue",
+      "alt": "Secret Lounge Hue",
+      "score": 100,
+      "basis": "alt",
+      "file": "hue/114-secret-lounge-hue/01.webp",
+      "width": 2000,
+      "height": 1132,
+      "sha256": "23a28c43f4bf0f0943154215f93b89dcf5c397946301e163ae11c11bb6c740d7"
+    },
+    {
+      "url": "https://statics.vinpearl.com/Secret-Lounge-Hue_1756550687.jpg",
+      "source": "https://vinpearl.com/en/bar-in-hue",
+      "alt": "Secret Lounge Hue",
+      "score": 100,
+      "basis": "alt",
+      "file": "hue/114-secret-lounge-hue/02.webp",
+      "width": 999,
+      "height": 666,
+      "sha256": "21734610327ff6a1adbe0dd10f53f51015502d70d0a21d1d961435bb00054024"
+    }
+  ]
+}

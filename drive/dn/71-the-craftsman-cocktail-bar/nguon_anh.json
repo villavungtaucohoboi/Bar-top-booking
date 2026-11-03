@@ -1,0 +1,52 @@
+{
+  "id": 71,
+  "name": "The Craftsman Cocktail Bar",
+  "city": "dn",
+  "addr": "",
+  "images": [
+    {
+      "url": "https://thesmartlocal.com/vietnam/wp-content/uploads/2022/08/craftsman-1.png",
+      "source": "https://thesmartlocal.com/vietnam/8-bars-clubs-in-da-nang/",
+      "alt": "bars clubs da nang - craftsman",
+      "score": 100,
+      "basis": "alt",
+      "file": "dn/71-the-craftsman-cocktail-bar/01.webp",
+      "width": 1536,
+      "height": 864,
+      "sha256": "468aa3724b03ecb6ae94debfa5ef79ac8b3c58fc3c286970d8c587564b2935ca"
+    },
+    {
+      "url": "https://thesmartlocal.com/vietnam/wp-content/uploads/2022/08/craftsman-3.jpg",
+      "source": "https://thesmartlocal.com/vietnam/8-bars-clubs-in-da-nang/",
+      "alt": "craftsman drinks",
+      "score": 100,
+      "basis": "alt",
+      "file": "dn/71-the-craftsman-cocktail-bar/02.webp",
+      "width": 768,
+      "height": 1024,
+      "sha256": "cc3d5ffb5ce72d5487c3f6d931f1f7a237d2579a8ac367d1038dd99e9f860ec2"
+    },
+    {
+      "url": "https://amthuchiendai.vn/wp-content/uploads/2025/05/z6602279017304_eaf266dc51f733a36c5da11b481a2046.webp",
+      "source": "https://amthuchiendai.vn/en/best-bars-in-da-nang-a-personal-and-independent-guide/",
+      "alt": "The Craftsman",
+      "score": 100,
+      "basis": "alt",
+      "file": "dn/71-the-craftsman-cocktail-bar/03.webp",
+      "width": 600,
+      "height": 738,
+      "sha256": "1cc0578d369fa2671a3122a6eef9da0840dec3ede2fcd638a94770e717ed7254"
+    },
+    {
+      "url": "https://thesmartlocal.com/vietnam/wp-content/uploads/2022/08/craftsman-2.jpg",
+      "source": "https://thesmartlocal.com/vietnam/8-bars-clubs-in-da-nang/",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "dn/71-the-craftsman-cocktail-bar/04.webp",
+      "width": 768,
+      "height": 1024,
+      "sha256": "0d9d39e51fdda65ff6e8a8674b108b93a6777729224d8dcb4e613483f0db09b3"
+    }
+  ]
+}

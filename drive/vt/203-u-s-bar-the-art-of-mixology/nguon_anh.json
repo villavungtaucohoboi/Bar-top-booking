@@ -1,0 +1,41 @@
+{
+  "id": 203,
+  "name": "U.S Bar - The Art Of Mixology",
+  "city": "vt",
+  "addr": "120 Ba Cu",
+  "images": [
+    {
+      "url": "https://mia.vn/media/uploads/blog-du-lich/bar-vung-tau-us-bar-1789519750.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/top-bar-vung-tau-de-chill-va-vui-choi-21526",
+      "alt": "Top 10 bar Vũng Tàu lý tưởng để chill và vui chơi về đêm 8",
+      "score": 70,
+      "basis": "section",
+      "file": "vt/203-u-s-bar-the-art-of-mixology/01.webp",
+      "width": 800,
+      "height": 600,
+      "sha256": "8fe2e5f9940b467ab7c21339d18880e699da878cd6eb9d3af1154bc36789118f"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/481178lcu/anh-mo-ta.png",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-7-popular-cocktail-bars-in-vung-tau-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "vt/203-u-s-bar-the-art-of-mixology/02.webp",
+      "width": 700,
+      "height": 466,
+      "sha256": "b11dc584f32baf46cca3815050a82f6748b8286a647e1e2358c966343814d444"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/481178RTo/anh-mo-ta.png",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-7-popular-cocktail-bars-in-vung-tau-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "vt/203-u-s-bar-the-art-of-mixology/03.webp",
+      "width": 467,
+      "height": 700,
+      "sha256": "b414122151f115529baa54fa12c36dec8185727ca0b3e785f8d73f9d832943b7"
+    }
+  ]
+}

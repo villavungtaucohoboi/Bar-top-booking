@@ -1,0 +1,63 @@
+{
+  "id": 66,
+  "name": "Tê Cocktail Bar",
+  "city": "dn",
+  "addr": "Tầng 3, 39–41 Nguyễn Thái Học",
+  "images": [
+    {
+      "url": "https://danang.style/uploads/articles/contents/images/2025/11/img_ja5_172_5d9aef66-0430-4d91-a206-72c09d07c69f.jpeg",
+      "source": "https://danang.style/tourism/172",
+      "alt": "Tê Bar: Da Nang’s Hidden Speakeasy",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dn/66-te-cocktail-bar/01.webp",
+      "width": 800,
+      "height": 600,
+      "sha256": "4562c06328ec215c8880885bf50d80a01e81e2e27437f369da98f58ef6c0fe0f"
+    },
+    {
+      "url": "https://danangleisure.com/wp-content/uploads/2022/10/Te-Bar-2-1024x683.jpg",
+      "source": "https://danangleisure.com/te-bar-the-unique-and-familiar-bar-of-da-nangs-nightlife",
+      "alt": "Tê Bar’s Intimate Cocktail Experience",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "dn/66-te-cocktail-bar/02.webp",
+      "width": 1024,
+      "height": 683,
+      "sha256": "d0d8b5e27c2aafea8b996ac63a47989a083f69f1eef780db9debebed19a5536f"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/te-bar-1120932.jpg",
+      "source": "https://toplist.vn/top-list/quan-cocktail-bar-dang-cap-nhat-tai-da-nang-57706.htm",
+      "alt": "Tê Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "dn/66-te-cocktail-bar/03.webp",
+      "width": 800,
+      "height": 533,
+      "sha256": "2939da80b3e63088af18476d25a349e46c1c24da8667c416f8096a7c8c12688f"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/te-bar-1120933.jpg",
+      "source": "https://toplist.vn/top-list/quan-cocktail-bar-dang-cap-nhat-tai-da-nang-57706.htm",
+      "alt": "Tê Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "dn/66-te-cocktail-bar/04.webp",
+      "width": 800,
+      "height": 533,
+      "sha256": "f0d81559affd9ebdb70ab7306e50d04899f616623ead7f7ba6ba66bf5dddf2d0"
+    },
+    {
+      "url": "https://statics.vinpearl.com/bar-da-nang-9_1631619263.jpeg",
+      "source": "https://vinpearl.com/vi/luu-ngay-16-bar-da-nang-cuc-hot-du-dua-cuc-chill-cung-hoi-ban",
+      "alt": "bar Đà Nẵng",
+      "score": 70,
+      "basis": "section",
+      "file": "dn/66-te-cocktail-bar/05.webp",
+      "width": 700,
+      "height": 466,
+      "sha256": "d8bfe97b79498cd4e61220a8cb166a05cf3d2f684d8a90f3abea2b1d2ab53139"
+    }
+  ]
+}

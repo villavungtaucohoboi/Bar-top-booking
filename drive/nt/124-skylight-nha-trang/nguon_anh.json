@@ -1,0 +1,63 @@
+{
+  "id": 124,
+  "name": "Skylight Nha Trang",
+  "city": "nt",
+  "addr": "Tầng 43–45 khách sạn Premier Havana, 38 Trần Phú",
+  "images": [
+    {
+      "url": "https://mia.vn/media/uploads/blog-du-lich/skylight-nha-trang-quay-cuc-da-tai-quan-bar-view-xin-so-noi-thanh-pho-bien-1-1623149883.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/skylight-nha-trang-quay-cuc-da-tai-quan-bar-view-xin-so-noi-thanh-pho-bien-693",
+      "alt": "Skylight Nha Trang - 'Quẩy' cực đã tại quán bar view xịn sò nơi thành phố biển 2",
+      "score": 115,
+      "basis": "alt",
+      "file": "nt/124-skylight-nha-trang/01.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "d3ce5bf0010f88ba85072d756f1a140e3bf787141978ae15bcb3ed96b4547ed7"
+    },
+    {
+      "url": "https://mia.vn/media/uploads/blog-du-lich/skylight-nha-trang-quay-cuc-da-tai-quan-bar-view-xin-so-noi-thanh-pho-bien-5-1623150396.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/skylight-nha-trang-quay-cuc-da-tai-quan-bar-view-xin-so-noi-thanh-pho-bien-693",
+      "alt": "Skylight Nha Trang - 'Quẩy' cực đã tại quán bar view xịn sò nơi thành phố biển 5",
+      "score": 115,
+      "basis": "alt",
+      "file": "nt/124-skylight-nha-trang/02.webp",
+      "width": 1200,
+      "height": 900,
+      "sha256": "8d7f3db48ee34d744c35613c137faf90640b50bc0d0d34998d09ed47753a500c"
+    },
+    {
+      "url": "https://mia.vn/media/uploads/blog-du-lich/skylight-nha-trang-quay-cuc-da-tai-quan-bar-view-xin-so-noi-thanh-pho-bien-6-1623150396.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/skylight-nha-trang-quay-cuc-da-tai-quan-bar-view-xin-so-noi-thanh-pho-bien-693",
+      "alt": "Skylight Nha Trang - 'Quẩy' cực đã tại quán bar view xịn sò nơi thành phố biển 6",
+      "score": 115,
+      "basis": "alt",
+      "file": "nt/124-skylight-nha-trang/03.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "e8949a6cbcb5573432137fe0a35875ff80ea75ceaf5bb12d2433417379cbd499"
+    },
+    {
+      "url": "https://mia.vn/media/uploads/blog-du-lich/skylight-nha-trang-quay-cuc-da-tai-quan-bar-view-xin-so-noi-thanh-pho-bien-4-1623150396.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/skylight-nha-trang-quay-cuc-da-tai-quan-bar-view-xin-so-noi-thanh-pho-bien-693",
+      "alt": "Skylight Nha Trang - 'Quẩy' cực đã tại quán bar view xịn sò nơi thành phố biển 4",
+      "score": 115,
+      "basis": "alt",
+      "file": "nt/124-skylight-nha-trang/04.webp",
+      "width": 1193,
+      "height": 750,
+      "sha256": "0479deb5da11c06f66446c07fca412d8d732b05a16dc63fbb2dae1a052eb9dd4"
+    },
+    {
+      "url": "https://mia.vn/media/uploads/blog-du-lich/skylight-nha-trang-quay-cuc-da-tai-quan-bar-view-xin-so-noi-thanh-pho-bien-3-1623150396.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/skylight-nha-trang-quay-cuc-da-tai-quan-bar-view-xin-so-noi-thanh-pho-bien-693",
+      "alt": "Skylight Nha Trang - 'Quẩy' cực đã tại quán bar view xịn sò nơi thành phố biển 3",
+      "score": 115,
+      "basis": "alt",
+      "file": "nt/124-skylight-nha-trang/05.webp",
+      "width": 1080,
+      "height": 1350,
+      "sha256": "1e8bdbe2a7d889cc58ccf83172d7c3da44acb76bc6eda6f337e31653af8e9fad"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": 171,
+  "name": "Chill Beach Bar",
+  "city": "ql",
+  "addr": "",
+  "images": [
+    {
+      "url": "https://www.sangtaoviet.com.vn/userfiles/images/DU%20AN%20THUC%20HIEN/Chill%20beach%20bar/3.jpg",
+      "source": "https://www.sangtaoviet.com.vn/tong-thau-thi-cong-du-an-chill-beach-bar-ha-long-c2-710--153.html",
+      "alt": "Chill Beach Bar Deck Seating",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "ql/171-chill-beach-bar/01.webp",
+      "width": 800,
+      "height": 591,
+      "sha256": "d3f578d3cad982d6726973ade1294f799c4e0e8a973eed11ae444eeb2490d940"
+    },
+    {
+      "url": "https://sangtaoviet.com.vn/userfiles/images/DU%20AN%20THUC%20HIEN/Chill%20beach%20bar/4.jpg",
+      "source": "https://sangtaoviet.com.vn/tong-thau-thi-cong-du-an-chill-beach-bar-ha-long-c2-710---153.html",
+      "alt": "Chill Beach Bar Hạ Long",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "ql/171-chill-beach-bar/02.webp",
+      "width": 800,
+      "height": 596,
+      "sha256": "7483f5547effa5f3b30f506074b87808edf3a61b515b7828a2009c9052dfee62"
+    },
+    {
+      "url": "https://img.iguide.ai/media/chill-beach-bar-h-long-i2dytt-2.webp",
+      "source": "https://iguide.ai/vi/providers/chill-beach-bar-h-long-i2dytt",
+      "alt": "Chill Beach Bar in Hạ Long",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "ql/171-chill-beach-bar/03.webp",
+      "width": 1024,
+      "height": 576,
+      "sha256": "a6a318dba6c894e647567ca9b364e4869a3eaf7ebefc3e1da8c659f6facaa44d"
+    },
+    {
+      "url": "https://vnguide.vn/uploads/vnguide-content/space/chill-beach-bar/hero.jpg",
+      "source": "https://vnguide.vn/restaurant/chill-beach-bar",
+      "alt": "Chill Beach Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "ql/171-chill-beach-bar/04.webp",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "c591a5930dfa905f6b42d2e9ac579555e9d46f6b122ff4a639ca5f7401acab0e"
+    }
+  ]
+}

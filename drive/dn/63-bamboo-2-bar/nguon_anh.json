@@ -1,0 +1,63 @@
+{
+  "id": 63,
+  "name": "Bamboo 2 Bar",
+  "city": "dn",
+  "addr": "216 Bạch Đằng",
+  "images": [
+    {
+      "url": "https://cdn.enprimeurclub.com/storage/v1/object/public/images/bars/7db1ee52-8682-4b6d-95e7-70d3e8fb96ee/hero1.jpg?width=3840&quality=75",
+      "source": "https://www.enprimeurclub.com/bars/bamboo-2-bar-thanh-khe",
+      "alt": "Bamboo 2 Bar bar in Thanh Khe, Vietnam",
+      "score": 100,
+      "basis": "alt",
+      "file": "dn/63-bamboo-2-bar/01.webp",
+      "width": 2000,
+      "height": 923,
+      "sha256": "dd038136383d8af743e44c93c6a544967c91449a979d3da70177df219cd19639"
+    },
+    {
+      "url": "https://d122axpxm39woi.cloudfront.net/images/guides/origin/60c079a30216a.jpg",
+      "source": "https://www.bestpricetravel.com/travel-guide/bars-pubs-for-da-nang-nightlife-2663.html",
+      "alt": "Bamboo Bar 2 Da Nang",
+      "score": 100,
+      "basis": "alt",
+      "file": "dn/63-bamboo-2-bar/02.webp",
+      "width": 800,
+      "height": 450,
+      "sha256": "339778911553fc89bd7ea74e3ec80468019f8ec16221c4a24efef7291e704bf6"
+    },
+    {
+      "url": "https://cdn.enprimeurclub.com/storage/v1/object/public/images/bars/2ab21dcc-85e0-4291-91b4-537904b13742/hero1.jpg?width=3840&quality=75",
+      "source": "https://www.enprimeurclub.com/bars/bamboo-2-bar-thanh-khe",
+      "alt": "United Bar bar in Thanh Khe",
+      "score": 60,
+      "basis": "article",
+      "file": "dn/63-bamboo-2-bar/03.webp",
+      "width": 1400,
+      "height": 1399,
+      "sha256": "294704c1d6135f0049fe9f0882075bfbae938afc4a61f5ffce95f0b450e2830c"
+    },
+    {
+      "url": "https://cdn.enprimeurclub.com/storage/v1/object/public/images/bars/e5e07b1d-7e18-48f2-bbdf-f36b2605b8ff/hero1.jpg?width=3840&quality=75",
+      "source": "https://www.enprimeurclub.com/bars/bamboo-2-bar-thanh-khe",
+      "alt": "Mr Bean Bar bar in Hoi An",
+      "score": 60,
+      "basis": "article",
+      "file": "dn/63-bamboo-2-bar/04.webp",
+      "width": 1200,
+      "height": 1200,
+      "sha256": "ac1d53611b8e65e047877b620c3ec698a25e27b8b07c27977610728c3830ce8e"
+    },
+    {
+      "url": "https://cdn.enprimeurclub.com/storage/v1/object/public/images/bars/3d41b6af-d3c8-4202-a827-a03c43cd72f2/hero1.jpg?width=3840&quality=75",
+      "source": "https://www.enprimeurclub.com/bars/bamboo-2-bar-thanh-khe",
+      "alt": "Soul Kitchen bar in Hoi An",
+      "score": 60,
+      "basis": "article",
+      "file": "dn/63-bamboo-2-bar/05.webp",
+      "width": 1080,
+      "height": 1100,
+      "sha256": "6a70c09a639246e2a692a1c72c2de9548834774ef8a9d376be36b3c2096c1a3b"
+    }
+  ]
+}

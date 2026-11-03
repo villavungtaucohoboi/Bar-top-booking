@@ -1,0 +1,63 @@
+{
+  "id": 121,
+  "name": "Zenith Bar",
+  "city": "hue",
+  "addr": "Meliá Vinpearl Hue, 50A Hùng Vương",
+  "images": [
+    {
+      "url": "https://dam.melia.com/melia/file/qS6fhj1sdEwzms3asyd7.jpg",
+      "source": "https://melia.com/en/hotels/vietnam/hue-city/melia-vinpearl-hue/restaurants",
+      "alt": "Rooftop lounge with panoramic city view, living green wall, and modern seating. - Bar Zenith, Light meals - Meliá Vinpearl Hue, Hue City",
+      "score": 115,
+      "basis": "alt",
+      "file": "hue/121-zenith-bar/01.webp",
+      "width": 3543,
+      "height": 2362,
+      "sha256": "6b3d8ef020f6a48a08244a8f858ee5926102504cef99ec2d469098f35a301dc8"
+    },
+    {
+      "url": "https://dam.melia.com/melia/file/geFGyK2eaVvmuDdqDZXL.jpg",
+      "source": "https://melia.com/en/hotels/vietnam/hue-city/melia-vinpearl-hue/restaurants",
+      "alt": "Rooftop lounge with vertical garden, wicker sofas, and panoramic city views. - Bar Zenith, Light meals - Meliá Vinpearl Hue, Hue City",
+      "score": 115,
+      "basis": "alt",
+      "file": "hue/121-zenith-bar/02.webp",
+      "width": 3543,
+      "height": 2362,
+      "sha256": "f337d1a6320b36525311d4ff8815b1a7ef7fc40f625168c048267e0030fd20bc"
+    },
+    {
+      "url": "https://dam.melia.com/melia/file/N7TsmQEYw3J8raGb7dUi.jpg",
+      "source": "https://melia.com/en/hotels/vietnam/hue-city/melia-vinpearl-hue/restaurants",
+      "alt": "Rooftop lounge with living wall, modern seating, and panoramic city views. - Bar Zenith, Light meals - Meliá Vinpearl Hue, Hue City",
+      "score": 115,
+      "basis": "alt",
+      "file": "hue/121-zenith-bar/03.webp",
+      "width": 3543,
+      "height": 2362,
+      "sha256": "18b720cc4fa8118a8ca48ce5ba2400819f5dde48d0c4e9cfdc15c23a5783099b"
+    },
+    {
+      "url": "https://dam.melia.com/melia/file/PQ1YYH9Cc4Y9eMyR3qyC.jpg",
+      "source": "https://melia.com/en/hotels/vietnam/hue-city/melia-vinpearl-hue/restaurants",
+      "alt": "Modern balcony with vertical garden overlooking a city, river, and bridge. - Bar Zenith, Light meals - Meliá Vinpearl Hue, Hue City",
+      "score": 100,
+      "basis": "alt",
+      "file": "hue/121-zenith-bar/04.webp",
+      "width": 3543,
+      "height": 2362,
+      "sha256": "e9c763dbc5dbd034557a98ef7233a9fbad214a564d56e315292e5523b7fdb1f4"
+    },
+    {
+      "url": "https://dam.melia.com/melia/file/6jSyK8dmLTGwjxzPe2a2.jpg",
+      "source": "https://melia.com/en/hotels/vietnam/hue-city/melia-vinpearl-hue/restaurants",
+      "alt": "Sesame-crusted seared tuna tartine, avocado, greens, lime, white wine. - Bar Zenith, Light meals - Meliá Vinpearl Hue, Hue City",
+      "score": 100,
+      "basis": "alt",
+      "file": "hue/121-zenith-bar/05.webp",
+      "width": 2861,
+      "height": 4300,
+      "sha256": "92945926b67831ceb4e487cbdfe9c8625a02aedc05546ed21921fc5a20696892"
+    }
+  ]
+}

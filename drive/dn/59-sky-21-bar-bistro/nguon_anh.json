@@ -1,0 +1,63 @@
+{
+  "id": 59,
+  "name": "Sky 21 Bar & Bistro",
+  "city": "dn",
+  "addr": "Tầng 21, Belle Maison Parosand, 216 Võ Nguyên Giáp",
+  "images": [
+    {
+      "url": "https://www.therooftopguide.com/rooftop-bars-in-da-nang/Bilder/sky-21-bar-and-bistro-600-1.jpg",
+      "source": "https://www.therooftopguide.com/rooftop-bars-in-da-nang/sky-21-bar-and-bistro.html",
+      "alt": "Rooftop bar Sky 21 Bar & Bistro in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/59-sky-21-bar-bistro/01.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "cf79137962f42606e329e3661cd0ab43d20d7c14dfcf0eb33387fc60eceb4024"
+    },
+    {
+      "url": "https://www.therooftopguide.com/rooftop-bars-in-da-nang/Bilder/sky-21-bar-and-bistro-600-2.jpg",
+      "source": "https://www.therooftopguide.com/rooftop-bars-in-da-nang/sky-21-bar-and-bistro.html",
+      "alt": "Rooftop bar Sky 21 Bar & Bistro in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/59-sky-21-bar-bistro/02.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "494f04ebc5416be0f00f10889c6853cc3e38c6150643b11bbd357e75ec9336a3"
+    },
+    {
+      "url": "https://www.therooftopguide.com/rooftop-bars-in-da-nang/Bilder/sky-21-bar-and-bistro-600-3.jpg",
+      "source": "https://www.therooftopguide.com/rooftop-bars-in-da-nang/sky-21-bar-and-bistro.html",
+      "alt": "Rooftop bar Sky 21 Bar & Bistro in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/59-sky-21-bar-bistro/03.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "78797210136ab5f94b6d7cf61cddafb810c013b558d175b29f70acebfdf065a0"
+    },
+    {
+      "url": "https://www.therooftopguide.com/rooftop-bars-in-da-nang/Bilder/sky-21-bar-and-bistro-600-4.jpg",
+      "source": "https://www.therooftopguide.com/rooftop-bars-in-da-nang/sky-21-bar-and-bistro.html",
+      "alt": "Rooftop bar Sky 21 Bar & Bistro in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/59-sky-21-bar-bistro/04.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "613f8f4aaba9ef13be843b0f23200a3db76c550d6f758d1ecf02956fe28a206a"
+    },
+    {
+      "url": "https://www.therooftopguide.com/rooftop-bars-in-da-nang/Bilder/sky-21-bar-and-bistro-600-5.jpg",
+      "source": "https://www.therooftopguide.com/rooftop-bars-in-da-nang/sky-21-bar-and-bistro.html",
+      "alt": "Rooftop bar Sky 21 Bar & Bistro in Da Nang",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/59-sky-21-bar-bistro/05.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "13cf19e05322e25491a08724ad29b9462c2ce8c65b85ea53e7a051760b929b80"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": 154,
+  "name": "Sim Bar (Vinpearl Resort & Spa Phú Quốc)",
+  "city": "pq",
+  "addr": "Vinpearl Resort & Spa Phú Quốc",
+  "images": [
+    {
+      "url": "https://statics.vinpearl.com/Hinh-anh-Vinpearl-Resort-%26-Spa-Phu-Quoc_Sim_Bar4_1639415090.jpg",
+      "source": "https://vinpearl.com/vi/hinh-anh-vinpearl-resort-spa-phu-quoc_sim_bar4",
+      "alt": "Vinpearl Resort & Spa Phu Quoc Sim Bar",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/154-sim-bar-vinpearl-resort-spa-phu-quoc/01.webp",
+      "width": 1080,
+      "height": 720,
+      "sha256": "b24dce7cd2259b40d13b9d8782aafa737d2fa7cba2226ec23f52039a4dcae2fd"
+    },
+    {
+      "url": "https://statics.vinpearl.com/VPRSPQ%20Sim%20Bar_1694797373.jpg",
+      "source": "https://vinpearl.com/vi/phu-quoc/cuisine/sim-bar",
+      "alt": "Sim Bar at Vinpearl Phu Quoc",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "pq/154-sim-bar-vinpearl-resort-spa-phu-quoc/02.webp",
+      "width": 1500,
+      "height": 1000,
+      "sha256": "7e81e52fee3ff6bbad0a6f3b0d2face0156721443c3fb2c877d64217029332b0"
+    },
+    {
+      "url": "https://statics.vinpearl.com/Hinh-anh-Vinpearl-Resort%26-Spa-Phu-Quoc-Cocktail-party-4_1673666166.jpg",
+      "source": "https://vinpearl.com/vi/hinh-anh-vinpearl-resort-spa-phu-quoc-cocktail-party-4",
+      "alt": "Sim Bar Signage",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "pq/154-sim-bar-vinpearl-resort-spa-phu-quoc/03.webp",
+      "width": 1920,
+      "height": 1280,
+      "sha256": "22ca1286e95f8dbbb5317ee670e89f5335638d0241d873fcb189a612ce137c8f"
+    },
+    {
+      "url": "https://vinpearl.com/sites/default/files/styles/1440x574/public/2023-09/VPRSPQ%20Sim%20Bar_1694794655.jpg.webp?itok=JnYDqNtg",
+      "source": "https://vinpearl.com/vi/phu-quoc/am-thuc/sim-bar",
+      "alt": "Sim Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "pq/154-sim-bar-vinpearl-resort-spa-phu-quoc/04.webp",
+      "width": 1440,
+      "height": 574,
+      "sha256": "4c422e048322211a80d55bf5f2fe9fd64f10c2c5734b51e49361f25bcc5dd651"
+    }
+  ]
+}

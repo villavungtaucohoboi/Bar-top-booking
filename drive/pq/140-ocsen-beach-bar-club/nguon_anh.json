@@ -1,0 +1,63 @@
+{
+  "id": 140,
+  "name": "OCSEN Beach Bar & Club",
+  "city": "pq",
+  "addr": "124 Trần Hưng Đạo",
+  "images": [
+    {
+      "url": "https://sun-ecommerce-cdn.azureedge.net/ecommerce/service-sites/asset/SunParadiseLandPhuQuoc/google-doc/post_id_12970/AD_4nXdEAohkwFN0Q-C1Ni9vAEy-bWvknaqLWbAi6UmAlEDITTdWO-_9Hc4biGNlja6GsjylAoZxsmCXVOJw_X55I5S4QMMhQYkHB-zWhimEJr5h9KYyEbqt5gXLJz2PV0_TlKD2vWyyuO32QAAFSEd2I8z9DSGlWhBD7cUdYyN02C6vZGFnyts.webp",
+      "source": "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/enjoy-the-sunset-and-relax-at-ocsen-beach-bar-phu-quoc-12970",
+      "alt": "OCSEN Beach Bar is the ideal destination to watch the sunset in Phu Quoc.",
+      "score": 100,
+      "basis": "alt",
+      "file": "pq/140-ocsen-beach-bar-club/01.webp",
+      "width": 1200,
+      "height": 900,
+      "sha256": "e53d3e5502b94463b90b6868cf615129986324720378bc3ae6209a6eb45e6f04"
+    },
+    {
+      "url": "https://sun-ecommerce-cdn.azureedge.net/ecommerce/service-sites/asset/SunParadiseLandPhuQuoc/google-doc/post_id_12970/AD_4nXeC6xfL9BMFCaS2SWwxssj4Rz1ntL2RqO0YnOegjZY6TuUYatoAucQ5WHC3y0D63k6nKsd7Kgy8xF2aI8wRC-Or6uz690-oAiE3UbLMmR3GChk41m9o0QI8pH7g0YbrJAoSB6lvtb0YQ5eU6l7w9ho4m252OzYkAFxwa3micMU-e4ZPyao.webp",
+      "source": "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/enjoy-the-sunset-and-relax-at-ocsen-beach-bar-phu-quoc-12970",
+      "alt": "Romantic sunset scene at OCSEN Beach Bar (Phu Quoc).",
+      "score": 100,
+      "basis": "alt",
+      "file": "pq/140-ocsen-beach-bar-club/02.webp",
+      "width": 1200,
+      "height": 900,
+      "sha256": "a85b202b6788c9b5fecadbba1749399c5e780b333110d1469a90de9cec103db9"
+    },
+    {
+      "url": "https://hanoivoyages.info/wp-content/uploads/2025/12/vietnam-phu-quoc-ocsen-beach-bar-1024.jpg",
+      "source": "https://hanoivoyage.com/en/blog/7-beach-bars-in-phu-quoc.html",
+      "alt": "Ocsen Beach Bar & Club\n\n",
+      "score": 100,
+      "basis": "alt",
+      "file": "pq/140-ocsen-beach-bar-club/03.webp",
+      "width": 1024,
+      "height": 576,
+      "sha256": "262eacd7781a13c53ad5c06bec16681a2750b27ff39ce6d2a3681b6c870c1420"
+    },
+    {
+      "url": "https://sun-ecommerce-cdn.azureedge.net/ecommerce/service-sites/asset/SunParadiseLandPhuQuoc/google-doc/post_id_12970/AD_4nXfSWiW15k3hz_3HgyoheGB_kD3OnDvy5MxhL5_IiJOBAGvCG4kzpth7PJ8BLAaBVBg6U12mM7KqQ9DpEWtovXCI313098sh9Cq16VRJ693GZyRb4Vr5LqW_PWGyWreFYVeEF49YWmex9V1fEv-sdVsioPwNw29ipWXA3X5c87ENKSCmz8I.webp",
+      "source": "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/enjoy-the-sunset-and-relax-at-ocsen-beach-bar-phu-quoc-12970",
+      "alt": "Enjoy a cool cocktail by the sea",
+      "score": 70,
+      "basis": "section",
+      "file": "pq/140-ocsen-beach-bar-club/04.webp",
+      "width": 1200,
+      "height": 900,
+      "sha256": "a7ee276a9c8a9090084789de0959371704fc8a60033f44b23854b86f05884f42"
+    },
+    {
+      "url": "https://sun-ecommerce-cdn.azureedge.net/ecommerce/service-sites/asset/SunParadiseLandPhuQuoc/google-doc/post_id_12970/AD_4nXcUX-5P_fDg649qGx5hdyr0S3QEZzKbDVcg7pI3dpTc9rbnRTnwKZCeVhsHJZxH7x1rGKr2r8eFMqfkhY-5Q34RlRFY_kPuPmXmvpSeBB6A-xgy0nCpTyMR4o6yKtoQxFV70rjwV7KXnI6Y-aNSnTfiFjrjR9UyDaCVlIySHy0L8lXe.webp",
+      "source": "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/enjoy-the-sunset-and-relax-at-ocsen-beach-bar-phu-quoc-12970",
+      "alt": "Challenge with the Moc Xa Thinh No game at Exotica Village.",
+      "score": 70,
+      "basis": "section",
+      "file": "pq/140-ocsen-beach-bar-club/05.webp",
+      "width": 1200,
+      "height": 900,
+      "sha256": "72e84250588c8ee025b2769acac6a4e94cfd73e520a824c617a655e116c47d1d"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": 163,
+  "name": "New Square Bar",
+  "city": "ql",
+  "addr": "Tổ 5, Khu 9, Cái Dăm, Bãi Cháy",
+  "images": [
+    {
+      "url": "https://product.hstatic.net/1000268128/product/415929621_772413541580979_5250583772970524077_n_446d14a82edf462f96abed1b1b366afb_master.jpg",
+      "source": "https://www.9life.com.vn/products/new-square-bar-ha-long-khu-9-bai-chay",
+      "alt": "New Square Bar Hạ Long Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ql/163-new-square-bar/01.webp",
+      "width": 2048,
+      "height": 1365,
+      "sha256": "9eafe0321e81accdaf0ba6e5656f4867e88579600ced8e51c52fbc60863fdfe6"
+    },
+    {
+      "url": "https://product.hstatic.net/1000268128/product/412515123_764373825718284_2207881247740920632_n_187320d05a424a6ca0a512917866ae6f.jpg",
+      "source": "https://www.9life.com.vn/products/new-square-bar-ha-long-khu-9-bai-chay",
+      "alt": "Neon Night at Square Bar",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ql/163-new-square-bar/02.webp",
+      "width": 2048,
+      "height": 1366,
+      "sha256": "054dec96179dd6885b7e399d6c4c85ae6ddd42bfd09e66bde2cd5513de5c799b"
+    },
+    {
+      "url": "https://product.hstatic.net/1000268128/product/428602741_801455255343474_3213540965746982399_n_6cef293d58f0436c81d30d51f9387885.jpg",
+      "source": "https://www.9life.com.vn/products/new-square-bar-ha-long-khu-9-bai-chay",
+      "alt": "Night Out at New Square Bar Hạ Long",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "ql/163-new-square-bar/03.webp",
+      "width": 2048,
+      "height": 1365,
+      "sha256": "2e315273add5c84b68dbf3a99073974663daba1c45d4c7b8bdc6bd689dbaf676"
+    }
+  ]
+}

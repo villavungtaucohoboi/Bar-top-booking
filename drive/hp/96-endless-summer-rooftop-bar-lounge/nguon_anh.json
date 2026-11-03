@@ -1,0 +1,30 @@
+{
+  "id": 96,
+  "name": "Endless Summer Rooftop Bar & Lounge",
+  "city": "hp",
+  "addr": "Tầng 22, Wink Hotel Hai Phong, 135 Điện Biên Phủ, Hồng Bàng",
+  "images": [
+    {
+      "url": "https://wink-hotels.com/wp-content/uploads/2025/10/z7086937497732_ef51fbee10c025d50ac6b240b8008f13-683x1024.jpg",
+      "source": "https://wink-hotels.com/?p=6053",
+      "alt": "Best Bars In Hai Phong",
+      "score": 70,
+      "basis": "section",
+      "file": "hp/96-endless-summer-rooftop-bar-lounge/01.webp",
+      "width": 683,
+      "height": 1024,
+      "sha256": "033d23d99e22ef68624ce628a4c2690504c9ebb293456ea222a43686234fa068"
+    },
+    {
+      "url": "https://wink-hotels.com/wp-content/uploads/2025/10/z6123539522577_c18b894df0771824e880ee69eac8a85e-683x1024.jpg",
+      "source": "https://wink-hotels.com/?p=6053",
+      "alt": "Best Bars In Hai Phong",
+      "score": 70,
+      "basis": "section",
+      "file": "hp/96-endless-summer-rooftop-bar-lounge/02.webp",
+      "width": 683,
+      "height": 1024,
+      "sha256": "da627102e84930f2b9fff79dcbd99287694b12a9c1a3f222f3c70140948a6951"
+    }
+  ]
+}

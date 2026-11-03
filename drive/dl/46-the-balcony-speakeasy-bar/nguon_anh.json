@@ -1,0 +1,63 @@
+{
+  "id": 46,
+  "name": "The Balcony Speakeasy Bar",
+  "city": "dl",
+  "addr": "6 Quang Trung",
+  "images": [
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/2d/ad/fa/the-balcony-speakeasy.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g293922-d19254835-Reviews-The_Balcony_Speakeasy_Bar-Da_Lat_Lam_Dong_Province.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "dl/46-the-balcony-speakeasy-bar/01.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "3a4649ad1f294c52293bcc0a2d42fd3d6f1329cc035f8c0343ecae88f3d0915e"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/482440Kxb/anh-mo-ta.png",
+      "source": "https://mytour.vn/en/blog/xep-hang/top-5-most-popular-hidden-bars-in-da-lat-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "dl/46-the-balcony-speakeasy-bar/02.webp",
+      "width": 700,
+      "height": 525,
+      "sha256": "7289b2c12784705337d66067e856a54c81e8701a975d53f151253ecff4bfa2b1"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/c3/9e/73/caption.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g293922-d19254835-Reviews-The_Balcony_Speakeasy_Bar-Da_Lat_Lam_Dong_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "dl/46-the-balcony-speakeasy-bar/03.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "d99e0f5cf486f58b372a4076abd559beabc3506d2021665c7fa4d377b0be38e2"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/c3/9e/72/caption.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g293922-d19254835-Reviews-The_Balcony_Speakeasy_Bar-Da_Lat_Lam_Dong_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "dl/46-the-balcony-speakeasy-bar/04.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "88bfb78a464f60f4909eb16e80ac4cb96a626d7f9ed086c8f163a9ade283684b"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/482440gfk/anh-mo-ta.png",
+      "source": "https://mytour.vn/en/blog/xep-hang/top-5-most-popular-hidden-bars-in-da-lat-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "dl/46-the-balcony-speakeasy-bar/05.webp",
+      "width": 486,
+      "height": 700,
+      "sha256": "0ac4bbc24f71f32fef439dc7b75f05d07df6ffc2a305b02c05e3165c0d0bad20"
+    }
+  ]
+}

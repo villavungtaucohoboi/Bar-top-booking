@@ -1,0 +1,63 @@
+{
+  "id": 113,
+  "name": "DMZ Bar & Restaurant",
+  "city": "hue",
+  "addr": "60 Lê Lợi",
+  "images": [
+    {
+      "url": "https://statics.vinpearl.com/DMZ-Bar-Restaurant-in-Hue_1756550819.jpg",
+      "source": "https://vinpearl.com/en/bar-in-hue",
+      "alt": "DMZ Bar & Restaurant in Hue",
+      "score": 100,
+      "basis": "alt",
+      "file": "hue/113-dmz-bar-restaurant/01.webp",
+      "width": 999,
+      "height": 666,
+      "sha256": "cce794371f5268b8684ce9535bafce1db759d1efc768c116d81e2c13ca7e602c"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/8f/95/f6/dmz-bar-hue.jpg?w=1200&h=1200&s=1",
+      "source": "https://www.tripadvisor.com.vn/Restaurant_Review-g293926-d1738361-Reviews-Dmz_Bar_Restaurant-Hue_Thua_Thien_Hue_Province.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "hue/113-dmz-bar-restaurant/02.webp",
+      "width": 1200,
+      "height": 1124,
+      "sha256": "c57b6f88a4b5f3b9989afc9cb32566e91e1b0f9b329bd63a1cf67ef978311e09"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/cc/64/86/dmz.jpg?w=1200&h=1200&s=1",
+      "source": "https://www.tripadvisor.com.vn/Restaurant_Review-g293926-d1738361-Reviews-Dmz_Bar_Restaurant-Hue_Thua_Thien_Hue_Province.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "hue/113-dmz-bar-restaurant/03.webp",
+      "width": 1200,
+      "height": 1200,
+      "sha256": "33fb7d7a7a912a3406aeee173c41838df9264fd1264ab4725df1aaa6fee4624e"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/30/e4/de/dmz-bar.jpg?w=1100&h=1100&s=1",
+      "source": "https://www.tripadvisor.com.vn/Restaurant_Review-g293926-d1738361-Reviews-Dmz_Bar_Restaurant-Hue_Thua_Thien_Hue_Province.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "hue/113-dmz-bar-restaurant/04.webp",
+      "width": 1100,
+      "height": 1100,
+      "sha256": "82ce2c0d585e6c0582df0a49dfd63f0533005ef0abbc6cd16937675fef1fae81"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://inhat.vn/wp-content/uploads/2022/05/quan-bar-hue-4-min.png",
+      "source": "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html",
+      "alt": "clube đêm tại Huế",
+      "score": 70,
+      "basis": "section",
+      "file": "hue/113-dmz-bar-restaurant/05.webp",
+      "width": 700,
+      "height": 700,
+      "sha256": "e5472ef213513367422f9a1c4df160dcfc2a54b76290b8e49189fd8ddfce7317"
+    }
+  ]
+}

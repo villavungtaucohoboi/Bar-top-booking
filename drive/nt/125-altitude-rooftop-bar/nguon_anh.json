@@ -1,0 +1,63 @@
+{
+  "id": 125,
+  "name": "Altitude Rooftop Bar",
+  "city": "nt",
+  "addr": "Tầng 28 khách sạn Sheraton, 26–28 Trần Phú",
+  "images": [
+    {
+      "url": "https://vietnamnightlife.com/uploads/images/2023/01/1674019794-multi_product20-altituderooftopbarnhatrangoverview2.jpg",
+      "source": "https://vietnamnightlife.com/en/altitude-rooftop-bar-308-16.html",
+      "alt": "Altitude Rooftop Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "nt/125-altitude-rooftop-bar/01.webp",
+      "width": 645,
+      "height": 400,
+      "sha256": "b6917c6b4a4380b06f9fb5ef78cdc3c9872a3fe789a997c65bf929094b9706f6"
+    },
+    {
+      "url": "https://dimg.donga.com/wps/NEWS/IMAGE/2025/04/28/131505013.2.jpg",
+      "source": "https://www.donga.com/news/Culture/article/all/20250428/131505037/1",
+      "alt": "Sheraton Nha Trang Altitude Rooftop Bar",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "nt/125-altitude-rooftop-bar/02.webp",
+      "width": 1200,
+      "height": 799,
+      "sha256": "353372a2704b475e0fcbdbfd974b7b5ce167b40e0c0395907668e12804c2aec0"
+    },
+    {
+      "url": "https://halotravel.vn/wp-content/uploads/2020/04/quan-cafe-cho-tinh-nhan-o-nha-trang-altitude-rooftop.jpg",
+      "source": "https://halotravel.vn/quan-cafe-cho-tinh-nhan-o-nha-trang/",
+      "alt": "Sunset Romance at Altitude Rooftop",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "nt/125-altitude-rooftop-bar/03.webp",
+      "width": 960,
+      "height": 720,
+      "sha256": "0b81e1680762edf3fde90fc93833a7e563142766037e186ac8287779fcd2e347"
+    },
+    {
+      "url": "https://vietnamnightlife.com/uploads/images/2023/01/1674019794-multi_product20-altituderooftopbarnhatrangoverview7.jpg",
+      "source": "https://vietnamnightlife.com/en/altitude-rooftop-bar-308-16.html",
+      "alt": "Altitude Rooftop Bar Evening Spread",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "nt/125-altitude-rooftop-bar/04.webp",
+      "width": 645,
+      "height": 400,
+      "sha256": "08a0ac6e5bf5632c172f3e7a40132779056719d40657f674c15ac5049405be16"
+    },
+    {
+      "url": "https://vietnamnightlife.com/uploads/images/2023/01/1674019794-multi_product20-altituderooftopbarnhatrangoverview3.jpg",
+      "source": "https://vietnamnightlife.com/en/altitude-rooftop-bar-308-16.html",
+      "alt": "Altitude Rooftop Bar Sea View",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "nt/125-altitude-rooftop-bar/05.webp",
+      "width": 645,
+      "height": 400,
+      "sha256": "9b14f7204b5d71cc23590c33d73db073a186a19b389d60be8f0995edf99f7fbb"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 210,
+  "name": "Pineapple Beach Bar",
+  "city": "vt",
+  "addr": "",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwam5h1190wr64@resize_ss640x400",
+      "source": "https://www.foody.vn/vung-tau/bar-pub",
+      "alt": "Pineapple Beach Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "vt/210-pineapple-beach-bar/01.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "0abec305b7023f0ea1d62bf1dee3c765c655b470a690596339e2c0ffbec18108"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lw91vqv1v3yx11@resize_ss640x400",
+      "source": "https://www.foody.vn/vung-tau/bar-pub",
+      "alt": "Tommy's 3 - Coffee & Restaurant",
+      "score": 70,
+      "basis": "section",
+      "file": "vt/210-pineapple-beach-bar/02.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "22d1885993d150731841519115366a0f890195e4ef84166802586fba0de4c32f"
+    }
+  ]
+}

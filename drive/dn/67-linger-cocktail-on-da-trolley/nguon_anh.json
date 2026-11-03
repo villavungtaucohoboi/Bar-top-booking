@@ -1,0 +1,41 @@
+{
+  "id": 67,
+  "name": "Linger – Cocktail on da Trolley",
+  "city": "dn",
+  "addr": "19 Phan Kế Bính",
+  "images": [
+    {
+      "url": "https://toplist.vn/images/800px/linger-cocktail-on-da-trolley-1121373.jpg",
+      "source": "https://toplist.vn/top-list/quan-hidden-bar-dep-nhat-tai-da-nang-57707.htm",
+      "alt": "Linger - Cocktail on da Trolley",
+      "score": 100,
+      "basis": "alt",
+      "file": "dn/67-linger-cocktail-on-da-trolley/01.webp",
+      "width": 800,
+      "height": 620,
+      "sha256": "662bc337457e3e2a1c8544b050658b7538b0e28cc360b87e1309f9ff31e88e7a"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/linger-cocktail-on-da-trolley-1121374.jpg",
+      "source": "https://toplist.vn/top-list/quan-hidden-bar-dep-nhat-tai-da-nang-57707.htm",
+      "alt": "Linger - Cocktail on da Trolley",
+      "score": 100,
+      "basis": "alt",
+      "file": "dn/67-linger-cocktail-on-da-trolley/02.webp",
+      "width": 800,
+      "height": 533,
+      "sha256": "17d41308a5dabc3f659389fcb3e2a68863ca9c0807135462632e5e9334b548f9"
+    },
+    {
+      "url": "https://images.monandanang.vn/photos/google_maps/ChIJATrb_PwZQjERO4AMR8kF2t0/cover_medium.webp",
+      "source": "https://monandanang.vn/restaurant/g_ChIJATrb_PwZQjERO4AMR8kF2t0-linger-bespoke-cocktail-bar",
+      "alt": "Linger Bespoke Cocktail Bar Entrance",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "dn/67-linger-cocktail-on-da-trolley/03.webp",
+      "width": 533,
+      "height": 800,
+      "sha256": "0815714679fc2cf3aab6ec0058e1064a70a1c3a93c3a457eaff77cfabf830397"
+    }
+  ]
+}

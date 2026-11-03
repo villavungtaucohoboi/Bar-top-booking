@@ -1,0 +1,63 @@
+{
+  "id": 91,
+  "name": "Tadioto",
+  "city": "hn",
+  "addr": "24B Tông Đản, Hoàn Kiếm",
+  "images": [
+    {
+      "url": "https://cdn4.vieclam24h.vn/Quan_bar_Ha_Noi_12_0313e90df4.jpeg",
+      "source": "https://vieclam24h.vn/nghe-nghiep/ki-ot-vui-ve/chill-cuc-da-voi-top-12-quan-bar-ha-noi-cho-dan-van-phong",
+      "alt": "Tadioto Bar Ambiance",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "hn/91-tadioto/01.webp",
+      "width": 1280,
+      "height": 720,
+      "sha256": "0cfe7f8d87e2a93e8931c0bfab7ef8ccc4b91067368eac7ee28342695f5150d6"
+    },
+    {
+      "url": "https://silverkris.singaporeair.com/wp-content/uploads/2017/04/Tadioto.jpg",
+      "source": "https://silverkris.singaporeair.com/inspiration/food-drink/coffee-tea/best-cafes-places-coffee-hanoi/",
+      "alt": "Tadioto Café Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "hn/91-tadioto/02.webp",
+      "width": 960,
+      "height": 720,
+      "sha256": "fd99ce853570d75e5f36d2e59317b80ed40003e97a35e81ce0106547375a6d4a"
+    },
+    {
+      "url": "https://kientrucvadoisong.net/Upload/News/quan-bar-caphe-tadioto-noi-de-ta-tua-lung-vao-qua-khu.jpg",
+      "source": "https://ktds.vn/quan-bar-caphe-tadioto-noi-de-ta-tua-lung-vao-qua-khu",
+      "alt": "Tadioto Bar-Café’s Eclectic Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "hn/91-tadioto/03.webp",
+      "width": 800,
+      "height": 533,
+      "sha256": "2699bd84b3d87fe5ee2a9afc4defd031b82b07523e68bfc07dca8525a6b6cb93"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwguq8eit3ob79%40resize_ss640x400",
+      "source": "https://www.foody.vn/ha-noi/tadioto-bar",
+      "alt": "Tadioto Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "hn/91-tadioto/04.webp",
+      "width": 640,
+      "height": 401,
+      "sha256": "1d6378a2a03b296d08f2922b81504e0679386bb8bcae65d2abc920eac5e867e1"
+    },
+    {
+      "url": "https://archinect.gumlet.io/uploads/sm/smjuf1ns6acqffnf.jpg?auto=compress%2Cformat&fit=crop&w=1500",
+      "source": "https://bustler.net/news/3094/vu-242-n-the-garden-by-bureau-a-for-duc-nguyen-qui-s-tadioto-in-hanoi-vietnam",
+      "alt": "Vu’òn – The Garden Installation at Tadioto",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "hn/91-tadioto/05.webp",
+      "width": 1181,
+      "height": 886,
+      "sha256": "5ccc27942e91dbcc8b8bcff0c78808f02342447e1da0d36c9b4845db1b6faddb"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 133,
+  "name": "Riviera Rooftop Bar & Restaurant",
+  "city": "nt",
+  "addr": "54K Nguyễn Thiện Thuật",
+  "images": [
+    {
+      "url": "https://thodianhatrang.vn/Media/Places/071118104116/pha-che-tai-nha-hang-riveria-nha-trang.jpg",
+      "source": "https://thodianhatrang.vn/danh-muc/nha-hang/riveria-rooftop-bar-restaurant",
+      "alt": "Riveria Rooftop Bar & Restaurant",
+      "score": 135,
+      "basis": "name-address-manual-source",
+      "file": "nt/133-riviera-rooftop-bar-restaurant/01.webp",
+      "width": 960,
+      "height": 960,
+      "sha256": "59719dc651ff4f8e5b245225f5ef770a56d49a281ca553b9ed5bb24993d863a0"
+    },
+    {
+      "url": "https://thodianhatrang.vn/Media/Places/071118104116/nuoc-dua-tai-nha-hang-riveria-nha-trang.jpg",
+      "source": "https://thodianhatrang.vn/danh-muc/nha-hang/riveria-rooftop-bar-restaurant",
+      "alt": "Riveria Rooftop Bar & Restaurant",
+      "score": 135,
+      "basis": "name-address-manual-source",
+      "file": "nt/133-riviera-rooftop-bar-restaurant/02.webp",
+      "width": 960,
+      "height": 960,
+      "sha256": "834f9a0fca6ee637e2ef4686095175383fc45928ebf03f39b3b4ec2afe6b14ff"
+    },
+    {
+      "url": "https://thodianhatrang.vn/Media/Places/071118104116/pizza-ngon-tai-nha-hang-riveria-nha-trang.jpg",
+      "source": "https://thodianhatrang.vn/danh-muc/nha-hang/riveria-rooftop-bar-restaurant",
+      "alt": "Riveria Rooftop Bar & Restaurant",
+      "score": 135,
+      "basis": "name-address-manual-source",
+      "file": "nt/133-riviera-rooftop-bar-restaurant/03.webp",
+      "width": 960,
+      "height": 960,
+      "sha256": "ee38e91ab19d812a017bc31141a517b3d836f0b2acb922279c9c31829a4ab78f"
+    },
+    {
+      "url": "https://thodianhatrang.vn/Media/Places/071118104116/pizza-tai-nha-hang-riveria-nha-trang.jpg",
+      "source": "https://thodianhatrang.vn/danh-muc/nha-hang/riveria-rooftop-bar-restaurant",
+      "alt": "Riveria Rooftop Bar & Restaurant",
+      "score": 135,
+      "basis": "name-address-manual-source",
+      "file": "nt/133-riviera-rooftop-bar-restaurant/04.webp",
+      "width": 960,
+      "height": 960,
+      "sha256": "c16dbfe80380b21c5767cbc46303b606a898759830ba754594df71bf9a85372d"
+    },
+    {
+      "url": "https://thodianhatrang.vn/Media/Places/071118104116/nuoc-ep-tai-nha-hang-riveria-nha-trang.jpg",
+      "source": "https://thodianhatrang.vn/danh-muc/nha-hang/riveria-rooftop-bar-restaurant",
+      "alt": "Riveria Rooftop Bar & Restaurant",
+      "score": 135,
+      "basis": "name-address-manual-source",
+      "file": "nt/133-riviera-rooftop-bar-restaurant/05.webp",
+      "width": 956,
+      "height": 960,
+      "sha256": "bfdd9782bdd7124e9f1a42b253f20dc8347c9a0547ed7215a10026690c806b06"
+    }
+  ]
+}

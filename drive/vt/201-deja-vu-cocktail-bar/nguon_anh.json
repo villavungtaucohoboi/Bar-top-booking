@@ -1,0 +1,63 @@
+{
+  "id": 201,
+  "name": "Déjà Vu Cocktail Bar",
+  "city": "vt",
+  "addr": "3 Lê Ngọc Hân",
+  "images": [
+    {
+      "url": "https://vnguide.vn/uploads/vnguide-content/space/deja-vu-cocktail-bar/hero.jpg",
+      "source": "https://vnguide.vn/restaurant/deja-vu-cocktail-bar",
+      "alt": "Déjà Vu - Cocktail Bar - Cocktail, rooftop và nhịp tối ở Vũ…",
+      "score": 115,
+      "basis": "alt",
+      "file": "vt/201-deja-vu-cocktail-bar/01.webp",
+      "width": 1875,
+      "height": 2500,
+      "sha256": "89b4b25d7bd32962b2853b765e2bf20ead394d8692eaa2cc26782e8690b24099"
+    },
+    {
+      "url": "https://mia.vn/media/uploads/blog-du-lich/bar-vung-tau-deja-vu-1789519749.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/top-bar-vung-tau-de-chill-va-vui-choi-21526",
+      "alt": "Top 10 bar Vũng Tàu lý tưởng để chill và vui chơi về đêm 2",
+      "score": 90,
+      "basis": "filename",
+      "file": "vt/201-deja-vu-cocktail-bar/02.webp",
+      "width": 800,
+      "height": 600,
+      "sha256": "07b30c5bd65835f1e4c03e97f729da9f174ec0cb48a07cc59f49ac6779821425"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/481178nGC/anh-mo-ta.png",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-7-popular-cocktail-bars-in-vung-tau-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "vt/201-deja-vu-cocktail-bar/03.webp",
+      "width": 700,
+      "height": 525,
+      "sha256": "7801a13a0ab438db0d9b4a511cb8a239d1f50471159780d4eb647c2386120280"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/ab/9a/a0/caption.jpg?w=900&h=500&s=1",
+      "source": "https://www.tripadvisor.com.vn/Restaurant_Review-g303946-d27826934-Reviews-Deja_Vu_Cocktail_Bar-Vung_Tau_Ba_Ria_Vung_Tau_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "vt/201-deja-vu-cocktail-bar/04.webp",
+      "width": 900,
+      "height": 500,
+      "sha256": "3d174a7a30ab2ff1dd0005b7d8deab898de116cd50d0ab08b1bb2f26d1bfea8b"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/481178VBd/anh-mo-ta.png",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-7-popular-cocktail-bars-in-vung-tau-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "vt/201-deja-vu-cocktail-bar/05.webp",
+      "width": 467,
+      "height": 700,
+      "sha256": "6b3e80e10bf8da08e50bf44f5fc26c5369bee845863deb11861208987b218dd2"
+    }
+  ]
+}

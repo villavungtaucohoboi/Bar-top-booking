@@ -1,0 +1,63 @@
+{
+  "id": 76,
+  "name": "Lighthouse Sky Bar",
+  "city": "hn",
+  "addr": "Tầng 10, 27 Hàng Bè, Hoàn Kiếm",
+  "images": [
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/lighthouse-skybar-600-10.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/lighthouse-sky-bar.html",
+      "alt": "Rooftop bar Lighthouse Sky Bar in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/76-lighthouse-sky-bar/01.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "d0eadcc525e9c884836a4881bf7f8cebbdf9ae9c709d20c09f743b80798ba610"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/lighthouse-skybar-600-2.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/lighthouse-sky-bar.html",
+      "alt": "Rooftop bar Lighthouse Sky Bar in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/76-lighthouse-sky-bar/02.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "727d90cec4c4d2abe78e063d3be8489993c9ad864a4048826859e3f36c56c071"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/lighthouse-skybar-600-3.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/lighthouse-sky-bar.html",
+      "alt": "Rooftop bar Lighthouse Sky Bar in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/76-lighthouse-sky-bar/03.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "59abcada83ca87137e5b290fe9a41acf12b627436c9f20ed0e520d911552671c"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/lighthouse-skybar-600-4.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/lighthouse-sky-bar.html",
+      "alt": "Rooftop bar Lighthouse Sky Bar in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/76-lighthouse-sky-bar/04.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "5edf408384e36ae925ff8287eb1d1276719e4d97a92c3c11da818bbe8839f13f"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/lighthouse-skybar-600-5.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/lighthouse-sky-bar.html",
+      "alt": "Rooftop bar Lighthouse Sky Bar in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/76-lighthouse-sky-bar/05.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "ddc34a4fe05351f74dd29cd26b2f3f3567f428fca988e96cef7c6f971b895936"
+    }
+  ]
+}

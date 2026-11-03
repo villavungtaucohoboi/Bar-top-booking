@@ -1,0 +1,63 @@
+{
+  "id": 30,
+  "name": "777 Club",
+  "city": "ct",
+  "addr": "127 Trần Văn Khéo, P. Cái Khế, Q. Ninh Kiều, Cần Thơ",
+  "images": [
+    {
+      "url": "https://product.hstatic.net/1000268128/product/165018910_989937808440557_7826527615737670785_n_ba08a63903e643b7a9a5c43f3e82d6d5_master.jpg",
+      "source": "https://www.9life.com.vn/products/777-club-127-tran-van-kheo",
+      "alt": "Nightlife at CLUB 777",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ct/30-777-club/01.webp",
+      "width": 2048,
+      "height": 1365,
+      "sha256": "bb19e4d365cd5e321ce276443897c58f374c52a3dc913b8df62183efd99912b4"
+    },
+    {
+      "url": "https://product.hstatic.net/1000268128/product/175403735_1011334782967526_2251728617856295518_n_03aa915506df4a62accdab7e8bdccc30.jpg",
+      "source": "https://www.9life.com.vn/products/777-club-127-tran-van-kheo",
+      "alt": "Nightlife at CLUB 777",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ct/30-777-club/02.webp",
+      "width": 2048,
+      "height": 1365,
+      "sha256": "6fc988cabd5410df6385f0653db2f29d91f560a486dcd44ada5ddd20ea632595"
+    },
+    {
+      "url": "https://impresstravel.com/wp-content/uploads/2025/05/Best-Club-Can-Tho-Nightlife-Top-Spots-for-Party-Lovers-2.jpg",
+      "source": "https://impresstravel.com/?p=50435",
+      "alt": "777 Club - The Heart of Nightlife on Tran Van Khoo of Club Can Tho",
+      "score": 100,
+      "basis": "alt",
+      "file": "ct/30-777-club/03.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "b2e601b17f5ccb209b393e266c0252615d64d14c36cb489811dcd27cee0fea3b"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/777-club-1278869.jpg",
+      "source": "https://toplist.vn/top-list/quan-bar-lon-nhat-tai-can-tho-14699.htm",
+      "alt": "777 Club",
+      "score": 100,
+      "basis": "alt",
+      "file": "ct/30-777-club/04.webp",
+      "width": 800,
+      "height": 600,
+      "sha256": "3946dbb0e73d2c8bf95b0db0bc42c140a0977a112c5966094117285c65920a26"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/777-club-1278868.jpg",
+      "source": "https://toplist.vn/top-list/quan-bar-lon-nhat-tai-can-tho-14699.htm",
+      "alt": "777 Club",
+      "score": 100,
+      "basis": "alt",
+      "file": "ct/30-777-club/05.webp",
+      "width": 800,
+      "height": 1066,
+      "sha256": "bc1bb9e73957152b85ae5fff4eab111833e81c5a44c5f53a0bdcef55eb4422ea"
+    }
+  ]
+}

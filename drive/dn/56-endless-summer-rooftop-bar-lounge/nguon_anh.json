@@ -1,0 +1,63 @@
+{
+  "id": 56,
+  "name": "Endless Summer Rooftop Bar & Lounge",
+  "city": "dn",
+  "addr": "Tầng 25, Wink Hotel Danang Riverside, 351 Trần Hưng Đạo",
+  "images": [
+    {
+      "url": "https://diff.vn/wp-content/uploads/2025/05/9-khach-san-ngam-phao-hoa-da-nang-2025-1024x768.jpg",
+      "source": "https://www.vietnam.vn/en/top-10-khach-san-ngam-phao-hoa-da-nang-2025-view-dep-nhat",
+      "alt": "Riverside Rooftop Bar at Dusk",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dn/56-endless-summer-rooftop-bar-lounge/01.webp",
+      "width": 1024,
+      "height": 768,
+      "sha256": "150e8616514b97d4d41ac1e7079c2edcaa7661edd66991d706c984e5572f96b6"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/8f9de3_d9176d48e43645eb9e7370138de2cb61~mv2.jpg/v1/fill/w_800%2Ch_400%2Cal_c%2Cq_80%2Cenc_auto/8f9de3_d9176d48e43645eb9e7370138de2cb61~mv2.jpg",
+      "source": "https://www.haianriverfronthotel.com/post/top-outdoor-bars-with-the-best-view-of-dragon-bridge-in-danang",
+      "alt": "Endless Summer Rooftop Bar & Dragon Bridge View",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dn/56-endless-summer-rooftop-bar-lounge/02.webp",
+      "width": 800,
+      "height": 400,
+      "sha256": "42360c7f4de65536cfe24e4203c8a852e83304294574821a4f90f48b929326a0"
+    },
+    {
+      "url": "https://app-api.glodival.vn/storage/4/images/endless-summer-rooftop-pool-bar-is-where-the-vibrant-spirit-of-da-nangs-nightlife-meets-a-chic-tropical-escape-1779506742uF3Ao.jpg",
+      "source": "https://gtrip.vn/travel-blogs/rooftop-bars-in-da-nang",
+      "alt": "Endless Summer Rooftop Pool & Bar is where the vibrant spirit of Da Nang’s nightlife meets a chic, tropical escape",
+      "score": 115,
+      "basis": "alt",
+      "file": "dn/56-endless-summer-rooftop-bar-lounge/03.webp",
+      "width": 1080,
+      "height": 720,
+      "sha256": "17514c9e17a6a11b3ec7f82c88780cc23b3a12a7fc83626ecd24f51bae1259fb"
+    },
+    {
+      "url": "https://wink-hotels.com/wp-content/uploads/2025/02/rooftop-31-1024x683.jpg",
+      "source": "https://wink-hotels.com/?p=3557",
+      "alt": "The 8 Best Rooftop Bars In Danang\n",
+      "score": 75,
+      "basis": "article",
+      "file": "dn/56-endless-summer-rooftop-bar-lounge/04.webp",
+      "width": 1024,
+      "height": 683,
+      "sha256": "3e8f2041c6c699354b065aa071e267ebad8d74e2d755d49253864afc991822b4"
+    },
+    {
+      "url": "https://wink-hotels.com/wp-content/uploads/2025/02/z6123539528081_50bb81948fabe041f81269669b8ac42e-1024x683.jpg",
+      "source": "https://wink-hotels.com/?p=3557",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "dn/56-endless-summer-rooftop-bar-lounge/05.webp",
+      "width": 1024,
+      "height": 683,
+      "sha256": "9fb8abf3c182bc1b707240a30d611d41f4a649ef2cd08ffb2a2b6585a5ac7dbb"
+    }
+  ]
+}

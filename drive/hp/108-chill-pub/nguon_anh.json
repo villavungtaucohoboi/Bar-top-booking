@@ -1,0 +1,30 @@
+{
+  "id": 108,
+  "name": "Chill Pub",
+  "city": "hp",
+  "addr": "22C Minh Khai, Hồng Bàng",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwc2kzjq4mvtf2@resize_ss640x400",
+      "source": "https://www.foody.vn/hai-phong/bar-pub",
+      "alt": "Chill Pub",
+      "score": 100,
+      "basis": "alt",
+      "file": "hp/108-chill-pub/01.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "32a069a4c8fe4ab87fd6a32f47ae1f8309e8ff1a44c048f8a05580e64a3818d3"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lw9tswwghhi157@resize_ss640x400",
+      "source": "https://www.foody.vn/hai-phong/bar-pub",
+      "alt": "Feeling Coffee Lounge - Lê Hồng Phong",
+      "score": 70,
+      "basis": "section",
+      "file": "hp/108-chill-pub/02.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "17697eb0843c53d4e47d739ec98e9ec27d3a066db495072b86c000278ede6b38"
+    }
+  ]
+}

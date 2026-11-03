@@ -1,0 +1,41 @@
+{
+  "id": 150,
+  "name": "The Cheeky Traveller English Pub & Bar",
+  "city": "pq",
+  "addr": "Hẻm 118 Trần Hưng Đạo",
+  "images": [
+    {
+      "url": "https://statics.vinpearl.com/The-Cheeky-Traveller-English-Pub-Bar-Phu-Quoc_1747666927.jpg",
+      "source": "https://vinpearl.com/en/best-bars-in-phu-quoc",
+      "alt": "Easter Celebration at The Cheeky Traveller Pub",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/150-the-cheeky-traveller-english-pub-bar/01.webp",
+      "width": 823,
+      "height": 835,
+      "sha256": "8b95f79e9544f667313768dd3f83cc9f23bdcd011e5710e43cbeb1f3cfdd33bb"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwawq1rzv3kp25%40resize_ss640x400",
+      "source": "https://www.foody.vn/kien-giang/cheeky-traveller-english-pub-hem-118-tran-hung-dao",
+      "alt": "The Cheeky Traveller English Pub Entrance",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "pq/150-the-cheeky-traveller-english-pub-bar/02.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "755ddd158de482f59df34b04f6a5a2a270e30dfea2bb570f91f898d3f171f397"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/e7/10/45/tourist-hot-spot.jpg?w=900&h=500&s=1",
+      "source": "https://www.tripadvisor.com/Restaurant_Review-g1184679-d26733367-Reviews-The_Cheeky_Traveller_English_Pub_And_Bar-Duong_Dong_Phu_Quoc_Island_Kien_Giang_.html",
+      "alt": "Tourist Hot-Spot",
+      "score": 60,
+      "basis": "article",
+      "file": "pq/150-the-cheeky-traveller-english-pub-bar/03.webp",
+      "width": 900,
+      "height": 500,
+      "sha256": "a5f93135dcef71f4c72d3a044e4b8b1b61af1b337804b34d10534b06126f3d75"
+    }
+  ]
+}

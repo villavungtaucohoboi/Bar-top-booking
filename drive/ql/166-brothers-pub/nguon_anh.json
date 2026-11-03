@@ -1,0 +1,19 @@
+{
+  "id": 166,
+  "name": "Brothers Pub",
+  "city": "ql",
+  "addr": "Kiot A116, Sun World Halong Park",
+  "images": [
+    {
+      "url": "https://static.muanhanh.com/images/user/47/halong/brother/brothers-1.jpg",
+      "source": "https://danhsach.vn/quang-ninh/dia-diem-uy-tin/top-danh-sach-dia-diem-bar-bub-beer-club-dang-cap-chat-nhat-tai-ha-long-3832383264.html",
+      "alt": "Brother's Pub Neon Night",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "ql/166-brothers-pub/01.webp",
+      "width": 650,
+      "height": 433,
+      "sha256": "5d388dbec4a8c6cdeb789224db25889e6786c13f7d09dbb301552f0efc64f576"
+    }
+  ]
+}

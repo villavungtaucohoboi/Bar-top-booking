@@ -1,0 +1,63 @@
+{
+  "id": 90,
+  "name": "Binh Minh Jazz Club",
+  "city": "hn",
+  "addr": "1 Tràng Tiền, Hoàn Kiếm",
+  "images": [
+    {
+      "url": "https://minhjazzvietnam.com/wp-content/uploads/2023/07/opening-16.jpeg",
+      "source": "https://minhjazzvietnam.com/2023/07/06/opening-binh-minh-jazz-club/",
+      "alt": "opening-16",
+      "score": 60,
+      "basis": "article",
+      "file": "hn/90-binh-minh-jazz-club/01.webp",
+      "width": 931,
+      "height": 456,
+      "sha256": "4754a530ac0350e6643aa4cab0c893674201085e61f02b6351b1c74c5f4cb048"
+    },
+    {
+      "url": "https://minhjazzvietnam.com/wp-content/uploads/2023/07/opening-10.jpeg",
+      "source": "https://minhjazzvietnam.com/2023/07/06/opening-binh-minh-jazz-club/",
+      "alt": "opening-10",
+      "score": 60,
+      "basis": "article",
+      "file": "hn/90-binh-minh-jazz-club/02.webp",
+      "width": 931,
+      "height": 457,
+      "sha256": "e1f1297f0d8a060ea4d0556ad1356ab854204d9792fcccefa852e414042f8f52"
+    },
+    {
+      "url": "https://minhjazzvietnam.com/wp-content/uploads/2023/07/opening-1.jpeg",
+      "source": "https://minhjazzvietnam.com/2023/07/06/opening-binh-minh-jazz-club/",
+      "alt": "opening-1",
+      "score": 60,
+      "basis": "article",
+      "file": "hn/90-binh-minh-jazz-club/03.webp",
+      "width": 931,
+      "height": 457,
+      "sha256": "aacbb9ce7d2785556574b63a422c97616db173159bd24f8e243f6d69b9d0e07d"
+    },
+    {
+      "url": "https://minhjazzvietnam.com/wp-content/uploads/2023/07/opening-5.jpeg",
+      "source": "https://minhjazzvietnam.com/2023/07/06/opening-binh-minh-jazz-club/",
+      "alt": "opening-5",
+      "score": 60,
+      "basis": "article",
+      "file": "hn/90-binh-minh-jazz-club/04.webp",
+      "width": 931,
+      "height": 457,
+      "sha256": "a0e872739232f3b7b0e0f598744e0ec24e89d84bf457426abf38cef8baf1d609"
+    },
+    {
+      "url": "https://minhjazzvietnam.com/wp-content/uploads/2023/07/opening-8.jpeg",
+      "source": "https://minhjazzvietnam.com/2023/07/06/opening-binh-minh-jazz-club/",
+      "alt": "opening-8",
+      "score": 60,
+      "basis": "article",
+      "file": "hn/90-binh-minh-jazz-club/05.webp",
+      "width": 931,
+      "height": 457,
+      "sha256": "8a6e94243f698a231a23832a778b0a4d728d4549020c678d48fb967cbf38cd66"
+    }
+  ]
+}

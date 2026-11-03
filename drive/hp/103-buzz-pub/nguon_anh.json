@@ -1,0 +1,63 @@
+{
+  "id": 103,
+  "name": "Buzz Pub",
+  "city": "hp",
+  "addr": "335 Văn Cao, Hải An",
+  "images": [
+    {
+      "url": "https://vnguide.vn/uploads/vnguide-content/space/buzz-pub-van-cao-hai-phong/hero.jpg",
+      "source": "https://vnguide.vn/restaurant/buzz-pub-van-cao-hai-phong",
+      "alt": "Buzz Pub - Văn Cao - Hải Phòng - Cocktail, rooftop và nhịp…",
+      "score": 115,
+      "basis": "alt",
+      "file": "hp/103-buzz-pub/01.webp",
+      "width": 2000,
+      "height": 1332,
+      "sha256": "e83f170f96bf2a215f720cbad35874fcd3950b696bac8bbfd14f9852b25f8c61"
+    },
+    {
+      "url": "https://vnguide.vn/uploads/vnguide-content/space/buzz-pub-van-cao-hai-phong/inline-03-dish-detail.jpg",
+      "source": "https://vnguide.vn/restaurant/buzz-pub-van-cao-hai-phong",
+      "alt": "Buzz Pub - Văn Cao - Hải Phòng - Cocktail, rooftop và nhịp… – ảnh 4",
+      "score": 115,
+      "basis": "alt",
+      "file": "hp/103-buzz-pub/02.webp",
+      "width": 1478,
+      "height": 1108,
+      "sha256": "872e3441133c7ae19ec64d6572aa8a12d41feff643bb8d32cdccaa6e88a9d886"
+    },
+    {
+      "url": "https://vnguide.vn/uploads/vnguide-content/space/buzz-pub-van-cao-hai-phong/inline-01-space.jpg",
+      "source": "https://vnguide.vn/restaurant/buzz-pub-van-cao-hai-phong",
+      "alt": "Buzz Pub - Văn Cao - Hải Phòng - Cocktail, rooftop và nhịp… – ảnh 2",
+      "score": 115,
+      "basis": "alt",
+      "file": "hp/103-buzz-pub/03.webp",
+      "width": 1050,
+      "height": 660,
+      "sha256": "39e635132b7618cb72105d781336ebb76622d34cdb0257a918c806fb29b3f1c0"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/481137cjJ/anh-mo-ta.png",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-7-most-famous-bars-in-hai-phong-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "hp/103-buzz-pub/04.webp",
+      "width": 700,
+      "height": 500,
+      "sha256": "2c4ac48853f21df9c6a170e53f9aa69455a6e9ae0b97c7373f7e8aa1641462c9"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/481137azm/anh-mo-ta.png",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-7-most-famous-bars-in-hai-phong-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "hp/103-buzz-pub/05.webp",
+      "width": 700,
+      "height": 367,
+      "sha256": "b6e864c6257eb1484c74b27e23ba3f63525e0434c47fab32f23566409adeddfc"
+    }
+  ]
+}

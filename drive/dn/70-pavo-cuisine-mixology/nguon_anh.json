@@ -1,0 +1,52 @@
+{
+  "id": 70,
+  "name": "Pavo Cuisine & Mixology",
+  "city": "dn",
+  "addr": "11B Trần Phú",
+  "images": [
+    {
+      "url": "https://statics.vinpearl.com/da-nang-bars-04_1692868615.jpg",
+      "source": "https://vinpearl.com/en/da-nang-bars-discover-the-top-hotspots-in-the-city",
+      "alt": "Da Nang bars",
+      "score": 70,
+      "basis": "section",
+      "file": "dn/70-pavo-cuisine-mixology/01.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "5e3fe482599a614e9a27e56c1bb97d36cc11de2436ea80d234417f1912d579df"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/93/df/cc/bar-da-n-ng.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g298085-d23619216-Reviews-Pavo_Bar_Cuisine_Mixology-Da_Nang.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "dn/70-pavo-cuisine-mixology/02.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "11a47737d35a7eb04d85f1794c2f7fe206cf341fa60ea022bfab14402ac04f29"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/7c/30/6f/bar-pavo-da-n-ng.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g298085-d23619216-Reviews-Pavo_Bar_Cuisine_Mixology-Da_Nang.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "dn/70-pavo-cuisine-mixology/03.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "b80764aa8c533970c9f04aa8b3dfe4f331528e9a9d9b62b49e99310c4e888b4f"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/93/e0/fc/bar-da-n-ng.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g298085-d23619216-Reviews-Pavo_Bar_Cuisine_Mixology-Da_Nang.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "dn/70-pavo-cuisine-mixology/04.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "fbdda6e9eb7433e2f7cb1c637adcbd4727ab7c66dc0c46050cfccccb84286bce"
+    }
+  ]
+}

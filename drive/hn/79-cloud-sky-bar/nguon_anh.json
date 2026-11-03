@@ -1,0 +1,63 @@
+{
+  "id": 79,
+  "name": "Cloud Sky Bar",
+  "city": "hn",
+  "addr": "Tầng 9, JM Marvel Hotel, 16 Hàng Da, Hoàn Kiếm",
+  "images": [
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/cloud-sky-bar-600-1.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/cloud-sky-bar.html",
+      "alt": "Rooftop bar Cloud Sky Bar in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/79-cloud-sky-bar/01.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "4c4ebdb0edb65d93e9ac2a238c24ae368806604e68f8ab983878d05c3a7775ed"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/cloud-sky-bar-600-2.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/cloud-sky-bar.html",
+      "alt": "Rooftop bar Cloud Sky Bar in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/79-cloud-sky-bar/02.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "331cc0d356615e59636b4b789b54fd04cb7be4381676079866dbea1f5d818de8"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/cloud-sky-bar-600-3.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/cloud-sky-bar.html",
+      "alt": "Rooftop bar Cloud Sky Bar in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/79-cloud-sky-bar/03.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "620dd856fa55aaaf4aacd29500717a32660a7a23a8f788d68802a97665bc3b40"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/cloud-sky-bar-600-4.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/cloud-sky-bar.html",
+      "alt": "Rooftop bar Cloud Sky Bar in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/79-cloud-sky-bar/04.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "53d274af718675fff04b58d10234bf906f020d3cf75698ad174206ef6add05cc"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/cloud-sky-bar-600-5.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/cloud-sky-bar.html",
+      "alt": "Rooftop bar Cloud Sky Bar in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/79-cloud-sky-bar/05.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "d23c8a8a2d9519c9a2b46759c04d3030b86d2b65170fac2749968437c6f9ea50"
+    }
+  ]
+}

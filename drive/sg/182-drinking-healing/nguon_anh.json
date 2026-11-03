@@ -1,0 +1,63 @@
+{
+  "id": 182,
+  "name": "Drinking & Healing",
+  "city": "sg",
+  "addr": "Tầng 2, 25 Hồ Tùng Mậu",
+  "images": [
+    {
+      "url": "https://cdn.enprimeurclub.com/storage/v1/object/public/images/locations/recTcYvidB167RxrC/hero1.jpg?quality=85&width=1200",
+      "source": "https://www.enprimeurclub.com/bars/drinking-healing-ho-chi-minh-city",
+      "alt": "Drinking & Healing Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/182-drinking-healing/01.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "ffe63046d5829809db87a814a619fffe1492b2a61da8dddb0a0aa5d3e0faf6e0"
+    },
+    {
+      "url": "https://vietnamnightlife.com/uploads/images/2020/02/1581423932-multi_product20-drinkingandhealingoverview10.jpg",
+      "source": "https://vietnamnightlife.com/en/drinking-healing-135-16.html",
+      "alt": "Drinking & Healing Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/182-drinking-healing/02.webp",
+      "width": 645,
+      "height": 400,
+      "sha256": "99b1fd0f1b5a9bad5a026d3a59a6d18023393e66c8f4728056ebf096df876a46"
+    },
+    {
+      "url": "https://www.saigonshops.com/uploads/gallery/drinking-healing-672caf52e27a5.jpg",
+      "source": "https://www.saigonshops.com/places/747/drinking-%26-healing",
+      "alt": "Cocktails at Drinking & Healing Bar",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/182-drinking-healing/03.webp",
+      "width": 1360,
+      "height": 1020,
+      "sha256": "fc55ca94c38bcce008b87e70aeb799fecf691b40b62a51009bc14ee82498121a"
+    },
+    {
+      "url": "https://www.saigonshops.com/uploads/gallery/drinking-healing-672caf52a4d3d.jpg",
+      "source": "https://www.saigonshops.com/places/747/drinking-%26-healing",
+      "alt": "Cocktails at Drinking & Healing",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "sg/182-drinking-healing/04.webp",
+      "width": 765,
+      "height": 1020,
+      "sha256": "7a84dd859a5a9524d0d08a9ed6d5666e5b5364f8526a1de103e295fdae0bc1e6"
+    },
+    {
+      "url": "https://mia.vn/media/uploads/blog-du-lich/cocktail-bar-Drinking-and-Healing-1694373305.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/8-quan-cocktail-bar-sai-gon-12652",
+      "alt": "8 quán cocktail bar Sài Gòn không gian nhẹ nhàng và siêu chill 2",
+      "score": 105,
+      "basis": "filename",
+      "file": "sg/182-drinking-healing/05.webp",
+      "width": 800,
+      "height": 338,
+      "sha256": "2c613d3541a42dc3a71efb63b752baa5e150a10a48cde5e8b00850c99c7aedb9"
+    }
+  ]
+}

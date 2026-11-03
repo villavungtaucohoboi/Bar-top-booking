@@ -1,0 +1,41 @@
+{
+  "id": 99,
+  "name": "EYWA Cocktail & Eatery",
+  "city": "hp",
+  "addr": "HD18 Vinhomes Marina, Cầu Rào 2, Vĩnh Niệm, Lê Chân",
+  "images": [
+    {
+      "url": "https://hpbook.thietbiytegiadinh.vn/2024-07/290724_110025770.jpg",
+      "source": "https://haiphongbook.com/dia-diem/quan-eywa-cocktail-eatery",
+      "alt": "EYWA Cocktail & Eatery Happy Hour",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "hp/99-eywa-cocktail-eatery/01.webp",
+      "width": 1080,
+      "height": 1080,
+      "sha256": "b40483c1943a25889be2a6e76bbddf03824f59c65dce39060c1f4e007eb63fac"
+    },
+    {
+      "url": "https://wink-hotels.com/wp-content/uploads/2025/10/500324248_17898156261198826_639459090145384783_n-1024x577.jpg",
+      "source": "https://wink-hotels.com/?p=6053",
+      "alt": "Best Bars In Hai Phong",
+      "score": 70,
+      "basis": "section",
+      "file": "hp/99-eywa-cocktail-eatery/02.webp",
+      "width": 1024,
+      "height": 577,
+      "sha256": "34055667da57163ff7917ff85e9e335d1731a6cd786ca3d3efff3013c2e41e06"
+    },
+    {
+      "url": "https://wink-hotels.com/wp-content/uploads/2025/10/538120555_17908868415198826_1155482745080256804_n-1024x586.jpg",
+      "source": "https://wink-hotels.com/?p=6053",
+      "alt": "Best Bars In Hai Phong",
+      "score": 70,
+      "basis": "section",
+      "file": "hp/99-eywa-cocktail-eatery/03.webp",
+      "width": 1024,
+      "height": 586,
+      "sha256": "e0172ca5e4b86d5ea3de8080ac114beffcbbfb04a266e901716b835913e8227b"
+    }
+  ]
+}

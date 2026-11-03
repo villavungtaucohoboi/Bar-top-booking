@@ -1,0 +1,19 @@
+{
+  "id": 160,
+  "name": "On The Rocks",
+  "city": "ql",
+  "addr": "Citadines Marina Hạ Long, đường Hoàng Quốc Việt",
+  "images": [
+    {
+      "url": "https://images.travelviet.net/vietnam/s3/upload_s3/3152/cmhl-3png-1742657291.png",
+      "source": "https://travelviet.net/vn/review-du-lich/quang-ninh/kham-pha-mot-goc-nhin-moi-ve-ha-long-tu-rooftop-bar-on-the-rocks",
+      "alt": "Rooftop Cocktails Over Hạ Long Bay",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "ql/160-on-the-rocks/01.webp",
+      "width": 1366,
+      "height": 768,
+      "sha256": "f076b60b174513e17ee39338a04e9219185f934d23bfee7786925975611234f6"
+    }
+  ]
+}

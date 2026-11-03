@@ -1,0 +1,63 @@
+{
+  "id": 175,
+  "name": "Banana Mama Rooftop Bar & Kitchen Saigon",
+  "city": "sg",
+  "addr": "Tầng 10, WMC Tower, 102 Cống Quỳnh",
+  "images": [
+    {
+      "url": "https://media.cntraveler.com/photos/5dfbc8c338f97d0009610dba/master/w_1600%2Cc_limit/Banana%2520Mama.jpg",
+      "source": "https://www.cntraveler.com/story/ho-chi-minh-city-where-to-eat-drink-stay-and-play",
+      "alt": "Banana Mama Saigon Rooftop Bar",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/175-banana-mama-rooftop-bar-kitchen-saigon/01.webp",
+      "width": 1600,
+      "height": 1066,
+      "sha256": "e1a85ae2cfa09e0a01d72ff1aa2075a9fb4aeb69f5a29a977deecb6f39720e4f"
+    },
+    {
+      "url": "https://cdn.xanhsm.com/2025/03/3738542d-banana-mama-rooftop-bar-kitchen-saigon-6.jpg",
+      "source": "https://www.greensm.com/vn-vi/news/banana-mama-rooftop-bar-kitchen-saigon",
+      "alt": "Banana Mama Rooftop Bar & Kitchen Saigon",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/175-banana-mama-rooftop-bar-kitchen-saigon/02.webp",
+      "width": 1000,
+      "height": 600,
+      "sha256": "be8b87afbc9828e8c2113b7bef0c89ef0c2c5b16e47d90851f4d352e780be4d6"
+    },
+    {
+      "url": "https://gaycities-lv.b-cdn.net/listings/originals/bars-310197-banana-mama-rooftop-bar-kitchen-saigon-andrewsieving-9d496.jpeg?height=640&width=1470",
+      "source": "https://hochiminhcity.gaycities.com/bars/310197-banana-mama-rooftop-bar-kitchen-saigon",
+      "alt": "Rooftop Gathering at Banana Mama",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/175-banana-mama-rooftop-bar-kitchen-saigon/03.webp",
+      "width": 959,
+      "height": 640,
+      "sha256": "e3e2ce900f6baf8fc83834c330bd60e3dac24c3cdca157eab7089b4156a1ca5f"
+    },
+    {
+      "url": "https://www.zonevietnam.com/upload/restaurant/banana-mama-rooftop-kitchen-saigon.jpg",
+      "source": "https://www.zonevietnam.com/food/316/banana-mama-rooftop-kitchen",
+      "alt": "Banana Mama Rooftop & Kitchen Lounge",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/175-banana-mama-rooftop-bar-kitchen-saigon/04.webp",
+      "width": 650,
+      "height": 433,
+      "sha256": "c7e3eae4f8df3879c62607857acb2078fb4c4c64c7d7e5006e45cfc16f6f406f"
+    },
+    {
+      "url": "https://petitfute.twic.pics/medias/professionnel/2138775/premium/900_600/67446a5dd9fe7.png?pf=v2&twic=v1%2Fresize%3D900",
+      "source": "https://www.petitfute.com/v44965-ho-chi-minh-ville/c1169-s-amuser-sortir/c182-bar-cafe/c185-bar-a-cocktail/2138775-banana-mama-rooftop-bar.html",
+      "alt": "Banana Mama Rooftop Bar",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "sg/175-banana-mama-rooftop-bar-kitchen-saigon/05.webp",
+      "width": 900,
+      "height": 600,
+      "sha256": "c98319fa619bc381a36bc71f4b7023996214127307904f7c48a481e5e7cc2af7"
+    }
+  ]
+}

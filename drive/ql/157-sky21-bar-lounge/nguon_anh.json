@@ -1,0 +1,63 @@
+{
+  "id": 157,
+  "name": "Sky21 Bar & Lounge",
+  "city": "ql",
+  "addr": "Tầng 21, FLC Grand Hotel Hạ Long, Nguyễn Văn Cừ",
+  "images": [
+    {
+      "url": "https://flchotelsresorts.com/images/foods/2022/04/01/resize/ngoc2360_1647597795_1648783356.jpg",
+      "source": "https://flchotelsresorts.com/sky21-bar-lounge-f39",
+      "alt": "Sky21 Bar & Lounge Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ql/157-sky21-bar-lounge/01.webp",
+      "width": 850,
+      "height": 567,
+      "sha256": "ee4a6de4ef4593e2743789bac96c194d36ffa693289f19d11cd6f12fbdcd0383"
+    },
+    {
+      "url": "https://flchotelsresorts.com/images/foods/2022/04/01/resize/ngoc2167_1647597770_1648783274.jpg",
+      "source": "https://flchotelsresorts.com/sky21-bar-lounge-fe39",
+      "alt": "Sky21 Bar & Lounge Ha Long",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "ql/157-sky21-bar-lounge/02.webp",
+      "width": 850,
+      "height": 533,
+      "sha256": "ccc198723a78286cfc8219dfb704e0fe4652c24e7486204192ec6b3ecadfc2a9"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/sky21-bar-amp-lounge-824709.jpg",
+      "source": "https://toplist.vn/top-list/bar-lounge-sang-trong-thuong-duoc-chon-lam-noi-tiep-khach-cua-gioi-doanh-nhan-quang-ninh-51476.htm",
+      "alt": "Sky21 Bar & Lounge",
+      "score": 100,
+      "basis": "alt",
+      "file": "ql/157-sky21-bar-lounge/03.webp",
+      "width": 800,
+      "height": 533,
+      "sha256": "3beebc3b746585ce45a63ac71a63df87c4f8d1eda2459011bca64bda64e3b148"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/sky21-bar-amp-lounge-824710.jpg",
+      "source": "https://toplist.vn/top-list/bar-lounge-sang-trong-thuong-duoc-chon-lam-noi-tiep-khach-cua-gioi-doanh-nhan-quang-ninh-51476.htm",
+      "alt": "Sky21 Bar & Lounge",
+      "score": 100,
+      "basis": "alt",
+      "file": "ql/157-sky21-bar-lounge/04.webp",
+      "width": 800,
+      "height": 523,
+      "sha256": "7d880dab787abb33dff8a012b8a2800435bb97e8ddc620990c7b18136199af58"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/474163GGX/sky21-bar-amp-lounge-971548.jpg",
+      "source": "https://mytour.vn/en/blog/bai-viet/experience-the-top-3-most-famous-sky-bars-in-ha-long-city-quang-ninh.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "ql/157-sky21-bar-lounge/05.webp",
+      "width": 700,
+      "height": 466,
+      "sha256": "c51ac3fe3a528f4fa380b786b1681f67cc085c2d74f4c63dd92b16c9debbc99f"
+    }
+  ]
+}

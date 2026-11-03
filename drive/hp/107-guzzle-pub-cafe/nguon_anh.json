@@ -1,0 +1,30 @@
+{
+  "id": 107,
+  "name": "Guzzle Pub & Café",
+  "city": "hp",
+  "addr": "62 Đường số 5B, KĐT Waterfront, Vĩnh Niệm, Lê Chân",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lw92h2om90pn0f@resize_ss640x400",
+      "source": "https://www.foody.vn/hai-phong/bar-pub",
+      "alt": "Guzzle Pub & Café",
+      "score": 100,
+      "basis": "alt",
+      "file": "hp/107-guzzle-pub-cafe/01.webp",
+      "width": 696,
+      "height": 400,
+      "sha256": "9e6956cd5e97612b09c5d42433c67abd8c8331471c2efc0281d24103484f3811"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lw8yg46oxgpl44@resize_ss640x400",
+      "source": "https://www.foody.vn/hai-phong/bar-pub",
+      "alt": "6789 Black House Bar",
+      "score": 70,
+      "basis": "section",
+      "file": "hp/107-guzzle-pub-cafe/02.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "199960267f79259ddda917c5b84af7c2eb883df4ce80e76bed338c9be7596dd1"
+    }
+  ]
+}

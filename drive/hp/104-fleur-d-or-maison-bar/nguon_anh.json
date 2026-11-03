@@ -1,0 +1,63 @@
+{
+  "id": 104,
+  "name": "Fleur d'Or Maison Bar",
+  "city": "hp",
+  "addr": "50 Đinh Tiên Hoàng, Hoàng Văn Thụ, Hồng Bàng",
+  "images": [
+    {
+      "url": "https://list.vn/images/800px/fleur-dor-maison-bar-1272945.jpg",
+      "source": "https://list.vn/quan-bar-noi-tieng-nhat-tai-hai-phong-14553.htm",
+      "alt": "Nightlife Toast at Fleur d'Or Maison Bar",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "hp/104-fleur-d-or-maison-bar/01.webp",
+      "width": 800,
+      "height": 450,
+      "sha256": "22c97f127a4855c92aa66a13608fdcd9a67161ab4ba7307b8dfe0b806814b542"
+    },
+    {
+      "url": "https://cdn.hstatic.net/products/1000268128/fleur-d_or-maison-bar-11_a1f8603c02704b10bcf3a1f1fd81d759_master.jpg",
+      "source": "https://www.9life.com.vn/products/fleur-d-or-maison-bar-50-dinh-tien-hoang",
+      "alt": "Fleur d‘Or Maison Bar Nightlife Scene",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "hp/104-fleur-d-or-maison-bar/02.webp",
+      "width": 1024,
+      "height": 633,
+      "sha256": "c02e3e21242f754013f4e580d1ced9bc2b8140da7fa776ae4c3cab5c4bbe3a6b"
+    },
+    {
+      "url": "https://hpbook.thietbiytegiadinh.vn/2024-07/270724_163314371.jpg",
+      "source": "https://haiphongbook.com/dia-diem/fleur-dor-space-x",
+      "alt": "Nightlife at Fleur d'Or Space X",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "hp/104-fleur-d-or-maison-bar/03.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "387c883ddf4117b3ebf815a90d4a2225c36a128d3cb96083f92c427423180d90"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/fleur-dor-maison-bar-819057.jpg",
+      "source": "https://toplist.vn/top-list/quan-bar-noi-tieng-nhat-o-hai-phong-14553.htm",
+      "alt": "Fleur d'Or Maison Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "hp/104-fleur-d-or-maison-bar/04.webp",
+      "width": 800,
+      "height": 533,
+      "sha256": "a106f9fb2fc8d7aea5c9249d802a23fa1d5e1d72f784f565f511fef1c34535bc"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/fleur-dor-maison-bar-1085683.jpg",
+      "source": "https://toplist.vn/top-list/quan-bar-noi-tieng-nhat-o-hai-phong-14553.htm",
+      "alt": "Fleur d'Or Maison Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "hp/104-fleur-d-or-maison-bar/05.webp",
+      "width": 800,
+      "height": 533,
+      "sha256": "e00851f410ffdd4c925f56c8743e32b60cd493752303f6cf37765b55f4bf0aa6"
+    }
+  ]
+}

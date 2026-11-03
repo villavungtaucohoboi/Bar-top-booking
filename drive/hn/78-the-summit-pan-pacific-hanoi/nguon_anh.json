@@ -1,0 +1,63 @@
+{
+  "id": 78,
+  "name": "The Summit (Pan Pacific Hanoi)",
+  "city": "hn",
+  "addr": "Tầng 20, Pan Pacific Hanoi, 1 Thanh Niên, Ba Đình",
+  "images": [
+    {
+      "url": "https://vietnam.travel/sites/default/files/inline-images/best%20rooftop%20bars%20in%20vietnam-2.jpg",
+      "source": "https://vietnam.travel/things-to-do/7-stunning-rooftop-bars-vietnam",
+      "alt": "The Summit Rooftop Bar Service",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "hn/78-the-summit-pan-pacific-hanoi/01.webp",
+      "width": 870,
+      "height": 580,
+      "sha256": "529f0bc033bf6b56d722f79cff42868afd8950e689785bc7f23f4cb1f13d1605"
+    },
+    {
+      "url": "https://images.locationscout.net/2019/06/hanoi-skyline-from-summit-lounge-vietnam-az51.jpg?h=1100&q=83",
+      "source": "https://www.locationscout.net/vietnam/19205-hanoi-skyline-from-summit-lounge",
+      "alt": "Hanoi Skyline from Summit Lounge",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "hn/78-the-summit-pan-pacific-hanoi/02.webp",
+      "width": 1650,
+      "height": 1100,
+      "sha256": "07695ca4e24525081b32e44e2840abf1bf2e886232d3ad532390d21b573f47fb"
+    },
+    {
+      "url": "https://www.therooftopguide.com/rooftop-bars-in-hanoi/Bilder/summit-bar-600-2.jpg",
+      "source": "https://www.therooftopguide.com/rooftop-bars-in-hanoi/summit-lounge-at-pan-pacific-hanoi.html",
+      "alt": "The Summit at Pan Pacific Rooftop Bar",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "hn/78-the-summit-pan-pacific-hanoi/03.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "69467b03df96a989855c418e2534d5ebd193e3019e05344bdae0ef0911bd627d"
+    },
+    {
+      "url": "https://www.therooftopguide.com/rooftop-bars-in-hanoi/Bilder/summit-bar-600-3.jpg",
+      "source": "https://www.therooftopguide.com/rooftop-bars-in-hanoi/summit-lounge-at-pan-pacific-hanoi.html",
+      "alt": "Evening Cocktails at The Summit Rooftop Bar",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "hn/78-the-summit-pan-pacific-hanoi/04.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "92ecb4e77de42b54c9582531a795dcc37391121dcfbee5cce1004234b0c9ff4e"
+    },
+    {
+      "url": "https://silverkris.singaporeair.com/wp-content/uploads/2019/06/The-Summit-Indoor.jpg",
+      "source": "https://www.silverkris.com/location/the-summit-at-pan-pacific-hanoi/",
+      "alt": "The Summit at Pan Pacific Hanoi city guide SilverKris",
+      "score": 100,
+      "basis": "alt",
+      "file": "hn/78-the-summit-pan-pacific-hanoi/05.webp",
+      "width": 1280,
+      "height": 800,
+      "sha256": "d44429a188a728cb0b6e8a592e62d8e9d29c145eaf33fe750bfae24e5ccd3f1e"
+    }
+  ]
+}

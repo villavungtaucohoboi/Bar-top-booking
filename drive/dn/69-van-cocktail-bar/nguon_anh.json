@@ -1,0 +1,30 @@
+{
+  "id": 69,
+  "name": "Vấn Cocktail Bar",
+  "city": "dn",
+  "addr": "180–182 Nguyễn Chí Thanh",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134513-7r98o-lsty7b8bom1l1e@resize_ss640x400",
+      "source": "https://www.foody.vn/da-nang/dia-diem-phuc-vu-cocktail",
+      "alt": "Hongdae BBQ & Beer - 191 Nguyễn Hoàng",
+      "score": 70,
+      "basis": "section",
+      "file": "dn/69-van-cocktail-bar/01.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "24f8a893bbf369e016f2c509ade264d3835fe5cb33f9075b4bc78def1b98fefc"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/480799fOl/quan-cooktail-bar-da-nang-3.jpg",
+      "source": "https://mytour.vn/vi/blog/bai-viet/top-5-quan-cocktail-bar-dang-cap-nhat-tai-da-nang.html",
+      "alt": "quan cooktail bar da nang 3.jpg",
+      "score": 70,
+      "basis": "section",
+      "file": "dn/69-van-cocktail-bar/02.webp",
+      "width": 561,
+      "height": 700,
+      "sha256": "e60ae2e03420cf7af8dec3eb01fc32ea8b305a373225215807fd375a3d88571c"
+    }
+  ]
+}

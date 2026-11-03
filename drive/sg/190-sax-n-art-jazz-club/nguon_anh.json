@@ -1,0 +1,63 @@
+{
+  "id": 190,
+  "name": "Sax n' Art Jazz Club",
+  "city": "sg",
+  "addr": "28 Lê Lợi",
+  "images": [
+    {
+      "url": "https://img.vietcetera.com/uploads/images/15-dec-2020/sax-n-art.jpg",
+      "source": "https://vietcetera.com/vn/5-quan-barcafe-chuyen-cac-the-loai-nhac-song-khac-nhau",
+      "alt": "Live Jazz Trio at Sax N’ Art Jazz Club",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/190-sax-n-art-jazz-club/01.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "f078392f2bb19392fde908973f87141f3adfe559afcfeb84060d806e4c4e0fb0"
+    },
+    {
+      "url": "https://travelwithchris.net/wp-content/uploads/Sax-n-art-Club.jpg",
+      "source": "https://travelwithchris.net/best-live-music-bars-in-saigon-vietnam/",
+      "alt": "Sax n’ Art Club Jazz Bar Entrance",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/190-sax-n-art-jazz-club/02.webp",
+      "width": 960,
+      "height": 653,
+      "sha256": "b4f458726e90af1b299817c41583fbf1acf6049e4759c0223f8a1716b83467f8"
+    },
+    {
+      "url": "https://media.triple.guide/triple-cms/c_limit%2Cf_auto%2Ch_2048%2Cw_2048/48ba7397-ca2e-4133-9173-669b8e6c0426.jpeg",
+      "source": "https://triple.guide/attractions/42e8b867-34d9-4b4a-901a-2ded9a40547b",
+      "alt": "Live Jazz Performance at Sax n' art Jazz Club",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "sg/190-sax-n-art-jazz-club/03.webp",
+      "width": 2048,
+      "height": 1365,
+      "sha256": "cee94e7aec43d5a2df1b3688ad567b05a565ae591982818473f6635bd4d7dd8a"
+    },
+    {
+      "url": "https://ik.imagekit.io/tvlk/blog/2018/12/nhung-quan-cafe-chat-o-sai-gon-saxnartjazz-vietnamguide.jpg?tr=q-70%2Cc-at_max%2Cw-1000%2Ch-600",
+      "source": "https://www.traveloka.com/vi-vn/explore/destination/nhung-quan-cafe-chat-o-sai-gon-choi-nhac/58906",
+      "alt": "Live Jazz Trio at Sax n’ Art Jazz Club",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "sg/190-sax-n-art-jazz-club/04.webp",
+      "width": 901,
+      "height": 600,
+      "sha256": "c916add0d0552164d885da44d74ecea86d952d9743cafd33bd6302e8d03d1597"
+    },
+    {
+      "url": "https://vnn-imgs-f.vgcloud.vn/2019/12/09/22/jazz-concert-celebrates-vietnam-russia-relationships.jpg?s=fGmifVJ_rPlaMUW_cydMeg&width=0",
+      "source": "https://vietnamnet.vn/en/jazz-concert-celebrates-vietnam-russia-relationships-596563.html",
+      "alt": "Jazz Night at Sax n Art Jazz Club",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "sg/190-sax-n-art-jazz-club/05.webp",
+      "width": 650,
+      "height": 433,
+      "sha256": "d9b493fbdc277013d8a82cbe4c035597017a37afad04889c44903cb1f46a504c"
+    }
+  ]
+}

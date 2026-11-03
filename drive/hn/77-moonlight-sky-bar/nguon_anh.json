@@ -1,0 +1,63 @@
+{
+  "id": 77,
+  "name": "Moonlight Sky Bar",
+  "city": "hn",
+  "addr": "Tầng 11, 94 Mã Mây, Hoàn Kiếm",
+  "images": [
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/moonlight-sky-bar-600-1.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/moonlight-sky-bar.html",
+      "alt": "Rooftop bar Moonlight Sky Bar in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/77-moonlight-sky-bar/01.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "142d6e7f820d859c46706974864d7dec91149abd8093eaf829acc10fcc39cd60"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/moonlight-sky-bar-600-2.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/moonlight-sky-bar.html",
+      "alt": "Rooftop bar Moonlight Sky Bar in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/77-moonlight-sky-bar/02.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "77e4496da4a01a050a892ed44dc38bc22e59cbd5888b15d3135b21f724079c9b"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/moonlight-sky-bar-600-3.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/moonlight-sky-bar.html",
+      "alt": "Rooftop bar Moonlight Sky Bar in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/77-moonlight-sky-bar/03.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "428cba800b0788b8789eb281c50b060fe9ec421181d7343ae784f09d0e61e418"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/moonlight-sky-bar-600-4.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/moonlight-sky-bar.html",
+      "alt": "Rooftop bar Moonlight Sky Bar in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/77-moonlight-sky-bar/04.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "6e4c90429ad5086958ee840309f348eb2d05d4ce9b900ce9d86d7bd1e7fe4a5b"
+    },
+    {
+      "url": "https://therooftopguide.com/rooftop-bars-in-hanoi/Bilder/moonlight-sky-bar-600-5.jpg",
+      "source": "https://therooftopguide.com/rooftop-bars-in-hanoi/moonlight-sky-bar.html",
+      "alt": "Rooftop bar Moonlight Sky Bar in Hanoi",
+      "score": 115,
+      "basis": "alt",
+      "file": "hn/77-moonlight-sky-bar/05.webp",
+      "width": 600,
+      "height": 440,
+      "sha256": "55c85dccbd674ebf9dd3e330437dd4d70b1516bc447e3b0eebf4be0bac2f44e4"
+    }
+  ]
+}

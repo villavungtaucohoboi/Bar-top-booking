@@ -1,0 +1,63 @@
+{
+  "id": 199,
+  "name": "Habana Colorful Beach Bar",
+  "city": "vt",
+  "addr": "1A Thùy Vân",
+  "images": [
+    {
+      "url": "https://suongtuyet.com/media/news/1006_may-ghe-luoi-vung-tau-nha-trang.jpg",
+      "source": "https://suongtuyet.com/suong-tuyet-cung-cap-ghe-luoi-cho-habana-colorful-beach-bar-ca-phe-bien-vung-tau.html",
+      "alt": "Beachside Relaxation at Habana Colorful Beach Bar",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "vt/199-habana-colorful-beach-bar/01.webp",
+      "width": 2048,
+      "height": 1365,
+      "sha256": "1c668136b6200565bef3a3ca84af855765d9bd0a693d9896fa4b698677f8abb2"
+    },
+    {
+      "url": "https://media.mia.vn/uploads/blog-du-lich/thien-duong-giai-nhiet-habana-colorful-beach-beer-vung-tau-15-1634097191.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/thien-duong-giai-nhiet-habana-colorful-beach-beer-vung-tau-1262",
+      "alt": "Habana Colorful Beach Bar",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "vt/199-habana-colorful-beach-bar/02.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "44d807f6a751ac483071739a401227912b246668eda2943c9f94d9b571fdde04"
+    },
+    {
+      "url": "https://media.mia.vn/uploads/blog-du-lich/thien-duong-giai-nhiet-habana-colorful-beach-beer-vung-tau-1-1634097189.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/thien-duong-giai-nhiet-habana-colorful-beach-beer-vung-tau-1262",
+      "alt": "Beachside Beer at Habana",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "vt/199-habana-colorful-beach-bar/03.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "0a2e2ce6bc1232e473a2530c9456def342a1a357556f4f0d1c8e86194b78cc80"
+    },
+    {
+      "url": "https://statics.didau.com/image/2022/04/05/bdf8bc0f5b214bebab84dc3bebf9ec2e.jpg",
+      "source": "https://didau.com/chill-toi-bo-toi-ben-tai-quan-bar-day-sac-mau-ben-bo-bien-ngam-hoang-hon-sieu-dinh-tai-vung-tau",
+      "alt": "Colorful Beachfront Bar in Vũng Tàu",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "vt/199-habana-colorful-beach-bar/04.webp",
+      "width": 750,
+      "height": 562,
+      "sha256": "d9b7bc859b57f01f5b7da3bbef88748a9ebc8677f3fbefbdce976863053dacdc"
+    },
+    {
+      "url": "https://statics.didau.com/image/2022/04/05/a4066d574d114514b707c355ca28d3df.jpg",
+      "source": "https://didau.com/chill-toi-bo-toi-ben-tai-quan-bar-day-sac-mau-ben-bo-bien-ngam-hoang-hon-sieu-dinh-tai-vung-tau",
+      "alt": "Vibrant Beachside Bar in Vũng Tàu",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "vt/199-habana-colorful-beach-bar/05.webp",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "38251d27f6462338e73ee19fb10481a13b8cc20226cf6f938b0f6d188e8e359d"
+    }
+  ]
+}

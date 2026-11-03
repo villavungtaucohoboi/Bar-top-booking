@@ -1,0 +1,19 @@
+{
+  "id": 186,
+  "name": "Dot Bar Drinkery & Kitchen",
+  "city": "sg",
+  "addr": "Tầng 3, 75 Hai Bà Trưng",
+  "images": [
+    {
+      "url": "https://cdn.tatlerasia.com/tatlerasia/i/2025/05/05193002-dot-bar2_cover_1080x1350.jpg",
+      "source": "https://www.tatlerasia.com/lifestyle/travel/tatler-best-in-class-bar-vietnam-2025-bar",
+      "alt": "Dot Drinkery & Kitchen Bartender in Action",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "sg/186-dot-bar-drinkery-kitchen/01.webp",
+      "width": 1080,
+      "height": 1350,
+      "sha256": "a5ed891c034f6a12356332d44e425959c8e7e88aeeb7171c266de9c689404f6d"
+    }
+  ]
+}

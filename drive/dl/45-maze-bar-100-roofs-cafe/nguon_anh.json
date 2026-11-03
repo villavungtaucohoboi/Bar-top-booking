@@ -1,0 +1,63 @@
+{
+  "id": 45,
+  "name": "Maze Bar (100 Roofs Café)",
+  "city": "dl",
+  "addr": "57 Phan Bội Châu",
+  "images": [
+    {
+      "url": "https://katana.bdatrip.com/v2/image?src=https%3A%2F%2Fimages.bdatrip.com%2F2021%2F12%2F100-roofs-cafe.jpg&w=3840",
+      "source": "https://www.bdatrip.com/da-lat-city/travel-tips/the-weird-and-wonderful-maze-bar-of-dalat",
+      "alt": "100 Roots Cafe Garden Maze",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dl/45-maze-bar-100-roofs-cafe/01.webp",
+      "width": 3840,
+      "height": 2561,
+      "sha256": "0f69e24b6fb57fe2f8210c8aeffaca0f67cd83828866e857bae896c50699f51c"
+    },
+    {
+      "url": "https://www.roamingunbound.com/wp-content/uploads/2023/11/100-Roofs-Bar-Maze-Bar-Da-Lat-Vietnam.jpg",
+      "source": "https://www.roamingunbound.com/vietnam-18-a-maze-balls-bar/",
+      "alt": "100 Roofs Bar Maze Tunnel",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dl/45-maze-bar-100-roofs-cafe/02.webp",
+      "width": 1607,
+      "height": 970,
+      "sha256": "0145a7f6068b5112dc15959a430e1e2b57e786debc329076b3671cf7510004fe"
+    },
+    {
+      "url": "https://ak-d.tripcdn.com/images/1mi3x224x98iuwt0k9868.jpg?proc=source%2Ftrip",
+      "source": "https://www.trip.com/moments/detail/dalat-1393-142602203/",
+      "alt": "Maze Bar’s Rustic Bamboo Lounge",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dl/45-maze-bar-100-roofs-cafe/03.webp",
+      "width": 1280,
+      "height": 1706,
+      "sha256": "b41b08f1cd1b056cdb7441726430a63392b1ed04318021050f576ff2266334e4"
+    },
+    {
+      "url": "https://katana.bdatrip.com/image?src=https%3A%2F%2Fimages.bdatrip.com%2F2021%2F12%2Fcke%2Frooftop-garden-maze-bar.jpg&w=0",
+      "source": "https://www.bdatrip.com/da-lat-city/travel-tips/the-weird-and-wonderful-maze-bar-of-dalat",
+      "alt": "Rooftop Garden. Picture courtesy of Maze Bar",
+      "score": 115,
+      "basis": "alt",
+      "file": "dl/45-maze-bar-100-roofs-cafe/04.webp",
+      "width": 1675,
+      "height": 1117,
+      "sha256": "74b96ce5be3b71ad6ed85847911ef6d3829f5fc39908aa36252e786b2088f36e"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/6298cb774cf3830bc9b342bf/f9b7c683-6a32-4909-b65d-86f00fe419fd/maze-bar-dalat.jpg",
+      "source": "https://www.adventuresofjellie.com/vietnam/da-lat-city-guide",
+      "alt": "Maze Bar & Café Entrance in Dalat",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "dl/45-maze-bar-100-roofs-cafe/05.webp",
+      "width": 1638,
+      "height": 2048,
+      "sha256": "b2230bc41d961c6ef9d60a83cc984cd9e3d2cbc20a0969e1348fadc01b46b594"
+    }
+  ]
+}

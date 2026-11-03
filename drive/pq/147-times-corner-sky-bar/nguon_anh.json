@@ -1,0 +1,63 @@
+{
+  "id": 147,
+  "name": "Times Corner Sky Bar",
+  "city": "pq",
+  "addr": "52 Amalfi, Sunset Town",
+  "images": [
+    {
+      "url": "https://dd8v6mciv1ee4.cloudfront.net/images/dining/luxe/luxe1.webp",
+      "source": "https://timescornerphuquoc.com/",
+      "alt": "Times Corner Phu Quoc Bar Lounge",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/147-times-corner-sky-bar/01.webp",
+      "width": 1920,
+      "height": 1281,
+      "sha256": "4868b74ca2b08db9358522c23fa311583ba770e94693f0dff711cba126bd4fe2"
+    },
+    {
+      "url": "https://dd8v6mciv1ee4.cloudfront.net/images/amalfi/hotel/amalfi.webp",
+      "source": "https://timescornerphuquoc.com/",
+      "alt": "Times Corner Hotel in Sunset Town",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "pq/147-times-corner-sky-bar/02.webp",
+      "width": 1920,
+      "height": 1279,
+      "sha256": "98704f6c7af42a2a92dbd3280237387cada90748c5083b00d8c2381163d7c37a"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/42/55/26/caption.jpg?w=1200&h=900&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g12520037-d33220408-Reviews-Times_Corner_Sky_Bar-An_Thoi_Phu_Quoc_Island_Kien_Giang_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "pq/147-times-corner-sky-bar/03.webp",
+      "width": 1200,
+      "height": 900,
+      "sha256": "e091518159e85f3be12764a1eac7b7e45e4b2dc2345874d3dc8a4170d68cecc1"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/31/b3/16/2a/caption.jpg?w=1200&h=900&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g12520037-d33220408-Reviews-Times_Corner_Sky_Bar-An_Thoi_Phu_Quoc_Island_Kien_Giang_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "pq/147-times-corner-sky-bar/04.webp",
+      "width": 1200,
+      "height": 900,
+      "sha256": "77105a39cda77f5d96f534ab079c44f1b8ee535efc6fbf66ab2c8f296c2d8ea7"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/31/b3/16/28/caption.jpg?w=1200&h=-1&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g12520037-d33220408-Reviews-Times_Corner_Sky_Bar-An_Thoi_Phu_Quoc_Island_Kien_Giang_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "pq/147-times-corner-sky-bar/05.webp",
+      "width": 1200,
+      "height": 900,
+      "sha256": "f45b7a85b98c403abd3a52daa4d5dcfe6edf76040bb7de1f99e03f309ff74d00"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": 146,
+  "name": "Teatro Club",
+  "city": "pq",
+  "addr": "CV1B Sunset Town",
+  "images": [
+    {
+      "url": "https://vpq.vn/bai-viet/teatro-club-phu-quoc-2023-4.jpg",
+      "source": "https://vpq.vn/teatro-club-phu-quoc-thien-duong-giai-tri-dem-dang-cap.html",
+      "alt": "Teatro Club Phú Quốc Beachside Nightlife",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/146-teatro-club/01.webp",
+      "width": 2048,
+      "height": 1365,
+      "sha256": "7c829ed4b0a62010b7f62f9e0673a3e2111fef4bfb930e4a3e9a42fcb27ee9ce"
+    },
+    {
+      "url": "https://vpq.vn/bai-viet/teatro-club-phu-quoc-2023-6.jpg",
+      "source": "https://vpq.vn/teatro-club-phu-quoc-thien-duong-giai-tri-dem-dang-cap.html",
+      "alt": "Teatro Club Phú Quốc Nightlife",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/146-teatro-club/02.webp",
+      "width": 2048,
+      "height": 1534,
+      "sha256": "c890d74cc9cfb157ac6f9f5d5af6913f606b51fa069b989317e1861095f25bfd"
+    },
+    {
+      "url": "https://vpq.vn/bai-viet/teatro-club-phu-quoc-2023-8.jpg",
+      "source": "https://vpq.vn/teatro-club-phu-quoc-thien-duong-giai-tri-dem-dang-cap.html",
+      "alt": "Neon Night at Teatro Club Phú Quốc",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/146-teatro-club/03.webp",
+      "width": 2048,
+      "height": 1365,
+      "sha256": "5698a40b9f8cb4c84f1ee80630a4adc3e0ecda8443b3a9d22b1fdb853693bbd5"
+    },
+    {
+      "url": "https://rootytrip.com/wp-content/uploads/2023/10/teatro-club-phu-quoc-sunset-town.webp",
+      "source": "https://rootytrip.com/en/phu-quoc-sunset-town/",
+      "alt": "Nightlife at Teatro Club Phu Quoc",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/146-teatro-club/04.webp",
+      "width": 800,
+      "height": 539,
+      "sha256": "b9d469570697aa54075c14bbeddfd770981a5c571454d5d214f71e92ccdf4fe4"
+    },
+    {
+      "url": "https://visitphuquoc.com.vn/VisitPhuQuoc/POINT/%C4%82N%20U%E1%BB%90NG/%C4%90%E1%BB%8Ba%20%C4%91i%E1%BB%83m%20%C4%83n%20u%E1%BB%91ng/Cafe/1685/image-thumb__1685__720_jpg/Teatro%20Club%20Ph%C3%BA%20Qu%E1%BB%91c.14d39b16.jpg",
+      "source": "https://visitphuquoc.com.vn/en/teatro-club-phu-quoc-783",
+      "alt": "visitphuquoc",
+      "score": 90,
+      "basis": "filename",
+      "file": "pq/146-teatro-club/05.webp",
+      "width": 720,
+      "height": 404,
+      "sha256": "91b57213cf2536e945b97b819c9abcaa9f53a8f1b8b2e5670a7b54dd3f730f0d"
+    }
+  ]
+}

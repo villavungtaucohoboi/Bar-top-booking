@@ -1,0 +1,52 @@
+{
+  "id": 83,
+  "name": "The Black Sheep",
+  "city": "hn",
+  "addr": "28 Tống Duy Tân, Hoàn Kiếm",
+  "images": [
+    {
+      "url": "https://product.hstatic.net/1000268128/product/463327501_942099967961560_4381710402289941857_n_36ad3e1ab34842a288512cfe67ad3fcd_master.jpg",
+      "source": "https://www.9life.com.vn/products/the-black-sheep-cocktail-theatre-28-tong-duy-tan",
+      "alt": "The Black Sheep Cocktail Theatre",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "hn/83-the-black-sheep/01.webp",
+      "width": 2048,
+      "height": 1366,
+      "sha256": "e28ec5b5e5b1949abcd275298dbf85e725812bd3a64e1dab1e1ca09d16516db1"
+    },
+    {
+      "url": "https://noithatkendesign.vn/storage/app/media/uploaded-files/review-the-black-sheep-1.jpg",
+      "source": "https://noithatkendesign.vn/review-quan-bar-the-black-sheep.html",
+      "alt": "The Black Sheep Bar Performance",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "hn/83-the-black-sheep/02.webp",
+      "width": 640,
+      "height": 427,
+      "sha256": "38952db7fe9e1572b437dbd2bea51e585785c5d69bca220791b0d8045faa1406"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/c7/81/10/the-black-sheep-cocktail.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g293924-d19517231-Reviews-The_Black_Sheep_Cocktail_Theatre-Hanoi.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "hn/83-the-black-sheep/03.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "0dc18737792c6d4abdc61a8d6d3900e07ff5d92b687343df96fd60d445a47924"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/2d/d3/05/the-black-sheep-cocktail.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g293924-d19517231-Reviews-The_Black_Sheep_Cocktail_Theatre-Hanoi.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "hn/83-the-black-sheep/04.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "db4284fc90fbe8ab34964765f0a99b8afceb4526b97f4c25e82ea7a53e97411f"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": 122,
+  "name": "Oasis Bar",
+  "city": "hue",
+  "addr": "42/4 Lê Lợi",
+  "images": [
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/49/dc/99/oasis-bar.jpg?w=900&h=500&s=1",
+      "source": "https://www.tripadvisor.com.vn/Restaurant_Review-g293926-d4583588-Reviews-Oasis_Bar_Restaurant-Hue_Thua_Thien_Hue_Province.html",
+      "alt": "Sand and Tropical Garden = Perfect",
+      "score": 90,
+      "basis": "filename",
+      "file": "hue/122-oasis-bar/01.webp",
+      "width": 900,
+      "height": 500,
+      "sha256": "c03a717e4be8eb144cbc137a41b83ad59a507b6bb1c9fa82f2c9124a4572eeb6"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/e0/c0/68/oasis-bar-restaurant.jpg?w=900&h=500&s=1",
+      "source": "https://www.tripadvisor.com.vn/Restaurant_Review-g293926-d4583588-Reviews-Oasis_Bar_Restaurant-Hue_Thua_Thien_Hue_Province.html",
+      "alt": "drinks",
+      "score": 90,
+      "basis": "filename",
+      "file": "hue/122-oasis-bar/02.webp",
+      "width": 900,
+      "height": 500,
+      "sha256": "3f0e5476fe454876e481818c7ac948395dd3d33965de2ea66960ba0ba47fb048"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/1f/62/f0/oasis-bar-restaurant.jpg?w=1200&h=1200&s=1",
+      "source": "https://www.tripadvisor.com.vn/Restaurant_Review-g293926-d4583588-Reviews-Oasis_Bar_Restaurant-Hue_Thua_Thien_Hue_Province.html",
+      "alt": "",
+      "score": 90,
+      "basis": "filename",
+      "file": "hue/122-oasis-bar/03.webp",
+      "width": 1200,
+      "height": 1200,
+      "sha256": "835dfe33cde038266e4f786ac720f3de4d44a27461a5d1f3604fdd034a5bccab"
+    }
+  ]
+}

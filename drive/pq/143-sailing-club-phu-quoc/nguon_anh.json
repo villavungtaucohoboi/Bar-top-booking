@@ -1,0 +1,63 @@
+{
+  "id": 143,
+  "name": "Sailing Club Phu Quoc",
+  "city": "pq",
+  "addr": "Lô B7 khu phức hợp Bãi Trường (Phu Quoc Marina)",
+  "images": [
+    {
+      "url": "https://cdn1.ivivu.com/newcdn/fowardimage?s=312x&url=https%3A%2F%2Fpix8.agoda.net%2FhotelImages%2F31187083%2F-1%2Fb30e2ec34a9eee9142e991ca46abd563.png%3Fce%3D0",
+      "source": "https://www.ivivu.com/khach-san-phu-quoc/khu-nghi-duong-sailing-club-signature-phu-quoc",
+      "alt": "Sailing Club Signature Resort Poolside",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/143-sailing-club-phu-quoc/01.webp",
+      "width": 2048,
+      "height": 1366,
+      "sha256": "150436767013f074097f651f884e10489418aa495404e8fcbf4e8c7fd0631a1a"
+    },
+    {
+      "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/471331946.jpg?k=f928ddf94c873db44860fde646282a85f356bd0e04785f75dbcfc35eca1b1cce&o=",
+      "source": "https://www.booking.com/hotel/vn/sailing-club-signature-resort-phu-quoc.nl.html",
+      "alt": "Bar Lounge at Sailing Club Signature Resort Phu Quoc",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/143-sailing-club-phu-quoc/02.webp",
+      "width": 1024,
+      "height": 683,
+      "sha256": "e080f00c562c7383f180640f9a947455423bb911cd63ee270a1203d21fced101"
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4E22AQHxfcnvKWKXVQ/feedshare-shrink_800/B4EZrtY2X1HUAg-/0/1764919306273?e=2147483647&t=RTgE_fCcjMXBC13xQwn6fuVuXOUpYoP4t6wQSJg47O4&v=beta",
+      "source": "https://www.linkedin.com/posts/michiellugt_were-hiring-assistant-food-beverage-activity-7402608112983240704-_lR4",
+      "alt": "Club SAILING Beach Club Entrance",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "pq/143-sailing-club-phu-quoc/03.webp",
+      "width": 800,
+      "height": 533,
+      "sha256": "9614148b60adf1a00276881bb5addaf06ebd8a16d5ec0d031ddc7112691e82c6"
+    },
+    {
+      "url": "https://www.pelago.com/img/products/VN-Vietnam/exclusive-dining-experience-at-sailing-club-phu-quoc-beach-club-4-course-dinner-with-drinks-included-complimentary-fire-show-vietnam/1c6f371f-008c-4f36-a577-4a03993f8f60_exclusive-dining-experience-at-sailing-club-phu-quoc-beach-club-4-course-dinner-with-drinks-included-complimentary-fire-show-vietnam.jpg",
+      "source": "https://pelago.com/en/activity/pe3vbfzso-exclusive-dining-experience-at-sailing-club-phu-quoc-beach-club-4-course-dinner-with-drinks-included-complimentary-fire-show-vietnam-phu-quoc",
+      "alt": "[Exclusive] Dining Experience at Sailing Club Phu Quoc Beach Club: 4-course Dinner with Complimentary Fire Show | Vietnam - Photo 1 of 10",
+      "score": 100,
+      "basis": "alt",
+      "file": "pq/143-sailing-club-phu-quoc/04.webp",
+      "width": 1439,
+      "height": 1080,
+      "sha256": "71d53c2d7203312af63b58751b869bfe501c4161f59b2565ecb9daa931edb618"
+    },
+    {
+      "url": "https://images.vietnam.travel/inline-images/beach%20bars%20phu%20quoc.jpg",
+      "source": "https://vietnam.travel/things-to-do/sailing-club-phu-quoc",
+      "alt": "phu quoc beach bars",
+      "score": 70,
+      "basis": "section",
+      "file": "pq/143-sailing-club-phu-quoc/05.webp",
+      "width": 870,
+      "height": 580,
+      "sha256": "f6fc598db4ef33619285699a07e465d26bc7a476e42ddc86d13212f368282a72"
+    }
+  ]
+}

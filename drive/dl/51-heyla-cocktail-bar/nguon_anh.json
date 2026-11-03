@@ -1,0 +1,63 @@
+{
+  "id": 51,
+  "name": "Heyla Cocktail Bar",
+  "city": "dl",
+  "addr": "10 Tản Đà",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134513-7r98o-lsu3smx3kibo30@resize_ss640x400",
+      "source": "https://www.foody.vn/lam-dong/bar-pub-phuc-vu-cocktail?vt=row",
+      "alt": "Heyla Cocktail Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "dl/51-heyla-cocktail-bar/01.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "760658468051e513d0fad70141547d7637bdcd7a3b0c590a66b7954e582ccc72"
+    },
+    {
+      "url": "https://mia.vn/media/uploads/blog-du-lich/Top-6-quan-bar-da-lat-gia-sieu-uu-dai-chi-tu-50000-vnd-09-1635386061.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/top-6-quan-bar-da-lat-gia-sieu-uu-dai-chi-tu-50-000-vnd-1571",
+      "alt": "Top 6 quán bar Đà Lạt giá siêu ưu đãi chỉ từ 50.000 VNĐ 9",
+      "score": 70,
+      "basis": "section",
+      "file": "dl/51-heyla-cocktail-bar/02.webp",
+      "width": 2000,
+      "height": 1297,
+      "sha256": "e2fb3c57cd9806cd08ab22c5b82030b48ce263f4ec2d42afee1686925fe2d236"
+    },
+    {
+      "url": "https://mia.vn/media/uploads/blog-du-lich/Top-6-quan-bar-da-lat-gia-sieu-uu-dai-chi-tu-50000-vnd-08-1635386061.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/top-6-quan-bar-da-lat-gia-sieu-uu-dai-chi-tu-50-000-vnd-1571",
+      "alt": "Top 6 quán bar Đà Lạt giá siêu ưu đãi chỉ từ 50.000 VNĐ 8",
+      "score": 70,
+      "basis": "section",
+      "file": "dl/51-heyla-cocktail-bar/03.webp",
+      "width": 1200,
+      "height": 800,
+      "sha256": "e2522c087fd74a8fd9d0285ddff8d7748b3bc794aa3fc65e5f29a30f61ed1d23"
+    },
+    {
+      "url": "https://mia.vn/media/uploads/blog-du-lich/Top-6-quan-bar-da-lat-gia-sieu-uu-dai-chi-tu-50000-vnd-10-1635386061.jpg",
+      "source": "https://mia.vn/cam-nang-du-lich/top-6-quan-bar-da-lat-gia-sieu-uu-dai-chi-tu-50-000-vnd-1571",
+      "alt": "Top 6 quán bar Đà Lạt giá siêu ưu đãi chỉ từ 50.000 VNĐ 10",
+      "score": 70,
+      "basis": "section",
+      "file": "dl/51-heyla-cocktail-bar/04.webp",
+      "width": 1080,
+      "height": 676,
+      "sha256": "f02d87e73373a66ef480be7e4e0303480bf1cca02cbf2f0d2827e1714d706ba5"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwb950tuliajea@resize_ss640x400",
+      "source": "https://www.foody.vn/lam-dong/bar-pub-phuc-vu-cocktail?vt=row",
+      "alt": "Woody Classic Bar",
+      "score": 70,
+      "basis": "section",
+      "file": "dl/51-heyla-cocktail-bar/05.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "3376c60c75c5423efff97acd7fa8350260021cf7d10e57222d7386372890d20d"
+    }
+  ]
+}

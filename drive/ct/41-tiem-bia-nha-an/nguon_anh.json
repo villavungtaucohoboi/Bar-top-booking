@@ -1,0 +1,41 @@
+{
+  "id": 41,
+  "name": "Tiệm Bia Nhà An",
+  "city": "ct",
+  "addr": "53/3 Bờ Hồ Bún Xáng, P. An Khánh, Q. Ninh Kiều, Cần Thơ",
+  "images": [
+    {
+      "url": "https://img-us.didaudo.net/us-locations/VN/000/047/47362/12tiem-bia-nha-an.jpg?fit=cover&h=600&output=webp&w=800",
+      "source": "https://amthucbinhxuyen.com/post/top-19-quan-bia-tai-can-tho.p1723",
+      "alt": "Tiệm Bia Nhà An Live Music Night",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "ct/41-tiem-bia-nha-an/01.webp",
+      "width": 800,
+      "height": 600,
+      "sha256": "8e1e57eaf7d90e09107b31ce20c208ee3edf9103f626a78fc5b9327426fff129"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lw9hq6fajzrv51@resize_ss640x400",
+      "source": "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu",
+      "alt": "Tiệm Bia Nhà An - Chill Cần Thơ",
+      "score": 100,
+      "basis": "alt",
+      "file": "ct/41-tiem-bia-nha-an/02.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "600c17c245d4987a032a1cde3944e4d0b2fb03006d060d5b104600212a8b81d7"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lw8di1dl19zv05@resize_ss640x400",
+      "source": "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu",
+      "alt": "The Safari - Coffee Bar",
+      "score": 70,
+      "basis": "section",
+      "file": "ct/41-tiem-bia-nha-an/03.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "4b0cb6e0c9713041b443d17d92351c9502212b95c4f8b029a3e75982200c635b"
+    }
+  ]
+}

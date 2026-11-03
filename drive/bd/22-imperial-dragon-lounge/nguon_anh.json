@@ -1,0 +1,30 @@
+{
+  "id": 22,
+  "name": "Imperial Dragon Lounge",
+  "city": "bd",
+  "addr": "25 Nguyễn Đình Chiểu, TP. Thủ Dầu Một, Bình Dương",
+  "images": [
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/474646Qyj/oriental-dragon-bar-1300897.jpg",
+      "source": "https://mytour.vn/en/blog/bai-viet/discover-the-most-unique-bars-in-binh-duong-mytourvn.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "bd/22-imperial-dragon-lounge/01.webp",
+      "width": 525,
+      "height": 700,
+      "sha256": "aa1efd1a9c4ea245061d62197faf93caa2a1735cfba53e7ab992a6f8440f8469"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/474646oxS/oriental-dragon-bar-1300899.jpg",
+      "source": "https://mytour.vn/en/blog/bai-viet/discover-the-most-unique-bars-in-binh-duong-mytourvn.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "bd/22-imperial-dragon-lounge/02.webp",
+      "width": 525,
+      "height": 700,
+      "sha256": "a5321c92153f7d9aff96bae449bc59fa9057b97266b234975fbadefd610b2cd0"
+    }
+  ]
+}

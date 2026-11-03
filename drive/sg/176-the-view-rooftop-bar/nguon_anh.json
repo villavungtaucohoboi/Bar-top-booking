@@ -1,0 +1,63 @@
+{
+  "id": 176,
+  "name": "The View Rooftop Bar",
+  "city": "sg",
+  "addr": "Tầng 8–9, khách sạn Đức Vương, 195 Bùi Viện",
+  "images": [
+    {
+      "url": "https://cdn.forevervacation.com/uploads/media/images/uploaded_images/1668583691.png",
+      "source": "https://forevervacation.com/the-vacationer/rooftop-bars-in-ho-chi-minh-city",
+      "alt": "The View Rooftop Bar in Saigon",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/176-the-view-rooftop-bar/01.webp",
+      "width": 1920,
+      "height": 1200,
+      "sha256": "c56aac12a6ce4a47a0dfca51aaa372ef779938748de161f490800da3c2694a15"
+    },
+    {
+      "url": "https://oxalisadventure.com/uploads/2025/03/the-view-rooftop-bar-in-bui-vien-street__638774372809096105.jpg",
+      "source": "https://oxalisadventure.com/bui-vien-walking-street-saigon-nightlife/",
+      "alt": "Heart Lantern Rooftop Lounge",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/176-the-view-rooftop-bar/02.webp",
+      "width": 1500,
+      "height": 1000,
+      "sha256": "cb138d540adce1628b38dd16e82b6226605a144f44d0afcf3e52a999c1ef2623"
+    },
+    {
+      "url": "https://static.riviu.vn/oc_gallery/2019/04/26/91fa9b89e5c2edde351c6ce63a17291a34033265.png",
+      "source": "https://riviu.vn/the-view-rooftop-bar",
+      "alt": "Rooftop Lantern View",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/176-the-view-rooftop-bar/03.webp",
+      "width": 800,
+      "height": 458,
+      "sha256": "d4eb40a2409f9b9cc21e6f8ad8aed0efebccf767816aca86ca6f5bdc0dbc4d57"
+    },
+    {
+      "url": "https://ak-d.tripcdn.com/images/0104z12000oxbkgk27E65_D_750_520_Q90.jpg?proc=autoorient",
+      "source": "https://in.trip.com/restaurant/vietnam/ho-chi-minh-city/detail/the-view-rooftop-bar-eatery-15013062/?rankingId=100001427745&source=uccrank",
+      "alt": "The View Rooftop Bar & Eatery at Night",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/176-the-view-rooftop-bar/04.webp",
+      "width": 750,
+      "height": 520,
+      "sha256": "e22db7de1786ee4106e8d05a770ed274ad9082f329a64a3434892819488a71b5"
+    },
+    {
+      "url": "https://ak-d.tripcdn.com/images/0100512000h5x2pby487A_D_750_520_Q90.jpg?proc=autoorient",
+      "source": "https://in.trip.com/restaurant/vietnam/ho-chi-minh-city/detail/the-view-rooftop-bar-eatery-15013062/?rankingId=100001427745&source=uccrank",
+      "alt": "The View Rooftop Bar & Eatery",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "sg/176-the-view-rooftop-bar/05.webp",
+      "width": 750,
+      "height": 520,
+      "sha256": "08621ddbafbe45aa9f47edfabc1f58c93d254da0677cf51052bcb1b449fc31d9"
+    }
+  ]
+}

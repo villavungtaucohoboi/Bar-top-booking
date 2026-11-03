@@ -1,0 +1,30 @@
+{
+  "id": 116,
+  "name": "BarLab",
+  "city": "hue",
+  "addr": "62 Chu Văn An",
+  "images": [
+    {
+      "url": "https://vnguide.vn/uploads/vnguide-content/space/barlab-rooftop/hero.jpg",
+      "source": "https://vnguide.vn/restaurant/barlab-rooftop",
+      "alt": "Barlab Rooftop",
+      "score": 115,
+      "basis": "alt",
+      "file": "hue/116-barlab/01.webp",
+      "width": 2048,
+      "height": 1536,
+      "sha256": "157178b355a7307a92b869929c50aa820bd7a1eabb1f8a17c62ead28c618e1d9"
+    },
+    {
+      "url": "https://statics.vinpearl.com/BarLab-in-Hue_1756550628.jpg",
+      "source": "https://vinpearl.com/en/bar-in-hue",
+      "alt": "BarLab in Hue",
+      "score": 100,
+      "basis": "alt",
+      "file": "hue/116-barlab/02.webp",
+      "width": 1352,
+      "height": 1217,
+      "sha256": "7da6fee4d80c18016120ce234da365dd7a8234b8b709bfb61a8996a813122b4e"
+    }
+  ]
+}

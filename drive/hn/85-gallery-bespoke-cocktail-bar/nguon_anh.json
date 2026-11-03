@@ -1,0 +1,63 @@
+{
+  "id": 85,
+  "name": "Gallery Bespoke Cocktail Bar",
+  "city": "hn",
+  "addr": "95 Phùng Hưng, Hoàn Kiếm",
+  "images": [
+    {
+      "url": "https://www.asia-bars.com/wp-content/uploads/2019/08/Gallery-cocktail-bar-interior.jpg",
+      "source": "https://www.asia-bars.com/2019/08/gallery-bespoke-cocktail-bar-hanoi/",
+      "alt": "Gallery cocktail bar interior",
+      "score": 85,
+      "basis": "section",
+      "file": "hn/85-gallery-bespoke-cocktail-bar/01.webp",
+      "width": 3000,
+      "height": 2000,
+      "sha256": "431016fa0b9c2cb6b858b975e4d2ded093c862f74cc7a10a3c2fa6b696c19304"
+    },
+    {
+      "url": "https://sanhotelseries.com/wp-content/uploads/2025/02/Gallery-Bespoke-Cocktail-Bar.jpg",
+      "source": "https://sanhotelseries.com/best-cocktail-bars-hanoi/",
+      "alt": "Gallery Bespoke Cocktail Bar in Hanoi",
+      "score": 100,
+      "basis": "alt",
+      "file": "hn/85-gallery-bespoke-cocktail-bar/02.webp",
+      "width": 900,
+      "height": 472,
+      "sha256": "247d8968120ffcb4b4f77dea12550d8a870a380a60ad2b92fc87477cfdc2ab0e"
+    },
+    {
+      "url": "https://www.asia-bars.com/wp-content/uploads/2019/08/W_D09200.jpg",
+      "source": "https://www.asia-bars.com/2019/08/gallery-bespoke-cocktail-bar-hanoi/",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "hn/85-gallery-bespoke-cocktail-bar/03.webp",
+      "width": 1800,
+      "height": 1200,
+      "sha256": "859a3decde7603fb69601c77a7346fd507baffbc001982c37d6fa9d3294bfbb4"
+    },
+    {
+      "url": "https://www.asia-bars.com/wp-content/uploads/2019/08/W_D09196.jpg",
+      "source": "https://www.asia-bars.com/2019/08/gallery-bespoke-cocktail-bar-hanoi/",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "hn/85-gallery-bespoke-cocktail-bar/04.webp",
+      "width": 1800,
+      "height": 1200,
+      "sha256": "d7f10c54b2e3ee686c4812493e1b52828a6613a8173158125d855c3a7aaff432"
+    },
+    {
+      "url": "https://www.asia-bars.com/wp-content/uploads/2019/08/gallery-cocktail-bar-1140x641.jpg",
+      "source": "https://www.asia-bars.com/2019/08/gallery-bespoke-cocktail-bar-hanoi/",
+      "alt": "gallery cocktail bar",
+      "score": 60,
+      "basis": "article",
+      "file": "hn/85-gallery-bespoke-cocktail-bar/05.webp",
+      "width": 1140,
+      "height": 641,
+      "sha256": "a8faf681985bda8c8b770036c6bd18238d11b81fe520749258bce48da319dff1"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 89,
+  "name": "Le Club Bar (Sofitel Legend Metropole)",
+  "city": "hn",
+  "addr": "15 Ngô Quyền, Tràng Tiền, Hoàn Kiếm",
+  "images": [
+    {
+      "url": "https://cdn.wowweekend.vn/uploads/le-club-bar-festive-2024-39du7.jpg",
+      "source": "https://wowweekend.vn/kham-pha-giac-mo-anh-sang-huyen-ao-va-mua-le-hoi-dieu-ky-tai-metropole-ha-noi.html",
+      "alt": "Festive Jazz Lounge at Le Club Bar",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "hn/89-le-club-bar-sofitel-legend-metropole/01.webp",
+      "width": 6230,
+      "height": 4156,
+      "sha256": "6f8ec03144aa76f36afcf5634e29b2c321f6f59cb25c5e596e36800aa7f6e127"
+    },
+    {
+      "url": "https://cdn-ak.f.st-hatena.com/images/fotolife/b/bkkhotel/20191230/20191230110720.jpg",
+      "source": "https://bkkhotel.hatenablog.com/entry/2019/12/30/110514",
+      "alt": "Le Club Bar Entrance at Sofitel Legend Metropole",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "hn/89-le-club-bar-sofitel-legend-metropole/02.webp",
+      "width": 1024,
+      "height": 768,
+      "sha256": "58864e95f8f6f5c662659d910cd219ca07cf7da2deec188b779425f0eaf563e9"
+    }
+  ]
+}
