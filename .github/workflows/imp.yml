@@ -1,0 +1,15 @@
+name: Import Drive images 2
+on: { push: { branches: [img-import2] } }
+permissions: { contents: write }
+jobs:
+  imp:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - shell: bash {0}
+        run: |
+          python3 -u dl.py 2>&1 | tail -40
+          find drive -type f | wc -l; du -sh drive; find drive -maxdepth 1
+          git config user.name "TopChill import"; git config user.email "import@topchill.vn"
+          git add drive && git commit -qm "Drive images" && git push -q origin HEAD:img-import2
