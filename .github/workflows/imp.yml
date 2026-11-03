@@ -1,0 +1,16 @@
+name: Import Drive images
+on: { push: { branches: [img-import] } }
+permissions: { contents: write }
+jobs:
+  imp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - shell: bash {0}
+        run: |
+          pip install -q gdown
+          gdown --folder "https://drive.google.com/drive/folders/1q1Ahh9kJjthGXOJt8z_rDSog28da5VHD" -O drive --remaining-ok 2>&1 | tail -30
+          rm -f drive/*.html
+          find drive -type f | wc -l; du -sh drive
+          git config user.name "TopChill import"; git config user.email "import@topchill.vn"
+          git add drive && git commit -qm "Drive images" && git push -q origin HEAD:img-import
