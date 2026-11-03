@@ -1,0 +1,63 @@
+{
+  "id": 23,
+  "name": "Bee Beer Cocktail",
+  "city": "bd",
+  "addr": "27 Lê Lai, P. Hòa Phú, TP. Thủ Dầu Một, Bình Dương",
+  "images": [
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/476144DDd/anh-mo-ta.png",
+      "source": "https://mytour.vn/vi/blog/bai-viet/bee-beer-cocktail-diem-chill-hap-dan-nhat-cho-gioi-tre.html",
+      "alt": "Bee Beer Cocktail địa điểm chill bậc nhất dành cho giới trẻ 2",
+      "score": 100,
+      "basis": "alt",
+      "file": "bd/23-bee-beer-cocktail/01.webp",
+      "width": 700,
+      "height": 700,
+      "sha256": "e234181dfbf76ab314570cf4fc38f8dd5c54d917a4274d2e3bbec9f8a924dae6"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/476144okz/anh-mo-ta.png",
+      "source": "https://mytour.vn/vi/blog/bai-viet/bee-beer-cocktail-diem-chill-hap-dan-nhat-cho-gioi-tre.html",
+      "alt": "Bee Beer Cocktail - Địa điểm lý tưởng cho giới trẻ thư giãn sau một ngày làm việc căng thẳng.",
+      "score": 100,
+      "basis": "alt",
+      "file": "bd/23-bee-beer-cocktail/02.webp",
+      "width": 700,
+      "height": 700,
+      "sha256": "c0e40c7a1a514852ef1f515574b430b4d951fb57308185a2faafad8ff28d1721"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/476144cWn/anh-mo-ta.png",
+      "source": "https://mytour.vn/vi/blog/bai-viet/bee-beer-cocktail-diem-chill-hap-dan-nhat-cho-gioi-tre.html",
+      "alt": "Bee Beer Cocktail - Nơi chill lý tưởng dành cho giới trẻ.",
+      "score": 100,
+      "basis": "alt",
+      "file": "bd/23-bee-beer-cocktail/03.webp",
+      "width": 700,
+      "height": 700,
+      "sha256": "1c0c581a8490266a59fbd5e0555e647fc1c6be252f40a17fdddf8be68bda4c74"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/476144hPe/anh-mo-ta.png",
+      "source": "https://mytour.vn/vi/blog/bai-viet/bee-beer-cocktail-diem-chill-hap-dan-nhat-cho-gioi-tre.html",
+      "alt": "Bee Beer Cocktail - Địa điểm lý tưởng để giới trẻ thư giãn và chill.",
+      "score": 100,
+      "basis": "alt",
+      "file": "bd/23-bee-beer-cocktail/04.webp",
+      "width": 700,
+      "height": 700,
+      "sha256": "57733e0dd353def8c09469d648200958636f5b91822495f09d48eebb78d12784"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/476144iqp/anh-mo-ta.png",
+      "source": "https://mytour.vn/vi/blog/bai-viet/bee-beer-cocktail-diem-chill-hap-dan-nhat-cho-gioi-tre.html",
+      "alt": "Bee Beer Cocktail - Nơi lý tưởng để giới trẻ thư giãn và chill.",
+      "score": 100,
+      "basis": "alt",
+      "file": "bd/23-bee-beer-cocktail/05.webp",
+      "width": 700,
+      "height": 700,
+      "sha256": "a501242373aed9cb2fc721f9af394e83ec09449b08c6bebb8d9af127295da8e4"
+    }
+  ]
+}

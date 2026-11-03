@@ -1,0 +1,30 @@
+{
+  "id": 24,
+  "name": "Chích Pub - Food & Beer",
+  "city": "bd",
+  "addr": "35 Bạch Đằng, P. Phú Cường, TP. Thủ Dầu Một, Bình Dương",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwbd6u3ew6hl03@resize_ss640x400",
+      "source": "https://www.foody.vn/binh-duong/bar-pub",
+      "alt": "Hangover Pub",
+      "score": 70,
+      "basis": "section",
+      "file": "bd/24-chich-pub-food-beer/01.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "8b30f3c21523374641a143f5b2b3a81eec4a48b59c8076607975f6f57ff242c5"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lw8thkxqe2fv4d@resize_ss640x400",
+      "source": "https://www.foody.vn/binh-duong/bar-pub",
+      "alt": "Chích Pub - Food & Beer",
+      "score": 75,
+      "basis": "alt",
+      "file": "bd/24-chich-pub-food-beer/02.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "cecb21046b4a2988fba39f0da2f401b5d202578dbbcdd182e741f87a738b842c"
+    }
+  ]
+}

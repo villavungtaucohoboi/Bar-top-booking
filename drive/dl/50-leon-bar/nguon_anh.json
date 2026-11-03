@@ -1,0 +1,52 @@
+{
+  "id": 50,
+  "name": "Léon Bar",
+  "city": "dl",
+  "addr": "278 Hai Bà Trưng",
+  "images": [
+    {
+      "url": "https://toplist.vn/images/800px/leon-bar-da-lat-1059603.jpg",
+      "source": "https://toplist.vn/top-list/quan-bar-noi-tieng-nhat-o-lam-dong-22859.htm",
+      "alt": "Leon: The Professional Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dl/50-leon-bar/01.webp",
+      "width": 800,
+      "height": 600,
+      "sha256": "b7eb39b39f7260408ed25c541ca4e0f85738bca09f3ba06d51b2b9f3c95d0582"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/leon-bar-da-lat-1090054.jpg",
+      "source": "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-da-lat-57085.htm",
+      "alt": "Leon Professional Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dl/50-leon-bar/02.webp",
+      "width": 800,
+      "height": 600,
+      "sha256": "c467a0a1da07aa3b297741de6c67ae047db2e4c3fb023cfc712fb0e11fd9d5be"
+    },
+    {
+      "url": "https://cdn.tgdd.vn/Files/2022/09/13/1468321/cuc-chill-voi-9-quan-ruou-nen-ghe-khi-den-da-lat-202209131705060837.jpg",
+      "source": "https://www.bachhoaxanh.com/kinh-nghiem-hay/cuc-chill-voi-9-quan-ruou-nen-ghe-khi-den-da-lat-1468321",
+      "alt": "Léon: The Professional Bar in Đà Lạt",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "dl/50-leon-bar/03.webp",
+      "width": 800,
+      "height": 500,
+      "sha256": "94e3db7680aaa0fe05561bc6edbfbf0bf17a959ae44ed6421cdcf00ced4ee318"
+    },
+    {
+      "url": "https://vietnamtimes.thoidai.com.vn/stores/news_dataimages/nhungnlh/012022/21/10/4454_Leon_Bar_Ya_LYt.jpg?rt=20220121104455",
+      "source": "https://vietnamtimes.thoidai.com.vn/da-lat-nightlife-the-best-bars-in-vietnams-mini-europe-39563.html",
+      "alt": "Leon: The Professional Bar in Da Lat",
+      "score": 107,
+      "basis": "image-search-name-city",
+      "file": "dl/50-leon-bar/04.webp",
+      "width": 800,
+      "height": 484,
+      "sha256": "6e4790e209d7277ef50c84eb2dca8637ee378f832765462d74cd3006389d32bc"
+    }
+  ]
+}

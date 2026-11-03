@@ -1,0 +1,63 @@
+{
+  "id": 42,
+  "name": "The Fog Bar",
+  "city": "dl",
+  "addr": "76 Trương Công Định",
+  "images": [
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/476154YLp/anh-mo-ta.png",
+      "source": "https://mytour.vn/vi/blog/bai-viet/top-6-quan-bar-o-da-lat-voi-gia-cuc-ky-hap-dan-tu-50000-vnd.html",
+      "alt": "Top 6 quán bar ở Đà Lạt với giá cực kỳ ưu đãi từ 50.000 VNĐ",
+      "score": 70,
+      "basis": "section",
+      "file": "dl/42-the-fog-bar/01.webp",
+      "width": 700,
+      "height": 464,
+      "sha256": "295d0e70c070d00c0ed93381d195b8a9ec232179d57a3476d6f73fc6abcb85cb"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/476154BBf/anh-mo-ta.png",
+      "source": "https://mytour.vn/vi/blog/bai-viet/top-6-quan-bar-o-da-lat-voi-gia-cuc-ky-hap-dan-tu-50000-vnd.html",
+      "alt": "Top 6 quán bar ở Đà Lạt với giá cực kỳ hấp dẫn từ 50.000 VNĐ",
+      "score": 70,
+      "basis": "section",
+      "file": "dl/42-the-fog-bar/02.webp",
+      "width": 700,
+      "height": 464,
+      "sha256": "ef2dfe433604032523081d6b72e487556ba5c4e064485f1c74bf6095f87d2d71"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/476154UkO/anh-mo-ta.png",
+      "source": "https://mytour.vn/vi/blog/bai-viet/top-6-quan-bar-o-da-lat-voi-gia-cuc-ky-hap-dan-tu-50000-vnd.html",
+      "alt": "Top 6 quán bar ở Đà Lạt với giá cực kỳ ưu đãi từ 50.000 VNĐ",
+      "score": 70,
+      "basis": "section",
+      "file": "dl/42-the-fog-bar/03.webp",
+      "width": 700,
+      "height": 464,
+      "sha256": "045621ecaa9d2f1d0fca57ce14d8746044fbff6423b54b8a17d6da71e91eb460"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/482097Bfu/anh-mo-ta.png",
+      "source": "https://mytour.vn/en/blog/am-thuc/top-6-best-cocktail-bars-in-da-lat-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "dl/42-the-fog-bar/04.webp",
+      "width": 700,
+      "height": 466,
+      "sha256": "6d915bae2749fb3a82d897ac33c8b177f47eed3aea4a852221983f58968cfd5b"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/482097GUQ/anh-mo-ta.png",
+      "source": "https://mytour.vn/en/blog/am-thuc/top-6-best-cocktail-bars-in-da-lat-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "dl/42-the-fog-bar/05.webp",
+      "width": 700,
+      "height": 466,
+      "sha256": "27c016acb7abfd3cf0531d19aea9699a8e13e0b4c0f1aa2994325a94db47b699"
+    }
+  ]
+}

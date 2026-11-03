@@ -1,0 +1,52 @@
+{
+  "id": 54,
+  "name": "The Escape Bar & Café",
+  "city": "dl",
+  "addr": "Tầng 1 khách sạn Golf Valley, 94 Bùi Thị Xuân",
+  "images": [
+    {
+      "url": "https://tamtrinhcoffee.com/wp-content/uploads/2024/07/Quan-CafeACoustic-Da-Lat-8.jpg",
+      "source": "https://tamtrinhcoffee.com/quan-cafe-acoustic-da-lat/",
+      "alt": "The Escape Bar Acoustic Night",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dl/54-the-escape-bar-cafe/01.webp",
+      "width": 854,
+      "height": 480,
+      "sha256": "e8b6f0f8fff75f5b07f316ef4bd071384a14d9c45aa04cbaffbd88139ee12ede"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/the-escape-bar-1122022.jpg",
+      "source": "https://toplist.vn/top-list/quan-cafe-quan-ruou-nghe-nhac-acoustic-lang-man-nhat-tai-da-lat-33411.htm",
+      "alt": "The Escape Bar Live Acoustic Night",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dl/54-the-escape-bar-cafe/02.webp",
+      "width": 800,
+      "height": 528,
+      "sha256": "45c5ad3ff14d0c8e2e0e954a106d53d40a3fe8c24d26c1d02efc5320bbde55f0"
+    },
+    {
+      "url": "https://www.vietfuntravel.com.vn/image/data/Da-Lat/buoi-toi-da-lat/10-dia-diem-di-choi-buoi-toi-o-da-lat-9.jpg",
+      "source": "https://www.vietfuntravel.com.vn/blog/buoi-toi-o-da-lat-nen-di-choi-o-dau.html",
+      "alt": "The Escape Bar Live Music Lounge",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dl/54-the-escape-bar-cafe/03.webp",
+      "width": 700,
+      "height": 465,
+      "sha256": "c6c6a4f8b3297bb7394ac4f28277b17c8566d6af7def868ef8b945d45b35899d"
+    },
+    {
+      "url": "https://cdn.tgdd.vn/Files/2021/12/01/1401571/10-quan-cafe-nhac-song-sieu-chat-khong-the-bo-qua-cua-da-lat-202112010941547217.jpg",
+      "source": "https://www.bachhoaxanh.com/kinh-nghiem-hay/10-quan-cafe-nhac-song-sieu-chat-khong-the-bo-qua-cua-da-lat-1401571",
+      "alt": "Live Music at The Escape Bar",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "dl/54-the-escape-bar-cafe/04.webp",
+      "width": 800,
+      "height": 450,
+      "sha256": "ed6f6e49e57b492b82170767eb6ac2b9e89cdb511ad121664f6f958eb3157dea"
+    }
+  ]
+}

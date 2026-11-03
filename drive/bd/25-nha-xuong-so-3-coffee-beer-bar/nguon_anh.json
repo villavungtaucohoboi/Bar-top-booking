@@ -1,0 +1,19 @@
+{
+  "id": 25,
+  "name": "Nhà Xưởng Số 3 - Coffee & Beer Bar",
+  "city": "bd",
+  "addr": "26-28 Đường D, KDC Chánh Nghĩa, P. Chánh Nghĩa, TP. Thủ Dầu Một, Bình Dương",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lw9aoprldyvt7d@resize_ss640x400",
+      "source": "https://www.foody.vn/binh-duong/dia-diem-phuc-vu-bia",
+      "alt": "Nhà Xưởng Số 3 - Coffee & Beer Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "bd/25-nha-xuong-so-3-coffee-beer-bar/01.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "af52dac1e571cb67547abbf219633def37335b173bee284d2edb7cbe20f964e6"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": 52,
+  "name": "Envy Lounge Bar",
+  "city": "dl",
+  "addr": "1 Lê Đại Hành",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwexo1r57qhlb7@resize_ss640x400",
+      "source": "https://www.foody.vn/lam-dong/bar-pub-phu-hop-hen-ho",
+      "alt": "Envy Lounge Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "dl/52-envy-lounge-bar/01.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "abea53e08ffc339ede2050145b2f4dc01cf30b040e3515c7001b852eaf9295aa"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwh0g0mmfkd56e@resize_ss640x400",
+      "source": "https://www.foody.vn/lam-dong/bar-pub-phu-hop-hen-ho",
+      "alt": "Tiệm Ký Gửi Nỗi Buồn Bar",
+      "score": 70,
+      "basis": "section",
+      "file": "dl/52-envy-lounge-bar/02.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "5fefacf493f7cac533e6191f2e295163bf1bd42200fe3a773a11e4614d08f767"
+    },
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwfysox8k4wrb7@resize_ss640x400",
+      "source": "https://www.foody.vn/lam-dong/bar-pub-phuc-vu-cocktail?vt=row",
+      "alt": "153 Coffee DJ & Bar",
+      "score": 70,
+      "basis": "section",
+      "file": "dl/52-envy-lounge-bar/03.webp",
+      "width": 640,
+      "height": 400,
+      "sha256": "d4d1878956a07bf08ddb14339b12bf94bfa431dd6f20ccebfb0c27e8dcae0484"
+    }
+  ]
+}

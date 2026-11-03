@@ -1,0 +1,63 @@
+{
+  "id": 43,
+  "name": "B21 Bar",
+  "city": "dl",
+  "addr": "68 Trương Công Định",
+  "images": [
+    {
+      "url": "https://img.360dalat.com/resize/730x-/2020/11/10/b21-bar-b0f9-6d9d.jpg",
+      "source": "https://360dalat.com/dia-diem/bar-da-lat-653",
+      "alt": "B21 Bar Nightlife in Đà Lạt",
+      "score": 125,
+      "basis": "image-search-name-city",
+      "file": "dl/43-b21-bar/01.webp",
+      "width": 600,
+      "height": 400,
+      "sha256": "838788abfe354e5541e1e8091860c8dbb64db2f3fa7a87fc01716f4e7fe79268"
+    },
+    {
+      "url": "https://kr.tgroup.vn/uploads/images/bao-chau/tgroup-B21-bar%209.jpg",
+      "source": "https://kr.tgroup.vn/service/-b21--b21-bar-da-lat",
+      "alt": "Fire Juggling Performance at B21 Bar Da Lat",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "dl/43-b21-bar/02.webp",
+      "width": 2048,
+      "height": 1365,
+      "sha256": "3374ddf3cc17487c736139886f957538d94dc58c0ef628f30f72db326cd52440"
+    },
+    {
+      "url": "https://product.hstatic.net/1000268128/product/screenshot_2024-12-12_233822_08e14db1faca4082a331d08805f367a8_master.png",
+      "source": "https://www.9life.com.vn/products/b21-bar-68-truong-cong-dinh",
+      "alt": "Nightlife at B21 Bar",
+      "score": 117,
+      "basis": "image-search-name-city",
+      "file": "dl/43-b21-bar/03.webp",
+      "width": 952,
+      "height": 574,
+      "sha256": "ad7a96addc3572f818002d4b470afb8ad718face271ddb1ce856f75d2c371d93"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/481308aYG/anh-mo-ta.png",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-7-most-prestigious-cocktail-bars-in-da-lat-lam-dong-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "dl/43-b21-bar/04.webp",
+      "width": 700,
+      "height": 466,
+      "sha256": "c892b4b04344abb2f5012d65bfd62646adab848c509a444dd8cb23baad1347fb"
+    },
+    {
+      "url": "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/481308fFl/anh-mo-ta.png",
+      "source": "https://mytour.vn/en/blog/bai-viet/top-7-most-prestigious-cocktail-bars-in-da-lat-lam-dong-mytour.html",
+      "alt": "",
+      "score": 70,
+      "basis": "section",
+      "file": "dl/43-b21-bar/05.webp",
+      "width": 525,
+      "height": 700,
+      "sha256": "1e28474a5372a87f2f2f99471d280982dc8bca4423f93266dba2af504aaf63b0"
+    }
+  ]
+}

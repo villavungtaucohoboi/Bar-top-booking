@@ -1,0 +1,52 @@
+{
+  "id": 44,
+  "name": "Woody Classic Bar",
+  "city": "dl",
+  "addr": "6 Nguyễn Chí Thanh",
+  "images": [
+    {
+      "url": "https://static.danhsach.vn/images/2019/09/21/47eaf60aa0e77934a6a65bc5e78e805b.jpg",
+      "source": "https://danhsach.vn/lam-dong/dia-diem-uy-tin/woody-classic-so-6-nguyen-chi-thanh-thanh-pho-da-lat-tinh-lam-dong-3535373264.html",
+      "alt": "Woody Classic Bar Interior",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dl/44-woody-classic-bar/01.webp",
+      "width": 800,
+      "height": 600,
+      "sha256": "4dbbbb3ca2771ad271eb671fa747d5372041ccc579db642d88b98e9b95e09e5c"
+    },
+    {
+      "url": "https://static.where-e.com/Viet_Nam/Lam_Dong_Province/Woody-Classic-Bar_3538c49275861c264e5b62269bbb4173.jpg",
+      "source": "https://woody-classic-bar.wheree.com/",
+      "alt": "Woody Classic Bar Entrance",
+      "score": 135,
+      "basis": "image-search-name-city",
+      "file": "dl/44-woody-classic-bar/02.webp",
+      "width": 1000,
+      "height": 750,
+      "sha256": "6c2853cc583d42e1656de560a359c10b2dfceaebd61c3adc3affe242e1554dd9"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/woody-classic-bar-1090056.jpg",
+      "source": "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-da-lat-57085.htm",
+      "alt": "Woody Classic Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "dl/44-woody-classic-bar/03.webp",
+      "width": 800,
+      "height": 600,
+      "sha256": "b6ecb8e87390278c965321523ef835761111fe1d066978078b180246d5f2da3d"
+    },
+    {
+      "url": "https://toplist.vn/images/800px/woody-classic-bar-1090055.jpg",
+      "source": "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-da-lat-57085.htm",
+      "alt": "Woody Classic Bar",
+      "score": 100,
+      "basis": "alt",
+      "file": "dl/44-woody-classic-bar/04.webp",
+      "width": 800,
+      "height": 533,
+      "sha256": "9b0ccf11772bf55063fc8f41afe88df1e31041e095092376ce71b606e85617c0"
+    }
+  ]
+}

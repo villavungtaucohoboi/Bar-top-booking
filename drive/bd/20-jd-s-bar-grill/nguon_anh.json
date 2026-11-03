@@ -1,0 +1,19 @@
+{
+  "id": 20,
+  "name": "JD's Bar & Grill",
+  "city": "bd",
+  "addr": "Ô 13-14, Lô E4 Trần Phú, KDC Chánh Nghĩa, TP. Thủ Dầu Một, Bình Dương",
+  "images": [
+    {
+      "url": "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwbfn80ejljv75@resize_ss640x400",
+      "source": "https://www.foody.vn/binh-duong/dia-diem-phuc-vu-bia",
+      "alt": "JD's Bar & Grill - Trần Phú",
+      "score": 100,
+      "basis": "alt",
+      "file": "bd/20-jd-s-bar-grill/01.webp",
+      "width": 698,
+      "height": 400,
+      "sha256": "a719b63682f08f760301c833b7656931d5b43da7d484f1ecce3c64655e6ef288"
+    }
+  ]
+}

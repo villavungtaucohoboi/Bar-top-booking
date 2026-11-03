@@ -1,0 +1,41 @@
+{
+  "id": 47,
+  "name": "On The Rocks Cocktail Bar",
+  "city": "dl",
+  "addr": "69 Trương Công Định",
+  "images": [
+    {
+      "url": "https://www.sapo.vn/Upload/2023/11/2/e6bceda703c1ab7db909a00c226bab72.png",
+      "source": "https://www.sapo.vn/khach-hang-sapo-fnb/on-the-rocks",
+      "alt": "On The Rocks Cocktail Bar - Trải nghiệm về đêm tuyệt vời tại Đà Lạt",
+      "score": 100,
+      "basis": "alt",
+      "file": "dl/47-on-the-rocks-cocktail-bar/01.webp",
+      "width": 866,
+      "height": 425,
+      "sha256": "0275a3157415286f4bb001e141f4981077bb491408971981d1a126704c893854"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/46/f1/31/bar.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g293922-d25593122-Reviews-On_The_Rocks_Cocktail_Bar-Da_Lat_Lam_Dong_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "dl/47-on-the-rocks-cocktail-bar/02.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "52e2fdaa17c7664f9c161859bd48bf75bd31e40cdd20ef808735a9578efbe5b6"
+    },
+    {
+      "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/46/f1/3c/bar.jpg?w=700&h=400&s=1",
+      "source": "https://www.tripadvisor.com.vn/Attraction_Review-g293922-d25593122-Reviews-On_The_Rocks_Cocktail_Bar-Da_Lat_Lam_Dong_Province.html",
+      "alt": "",
+      "score": 60,
+      "basis": "article",
+      "file": "dl/47-on-the-rocks-cocktail-bar/03.webp",
+      "width": 700,
+      "height": 400,
+      "sha256": "00f2a76d4cd045e07a4207e981994544bee19e75ee714a11bc86a6eb8b96543a"
+    }
+  ]
+}
