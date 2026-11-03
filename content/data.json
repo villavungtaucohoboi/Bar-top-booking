@@ -819,6 +819,36 @@
    ],
    "images": [],
    "hidden": false
+  },
+  {
+   "name": "A Plus H",
+   "type": "Club",
+   "city": "hn",
+   "area": "Ba Đình",
+   "addr": "78 Yên Phụ",
+   "dress": "Tự do",
+   "music": "",
+   "desc": "APLUS HANOI (tọa lạc tại 78 Yên Phụ, Ba Đình, Hà Nội) là một super club chuyên về dòng nhạc điện tử và âm nhạc sôi động với các thể loại chính sau:\n• Big-room EDM: Các giai điệu điện tử bùng nổ, cao trào lớn phù hợp với không gian club quy mô lớn.\n• Trance: Nhạc điện tử có tiết tấu thôi miên, giai điệu dồn dập và sâu lắng.\n• Techno: Nhạc điện tử thiên về âm bass mạnh, tiết tấu đều và hiện đại.",
+   "deal": 5,
+   "gpct": 5,
+   "bonus": "",
+   "rating": 4.9,
+   "reviews": 100,
+   "hours": "19:00 – 04:00",
+   "price": [
+    300,
+    1000000
+   ],
+   "bonusNote": "",
+   "promoUntil": "",
+   "boost": "top",
+   "hidden": false,
+   "menu": [],
+   "images": [
+    "/img/bars/a-plus-h-mw058lg3-1.webp"
+   ],
+   "id": 19,
+   "hue": 305
   }
  ]
 }
