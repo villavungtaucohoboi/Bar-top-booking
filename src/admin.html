@@ -238,6 +238,7 @@ function commitRetry(files,msg,mutate){return commit(files,msg,mutate).catch(fun
 $('form').onsubmit=function(e){e.preventDefault();
   var name=$('f_name').value.trim();if(name.length<2){say($('msg'),'Nhập tên bar.','err');$('f_name').focus();return}
   var pmin=+$('f_pmin').value||0,pmax=+$('f_pmax').value||0;if(pmax&&pmin>pmax){say($('msg'),'Giá từ đang lớn hơn giá đến.','err');return}
+  if(pmin>20000||pmax>20000){say($('msg'),'Giá nhập theo nghìn đồng. Ví dụ 1.000.000đ thì ghi 1000.','err');$('f_pmax').focus();return}
   var deal=Math.max(0,Math.min(60,+$('f_deal').value||0)),gp=Math.max(0,Math.min(50,+$('f_gpct').value||0));
   var dup=data.bars.some(function(b){return b.id!==cur.id&&slug(b.name)===slug(name)});if(dup){say($('msg'),'Đã có bar trùng tên. Thêm khu vực vào tên để phân biệt.','err');return}
   var b={};F.forEach(function(k){b[k]=$('f_'+k).value.trim()});

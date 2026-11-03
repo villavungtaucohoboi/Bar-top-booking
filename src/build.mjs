@@ -49,6 +49,7 @@ let APP = fs.readFileSync(path.join(ROOT, 'src/app.html'), 'utf8');
 { const a = APP.indexOf('const BARS=['), z = APP.indexOf('\n];\n', a);
   if (a < 0 || z < 0) throw new Error('Không tìm thấy BARS trong app.html');
   APP = APP.slice(0, a) + 'const BARS=' + JSON.stringify(LIVE_BARS) + ';' + APP.slice(z + 3);
+  APP = APP.replace(/const CONTACT=\{[^}]*\};/, 'const CONTACT=' + JSON.stringify({ tel: CFG.hotline.replace(/\s/g, ''), show: CFG.hotline, zalo: CFG.zalo || CFG.hotline.replace(/\s/g, ''), tg: CFG.telegram || '' }) + ';');
   APP = APP.replace('const TICKER=[];', 'const TICKER=' + JSON.stringify(DATA.ticker || []).replace(/</g, '\\u003c') + ';'); }
 function grab(start, end) {
   const a = APP.indexOf(start); const b = APP.indexOf(end, a);
