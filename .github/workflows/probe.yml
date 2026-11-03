@@ -4,7 +4,8 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - shell: bash {0}
+        run: |
           for u in https://api.web3forms.com/submit https://formspree.io/f/xxxxxxx https://api.emailjs.com/api/v1.0/email/send https://script.google.com/macros/s/AKfycbx/exec; do
             echo "== $u"; curl -sS -m 30 -o /tmp/b -w "OPTIONS %{http_code}\n" -X OPTIONS "$u" -H "Origin: https://topchill.vn" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: content-type" -D /tmp/h; grep -i "access-control-allow-origin\|cf-mitigated" /tmp/h
             curl -sS -m 30 -o /tmp/b -w "POST %{http_code}\n" "$u" -H "Origin: https://topchill.vn" -H "Content-Type: application/json" -H "Accept: application/json" -d '{"access_key":"00000000-0000-0000-0000-000000000000","name":"x"}' -D /tmp/h; grep -i "access-control-allow-origin\|cf-mitigated" /tmp/h; head -c 300 /tmp/b; echo
