@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Bar Đà Nẵng: beach club Mỹ Khê, rooftop ngắm cầu Rồng phun lửa"
 description: "Bar Đà Nẵng đáng đi: beach club Mỹ Khê có pool party, rooftop sông Hàn ngắm cầu Rồng phun lửa. Giá, giờ mở cửa và cách đặt bàn giảm giá."
 keyword: "bar đà nẵng"

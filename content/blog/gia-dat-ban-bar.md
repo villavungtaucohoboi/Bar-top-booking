@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Giá đặt bàn bar bao nhiêu? Bảng giá bàn thường, VIP, sofa 2026"
 description: "Giá đặt bàn bar 2026: bàn thường, bàn VIP, sofa nhóm chi tối thiểu bao nhiêu, có cần cọc không và cách giảm giá bàn bar đến 40%."
 keyword: "giá đặt bàn bar"

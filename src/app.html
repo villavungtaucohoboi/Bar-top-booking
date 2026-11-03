@@ -177,6 +177,7 @@ section.block{padding-block:40px}
 .ghline{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:var(--neon)}
 .ghline .ico{width:22px;height:22px;border-radius:6px;background:rgba(255,63,142,.12);display:grid;place-items:center;font-size:12px;flex:none}
 .bonus{font-size:12.5px;color:var(--muted)}
+.demo-ph{position:absolute;right:10px;bottom:34px;z-index:2;font-size:10.5px;font-weight:600;color:#ddd;background:rgba(10,8,16,.6);padding:2px 7px;border-radius:6px}
 .card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:6px;gap:8px}
 .price{font-size:13px;color:var(--muted)}.price b{color:var(--fg);font-size:14px}
 
@@ -1004,7 +1005,7 @@ button.user-pill{cursor:pointer;font:inherit;color:inherit;text-align:left}
         <div class="live-pill"><span class="dot"></span><b class="num" id="liveCount">1.248</b> bàn đang được đặt tối nay</div>
         <div class="nw-sign" aria-hidden="true">Top<span class="fl">C</span>hill</div>
         <h1><span class="h-a">Tối nay, quẩy ở đâu?</span><span class="h-sr">Đặt bàn bar giảm tới 40%</span></h1>
-        <p class="nw-sub">1.200 bar, lounge, club khắp 63 tỉnh. Đặt bàn trong 30 giây, giảm thẳng vào bill.</p>
+        <p class="nw-sub"><span id="barCount">Hàng trăm</span> bar, lounge, club ở 12 thành phố. Đặt bàn trong 30 giây, tổng đài giữ bàn giúp bạn.</p>
         <form class="search" id="searchForm">
           <div class="field"><label for="sCity">Thành phố</label><select id="sCity"></select></div>
           <div class="field"><label for="sDate">Ngày</label><input type="date" id="sDate"></div>
@@ -1034,7 +1035,7 @@ button.user-pill{cursor:pointer;font:inherit;color:inherit;text-align:left}
   </section>
 
   <section class="block" id="rankSec"><div class="wrap">
-    <div class="sec-head"><div><div class="eyebrow">Bảng xếp hạng tuần này</div><h2>Top bar được đặt nhiều nhất</h2></div><a class="lnk" href="#kham-pha">Xem tất cả bar →</a></div>
+    <div class="sec-head"><div><div class="eyebrow">Đối tác nổi bật &amp; bar hot</div><h2>Bar nổi bật</h2></div><a class="lnk" href="#kham-pha">Xem tất cả bar →</a></div>
     <div class="rail rk-tabs" id="rankTabs"></div>
     <div class="rank" id="rank"></div>
   </div></section>
@@ -1043,7 +1044,7 @@ button.user-pill{cursor:pointer;font:inherit;color:inherit;text-align:left}
     <div class="sec-head"><div><div class="eyebrow">Quyền lợi khi đặt qua TopChill</div><h2>4 ưu đãi cộng dồn</h2></div></div>
     <div class="perks" id="perks"></div>
     <div class="calc">
-      <div class="calc-h"><b>Ví dụ thực tế</b><span>Bàn 4 người tại Mộc Sky Bar, đến 18:00, bill 3.000.000đ</span></div>
+      <div class="calc-h"><b>Ví dụ thực tế</b><span>Bàn 4 người tại một bar đối tác, đến giờ vàng, bill 3.000.000đ</span></div>
       <div class="calc-big num">Bill 3 triệu <span>→</span> bạn chỉ trả <b>1,65 triệu</b></div>
       <div class="calc-row num">
         <span class="cp">Bill <b>3.000.000đ</b></span>
@@ -1323,7 +1324,9 @@ const BARS=[
 ];
 const pad=n=>String(n).padStart(2,'0');
 /* Khung giờ: mở cửa → đóng cửa, 2 giờ đầu là giờ vàng */
-BARS.forEach(b=>{const o=+b.hours.slice(0,2);let c=+b.hours.slice(8,10);if(c<=o)c+=24;b.open=o;b.close=c;b.slots=[];for(let t=o;t<c;t++)b.slots.push(pad(t%24)+':00');b.golden=b.slots.slice(0,2);b.gLabel=`${b.golden[0]}–${pad((o+2)%24)}:00`});
+const isP=b=>b.partner!==false;const hrs=b=>b.hoursKnown===false?'Liên hệ tổng đài':b.hours;const priceTxt=b=>b.priceKnown===false?'Giá: liên hệ tổng đài':`Từ <b>${b.price[0]}k</b> – ${b.price[1]}k / người`;
+CITIES.forEach(c=>{c.n=BARS.filter(b=>b.city===c.id).length});
+BARS.forEach(b=>{if(!isP(b)){b.deal=0;b.gpct=0;b.bonus='';b.rating=null;b.reviews=0}const o=+b.hours.slice(0,2);let c=+b.hours.slice(8,10);if(c<=o)c+=24;b.open=o;b.close=c;b.slots=[];for(let t=o;t<c;t++)b.slots.push(pad(t%24)+':00');b.golden=b.gpct?b.slots.slice(0,2):[];b.gLabel=`${b.golden[0]}–${pad((o+2)%24)}:00`});
 
 const MENU={
  'Rooftop':[['Chivas 18',2900],['Macallan 12',3900],['Signature cocktail',220],['Tháp bia Heineken 3L',650]],
@@ -1410,7 +1413,7 @@ function renderRank(){
   tb.innerHTML=tabs.map(([id,n])=>`<button class="chip ${RK===id?'on':''}" data-rk="${id}">${n}</button>`).join('')+'<a class="chip" href="#kham-pha">Tỉnh khác →</a>';
   tb.onclick=e=>{const b=e.target.closest('[data-rk]');if(b){RK=b.dataset.rk;renderRank()}};
   const rank={top:0,hot:1,null:2};
-  const list=BARS.filter(b=>!RK||b.city===RK).sort((a,b)=>(rank[a.boost]-rank[b.boost])||b.rating-a.rating).slice(0,5);
+  const list=BARS.filter(b=>!RK||b.city===RK).sort((a,b)=>(rank[a.boost]-rank[b.boost])||(isP(b)-isP(a))||(b.rating||0)-(a.rating||0)).slice(0,5);
   const f=list[0],rest=list.slice(1);
   document.getElementById('rank').innerHTML=`
     <article class="rk1" data-id="${f.id}" tabindex="0" role="button" aria-label="${f.name}">
@@ -1418,12 +1421,12 @@ function renderRank(){
       <div class="rk1-body">
         <div class="meta"><span>${cityName(f.city)}</span><span>${f.area}</span><span>${f.type}</span></div>
         <h3>${f.name}</h3>
-        <div class="rk-rate"><b>★ ${f.rating.toFixed(1)}</b> <span class="muted num">· ${fmt(f.reviews)} đánh giá · ${f.music}</span></div>
-        <div class="rk-perks"><span class="pk gold">Giảm ${f.deal}% bill</span><span class="pk neon">⚡ Giờ vàng ${f.gLabel} -${f.gpct}%</span><span class="pk">🎁 ${f.bonus}</span></div>
-        <div class="rk-cta"><span class="price num">Từ <b>${f.price[0]}k</b> / người</span><button class="btn btn-gold" data-book="${f.id}">Đặt bàn ngay</button></div>
+        <div class="rk-rate">${f.rating?`<b>★ ${f.rating.toFixed(1)}</b> <span class="muted num">· ${fmt(f.reviews)} đánh giá · ${escH(f.music)}</span>`:`<span class="muted">${escH(f.music||f.type)}</span>`}</div>
+        <div class="rk-perks">${isP(f)?`<span class="pk gold">Giảm ${f.deal}% bill</span>${f.gpct?`<span class="pk neon">⚡ Giờ vàng ${f.gLabel} -${f.gpct}%</span>`:''}${f.bonus?`<span class="pk">🎁 ${escH(f.bonus)}</span>`:''}`:'<span class="pk">📞 Đặt bàn qua tổng đài TopChill</span>'}</div>
+        <div class="rk-cta"><span class="price num">${f.priceKnown===false?'Giá: liên hệ':`Từ <b>${f.price[0]}k</b> / người`}</span><button class="btn btn-gold" data-book="${f.id}">Đặt bàn ngay</button></div>
       </div>
     </article>
-    <ol class="rk-list">${rest.map((b,i)=>`<li class="rk-row" data-id="${b.id}" tabindex="0" role="button" aria-label="${b.name}"><span class="rk-n">${i+2}</span><div class="rk-th">${barImg(b,300)}</div><div class="rk-info"><b>${b.name}</b><span class="meta"><span>${cityName(b.city)}</span><span>${b.type}</span></span><span class="rk-mini"><span class="r">★ ${b.rating.toFixed(1)}</span> · <span class="d">-${b.deal}%</span> · <span class="g">⚡ -${b.gpct}%</span></span></div><button class="btn btn-gold btn-sm" data-book="${b.id}">Đặt</button></li>`).join('')}</ol>`;
+    <ol class="rk-list">${rest.map((b,i)=>`<li class="rk-row" data-id="${b.id}" tabindex="0" role="button" aria-label="${b.name}"><span class="rk-n">${i+2}</span><div class="rk-th">${barImg(b,300)}</div><div class="rk-info"><b>${b.name}</b><span class="meta"><span>${cityName(b.city)}</span><span>${b.type}</span></span><span class="rk-mini">${isP(b)?`${b.rating?`<span class="r">★ ${b.rating.toFixed(1)}</span> · `:''}<span class="d">-${b.deal}%</span>${b.gpct?` · <span class="g">⚡ -${b.gpct}%</span>`:''}`:'Đặt qua tổng đài'}</span></div><button class="btn btn-gold btn-sm" data-book="${b.id}">Đặt</button></li>`).join('')}</ol>`;
 }
 function renderPerks(){
   const P=[
@@ -1445,14 +1448,14 @@ function cardHTML(b){
   return `<article class="card ${b.boost==='top'?'top':''}" data-id="${b.id}" tabindex="0" role="button" aria-label="${b.name}">
     <div class="art">${barImg(b,700)}
       <div class="badges">${b.boost==='top'?'<span class="badge top">★ Top</span>':''}${b.boost==='hot'?'<span class="badge hot">Hot</span>':''}<span class="badge type">${b.type}</span></div>
-      <div class="rating"><i>★</i>${b.rating.toFixed(1)} <span class="num">(${fmt(b.reviews)})</span></div></div>
+      ${b.rating?`<div class="rating"><i>★</i>${b.rating.toFixed(1)} <span class="num">(${fmt(b.reviews)})</span></div>`:''}${b.images&&b.images.length?'':'<span class="demo-ph">Ảnh minh hoạ</span>'}</div>
     <div class="card-body">
       <h3>${b.name}</h3>
       <div class="meta"><span>${cityName(b.city)}</span><span>${b.area}</span><span>${b.music}</span></div>
-      <div class="deal"><span class="ico">%</span>Giảm ${b.deal}% bill khi đặt qua TopChill</div>
-      <div class="ghline"><span class="ico">⚡</span>Giờ vàng ${b.gLabel} · giảm thêm ${b.gpct}%</div>
-      <div class="bonus">🎁 ${b.bonus}</div>
-      <div class="card-foot"><div class="price num">Từ <b>${b.price[0]}k</b> – ${b.price[1]}k / người</div><button class="btn btn-gold btn-sm" data-book="${b.id}">Đặt bàn</button></div>
+      ${isP(b)?`<div class="deal"><span class="ico">%</span>Giảm ${b.deal}% bill khi đặt qua TopChill</div>`:'<div class="deal"><span class="ico">📞</span>Đặt bàn qua tổng đài TopChill</div>'}
+      ${b.gpct?`<div class="ghline"><span class="ico">⚡</span>Giờ vàng ${b.gLabel} · giảm thêm ${b.gpct}%</div>`:''}
+      ${b.bonus?`<div class="bonus">🎁 ${escH(b.bonus)}</div>`:`<div class="bonus">${escH(b.addr||b.area)}</div>`}
+      <div class="card-foot"><div class="price num">${priceTxt(b)}</div><button class="btn btn-gold btn-sm" data-book="${b.id}">Đặt bàn</button></div>
     </div></article>`;
 }
 function paintCanvases(root){root.querySelectorAll('canvas[data-seed]').forEach(c=>{if(!c.dataset.done){drawArt(c,+c.dataset.seed,+c.dataset.hue);c.dataset.done=1}})}
@@ -1467,7 +1470,8 @@ function ghStatus(b){
   return {cls:'',txt:'Mai lại có'};
 }
 function renderGH(){
-  const list=BARS.slice().sort((a,b)=>{const sa=ghStatus(a),sb=ghStatus(b);const r={live:0,soon:1,'':2};return (r[sa.cls]-r[sb.cls])||b.gpct-a.gpct||b.rating-a.rating}).slice(0,6);
+  const ghs=document.getElementById('ghSec');if(ghs)ghs.hidden=!BARS.some(b=>b.gpct>0);
+  const list=BARS.filter(b=>b.gpct>0).sort((a,b)=>{const sa=ghStatus(a),sb=ghStatus(b);const r={live:0,soon:1,'':2};return (r[sa.cls]-r[sb.cls])||b.gpct-a.gpct||b.rating-a.rating}).slice(0,6);
   document.getElementById('ghRail').innerHTML=list.map(b=>{const s=ghStatus(b);return `<div class="gh" data-gh="${b.id}" role="button" tabindex="0"><div class="gh-ph">${barImg(b,600)}</div><div class="gh-in">
     <div class="top"><div><h3>${b.name}</h3><div class="meta" style="margin-top:2px"><span>${cityName(b.city)}</span><span>${b.type}</span></div></div><div class="pct">-${b.gpct}%<small>giảm thêm</small></div></div>
     <div class="slot">⚡ ${b.gLabel}<span class="cd ${s.cls}">${s.txt}</span></div>
@@ -1489,7 +1493,7 @@ function renderBars(){
   const rank={top:0,hot:1,null:2};
   list.sort((a,b)=>F.sort==='rating'?b.rating-a.rating:F.sort==='deal'?b.deal-a.deal:F.sort==='reviews'?b.reviews-a.reviews:F.sort==='golden'?(b.gpct-a.gpct)||b.rating-a.rating:(rank[a.boost]-rank[b.boost])||b.rating-a.rating);
   document.getElementById('barsTitle').textContent=F.city?`Bar ${cityName(F.city)}`:'Tất cả bar';
-  document.getElementById('barsCount').textContent=`${list.length} bar${F.city?' · '+(CITIES.find(c=>c.id===F.city).n)+' bar đối tác tại '+cityName(F.city):''}`;
+  document.getElementById('barsCount').textContent=`${list.length} bar${F.city?' · '+(CITIES.find(c=>c.id===F.city).n)+' bar tại '+cityName(F.city):''}`;
   mountCards(document.getElementById('barsGrid'),list);
   if(!document.getElementById('v-bars').hidden)animateView('bars');
 }
@@ -1519,6 +1523,7 @@ function initHome(){
   document.querySelector('.mq-acts').onclick=e=>{if(e.target.closest('[data-chat]')){window.TCChat&&TCChat.open();return}const b=e.target.closest('[data-jump]');if(b){const t=document.getElementById(b.dataset.jump);window.scrollTo({top:t.getBoundingClientRect().top+scrollY-64,behavior:'smooth'})}};
   renderGH();setInterval(renderGH,60000);
   buildCrowd();buildTicker();
+  const bc=document.getElementById('barCount');if(bc)bc.textContent=fmt(BARS.length);
   let live=1248;setInterval(()=>{live+=Math.random()>.45?1:0;const el=document.getElementById('liveCount');if(el)el.textContent=fmt(live)},4000);
 }
 
@@ -1527,31 +1532,32 @@ const TABLE={normal:{label:'Bàn thường',min:0},vip:{label:'Bàn VIP',min:500
 let cur=null,bk={};
 function openBar(id,time){
   cur=BARS.find(b=>b.id===id);
-  bk={table:'normal',guests:4,spend:Math.round((cur.price[0]+cur.price[1])/2*4/100)*100,time:time||cur.slots[Math.min(3,cur.slots.length-1)],usePts:false,pts:0,day:0,date:new Date().toISOString().slice(0,10),more:false,note:''};
+  bk={table:'normal',guests:4,spend:cur.priceKnown===false?2000:Math.round((cur.price[0]+cur.price[1])/2*4/100)*100,time:time||cur.slots[Math.min(3,cur.slots.length-1)],usePts:false,pts:0,day:0,date:new Date().toISOString().slice(0,10),more:false,note:''};
   const rv=[0,1,2].map(i=>{const r=REVIEWERS[(id+i*3)%REVIEWERS.length];return `<div class="review"><span class="avatar">${r[0].split(' ').map(w=>w[0]).join('')}</span><div><div class="who">${r[0]}<span class="tier-tag">${r[1]}</span></div><div class="stars">${'★'.repeat(5-(i%2))}${'☆'.repeat(i%2)}</div><p>${REVIEW_TEXT[(id+i)%REVIEW_TEXT.length]}</p></div></div>`}).join('');
   document.getElementById('sheet').innerHTML=`
     <div class="sheet-art">${barImg(cur,1400)}<button class="close" id="closeM" aria-label="Đóng">✕</button>
       <div class="sheet-title"><div class="badges" style="position:static;margin-bottom:8px">${cur.boost==='top'?'<span class="badge top">★ Top '+cityName(cur.city)+'</span>':''}${cur.boost==='hot'?'<span class="badge hot">Hot</span>':''}<span class="badge type">${cur.type}</span></div><h2>${cur.name}</h2>
-      <div class="meta" style="margin-top:6px;font-size:14px"><span>★ ${cur.rating.toFixed(1)} (${fmt(cur.reviews)} đánh giá)</span><span>${cur.area}, ${cityName(cur.city)}</span><span>${cur.addr}</span></div></div></div>
+      <div class="meta" style="margin-top:6px;font-size:14px">${cur.rating?`<span>★ ${cur.rating.toFixed(1)} (${fmt(cur.reviews)} đánh giá)</span>`:''}<span>${cur.area}, ${cityName(cur.city)}</span><span>${cur.addr}</span></div></div></div>
     <div class="sheet-body">
       <div style="min-width:0">
         <p style="font-size:15.5px">${cur.desc}</p>
         <div class="info-grid">
-          <div class="info"><small>Giờ mở cửa</small><b>${cur.hours}</b></div>
-          <div class="info"><small>⚡ Giờ vàng</small><b style="color:var(--neon)">${cur.gLabel} · giảm thêm ${cur.gpct}%</b></div>
+          <div class="info"><small>Giờ mở cửa</small><b>${hrs(cur)}</b></div>
+          ${cur.gpct?`<div class="info"><small>⚡ Giờ vàng</small><b style="color:var(--neon)">${cur.gLabel} · giảm thêm ${cur.gpct}%</b></div>`:`<div class="info"><small>Mức chi / người</small><b>${cur.priceKnown===false?'Liên hệ tổng đài':cur.price[0]+'k – '+cur.price[1]+'k'}</b></div>`}
           <div class="info"><small>Nhạc</small><b>${cur.music}</b></div>
           <div class="info"><small>Dress code</small><b>${cur.dress}</b></div>
         </div>
-        <div class="h4">Ưu đãi khi đặt qua TopChill</div>
+        ${isP(cur)?`<div class="h4">Ưu đãi khi đặt qua TopChill</div>
         <div class="deal-list">
-          <div class="deal-row"><div class="big">-${cur.deal}%</div><div><b>Giảm ${cur.deal}% tổng bill</b><small>Áp dụng cho mọi bàn đặt trước, quét QR tại quầy.</small></div></div>
-          <div class="deal-row neon"><div class="big">⚡ -${cur.gpct}%</div><div><b>Khung giờ vàng ${cur.gLabel}</b><small>Đến trong 2 giờ đầu mở cửa, giảm thêm ${cur.gpct}%. Cộng dồn với deal bar.</small></div></div>
-          <div class="deal-row neon"><div class="big">🎁</div><div><b>${escH(cur.bonus)}</b><small>${escH(cur.bonusNote||'Tặng tại bàn, không cộng dồn với voucher khác.')}${cur.promoUntil?' · Hạn đến '+cur.promoUntil.split('-').reverse().join('/'):''}</small></div></div>
-          ${USER.guest?'<div class="deal-row plain"><div class="big" style="color:var(--gold)">+5%</div><div><b>Đăng ký miễn phí để giảm thêm 5%</b><small>Tặng 100 điểm, tích điểm đổi tiền. <button type="button" class="lnk-btn" data-auth="register">Đăng ký ngay</button></small></div></div>':''}<div class="deal-row plain"${USER.guest?' hidden':''}><div class="big" style="color:var(--gold)">+${USER.tierPct}%</div><div><b>Hạng ${USER.tier} của bạn giảm thêm ${USER.tierPct}%</b><small>Không cần cọc · bàn ưu tiên · dùng điểm trừ bill tối đa 30%.</small></div></div>
+          <div class="deal-row"><div class="big">-\${cur.deal}%</div><div><b>Giảm \${cur.deal}% tổng bill</b><small>Áp dụng cho mọi bàn đặt trước, quét QR tại quầy.</small></div></div>
+          <div class="deal-row neon"><div class="big">⚡ -\${cur.gpct}%</div><div><b>Khung giờ vàng \${cur.gLabel}</b><small>Đến trong 2 giờ đầu mở cửa, giảm thêm \${cur.gpct}%. Cộng dồn với deal bar.</small></div></div>
+          <div class="deal-row neon"><div class="big">🎁</div><div><b>\${escH(cur.bonus)}</b><small>\${escH(cur.bonusNote||'Tặng tại bàn, không cộng dồn với voucher khác.')}\${cur.promoUntil?' · Hạn đến '+cur.promoUntil.split('-').reverse().join('/'):''}</small></div></div>
+          \${USER.guest?'<div class="deal-row plain"><div class="big" style="color:var(--gold)">+5%</div><div><b>Đăng ký miễn phí để giảm thêm 5%</b><small>Tặng 100 điểm, tích điểm đổi tiền. <button type="button" class="lnk-btn" data-auth="register">Đăng ký ngay</button></small></div></div>':''}<div class="deal-row plain"\${USER.guest?' hidden':''}><div class="big" style="color:var(--gold)">+\${USER.tierPct}%</div><div><b>Hạng \${USER.tier} của bạn giảm thêm \${USER.tierPct}%</b><small>Không cần cọc · bàn ưu tiên · dùng điểm trừ bill tối đa 30%.</small></div></div>
         </div>
+`:`<div class="h4">Đặt bàn qua TopChill</div><div class="deal-list"><div class="deal-row plain"><div class="big">📞</div><div><b>Tổng đài giữ bàn giúp bạn</b><small>Bar chưa áp dụng ưu đãi qua TopChill. Gửi yêu cầu, tổng đài gọi lại xác nhận trong vài phút.</small></div></div>`}        </div>
         <div class="h4">Menu nổi bật</div>
-        <div class="menu">${(cur.menu&&cur.menu.length?cur.menu:MENU[cur.type]||[]).map(m=>`<span>${m[0]}<b class="num">${m[1]}k</b></span>`).join('')}</div>
-        <div class="h4">Review từ hội nhóm</div>${rv}
+        <div class="menu">${(cur.menu&&cur.menu.length?cur.menu:isP(cur)?MENU[cur.type]||[]:[]).map(m=>`<span>${m[0]}<b class="num">${m[1]}k</b></span>`).join('')}</div>
+        ${isP(cur)?`<div class="h4">Review từ hội nhóm</div>${rv}`:''}
       </div>
       <aside class="book" id="bookBox"></aside>
     </div>
@@ -1567,7 +1573,7 @@ function closeM(){document.getElementById('modal').hidden=true;document.body.sty
 function calc(){
   const t=TABLE[bk.table];const spend=Math.max(bk.spend,t.min);
   const golden=cur.golden.includes(bk.time);
-  const d1=Math.round(spend*cur.deal/100),d2=Math.round(spend*USER.tierPct/100),d3=golden?Math.round(spend*cur.gpct/100):0;
+  const d1=Math.round(spend*cur.deal/100),d2=isP(cur)?Math.round(spend*USER.tierPct/100):0,d3=golden?Math.round(spend*cur.gpct/100):0;
   const after=spend-d1-d2-d3;
   const maxPts=Math.min(USER.points,Math.floor(after*1000*PT_CAP/PT));
   const pts=bk.usePts?Math.min(bk.pts||maxPts,maxPts):0;
@@ -1586,7 +1592,7 @@ function renderBook(){
       ${bk.day==='p'?`<div class="field full"><label for="bDate">Chọn ngày</label><input type="date" id="bDate" value="${bk.date}"></div>`:''}
       <div class="lbl">Số khách</div>
       <div class="stepper" id="stepper"><button type="button" data-g="-1" aria-label="Bớt 1 khách">−</button><b class="num">${bk.guests} người</b><button type="button" data-g="1" aria-label="Thêm 1 khách">+</button></div>
-      <div class="lbl">Giờ đến<span class="hint">⚡ = giờ vàng, giảm thêm ${cur.gpct}%</span></div>
+      <div class="lbl">Giờ đến${cur.gpct?`<span class="hint">⚡ = giờ vàng, giảm thêm ${cur.gpct}%</span>`:''}</div>
       <div class="slots" id="slots">${cur.slots.map(s=>`<button type="button" data-s="${s}" class="slot ${cur.golden.includes(s)?'gold':''} ${bk.time===s?'on':''}">${s}${cur.golden.includes(s)?`<small>⚡ -${cur.gpct}%</small>`:''}</button>`).join('')}</div>
       <div class="lbl">Loại bàn</div>
       <div class="seg" id="seg">${Object.entries(TABLE).map(([k,v])=>`<button type="button" data-t="${k}" class="${bk.table===k?'on':''}">${v.label}<small>${v.min?'Từ '+fmt(v.min)+'k':'Không tối thiểu'}</small></button>`).join('')}</div>
@@ -1602,15 +1608,15 @@ function renderBook(){
     </form>
     <div class="sum num">
       <div class="row"><span>Dự kiến chi tiêu</span><b>${money(c.spend)}</b></div>
-      <div class="row"><span>Giảm ${cur.deal}% deal bar</span><b class="ok">-${money(c.d1)}</b></div>
-      <div class="row"><span>⚡ Giờ vàng ${bk.time}${c.golden?' · -'+cur.gpct+'%':''}</span><b class="${c.golden?'neon':'muted'}">${c.golden?'-'+money(c.d3):'Chọn '+cur.gLabel+' để giảm thêm'}</b></div>
+      ${cur.deal?`<div class="row"><span>Giảm ${cur.deal}% deal bar</span><b class="ok">-${money(c.d1)}</b></div>`:''}
+      ${cur.gpct?`<div class="row"><span>⚡ Giờ vàng ${bk.time}${c.golden?' · -'+cur.gpct+'%':''}</span><b class="${c.golden?'neon':'muted'}">${c.golden?'-'+money(c.d3):'Chọn '+cur.gLabel+' để giảm thêm'}</b></div>`:''}
       ${USER.guest?'':`<div class="row"><span>Giảm ${USER.tierPct}% hạng ${USER.tier}</span><b class="ok">-${money(c.d2)}</b></div>`}
       ${bk.usePts?`<div class="row"><span>Trừ ${fmt(c.pts)} điểm</span><b class="gold">-${money(c.ptsK)}</b></div>`:''}
-      <div class="row"><span>Rượu tặng</span><b class="gold">${bk.table!=='normal'||c.spend>=5000?'🎁 Có':'Bàn VIP'}</b></div>
+      ${cur.bonus?`<div class="row"><span>Rượu tặng</span><b class="gold">${bk.table!=='normal'||c.spend>=5000?'🎁 Có':'Bàn VIP'}</b></div>`:`<div class="row" style="font-size:12.5px;color:var(--muted)"><span>Bar chưa có ưu đãi qua TopChill</span><b>Giá tại bar</b></div>`}
       <div class="row total"><span>Thanh toán tại bar</span><b>${money(c.total)}</b></div>
       <div class="row" style="font-size:12px;color:var(--muted)">${USER.guest?`<span>Đăng ký để tích điểm</span><b>+${fmt(c.earnIf)} điểm</b>`:`<span>Tích điểm (${USER.tier} x${String(TIERS[USER.tier].earn).replace('.',',')})</span><b>+${fmt(c.earn)} điểm</b>`}</div>
     </div>
-    <button class="btn btn-gold btn-block" id="confirmBtn" style="margin-top:14px">Xác nhận đặt bàn</button>
+    <button class="btn btn-gold btn-block" id="confirmBtn" style="margin-top:14px">${isP(cur)?'Xác nhận đặt bàn':'Gửi yêu cầu giữ bàn'}</button>
     <p class="muted" style="font-size:11.5px;text-align:center;margin-top:8px">${USER.tier==='Gold'||USER.tier==='Black'?'Hạng '+USER.tier+' được giữ bàn 30 phút, không cần cọc.':'Giữ bàn 15 phút.'} Huỷ miễn phí trước 18:00.</p>`;
   const box=document.getElementById('bookBox');
   const mt=document.getElementById('mobTot');if(mt)mt.textContent=money(c.total);
@@ -1687,7 +1693,8 @@ document.getElementById('chatForm').onsubmit=e=>{e.preventDefault();const i=docu
   setTimeout(()=>{const r=REVIEWERS[Math.floor(Math.random()*REVIEWERS.length)];MSGS[curG].push([r[0],r[1],['Đi đi, tối nay mình cũng đi!','Đặt giờ vàng đi, giảm thêm 15% nữa.','Nhóm mình 6 người, ghép bàn không?','Bàn VIP còn slot không bạn?'][Math.floor(Math.random()*4)],'vừa xong']);renderChat('last')},1500)};
 document.getElementById('btnNewGroup').onclick=()=>toast('Tính năng tạo hội sẽ mở cho hạng Gold trở lên.');
 function renderReviews(){
-  document.getElementById('reviewsFeed').innerHTML=[5,9,13,2,8].map((id,i)=>{const b=BARS.find(x=>x.id===id),r=REVIEWERS[(i*2+1)%REVIEWERS.length];return `<div class="rv"><div class="bar">${b.name} <span class="muted" style="font-weight:500">· ${cityName(b.city)}</span></div><div class="stars">${'★'.repeat(5-(i%3?0:1))}${i%3?'':'☆'}</div><p>${REVIEW_TEXT[(i+2)%REVIEW_TEXT.length]}</p><div class="by">${r[0]} · hạng ${r[1]} · ${i+1} giờ trước</div></div>`}).join('');
+  const RVB=BARS.filter(x=>isP(x)).slice(0,5);if(!RVB.length){document.getElementById('reviewsFeed').innerHTML='<div class="hist-empty">Review của khách sẽ hiện sau khi đặt bàn qua TopChill.</div>';return}
+  document.getElementById('reviewsFeed').innerHTML=RVB.map((b,i)=>{const r=REVIEWERS[(i*2+1)%REVIEWERS.length];return `<div class="rv"><div class="bar">${b.name} <span class="muted" style="font-weight:500">· ${cityName(b.city)}</span></div><div class="stars">${'★'.repeat(5-(i%3?0:1))}${i%3?'':'☆'}</div><p>${REVIEW_TEXT[(i+2)%REVIEW_TEXT.length]}</p><div class="by">${r[0]} · hạng ${r[1]} · ${i+1} giờ trước</div></div>`}).join('');
 }
 
 /* ---------- PARTNER ---------- */

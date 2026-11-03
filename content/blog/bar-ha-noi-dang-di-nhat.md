@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Bar Hà Nội 2026: top bar đáng đi nhất theo từng phong cách"
 description: "Bar Hà Nội nào đáng đi nhất 2026? Gợi ý rooftop Tây Hồ, cocktail phố cổ, club Tạ Hiện kèm giá, giờ vàng và cách đặt bàn giảm đến 40%."
 keyword: "bar hà nội"

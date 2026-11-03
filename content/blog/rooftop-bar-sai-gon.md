@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Rooftop bar Sài Gòn view đẹp: chọn bàn, giá và giờ đẹp nhất"
 description: "Rooftop bar Sài Gòn nào view đẹp nhất? Kinh nghiệm chọn bàn, dress code, bảng giá đồ uống và khung giờ vàng để đặt bàn rooftop giảm đến 40%."
 keyword: "rooftop bar sài gòn"

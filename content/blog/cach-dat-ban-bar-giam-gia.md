@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Cách đặt bàn bar giảm giá đến 40% và nhận rượu tặng"
 description: "Cách đặt bàn bar giảm giá đến 40%: cộng dồn deal bar, giờ vàng, hạng thành viên, dùng điểm trừ bill và điều kiện nhận rượu tặng bàn VIP."
 keyword: "đặt bàn bar"

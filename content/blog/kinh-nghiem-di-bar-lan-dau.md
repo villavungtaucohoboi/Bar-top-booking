@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Kinh nghiệm đi bar lần đầu: dress code, chi phí, đặt bàn, gọi đồ"
 description: "Kinh nghiệm đi bar lần đầu cho người mới: chọn bar, mặc gì, mang bao nhiêu tiền, cách đặt bàn, gọi đồ uống và về nhà an toàn."
 keyword: "kinh nghiệm đi bar"

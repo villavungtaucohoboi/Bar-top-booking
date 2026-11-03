@@ -58,8 +58,8 @@
   var M = box.querySelector('.tcc-m'), Q = box.querySelector('.tcc-q'), IN = box.querySelector('input');
 
   function barCard(b) {
-    return '<div class="tcc-card"><b>' + esc(b.name) + '</b><span class="mt">★ ' + b.rating + ' · ' + esc(b.cityName) + ' · ' + esc(b.type) + ' · ' + b.price[0] + 'k–' + b.price[1] + 'k/người</span>' +
-      '<span class="dl">Giảm ' + b.deal + '% bill · <i>⚡ ' + b.gLabel + ' -' + b.gpct + '%</i></span>' +
+    return '<div class="tcc-card"><b>' + esc(b.name) + '</b><span class="mt">' + (b.rating ? '★ ' + b.rating + ' · ' : '') + esc(b.cityName) + ' · ' + esc(b.type) + (b.priceKnown === false ? '' : ' · ' + b.price[0] + 'k–' + b.price[1] + 'k/người') + '</span>' +
+      (b.partner === false ? '<span class="dl">📞 Đặt bàn qua tổng đài</span>' : '<span class="dl">Giảm ' + b.deal + '% bill' + (b.gpct ? ' · <i>⚡ ' + b.gLabel + ' -' + b.gpct + '%</i>' : '') + '</span>') +
       '<span class="ac"><a class="go" href="' + B + '#dat-' + b.id + '" data-tcbook>Đặt bàn</a><a class="vw" href="' + B + 'bar/' + b.slug + '/">Xem bar</a></span></div>';
   }
   function contacts() {
@@ -123,12 +123,12 @@
     var bar = findBar(t), city = findCity(t);
     if (/nhan vien|nguoi that|tu van|goi lai|tong dai|gap (ai|nguoi|nv)|ho tro|admin/.test(t)) return { agent: true };
     if (bar) {
-      out.push({ t: 'bot', x: bar.name + ' (' + bar.cityName + ') mở ' + bar.hours + '. Đặt qua TopChill giảm ' + bar.deal + '% bill, đến trong giờ vàng ' + bar.gLabel + ' giảm thêm ' + bar.gpct + '%.\nƯu đãi: ' + bar.bonus + '.' });
+      out.push({ t: 'bot', x: bar.partner === false ? bar.name + ' (' + bar.cityName + ')' + (bar.hoursKnown === false ? '' : ' mở ' + bar.hours) + '. Bar này chưa có ưu đãi qua TopChill, nhưng tổng đài vẫn giữ bàn giúp bạn.' : bar.name + ' (' + bar.cityName + ') mở ' + bar.hours + '. Đặt qua TopChill giảm ' + bar.deal + '% bill' + (bar.gpct ? ', đến trong giờ vàng ' + bar.gLabel + ' giảm thêm ' + bar.gpct + '%' : '') + '.' + (bar.bonus ? '\nƯu đãi: ' + bar.bonus + '.' : '') });
       out.push({ t: 'cards', ids: [bar.id] });
       return { m: out, c: ['Bàn VIP bao nhiêu?', 'Có cần cọc không?', 'Bar khác ở ' + bar.cityName] };
     }
     if (/gio vang|happy hour/.test(t)) {
-      var g = C.bars.slice().sort(function (a, b) { return b.gpct - a.gpct; }).slice(0, 2);
+      var g = C.bars.filter(function (b) { return b.gpct > 0; }).sort(function (a, b) { return b.gpct - a.gpct; }).slice(0, 2);
       out.push({ t: 'bot', x: 'Giờ vàng là 2 giờ đầu sau khi bar mở cửa. Đặt bàn và đến trong khung này được giảm thêm 10–20%, cộng dồn với ưu đãi của bar và hạng thành viên.\nĐang giảm sâu nhất:' });
       out.push({ t: 'cards', ids: g.map(function (b) { return b.id; }) });
       return { m: out, c: ['Hà Nội', 'Sài Gòn', 'Đặt bàn giúp mình'] };
@@ -152,7 +152,7 @@
     if (city) {
       var tb = topBars(city, 3);
       if (!tb.length) return { m: [{ t: 'bot', x: 'TopChill đang cập nhật bar ở ' + cityName(city) + '. Bạn để lại số điện thoại, nhân viên sẽ tư vấn chỗ đi tối nay.' }], c: ['Gặp nhân viên'] };
-      out.push({ t: 'bot', x: 'Top bar ' + cityName(city) + ' được đặt nhiều nhất tuần này. Bấm “Đặt bàn” là chọn giờ và xác nhận luôn:' });
+      out.push({ t: 'bot', x: 'Bar nổi bật ở ' + cityName(city) + '. Bấm “Đặt bàn” là chọn giờ và gửi yêu cầu luôn:' });
       out.push({ t: 'cards', ids: tb.map(function (b) { return b.id; }) });
       return { m: out, c: ['Giá bàn VIP', 'Giờ vàng là gì?', 'Đặt giúp mình'] };
     }

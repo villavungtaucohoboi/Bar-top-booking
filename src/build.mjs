@@ -65,16 +65,20 @@ vm.runInContext(
   ';this.out={CITIES,BARS,MENU,POOL,TYPE_POOL,CITY_IMG};', ctx);
 const { CITIES, BARS, MENU, POOL, TYPE_POOL, CITY_IMG } = ctx.out;
 const pad = n => String(n).padStart(2, '0');
+const P = b => b.partner !== false;
+const hoursTxt = b => b.hoursKnown === false ? 'Liên hệ tổng đài' : b.hours;
+const priceTxtS = b => b.priceKnown === false ? 'Giá: liên hệ' : `${b.price[0]}k–${b.price[1]}k/người`;
 for (const b of BARS) {
+  if (!P(b)) { b.deal = 0; b.gpct = 0; b.bonus = ''; b.rating = null; b.reviews = 0; }
   const o = +b.hours.slice(0, 2); let c = +b.hours.slice(8, 10); if (c <= o) c += 24;
   b.gLabel = `${pad(o)}:00–${pad((o + 2) % 24)}:00`;
   b.slug = slugify(b.name);
   b.path = `bar/${b.slug}/`;
 }
-for (const c of CITIES) { c.slug = 'bar-' + slugify(c.name); c.path = c.slug + '/'; c.seo = CITY_SEO[c.id] || {}; }
+for (const c of CITIES) { c.n = BARS.filter(b => b.city === c.id).length; c.slug = 'bar-' + slugify(c.name); c.path = c.slug + '/'; c.seo = CITY_SEO[c.id] || {}; }
 const cityOf = id => CITIES.find(c => c.id === id);
 const rankOrder = { top: 0, hot: 1, null: 2 };
-const ranked = list => list.slice().sort((a, b) => (rankOrder[a.boost] - rankOrder[b.boost]) || b.rating - a.rating);
+const ranked = list => list.slice().sort((a, b) => (rankOrder[a.boost] - rankOrder[b.boost]) || (P(b) - P(a)) || (b.rating || 0) - (a.rating || 0));
 const barImgs = b => { if (b.images && b.images.length) return b.images.concat((POOL[TYPE_POOL[b.type]] || POOL.cocktail).slice(0, 1)); const p = POOL[TYPE_POOL[b.type]] || POOL.cocktail; const k = b.id % p.length; return p.slice(k).concat(p.slice(0, k)).slice(0, 3); };
 const cityImgs = c => (CITY_IMG[c.id] || []).concat(POOL.club.slice(0, 2));
 const bookHref = b => href('') + '#dat-' + b.id;
@@ -296,45 +300,44 @@ function postCard(p) {
 }
 function barCardSmall(b) {
   const c = cityOf(b.city);
-  return `<a class="card" href="${href(b.path)}"><div class="card-ph">${img(barImgs(b), 640, `${b.name} – ${b.type} ${c.name}`)}</div><div class="card-b"><span class="meta"><span class="rate">★ ${b.rating.toFixed(1)}</span><span>${esc(c.name)}</span><span>${esc(b.type)}</span></span><h3>${esc(b.name)}</h3><p>Giảm ${b.deal}% bill · giờ vàng ${b.gLabel} giảm thêm ${b.gpct}%</p></div></a>`;
+  return `<a class="card" href="${href(b.path)}"><div class="card-ph">${img(barImgs(b), 640, `${b.name} – ${b.type} ${c.name}`)}</div><div class="card-b"><span class="meta">${b.rating ? `<span class="rate">★ ${b.rating.toFixed(1)}</span>` : ''}<span>${esc(c.name)}</span><span>${esc(b.type)}</span></span><h3>${esc(b.name)}</h3><p>${P(b) ? `Giảm ${b.deal}% bill${b.gpct ? ` · giờ vàng ${b.gLabel} giảm thêm ${b.gpct}%` : ''}` : esc(b.area + ' · đặt bàn qua tổng đài')}</p></div></a>`;
 }
 
 /* ---------- 6. Trang thành phố ---------- */
 function cityFaq(c, bars) {
   if (!bars.length) return [];
-  const minP = Math.min(...bars.map(b => b.price[0])), maxP = Math.max(...bars.map(b => b.price[1]));
-  const late = bars.slice().sort((a, b) => (+b.hours.slice(8, 10) + (+b.hours.slice(8, 10) < 12 ? 24 : 0)) - (+a.hours.slice(8, 10) + (+a.hours.slice(8, 10) < 12 ? 24 : 0)))[0];
-  const gold = bars.slice().sort((a, b) => b.gpct - a.gpct)[0];
-  return [
-    { q: `Giá đi bar ở ${c.name} khoảng bao nhiêu?`, a: `Mức chi phổ biến tại các bar đối tác của TopChill ở ${c.name} từ ${minP}.000đ đến ${maxP}.000đ mỗi người. Bàn VIP thường yêu cầu chi tối thiểu 5.000.000đ, sofa nhóm từ 8.000.000đ. Đặt qua TopChill được giảm thẳng vào bill từ ${Math.min(...bars.map(b => b.deal))}% đến ${Math.max(...bars.map(b => b.deal))}%.` },
-    { q: `Bar ở ${c.name} mở cửa đến mấy giờ?`, a: `Phần lớn bar ở ${c.name} mở từ chiều tối đến 0h–2h sáng. ${late.name} mở muộn nhất trong danh sách, khung giờ ${late.hours}.` },
-    { q: `Đặt bàn bar ${c.name} có cần đặt cọc không?`, a: `Thành viên hạng Gold và Black đặt bàn qua TopChill không cần cọc và được giữ bàn 30 phút. Hạng Newbie và Silver có thể được yêu cầu cọc với bàn VIP vào tối thứ 6, thứ 7.` },
-    { q: `Giờ vàng ở bar ${c.name} là gì?`, a: `Giờ vàng là 2 giờ đầu sau khi bar mở cửa. Đặt bàn và đến trong khung này được giảm thêm 10–20%, cộng dồn với ưu đãi của bar. Hiện ${gold.name} có mức giảm giờ vàng cao nhất: ${gold.gpct}% từ ${gold.gLabel}.` },
-  ];
+  const priced = bars.filter(b => b.priceKnown !== false), timed = bars.filter(b => b.hoursKnown !== false), partners = bars.filter(P), golds = partners.filter(b => b.gpct);
+  const close = b => +b.hours.slice(8, 10) + (+b.hours.slice(8, 10) < 12 ? 24 : 0);
+  const out = [];
+  if (priced.length) out.push({ q: `Giá đi bar ở ${c.name} khoảng bao nhiêu?`, a: `Mức chi phổ biến tại các bar trong danh sách ở ${c.name} từ ${Math.min(...priced.map(b => b.price[0]))}.000đ đến ${Math.max(...priced.map(b => b.price[1]))}.000đ mỗi người. Bàn VIP thường có mức chi tối thiểu cao hơn.${partners.length ? ` Đặt qua TopChill tại bar đối tác được giảm thẳng vào bill.` : ''}` });
+  if (timed.length) { const late = timed.slice().sort((a, b) => close(b) - close(a))[0]; out.push({ q: `Bar ở ${c.name} mở cửa đến mấy giờ?`, a: `Phần lớn bar ở ${c.name} mở từ chiều tối đến khuya. ${late.name} mở muộn nhất trong danh sách, khung giờ ${late.hours}.` }); }
+  out.push({ q: `Đặt bàn bar ${c.name} qua TopChill như thế nào?`, a: `Chọn bar, chọn ngày giờ và số khách rồi gửi yêu cầu. Tổng đài TopChill gọi lại xác nhận. Có thể gọi hoặc nhắn Zalo ${CFG.hotline} để đặt nhanh.` });
+  if (golds.length) { const g = golds.slice().sort((a, b) => b.gpct - a.gpct)[0]; out.push({ q: `Giờ vàng ở bar ${c.name} là gì?`, a: `Giờ vàng là 2 giờ đầu sau khi bar đối tác mở cửa. Đến trong khung này được giảm thêm. Hiện ${g.name} giảm giờ vàng ${g.gpct}% từ ${g.gLabel}.` }); }
+  return out;
 }
 function cityPage(c) {
   const bars = ranked(BARS.filter(b => b.city === c.id));
   const S = c.seo;
-  const title = bars.length ? clip(`Bar ${c.name}: top ${bars.length} bar, lounge, club giảm đến 40% (${new Date().getFullYear()})`, 65) : `Bar ${c.name}: đặt bàn bar, lounge, club giảm giá`;
-  const desc = S.description || `Danh sách bar ${c.name} được đặt nhiều nhất: rooftop, lounge, club. Xem giá, giờ mở cửa, ưu đãi giờ vàng và đặt bàn giảm đến 40%, tặng rượu bàn VIP.`;
+  const title = bars.length ? clip(`Bar ${c.name}: ${bars.length} bar, lounge, club nổi bật, đặt bàn nhanh (${new Date().getFullYear()})`, 65) : `Bar ${c.name}: đặt bàn bar, lounge, club giảm giá`;
+  const desc = S.description || `Danh sách bar ${c.name} nổi bật: rooftop, lounge, club. Xem giá, giờ mở cửa, ưu đãi giờ vàng và đặt bàn giảm đến 40%, tặng rượu bàn VIP.`;
   const crumbs = [['Trang chủ', ''], [`Bar ${c.name}`, c.path]];
   const faq = cityFaq(c, bars);
   const related = POSTS.filter(p => p.city === c.id || p.tags.some(t => slugify(t).includes(slugify(c.name)))).concat(POSTS).filter((p, i, a) => a.indexOf(p) === i).slice(0, 3);
   const list = bars.map((b, i) => `<li class="bitem ${b.boost === 'top' ? 'top' : ''}">
     <div class="bitem-ph">${img(barImgs(b), 600, `${b.name} – ${b.type} ở ${b.area}, ${c.name}`, { eager: i === 0 })}<span class="rk">#${i + 1}</span></div>
     <div class="bitem-b">
-      <span class="meta"><span class="rate">★ ${b.rating.toFixed(1)}</span><span>${fmt(b.reviews)} đánh giá</span><span>${esc(b.area)}</span><span>${esc(b.type)}</span></span>
+      <span class="meta">${b.rating ? `<span class="rate">★ ${b.rating.toFixed(1)}</span><span>${fmt(b.reviews)} đánh giá</span>` : ''}<span>${esc(b.area)}</span><span>${esc(b.type)}</span></span>
       <h3><a href="${href(b.path)}">${esc(b.name)}</a></h3>
       <p>${esc(b.desc)}</p>
-      <div class="chips on-surface"><span class="chip gold">Giảm ${b.deal}% bill</span><span class="chip neon">⚡ Giờ vàng ${b.gLabel} -${b.gpct}%</span><span class="chip">🎁 ${esc(b.bonus)}</span></div>
-      <span class="meta"><span>Giờ mở ${b.hours}</span><span>${b.price[0]}k–${b.price[1]}k/người</span><span>${esc(b.music)}</span></span>
+      ${P(b) ? `<div class="chips on-surface"><span class="chip gold">Giảm ${b.deal}% bill</span>${b.gpct ? `<span class="chip neon">⚡ Giờ vàng ${b.gLabel} -${b.gpct}%</span>` : ''}${b.bonus ? `<span class="chip">🎁 ${esc(b.bonus)}</span>` : ''}</div>` : ''}
+      <span class="meta"><span>Giờ mở ${hoursTxt(b)}</span><span>${priceTxtS(b)}</span>${b.music ? `<span>${esc(b.music)}</span>` : ''}${b.addr ? `<span>${esc(b.addr)}</span>` : ''}</span>
       <div class="acts"><a class="btn btn-gold" href="${bookHref(b)}">Đặt bàn</a><a class="btn btn-ghost" href="${href(b.path)}">Xem chi tiết</a></div>
     </div></li>`).join('');
   const body = `
 <div class="wrap">${crumbsHtml(crumbs)}
   <section class="phero">${img(cityImgs(c), 1400, `Bar ${c.name} về đêm`, { eager: true })}
     <div class="phero-in">
-      <span class="eyebrow">${fmt(c.n)} bar đối tác · cập nhật ${fmtDate(TODAY)}</span>
+      <span class="eyebrow">${fmt(c.n)} bar · cập nhật ${fmtDate(TODAY)}</span>
       <h1>Bar ${esc(c.name)}</h1>
       <p class="lead">${esc(S.intro || `Tổng hợp bar, lounge, club ở ${c.name} được khách đặt nhiều nhất trên TopChill.`)}</p>
       <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${href('')}#tp-${c.id}">Đặt bàn bar ${esc(c.name)}</a></div>
@@ -342,8 +345,8 @@ function cityPage(c) {
   </section>
 </div>
 <section class="sec"><div class="wrap">
-  <h2>Top ${bars.length || ''} bar ${esc(c.name)} được đặt nhiều nhất</h2>
-  <p class="lead-p" style="margin-bottom:18px">Xếp hạng theo lượt đặt bàn và đánh giá của khách trên TopChill trong 30 ngày gần nhất. Bar có nhãn vàng là đối tác nổi bật.</p>
+  <h2>${bars.length || ''} bar ${esc(c.name)} nổi bật</h2>
+  <p class="lead-p" style="margin-bottom:18px">Bar đối tác có ưu đãi khi đặt qua TopChill được xếp trước. Các bar còn lại đặt bàn qua tổng đài, thông tin tổng hợp từ nguồn công khai và có thể thay đổi.</p>
   ${bars.length ? `<ol class="blist">${list}</ol>` : `<p class="muted">TopChill đang cập nhật bar đối tác tại ${esc(c.name)}. Gọi ${esc(CFG.hotline)} để được tư vấn chỗ đi tối nay.</p>`}
 </div></section>
 ${S.areas ? `<section class="sec"><div class="wrap narrow">
@@ -368,70 +371,70 @@ ${related.length ? `<section class="sec"><div class="wrap"><h2>Cẩm nang đi ba
 
 /* ---------- 7. Trang bar ---------- */
 function barPage(b) {
-  const c = cityOf(b.city);
-  const title = clip(`${b.name} ${c.name}: giá, menu, đặt bàn giảm ${b.deal}%`, 65);
-  const desc = clip(`${b.name}, ${b.type.toLowerCase()} ở ${b.area}, ${c.name}. Mở ${b.hours}, ${b.price[0]}k–${b.price[1]}k/người. Đặt qua TopChill giảm ${b.deal}%, giờ vàng giảm thêm ${b.gpct}%, ${b.bonus.toLowerCase()}.`, 160);
+  const c = cityOf(b.city), p = P(b), hk = b.hoursKnown !== false, pk = b.priceKnown !== false;
+  const title = clip(p ? `${b.name} ${c.name}: giá, menu, đặt bàn giảm ${b.deal}%` : `${b.name} ${c.name}: địa chỉ, giờ mở cửa, đặt bàn`, 65);
+  const desc = clip(`${b.name}, ${b.type.toLowerCase()} ở ${b.area}, ${c.name}.${hk ? ` Mở ${b.hours}.` : ''}${pk ? ` ${b.price[0]}k–${b.price[1]}k/người.` : ''} ${p ? `Đặt qua TopChill giảm ${b.deal}%${b.gpct ? `, giờ vàng giảm thêm ${b.gpct}%` : ''}${b.bonus ? ', ' + b.bonus.toLowerCase() : ''}.` : `${b.desc} Đặt bàn nhanh qua tổng đài TopChill.`}`, 160);
   const crumbs = [['Trang chủ', ''], [`Bar ${c.name}`, c.path], [b.name, b.path]];
-  const menu = (b.menu && b.menu.length) ? b.menu : (MENU[b.type] || []);
-  const faq = [
-    { q: `${b.name} mở cửa mấy giờ?`, a: `${b.name} mở cửa từ ${b.hours} hằng ngày. Giờ vàng ${b.gLabel} được giảm thêm ${b.gpct}% khi đặt bàn qua TopChill.` },
-    { q: `Đi ${b.name} hết bao nhiêu tiền?`, a: `Mức chi trung bình ${b.price[0]}.000đ–${b.price[1]}.000đ mỗi người. ${menu.length ? `Đồ uống nổi bật: ${menu.map(m => `${m[0]} ${fmt(m[1])}.000đ`).join(', ')}.` : ''} Đặt qua TopChill được giảm ${b.deal}% tổng bill.` },
-    { q: `${b.name} có dress code không?`, a: `Dress code của ${b.name}: ${b.dress}. Nhạc: ${b.music}.` },
-    { q: `${b.name} ở đâu?`, a: `${b.name} nằm tại ${b.addr}, ${b.area}, ${c.name}.` },
-  ];
+  const menu = (b.menu && b.menu.length) ? b.menu : p ? (MENU[b.type] || []) : [];
+  const where = [b.addr, b.area, c.name].filter(Boolean).join(', ');
+  const faq = [];
+  if (hk) faq.push({ q: `${b.name} mở cửa mấy giờ?`, a: `${b.name} mở cửa từ ${b.hours}.${b.gpct ? ` Giờ vàng ${b.gLabel} được giảm thêm ${b.gpct}% khi đặt bàn qua TopChill.` : ''} Giờ có thể thay đổi vào dịp lễ, nên gọi ${CFG.hotline} để xác nhận.` });
+  if (pk || menu.length) faq.push({ q: `Đi ${b.name} hết bao nhiêu tiền?`, a: `${pk ? `Mức chi tham khảo ${b.price[0]}.000đ–${b.price[1]}.000đ mỗi người.` : ''} ${menu.length ? `Đồ uống nổi bật: ${menu.map(m => `${m[0]} ${fmt(m[1])}.000đ`).join(', ')}.` : ''}${p ? ` Đặt qua TopChill được giảm ${b.deal}% tổng bill.` : ''}`.trim() });
+  if (b.dress || b.music) faq.push({ q: `${b.name} có dress code không?`, a: `${b.dress ? `Dress code: ${b.dress}.` : 'Nên mặc lịch sự, smart casual.'}${b.music ? ` Nhạc: ${b.music}.` : ''}` });
+  faq.push({ q: `${b.name} ở đâu?`, a: `${b.name} nằm tại ${where}.` });
   const others = ranked(BARS.filter(x => x.city === b.city && x.id !== b.id)).slice(0, 3);
-  const morePosts = POSTS.filter(p => p.bars.includes(b.slug) || p.city === b.city).concat(POSTS).filter((p, i, a) => a.indexOf(p) === i).slice(0, 3);
+  const morePosts = POSTS.filter(x => x.bars.includes(b.slug) || x.city === b.city).concat(POSTS).filter((x, i, arr) => arr.indexOf(x) === i).slice(0, 3);
+  const srcs = (b.sources || []).filter(u => /^https:\/\//.test(u)).slice(0, 4);
+  const offers = p ? `<h2>Ưu đãi khi đặt qua TopChill</h2>
+    <div class="perkbox">
+      <div class="perk"><b class="v">-${b.deal}%</b><div><b>Giảm thẳng vào bill</b><small>Quét mã QR tại quầy khi thanh toán.</small></div></div>
+      ${b.gpct ? `<div class="perk n"><b class="v">-${b.gpct}%</b><div><b>Giờ vàng ${b.gLabel}</b><small>Đến trong khung này, giảm thêm, cộng dồn.</small></div></div>` : ''}
+      ${b.bonus ? `<div class="perk"><b class="v">🎁</b><div><b>${esc(b.bonus)}</b><small>${esc(b.bonusNote || 'Tặng tại bàn theo điều kiện của bar.')}${b.promoUntil ? ' · Hạn đến ' + fmtDate(b.promoUntil) : ''}</small></div></div>` : ''}
+      <div class="perk"><b class="v">+15%</b><div><b>Hoàn điểm đổi tiền</b><small>1 điểm = 500đ, đổi về Momo hoặc trừ bill.</small></div></div>
+    </div>` : `<h2>Đặt bàn qua TopChill</h2>
+    <div class="perkbox"><div class="perk"><b class="v">📞</b><div><b>Tổng đài giữ bàn giúp bạn</b><small>Bar chưa áp dụng ưu đãi qua TopChill. Gửi yêu cầu hoặc gọi ${esc(CFG.hotline)}, tổng đài gọi lại xác nhận.</small></div></div></div>`;
   const body = `
 <div class="wrap">${crumbsHtml(crumbs)}
   <section class="phero">${img(barImgs(b), 1400, `${b.name} – ${b.type} ở ${b.area}, ${c.name}`, { eager: true })}
     <div class="phero-in">
       <span class="eyebrow">${esc(b.type)} · ${esc(b.area)}, ${esc(c.name)}${b.boost === 'top' ? ' · Top ' + esc(c.name) : ''}</span>
       <h1>${esc(b.name)}</h1>
-      <p class="lead"><span class="rate">★ ${b.rating.toFixed(1)}</span> · ${fmt(b.reviews)} đánh giá trên TopChill · ${esc(b.music)}</p>
-      <div class="chips"><span class="chip gold">Giảm ${b.deal}% bill</span><span class="chip neon">⚡ Giờ vàng ${b.gLabel} -${b.gpct}%</span><span class="chip">🎁 ${esc(b.bonus)}</span></div>
+      <p class="lead">${b.rating ? `<span class="rate">★ ${b.rating.toFixed(1)}</span> · ${fmt(b.reviews)} đánh giá trên TopChill · ` : ''}${esc(b.music || b.type)}</p>
+      ${p ? `<div class="chips"><span class="chip gold">Giảm ${b.deal}% bill</span>${b.gpct ? `<span class="chip neon">⚡ Giờ vàng ${b.gLabel} -${b.gpct}%</span>` : ''}${b.bonus ? `<span class="chip">🎁 ${esc(b.bonus)}</span>` : ''}</div>` : ''}
       <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${bookHref(b)}">Đặt bàn ${esc(b.name)}</a></div>
+      ${b.images && b.images.length ? '' : '<span class="muted" style="font-size:12px;color:#cfc6dd">Ảnh minh hoạ</span>'}
     </div>
   </section>
 </div>
 <section class="sec"><div class="wrap grid2">
   <div>
     <h2>Giới thiệu ${esc(b.name)}</h2>
-    <div class="prose">
-      <p>${esc(b.desc)}</p>
-      <p>${esc(b.name)} là ${b.type.toLowerCase()} tại ${esc(b.area)}, ${esc(c.name)}, phong cách nhạc ${esc(b.music)}. Mức chi phổ biến ${b.price[0]}.000đ–${b.price[1]}.000đ mỗi người. Bar mở cửa ${b.hours}. Muốn ngồi vị trí đẹp vào tối thứ 6 và thứ 7, bạn nên đặt bàn trước ít nhất một ngày.</p>
-    </div>
+    <div class="prose"><p>${esc(b.desc)}</p></div>
     <h2 style="margin-top:28px">Thông tin cần biết</h2>
     <table class="info"><tbody>
-      <tr><th scope="row">Địa chỉ</th><td>${esc(b.addr)}, ${esc(b.area)}, ${esc(c.name)}</td></tr>
-      <tr><th scope="row">Giờ mở cửa</th><td>${b.hours}</td></tr>
-      <tr><th scope="row">Giờ vàng</th><td>${b.gLabel}, giảm thêm ${b.gpct}%</td></tr>
-      <tr><th scope="row">Mức chi</th><td>${b.price[0]}.000đ – ${b.price[1]}.000đ / người</td></tr>
-      <tr><th scope="row">Nhạc</th><td>${esc(b.music)}</td></tr>
-      <tr><th scope="row">Dress code</th><td>${esc(b.dress)}</td></tr>
+      <tr><th scope="row">Địa chỉ</th><td>${esc(where)}</td></tr>
+      <tr><th scope="row">Giờ mở cửa</th><td>${esc(hoursTxt(b))}</td></tr>
+      ${b.gpct ? `<tr><th scope="row">Giờ vàng</th><td>${b.gLabel}, giảm thêm ${b.gpct}%</td></tr>` : ''}
+      <tr><th scope="row">Mức chi</th><td>${pk ? `${b.price[0]}.000đ – ${b.price[1]}.000đ / người` : 'Liên hệ tổng đài'}</td></tr>
+      ${b.music ? `<tr><th scope="row">Nhạc</th><td>${esc(b.music)}</td></tr>` : ''}
+      ${b.dress ? `<tr><th scope="row">Dress code</th><td>${esc(b.dress)}</td></tr>` : ''}
     </tbody></table>
+    ${srcs.length ? `<p class="muted" style="font-size:13px;margin-top:12px">Nguồn thông tin: ${srcs.map((u, i) => `<a href="${esc(u)}" target="_blank" rel="nofollow noopener">[${i + 1}]</a>`).join(' ')}. Thông tin có thể thay đổi, gọi ${esc(CFG.hotline)} để xác nhận.</p>` : ''}
   </div>
   <div>
-    <h2>Ưu đãi khi đặt qua TopChill</h2>
-    <div class="perkbox">
-      <div class="perk"><b class="v">-${b.deal}%</b><div><b>Giảm thẳng vào bill</b><small>Quét mã QR tại quầy khi thanh toán.</small></div></div>
-      <div class="perk n"><b class="v">-${b.gpct}%</b><div><b>Giờ vàng ${b.gLabel}</b><small>Đến trong khung này, giảm thêm, cộng dồn.</small></div></div>
-      <div class="perk"><b class="v">🎁</b><div><b>${esc(b.bonus)}</b><small>${esc(b.bonusNote || 'Tặng tại bàn theo điều kiện của bar.')}${b.promoUntil ? ' · Hạn đến ' + fmtDate(b.promoUntil) : ''}</small></div></div>
-      <div class="perk"><b class="v">+15%</b><div><b>Hoàn điểm đổi tiền</b><small>1 điểm = 500đ, đổi về Momo hoặc trừ bill.</small></div></div>
-    </div>
+    ${offers}
     ${menu.length ? `<h2 style="margin-top:28px">Menu nổi bật</h2><table class="info"><tbody>${menu.map(m => `<tr><th scope="row">${esc(m[0])}</th><td class="num">${fmt(m[1] * 1000)}đ</td></tr>`).join('')}</tbody></table>` : ''}
   </div>
 </div></section>
 <section class="sec"><div class="wrap narrow"><h2>Câu hỏi thường gặp về ${esc(b.name)}</h2>${faqHtml(faq)}</div></section>
 ${others.length ? `<section class="sec"><div class="wrap"><h2>Bar khác ở ${esc(c.name)}</h2><div class="cards">${others.map(barCardSmall).join('')}</div><p style="margin-top:16px"><a class="btn btn-ghost" href="${href(c.path)}">Xem tất cả bar ${esc(c.name)}</a></p></div></section>` : ''}
 ${morePosts.length ? `<section class="sec"><div class="wrap"><h2>Cẩm nang đi bar</h2><div class="cards">${morePosts.map(postCard).join('')}</div></div></section>` : ''}`;
-  const ld = [
-    breadcrumbLd(crumbs),
-    { '@context': 'https://schema.org', '@type': 'BarOrPub', name: b.name, url: url(b.path), image: UNS(barImgs(b)[0], 1200),
-      address: { '@type': 'PostalAddress', streetAddress: b.addr, addressLocality: `${b.area}, ${c.name}`, addressCountry: 'VN' },
-      openingHours: `Mo-Su ${b.hours.replace(/\s/g, '').replace('–', '-')}`, priceRange: `${b.price[0]}.000đ–${b.price[1]}.000đ`, servesCuisine: 'Đồ uống, cocktail' },
-    faqLd(faq),
-  ];
-  write(b.path + 'index.html', page({ title, desc, pathRel: b.path, image: barImgs(b)[0], ld, active: c.path }, body, { mcta: mctaBar(`Đặt bàn · giảm ${b.deal}%`, bookHref(b)) }));
+  const biz = { '@context': 'https://schema.org', '@type': 'BarOrPub', name: b.name, url: url(b.path), image: UNS(barImgs(b)[0], 1200),
+    address: { '@type': 'PostalAddress', streetAddress: b.addr || b.area, addressLocality: `${b.area}, ${c.name}`, addressCountry: 'VN' } };
+  if (hk) biz.openingHours = `Mo-Su ${b.hours.replace(/\s/g, '').replace('–', '-')}`;
+  if (pk) biz.priceRange = `${b.price[0]}.000đ–${b.price[1]}.000đ`;
+  const ld = [breadcrumbLd(crumbs), biz, faqLd(faq)];
+  write(b.path + 'index.html', page({ title, desc, pathRel: b.path, image: barImgs(b)[0], ld, active: c.path }, body, { mcta: mctaBar(p ? `Đặt bàn · giảm ${b.deal}%` : 'Đặt bàn qua tổng đài', bookHref(b)) }));
 }
 
 /* ---------- 8. Blog ---------- */
@@ -485,7 +488,7 @@ function blogIndex() {
     <p class="lead">Kinh nghiệm đi bar lần đầu, bảng giá đặt bàn, top bar Hà Nội, Sài Gòn, Đà Nẵng và cách đặt bàn giảm giá, nhận rượu tặng.</p>
   </header>
   ${tags.length ? `<div class="tags" style="margin-bottom:20px">${tags.map(t => `<a id="${slugify(t)}" href="#${slugify(t)}">#${esc(t)}</a>`).join('')}</div>` : ''}
-  <div class="cards">${POSTS.map(postCard).join('')}</div>
+  <div class="cards">${POSTS.length ? POSTS.map(postCard).join('') : '<p class="muted">Bài viết đang được cập nhật với thông tin bar thật. Quay lại sau nhé.</p>'}</div>
 </div>
 <section class="sec"><div class="wrap"><h2>Tìm bar theo thành phố</h2><div class="citylinks">${CITIES.filter(x => BARS.some(b => b.city === x.id)).map(x => `<a href="${href(x.path)}">Bar ${esc(x.name)}</a>`).join('')}</div></div></section>`;
   const ld = [breadcrumbLd(crumbs), { '@context': 'https://schema.org', '@type': 'Blog', name: 'Cẩm nang đi bar TopChill', url: url('blog/'), publisher: ORG,
@@ -568,19 +571,19 @@ function homePage() {
   let body = APP.replace('<meta name="claude:viewport-fit-sides" content="cover">\n', '');
   body = body.replace(/<title>[^<]*<\/title>\n?/, '');
   const citiesWithBars = CITIES.filter(c => BARS.some(b => b.city === c.id));
-  const seoBlock = `<section class="block"><div class="wrap">
+  const seoBlock = (POSTS.length ? `<section class="block"><div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Cẩm nang đi bar</div><h2>Kinh nghiệm &amp; review bar</h2></div><a class="lnk" href="blog/">Xem tất cả bài viết →</a></div>
     <div class="grid">${POSTS.slice(0, 3).map(p => `<a class="card" href="${p.path}" style="text-decoration:none"><div class="art"><img class="ph" src="${esc(UNS(p.cover, 700))}" data-c="${esc(POOL.cocktail[0])}" data-w="700" data-seed="${p.title.length}" data-hue="${p.title.length * 13 % 360}" alt="${esc(p.coverAlt)}" loading="lazy" decoding="async"></div><div class="card-body"><h3 style="font-size:21px">${esc(p.title)}</h3><p class="bonus">${esc(p.description)}</p></div></a>`).join('')}</div>
-  </div></section>
+  </div></section>` : '') + `
   <section class="block"><div class="wrap">
-    <div class="sec-head"><div><div class="eyebrow">Đặt bàn bar toàn quốc</div><h2>Bar Hà Nội, Sài Gòn và 63 tỉnh thành</h2></div></div>
+    <div class="sec-head"><div><div class="eyebrow">Đặt bàn bar toàn quốc</div><h2>Bar Hà Nội, Sài Gòn và 12 thành phố</h2></div></div>
     <p class="muted" style="max-width:75ch;margin-bottom:16px">TopChill là nền tảng đặt bàn bar, lounge, club tại Việt Nam. Bạn xem bảng xếp hạng bar theo lượt đặt và đánh giá thật, so sánh giá, giờ mở cửa, dress code, rồi đặt bàn trong 30 giây. Đặt qua TopChill được giảm thẳng vào bill, giảm thêm khi đến trong giờ vàng, tặng rượu cho bàn VIP và tích điểm đổi ra tiền.</p>
     <div class="rail" style="flex-wrap:wrap">${citiesWithBars.map(c => `<a class="chip" href="${c.path}">Bar ${esc(c.name)} <small>${c.n}</small></a>`).join('')}</div>
   </div></section>`;
   body = body.replace('<!--SEO_HOME-->', seoBlock);
   const i = body.indexOf('</style>') + 8;
   const title = 'TopChill – Đặt bàn bar Hà Nội, Sài Gòn giảm đến 40%, tặng rượu';
-  const desc = 'Đặt bàn bar, lounge, club tại Hà Nội, Sài Gòn, Đà Nẵng và 63 tỉnh thành. Giảm thẳng vào bill, giờ vàng giảm thêm 20%, tặng rượu bàn VIP, tích điểm đổi tiền.';
+  const desc = 'Đặt bàn bar, lounge, club tại Hà Nội, Sài Gòn, Đà Nẵng và 12 thành phố. Giảm thẳng vào bill, giờ vàng giảm thêm 20%, tặng rượu bàn VIP, tích điểm đổi tiền.';
   const ld = [
     { '@context': 'https://schema.org', '@type': 'WebSite', name: CFG.siteName, url: SITE + '/', inLanguage: 'vi-VN', publisher: ORG },
     { '@context': 'https://schema.org', ...ORG, contactPoint: { '@type': 'ContactPoint', telephone: CFG.hotline, contactType: 'customer service', areaServed: 'VN', availableLanguage: 'Vietnamese' } },
@@ -666,7 +669,7 @@ GENERATED.push('assets/site.css', 'assets/chat.css', 'assets/chat.js', 'assets/m
   const data = { base: BASE, hotline: CFG.hotline, demo: !!CFG.chatDemo && !(CFG.tawkPropertyId && CFG.tawkWidgetId), zalo: CFG.zalo || '', messenger: CFG.messenger || '', telegram: CFG.telegram || '',
     tawkPropertyId: CFG.tawkPropertyId || '', tawkWidgetId: CFG.tawkWidgetId || '',
     cities: CITIES.map(c => ({ id: c.id, name: c.name })),
-    bars: BARS.map(b => ({ id: b.id, name: b.name, slug: b.slug, city: b.city, cityName: cityOf(b.city).name, type: b.type, rating: b.rating, price: b.price, deal: b.deal, gpct: b.gpct, gLabel: b.gLabel, hours: b.hours, bonus: b.bonus, rank: order.indexOf(b) })) };
+    bars: BARS.map(b => ({ id: b.id, name: b.name, slug: b.slug, city: b.city, cityName: cityOf(b.city).name, type: b.type, rating: b.rating, partner: P(b), price: b.price, priceKnown: b.priceKnown !== false, hoursKnown: b.hoursKnown !== false, deal: b.deal, gpct: b.gpct, gLabel: b.gLabel, hours: b.hours, bonus: b.bonus, rank: order.indexOf(b) })) };
   fs.writeFileSync(path.join(OUT, 'assets/chat-data.js'), 'window.TC_CHAT=' + JSON.stringify(data) + ';\n');
 }
 

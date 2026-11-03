@@ -93,6 +93,7 @@
         <div class="fld"><label for="f_close">Giờ đóng cửa</label><select id="f_close"></select></div>
         <div class="fld"><label for="f_dress">Dress code</label><input id="f_dress" maxlength="60"></div>
       </div>
+      <label class="chk"><input type="checkbox" id="f_nohours"> Chưa rõ giờ mở cửa (web hiện “Liên hệ tổng đài”)</label>
       <div class="g3">
         <div class="fld"><label for="f_pmin">Giá từ <small>nghìn đ/người</small></label><input id="f_pmin" type="number" inputmode="numeric" min="0" step="10"></div>
         <div class="fld"><label for="f_pmax">Giá đến <small>nghìn đ/người</small></label><input id="f_pmax" type="number" inputmode="numeric" min="0" step="10"></div>
@@ -110,6 +111,8 @@
       <button class="btn btn-ghost" type="button" id="addMenu">+ Thêm món</button>
 
       <h2 style="margin-top:6px">Khuyến mãi &amp; quà tặng</h2>
+      <label class="chk"><input type="checkbox" id="f_partner"> Đã ký hợp tác: hiện ưu đãi bên dưới trên web</label>
+      <p class="help" id="partnerHint" style="margin:0">Chưa tích: web chỉ hiện “Đặt bàn qua tổng đài”, không hiện % giảm, giờ vàng, quà tặng, điểm đánh giá.</p>
       <div class="g3">
         <div class="fld"><label for="f_deal">Giảm bill (%)</label><input id="f_deal" type="number" inputmode="numeric" min="0" max="60"></div>
         <div class="fld"><label for="f_gpct">Giờ vàng giảm thêm (%)</label><input id="f_gpct" type="number" inputmode="numeric" min="0" max="50"></div>
@@ -166,7 +169,7 @@ function cityName(id){var c=D.cities.filter(function(x){return x.id===id})[0];re
 function renderList(){var q=slug($('q').value||'');
   $('list').innerHTML=data.bars.filter(function(b){return !q||slug(b.name+' '+b.area+' '+cityName(b.city)).indexOf(q)>=0}).map(function(b){
     var th=b.images&&b.images[0]?'<img src="'+esc(imgUrl(b.images[0]))+'" alt="">':'<span class="ph0"></span>';
-    var tg=b.hidden?'<span class="tag off">ẨN</span>':b.boost==='top'?'<span class="tag top">TOP</span>':b.boost==='hot'?'<span class="tag hot">HOT</span>':'';
+    var tg=b.hidden?'<span class="tag off">ẨN</span>':b.partner===false?'<span class="tag off">CHƯA HT</span>':b.boost==='top'?'<span class="tag top">TOP</span>':b.boost==='hot'?'<span class="tag hot">HOT</span>':'';
     return '<button type="button" class="it'+(cur&&cur.id===b.id?' on':'')+'" data-id="'+b.id+'">'+th+'<span><b>'+esc(b.name)+'</b><small>'+esc(cityName(b.city))+' · '+esc(b.type)+' · -'+b.deal+'%</small></span>'+tg+'</button>'}).join('')||'<p class="help">Không có bar nào khớp.</p>'}
 $('q').oninput=renderList;
 $('list').onclick=function(e){var b=e.target.closest('[data-id]');if(!b)return;if(dirty&&!confirmLeave())return;edit(+b.dataset.id);if(matchMedia('(max-width:900px)').matches)$('form').scrollIntoView({behavior:'smooth'})};
@@ -179,18 +182,18 @@ for(var h=0;h<24;h++){var v=String(h).padStart(2,'0')+':00';$('f_open').insertAd
 var F=['name','type','city','area','addr','dress','music','desc','deal','gpct','bonus','rating','reviews'];
 function edit(id){
   var b=data.bars.filter(function(x){return x.id===id})[0];
-  cur=b?JSON.parse(JSON.stringify(b)):{id:0,name:'',type:D.types[0],city:D.cities[0].id,area:'',addr:'',hours:'18:00 – 02:00',price:[200,500],music:'',dress:'Tự do',desc:'',rating:4.5,reviews:0,deal:15,gpct:10,bonus:'',bonusNote:'',promoUntil:'',boost:null,hue:Math.floor(Math.random()*360),menu:[],images:[],hidden:false};
+  cur=b?JSON.parse(JSON.stringify(b)):{id:0,name:'',type:D.types[0],city:D.cities[0].id,area:'',addr:'',hours:'18:00 – 02:00',price:[200,500],music:'',dress:'Tự do',desc:'',rating:4.5,reviews:0,deal:15,gpct:10,bonus:'',bonusNote:'',promoUntil:'',boost:null,partner:false,hoursKnown:true,hue:Math.floor(Math.random()*360),menu:[],images:[],hidden:false};
   $('fTitle').textContent=b?'Sửa: '+b.name:'Thêm bar mới';$('del').hidden=!b;
   F.forEach(function(k){$('f_'+k).value=cur[k]==null?'':cur[k]});
   $('f_open').value=cur.hours.slice(0,5);$('f_close').value=cur.hours.slice(8,13);
   $('f_pmin').value=cur.price[0];$('f_pmax').value=cur.price[1];
-  $('f_note').value=cur.bonusNote||'';$('f_until').value=cur.promoUntil||'';$('f_boost').value=cur.boost||'';$('f_hidden').checked=!!cur.hidden;
+  $('f_note').value=cur.bonusNote||'';$('f_partner').checked=cur.partner!==false;$('f_nohours').checked=cur.hoursKnown===false;$('partnerHint').hidden=$('f_partner').checked;$('f_until').value=cur.promoUntil||'';$('f_boost').value=cur.boost||'';$('f_hidden').checked=!!cur.hidden;
   pics=(cur.images||[]).map(function(p){return{path:p,url:imgUrl(p)}});
   renderPics();renderMenu();$('descC').textContent=($('f_desc').value.length)+'/400';
   say($('msg'),'');dirty=false;renderList();
 }
 $('newBar').onclick=function(){if(dirty&&!confirmLeave())return;edit(null);$('f_name').focus()};
-$('form').addEventListener('input',function(e){dirty=true;if(e.target.id==='f_desc')$('descC').textContent=e.target.value.length+'/400'});
+$('form').addEventListener('input',function(e){dirty=true;if(e.target.id==='f_partner')$('partnerHint').hidden=e.target.checked;if(e.target.id==='f_desc')$('descC').textContent=e.target.value.length+'/400'});
 
 /* ---------- ảnh ---------- */
 function renderPics(){
@@ -239,7 +242,7 @@ $('form').onsubmit=function(e){e.preventDefault();
   var dup=data.bars.some(function(b){return b.id!==cur.id&&slug(b.name)===slug(name)});if(dup){say($('msg'),'Đã có bar trùng tên. Thêm khu vực vào tên để phân biệt.','err');return}
   var b={};F.forEach(function(k){b[k]=$('f_'+k).value.trim()});
   b.name=name;b.deal=deal;b.gpct=gp;b.rating=Math.max(1,Math.min(5,+b.rating||4.5));b.reviews=Math.max(0,parseInt(b.reviews)||0);
-  b.hours=$('f_open').value+' – '+$('f_close').value;b.price=[pmin,pmax||pmin];
+  b.hours=$('f_open').value+' – '+$('f_close').value;b.hoursKnown=!$('f_nohours').checked;b.price=[pmin,pmax||pmin];b.priceKnown=!!(pmin||pmax);b.partner=$('f_partner').checked;
   b.bonusNote=$('f_note').value.trim();b.promoUntil=$('f_until').value||'';b.boost=$('f_boost').value||null;b.hidden=$('f_hidden').checked;
   b.menu=(cur.menu||[]).filter(function(m){return String(m[0]).trim()}).map(function(m){return[String(m[0]).trim(),+m[1]||0]});
   var isNew=!cur.id,sl=slug(name)||'bar',files=[],stamp=Date.now().toString(36);
