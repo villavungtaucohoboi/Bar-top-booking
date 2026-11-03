@@ -837,14 +837,14 @@
    "demo": true
   },
   {
-   "name": "A Plus H",
+   "name": "APLUS HANOI",
    "type": "Club",
    "city": "hn",
    "area": "Ba Đình",
    "addr": "78 Yên Phụ",
    "dress": "Tự do",
-   "music": "",
-   "desc": "APLUS HANOI (tọa lạc tại 78 Yên Phụ, Ba Đình, Hà Nội) là một super club chuyên về dòng nhạc điện tử và âm nhạc sôi động với các thể loại chính sau:\n• Big-room EDM: Các giai điệu điện tử bùng nổ, cao trào lớn phù hợp với không gian club quy mô lớn.\n• Trance: Nhạc điện tử có tiết tấu thôi miên, giai điệu dồn dập và sâu lắng.\n• Techno: Nhạc điện tử thiên về âm bass mạnh, tiết tấu đều và hiện đại.",
+   "music": "EDM, Trance, Techno",
+   "desc": "APLUS HANOI (APLUS CLUB) là super club tọa lạc tại 78 Yên Phụ, Ba Đình, Hà Nội, chuyên về nhạc điện tử với không gian quy mô lớn. Âm nhạc xoay quanh big-room EDM với những đoạn cao trào bùng nổ, trance có tiết tấu dồn dập, cuốn hút cùng techno nặng bass và hiện đại, thường đi kèm các đêm diễn của DJ. Đây là lựa chọn cho những ai muốn quẩy hết mình và hòa vào đám đông trên sàn nhảy.",
    "deal": 5,
    "gpct": 5,
    "bonus": "",
@@ -876,13 +876,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Pub kiểu phương Tây nằm trên tầng cao một tòa nhà Becamex, có bàn bi-a, phi tiêu, chiếu thể thao và món pizza đế mỏng; cuối tuần hay kín chỗ.",
+   "desc": "JD's Bar & Grill là pub kiểu phương Tây trên đường Trần Phú, khu dân cư Chánh Nghĩa, TP. Thủ Dầu Một, nằm trên tầng cao một tòa nhà Becamex. Quán có bàn bi-a, phi tiêu và màn hình chiếu thể thao, thực đơn nổi bật với pizza đế mỏng. Không gian hợp với nhóm bạn muốn vừa ăn uống vừa xem bóng đá, chơi game; cuối tuần quán thường khá kín chỗ.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -899,7 +899,8 @@
    "sources": [
     "https://www.foody.vn/binh-duong/dia-diem-phuc-vu-bia",
     "https://itchyfeetonthecheap.com/2015/04/21/a-guide-to-thu-dau-mot-and-binh-duong-province-vietnam/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 21,
@@ -911,13 +912,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "DJ về khuya, ca sĩ khách mời",
    "dress": "",
-   "desc": "Lounge trên tầng 4 Becamex Tower với không gian sang trọng, thường mời ca sĩ và có DJ về khuya; cuối tuần nên đặt bàn trước.",
+   "desc": "Vita Club là lounge nằm trên tầng 4 tòa nhà Becamex Tower, 230 Đại lộ Bình Dương, ngay trung tâm TP. Thủ Dầu Một. Không gian được khách nhận xét là sang trọng, thường có ca sĩ khách mời biểu diễn và DJ lên nhạc về khuya. Đây là lựa chọn cho nhóm bạn muốn đi chơi đêm có âm nhạc sôi động; cuối tuần bàn thường kín nên đặt trước.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -934,7 +935,8 @@
    "sources": [
     "https://www.foody.vn/binh-duong/bar-pub",
     "https://www.foody.vn/binh-duong/bar-pub-phuc-vu-vao-buoi-toi"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 22,
@@ -946,13 +948,13 @@
    "hours": "18:00 – 00:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    350,
+    750
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Ca sĩ và DJ vào cuối tuần",
    "dress": "",
-   "desc": "Lounge có ca sĩ và DJ biểu diễn cuối tuần, được giới thiệu là có mức giá khá dễ chịu.",
+   "desc": "Imperial Dragon Lounge là lounge trên đường Nguyễn Đình Chiểu, TP. Thủ Dầu Một, Bình Dương. Vào cuối tuần, quán có ca sĩ và DJ biểu diễn, tạo không khí sôi động cho buổi tối. Nơi đây thường được chọn để tổ chức tiệc sinh nhật và hợp với nhóm bạn muốn nghe nhạc, giao lưu với mức chi tiêu được giới thiệu là khá dễ chịu.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -969,7 +971,8 @@
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/discover-the-most-unique-bars-in-binh-duong-mytourvn.html",
     "https://toplist.vn/top-list/quan-bar-doc-dao-nhat-nen-thu-tai-binh-duong-57373.htm"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 23,
@@ -981,13 +984,13 @@
    "hours": "17:00 – 01:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    700
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail phong cách cổ điển có khu ngồi ngoài trời, phục vụ cocktail, bia, burger và shisha; thứ Sáu, thứ Bảy mở đến 2 giờ sáng.",
+   "desc": "Bee Beer Cocktail là quán cocktail phong cách cổ điển ở số 27 Lê Lai, phường Hòa Phú, TP. Thủ Dầu Một. Quán chia khu trong nhà và khu ngoài trời, nơi nhiều khách thích ngồi ngắm hoàng hôn trong không khí nhẹ nhàng. Thực đơn có cocktail từ dễ uống đến cầu kỳ, bia, burger và shisha, hợp với giới trẻ và nhóm bạn muốn tụ tập chill buổi tối.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1004,7 +1007,8 @@
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/bee-beer-cocktail-diem-chill-hap-dan-nhat-cho-gioi-tre.html",
     "https://mia.vn/cam-nang-du-lich/bee-beer-cocktail-dia-diem-chill-bac-nhat-danh-cho-gioi-tre-6733"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 24,
@@ -1016,13 +1020,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    1200
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Pub ăn uống trên đường Bạch Đằng ven sông, dễ tìm, view đẹp và có phục vụ cocktail.",
+   "desc": "Chích Pub - Food & Beer là pub ăn uống tại 35 Bạch Đằng, phường Phú Cường, nằm trên tuyến đường ven sông dễ tìm của TP. Thủ Dầu Một. Quán có view đẹp, không gian phối nhiều phong cách trang trí, phục vụ cocktail, bia và các món như pizza, buổi tối có DJ. Đây là điểm hẹn phù hợp cho nhóm bạn đi ăn uống hoặc tổ chức sinh nhật.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1038,7 +1042,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/binh-duong/bar-pub"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 25,
@@ -1050,13 +1055,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    700
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cà phê kiêm beer bar trong khu dân cư Chánh Nghĩa, không khí sôi động, giá vừa phải, hợp đi nhóm cuối tuần.",
+   "desc": "Nhà Xưởng Số 3 - Coffee & Beer Bar là quán cà phê kiêm beer bar tại 26-28 Đường D, khu dân cư Chánh Nghĩa, TP. Thủ Dầu Một. Quán có không khí nhộn nhịp, được khách nhận xét là nơi thích hợp để xả stress với mức giá tầm trung. Đây là lựa chọn hợp cho nhóm bạn muốn tụ tập uống bia, trò chuyện vào cuối tuần.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1072,7 +1077,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/binh-duong/dia-diem-phuc-vu-bia"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 26,
@@ -1084,13 +1090,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bia ở khu Lái Thiêu, Thuận An, theo dạng beer club bình dân.",
+   "desc": "Beer Zone - Vĩnh Phú 41 là quán bia theo dạng beer club bình dân tại số 25 đường Vĩnh Phú 41, phường Lái Thiêu, Thuận An, Bình Dương. Quán phù hợp với người dân và dân văn phòng khu Lái Thiêu muốn có chỗ gần nhà để tụ tập bạn bè, uống bia và trò chuyện sau giờ làm trong không khí thoải mái.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1106,7 +1112,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/binh-duong/food/beer-club"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 27,
@@ -1118,13 +1125,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cà phê kiêm bia ở Dĩ An, được khách khen không gian thiết kế đẹp và nhạc hay.",
+   "desc": "Ngáo - Coffee & Beer là quán cà phê kiêm bia tại 105 đường GS1, phường Đông Hòa, Dĩ An, Bình Dương. Quán được khách khen có không gian thiết kế đẹp và chọn nhạc hay. Đây là điểm hẹn phù hợp cho các bạn trẻ khu Dĩ An muốn ngồi cà phê ban ngày hoặc uống bia nhẹ nhàng cùng bạn bè vào buổi tối.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1140,7 +1147,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/binh-duong/food/beer-club"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 28,
@@ -1152,13 +1160,13 @@
    "hours": "16:00 – 01:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    600,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "DJ, sự kiện có nghệ sĩ khách mời",
    "dress": "",
-   "desc": "Beer club kết hợp lounge với không khí sôi động và dàn âm thanh tốt, thường tổ chức sự kiện hằng tuần.",
+   "desc": "INU Beer Club & Lounge là beer club kết hợp lounge tại 81A Trần Phú, phường Cái Khế, quận Ninh Kiều, Cần Thơ. Không gian rộng, có tầng lửng và quầy bar trung tâm, nội thất hiện đại cùng dàn âm thanh chất lượng. Quán thường tổ chức sự kiện hằng tuần với DJ và nghệ sĩ khách mời, thu hút giới trẻ, khách nước ngoài và các nhóm tổ chức sinh nhật.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1175,7 +1183,8 @@
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-6-largest-bars-in-can-tho.html",
     "https://impresstravel.com/?p=50435"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 29,
@@ -1187,13 +1196,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    500,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "DJ, nhạc điện tử",
    "dress": "",
-   "desc": "Club được đầu tư hệ thống âm thanh, ánh sáng và DJ, thường được nhắc tới trong nhóm club lớn của Cần Thơ.",
+   "desc": "Golf Club là club trên đường Lê Lợi, phường Cái Khế, quận Ninh Kiều, Cần Thơ, thường được nhắc tới trong nhóm club lớn của thành phố. Club được đầu tư hệ thống âm thanh, ánh sáng nhập khẩu cùng DJ chơi nhạc điện tử, nội thất mang phong cách trẻ trung. Đây là điểm đến cho những ai muốn quẩy nhạc sàn và ăn diện đi chơi đêm cuối tuần.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1210,7 +1219,8 @@
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-6-largest-bars-in-can-tho.html",
     "https://impresstravel.com/?p=54991"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 30,
@@ -1222,13 +1232,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Club trên đường Trần Văn Khéo, nằm trong các danh sách quán bar lớn tại Cần Thơ.",
+   "desc": "777 Club là club tại 127 Trần Văn Khéo, phường Cái Khế, quận Ninh Kiều, nằm trong các danh sách quán bar lớn tại Cần Thơ. Club đã hoạt động nhiều năm, thường xuyên có chương trình biểu diễn với ca sĩ, DJ và vũ đoàn. Đây là lựa chọn dành cho nhóm bạn muốn trải nghiệm không khí club sôi động về đêm ở trung tâm Ninh Kiều.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1245,7 +1255,8 @@
    "sources": [
     "https://toplist.vn/top-list/quan-bar-lon-nhat-tai-can-tho-14699.htm",
     "https://impresstravel.com/?p=50435"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 31,
@@ -1257,13 +1268,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    550,
+    1250
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "DJ, ca sĩ khách mời",
    "dress": "",
-   "desc": "Club trên đường Trần Văn Khéo, theo khách review thường mời ca sĩ từ Sài Gòn về biểu diễn và đã nâng cấp phần âm nhạc.",
+   "desc": "XK Club là club trên đường Trần Văn Khéo, quận Ninh Kiều, Cần Thơ. Theo đánh giá của khách, club thường mời ca sĩ từ Sài Gòn về biểu diễn, phần âm nhạc đã được nâng cấp với DJ chơi nhạc sôi động, bên cạnh shisha và đĩa trái cây phong phú. Khách tại đây phần nhiều ở độ tuổi trưởng thành, hợp với những ai thích nghe nhạc, giao lưu hơn là quẩy hết mình.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1280,7 +1291,8 @@
    "sources": [
     "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu",
     "https://www.foody.vn/can-tho/bar-pub-co-dat-ban-truoc"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 32,
@@ -1292,13 +1304,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    600,
+    1000
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Nightclub nằm trong khu phức hợp khách sạn The Grand ANAN.",
+   "desc": "The Grand ANAN Hotel Nightclub là nightclub nằm trong khu phức hợp khách sạn The Grand ANAN tại 139A Trần Văn Khéo, quận Ninh Kiều, khu vực trung tâm của Cần Thơ. Vị trí trong khách sạn giúp nơi đây thuận tiện cho khách lưu trú cũng như người dân địa phương muốn có điểm vui chơi về đêm ngay trung tâm thành phố.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1314,7 +1326,8 @@
    "partner": false,
    "sources": [
     "https://kupi.com/en-ae/explore/vietnam/can-tho/the-grand-anan-hotel-nightclub"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 33,
@@ -1326,13 +1339,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    1250
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "DJ",
    "dress": "",
-   "desc": "Lounge chơi nhạc DJ trên trục đường 30 Tháng 4, được khách nhận xét có âm thanh và ánh sáng khá tốt.",
+   "desc": "Mode DJ Lounge là lounge chơi nhạc DJ tại 354 đường 30 Tháng 4, phường Xuân Khánh, quận Ninh Kiều, Cần Thơ. Khách nhận xét âm thanh và ánh sáng khá tốt, nhạc DJ mạnh, shisha ngon, đôi khi có ca sĩ từ Sài Gòn về biểu diễn. Nơi đây hợp với nhóm bạn yêu nhạc điện tử muốn tìm một điểm lounge sôi động trên trục đường chính của thành phố.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1349,7 +1362,8 @@
    "sources": [
     "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu",
     "https://www.foody.vn/can-tho/bar-pub-phuc-vu-vao-buoi-toi"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 34,
@@ -1361,13 +1375,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    450,
+    850
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Beer club trên đường Lê Lợi, khu Cái Khế gần trung tâm Ninh Kiều.",
+   "desc": "Knight Beer Club là beer club tại 27 Lê Lợi, phường Cái Khế, gần trung tâm quận Ninh Kiều, Cần Thơ. Không gian rộng rãi với các bàn đặt thoáng, nhạc mạnh, có phục vụ shisha và nhân viên được khách khen nhiệt tình, chu đáo. Đây là lựa chọn cho nhóm bạn muốn ngồi uống bia, nghe nhạc sôi động trong không khí beer club.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1383,7 +1397,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 35,
@@ -1395,13 +1410,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    450,
+    850
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "Smart casual",
-   "desc": "Quầy bar trên sân thượng khách sạn Iris, nổi bật với tầm nhìn toàn cảnh thành phố về đêm.",
+   "desc": "Iris Sky Bar là quầy bar trên sân thượng khách sạn Iris, 224 đường 30 Tháng 4, phường Xuân Khánh, quận Ninh Kiều, Cần Thơ. Từ trên cao, khách có thể ngắm toàn cảnh thành phố về đêm và trục đường 30 Tháng 4 nhộn nhịp bên dưới. Quán có chỗ ngồi trong nhà và ngoài trời, thiết kế đơn giản, hợp với cặp đôi hoặc nhóm nhỏ muốn thư giãn, trò chuyện với view thành phố.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1418,7 +1433,8 @@
    "sources": [
     "https://evendo.com/locations/vietnam/mekong-delta/bar/iris-sky-bar",
     "https://theculturetrip.com/asia/vietnam/can-tho/articles/best-bars-can-tho-vietnam"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 36,
@@ -1430,13 +1446,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    450,
+    950
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Sky bar ngoài trời ở tầng 15 khách sạn Holiday One, có hồ bơi và tầm nhìn ra thành phố.",
+   "desc": "Holiday One Sky Bar là sky bar ở tầng 15 khách sạn Holiday One, 59-65 Phạm Ngọc Thạch, phường Cái Khế, quận Ninh Kiều, Cần Thơ. Quán có hai khu vực gồm phòng lạnh bên trong và sân thượng ngoài trời, kèm hồ bơi nhỏ và quầy bar. Đây là nơi phù hợp để ngồi uống nước, ngắm cảnh thành phố thoáng đãng, đặc biệt vào buổi tối.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1453,7 +1469,8 @@
    "sources": [
     "https://www.foody.vn/can-tho/holiday-one-sky-bar-pham-ngoc-thach",
     "https://theculturetrip.com/asia/vietnam/can-tho/articles/best-bars-can-tho-vietnam"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 37,
@@ -1465,13 +1482,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail kiêm bếp ở trung tâm Ninh Kiều, không gian thư giãn với sofa và nến, mở đến khuya.",
+   "desc": "Hiraeth Cocktail Bar & Kitchen là quán cocktail kiêm bếp tại 199 Nguyễn Thị Minh Khai, quận Ninh Kiều, cách bến Ninh Kiều không xa. Quán nằm hơi khuất khỏi con đường đông đúc, mang cảm giác speakeasy hiện đại với sofa, ánh nến và không gian thư giãn, mở đến khuya. Nơi đây hợp với nhóm nhỏ, cặp đôi muốn uống vài ly trước bữa tối hoặc kéo dài buổi tối nhẹ nhàng.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1488,7 +1505,8 @@
    "sources": [
     "https://impresstravel.com/?p=54991",
     "https://wanderlog.com/place/details/9260001"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 38,
@@ -1500,13 +1518,13 @@
    "hours": "18:00 – 00:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    700
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Không gian yên tĩnh, không mở nhạc sôi động",
    "dress": "",
-   "desc": "Quán cocktail và rượu vang trên tầng một một căn nhà nhìn ra hồ Xáng Thổi, không khí yên tĩnh.",
+   "desc": "Déjà Vu - Cocktail & Wine Bar là quán chuyên cocktail và rượu vang tại 142 Huỳnh Cương, phường An Cư, quận Ninh Kiều, Cần Thơ. Quán nằm trên tầng một của một căn nhà nhìn ra hồ Xáng Thổi, không mở nhạc ồn ào hay đèn chớp nháy mà giữ không gian yên tĩnh. Đây là lựa chọn hợp cho cặp đôi hoặc nhóm bạn muốn thưởng thức đồ uống và trò chuyện bên hồ.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1522,7 +1540,8 @@
    "partner": false,
    "sources": [
     "https://toplist.vn/top-list/quan-bar-lon-nhat-tai-can-tho-14699.htm"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 39,
@@ -1534,13 +1553,13 @@
    "hours": "19:00 – 23:30",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    350,
+    950
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Không gian hiện đại kết hợp cocktail và ăn tối; ban ngày hoạt động như quán cà phê.",
+   "desc": "LEGI Cocktails & Dining là quán cocktail kết hợp ăn tối tại 160 Đồng Văn Cống, quận Bình Thủy, Cần Thơ. Ban ngày quán hoạt động như quán cà phê, buổi tối chuyển sang phục vụ cocktail đặc trưng cùng món khai vị và món chính. Không gian theo phong cách châu Âu cổ điển với tông nâu trắng và nội thất gỗ, hợp cho bữa tối hẹn hò hoặc gặp gỡ bạn bè.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1558,7 +1577,8 @@
     "https://kupi.com/en-ae/explore/vietnam/can-tho/legi-cocktails-and-dining",
     "https://evendo.com/locations/vietnam/can-tho/bar/legi-cocktails-dining",
     "https://wanderlog.com/place/details/10838113/legi-cocktails--dining"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 40,
@@ -1570,13 +1590,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bia theo phong cách làng quê, cách trung tâm Ninh Kiều khoảng 10–15 phút di chuyển.",
+   "desc": "Thôn Yang Kỳ là quán bia theo phong cách làng quê tại 01 Trần Văn Giàu, phường Cái Khế, quận Ninh Kiều, Cần Thơ, cách trung tâm khoảng 10–15 phút di chuyển. Không gian mang nét hoài cổ với họa tiết truyền thống, khoảng sân mở và nhiều cây xanh. Nơi đây phù hợp cho các buổi tụ tập nhóm bạn đông người hoặc bữa tối cùng gia đình.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1592,7 +1612,8 @@
    "partner": false,
    "sources": [
     "https://www.kupi.com/en-ae/explore/vietnam/can-tho/thon-yang-ky-can-tho"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 41,
@@ -1604,13 +1625,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bia bình dân với không gian ngoài trời bên bờ hồ Bún Xáng.",
+   "desc": "Tiệm Bia Nhà An là quán bia bình dân với không gian ngoài trời bên bờ hồ Bún Xáng, phường An Khánh, quận Ninh Kiều, Cần Thơ. Quán được khách ví như một góc Đà Lạt giữa lòng thành phố và có phục vụ các loại bia lên men từ trái cây dễ uống. Đây là chỗ hợp với nhóm bạn muốn ngồi chill, trò chuyện nhẹ nhàng bên hồ vào buổi tối.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1626,7 +1647,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 42,
@@ -1638,13 +1660,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "DJ buổi tối",
    "dress": "",
-   "desc": "Quán cocktail nổi tiếng trên phố Trương Công Định. Buổi tối có DJ chơi nhạc.",
+   "desc": "The Fog Bar là quán cocktail nằm trên phố Trương Công Định, ngay khu trung tâm Đà Lạt. Không gian quán nổi bật với đèn neon, tranh vẽ phong cách graffiti và những chai rượu treo ngược trên trần. Buổi tối thường có DJ chơi nhạc, thiên về EDM và nhạc Âu Mỹ, hợp với nhóm bạn trẻ muốn vừa nhâm nhi cocktail vừa hòa vào không khí sôi động.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1661,7 +1683,8 @@
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/top-6-quan-bar-o-da-lat-voi-gia-cuc-ky-hap-dan-tu-50000-vnd.html",
     "https://mytour.vn/en/blog/am-thuc/top-6-best-cocktail-bars-in-da-lat-mytour.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 43,
@@ -1673,13 +1696,13 @@
    "hours": "15:00 – 01:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    400,
+    700
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc nhẹ ban ngày, EDM buổi tối",
    "dress": "",
-   "desc": "Quán bar phong cách châu Âu, đông khách trẻ. Ban ngày nhạc nhẹ, tối chuyển sang EDM.",
+   "desc": "B21 Bar là quán bar phong cách châu Âu tại số 68 Trương Công Định, góp phần làm nên con phố về đêm nhộn nhịp ở trung tâm Đà Lạt. Ban ngày quán mở nhạc nhẹ để khách ngồi thư giãn, đến tối chuyển sang EDM do DJ chơi. Quán đông khách trẻ, buổi tối thường kín bàn nên nhóm đông người nên đặt chỗ trước.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1696,7 +1719,8 @@
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-7-most-prestigious-cocktail-bars-in-da-lat-lam-dong-mytour.html",
     "https://www.fodors.com/world/asia/vietnam/the-south-central-coasts-and-highlands/dalat/things-to-do/nightlife"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 44,
@@ -1708,13 +1732,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Jazz, acoustic",
    "dress": "",
-   "desc": "Quán phục vụ cocktail pha chế lạ mắt, bia và rượu cao cấp, có view hồ Xuân Hương. Nhạc thường là jazz hoặc acoustic.",
+   "desc": "Woody Classic Bar là quán cocktail mang phong cách cổ điển, gần hồ Xuân Hương ở trung tâm Đà Lạt. Quán phục vụ cocktail pha chế lạ mắt cùng bia và các loại rượu cao cấp, trong không gian yên tĩnh, lãng mạn với nhạc jazz hoặc acoustic. Phù hợp cho cặp đôi hoặc nhóm nhỏ muốn trò chuyện nhẹ nhàng trong buổi tối se lạnh.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1731,7 +1755,8 @@
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/top-5-quan-cocktail-dep-nhat-tai-da-lat.html",
     "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-da-lat-57085.htm"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 45,
@@ -1743,13 +1768,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    1000
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar kiến trúc mê cung nhiều tầng hang hốc, người địa phương gọi là Đường Lên Trăng. Cách chợ trung tâm chừng 100 m.",
+   "desc": "Maze Bar (100 Roofs Café), còn được người địa phương gọi là Đường Lên Trăng, nằm trên đường Phan Bội Châu, cách chợ Đà Lạt chừng 100 m. Quán có kiến trúc mê cung nhiều tầng với lối đi quanh co, hang hốc, phòng ẩn và cầu thang xoắn dẫn lên khu vườn trên mái. Đây là điểm dừng chân thú vị cho du khách thích khám phá không gian lạ và ngồi lại với một ly đồ uống.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1766,7 +1791,8 @@
    "sources": [
     "https://atlasobscura.com/places/100-roofs-cafe",
     "https://www.bdatrip.com/da-lat-city/travel-tips/the-weird-and-wonderful-maze-bar-of-dalat"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 46,
@@ -1778,13 +1804,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc nhẹ",
    "dress": "",
-   "desc": "Bên ngoài trông như một quán cà phê bình thường, bên trong là không gian tối với tông gỗ trầm. Thực đơn cocktail được đánh giá cao.",
+   "desc": "The Balcony Speakeasy Bar là quán cocktail kiểu speakeasy ở trung tâm Đà Lạt. Bên ngoài trông như một quán cà phê bình thường, bên trong là không gian tối với tông gỗ trầm, tầng trên có chỗ ngồi đệm ngoài trời nhìn ra thành phố. Thực đơn tập trung vào cocktail, nhạc nhẹ, hợp với khách thích tìm những quán bar ẩn mình để trò chuyện.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1801,7 +1827,8 @@
    "sources": [
     "https://znews.vn/4-khong-gian-chill-ve-dem-thu-hut-gioi-tre-o-da-lat-post1044648.html",
     "https://mytour.vn/en/blog/xep-hang/top-5-most-popular-hidden-bars-in-da-lat-mytour.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 47,
@@ -1813,13 +1840,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    1200
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail dạng hầm, mở cuối năm 2021, không gian hiện đại và chill. Cocktail được pha theo sở thích từng khách.",
+   "desc": "On The Rocks Cocktail Bar là quán cocktail dạng hầm tại số 69 Trương Công Định, trung tâm Đà Lạt, mở cửa từ cuối năm 2021. Không gian hiện đại và chill, có hệ thống âm thanh, ánh sáng đầu tư cùng thiết bị DJ, thỉnh thoảng có các buổi diễn nhạc rock. Cocktail được pha theo sở thích từng khách, nhiều món dùng nguyên liệu địa phương, hợp cho buổi hẹn hò hoặc nhóm bạn.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1837,7 +1864,8 @@
     "https://tinhte.vn/thread/kham-pha-nhung-quan-bar-chill-da-lat-dang-trai-nghiem.4084801/",
     "https://www.sapo.vn/khach-hang-sapo-fnb/on-the-rocks",
     "https://thedotmagazine.com/?p=20271"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 48,
@@ -1849,13 +1877,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    1200
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc chọn lọc",
    "dress": "",
-   "desc": "Quán cocktail theo concept do đội ngũ On The Rocks vận hành, dùng nhiều nguyên liệu địa phương. Không gian ấm cúng, ánh sáng dịu, mở đến khuya.",
+   "desc": "Gemination Eatery & Bar là quán cocktail theo concept trên đường Trương Công Định, trung tâm Đà Lạt, do đội ngũ On The Rocks vận hành. Quán dùng nhiều nông sản tươi của Đà Lạt để đưa vào cocktail, mang lại hương vị gắn với vùng đất cao nguyên. Không gian ấm cúng, ánh sáng dịu và nhạc chọn lọc, hợp với khách muốn thưởng thức đồ uống sáng tạo trong buổi tối yên tĩnh.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1873,7 +1901,8 @@
     "https://thedotmagazine.com/we-go-native-at-dalats-gemination-cocktail-bar/",
     "https://kupi.com/en-ae/explore/vietnam/da-lat/gemination-eatery-and-bar-da-lat",
     "https://tinhte.vn/thread/kham-pha-nhung-quan-bar-chill-da-lat-dang-trai-nghiem.4084801/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 49,
@@ -1885,13 +1914,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Acoustic, indie",
    "dress": "",
-   "desc": "Quán bar nhỏ ẩn dưới tầng hầm trong hẻm, lối vào là cầu thang dẫn xuống cửa gỗ. Không gian ấm cúng, thiên về nhạc acoustic và indie.",
+   "desc": "Fox's Den là quán bar nhỏ ẩn dưới tầng hầm trong hẻm ở trung tâm Đà Lạt, lối vào là cầu thang dẫn xuống một cánh cửa gỗ. Quán có quầy bar nhỏ và không gian không quá rộng, mang cảm giác ấm cúng, riêng tư. Nhạc thiên về acoustic và indie, phù hợp với nhóm bạn nhỏ hoặc khách thích tìm những quán bar kín đáo để trò chuyện.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1909,7 +1938,8 @@
     "https://tinhte.vn/thread/kham-pha-nhung-quan-bar-chill-da-lat-dang-trai-nghiem.4084801/",
     "https://mia.vn/cam-nang-du-lich/ghe-ngay-7-quan-bar-cuc-chill-tai-da-lat-de-trai-nghiem-1577",
     "https://www.lemon8-app.com/walkherewalkthere/7218204765254156801?region=sg"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 50,
@@ -1921,13 +1951,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    600
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc nhẹ",
    "dress": "",
-   "desc": "Quán kết hợp kiến trúc Đông – Tây, nổi tiếng với rượu vang và cocktail. Bartender có thể pha đồ uống theo câu chuyện khách kể thay vì theo menu.",
+   "desc": "Léon Bar là quán bar trên đường Hai Bà Trưng, Đà Lạt, kết hợp kiến trúc Đông – Tây với nhiều kỷ vật gợi nhớ điện ảnh. Quán được biết đến với rượu vang và cocktail, theo tinh thần khẩu hiệu \"We don't sell drinks, we sell stories\": bartender có thể pha đồ uống dựa trên câu chuyện khách kể thay vì theo menu. Nhạc nhẹ, hợp với khách muốn trò chuyện bên quầy bar.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1944,7 +1974,8 @@
    "sources": [
     "https://znews.vn/4-khong-gian-chill-ve-dem-thu-hut-gioi-tre-o-da-lat-post1044648.html",
     "https://www.foody.vn/lam-dong/bar-pub-phuc-vu-cocktail"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 51,
@@ -1956,13 +1987,13 @@
    "hours": "17:00 – 00:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    1200
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Acoustic band",
    "dress": "",
-   "desc": "Quán cocktail có ban nhạc acoustic biểu diễn hằng đêm. Tầng trên có trò chơi cổ điển và chỗ ngồi trò chuyện.",
+   "desc": "Heyla Cocktail Bar là quán cocktail nằm trên đường Tản Đà ở trung tâm Đà Lạt, thu hút cả khách địa phương lẫn du khách nước ngoài. Quán có ban nhạc acoustic biểu diễn hằng đêm, tầng trên có trò chơi cổ điển và chỗ ngồi để nhóm bạn trò chuyện. Không gian không quá rộng, hợp với những ai muốn chill nhẹ nhàng với vài ly cocktail sau bữa tối.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -1979,7 +2010,8 @@
    "sources": [
     "https://www.foody.vn/lam-dong/bar-pub-phuc-vu-cocktail?vt=row",
     "https://mia.vn/cam-nang-du-lich/top-6-quan-bar-da-lat-gia-sieu-uu-dai-chi-tu-50-000-vnd-1571"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 52,
@@ -1991,13 +2023,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    1250
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc nhẹ",
    "dress": "",
-   "desc": "Lounge ấm cúng với nhạc dễ nghe, phục vụ bia và đồ nhắm. Hợp với khách muốn tránh các beer club ồn ào.",
+   "desc": "Envy Lounge Bar là lounge nhỏ trên đường Lê Đại Hành, ngay khu trung tâm Đà Lạt. Không gian ấm cúng với nhạc nhẹ dễ nghe, phục vụ bia, đồ uống và đồ nhắm. Đây là lựa chọn phù hợp cho khách muốn ngồi trò chuyện thư thả, tránh xa không khí ồn ào của các beer club, đặc biệt là cặp đôi hoặc nhóm bạn nhỏ.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2014,7 +2046,8 @@
    "sources": [
     "https://www.foody.vn/lam-dong/bar-pub-phu-hop-hen-ho",
     "https://www.foody.vn/lam-dong/bar-pub-phuc-vu-cocktail?vt=row"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 53,
@@ -2026,13 +2059,13 @@
    "hours": "19:00 – 02:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    400,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc dance",
    "dress": "",
-   "desc": "Club được giới trẻ thích nhảy nhót ở Đà Lạt biết đến nhiều. Hoạt động từ tối đến 2 giờ sáng.",
+   "desc": "Rain Night Club là club tại số 1 Lê Hồng Phong, trung tâm Đà Lạt, được giới trẻ thích nhảy nhót trong thành phố biết đến nhiều. Không gian rộng, tập trung vào nhạc dance và không khí sôi động về đêm. Đây là điểm đến dành cho nhóm bạn và du khách muốn quẩy hết mình thay vì ngồi chill nhẹ nhàng như ở các quán cocktail.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2049,7 +2082,8 @@
    "sources": [
     "https://toplist.vn/top-list/quan-bar-noi-tieng-nhat-o-lam-dong-22859.htm",
     "https://mytour.vn/en/blog/bai-viet/top-10-trendiest-bars-in-lam-dong-province.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 54,
@@ -2061,13 +2095,13 @@
    "hours": "14:00 – 23:45",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc sống country, blues, rock 'n' roll, reggae",
    "dress": "",
-   "desc": "Quán mang phong cách thập niên 1970, là một trong những điểm nghe nhạc sống tốt nhất Đà Lạt. Nhạc sống từ khoảng 19:30 đến khuya.",
+   "desc": "The Escape Bar & Café là quán bar nhạc sống ở Đà Lạt, mang phong cách thập niên 1970 với những bức tranh về các huyền thoại âm nhạc và điện ảnh. Buổi tối quán có ban nhạc biểu diễn country, blues, rock 'n' roll và reggae, bên cạnh cocktail và đồ uống. Có thêm bàn bi-a và khu sân hiên, hợp với khách yêu nhạc sống và không khí retro.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2084,7 +2118,8 @@
    "sources": [
     "https://uk.hotels.com/go/vietnam/best-nightlife-da-lat",
     "https://wanderlog.com/place/details/1461946"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 55,
@@ -2102,7 +2137,7 @@
    "priceKnown": true,
    "music": "DJ, tiệc theo chủ đề",
    "dress": "Smart casual",
-   "desc": "Được giới thiệu là rooftop bar cao nhất Đà Nẵng, nằm trên các tầng thượng khách sạn Novotel bên sông Hàn. Thường có đêm DJ và party theo chủ đề.",
+   "desc": "Sky36 là rooftop bar kiêm nightclub nằm trên các tầng 35–37 của khách sạn Novotel Danang Premier Han River, số 36 Bạch Đằng, nhìn xuống sông Hàn và trung tâm Hải Châu. Không gian có khu ngoài trời, bàn cao, sofa lounge và khu VIP. Quán thường tổ chức đêm DJ với EDM, hip-hop, R&B cùng các bữa tiệc theo chủ đề, hợp với nhóm bạn muốn quẩy về đêm trên cao.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2132,13 +2167,13 @@
    "hours": "16:30 – 00:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    350,
+    850
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Bar và lounge trên tầng 25 khách sạn Wink nhìn ra sông Hàn, mở lại từ 1/3/2025 sau đợt cải tạo lớn.",
+   "desc": "Endless Summer Rooftop Bar & Lounge nằm trên tầng 25 khách sạn Wink Hotel Danang Riverside, 351 Trần Hưng Đạo, với tầm nhìn 360 độ ra sông Hàn và trung tâm Đà Nẵng. Quán mở cửa trở lại từ 1/3/2025 sau đợt cải tạo lớn, gắn với hồ bơi trên mái, cocktail nhiệt đới và những buổi pool party. Phù hợp cho buổi hoàng hôn thư giãn hoặc hẹn hò cùng bạn bè.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2155,7 +2190,8 @@
    "sources": [
     "https://wink-hotels.com/?p=3557",
     "https://gtrip.vn/travel-blogs/rooftop-bars-in-da-nang"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 57,
@@ -2167,13 +2203,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    500,
+    1200
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Ban nhạc sống vào một số ngày trong tuần",
    "dress": "",
-   "desc": "Quầy bar tầng 36 khách sạn Four Points có hồ bơi vô cực và tầm nhìn toàn cảnh biển và thành phố.",
+   "desc": "Horizon Bar nằm trên tầng 36 khách sạn Four Points by Sheraton Danang, 118–120 Võ Nguyên Giáp, kết hợp khu trong nhà có cửa kính toàn cảnh và sân hiên ngoài trời. Khách có thể ngồi trong những ô ghế dạng pod bên hồ bơi vô cực, ngắm biển, thành phố và sông Hàn. Quán phục vụ cocktail, bia thủ công và có ban nhạc sống vào một số ngày trong tuần.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2190,7 +2226,8 @@
    "sources": [
     "https://therooftopguide.com/rooftop-bars-in-da-nang/horizon-bar.html",
     "https://mia.vn/cam-nang-du-lich/top-nhung-quan-bar-da-nang-duoc-gioi-tre-yeu-thich-nhat-11083"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 58,
@@ -2202,13 +2239,13 @@
    "hours": "16:00 – 23:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    400,
+    1000
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Rooftop bar kiêm nhà hàng rộng, thoáng trên nóc khách sạn Brilliant, nhìn ra sông Hàn và cầu Rồng.",
+   "desc": "Brilliant Top Bar là rooftop bar kiêm nhà hàng ngoài trời trên tầng 17 khách sạn Brilliant, 162 Bạch Đằng, nhìn ra sông Hàn, cầu Rồng và thành phố. Thực đơn có cocktail, mocktail, mojito nhiều vị, bia tươi, rượu vang cùng các món như salad, hàu và steak. Không gian rộng, thoáng, hợp với nhóm bạn hay cặp đôi muốn vừa ăn tối vừa ngắm sông về đêm.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2225,11 +2262,12 @@
    "sources": [
     "https://therooftopguide.com/rooftop-bars-in-da-nang/brilliant-top-bar.html",
     "https://vietnamairlines.com/at/en/useful-information/travel-guide/bar-in-danang"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 59,
-   "name": "Sky21 Bar & Bistro",
+   "name": "Sky 21 Bar & Bistro",
    "city": "dn",
    "area": "Sơn Trà",
    "addr": "Tầng 21, Belle Maison Parosand, 216 Võ Nguyên Giáp",
@@ -2237,13 +2275,13 @@
    "hours": "17:00 – 00:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    450,
+    850
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Bar kiêm bistro trên tầng 21 khách sạn Parosand, hướng ra biển Mỹ Khê và thành phố.",
+   "desc": "Sky 21 Bar & Bistro nằm trên tầng 21 khách sạn Belle Maison Parosand, 216 Võ Nguyên Giáp, hướng ra biển Mỹ Khê và thành phố. Không gian kết hợp phần trong nhà với sân hiên mở, thực đơn gồm cà phê, nước ngọt, cocktail và rượu mạnh, cùng các cocktail riêng như Magic of Love hay Gentle Melody. Phù hợp cho buổi tối nhẹ nhàng ngắm biển cùng bạn bè hoặc người thương.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2260,7 +2298,8 @@
    "sources": [
     "https://www.therooftopguide.com/rooftop-bars-in-da-nang/sky-21-bar-and-bistro.html",
     "https://www.pullman-danang.com/vi/kham-pha/kinh-nghiem-du-lich/bar-bien-da-nang/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 60,
@@ -2272,13 +2311,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    1050
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quầy bar sân thượng của khách sạn A La Carte, có tầm nhìn bao quát biển Mỹ Khê.",
+   "desc": "The Top Bar là quầy bar sân thượng của khách sạn A La Carte Da Nang Beach, 200 Võ Nguyên Giáp, nằm cạnh hồ bơi vô cực bao quanh tầng thượng. Từ đây có thể nhìn bao quát biển Mỹ Khê và thành phố, quán phục vụ đồ uống cùng món nhẹ Việt và quốc tế. Phù hợp cho buổi chiều hóng gió biển hoặc tối thư giãn với không khí thoải mái.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2295,7 +2334,8 @@
    "sources": [
     "https://therooftopguide.com/rooftop-bars-in-da-nang/top-bar-at-a-la-carte-da-nang-beach.html",
     "https://danangfantasticity.com/en/bar-en/la-carte-rooftop-bar"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 61,
@@ -2307,13 +2347,13 @@
    "hours": "20:00 – 03:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    450,
+    1350
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Club lâu đời và nổi tiếng bậc nhất Đà Nẵng, hoạt động về khuya.",
+   "desc": "New Phương Đông là nightclub tại 20 Đống Đa, Hải Châu, một trong những club lâu năm và quen thuộc của Đà Nẵng. Không gian rộng, hoạt động từ tối đến khuya với âm nhạc sôi động dành cho dân mê tiệc tùng. Phù hợp với nhóm bạn muốn trải nghiệm đời sống về đêm của thành phố biển.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2330,7 +2370,8 @@
    "sources": [
     "https://vinwonders.com/vi/wonderpedia/news/bar-da-nang-review-20-quan-bar-hot-va-kinh-nghiem-di-bar-chi-tiet/",
     "https://vietnam-concierge.webnode.vn/news-/da-nang-hoi-an/top-9-best-nightlife-in-da-nang/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 62,
@@ -2342,13 +2383,13 @@
    "hours": "20:00 – 04:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    450,
+    750
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Phiên bản mới của Golden Pine, quán pub quen thuộc với khách quốc tế trước đây ở Bạch Đằng, nay chuyển sang Trần Hưng Đạo và mở đến gần sáng.",
+   "desc": "New Golden Pine Pub & Club là phiên bản mới của Golden Pine, quán pub từng quen thuộc với khách quốc tế trên đường Bạch Đằng, nay chuyển về 325 Trần Hưng Đạo, Sơn Trà. Quán có không khí thân thiện, sôi động, thường có DJ và mở đến gần sáng. Phù hợp với khách du lịch và những ai muốn kéo dài cuộc vui sau nửa đêm.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2365,7 +2406,8 @@
    "sources": [
     "https://vietnamdiscovery.com/de/da-nang/top-lists/best-bars-in-danang/",
     "https://www.theblondtravels.com/nightlife-da-nang"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 63,
@@ -2377,13 +2419,13 @@
    "hours": "17:00 – 01:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    400,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Pub ven sông Hàn trên đường Bạch Đằng, điểm hẹn quen của khách nước ngoài.",
+   "desc": "Bamboo 2 Bar là pub ba tầng ở góc Bạch Đằng và Thái Phiên, trang trí chủ yếu bằng tre, tầng trên nhìn ra sông Hàn và cầu Rồng. Đây là điểm hẹn quen của khách nước ngoài và người nước ngoài sống ở Đà Nẵng, với không khí kiểu bar Mỹ giản dị, có chiếu thể thao. Hợp cho một tối gặp gỡ, trò chuyện bên ly bia ven sông.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2400,7 +2442,8 @@
    "sources": [
     "https://www.bestpricetravel.com/travel-guide/bars-pubs-for-da-nang-nightlife-2663.html",
     "https://www.enprimeurclub.com/bars/bamboo-2-bar-thanh-khe"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 64,
@@ -2412,13 +2455,13 @@
    "hours": "18:30 – 01:30",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    700
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Jazz",
    "dress": "",
-   "desc": "Lounge phong cách thập niên 1920, nổi tiếng với các đêm nhạc jazz biểu diễn hằng tối.",
+   "desc": "The 1920's Lounge là lounge mang phong cách thập niên 1920 tại 53 Trần Quốc Toản, Hải Châu, gắn với các đêm nhạc jazz biểu diễn trực tiếp mỗi tối. Bên cạnh jazz, quán còn có các tiết mục acoustic và ballad, tạo không khí ấm cúng mà vẫn sôi nổi. Phù hợp với người yêu nhạc sống, cặp đôi hoặc nhóm bạn muốn một buổi tối thư thái.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2436,7 +2479,8 @@
     "https://thesmartlocal.com/vietnam/8-bars-clubs-in-da-nang/",
     "https://danangairport.vn/news-detail-page/a-musical-journey-through-da-nang",
     "https://www.foody.vn/da-nang/the-1920-s-lounge"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 65,
@@ -2448,13 +2492,13 @@
    "hours": "19:00 – 02:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    350,
+    1250
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc sống",
    "dress": "",
-   "desc": "Bar nhạc sống cùng chủ với The 1920's Lounge, mở cửa hằng ngày.",
+   "desc": "On The Radio Bar là bar nhạc sống tại 76 Thái Phiên, Hải Châu, cùng chủ với The 1920's Lounge. Không gian theo chủ đề radio cổ với ánh đèn vàng ấm, sân khấu có ban nhạc chơi rock, ballad, cả nhạc Anh và nhạc Việt, cùng các đêm open mic. Quán thu hút cả người Đà Nẵng lẫn du khách quốc tế yêu thích nhạc sống.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2471,7 +2515,8 @@
    "sources": [
     "https://thesmartlocal.com/vietnam/8-bars-clubs-in-da-nang/",
     "https://vinpearl.com/vi/luu-ngay-16-bar-da-nang-cuc-hot-du-dua-cuc-chill-cung-hoi-ban"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 66,
@@ -2483,13 +2528,13 @@
    "hours": "19:00 – 01:30",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    400,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail và rượu vang mang phong cách riêng, nằm trên tầng 3 ở trung tâm Hải Châu.",
+   "desc": "Tê Cocktail Bar là quán cocktail và rượu vang nằm trên tầng 3 số 39–41 Nguyễn Thái Học, trung tâm Hải Châu. Quán mang phong cách riêng, kín đáo, với âm nhạc hiện đại và thực đơn đồ uống pha chế chỉn chu. Phù hợp cho những buổi gặp gỡ nhóm nhỏ hoặc một tối thưởng thức cocktail nhẹ nhàng giữa lòng thành phố.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2506,7 +2551,8 @@
    "sources": [
     "https://toplist.vn/top-list/quan-cocktail-bar-dang-cap-nhat-tai-da-nang-57706.htm",
     "https://vinpearl.com/vi/luu-ngay-16-bar-da-nang-cuc-hot-du-dua-cuc-chill-cung-hoi-ban"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 67,
@@ -2518,13 +2564,13 @@
    "hours": "19:00 – 01:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Hidden bar phục vụ cocktail, nằm kín đáo trong khu trung tâm Hải Châu.",
+   "desc": "Linger – Cocktail on da Trolley là hidden bar tại 19 Phan Kế Bính, Hải Châu, nằm kín đáo trong khu trung tâm. Quán lấy cảm hứng từ đường phố và khu vườn, tạo không khí thư thái, tự nhiên, phục vụ cocktail đi kèm nhạc hay. Phù hợp cho cặp đôi hoặc bạn bè muốn tìm một góc yên tĩnh, ăn mặc thoải mái là được.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2541,7 +2587,8 @@
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-5-most-beautiful-hidden-bars-in-da-nang-mytour.html",
     "https://toplist.vn/top-list/quan-hidden-bar-dep-nhat-tai-da-nang-57707.htm"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 68,
@@ -2553,13 +2600,13 @@
    "hours": "18:00 – 01:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Bar theo phong cách speakeasy, tạo cảm giác một địa điểm ẩn mình giữa phố.",
+   "desc": "United Bar Danang là bar cocktail theo phong cách speakeasy tại 02 Nguyễn Chí Thanh, Hải Châu, ẩn sau mặt tiền nhỏ như một xe bánh mì. Không gian nhỏ nhưng ấm cúng, tường gạch, gác gỗ và tông màu tối gợi nhớ các quán speakeasy Mỹ thập niên 1920. Phù hợp với người thích khám phá quán ẩn mình và nhâm nhi cocktail trong không gian riêng tư.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2575,7 +2622,8 @@
    "partner": false,
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/top-5-quan-cocktail-bar-dang-cap-nhat-tai-da-nang.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 69,
@@ -2587,13 +2635,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail với thực đơn pha chế dựa trên tequila, whisky, rum và vodka.",
+   "desc": "Vấn Cocktail Bar là quán cocktail nằm trên tầng 3 số 180–182 Nguyễn Chí Thanh, Hải Châu, với không gian ấm cúng và thanh lịch. Thực đơn pha chế dựa trên tequila, whisky, rum và vodka, sử dụng nguyên liệu tự nhiên mang hương vị Việt. Phù hợp cho những ai muốn thử cocktail sáng tạo trong một buổi tối thư giãn cùng bạn bè.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2610,11 +2658,12 @@
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/top-5-quan-cocktail-bar-dang-cap-nhat-tai-da-nang.html",
     "https://www.foody.vn/da-nang/dia-diem-phuc-vu-cocktail"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 70,
-   "name": "Pavo Lounge (Pavo Cuisine & Mixology)",
+   "name": "Pavo Cuisine & Mixology",
    "city": "dn",
    "area": "Hải Châu",
    "addr": "11B Trần Phú",
@@ -2622,13 +2671,13 @@
    "hours": "17:00 – 03:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    350,
+    950
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc sống",
    "dress": "",
-   "desc": "Lounge kết hợp ẩm thực và mixology, được nhắc đến với chương trình nhạc sống nổi bật.",
+   "desc": "Pavo Cuisine & Mixology là lounge kết hợp ẩm thực và mixology tại 11B Trần Phú, Hải Châu. Không gian lấy cảm hứng Địa Trung Hải với quầy bar 360 độ phục vụ nhiều loại đồ uống, và được nhắc đến với chương trình nhạc sống cùng các show diễn mới lạ. Phù hợp cho buổi tối vừa dùng bữa vừa thưởng thức cocktail và âm nhạc.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2645,7 +2694,8 @@
    "sources": [
     "https://vinwonders.com/vi/wonderpedia/news/bar-da-nang-review-14-quan-bar-hot-va-kinh-nghiem-di-bar-chi-tiet/",
     "https://vinpearl.com/en/da-nang-bars-discover-the-top-hotspots-in-the-city"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 71,
@@ -2657,13 +2707,13 @@
    "hours": "19:30 – 01:30",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    400,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Bar cocktail nhỏ kiểu speakeasy chỉ một gian phòng, nằm ở rìa khu phố Tây An Thượng; nghỉ thứ Ba.",
+   "desc": "The Craftsman Cocktail Bar là bar cocktail nhỏ kiểu speakeasy chỉ gói gọn trong một gian phòng, nằm ở rìa khu phố Tây An Thượng, gần biển Mỹ Khê. Quán được khách nhắc đến với những ly Singapore Sling, Whiskey Sour hay Hemingway Daiquiri cùng không khí ấm cúng. Phù hợp cho nhóm nhỏ hoặc khách đi một mình; quán nghỉ thứ Ba.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2680,7 +2730,8 @@
    "sources": [
     "https://amthuchiendai.vn/en/best-bars-in-da-nang-a-personal-and-independent-guide/",
     "https://thesmartlocal.com/vietnam/8-bars-clubs-in-da-nang/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 72,
@@ -2692,13 +2743,13 @@
    "hours": "08:00 – 01:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    500,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Bar nằm ngay bãi biển trên trục Võ Nguyên Giáp, mở từ sáng đến khuya.",
+   "desc": "Maia Beach Bar là quán bar nằm ngay trên bãi biển dọc trục Võ Nguyên Giáp, Ngũ Hành Sơn, mở từ sáng đến khuya. Quán có ghế tắm nắng trên cát, cocktail và DJ chơi nhạc vào buổi tối, tạo không khí vui vẻ bên biển. Phù hợp cho buổi chiều thư giãn ngắm biển hay tối tụ tập cùng bạn bè.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2715,7 +2766,8 @@
    "sources": [
     "https://www.toplist.vn/top-list/quan-bar-bai-bien-da-nang-view-dep-nhac-hay-check-in-cuc-chat-66868.htm",
     "https://www.pullman-danang.com/vi/kham-pha/kinh-nghiem-du-lich/bar-bien-da-nang/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 73,
@@ -2727,13 +2779,13 @@
    "hours": "11:00 – 23:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    350,
+    650
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Beach club kiêm nhà hàng của Hyatt Regency Danang, đặt trực tiếp trên bãi cát Non Nước.",
+   "desc": "Vive Océane Beach Club là beach club kiêm nhà hàng của Hyatt Regency Danang Resort & Spa, 5 Trường Sa, đặt trực tiếp trên bãi cát Non Nước. Thực đơn kết hợp ẩm thực Pháp – Địa Trung Hải và Việt Nam, chú trọng hải sản địa phương, đồng thời có các buổi cocktail bên bờ biển. Phù hợp cho gia đình, cặp đôi hoặc nhóm bạn muốn một ngày thư thái bên biển.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2750,7 +2802,8 @@
    "sources": [
     "https://www.hospitalitynet.org/announcement/41009733/hyatt-regency-danang-resort-spa-unveils-vive-oceane-danangs-first-and-only-beach-club",
     "https://www.pullman-danang.com/vi/kham-pha/kinh-nghiem-du-lich/bar-bien-da-nang/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 74,
@@ -2762,13 +2815,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    60,
-    350
+    350,
+    1250
    ],
    "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar, lounge kiêm nhà hàng dọc bãi biển Mỹ Khê.",
+   "desc": "Esco Beach Bar, Lounge & Restaurant là quán bar, lounge kiêm nhà hàng tại Lô 12 Võ Nguyên Giáp, nằm dọc bãi biển Mỹ Khê, mở cửa từ cuối năm 2020. Quán có chỗ ngồi sát bãi cát, nhạc sống của nghệ sĩ địa phương vào buổi tối và các màn múa lửa, thực đơn thiên về món Âu như pizza, pasta cùng vài món Việt. Phù hợp cho cả gia đình, cặp đôi và nhóm bạn.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2785,7 +2838,8 @@
    "sources": [
     "https://www.pullman-danang.com/vi/kham-pha/kinh-nghiem-du-lich/bar-bien-da-nang/",
     "https://hopsa.io/en/attractions/vietnam,food-drink,esco-beach-bar-lounge-and-restaurant-73860bc5fc"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 75,
@@ -2797,13 +2851,13 @@
    "hours": "17:00 – 00:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    450,
+    1050
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "Smart casual, không dép lê, không áo ba lỗ",
-   "desc": "Quầy bar trên tầng thượng khách sạn Lotte, một trong những điểm uống cao nhất Hà Nội với tầm nhìn bao quát toàn thành phố.",
+   "desc": "Top of Hanoi là quầy bar ngoài trời trên tầng thượng khách sạn Lotte Hotel Hanoi, tòa Lotte Center ở 54 Liễu Giai, Ba Đình, nằm phía trên đài quan sát của tòa nhà. Từ đây có thể ngắm toàn cảnh thành phố 360 độ, đặc biệt lúc trời tối. Thực đơn gồm cocktail, rượu vang, bia và đồ ăn nhẹ, phù hợp cho buổi hẹn hò, tiếp khách hay du khách muốn ngắm Hà Nội từ trên cao.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2820,7 +2874,8 @@
    "sources": [
     "https://lottehotel.com/hanoi-hotel/en/dining/restaurant-top-of-hanoi.html",
     "https://therooftopguide.com/rooftop-bars-in-hanoi/top-of-hanoi-at-lotte-hotel-hanoi.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 76,
@@ -2832,13 +2887,13 @@
    "hours": "17:00 – 00:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    500,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Sky bar nhỏ ở tầng 10 giữa phố cổ, nhìn ra hồ Hoàn Kiếm và mái nhà khu phố cổ.",
+   "desc": "Lighthouse Sky Bar là sky bar nằm trên tầng 10 và 11 của khách sạn La Siesta Premium Hàng Bè, số 27 Hàng Bè, giữa lòng phố cổ. Quán được thiết kế như một con thuyền neo trên mái, với ngọn hải đăng đỏ trắng cao khoảng 6 m nhấp nháy về đêm. Từ sân thượng có thể nhìn ra hồ Hoàn Kiếm, mái nhà phố cổ và sông Hồng, hợp cho những buổi tối nhâm nhi cocktail ngắm thành phố.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2855,7 +2910,8 @@
    "sources": [
     "https://therooftopguide.com/rooftop-bars-in-hanoi/lighthouse-sky-bar.html",
     "https://www.vietnamairlines.com/en/useful-information/travel-guide/hanoi-rooftop-bar"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 77,
@@ -2867,13 +2923,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    1000
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quầy bar tầng 11 trên phố Mã Mây, nổi bật với tầm nhìn toàn cảnh khu phố cổ về đêm.",
+   "desc": "Moonlight Sky Bar nằm trên tầng cao của khách sạn La Siesta Classic Mã Mây, số 94 Mã Mây, Hoàn Kiếm. Điểm đặc trưng của quán là mô hình cầu Long Biên thu nhỏ bắc ngang phía trên quầy bar, cùng tầm nhìn toàn cảnh khu phố cổ và hồ Hoàn Kiếm về đêm. Thực đơn có cocktail cổ điển lẫn signature, rượu vang và món ăn nhẹ, phù hợp với khách thích không gian lãng mạn, trang nhã.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2890,7 +2946,8 @@
    "sources": [
     "https://therooftopguide.com/rooftop-bars-in-hanoi/moonlight-sky-bar.html",
     "https://www.vietnamairlines.com/en/useful-information/travel-guide/hanoi-rooftop-bar"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 78,
@@ -2902,13 +2959,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    450,
+    1150
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Lounge rộng rãi trên tầng 20 khách sạn Pan Pacific, có tầm nhìn 360 độ ra Hồ Tây và hồ Trúc Bạch.",
+   "desc": "The Summit là lounge trên tầng 20 khách sạn Pan Pacific Hanoi, số 1 Thanh Niên, Ba Đình. Không gian rộng rãi với tầm nhìn 360 độ ra Hồ Tây, hồ Trúc Bạch, đường chân trời thành phố và sông Hồng. Quán phục vụ cocktail signature, các món cổ điển của khách sạn cùng đồ ăn nhẹ kiểu châu Á, hợp cho buổi chiều tối ngắm hoàng hôn, gặp gỡ bạn bè hoặc tiếp đối tác.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2925,7 +2982,8 @@
    "sources": [
     "https://therooftopguide.com/rooftop-bars-in-hanoi/summit-lounge-at-pan-pacific-hanoi.html",
     "https://www.silverkris.com/location/the-summit-at-pan-pacific-hanoi/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 79,
@@ -2937,13 +2995,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    700
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "Casual / smart casual",
-   "desc": "Sky bar tầng 9 của khách sạn JM Marvel, ngắm đường chân trời phố cổ, đẹp nhất vào lúc hoàng hôn.",
+   "desc": "Cloud Sky Bar là quán bar trên tầng 9 của khách sạn JM Marvel Hotel & Spa, số 16 Hàng Da, ngay trong khu phố cổ Hà Nội. Từ sân thượng có thể nhìn thẳng xuống phố Hàng Da và ngắm đường chân trời phố cổ, đẹp nhất là khi hoàng hôn buông xuống. Quán có phong cách thoải mái, phục vụ đồ uống và đồ ăn nhẹ, hợp với du khách lưu trú quanh phố cổ muốn tìm một góc ngồi trên cao.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2960,7 +3018,8 @@
    "sources": [
     "https://therooftopguide.com/rooftop-bars-in-hanoi/cloud-sky-bar.html",
     "https://evendo.com/locations/vietnam/northeast/bar/cloud-sky-bar-hanoi"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 80,
@@ -2972,13 +3031,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    130,
-    280
+    300,
+    800
    ],
    "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Một trong những quán tiên phong về cocktail thủ công mang hương vị Việt, nằm trên phố Tống Duy Tân.",
+   "desc": "Nê Cocktail Bar là quán cocktail trên phố Tống Duy Tân (3B Tống Duy Tân, Hàng Bông, Hoàn Kiếm), mở từ năm 2017 và gắn với bartender Phạm Tiến Tiệp. Quán theo đuổi cocktail thủ công mang hương vị Việt, dùng nguyên liệu đặc trưng trong nước, tiêu biểu là món cocktail Phở. Đây là điểm đến dành cho những ai tò mò muốn thưởng thức hương vị Việt Nam qua ly cocktail.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -2995,7 +3054,8 @@
    "sources": [
     "https://theworlds50best.com/discovery/Establishments/Vietnam/Hanoi/Nê-Cocktail-Bar.html",
     "https://rustycompass.com/vietnam-travel-guide-233/hanoi-5/nightlife-17/ne-cocktail-bar-hanoi-1381"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 81,
@@ -3007,13 +3067,13 @@
    "hours": "15:00 – 01:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    700
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail kiểu speakeasy trong phố cổ, từng lọt danh sách Asia's 50 Best Bars 2024.",
+   "desc": "The Haflington là quán cocktail kiểu speakeasy nằm trên tầng trên của một ngôi nhà cũ ở 94 Hàng Mã, giữa phố cổ Hà Nội. Không gian lấy cảm hứng từ những bảo tàng châu Âu, nổi bật với bộ xương khủng long cỡ lớn treo phía trên quầy bar. Quán phù hợp với những ai thích cocktail sáng tạo trong một khung cảnh độc đáo, tách biệt khỏi sự ồn ào của phố cổ.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3030,7 +3090,8 @@
    "sources": [
     "https://mapstr.com/place/XC1C1YJ4Ye",
     "https://jackfruitadventure.com/best-cocktail-bar-in-hanoi/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 82,
@@ -3042,13 +3103,13 @@
    "hours": "16:00 – 00:30",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    350,
+    1050
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail nằm trong ngõ ven Hồ Tây, xếp hạng 83 Asia's 50 Best Bars 2025 (danh sách mở rộng) và nhận giải Campari One To Watch.",
+   "desc": "Workshop14 là quán cocktail nhỏ khoảng 14 chỗ ngồi, ẩn sau một cánh cổng gỗ truyền thống trong ngõ 5 Từ Hoa, Quảng An, Tây Hồ, gần chùa Kim Liên ven Hồ Tây. Quán do bartender Rich McDonough sáng lập, xếp hạng 83 trong danh sách mở rộng Asia's 50 Best Bars 2025 và nhận giải Campari One To Watch. Không gian tối giản, yên tĩnh, hợp với người yêu cocktail; nên đặt chỗ trước.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3065,7 +3126,8 @@
    "sources": [
     "https://www.theworlds50best.com/stories/News/workshop14-hanoi-asias-50-best-bars-2025.html",
     "https://joinpearl.co/bars/hanoi/workshop14"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 83,
@@ -3077,13 +3139,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    1050
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail ẩn mình với tấm rèm đỏ đặc trưng, mở muộn vào cuối tuần.",
+   "desc": "The Black Sheep là quán cocktail ẩn mình ở 28 Tống Duy Tân, Hoàn Kiếm, theo concept nhà hát cocktail thu nhỏ. Tông đen chủ đạo kết hợp tấm rèm đỏ đặc trưng khiến bước qua cửa giống như bước lên sân khấu, nơi thường diễn ra các bữa tiệc và sự kiện âm nhạc. Quán có DJ sau 22 giờ và mở muộn vào cuối tuần, hợp với những ai thích không khí sôi động nhưng vẫn ấm cúng.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3100,7 +3162,8 @@
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/cocktail-bars-in-hanoi/",
     "https://vinpearl.com/en/cocktail-bars-in-hanoi"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 84,
@@ -3112,13 +3175,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar phong cách cổ điển gần hồ Hoàn Kiếm, chuyên các loại cocktail kinh điển.",
+   "desc": "Polite & Co là quán bar phong cách cổ điển tại 5B Bảo Khánh, Hàng Trống, chỉ cách hồ Hoàn Kiếm vài bước chân, hoạt động từ năm 1995. Không gian mang hơi hướng speakeasy, ấm cúng và hoài cổ, với thực đơn khoảng 25 loại cocktail thay đổi theo thời gian, chú trọng các công thức kinh điển. Quán hợp với những buổi tối thư thả bên bạn bè; nên đặt trước nếu muốn ngồi quầy bar.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3135,7 +3198,8 @@
    "sources": [
     "https://mia.vn/cam-nang-du-lich/chill-cung-loat-quan-pub-ha-noi-co-khong-gian-cuc-an-tuong-8819",
     "https://www.esquireindia.co.in/amp/story/food-and-drinks/where-to-drink/5-best-cocktail-bars-in-hanoi-vietnam"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 85,
@@ -3147,13 +3211,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    700
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail pha theo yêu cầu, kết hợp không gian bar cổ điển với phòng trưng bày nghệ thuật.",
+   "desc": "Gallery Bespoke Cocktail Bar nằm phía sau một phòng trưng bày nghệ thuật nhỏ trên phố Phùng Hưng (95 Phùng Hưng, Hoàn Kiếm) và là quán anh em với Jigger. Không gian có sàn gỗ, tường gạch thô và sofa da êm ái. Điểm đặc biệt là cocktail pha theo yêu cầu và Bespoke Bottles, bên cạnh cocktail signature, cổ điển, rượu vang, bia thủ công và đồ uống không cồn.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3170,7 +3234,8 @@
    "sources": [
     "https://vinpearl.com/en/cocktail-bars-in-hanoi",
     "https://sanhotelseries.com/best-cocktail-bars-hanoi/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 86,
@@ -3182,13 +3247,13 @@
    "hours": "19:00 – 00:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    1000
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc sống tối thứ Tư",
    "dress": "",
-   "desc": "Speakeasy ấm cúng mang hơi hướng thập niên 1920 với quả cầu disco và rèm đỏ.",
+   "desc": "Bee'Znees là speakeasy ấm cúng tại 163 Phùng Hưng, Hoàn Kiếm, với lối vào ngụy trang như một kệ sách. Bên trong mang hơi hướng thập niên 1920 với quả cầu disco, rèm đỏ và bản đồ thế giới vẽ trên trần. Nhạc jazz là chủ đạo, có nhạc sống vào tối thứ Tư, còn thực đơn cocktail xoay quanh gin, whisky, vodka, rum và tequila. Quán hợp với những ai thích khám phá quán bar ẩn mình trong phố cổ.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3205,7 +3270,8 @@
    "sources": [
     "https://vietcetera.com/en/vietnam-bar-week-2023-9-hidden-bars-for-unparalleled-experiences",
     "https://vinpearl.com/en/cocktail-bars-in-hanoi"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 87,
@@ -3217,13 +3283,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    750
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Speakeasy trên tầng hai trong phố cổ, lối vào qua một quán cà phê không biển hiệu; nổi tiếng với cocktail dùng thảo mộc Việt.",
+   "desc": "The Alchemist Cocktail Bar là speakeasy nằm trên tầng hai của một tòa nhà cũ trong phố cổ Hà Nội, không có biển hiệu và lối vào đi qua một quán cà phê. Quán được biết đến với những ly cocktail sử dụng thảo mộc và nguyên liệu Việt, trong không gian nhỏ, kín đáo. Đây là lựa chọn cho những ai thích tìm kiếm quán bar ẩn mình và trải nghiệm hương vị cocktail mang dấu ấn địa phương.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3240,7 +3306,8 @@
    "sources": [
     "https://tablejourney.com/vietnam/hanoi/wine-bars/the-alchemist-bar/",
     "https://vinwonders.com/en/wonderpedia/news/bars-in-hanoi-bars-pubs/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 88,
@@ -3252,13 +3319,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Bar trong khách sạn Metropole với bộ sưu tập hơn 200 loại whisky, gồm nhiều chai hiếm và cổ điển.",
+   "desc": "Angelina là bar kiêm whisky lounge và nhà hàng nằm ở tầng trệt khách sạn Sofitel Legend Metropole Hanoi, số 15 Ngô Quyền, Hoàn Kiếm. Tên quán gợi nhắc thuật ngữ Angel's Share trong ủ rượu whisky, với bộ sưu tập hơn 200 loại whisky gồm nhiều chai hiếm và cổ điển. Quán còn được công nhận là Habanos Lounge dành cho người mê xì gà, hợp với khách yêu whisky và không gian sang trọng.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3275,7 +3342,8 @@
    "sources": [
     "https://www.sofitel-legend-metropole-hanoi.com/news-press/whiskey-bar-hanoi/",
     "https://www.journaldespalaces.com/pressrelease-58791-metropole-hanoi-s-angelina-introduces-personality-inspired-cocktail-menu.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 89,
@@ -3287,13 +3355,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    750
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Jazz & swing sống từ 20:00, thứ Ba – Chủ nhật",
    "dress": "",
-   "desc": "Quầy bar cổ điển trong khách sạn Metropole, có nhạc jazz và swing sống vào buổi tối.",
+   "desc": "Le Club Bar là quầy bar cổ điển trong khách sạn Sofitel Legend Metropole Hanoi, số 15 Ngô Quyền, Hoàn Kiếm, với không gian rộng nhìn ra khu vườn của khách sạn. Quán có nhạc jazz và swing sống từ 20:00, thứ Ba đến Chủ nhật, trong khung cảnh một cocktail lounge giàu lịch sử. Đây là điểm hẹn cho những ai yêu jazz và muốn tận hưởng buổi tối thanh lịch giữa trung tâm Hà Nội.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3310,7 +3378,8 @@
    "sources": [
     "https://sofitel-legend-metropole-hanoi.com/dining/le-club-bar",
     "https://www.lonelyplanet.com/articles/best-jazz-bars-hanoi"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 90,
@@ -3322,13 +3391,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    1200
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Jazz sống mỗi tối từ khoảng 21:00",
    "dress": "",
-   "desc": "Câu lạc bộ jazz lâu đời nhất Hà Nội do nghệ sĩ Quyền Văn Minh sáng lập, nằm phía sau Nhà hát Lớn.",
+   "desc": "Binh Minh Jazz Club là câu lạc bộ jazz lâu năm của Hà Nội do nghệ sĩ saxophone Quyền Văn Minh sáng lập, nằm ở số 1 Tràng Tiền, phía sau Nhà hát Lớn. Quán có nhạc jazz sống mỗi tối từ khoảng 21:00, với phần trình diễn của các nhạc công trong nước và quốc tế, trong đó có con trai ông Minh. Đây là địa chỉ quen thuộc của người yêu jazz và du khách muốn nghe nhạc sống.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3345,7 +3414,8 @@
    "sources": [
     "https://minhjazzvietnam.com/2023/07/06/opening-binh-minh-jazz-club/",
     "https://www.lonelyplanet.com/articles/best-jazz-bars-hanoi"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 91,
@@ -3357,13 +3427,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    450,
+    1150
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Đĩa than jazz vài tối mỗi tuần",
    "dress": "",
-   "desc": "Bar-cafe phong cách bohemian gần Nhà hát Lớn, treo tranh nghệ thuật đương đại Việt Nam và có những tối nghe nhạc đĩa than.",
+   "desc": "Tadioto là bar-cafe phong cách bohemian tại 24B Tông Đản, Hoàn Kiếm, gần Nhà hát Lớn, do nhà văn, nhà báo Nguyễn Quý Đức điều hành. Tường quán treo bộ sưu tập tranh nghệ thuật đương đại Việt Nam, và vài tối mỗi tuần có những buổi nghe đĩa than jazz, đọc sách hay triển lãm. Quán phục vụ whisky, vang và cocktail, hợp với người yêu nghệ thuật và không gian trầm, ấm.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3380,7 +3450,8 @@
    "sources": [
     "https://tablejourney.com/vietnam/hanoi/nightlife/tadioto-live-music/",
     "https://chaohanoi.com/event-location/tadioto-hoan-kiem"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 92,
@@ -3392,13 +3463,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    600,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "DJ quốc tế, live band, tiệc chủ đề",
    "dress": "",
-   "desc": "Club lớn trên phố Tạ Hiện trong tòa nhà nhà hát Quảng Lạc cũ, có sàn nhảy rộng và khu VIP; nằm trong top 100 club của DJ Mag 2024.",
+   "desc": "1900 Le Théâtre là club lớn trên phố Tạ Hiện (8B Tạ Hiện, Hoàn Kiếm), nằm trong tòa nhà của nhà hát Quảng Lạc cũ với sức chứa khoảng 1.500 khách. Club có sàn nhảy rộng, khu VIP và hệ thống âm thanh ánh sáng hiện đại, thường xuyên có DJ quốc tế, live band và tiệc chủ đề; nằm trong top 100 club của DJ Mag 2024. Khách cần đủ 18 tuổi và mang theo giấy tờ tùy thân.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3415,7 +3486,8 @@
    "sources": [
     "https://djmag.com/top100clubs/2024/44/1900-le-theatre",
     "https://tablejourney.com/vietnam/hanoi/nightlife/1900-le-theatre/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 93,
@@ -3427,13 +3499,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Deep house, hip-hop, R&B",
    "dress": "",
-   "desc": "Club nội thất phong cách công nghiệp, đông khách địa phương lẫn người nước ngoài, thường mời DJ khách.",
+   "desc": "Hero Club là club tại 42M Yên Phụ, Trúc Bạch, Ba Đình, với nội thất phong cách công nghiệp, tranh tường siêu anh hùng và quầy DJ đặt trong một chiếc xe tải cũ. Âm nhạc chủ yếu là deep house, hip-hop và R&B, thường có DJ khách mời và sự kiện vào cuối tuần. Quán thu hút cả khách địa phương lẫn người nước ngoài, phù hợp với những ai thích không khí club gần gũi, cá tính.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3450,7 +3522,8 @@
    "sources": [
     "https://www.arrivalguides.com/en/Travelguide/Hanoi/barsandnightlife/hero-club-hanoi-111381",
     "https://mytour.vn/vi/blog/bai-viet/top-10-quan-pub-noi-tieng-o-ha-noi.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 94,
@@ -3462,13 +3535,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    1300
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bia thủ công bên hồ Trúc Bạch với nhiều vòi bia từ các nhà nấu bia độc lập Việt Nam, kèm đồ nướng xiên và tapas.",
+   "desc": "Standing Bar là quán bia thủ công bên hồ Trúc Bạch, số 170 Trấn Vũ, Ba Đình, với ban công nhìn ra mặt hồ. Quán có gần 20 vòi bia từ các nhà nấu bia độc lập khắp Việt Nam và thường tổ chức những buổi tap takeover với các xưởng bia khách mời. Đồ ăn đi kèm chủ yếu là xiên nướng kiểu yakitori và tapas, hợp với nhóm bạn yêu bia thủ công muốn ngồi chill bên hồ.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3485,7 +3558,8 @@
    "sources": [
     "https://www.beerandbrewing.com/love-handles-standing-bar",
     "https://vietnamnews.vn/sunday/restaurant-review/1402815/still-standing-bar-brings-craft-beer-and-bites-galore.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 95,
@@ -3497,13 +3571,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    650
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Xưởng bia thủ công gần Hồ Tây, không gian cộng đồng thoải mái, có thêm cơ sở trên phố Xuân Diệu.",
+   "desc": "Turtle Lake Brewing Company là xưởng bia thủ công kiêm brewpub tại 105 Quảng Khánh, Quảng An, Tây Hồ, gần Hồ Tây. Không gian mang tinh thần cộng đồng, thoải mái và có bàn shuffleboard, phù hợp cho nhóm bạn đông người. Quán phục vụ các dòng bia tự nấu như IPA, pale ale, stout và lager, và có thêm cơ sở trên phố Xuân Diệu.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3520,7 +3594,8 @@
    "sources": [
     "https://sanhotelseries.com/craft-beer-bars-in-hanoi/",
     "https://vietcetera.com/en/turtle-lake-brewing-co-vietnam-craft-beer-built-around-community"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 96,
@@ -3532,13 +3607,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    450,
+    850
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quầy bar trên tầng 22 khách sạn Wink Hải Phòng, nhìn toàn cảnh trung tâm thành phố 360 độ. Có hồ bơi vô cực được làm ấm vào mùa đông.",
+   "desc": "Endless Summer Rooftop Bar & Lounge là quầy bar trên tầng 22 của Wink Hotel Hai Phong, số 135 Điện Biên Phủ, quận Hồng Bàng, với tầm nhìn 360 độ ra trung tâm thành phố. Điểm nhấn của nơi đây là hồ bơi vô cực trên mái được làm ấm vào mùa đông, cùng không gian thư thả bên hồ để ngắm hoàng hôn. Phù hợp với những ai muốn nhâm nhi đồ uống trên cao và tham gia các buổi tiệc hồ bơi cuối tuần.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3556,7 +3631,8 @@
     "https://wink-hotels.com/?p=6053",
     "https://www.hyatt.com/unscripted-by-hyatt/en-US/vn105-wink-hai-phong-centre/dining",
     "https://savourblackbookasia.com/wink-hai-phong-centre-unscripted-by-hyatt/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 97,
@@ -3568,13 +3644,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    1200
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail được nhiều danh sách xếp hạng cao ở Hải Phòng, nổi bật với thiết kế mang chất nghệ thuật.",
+   "desc": "Atelier Cocktail Bar nằm tại số 9 Trần Nguyên Hãn, quận Lê Chân, là quán cocktail thường xuyên góp mặt trong các danh sách quán bar đáng ghé ở Hải Phòng. Không gian được thiết kế mang chất nghệ thuật, gọn gàng và thư thái, nơi việc pha chế cocktail được xem như một môn nghệ thuật. Phù hợp với những ai yêu thích cocktail và muốn tìm một góc yên tĩnh để trò chuyện buổi tối.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3592,7 +3668,8 @@
     "https://vinwonders.com/vi/wonderpedia/news/hai-phong-ve-dem/",
     "https://www.toplist.vn/top-list/quan-cocktail-hai-phong-hot-trend-gioi-tre-khong-the-bo-lo-66768.htm",
     "https://wink-hotels.com/?p=6053"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 98,
@@ -3604,13 +3681,13 @@
    "hours": "20:30 – 02:30",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    400,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Câu lạc bộ cocktail ở khu trung tâm, mở cửa muộn tới gần 3 giờ sáng, hợp cho những cuộc vui về đêm.",
+   "desc": "Eyeconic Cocktail Club là câu lạc bộ cocktail tại số 21A Trần Hưng Đạo, thuộc khu trung tâm quận Hồng Bàng, Hải Phòng. Quán hoạt động từ tối đến tận khuya, là lựa chọn quen thuộc trong các gợi ý về Hải Phòng về đêm. Phù hợp với nhóm bạn muốn kéo dài cuộc vui sau bữa tối hoặc những ai thích ngồi nhâm nhi cocktail đến muộn.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3626,11 +3703,12 @@
    "partner": false,
    "sources": [
     "https://vinwonders.com/vi/wonderpedia/news/hai-phong-ve-dem/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 99,
-   "name": "EYWA Cocktail Bar",
+   "name": "EYWA Cocktail & Eatery",
    "city": "hp",
    "area": "Lê Chân",
    "addr": "HD18 Vinhomes Marina, Cầu Rào 2, Vĩnh Niệm, Lê Chân",
@@ -3638,13 +3716,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    1000
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail kết hợp ăn uống với không gian lấy cảm hứng từ thiên nhiên trong khu Vinhomes Marina, phù hợp để thư giãn cùng âm nhạc.",
+   "desc": "EYWA Cocktail & Eatery là quán cocktail kết hợp ăn uống tại HD18 Vinhomes Marina, Cầu Rào 2, phường Vĩnh Niệm, quận Lê Chân. Không gian lấy cảm hứng từ thiên nhiên với ý tưởng nhà trên cây, đi kèm thực đơn đồ ăn fusion và các ly cocktail được pha chế chỉn chu. Đây là địa chỉ hợp cho những ai muốn thư giãn cùng âm nhạc nhẹ nhàng và được bartender gợi ý đồ uống.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3661,7 +3739,8 @@
    "sources": [
     "https://www.toplist.vn/top-list/quan-cocktail-hai-phong-hot-trend-gioi-tre-khong-the-bo-lo-66768.htm",
     "https://wink-hotels.com/?p=6053"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 100,
@@ -3673,13 +3752,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    750
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail nhỏ, ấm cúng, được biết đến với các ly cocktail pha theo khẩu vị riêng của từng khách và thực đơn đồ uống đa dạng.",
+   "desc": "Insider Cocktail Bar nằm tại số 80 Hoàng Văn Thụ, phường Quang Trung, quận Hồng Bàng, Hải Phòng. Quán có không gian nhỏ, ấm cúng nhưng vẫn chỉn chu, nổi bật với những ly cocktail pha theo khẩu vị riêng của từng khách cùng thực đơn đồ uống đa dạng. Phù hợp cho các buổi hẹn hò hoặc nhóm bạn nhỏ muốn thưởng thức cocktail trong không khí riêng tư.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3696,7 +3775,8 @@
    "sources": [
     "https://www.toplist.vn/top-list/quan-cocktail-hai-phong-hot-trend-gioi-tre-khong-the-bo-lo-66768.htm",
     "https://wink-hotels.com/?p=6053"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 101,
@@ -3708,13 +3788,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Một trong những quán cocktail được giới trẻ Hải Phòng nhắc đến nhiều, nằm trên phố Quán Nam.",
+   "desc": "People Cocktail là quán cocktail tại số 159 Quán Nam, phường Kênh Dương, quận Lê Chân, được giới trẻ Hải Phòng nhắc đến nhiều. Không gian mang phong cách hiện đại với ánh đèn neon, thực đơn trải từ cocktail cổ điển đến các công thức sáng tạo, cách trình bày đồ uống bắt mắt. Đây là lựa chọn hợp cho nhóm bạn trẻ muốn gặp gỡ, trò chuyện và chụp ảnh buổi tối.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3730,7 +3810,8 @@
    "partner": false,
    "sources": [
     "https://www.toplist.vn/top-list/quan-cocktail-hai-phong-hot-trend-gioi-tre-khong-the-bo-lo-66768.htm"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 102,
@@ -3742,13 +3823,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    650
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Pub bia thủ công trong khu Vinhomes Imperia, nhìn ra quảng trường Ánh Sáng. Có nhiều loại bia nặng độ và đồ ăn nhẹ đi kèm.",
+   "desc": "T-Pub Craft Beer Station là pub bia thủ công tại BH03-05 Manhattan 10, khu Vinhomes Imperia, quận Hồng Bàng, nhìn ra quảng trường Ánh Sáng. Quán có nhiều lựa chọn bia thủ công trong nước, bao gồm các loại bia nặng độ, đi kèm đồ ăn nhẹ và món fusion. Phù hợp với những người yêu bia muốn ngồi lâu cùng bạn bè vào buổi tối.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3765,7 +3846,8 @@
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/top-7-most-famous-bars-in-hai-phong-mytour",
     "https://www.kupi.com/en-ae/explore/vietnam/haiphong/t-pub-craft-beer-station"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 103,
@@ -3777,13 +3859,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    600
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Pub theo phong cách Ireland truyền thống, quen thuộc với khách địa phương và người nước ngoài.",
+   "desc": "Buzz Pub là pub theo phong cách Ireland truyền thống tại số 335 Văn Cao, quận Hải An, Hải Phòng. Không gian dùng nhiều gỗ, ánh sáng dịu và quầy bar dài kiểu pub châu Âu, phục vụ đồ ăn nhanh, cocktail, mocktail và bia tươi, có các buổi biểu diễn của nghệ sĩ trẻ. Quán quen thuộc với cả khách địa phương lẫn người nước ngoài sống và làm việc tại thành phố.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3800,7 +3882,8 @@
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-7-most-famous-bars-in-hai-phong-mytour.html",
     "https://kupi.com/en/explore/vietnam/haiphong/buzz-pub"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 104,
@@ -3812,13 +3895,13 @@
    "hours": "20:30 – 01:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    550,
+    1150
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Điểm vui chơi đêm lâu năm ở trung tâm thành phố với nội thất sang trọng. Từng được làm mới hệ thống âm thanh, ánh sáng và không gian.",
+   "desc": "Fleur d'Or Maison Bar là điểm vui chơi đêm lâu năm tại số 50 Đinh Tiên Hoàng, quận Hồng Bàng, ngay trung tâm Hải Phòng. Quán gồm hai tầng: tầng trệt là sảnh chờ với quầy bar, tầng hai là khu vực âm nhạc cùng DJ với các thể loại House, Vietnam House, EDM, Electro. Không gian nội thất sang trọng đã được làm mới toàn bộ âm thanh, ánh sáng, phù hợp với những ai thích không khí club sôi động.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3835,7 +3918,8 @@
    "sources": [
     "https://toplist.vn/top-list/quan-bar-noi-tieng-nhat-o-hai-phong-14553.htm",
     "https://traveltriangle.com/blog/hai-phong-nightlife/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 106,
@@ -3847,13 +3931,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    450,
+    1350
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Vũ trường trên đường Lạch Tray, tên cũ là King Disco.",
+   "desc": "Royal Disco là vũ trường nằm tại số 53 Lạch Tray, quận Ngô Quyền, Hải Phòng, trước đây mang tên King Disco và còn được gọi là Hoàng Gia Disco. Đây là một trong những địa chỉ quẩy đêm quen thuộc trên trục đường Lạch Tray. Phù hợp với nhóm bạn thích nhạc sôi động và không khí vũ trường.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3869,7 +3953,8 @@
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/indulge-in-the-vibrant-nightlife-scene-at-9-top-notch-bars-in-hai-phong-mytour.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 107,
@@ -3881,13 +3966,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    650
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Pub kiêm quán cà phê trong khu đô thị Waterfront, được người dùng Foody đánh giá tích cực.",
+   "desc": "Guzzle Pub & Café là quán pub kiêm cà phê tại số 62 Đường số 5B, khu đô thị Waterfront, phường Vĩnh Niệm, quận Lê Chân. Quán nằm trong khu đô thị ven sông, được người dùng Foody đánh giá tích cực và xếp vào nhóm quán phù hợp để thư giãn. Đây là lựa chọn nhẹ nhàng cho cư dân quanh khu vực muốn ghé uống nước, trò chuyện từ chiều đến tối.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3903,7 +3988,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/hai-phong/bar-pub"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 108,
@@ -3915,13 +4001,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Pub trên phố Minh Khai, được khen về đồ ăn và nhân viên; có khách nhận xét nhạc khá to.",
+   "desc": "Chill Pub là quán pub trên phố Minh Khai, số 22C, quận Hồng Bàng, gần trung tâm Hải Phòng. Quán được khách khen về đồ ăn và thái độ phục vụ của nhân viên, trong khi âm nhạc được mở khá to tạo không khí sôi nổi. Phù hợp với nhóm bạn muốn ăn uống, nghe nhạc và trò chuyện rôm rả buổi tối.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3937,7 +4023,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/hai-phong/bar-pub"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 109,
@@ -3949,13 +4036,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    600
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar quen thuộc trên phố chính đảo Cát Bà, phục vụ cocktail, đồ uống không cồn và món ăn như pizza.",
+   "desc": "Oasis Bar Cát Bà là quán bar quen thuộc trên phố chính đường 1/4 của thị trấn Cát Bà, cách bến tàu không xa. Quán phục vụ cocktail, đồ uống không cồn cùng các món ăn như pizza, burger, có bàn bi-a, phi tiêu và hồ bơi ngoài trời. Không gian thoải mái, gần gũi, phù hợp với du khách muốn tìm chỗ ngồi chơi buổi tối sau một ngày khám phá đảo.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -3972,7 +4059,8 @@
    "sources": [
     "https://sunparadiseland.com/SunParadiseLandCatBa/tin-tuc/oasis-bar-cat-ba-dia-diem-an-choi-quen-loi-ve-2025-7692",
     "https://www.fodors.com/world/asia/vietnam/halong-bay-and-north-central-vietnam/places/cat-ba-island/things-to-do/nightlife"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 110,
@@ -3984,13 +4072,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    750
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quầy bar trên cao của khách sạn Sea Pearl, có tầm nhìn 360 độ ra vịnh Lan Hạ.",
+   "desc": "Cat Ba Sky Bar là quầy bar trên tầng mái của khách sạn Sea Pearl Cat Ba, số 219 đường 1/4, thị trấn Cát Bà. Khách sạn nằm ngay trước vịnh Lan Hạ nên từ quầy bar có tầm nhìn 360 độ ra mặt vịnh và thị trấn. Phù hợp với du khách muốn ngồi trên cao nhâm nhi đồ uống và ngắm cảnh biển Cát Bà về chiều tối.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4006,7 +4094,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/hai-phong/bar-pub-phong-cach-viet-nam"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 111,
@@ -4018,13 +4107,13 @@
    "hours": "21:00 – 02:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    500,
+    1000
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "EDM, House, Tech-house; DJ",
    "dress": "",
-   "desc": "Quán bar không gian retro được giới trẻ địa phương yêu thích nhờ các set DJ trực tiếp với nhiều dòng nhạc điện tử.",
+   "desc": "Đông Bar là quán bar ở số 3 Phạm Ngũ Lão, khu phố Tây Huế, trang trí theo phong cách retro với tông đỏ gạch chủ đạo. Quán được giới trẻ địa phương yêu thích nhờ các set DJ trực tiếp với EDM, house, tech-house, thường mời DJ trong và ngoài thành phố biểu diễn. Phù hợp với người mê nhạc điện tử và du khách muốn trải nghiệm đêm Huế sôi động.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4042,7 +4131,8 @@
     "https://vinpearl.com/en/bar-in-hue",
     "https://vinwonders.com/en/wonderpedia/news/hue-bars/",
     "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 112,
@@ -4054,13 +4144,13 @@
    "hours": "17:00 – 03:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    500,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "EDM",
    "dress": "",
-   "desc": "Bar lâu năm ở khu phố Tây, đồ uống giá mềm và mở nhạc EDM đến khuya.",
+   "desc": "Brown Eyes Bar là quán bar lâu năm tại 56 Chu Văn An, khu phố Tây Huế, quen thuộc với dân du lịch ba lô và người nước ngoài. Quán có sàn nhảy, DJ chơi EDM, hip-hop, R&B và house đến khuya, đồ uống giá mềm, kèm khu sân vườn phía sau. Phù hợp với những ai muốn nhảy nhót, giao lưu sau một ngày tham quan cố đô.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4077,11 +4167,12 @@
    "sources": [
     "https://vinpearl.com/en/bar-in-hue",
     "https://localvietnam.com/hue/hue-nightlife-things-to-do-at-night/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 113,
-   "name": "DMZ Bar",
+   "name": "DMZ Bar & Restaurant",
    "city": "hue",
    "area": "Thuận Hóa (khu phố Tây)",
    "addr": "60 Lê Lợi",
@@ -4089,13 +4180,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Pub trang trí theo chủ đề quân sự, phục vụ nhanh và thân thiện, phù hợp một tối thư giãn.",
+   "desc": "DMZ Bar & Restaurant là pub tại 60 Lê Lợi, trên tuyến phố về đêm của khu phố Tây Huế, trang trí theo chủ đề quân sự. Quán phục vụ cocktail, rượu vang cùng các món Việt và Âu, nhân viên phục vụ nhanh và thân thiện. Phù hợp cho một tối thư giãn với bạn bè hoặc ghé lại sau khi dạo phố Tây.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4112,7 +4203,8 @@
    "sources": [
     "https://vinpearl.com/en/bar-in-hue",
     "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 114,
@@ -4124,13 +4216,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    600
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Lounge có bộ sưu tập whisky được đánh giá thuộc hàng phong phú ở Việt Nam, cùng nhiều bia thủ công trong và ngoài nước; chỗ có hạn nên nên đặt trước.",
+   "desc": "Secret Lounge Hue là lounge nằm trong hẻm 42 Nguyễn Công Trứ, có không gian sân vườn ngoài trời thư thái. Quán được giới thiệu với bộ sưu tập whisky phong phú cùng nhiều loại bia thủ công trong và ngoài nước, bên cạnh thực đơn cocktail sáng tạo. Chỗ ngồi có hạn nên nên đặt trước, phù hợp cho nhóm bạn muốn nhâm nhi trong không khí yên tĩnh.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4147,7 +4239,8 @@
    "sources": [
     "https://vinpearl.com/en/bar-in-hue",
     "https://vinwonders.com/en/wonderpedia/news/hue-bars/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 115,
@@ -4159,13 +4252,13 @@
    "hours": "14:00 – 23:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    700
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Brewpub có 14 vòi bia thủ công, phần lớn được nấu ngay tại chỗ, nhân viên am hiểu về bia.",
+   "desc": "Imperial Craft Bia Brewpub là quán bia thủ công nằm trong hẻm 21 Ngô Gia Tự, trung tâm Huế. Quán có 14 vòi bia, phần lớn được nấu ngay tại chỗ, gồm IPA, pale ale, stout và lager, nhân viên am hiểu và sẵn lòng tư vấn. Phù hợp với người yêu bia thủ công muốn thử nhiều hương vị trong một buổi tối chậm rãi.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4182,7 +4275,8 @@
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/hue-bars/",
     "https://www.kupi.com/en-ae/explore/vietnam/hue/imperial-craft-bia-brewpub"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 116,
@@ -4194,13 +4288,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    500,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Bar sân thượng không khí thư thái, pha chế đồ uống theo khẩu vị riêng của từng khách.",
+   "desc": "BarLab là bar sân thượng tại 62 Chu Văn An, khu phố Tây Huế, lên bằng cầu thang dẫn tới khu vườn trên mái với nhiều cây xanh. Không gian ấm cúng, thư thái, bartender pha chế đồ uống theo khẩu vị riêng của từng khách. Phù hợp với cặp đôi hoặc nhóm nhỏ muốn thưởng thức cocktail trong một góc yên bình.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4217,7 +4311,8 @@
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/hue-bars/",
     "https://vinpearl.com/en/bar-in-hue"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 117,
@@ -4229,13 +4324,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    1000
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Một trong những quán bia lớn nhất Huế, thu hút người trẻ nhờ giá phải chăng và đồ ăn uống ngon.",
+   "desc": "Century Pub & Beer Garden là quán bia sân vườn rộng tại 49 Lê Lợi, khu phố Tây Huế, một trong những quán bia lớn của thành phố. Không gian ngoài trời thoáng, có DJ, phục vụ cả đồ ăn lẫn đồ uống với giá phải chăng. Phù hợp với người trẻ, nhóm bạn đông người và cả gia đình muốn tụ tập buổi tối.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4252,7 +4347,8 @@
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-9-best-bars-and-pubs-on-hue-s-western-street-mytour.html",
     "https://www.foody.vn/hue/bar-pub"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 118,
@@ -4264,13 +4360,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    450,
+    1150
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Club không gian rộng ở trung tâm thành phố, được khách khen về âm nhạc.",
+   "desc": "Asta The Club là club tại 9 Hùng Vương, trung tâm Huế, với không gian rộng có tầng trên và thiết kế mang hơi hướng châu Âu. Quán đầu tư hệ thống âm thanh, ánh sáng, chơi nhạc hip-hop và dance cùng DJ và nghệ sĩ biểu diễn, được khách khen về âm nhạc. Phù hợp với nhóm bạn muốn xả stress cuối tuần.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4287,7 +4383,8 @@
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html",
     "https://www.foody.vn/hue/bar-pub"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 119,
@@ -4299,13 +4396,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    450,
+    850
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "DJ, vũ công",
    "dress": "",
-   "desc": "Bar gây ấn tượng với các màn trình diễn của DJ và vũ công.",
+   "desc": "Xà Bần Bar là quán bar tại 40 Nguyễn Tri Phương, gần khu phố Tây Huế, gây ấn tượng với các màn trình diễn của DJ và vũ công. Quán trang bị âm thanh, ánh sáng hiện đại, tạo không khí sôi động về đêm. Phù hợp với nhóm bạn trẻ muốn nghe nhạc mạnh và hòa mình vào đêm Huế náo nhiệt.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4322,7 +4419,8 @@
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html",
     "https://www.foody.vn/hue/bar-pub"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 120,
@@ -4334,13 +4432,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    600,
+    1200
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Bar nằm trên trục Lê Lợi gần khu phố Tây, có tên trong danh sách các quán bar nổi bật của Huế.",
+   "desc": "New DTV Bar là quán bar tại 102 Lê Lợi, gần khu phố Tây Huế, có tên trong danh sách các quán bar nổi bật của thành phố. Quán thiết kế hiện đại, có hệ thống âm thanh, ánh sáng, phục vụ rượu nhập khẩu và đồ ăn nhẹ do bartender chuyên nghiệp pha chế. Phù hợp cho những buổi vui chơi cuối tuần cùng bạn bè.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4357,7 +4455,8 @@
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html",
     "https://www.jakarta100bars.com/hue-nightlife"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 121,
@@ -4369,13 +4468,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    450,
+    950
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Đêm DJ",
    "dress": "",
-   "desc": "Rooftop bar của khách sạn Meliá Vinpearl Hue với tầm nhìn toàn cảnh thành phố về đêm, có đêm DJ.",
+   "desc": "Zenith Bar là sky bar trên tầng trên cùng của khách sạn Meliá Vinpearl Hue, 50A Hùng Vương, với tầm nhìn toàn cảnh thành phố và sông Hương. Không gian ngoài trời, phục vụ cocktail cùng nhạc DJ vào buổi tối, là chỗ đẹp để ngắm hoàng hôn trên cố đô. Phù hợp cho cặp đôi hoặc nhóm nhỏ muốn ngắm Huế về đêm từ trên cao.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4392,7 +4491,8 @@
    "sources": [
     "https://melia.com/en/hotels/vietnam/hue-city/melia-vinpearl-hue/restaurants",
     "https://vinwonders.com/en/wonderpedia/news/hue-bars/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 122,
@@ -4404,13 +4504,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    700
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar nhỏ trong hẻm Lê Lợi, là điểm quen của nhiều du khách nước ngoài.",
+   "desc": "Oasis Bar là quán bar nhỏ nằm trong hẻm 42 Lê Lợi, khu phố Tây Huế, là điểm quen của nhiều du khách nước ngoài. Không khí vui vẻ, sôi nổi nhưng không quá ồn ào, quán giữ được nét riêng giữa các bar trong khu vực. Phù hợp cho một tối thư giãn, gặp gỡ bạn bè từ khắp nơi.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4426,7 +4526,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/hue/bar-pub-phuc-vu-thuc-uong"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 123,
@@ -4438,13 +4539,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    700
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc sôi động",
    "dress": "",
-   "desc": "Quán pub náo nhiệt ở phố Tây Võ Thị Sáu, đông khách khi phố lên đèn.",
+   "desc": "Tà Vẹt Coffee & Pub là quán kết hợp cà phê và pub tại 11 Võ Thị Sáu, ngay phố Tây Huế, với không gian rộng và nội thất gỗ mộc mạc. Quán có nhiều lựa chọn bia cùng thực đơn món Việt giá phải chăng, nhạc sôi động và đông khách khi phố lên đèn. Phù hợp với du khách và nhóm bạn muốn ăn uống, trò chuyện trong không khí náo nhiệt.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4460,7 +4561,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/hue/bar-pub-phuc-vu-thuc-uong"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 124,
@@ -4472,13 +4574,13 @@
    "hours": "17:30 – 01:00",
    "hoursKnown": true,
    "price": [
-    130,
-    250
+    350,
+    1050
    ],
    "priceKnown": true,
    "music": "DJ, EDM",
    "dress": "",
-   "desc": "Tổ hợp trên nóc khách sạn Havana gồm Skydeck 360°, Skywalk và Rooftop Beach Club, nhìn toàn cảnh phố biển. Khu sàn nhảy không nhận khách dưới 18 tuổi sau 21h.",
+   "desc": "Skylight Nha Trang là tổ hợp giải trí trên nóc khách sạn Premier Havana, số 38 Trần Phú, gồm Skydeck 360°, Skywalk và Rooftop Beach Club. Từ trên cao có thể ngắm toàn cảnh phố biển Nha Trang, ban ngày là điểm tham quan, khi đêm xuống chuyển thành sân thượng sôi động với DJ và nhạc EDM. Khu sàn nhảy không nhận khách dưới 18 tuổi sau 21h.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4496,7 +4598,8 @@
     "https://mia.vn/cam-nang-du-lich/skylight-nha-trang-quay-cuc-da-tai-quan-bar-view-xin-so-noi-thanh-pho-bien-693",
     "https://vinwonders.com/vi/wonderpedia/news/top-quan-bar-nha-trang-quay-xuyen-man-dem-hot/",
     "https://www.waug.com/en/magazines/1329"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 125,
@@ -4508,13 +4611,13 @@
    "hours": "17:00 – 00:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    350,
+    1250
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quầy bar trên tầng 28 khách sạn Sheraton, ngắm thành phố và đường bờ biển từ trên cao. Không khí yên tĩnh, hợp hẹn hò với một ly cocktail.",
+   "desc": "Altitude Rooftop Bar nằm trên tầng 28 khách sạn Sheraton Nha Trang, số 26–28 Trần Phú, nhìn ra vịnh Nha Trang và ánh đèn thành phố về đêm. Quán có không gian trong nhà cùng sân hiên mở ngắm đường bờ biển từ trên cao. Không khí yên tĩnh, lịch sự, phù hợp cho buổi hẹn hò hoặc gặp gỡ nhẹ nhàng bên một ly cocktail.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4532,7 +4635,8 @@
     "https://vinwonders.com/en/wonderpedia/news/bars-nha-trang-chill-to-the-fullest-at-16-hottest-places-for-nightlife/",
     "https://www.hotels.com/go/vietnam/best-nightlife-nha-trang",
     "https://uk.trip.com/restaurant/vietnam/nha%20trang/detail/Altitude%20Rooftop%20Bar-505801"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 126,
@@ -4544,13 +4648,13 @@
    "hours": "07:00 – 02:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    450,
+    950
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "DJ cuối tuần",
    "dress": "",
-   "desc": "Beach club rộng hơn 2.400 m² nằm ngay trên bãi cát biển Nha Trang. Cuối tuần có đêm nhạc DJ và các tiết mục biểu diễn.",
+   "desc": "Sailing Club Nha Trang là beach club rộng hơn 2.400 m² nằm ngay trên bãi biển Trần Phú, gắn bó với đời sống về đêm Nha Trang từ năm 1994. Ban ngày khách có thể thư giãn trên ghế tắm nắng ven biển, thực đơn kết hợp món Âu, Ấn và Việt. Cuối tuần có đêm nhạc DJ và các tiết mục biểu diễn, ngoài ra còn có đêm salsa và bachata, hợp với cả du khách lẫn nhóm bạn.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4568,11 +4672,12 @@
     "https://www.waug.com/en/magazines/1329",
     "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-nha-trang-57083.htm",
     "https://vinwonders.com/en/wonderpedia/news/bars-nha-trang-chill-to-the-fullest-at-16-hottest-places-for-nightlife/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 127,
-   "name": "HK Club (tên cũ Havana Club)",
+   "name": "HK Club Nha Trang",
    "city": "nt",
    "area": "Phường Nha Trang (Lộc Thọ cũ)",
    "addr": "38 Trần Phú",
@@ -4580,13 +4685,13 @@
    "hours": "20:00 – 02:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    450,
+    850
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "DJ",
    "dress": "",
-   "desc": "Club về đêm trong khuôn viên khách sạn Havana, trước đây mang tên Havana Club. Hoạt động từ tối đến khuya.",
+   "desc": "HK Club Nha Trang, trước đây mang tên Havana Club, là club về đêm tại số 38 Trần Phú, nằm dưới tầng hầm đối diện và kết nối với khách sạn Havana. Club hoạt động từ năm 2014, nổi bật với DJ và không khí sôi động đến khuya. Đây là lựa chọn cho nhóm bạn và du khách muốn trải nghiệm một đêm quẩy giữa trung tâm phố biển.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4603,7 +4708,8 @@
    "sources": [
     "https://pk.trip.com/toplist/tripbest/nha-trang-best-clubs-100900005351/",
     "https://mytour.vn/en/blog/bai-viet/top-10-most-famous-bars-in-nha-trang-city-khanh-hoa-mytour.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 128,
@@ -4615,13 +4721,13 @@
    "hours": "07:00 – 01:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    350,
+    950
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc sống tối thứ Sáu, thứ Bảy",
    "dress": "",
-   "desc": "Nhà hàng kiêm xưởng bia thủ công sát biển, có hồ bơi và ghế tắm nắng riêng. Tối cuối tuần có nhạc sống.",
+   "desc": "Louisiane Brewhouse là nhà hàng kiêm xưởng bia thủ công nằm sát biển trên đường Trần Phú, Nha Trang, với bia được nấu ngay tại chỗ. Thực đơn kết hợp món Việt, Âu và Nhật, khách còn có thể dùng hồ bơi và ghế tắm nắng riêng của quán. Tối cuối tuần có nhạc sống, hợp với gia đình, nhóm bạn hoặc du khách muốn thưởng thức bia tươi bên bờ biển.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4639,7 +4745,8 @@
     "https://fodors.fodors.com/world/asia/vietnam/the-south-central-coasts-and-highlands/restaurants/reviews/louisiane-brewhouse-614619",
     "https://www.indochinavalue.com/vietnam-travel-destinations/nha-trang-travel-guide/entertainment-in-nha-trang/louisiane-brewhouse-nha-trang",
     "https://wanderlog.com/place/details/875953"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 129,
@@ -4651,13 +4758,13 @@
    "hours": "18:00 – 03:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    350,
+    950
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc sống tối thứ Tư, thứ Năm",
    "dress": "",
-   "desc": "Pub thể thao kiêm quán nướng trên phố Tây Nguyễn Thiện Thuật, mở đến tận khuya. Có biểu diễn nhạc sống giữa tuần.",
+   "desc": "Booze Cruise Sports Bar & Grill là pub thể thao kiêm quán nướng trên phố Tây Nguyễn Thiện Thuật, cách bãi biển Trần Phú khoảng 10 phút đi bộ. Quán chiếu các sự kiện thể thao quốc tế, phục vụ burger, pizza, sandwich kiểu Mỹ cùng nhiều loại bia, và mở đến tận khuya. Giữa tuần có biểu diễn nhạc sống, hợp với fan thể thao và nhóm bạn muốn tụ tập thoải mái.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4674,7 +4781,8 @@
    "sources": [
     "https://www.bestpricetravel.com/travel-guide/nha-trang-nightlife-2710.html",
     "https://www.indochinavalue.com/vietnam-travel-destinations/nha-trang-travel-guide/entertainment-in-nha-trang/booze-cruise-sports-bar-grill"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 130,
@@ -4686,13 +4794,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar sôi động, đông khách trẻ, nằm trong khu phố Tây. Là một trong số ít nơi ở Nha Trang mở cửa rất khuya.",
+   "desc": "Why Not Bar là quán bar sôi động trên đường Trần Quang Khải, trong khu phố Tây Nha Trang và chỉ cách bãi biển Trần Phú một quãng đi bộ ngắn. Quán đông khách trẻ với không khí tiệc tùng và là một trong số ít nơi ở Nha Trang mở cửa rất khuya, thường đông hơn sau khi các quán ven biển đóng cửa. Phù hợp cho những ai muốn kéo dài cuộc vui về đêm.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4709,7 +4817,8 @@
    "sources": [
     "https://www.indochinavalue.com/vietnam-travel-destinations/nha-trang-travel-guide/entertainment-in-nha-trang/why-not-bar",
     "https://wanderlog.com/place/details/11491918/why-not-bar-nha-trang"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 131,
@@ -4721,13 +4830,13 @@
    "hours": "18:00 – 02:30",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    500,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "EDM, hip-hop",
    "dress": "",
-   "desc": "Club ven biển nổi tiếng với nhạc EDM cường độ cao. Thường được nhắc tới cho những đêm quẩy hip-hop và nhạc điện tử.",
+   "desc": "Paradise Club là club ven biển trong khu Công viên Bốn Mùa trên đường Trần Phú, Nha Trang, thuộc nhóm club hoạt động lâu năm của thành phố. Club được biết đến với nhạc EDM cường độ cao và các đêm hip-hop, thu hút nhiều khách quốc tế. Đây là lựa chọn cho nhóm bạn và du khách thích nhạc điện tử, muốn trải nghiệm không khí quẩy sôi động bên bờ biển.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4744,7 +4853,8 @@
    "sources": [
     "https://pk.trip.com/toplist/tripbest/nha-trang-best-clubs-100900005351/",
     "https://mytour.vn/en/blog/bai-viet/top-10-most-famous-bars-in-nha-trang-city-khanh-hoa-mytour.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 132,
@@ -4756,13 +4866,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    450,
+    850
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar bãi biển nằm trên trục đường dạo Trần Phú, mở cửa cả ngày. Phù hợp ngồi thư giãn sát biển.",
+   "desc": "Z Beach là quán bar bãi biển ngoài trời nằm trên trục đường dạo ven biển Trần Phú, Nha Trang, mở cửa cả ngày. Khách ngồi trên những chiếc ghế lười màu cam đặt ngay trên cát, nhìn thẳng ra biển, và quán đôi khi tổ chức sự kiện. Đây là điểm tụ tập quen thuộc của giới trẻ Nha Trang, phù hợp để ngồi thư giãn sát biển cùng bạn bè.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4779,7 +4889,8 @@
    "sources": [
     "https://kupi.com/en/explore/vietnam/nha-trang/z-beach",
     "https://nz.trip.com/toplist/tripbest/nha-trang-best-bars-100900005327"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 133,
@@ -4791,13 +4902,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    1050
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc hiện đại",
    "dress": "",
-   "desc": "Rooftop nhỏ trên phố Nguyễn Thiện Thuật với thiết kế ấm cúng. Hợp cho buổi tối tụ tập bạn bè.",
+   "desc": "Riviera Rooftop Bar & Restaurant là rooftop nhỏ kết hợp nhà hàng trên phố Nguyễn Thiện Thuật, khu trung tâm Nha Trang. Quán có thiết kế ấm cúng, mở nhạc hiện đại, là nơi ngồi thư giãn dịp cuối tuần. Phù hợp cho buổi tối tụ tập bạn bè hoặc hẹn hò nhẹ nhàng trên cao giữa lòng phố biển.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4814,7 +4925,8 @@
    "sources": [
     "https://www.waug.com/en/magazines/1329",
     "https://www.foody.vn/khanh-hoa/bar-pub-phu-hop-hen-ho"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 134,
@@ -4826,13 +4938,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    1050
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quầy bar kết hợp đồ nướng trên tầng thượng trung tâm thương mại Nha Trang Center. Nằm ngay đường biển Trần Phú.",
+   "desc": "Lunar Rooftop Bar & Grill là quầy bar kết hợp đồ nướng trên tầng thượng trung tâm thương mại Nha Trang Center, ngay đường biển Trần Phú. Quán mang tông màu tím và trắng, có nhiều khu vực như lounge rượu vang, sân khấu biểu diễn, bếp mở và khu ngoài trời nhìn ra biển bên hồ bơi. Không gian rộng rãi, hợp với nhóm bạn hoặc các buổi tụ tập đông người.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4848,11 +4960,12 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/khanh-hoa/bar-pub-phu-hop-hen-ho"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 135,
-   "name": "Hybrid",
+   "name": "Hybrid Nha Trang",
    "city": "nt",
    "area": "TP. Nha Trang",
    "addr": "",
@@ -4860,13 +4973,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    700
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Speakeasy cocktail sức chứa khoảng 40 khách, từng lọt Top 100 quán bar xuất sắc châu Á năm 2021. Địa chỉ giữa các nguồn chưa thống nhất.",
+   "desc": "Hybrid Nha Trang là speakeasy cocktail đương đại nằm khuất trong một con hẻm ở khu Lộc Thọ, do nhà sáng lập Lâm Dương gây dựng tại quê nhà. Không gian ấm cúng với sức chứa khoảng 40 khách, quán từng có tên trong danh sách 51–100 của Asia's 50 Best Bars năm 2021 và sau đó mở thêm chi nhánh tại Sài Gòn. Hợp với khách mê cocktail muốn tìm một quán bar kín đáo, tinh tế.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4884,7 +4997,8 @@
     "https://theworlds50best.com/discovery/Establishments/Vietnam/Nha-Trang/Hybrid.html",
     "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-nha-trang-57083.htm",
     "https://vietcetera.com/en/skip-the-tourist-traps-here-are-nha-trangs-5-hidden-gems-for-a-perfect-drink"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 136,
@@ -4896,13 +5010,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    1250
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail kiểu ẩn mình, ra mắt năm 2023. Được giới thiệu là lựa chọn thay thế cho các quán đông khách du lịch.",
+   "desc": "Wolpertinger Cocktail Vault là quán cocktail kiểu ẩn mình ở Nha Trang, ra mắt năm 2023 do bartender Trần Nguyễn Tấn Tài sáng lập. Tên quán lấy cảm hứng từ sinh vật huyền thoại Wolpertinger, không gian ấm cúng mang chút bí ẩn, có máy lạnh và board game. Cocktail sử dụng siro tự làm, phù hợp với khách muốn tìm lựa chọn khác ngoài các quán đông khách du lịch.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4919,7 +5033,8 @@
    "sources": [
     "https://thatch.co/places/258911/wolpertinger-cocktail-vault-nha-trang---79-to-hien-thanh",
     "https://vietcetera.com/en/skip-the-tourist-traps-here-are-nha-trangs-5-hidden-gems-for-a-perfect-drink"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 137,
@@ -4931,13 +5046,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar kiêm nhà hàng quen thuộc trong khu phố Tây Trần Quang Khải. Phục vụ đồ uống và đồ ăn cho khách tụ tập buổi tối.",
+   "desc": "Oasis Bar & Restaurant là quán bar kiêm nhà hàng quen thuộc trên đường Trần Quang Khải, trong khu phố Tây sôi động của Nha Trang, gần đường biển Trần Phú. Quán phục vụ cả đồ uống lẫn đồ ăn, là điểm hẹn của khách tụ tập buổi tối. Phù hợp với nhóm bạn và du khách muốn vừa ăn tối vừa nhâm nhi đồ uống trong không khí phố Tây.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4953,7 +5068,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/khanh-hoa/bar-pub-phuc-vu-thit-bo?vt=row"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 138,
@@ -4965,13 +5081,13 @@
    "hours": "06:00 – 18:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    450,
+    850
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quầy bar cạnh hồ bơi tầng 2 của InterContinental Nha Trang, nhìn ra biển. Hoạt động ban ngày theo giờ của khách sạn.",
+   "desc": "Aqualine Bar là quầy bar cạnh hồ bơi trên tầng 2 của khách sạn InterContinental Nha Trang, sàn ngoài trời nhìn thẳng ra vịnh Nha Trang. Quán hoạt động ban ngày theo giờ của khách sạn, phục vụ sinh tố, cocktail và thực đơn món nhẹ. Phù hợp với khách lưu trú hoặc những ai muốn ngồi thư giãn bên hồ bơi, ngắm biển với một ly đồ uống mát lạnh.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -4988,7 +5104,8 @@
    "sources": [
     "https://www.ihg.com/intercontinental/hotels/us/en/nha-trang/nhach/hoteldetail/dining",
     "https://joinpearl.co/bars/nha-trang/aqualine-bar"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 139,
@@ -5000,13 +5117,13 @@
    "hours": "16:00 – 02:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    400,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Lounge shisha tại khu bến Vinpearl Harbour. Mở từ chiều đến khuya, hợp ngồi thư giãn ven biển.",
+   "desc": "The S Hookah là lounge shisha hiện đại tại khu phố thương mại Vinpearl Harbour trên đảo Hòn Tre, Nha Trang. Quán phục vụ shisha cùng đồ uống và có các buổi workshop sáng tạo để khách giao lưu. Không gian thư giãn ven biển, mở từ chiều đến khuya, phù hợp với nhóm bạn muốn ngồi trò chuyện sau một ngày vui chơi trên đảo.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5022,7 +5139,8 @@
    "partner": false,
    "sources": [
     "https://vinpearl.com/en/nha-trang-vietnam-nightlife-the-best-after-dark-experiences"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 140,
@@ -5034,13 +5152,13 @@
    "hours": "16:00 – 00:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    350,
+    950
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Bar sát biển Bãi Trường với trang trí gỗ, ghế lười và chỗ ngồi hướng biển. Có biểu diễn múa lửa vào buổi tối.",
+   "desc": "OCSEN Beach Bar & Club là quán bar nằm sát biển Bãi Trường, trong hẻm 124 Trần Hưng Đạo, xã Dương Tơ, Phú Quốc. Không gian trang trí đơn giản bằng gỗ, có ghế lười và nhiều chỗ ngồi hướng ra biển để ngắm hoàng hôn, thực đơn đồ uống đa dạng. Buổi tối quán có biểu diễn múa lửa, phù hợp với nhóm bạn và du khách muốn thư giãn bên bờ biển.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5058,7 +5176,8 @@
     "https://vinwonders.com/vi/wonderpedia/news/review-chi-tiet-15-quan-bar-phu-quoc-cuc-chat-de-chay-het-dem/",
     "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/enjoy-the-sunset-and-relax-at-ocsen-beach-bar-phu-quoc-12970",
     "https://hanoivoyage.com/en/blog/7-beach-bars-in-phu-quoc.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 141,
@@ -5070,13 +5189,13 @@
    "hours": "07:30 – 22:30",
    "hoursKnown": true,
    "price": [
-    70,
-    250
+    450,
+    1150
    ],
    "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Bistro kiêm sky bar trên đồi nhìn xuống thị trấn và bờ biển. Điểm quen thuộc để uống nước ngắm hoàng hôn.",
+   "desc": "Chuồn Chuồn Bistro & Skybar nằm trên đồi Sao Mai, số 69 Trần Hưng Đạo, nhìn xuống thị trấn Dương Đông và bờ biển Phú Quốc. Ban ngày nơi đây là bistro với thực đơn kết hợp món Việt và món Âu, về chiều tối trở thành điểm hẹn uống nước ngắm hoàng hôn. Phù hợp với cặp đôi, gia đình hoặc nhóm bạn muốn tìm một góc nhìn toàn cảnh thị trấn từ trên cao.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5093,7 +5212,8 @@
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/bars-in-phu-quoc-12-great-places-for-good-drinks-and-chilling/",
     "https://sunparadiseland.com/en/SunParadiseLandPhuQuoc/tin-tuc/dragonfly-bistro-skybar-phu-quoc-with-a-stunning-photo-worthy-view-12984"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 142,
@@ -5105,13 +5225,13 @@
    "hours": "17:00 – 00:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    450,
+    1050
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc sống",
    "dress": "",
-   "desc": "Rooftop trên tầng 19 khu nghỉ InterContinental, tầm nhìn toàn cảnh biển Bãi Trường. Thực đơn cocktail đa dạng kèm nhạc sống.",
+   "desc": "INK 360 Rooftop Bar nằm trên tầng 19 của InterContinental Phu Quoc Long Beach Resort, với tầm nhìn toàn cảnh biển Bãi Trường và hoàng hôn. Nội thất do nhà thiết kế Ashley Sutton thực hiện theo chủ đề thần thoại biển cả. Thực đơn có cocktail đa dạng, danh sách Champagne cùng rượu ngâm tự làm, kèm nhạc sống, phù hợp cho buổi tối hẹn hò hoặc gặp gỡ bạn bè.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5129,7 +5249,8 @@
     "https://vinwonders.com/vi/wonderpedia/news/review-chi-tiet-15-quan-bar-phu-quoc-cuc-chat-de-chay-het-dem/",
     "https://hanoivoyage.com/en/blog/7-beach-bars-in-phu-quoc.html",
     "https://vietnamisawesome.com/?p=18872"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 143,
@@ -5141,13 +5262,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Beach club bên bờ Bãi Trường, cạnh InterContinental. Có biểu diễn múa lửa trong các bữa tối.",
+   "desc": "Sailing Club Phu Quoc là beach club bên bờ Bãi Trường, thuộc khu phức hợp Phu Quoc Marina, cạnh InterContinental. Nơi đây có hồ bơi vô cực với quầy bar dưới nước, ghế tắm nắng và lounge bar ven biển, phục vụ cả đồ ăn châu Á. Khi đêm xuống có biểu diễn múa lửa và DJ, phù hợp với du khách muốn kết hợp ăn tối và tiệc tùng bên biển.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5164,7 +5285,8 @@
    "sources": [
     "https://vietnam.travel/things-to-do/sailing-club-phu-quoc",
     "https://pelago.com/en/activity/pe3vbfzso-exclusive-dining-experience-at-sailing-club-phu-quoc-beach-club-4-course-dinner-with-drinks-included-complimentary-fire-show-vietnam-phu-quoc"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 144,
@@ -5176,13 +5298,13 @@
    "hours": "18:00 – 01:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    700
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail ẩn mình đầu tiên trên đảo, mở từ năm 2016, nằm đối diện Salinda Resort. Luôn có mặt trong các danh sách bar nổi bật của Phú Quốc.",
+   "desc": "Bittersweet & Co. là quán cocktail ẩn mình tại số 185 Trần Hưng Đạo, đối diện Salinda Resort, mở cửa từ năm 2016 và được xem là quán speakeasy đầu tiên trên đảo Phú Quốc. Lối vào là một cánh cửa bí mật nằm trong một cửa hàng sô-cô-la, bên trong không có thực đơn cố định mà mỗi ly cocktail được pha riêng theo sở thích của khách. Phù hợp với những người thích khám phá và muốn trải nghiệm cocktail theo kiểu cá nhân hóa.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5199,7 +5321,8 @@
    "sources": [
     "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/goi-y-top-10-quan-bar-phu-quoc-chill-cho-du-khach-20367",
     "https://vinwonders.com/en/wonderpedia/news/best-bars-in-phu-quoc-vietnam/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 145,
@@ -5211,13 +5334,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    500,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Tổ hợp beach club, nhà hàng và quầy bar ven biển với các tác phẩm điêu khắc và cầu gỗ vươn ra biển. Nổi tiếng là điểm ngắm hoàng hôn.",
+   "desc": "Sunset Sanato Beach Club là tổ hợp beach club, nhà hàng và quầy bar ven biển trên đường Bào, Dương Tơ, thuộc dự án Sunset Sanato ở Bãi Trường, Phú Quốc. Bãi biển nổi bật với các tác phẩm điêu khắc lớn, những tác phẩm sắp đặt và cây cầu gỗ vươn ra biển. Đây là điểm quen thuộc để ngắm hoàng hôn và chụp ảnh, phù hợp với gia đình, cặp đôi và nhóm bạn.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5234,7 +5357,8 @@
    "sources": [
     "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/top-beach-club-phu-quoc-dep-va-soi-dong-nhat-2026-23495",
     "https://hanoivoyage.com/en/blog/7-beach-bars-in-phu-quoc.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 146,
@@ -5246,13 +5370,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    550,
+    850
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "DJ",
    "dress": "",
-   "desc": "Club tại Sunset Town với DJ, hệ thống ánh sáng và không khí sôi động. Có thêm khu Teatro Sky Bar mở 360 độ.",
+   "desc": "Teatro Club là club tại CV1B Sunset Town, An Thới, phía nam đảo Phú Quốc, với DJ thường trú và khách mời chơi EDM, house, hip-hop. Bên cạnh khu club là Teatro Sky Bar mở 360 độ hướng biển, nơi có thể ngắm hoàng hôn và các chương trình biểu diễn của Sunset Town. Phù hợp với những ai yêu thích không khí sôi động, ánh sáng và âm nhạc mạnh về đêm.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5269,7 +5393,8 @@
    "sources": [
     "https://visitphuquoc.com.vn/en/teatro-club-phu-quoc-783",
     "https://blog.premierresidencesphuquoc.com/?p=3950"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 147,
@@ -5281,13 +5406,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    500,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Sky bar trong Sunset Town, ngắm hoàng hôn và màn pháo hoa của thị trấn. Phù hợp khách muốn ngồi trên cao buổi tối.",
+   "desc": "Times Corner Sky Bar là quầy bar trên cao tại số 52 Amalfi, Sunset Town, An Thới, Phú Quốc. Từ đây có thể ngắm hoàng hôn trên biển và màn pháo hoa của thị trấn vào buổi tối. Phù hợp với những ai muốn ngồi trên cao, nhâm nhi đồ uống và tận hưởng không khí lễ hội của Sunset Town.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5303,7 +5428,8 @@
    "partner": false,
    "sources": [
     "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/top-beach-club-phu-quoc-dep-va-soi-dong-nhat-2026-23495"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 148,
@@ -5315,13 +5441,13 @@
    "hours": "09:00 – 01:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    500,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar kiêm nhà hàng bãi biển gần trung tâm Dương Đông. Phục vụ từ sáng đến khuya.",
+   "desc": "Sunset Beach Bar & Restaurant là quán bar kiêm nhà hàng bãi biển tại 100C/2 Trần Hưng Đạo, gần trung tâm Dương Đông, gắn với Sunset Beach Resort & Spa. Không gian bao quanh bởi hàng dừa, trang trí bằng vật liệu thân thiện môi trường, phục vụ từ sáng đến khuya với các món như bánh xèo hải sản ăn kèm bia lạnh. Phù hợp với du khách muốn ăn uống, thư giãn bên biển ở bất kỳ thời điểm nào trong ngày.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5338,7 +5464,8 @@
    "sources": [
     "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/goi-y-top-10-quan-bar-phu-quoc-chill-cho-du-khach-20367",
     "https://kupi.com/en-ae/explore/vietnam/phu-quoc/sunset-beach-bar-and-restaurant"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 149,
@@ -5350,13 +5477,13 @@
    "hours": "20:00 – 03:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    400,
+    1300
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar trên trục Trần Hưng Đạo, hoạt động từ tối đến gần sáng. Là lựa chọn cho khách muốn đi chơi khuya.",
+   "desc": "Luna Bar là quán bar trên trục Trần Hưng Đạo, số 100, khu Dương Đông, Phú Quốc, hoạt động từ tối đến gần sáng. Quán có khu ngồi sân vườn, bàn bi-a và có nhạc sống, tạo không khí ấm cúng nhưng vẫn sôi động. Đây là lựa chọn cho khách muốn đi chơi khuya, gặp gỡ bạn bè sau bữa tối.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5372,7 +5499,8 @@
    "partner": false,
    "sources": [
     "https://vinwonders.com/vi/wonderpedia/news/review-chi-tiet-15-quan-bar-phu-quoc-cuc-chat-de-chay-het-dem/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 150,
@@ -5384,13 +5512,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    600
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Pub kiểu Anh trong hẻm 118 Trần Hưng Đạo. Không mở cửa tất cả các ngày, nên xem fanpage trước khi đến.",
+   "desc": "The Cheeky Traveller English Pub & Bar là pub kiểu Anh nằm trong hẻm 118 Trần Hưng Đạo, Dương Đông, mở cửa từ tháng 11/2019. Không gian trang trí gỗ và tranh tường, phục vụ cocktail riêng của quán cùng bia nhập khẩu, điểm nhấn mỗi tối là phần biểu diễn nhạc sống. Quán không mở cửa tất cả các ngày, nên xem fanpage trước khi ghé.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5407,7 +5535,8 @@
    "sources": [
     "https://kupi.com/en-ae/explore/vietnam/phu-quoc/the-cheeky-traveller-english-pub-and-bar",
     "https://www.expatolife.com/bars-clubs-phu-quoc-vietnam/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 151,
@@ -5419,13 +5548,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    1050
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc sống",
    "dress": "",
-   "desc": "Quán bia thủ công với nhiều lựa chọn bia, có nhạc sống. Có khu vui chơi cho trẻ em nên phù hợp cả gia đình.",
+   "desc": "Happy Bear Beer Bar là quán bia thủ công tại Phu Quoc Centre, số 01 Trần Hưng Đạo, Dương Đông, với nhiều lựa chọn bia thủ công trong nước và quốc tế. Quán có thực đơn đồ ăn đi kèm và nhạc sống, cuối tuần có thêm DJ. Nhờ có khu vui chơi cho trẻ em, nơi đây phù hợp cả với gia đình lẫn nhóm bạn.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5442,7 +5571,8 @@
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/best-bars-in-phu-quoc-vietnam/",
     "https://sites.google.com/view/happybear0325/welcome-to-happy-bear-beer-bar"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 152,
@@ -5454,13 +5584,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    500,
+    1400
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar bãi biển mới với ghế lounge kê sát mép nước. Nằm trên trục Trần Hưng Đạo.",
+   "desc": "Night Beach là quán bar bãi biển tại số 34–36 Trần Hưng Đạo, Dương Đông, Phú Quốc. Quán có thiết kế chỉn chu với ghế lounge kê sát mép nước, mở ra tầm nhìn thoáng ra biển. Phù hợp với giới trẻ và du khách muốn ngồi thư giãn, ngắm biển trong không khí nhẹ nhàng.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5476,7 +5606,8 @@
    "partner": false,
    "sources": [
     "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/goi-y-top-10-quan-bar-phu-quoc-chill-cho-du-khach-20367"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 153,
@@ -5488,13 +5619,13 @@
    "hours": "10:00 – 22:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    450,
+    1050
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Beach club kiêm quầy bar trên đường Trần Hưng Đạo. Hoạt động từ sáng đến tối.",
+   "desc": "Shri Beach Club & Bar là beach club kiêm quầy bar trên đường Trần Hưng Đạo, khu Dương Tơ, Phú Quốc, hoạt động từ sáng đến tối. Không gian mở ra biển, có nhạc sống và phong cách phục vụ chỉn chu. Phù hợp với du khách muốn dành cả ngày bên bờ biển, từ tắm nắng đến nhâm nhi đồ uống lúc chiều tà.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5510,7 +5641,8 @@
    "partner": false,
    "sources": [
     "https://vinwonders.com/vi/wonderpedia/news/review-chi-tiet-15-quan-bar-phu-quoc-cuc-chat-de-chay-het-dem/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 154,
@@ -5522,13 +5654,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    450,
+    1350
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quầy bar phong cách mộc mạc nằm sát biển trong khuôn viên Vinpearl Resort & Spa. Hợp ngồi thư giãn ngắm biển Bãi Dài.",
+   "desc": "Sim Bar là quầy bar phong cách mộc mạc nằm sát biển trong khuôn viên Vinpearl Resort & Spa Phú Quốc, khu Bãi Dài, Gành Dầu. Không gian ngoài trời hướng biển, phục vụ cocktail dùng nguyên liệu địa phương cùng một số món hải sản nhỏ, cuối tuần có nhạc acoustic. Phù hợp với khách lưu trú muốn ngồi thư giãn và ngắm hoàng hôn trên biển Bãi Dài.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5545,7 +5677,8 @@
    "sources": [
     "https://vinwonders.com/vi/wonderpedia/news/review-chi-tiet-15-quan-bar-phu-quoc-cuc-chat-de-chay-het-dem/",
     "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/goi-y-top-10-quan-bar-phu-quoc-chill-cho-du-khach-20367"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 155,
@@ -5557,13 +5690,13 @@
    "hours": "07:00 – 23:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    400,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quầy bar trong khách sạn VinHolidays Fiesta với khung cửa nhìn ra biển Bãi Dài. Mở cửa từ sáng đến tối muộn.",
+   "desc": "Scorpio Bar là quầy bar chính trong khách sạn VinHolidays Fiesta Phú Quốc, khu Bãi Dài, với những khung cửa nhìn ra biển. Quán phục vụ cocktail, đồ uống đặc trưng và các loại thức uống quốc tế, mở cửa từ sáng đến tối muộn. Phù hợp với khách lưu trú tại khu Grand World muốn có một chỗ ngồi thư thái suốt cả ngày.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5580,7 +5713,8 @@
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/best-bars-in-phu-quoc-vietnam/",
     "https://vinpearl.com/en/best-bars-in-phu-quoc"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 156,
@@ -5592,13 +5726,13 @@
    "hours": "08:00 – 02:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    500,
+    1200
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Beach club ngoài trời ngay trên bãi Bãi Cháy, khách có thể xuống tắm biển. Thường rất đông vào mùa du lịch hè.",
+   "desc": "Valley Beach Club là beach club ngoài trời ngay trên bãi tắm Sun Group, đường bao biển Bãi Cháy, Hạ Long. Ban ngày khách có thể thư giãn và xuống tắm biển, buổi tối nơi đây tổ chức các sự kiện âm nhạc với hệ thống loa K2-L'Acoustics. Không gian mở rộng rãi, thường rất đông vào mùa du lịch hè, phù hợp với nhóm bạn thích tiệc bãi biển.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5616,7 +5750,8 @@
     "https://mytour.vn/en/blog/bai-viet/top-9-most-popular-bars-in-ha-long-quang-ninh-mytour.html",
     "https://www.toplist.vn/top-list/quan-bar-noi-tieng-nhat-tp-ha-long-quang-ninh-54381.htm",
     "https://joytime-vn.blogspot.com/2025/04/bars-in-ha-long.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 157,
@@ -5628,13 +5763,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Lounge trên tầng 21 khách sạn FLC Grand Hạ Long, nhìn toàn cảnh vịnh. Thường được chọn để tiếp khách.",
+   "desc": "Sky21 Bar & Lounge nằm trên tầng 21 khách sạn FLC Grand Hạ Long, đường Nguyễn Văn Cừ, với tầm nhìn toàn cảnh vịnh Hạ Long. Không gian lounge lịch sự, phục vụ cocktail và đồ uống từ chiều tối đến đêm. Nơi đây thường được chọn để tiếp khách, gặp gỡ đối tác hoặc hẹn hò ngắm vịnh về đêm.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5651,7 +5786,8 @@
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/experience-the-top-3-most-famous-sky-bars-in-ha-long-city-quang-ninh.html",
     "https://toplist.vn/top-list/bar-lounge-sang-trong-thuong-duoc-chon-lam-noi-tiep-khach-cua-gioi-doanh-nhan-quang-ninh-51476.htm"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 158,
@@ -5663,13 +5799,13 @@
    "hours": "20:00 – 02:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    600
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail được xếp đầu danh sách bar nên ghé ở Hạ Long, mở cửa đến khuya.",
+   "desc": "Love Drunkery Cocktail Bar là quán cocktail tại số 154 Tô Hiến Thành, khu Hồng Gai, Hạ Long, được xếp đầu danh sách bar nên ghé ở thành phố trong một bài gợi ý của VinWonders. Quán có không gian ấm cúng với ghế ngồi êm ái, mở cửa đến khuya. Phù hợp cho cặp đôi hoặc nhóm bạn nhỏ muốn thưởng thức cocktail trong không khí riêng tư.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5685,7 +5821,8 @@
    "partner": false,
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/bars-in-ha-long/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 159,
@@ -5697,13 +5834,13 @@
    "hours": "20:00 – 01:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    400,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail có lựa chọn whisky khá phong phú, được khen về âm nhạc và phục vụ.",
+   "desc": "Circle Mixology & Bar là quán cocktail trên đường Đinh Liệt, khu Hồng Gai, Hạ Long. Quán có lựa chọn whisky khá phong phú bên cạnh các ly cocktail, được khách khen về âm nhạc, không gian và cách phục vụ. Phù hợp với những người yêu thích whisky, cocktail và muốn có một buổi tối thư thả cùng bạn bè.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5720,7 +5857,8 @@
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/bars-in-ha-long/",
     "https://wanderlog.com/place/details/10316704/circle-mixology--bar"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 160,
@@ -5732,13 +5870,13 @@
    "hours": "16:00 – 00:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    500,
+    1400
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Rooftop bar trong khách sạn Citadines Marina, nhìn ra vịnh và thành phố.",
+   "desc": "On The Rocks là rooftop bar trong khách sạn Citadines Marina Hạ Long, đường Hoàng Quốc Việt, Bãi Cháy, nhìn ra vịnh và thành phố, cạnh hồ bơi trên cao. Thực đơn gồm cocktail, cognac, whisky và rượu mùi, có cả lựa chọn món chay. Không gian sang trọng, phù hợp cho buổi hẹn hò hoặc gặp gỡ bạn bè lúc hoàng hôn.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5754,7 +5892,8 @@
    "partner": false,
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/bars-in-ha-long/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 161,
@@ -5766,13 +5905,13 @@
    "hours": "20:00 – 02:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    500,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Club có diện tích lớn và nổi tiếng ở khu Bãi Cháy, quen thuộc với khách doanh nhân.",
+   "desc": "H Club là club tại Tổ 7, Khu 4, Bãi Cháy, Hạ Long, có diện tích lớn và sức chứa khoảng 1.200 khách. Âm nhạc gồm các bản hit quốc tế phối lại theo phong cách club và các bản mix châu Á, khách có thể ngồi bàn hoặc ngồi quầy bar. Nơi đây quen thuộc với khách doanh nhân và các nhóm muốn tổ chức tiệc.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5789,7 +5928,8 @@
    "sources": [
     "https://www.toplist.vn/top-list/quan-bar-noi-tieng-nhat-tp-ha-long-quang-ninh-54381.htm",
     "https://toplist.vn/top-list/bar-lounge-sang-trong-thuong-duoc-chon-lam-noi-tiep-khach-cua-gioi-doanh-nhan-quang-ninh-51476.htm"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 162,
@@ -5801,13 +5941,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    600,
+    1500
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc dance sôi động",
    "dress": "",
-   "desc": "Vũ trường quy mô lớn, sức chứa khoảng 1.500 khách, có khu VIP ở tầng 3.",
+   "desc": "New Hạ Long Club là vũ trường quy mô lớn tại Tổ 6, Khu 6, phường Yết Kiêu, Hạ Long, với sức chứa khoảng 1.500 khách. Âm nhạc dance sôi động là điểm nhấn, bên cạnh khu VIP riêng ở tầng 3 dành cho khách cần không gian riêng tư. Phù hợp với nhóm đông người và khách doanh nhân muốn tổ chức tiệc tùng về đêm.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5824,7 +5964,8 @@
    "sources": [
     "https://www.toplist.vn/top-list/quan-bar-noi-tieng-nhat-tp-ha-long-quang-ninh-54381.htm",
     "https://mytour.vn/vi/blog/bai-viet/top-10-quan-beer-club-noi-tieng-o-tinh-quang-ninh.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 163,
@@ -5836,13 +5977,13 @@
    "hours": "20:00 – 00:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    550,
+    1050
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar khu Cái Dăm nằm trong danh sách các bar nổi tiếng nhất Hạ Long.",
+   "desc": "New Square Bar là quán bar tại Tổ 5, Khu 9, Cái Dăm, Bãi Cháy, Hạ Long. Âm nhạc đa dạng từ funky house đến EDM và electronic lounge, cuối tuần có ca sĩ và DJ biểu diễn. Không gian không quá lớn nên hợp để gặp gỡ đối tác, tổ chức sinh nhật hoặc đi chơi cùng nhóm bạn.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5858,7 +5999,8 @@
    "partner": false,
    "sources": [
     "https://www.toplist.vn/top-list/quan-bar-noi-tieng-nhat-tp-ha-long-quang-ninh-54381.htm"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 164,
@@ -5870,13 +6012,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    600,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Một trong những điểm tiệc đêm chính ở Bãi Cháy, nằm gần khu khách sạn ven biển.",
+   "desc": "FOM Club là một trong những điểm tiệc đêm chính ở Bãi Cháy, nằm đối diện khách sạn Novotel, gần khu khách sạn ven biển và phố cổ Sun World. Không gian được thiết kế theo chủ đề đại dương, đi kèm hệ thống âm thanh, ánh sáng và DJ. Phù hợp với du khách và nhóm bạn muốn quẩy đêm ngay khu trung tâm du lịch Bãi Cháy.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5893,7 +6035,8 @@
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-10-most-famous-beer-clubs-in-quang-ninh-province.html",
     "https://vinpearl.com/en/bars-in-ha-long"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 165,
@@ -5905,13 +6048,13 @@
    "hours": "19:00 – 01:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    350,
+    650
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar trong khu phố cổ Bãi Cháy cạnh Sun World, tiện ghé khi dạo phố đi bộ buổi tối.",
+   "desc": "The Mine Bar là quán bar tại kiot C107–C108 trong khu phố cổ Bãi Cháy, thuộc Sun World Halong Park. Quán nằm giữa dãy quán cà phê, bar của phố đi bộ, hoạt động vào buổi tối. Tiện cho du khách ghé ngồi nghỉ, uống nước khi dạo phố cổ Bãi Cháy về đêm.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5928,7 +6071,8 @@
    "sources": [
     "https://www.foody.vn/quang-ninh/bar-pub",
     "https://mia.vn/cam-nang-du-lich/pho-co-bai-chay-17327"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 166,
@@ -5940,13 +6084,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc sôi động",
    "dress": "",
-   "desc": "Pub ở phố cổ Bãi Cháy, thường đông khách mỗi tối nhờ nhạc sôi động.",
+   "desc": "Brothers Pub là quán pub tại kiot A116 trong khu phố cổ Bãi Cháy, Sun World Halong Park, Hạ Long. Quán có lối trang trí hiện đại, sáng tạo và thường đông khách mỗi tối nhờ âm nhạc sôi động. Phù hợp với nhóm bạn trẻ muốn hòa vào không khí náo nhiệt của phố cổ về đêm.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5962,11 +6106,12 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/quang-ninh/bar-pub-tai-tp-ha-long"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 167,
-   "name": "Hot Pub",
+   "name": "Hot Pub - Cafe & Lounge",
    "city": "ql",
    "area": "Bãi Cháy",
    "addr": "Kiot B151–B152A–B152B, Sun World Halong Park",
@@ -5974,13 +6119,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    600
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Pub trong dãy kiot của khu phố cổ Sun World, thuộc cụm quán đêm đông vui ở Bãi Cháy.",
+   "desc": "Hot Pub - Cafe & Lounge là quán pub kiêm cà phê, lounge tại kiot B151–B152A–B152B trong khu phố cổ Sun World Halong Park, Bãi Cháy. Quán thuộc cụm quán đêm đông vui của phố đi bộ, tiện ghé khi dạo chơi buổi tối. Phù hợp với du khách muốn tìm một chỗ ngồi uống nước, nghe nhạc giữa không khí nhộn nhịp của Bãi Cháy.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -5996,7 +6141,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/quang-ninh/bar-pub-tai-tp-ha-long"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 168,
@@ -6008,13 +6154,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    1050
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar trên đường Hạ Long, khu Bãi Cháy, gần các khách sạn ven biển.",
+   "desc": "Funky Bar Halong là quán bar tại số 78 đường Hạ Long, khu Bãi Cháy, gần các khách sạn ven biển. Quán có nhạc sống, nhận thanh toán bằng thẻ và có chương trình thẻ thành viên cho khách quen. Phù hợp với du khách lưu trú quanh Bãi Cháy muốn đi bộ ra quán ngồi chơi buổi tối.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6030,7 +6176,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/quang-ninh/bar-pub"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 169,
@@ -6042,13 +6189,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    500,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Nhà hàng và pool bar trên tầng 22, được giới thiệu là điểm cao nhất thành phố Hạ Long để ngắm vịnh.",
+   "desc": "Skylight Restaurant & Pool Bar là nhà hàng kết hợp pool bar trên tầng 22 khách sạn Central Luxury Hạ Long, Lô H29, phường Hùng Thắng. Từ độ cao này có thể phóng tầm mắt ngắm vịnh Hạ Long, thực đơn gồm các món Á và Âu. Phù hợp với khách muốn kết hợp bữa tối, đồ uống và ngắm cảnh vịnh từ trên cao.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6064,7 +6211,8 @@
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/experience-the-top-3-most-famous-sky-bars-in-ha-long-city-quang-ninh.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 170,
@@ -6076,13 +6224,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Sky bar trên tầng 16 khách sạn Royal Lotus, nhìn ra khu Bãi Cháy và vịnh.",
+   "desc": "Sky Bar – Royal Lotus Hạ Long nằm trên tầng 16 khách sạn Royal Lotus, A13 Lô 1, Đông Hùng Thắng 2, Bãi Cháy, tận dụng gần như toàn bộ sân thượng làm không gian ngoài trời. Từ đây có thể ngắm khu Bãi Cháy và vịnh Hạ Long, đẹp nhất vào những ngày trời quang. Thực đơn đồ uống đa dạng, phù hợp cho buổi hẹn hò hoặc ngồi thư giãn lúc chiều tà.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6099,7 +6247,8 @@
    "sources": [
     "https://www.foody.vn/quang-ninh/sky-bar-khach-san-royal-lotus-ha-long",
     "https://vietnamtravel.com/hotel/royal-lotus-hotel-ha-long"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 171,
@@ -6111,13 +6260,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    500,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Bar bãi biển yên tĩnh hơn ở gần Valley Beach Club, hợp với người muốn thư giãn bên biển.",
+   "desc": "Chill Beach Bar là quán bar bãi biển trên đường Kỳ Quan, Bãi Cháy, gần Valley Beach Club, nhìn ra vịnh Hạ Long với những dãy núi đá vôi. So với các điểm xung quanh, quán yên tĩnh hơn, phục vụ bia thủ công, đồ ăn nhanh như burger, món chiên và có biểu diễn acoustic. Phù hợp với những ai muốn thư giãn bên biển trong không khí nhẹ nhàng.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6134,7 +6283,8 @@
    "sources": [
     "https://kupi.com/en-ae/explore/vietnam/ha-long/chill-beach-bar",
     "https://joytime-vn.blogspot.com/2025/04/bars-in-ha-long.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 172,
@@ -6146,13 +6296,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    1250
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "DJ",
    "dress": "Smart casual, không mặc áo ba lỗ, không đi dép lê",
-   "desc": "Quầy bar trên tầng cao tòa AB Tower, nhìn bao quát trung tâm Quận 1 và cách chợ Bến Thành vài phút đi bộ.",
+   "desc": "Chill Skybar là quầy bar trên tầng cao tòa AB Tower, số 76A Lê Lai, Quận 1, chỉ cách chợ Bến Thành vài phút đi bộ. Không gian mở nhìn bao quát trung tâm thành phố, có khu ngoài trời và khu lounge, buổi tối sôi động với nhạc DJ. Quán áp dụng dress code lịch sự, phù hợp nhóm bạn hoặc khách du lịch muốn ngắm Sài Gòn về đêm từ trên cao.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6169,7 +6319,8 @@
    "sources": [
     "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/chill-sky-bar.html",
     "https://mytour.vn/en/blog/bai-viet/indulge-in-an-epic-sleepless-night-at-chill-sky-bar.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 173,
@@ -6181,13 +6332,13 @@
    "hours": "15:00 – 00:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    450,
+    1350
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Bar sân thượng tầng 24 của khách sạn Hôtel des Arts, không gian sang trọng với tầm nhìn rộng ra thành phố; hồ bơi vô cực chỉ dành cho khách lưu trú.",
+   "desc": "Social Club Rooftop Bar nằm trên tầng 24 khách sạn Hôtel des Arts Saigon - MGallery, số 76-78 Nguyễn Thị Minh Khai, ngay phía trên nhà hàng Social Club. Không gian sang trọng với bàn cao, ghế bành và tầm nhìn rộng ra đường chân trời thành phố, phục vụ các loại cocktail signature. Hồ bơi vô cực chỉ dành cho khách lưu trú, còn quầy bar mở cho khách bên ngoài, hợp cho buổi hẹn hay gặp gỡ nhẹ nhàng.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6204,7 +6355,8 @@
    "sources": [
     "https://hoteldesartssaigon.com/?p=476",
     "https://therooftopguide.com/rooftop-bars-in-ho-chi-minh/social-club-at-hotel-des-arts-saigon.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 174,
@@ -6216,13 +6368,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    450,
+    1150
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc sống với ban nhạc thường trú",
    "dress": "",
-   "desc": "Bar sân thượng lâu đời trên khách sạn Caravelle, hoạt động từ năm 1959, nổi tiếng nhờ lịch sử và các đêm nhạc sống.",
+   "desc": "Saigon Saigon Rooftop Bar là bar sân thượng của khách sạn Caravelle, 19-23 Công trường Lam Sơn, Quận 1, gần Nhà hát Thành phố. Hoạt động từ năm 1959, nơi đây từng là điểm tụ họp quen thuộc của phóng viên chiến trường thời chiến tranh. Bar có ban nhạc thường trú biểu diễn nhạc sống, cocktail signature gắn với lịch sử khách sạn, phù hợp khách muốn thư giãn trong không gian mang dấu ấn xưa.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6240,11 +6392,12 @@
     "https://www.asia-bars.com/?p=75375",
     "https://vinwonders.com/vi/wonderpedia/news/quan-bar-sai-gon/",
     "https://mia.vn/cam-nang-du-lich/khach-san-caravelle-sai-gon-21257"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 175,
-   "name": "Banana Mama Rooftop Bar & Kitchen",
+   "name": "Banana Mama Rooftop Bar & Kitchen Saigon",
    "city": "sg",
    "area": "Quận 1 (P. Phạm Ngũ Lão)",
    "addr": "Tầng 10, WMC Tower, 102 Cống Quỳnh",
@@ -6252,13 +6405,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    450,
+    950
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Rooftop tầng 10 khu Phạm Ngũ Lão, được nhiều hướng dẫn du lịch gợi ý là điểm ngắm hoàng hôn đẹp.",
+   "desc": "Banana Mama Rooftop Bar & Kitchen Saigon nằm trên tầng 10 tòa WMC Tower, 102 Cống Quỳnh, khu Phạm Ngũ Lão, Quận 1, và được nhiều hướng dẫn du lịch gợi ý là điểm ngắm hoàng hôn. Không gian rộng với chỗ ngồi sát lan can, bàn dài cho nhóm đông và sofa cho buổi tối nhẹ nhàng; cuối tuần sôi động hơn với nhạc house, funk, disco. Thực đơn có burger, món ăn kiểu Pháp và cocktail Banana Mama.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6275,11 +6428,12 @@
    "sources": [
     "https://mia.vn/cam-nang-du-lich/banana-mama-rooftop-bar-kitchen-saigon-18165",
     "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/banana-mama-rooftop-and-kitchen.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 176,
-   "name": "The View Rooftop Bar & Eatery",
+   "name": "The View Rooftop Bar",
    "city": "sg",
    "area": "Quận 1 (P. Phạm Ngũ Lão)",
    "addr": "Tầng 8–9, khách sạn Đức Vương, 195 Bùi Viện",
@@ -6287,13 +6441,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    500,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Rooftop hai tầng ngay phố Tây Bùi Viện, không khí thư thái với đèn neon và tầm nhìn toàn cảnh, phù hợp túi tiền phổ thông.",
+   "desc": "The View Rooftop Bar nằm trên tầng 8–9 khách sạn Đức Vượng, 195 Bùi Viện, ngay giữa phố Tây Quận 1. Rooftop hai tầng với không gian lấy cảm hứng từ Hội An, đèn neon và tầm nhìn toàn cảnh khu trung tâm, mang không khí thư thái. Đồ uống ở mức giá phổ thông, phù hợp khách du lịch và nhóm bạn muốn nghỉ chân trước khi hòa vào nhịp sống về đêm của Bùi Viện.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6310,7 +6464,8 @@
    "sources": [
     "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/the-view-rooftop-bar-and-eatery.html",
     "https://www.hotels.com/go/vietnam/best-rooftop-bars-ho-chi-minh"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 177,
@@ -6322,13 +6477,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Ban nhạc sống, acoustic đầu tối, DJ về khuya",
    "dress": "",
-   "desc": "Lounge trên tầng 52 tòa Bitexco, đầu tối có nhạc sống/acoustic rồi chuyển sang nhạc sôi động với DJ.",
+   "desc": "EON Heli Bar là lounge trên tầng 52 tòa Bitexco Financial Tower, Quận 1, cùng tòa với nhà hàng EON51 ở tầng dưới. Từ độ cao này, khách có thể ngắm toàn cảnh trung tâm Sài Gòn trong lúc thưởng thức bia, rượu mạnh và cocktail. Đầu tối thường có ban nhạc sống, acoustic, về khuya chuyển sang nhạc sôi động với DJ, phù hợp cả buổi hẹn lẫn nhóm bạn đi chơi đêm.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6345,7 +6500,8 @@
    "sources": [
     "https://vietnam-concierge.webnode.vn/news/eon-51-heli-bar/",
     "https://vietfuntravel.com/blog/eon-heli-bar-saigon.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 178,
@@ -6357,13 +6513,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    1050
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Lounge ở tầng 75–76 tòa Landmark 81, được giới thiệu là nơi ngắm hoàng hôn Sài Gòn từ trên cao; nên đặt chỗ trước.",
+   "desc": "Blank Lounge nằm trên tầng 75–76 tòa Landmark 81, 720A Điện Biên Phủ, Bình Thạnh, và được giới thiệu là nơi ngắm hoàng hôn Sài Gòn từ trên cao. Khu ngoài trời ở tầng 75 có vách kính nhô ra khỏi tòa nhà, cho tầm nhìn gần như toàn cảnh thành phố và là góc chụp ảnh được nhiều người tìm đến. Quán phục vụ cocktail và món ăn nhẹ, nên đặt chỗ trước nếu muốn ngồi vào giờ hoàng hôn.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6380,7 +6536,8 @@
    "sources": [
     "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/blank-lounge.html",
     "https://vietcetera.com/en/video/vietcetera-spaces/blank-the-best-location-to-catch-saigons-sunset-vietcetera-spaces"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 179,
@@ -6392,13 +6549,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    750
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc sống mỗi tối",
    "dress": "",
-   "desc": "Khu vườn trên tầng 5 khách sạn Rex, nằm ở đầu phố đi bộ Nguyễn Huệ, có nhạc sống hằng đêm.",
+   "desc": "Rooftop Garden Bar – Rex Hotel là khu vườn trên tầng 5 khách sạn Rex, nằm ở đầu phố đi bộ Nguyễn Huệ, Quận 1. Không gian mang phong cách cổ điển với cây xanh, nhìn ra khu trung tâm nhộn nhịp. Bar có nhạc sống hằng đêm, thường là các bản nhạc xưa, đôi khi có jazz hoặc acoustic, phù hợp khách thích không khí nhẹ nhàng, trang nhã giữa lòng thành phố.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6415,7 +6572,8 @@
    "sources": [
     "https://therooftopguide.com/rooftop-bars-in-ho-chi-minh/rooftop-garden-at-rex-hotel.html",
     "https://wanderlog.com/place/details/1082570/rex-hotel-garden-bar"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 180,
@@ -6427,13 +6585,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    1000
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Cocktail bar đứng hạng 61 danh sách Asia's 50 Best Bars 51–100 năm 2025, có các món signature như Nuoc Mia Highball.",
+   "desc": "STIR - Modern Classic Cocktail là cocktail bar nhỏ tại tầng 1, 136 Lê Thánh Tôn, trong một khu nhà cũ gần chợ Bến Thành, Quận 1. Quán làm mới các công thức cocktail cổ điển phương Tây bằng chất liệu đường phố Việt Nam, với các món signature như Nuoc Mia Highball. STIR có tên trong danh sách Asia's 50 Best Bars 51–100 năm 2025 ở vị trí 61, phù hợp người thích trò chuyện cùng bartender và khám phá đồ uống.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6450,7 +6608,8 @@
    "sources": [
     "https://www.theworlds50best.com/stories/News/asias-50-best-bars-2025-51-100-list.html",
     "https://www.enprimeurclub.com/bars/stir-ho-chi-minh-city"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 181,
@@ -6462,13 +6621,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    1250
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Cocktail bar trở lại bảng xếp hạng Asia's 50 Best Bars 51–100 năm 2025 ở vị trí 93.",
+   "desc": "The Enigma Mansion là cocktail bar tại 5H Tôn Đức Thắng, phường Bến Nghé, Quận 1, với nội thất phong cách châu Âu cổ điển. Thực đơn cocktail được xây dựng bởi các bartender từng tham gia cuộc thi World Class, lấy cảm hứng từ văn hóa và nguyên liệu Việt Nam. Quán trở lại bảng Asia's 50 Best Bars 51–100 năm 2025 ở vị trí 93, phù hợp cho buổi hẹn hò hay dịp ăn mừng.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6485,7 +6644,8 @@
    "sources": [
     "https://www.theworlds50best.com/stories/News/asias-50-best-bars-2025-51-100-list.html",
     "https://www.enprimeurclub.com/bars/the-enigma-mansion-ho-chi-minh-city-bar"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 182,
@@ -6497,13 +6657,13 @@
    "hours": "18:00 – 01:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    1000
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán nhỏ trên tầng 2 một tòa nhà Pháp cổ, lối lên cầu thang hẹp không biển hiệu; thực đơn nổi bật với nhiều biến tấu gin tonic.",
+   "desc": "Drinking & Healing là quán cocktail nhỏ phong cách speakeasy trên tầng 2 một tòa nhà Pháp cổ tại 25 Hồ Tùng Mậu, Quận 1, lối lên là cầu thang hẹp không biển hiệu. Thực đơn nổi bật với nhiều biến tấu gin tonic, bên cạnh cocktail cổ điển và các dòng rum, whisky, tequila. Không gian ấm cúng, hợp với người thích tìm quán ẩn mình và nhâm nhi trò chuyện.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6520,7 +6680,8 @@
    "sources": [
     "https://www.tatlerasia.com/dining/drinking-healing",
     "https://mia.vn/cam-nang-du-lich/8-quan-cocktail-bar-sai-gon-12652"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 183,
@@ -6532,13 +6693,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    1300
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quầy bar tầng sảnh Park Hyatt, quen thuộc với khách lâu năm dưới tên Martini Bar; có đêm whisky thứ Năm và bộ cocktail lấy cảm hứng từ cảnh sắc Việt Nam.",
+   "desc": "2 Lam Son là quầy bar tầng sảnh khách sạn Park Hyatt Saigon, số 2 Công trường Lam Sơn, đối diện Nhà hát Thành phố, quen thuộc với khách lâu năm dưới tên Martini Bar. Không gian sang trọng với nội thất gỗ tối màu, ánh sáng ấm do Super Potato thiết kế, có tầng lửng riêng tư hơn. Bar có đêm whisky thứ Năm, các đêm DJ và bộ cocktail lấy cảm hứng từ cảnh sắc Việt Nam; dress code lịch sự.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6555,11 +6716,12 @@
    "sources": [
     "https://www.parkhyattsaigonrestaurants.com/2-lam-son",
     "https://www.parkhyattsaigonrestaurants.com/2-lam-son/wonders-of-vietnam-cocktail-collection"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 184,
-   "name": "Snuffbox",
+   "name": "Snuffbox Speakeasy",
    "city": "sg",
    "area": "Quận 1",
    "addr": "",
@@ -6567,13 +6729,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    800
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Speakeasy hoạt động từ năm 2015, được nhiều hướng dẫn xem là chuẩn mực cocktail bar ở Sài Gòn.",
+   "desc": "Snuffbox Speakeasy là quán bar phong cách speakeasy thập niên 1920 tại 14 Tôn Thất Đạm, Quận 1, hoạt động từ năm 2015. Quán tập trung vào cocktail thủ công và được nhiều hướng dẫn xem là điểm tham chiếu của làng cocktail Sài Gòn. Vào một số tối trong tuần có nhạc sống như jazz, swing hoặc DJ khách mời, phù hợp người thích không khí cổ điển và giai điệu sống động.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6591,7 +6753,8 @@
     "https://vietnamisawesome.com/?p=27013",
     "https://www.vietnam.travel/node/497",
     "https://www.trvlogue.com/en/snuffbox-saigon-bar-live-music"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 185,
@@ -6603,13 +6766,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    1000
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Speakeasy nằm phía trên nhà hàng Quince, lấy cảm hứng từ một tiệm hút thuốc phiện xưa; có tên trong Tatler Best 20 Bars Việt Nam 2025.",
+   "desc": "Madam Kew là quán bar speakeasy tại 37bis Ký Con, Quận 1, nằm phía trên nhà hàng Quince Saigon. Không gian lấy cảm hứng từ một tiệm hút thuốc phiện xưa, gắn với câu chuyện về nhân vật Madam Kew người Thượng Hải. Quán có tên trong danh sách Tatler Best 20 Bars Việt Nam 2025, phù hợp người thích cocktail trong một không gian kín đáo, giàu chất kể chuyện.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6626,11 +6789,12 @@
    "sources": [
     "https://www.tatlerasia.com/dining/madam-kew",
     "https://www.tatlerasia.com/lifestyle/travel/tatler-best-in-class-bar-vietnam-2025-bar-vn"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 186,
-   "name": "Dot Bar",
+   "name": "Dot Bar Drinkery & Kitchen",
    "city": "sg",
    "area": "Quận 1",
    "addr": "Tầng 3, 75 Hai Bà Trưng",
@@ -6638,13 +6802,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    750
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Cocktail bar đã chuyển về địa điểm mới trên đường Hai Bà Trưng và nằm trong danh sách Tatler Best 20 Bars Việt Nam 2025.",
+   "desc": "Dot Bar Drinkery & Kitchen, trước đây là Dot Bar, đã chuyển về địa điểm mới tại tầng 3, 75 Hai Bà Trưng, Quận 1. Quán theo đuổi cocktail cân bằng, nhiều công thức lấy cảm hứng từ hương vị Việt Nam, kèm các món ăn nhẹ. Dot Bar nằm trong danh sách Tatler Best 20 Bars Việt Nam 2025, phù hợp người yêu cocktail muốn tìm một quầy bar có thiết kế chỉn chu giữa trung tâm.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6661,7 +6825,8 @@
    "sources": [
     "https://wink-hotels.com/?p=4381",
     "https://www.tatlerasia.com/lifestyle/travel/tatler-best-in-class-bar-vietnam-2025-bar-vn"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 187,
@@ -6673,13 +6838,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    1050
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Bar whisky kín đáo sau một lối vào nhỏ và cầu thang hẹp, chuyên single malt Nhật, Scotland cùng cocktail pha theo yêu cầu.",
+   "desc": "Firkin Bar là quán whisky nhỏ kín đáo tại 20 Mạc Thị Bưởi, Quận 1, nằm sau một lối vào nhỏ và cầu thang hẹp. Quán có bộ sưu tập hơn 200 loại whisky, chủ yếu single malt Nhật Bản và Scotland, cùng cocktail pha theo yêu cầu của khách. Không gian chỉ khoảng 30 chỗ, phù hợp người mê whisky muốn được bartender tư vấn tận tình, nên đặt chỗ trước.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6696,11 +6861,12 @@
    "sources": [
     "https://vietnamisawesome.com/articles/hidden-bars-in-saigon/",
     "https://asia-bars.com/?p=82323"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 188,
-   "name": "CoCo Dining & Whisky Bar",
+   "name": "CoCo Dining",
    "city": "sg",
    "area": "Quận 3 (P. Võ Thị Sáu)",
    "addr": "143 Nam Kỳ Khởi Nghĩa",
@@ -6708,13 +6874,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    1200
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Khu ẩm thực CoCo Saigon có quầy whisky riêng bên cạnh phòng ăn và biệt thự tiệc, được Michelin Guide giới thiệu.",
+   "desc": "CoCo Dining thuộc khu ẩm thực CoCo Saigon tại 143 Nam Kỳ Khởi Nghĩa, Quận 3, gồm phòng ăn với quầy bếp mở, biệt thự tiệc riêng và một quầy whisky riêng. Bếp trưởng Võ Thanh Vương theo đuổi ẩm thực Việt đương đại với kỹ thuật hiện đại và lên men, nhà hàng được Michelin Guide giới thiệu. Quầy whisky phù hợp khách muốn nhâm nhi trước hoặc sau bữa tối trong không gian riêng tư.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6731,7 +6897,8 @@
    "sources": [
     "https://guide.michelin.com/vn/en/ho-chi-minh/ho-chi-minh_2978179/restaurant/coco-dining",
     "https://www.enprimeurclub.com/restaurants/coco-dining-ho-chi-minh-city-restaurant"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 189,
@@ -6743,13 +6910,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    400,
+    1300
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Jazz sống tối thứ Hai, thứ Tư, Chủ nhật (20:00–23:00)",
    "dress": "",
-   "desc": "Bar phong cách speakeasy ánh sáng mờ, ghế nệm êm, có các đêm jazz sống trong tuần.",
+   "desc": "The Rabbit Hole là quán bar ngầm phong cách speakeasy tại tầng hầm số 138 Nam Kỳ Khởi Nghĩa, Quận 1, lối vào đi qua một bốt điện thoại. Không gian ánh sáng mờ, ghế nệm êm, cocktail được pha chế khéo léo. Quán có jazz sống vào tối thứ Hai, thứ Tư và Chủ nhật từ 20:00 đến 23:00, phù hợp cho buổi hẹn hò hoặc người yêu nhạc jazz.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6766,7 +6933,8 @@
    "sources": [
     "https://thesmartlocal.com/vietnam/saigon-bars-and-pubs/amp/",
     "https://www.drinkmagazine.asia/?p=30212"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 190,
@@ -6778,13 +6946,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    600
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Jazz sống",
    "dress": "",
-   "desc": "Câu lạc bộ jazz lâu năm trên đường Lê Lợi, các set nhạc sống thường bắt đầu khoảng 20–21 giờ và kéo dài qua nửa đêm.",
+   "desc": "Sax n' Art Jazz Club là câu lạc bộ jazz lâu năm tại 28 Lê Lợi, Quận 1, do nghệ sĩ saxophone Trần Mạnh Tuấn làm chủ. Quán có nhạc sống mỗi tối, các set nhạc thường bắt đầu khoảng 20–21 giờ và kéo dài qua nửa đêm, với những bản jazz kinh điển được ban nhạc thể hiện theo cách riêng. Đây là lựa chọn phù hợp cho người yêu jazz và khách muốn nghe nhạc sống giữa trung tâm.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6801,7 +6969,8 @@
    "sources": [
     "https://www.nomadotravel.app/fr/guides/ho-chi-minh-city-nightlife-guide",
     "https://vietnam-concierge.webnode.vn/news/sax-n-art-jazz-club/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 191,
@@ -6813,13 +6982,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    550,
+    850
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Club lâu đời trên đường Thi Sách, nổi tiếng vì mở cửa muộn hơn phần lớn club ở Sài Gòn, tới khoảng 4 giờ sáng.",
+   "desc": "Apocalypse Now là bar và club lâu đời tại 2B Thi Sách, Quận 1, thu hút cả khách du lịch ba lô, người nước ngoài sinh sống tại Sài Gòn lẫn khách địa phương. Quán nổi tiếng vì mở cửa muộn hơn phần lớn club trong thành phố, tới khoảng 4 giờ sáng, với khu club sôi động và nhiều lựa chọn đồ uống. Phù hợp nhóm bạn muốn kéo dài cuộc vui về khuya.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6836,7 +7005,8 @@
    "sources": [
     "https://gtrip.vn/travel-blogs/night-clubs-in-ho-chi-minh-city",
     "https://vietnamisawesome.com/articles/night-clubs-in-saigon/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 192,
@@ -6848,13 +7018,13 @@
    "hours": "11:00 – 00:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    300,
+    600
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Pub bia thủ công ở Quận 1 với hơn 30 loại bia tự nấu, không gian taproom rộng.",
+   "desc": "Heart of Darkness Craft Brewery là taproom bia thủ công tại 31D Lý Tự Trọng, Quận 1, của nhà nấu bia thành lập tại TP.HCM năm 2016. Không gian rộng với hơn 30 loại bia tự nấu, tên các loại bia lấy cảm hứng từ tiểu thuyết Heart of Darkness của Joseph Conrad. Thực đơn có các món ăn kiểu pub như nachos, sliders, cánh gà, phù hợp nhóm bạn yêu bia thủ công.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6871,7 +7041,8 @@
    "sources": [
     "https://vietnamguide.co.kr/place/호치민-heart-of-darkness-craft-brewery/",
     "https://www.greensm.com/vn-vi/news/quan-bia-quan-1"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 193,
@@ -6883,13 +7054,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    1200
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Cocktail bar nằm phía trên nhà hàng Stoker ở Thảo Điền, chú trọng làm mới các công thức cocktail cổ điển.",
+   "desc": "Dram Bar là cocktail bar phong cách speakeasy tại 2 Đặng Hữu Phổ, Thảo Điền, nằm phía trên nhà hàng Stoker và vào qua một cánh cửa ẩn. Quán lấy whisky làm trọng tâm và chú trọng làm mới các công thức cocktail cổ điển, bên cạnh mocktail. Không gian nhỏ, ấm cúng, phù hợp cho buổi hẹn hoặc nhóm bạn muốn thưởng thức đồ uống tinh tế ở khu Thảo Điền.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6905,11 +7076,12 @@
    "partner": false,
    "sources": [
     "https://amthuchiendai.vn/en/our-top-7-favorite-bars-in-thao-dien-ho-chi-minh-city/"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 194,
-   "name": "Oasky Sky Bar",
+   "name": "OASKY Restaurant & Lounge",
    "city": "vt",
    "area": "Thắng Tam",
    "addr": "Tầng 36 tòa Oasky (Sơn Thịnh 2), 02 Lê Hồng Phong",
@@ -6917,13 +7089,13 @@
    "hours": "17:00 – 02:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    400,
+    700
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Rooftop bar trên tầng 36, được giới thiệu là sky bar lớn nhất Vũng Tàu với tầm nhìn bao quát thành phố và biển.",
+   "desc": "OASKY Restaurant & Lounge là rooftop bar trên tầng 36 tòa Oasky (Sơn Thịnh 2), 02 Lê Hồng Phong, phường Thắng Tam, Vũng Tàu. Từ độ cao này, khách có thể nhìn bao quát cả thành phố lẫn biển. Thời điểm được yêu thích nhất là lúc hoàng hôn, các tối cuối tuần thường có sự kiện, phù hợp cho buổi hẹn hò, gặp gỡ bạn bè hoặc tiếp khách.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6940,7 +7112,8 @@
    "sources": [
     "https://toplist.vn/top-list/quan-rooftop-bar-noi-tieng-o-vung-tau-56885.htm",
     "https://mia.vn/cam-nang-du-lich/ngam-canh-ngoan-muc-tren-tang-cao-oasky-restaurant-lounge-vung-tau-1263"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 195,
@@ -6952,13 +7125,13 @@
    "hours": "10:00 – 23:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    500,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Bar trên tầng 20 khách sạn Fusion Suites, có hồ bơi vô cực nhìn ra biển và thành phố.",
+   "desc": "Breeze Rooftop Bar là quầy bar trên tầng 20 khách sạn Fusion Suites, 2 Trương Công Định, Vũng Tàu, có hồ bơi vô cực nhìn ra biển và thành phố. Quán phục vụ cocktail, bia thủ công địa phương, mocktail, cà phê cùng đồ ăn nhẹ. Đây là điểm ngắm bình minh, hoàng hôn trên cao phù hợp cho cặp đôi và du khách muốn thư giãn với view biển.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -6975,7 +7148,8 @@
    "sources": [
     "https://toplist.vn/top-list/quan-rooftop-bar-noi-tieng-o-vung-tau-56885.htm",
     "https://toplist.vn/top-list/quan-bar-ngoai-troi-cuc-chill-noi-tieng-o-vung-tau-56917.htm"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 196,
@@ -6987,13 +7161,13 @@
    "hours": "15:30 – 23:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    400,
+    1300
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "DJ",
    "dress": "",
-   "desc": "Rooftop bar của khách sạn ibis Styles trên đường Thùy Vân, có các đêm DJ và rượu vang.",
+   "desc": "On The Top Bar – ibis Styles là rooftop bar trên tầng thượng khách sạn ibis Styles Vũng Tàu, 117 Thùy Vân, nằm cạnh hồ bơi và nhìn ra Bãi Sau. Quán phục vụ nhiều loại đồ uống, rượu vang và món ăn nhẹ, có những đêm DJ lên nhạc. Không gian thoáng đãng, hợp với du khách muốn thư giãn sau ngày tắm biển hoặc gặp gỡ bạn bè nhẹ nhàng.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -7010,7 +7184,8 @@
    "sources": [
     "https://toplist.vn/top-list/quan-rooftop-bar-noi-tieng-o-vung-tau-56885.htm",
     "https://toplist.vn/top-list/quan-bar-ngoai-troi-cuc-chill-noi-tieng-o-vung-tau-56917.htm"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 197,
@@ -7022,13 +7197,13 @@
    "hours": "16:30 – 00:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    400,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quầy cocktail trên tầng 8 khách sạn Rex, nổi tiếng là điểm ngắm hoàng hôn trên biển với không khí ấm cúng, lãng mạn.",
+   "desc": "FINNO Messymood là quầy cocktail trên tầng 8 khách sạn Rex, 01 Lê Quý Đôn, phường 1, Vũng Tàu. Nơi đây được biết đến là điểm ngắm hoàng hôn trên biển, với tầm nhìn ra biển và thành phố. Không khí ấm cúng, lãng mạn và thư thái khiến quán hợp với cặp đôi hoặc nhóm nhỏ muốn nhâm nhi cocktail lúc chiều tà.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -7045,7 +7220,8 @@
    "sources": [
     "https://mytour.vn/en/blog/doi-song/top-6-famous-rooftop-bars-in-vung-tau-mytour.html",
     "https://toplist.vn/top-list/quan-bar-ngoai-troi-cuc-chill-noi-tieng-o-vung-tau-56917.htm"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 198,
@@ -7057,13 +7233,13 @@
    "hours": "08:00 – 23:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    400,
+    700
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Lounge sát biển trên đường Hạ Long, thiết kế tông trắng xanh; ban ngày phục vụ cà phê, buổi tối chuyển sang cocktail.",
+   "desc": "Gazebo Beach Front Lounge & Cafe là lounge sát biển trên đường Hạ Long, ngay mặt Bãi Trước, Vũng Tàu, thiết kế tông trắng xanh với cả khu trong nhà và ngoài trời. Ban ngày quán phục vụ cà phê và đồ uống không cồn, buổi tối chuyển sang phục vụ cocktail như một quầy bar nhỏ. Không gian rộng, hợp với gia đình, nhóm bạn và du khách muốn ngồi ngắm biển.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -7081,7 +7257,8 @@
     "https://mia.vn/cam-nang-du-lich/top-beach-bar-vung-tau-19080",
     "https://mytour.vn/en/blog/bai-viet/the-most-dynamic-bars-and-beer-clubs-in-vung-tau.html",
     "https://wanderlog.com/list/geoCategory/248895"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 199,
@@ -7093,13 +7270,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    500,
+    1400
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Tiệc, biểu diễn âm nhạc",
    "dress": "",
-   "desc": "Beach bar ngoài trời phong cách nhiệt đới đầy màu sắc ở Bãi Sau, thường tổ chức tiệc và chương trình ca nhạc.",
+   "desc": "Habana Colorful Beach Bar là beach bar ngoài trời ngay bờ biển Thùy Vân, khu Bãi Sau, Vũng Tàu. Quán mang phong cách nhiệt đới rực rỡ lấy cảm hứng từ các beach bar ở Bali, với ghế nằm, ô dù nhiều màu và nhiều góc chụp ảnh. Nơi đây thường tổ chức tiệc cùng các chương trình acoustic, DJ, biểu diễn, hợp với nhóm bạn trẻ thích không khí vui nhộn bên biển.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -7116,7 +7293,8 @@
    "sources": [
     "https://mia.vn/cam-nang-du-lich/thien-duong-giai-nhiet-habana-colorful-beach-beer-vung-tau-1262",
     "https://mia.vn/cam-nang-du-lich/top-beach-bar-vung-tau-19080"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 200,
@@ -7128,13 +7306,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    600
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail nhỏ, ấm cúng trên phố Lý Tự Trọng, có lượng khách quen đông.",
+   "desc": "No 21 Eatery & Bar là quán cocktail nhỏ, ấm cúng nằm trên phố Lý Tự Trọng, phường 1, Vũng Tàu. Quán có quầy bar nhỏ với không khí thân mật, cùng ban công rộng nhìn về phía Bãi Trước. Với lượng khách quen đông, nơi đây hợp với những ai muốn ngồi trò chuyện lâu cùng bạn bè bên ly cocktail hoặc rượu vang.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -7150,7 +7328,8 @@
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-7-popular-cocktail-bars-in-vung-tau-mytour.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 201,
@@ -7162,13 +7341,13 @@
    "hours": "18:30 – 02:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    350,
+    650
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán cocktail không gian sang trọng, ấm cúng, nhạc vừa phải, hợp cho buổi tối thư giãn.",
+   "desc": "Déjà Vu Cocktail Bar là quán cocktail tại phường 1, Vũng Tàu, với không gian sang trọng nhưng vẫn ấm cúng. Nhạc được mở ở mức vừa phải, nhân viên được khách khen chu đáo, tạo cảm giác thân mật để trò chuyện. Đây là lựa chọn phù hợp cho một buổi tối thư giãn cùng người thương hoặc nhóm bạn nhỏ trong chuyến nghỉ dưỡng ở Vũng Tàu.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -7185,7 +7364,8 @@
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-7-popular-cocktail-bars-in-vung-tau-mytour.html",
     "https://mia.vn/cam-nang-du-lich/top-bar-vung-tau-de-chill-va-vui-choi-21526"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 202,
@@ -7197,13 +7377,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    1200
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "DJ tối thứ Sáu – Chủ nhật",
    "dress": "",
-   "desc": "Hidden bar riêng tư, hợp với cặp đôi hoặc nhóm nhỏ muốn tập trung thưởng thức cocktail.",
+   "desc": "Anora Cocktail Bar là hidden bar trên đường Nguyễn Trường Tộ, Vũng Tàu, mang không khí riêng tư và tinh tế. Thực đơn cocktail đa dạng, các tối thứ Sáu đến Chủ nhật có DJ chơi nhạc. Không gian hợp với cặp đôi hoặc nhóm nhỏ muốn tránh ồn ào để tập trung thưởng thức cocktail trong một buổi tối yên tĩnh.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -7219,11 +7399,12 @@
    "partner": false,
    "sources": [
     "https://mia.vn/cam-nang-du-lich/top-bar-vung-tau-de-chill-va-vui-choi-21526"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 203,
-   "name": "U.S Bar",
+   "name": "U.S Bar - The Art Of Mixology",
    "city": "vt",
    "area": "TP. Vũng Tàu",
    "addr": "120 Ba Cu",
@@ -7231,13 +7412,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    1050
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Acoustic hoặc DJ cuối tuần",
    "dress": "",
-   "desc": "Bar phong cách lounge tông đen đỏ, có menu cocktail và mocktail nhiều màu sắc.",
+   "desc": "U.S Bar - The Art Of Mixology là bar phong cách lounge phương Tây tại 120 Ba Cu, Vũng Tàu, nổi bật với tông màu đen đỏ cá tính. Menu cocktail và mocktail nhiều màu sắc do bartender pha chế, cuối tuần thường có ban nhạc acoustic hoặc DJ. Đây là điểm hẹn hợp với nhóm bạn và những ai yêu thích cocktail muốn tìm một quán bar trung tâm thành phố.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -7254,7 +7435,8 @@
    "sources": [
     "https://mia.vn/cam-nang-du-lich/top-bar-vung-tau-de-chill-va-vui-choi-21526",
     "https://mytour.vn/en/blog/bai-viet/top-7-popular-cocktail-bars-in-vung-tau-mytour.html"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 204,
@@ -7266,13 +7448,13 @@
    "hours": "19:30 – 01:00",
    "hoursKnown": true,
    "price": [
-    0,
-    0
+    600,
+    1000
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar náo nhiệt về đêm trên đường Hạ Long, được giới thiệu là nơi cuộc vui kéo dài.",
+   "desc": "Black Pearl Bar là quán bar nhạc sống tại 64 Hạ Long, phường 2, Vũng Tàu, náo nhiệt về đêm. Ca sĩ, ban nhạc và DJ thay phiên nhau khuấy động không khí, có cả ban nhạc rock biểu diễn. Đồ uống đa dạng, hợp với nhóm bạn và du khách muốn một cuộc vui kéo dài bên nhạc sống ngay khu Bãi Trước.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -7289,7 +7471,8 @@
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-9-famous-bars-in-vung-tau.html",
     "https://theculturetrip.com/asia/vietnam/articles/the-5-best-bars-in-vung-tau-vietnam"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 205,
@@ -7301,13 +7484,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    500,
+    1400
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "Nhạc sàn",
    "dress": "",
-   "desc": "Club nhạc sàn trên đường Hạ Long, thường khá đông khách.",
+   "desc": "TGT Disco Club là club nhạc sàn tại 158 Hạ Long, phường 2, Vũng Tàu, thường khá đông khách. Quán có không khí phong cách phương Tây, phục vụ cocktail trái cây và các loại đồ uống cho buổi tối. Đây là điểm đến cho nhóm bạn muốn nghe nhạc sàn sôi động trên con đường ven Bãi Trước.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -7323,7 +7506,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/vung-tau/bar-pub"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 206,
@@ -7335,13 +7519,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    400,
+    1100
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Pub ven đường Thùy Vân khu Bãi Sau, tiện ghé sau khi tắm biển.",
+   "desc": "Anchor Bar – Thùy Vân là pub nằm ven đường Thùy Vân, phường Thắng Tam, khu Bãi Sau, Vũng Tàu. Vị trí gần biển giúp quán tiện ghé sau khi tắm biển hoặc dạo phố buổi tối. Nơi đây hợp với du khách và nhóm bạn muốn tìm một quán pub thoải mái để uống bia, trò chuyện hoặc tụ tập liên hoan.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -7357,7 +7541,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/vung-tau/bar-pub-phuc-vu-bia"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 207,
@@ -7369,13 +7554,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    1000
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Bar kết hợp đồ nướng trên đường Thùy Vân, khu Bãi Sau.",
+   "desc": "La Sirena Bar & Grill là quán bar kết hợp đồ nướng tại 159 Thùy Vân, phường Thắng Tam, khu Bãi Sau, Vũng Tàu. Quán có phục vụ rượu vang cùng các món nướng, nhân viên và chủ quán được khách nhận xét nhiệt tình. Đây là chỗ phù hợp cho nhóm bạn hoặc gia đình muốn ăn uống buổi tối gần biển, kể cả tổ chức sinh nhật nhỏ.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -7391,7 +7576,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/vung-tau/bar-pub-phuc-vu-ruou-vang"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 208,
@@ -7403,13 +7589,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    300,
+    900
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Pub trên phố Lý Tự Trọng, khu trung tâm nhiều quán bar của Vũng Tàu.",
+   "desc": "Fang Pub là pub tại số 3 Lý Tự Trọng, phường 1, nằm trong khu trung tâm tập trung nhiều quán bar của Vũng Tàu. Quán có nhạc sống với ban nhạc biểu diễn và thường được chọn để tổ chức tiệc sinh nhật. Nơi đây hợp với nhóm bạn muốn nghe nhạc sống, uống bia và giao lưu trong không khí pub sôi nổi.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -7425,7 +7611,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/vung-tau/bar-pub"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 209,
@@ -7437,13 +7624,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    1050
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar nhỏ ở góc phố Quang Trung gần Bãi Trước, có phục vụ rượu vang.",
+   "desc": "Summer Wine Corner Bar là quán bar nhỏ ở góc phố Quang Trung, phường 1, gần Bãi Trước, khu vực có nhiều quán bar kiểu phương Tây của Vũng Tàu. Quán có phục vụ rượu vang, nhân viên được khách nhận xét thân thiện, nhiệt tình. Đây là chỗ phù hợp cho những ai muốn ngồi nhâm nhi một ly vang nhẹ nhàng trong buổi tối dạo biển.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -7459,7 +7646,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/vung-tau/bar-pub-phuc-vu-ruou-vang"
-   ]
+   ],
+   "priceEst": true
   },
   {
    "id": 210,
@@ -7471,13 +7659,13 @@
    "hours": "18:00 – 02:00",
    "hoursKnown": false,
    "price": [
-    0,
-    0
+    350,
+    950
    ],
-   "priceKnown": false,
+   "priceKnown": true,
    "music": "",
    "dress": "",
-   "desc": "Quán bar nhỏ được khen về cocktail, có chỗ ngồi vỉa hè và tầng thượng nhìn ra biển.",
+   "desc": "Pineapple Beach Bar là quán bar nhỏ ở TP. Vũng Tàu, được khách khen về cocktail. Quán có chỗ ngồi vỉa hè cho những ai thích ngắm phố và tầng thượng nhìn ra biển. Không gian giản dị, hợp với nhóm bạn hoặc du khách muốn ghé uống một ly cocktail thư giãn sau ngày dạo biển.",
    "rating": null,
    "reviews": 0,
    "deal": 0,
@@ -7493,7 +7681,8 @@
    "partner": false,
    "sources": [
     "https://www.foody.vn/vung-tau/bar-pub"
-   ]
+   ],
+   "priceEst": true
   }
  ]
 }

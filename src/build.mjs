@@ -49,6 +49,8 @@ let APP = fs.readFileSync(path.join(ROOT, 'src/app.html'), 'utf8');
 { const a = APP.indexOf('const BARS=['), z = APP.indexOf('\n];\n', a);
   if (a < 0 || z < 0) throw new Error('Không tìm thấy BARS trong app.html');
   APP = APP.slice(0, a) + 'const BARS=' + JSON.stringify(LIVE_BARS) + ';' + APP.slice(z + 3);
+  { const ep = CFG.bookingEndpoint || (CFG.bookingEmail ? 'https://formsubmit.co/ajax/' + CFG.bookingEmail : '');
+    APP = APP.replace("const BOOKING_ENDPOINT='';", 'const BOOKING_ENDPOINT=' + JSON.stringify(ep) + ';'); }
   APP = APP.replace(/const CONTACT=\{[^}]*\};/, 'const CONTACT=' + JSON.stringify({ tel: CFG.hotline.replace(/\s/g, ''), show: CFG.hotline, zalo: CFG.zalo || CFG.hotline.replace(/\s/g, ''), tg: CFG.telegram || '' }) + ';');
   APP = APP.replace('const TICKER=[];', 'const TICKER=' + JSON.stringify(DATA.ticker || []).replace(/</g, '\\u003c') + ';'); }
 function grab(start, end) {
@@ -203,7 +205,7 @@ const CSP = [
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.tawk.to",
   "font-src 'self' data: https://fonts.gstatic.com https://*.tawk.to",
   "img-src 'self' data: blob: https://images.unsplash.com https://*.tawk.to https://*.googleusercontent.com",
-  "connect-src 'self' https://api.github.com https://raw.githubusercontent.com https://*.tawk.to wss://*.tawk.to https://*.googleapis.com https://*.firebaseio.com",
+  "connect-src 'self' https://formsubmit.co https://api.github.com https://raw.githubusercontent.com https://*.tawk.to wss://*.tawk.to https://*.googleapis.com https://*.firebaseio.com",
   "media-src 'self' data: blob:",
   "frame-src https://*.tawk.to https://*.firebaseapp.com https://accounts.google.com",
   "worker-src 'self' blob:",
@@ -376,7 +378,7 @@ function barPage(b) {
   const title = clip(p ? `${b.name} ${c.name}: giá, menu, đặt bàn giảm ${b.deal}%` : `${b.name} ${c.name}: địa chỉ, giờ mở cửa, đặt bàn`, 65);
   const desc = clip(`${b.name}, ${b.type.toLowerCase()} ở ${b.area}, ${c.name}.${hk ? ` Mở ${b.hours}.` : ''}${pk ? ` ${b.price[0]}k–${b.price[1]}k/người.` : ''} ${p ? `Đặt qua TopChill giảm ${b.deal}%${b.gpct ? `, giờ vàng giảm thêm ${b.gpct}%` : ''}${b.bonus ? ', ' + b.bonus.toLowerCase() : ''}.` : `${b.desc} Đặt bàn nhanh qua tổng đài TopChill.`}`, 160);
   const crumbs = [['Trang chủ', ''], [`Bar ${c.name}`, c.path], [b.name, b.path]];
-  const menu = (b.menu && b.menu.length) ? b.menu : p ? (MENU[b.type] || []) : [];
+  const menu = [];
   const where = [b.addr, b.area, c.name].filter(Boolean).join(', ');
   const faq = [];
   if (hk) faq.push({ q: `${b.name} mở cửa mấy giờ?`, a: `${b.name} mở cửa từ ${b.hours}.${b.gpct ? ` Giờ vàng ${b.gLabel} được giảm thêm ${b.gpct}% khi đặt bàn qua TopChill.` : ''} Giờ có thể thay đổi vào dịp lễ, nên gọi ${CFG.hotline} để xác nhận.` });
@@ -424,7 +426,6 @@ function barPage(b) {
   </div>
   <div>
     ${offers}
-    ${menu.length ? `<h2 style="margin-top:28px">Menu nổi bật</h2><table class="info"><tbody>${menu.map(m => `<tr><th scope="row">${esc(m[0])}</th><td class="num">${fmt(m[1] * 1000)}đ</td></tr>`).join('')}</tbody></table>` : ''}
   </div>
 </div></section>
 <section class="sec"><div class="wrap narrow"><h2>Câu hỏi thường gặp về ${esc(b.name)}</h2>${faqHtml(faq)}</div></section>

@@ -1570,8 +1570,6 @@ function openBar(id,time){
           ${cur.bonus?`<div class="deal-row neon"><div class="big">🎁</div><div><b>${escH(cur.bonus)}</b><small>${escH(cur.bonusNote||'Tặng tại bàn, không cộng dồn với voucher khác.')}${cur.promoUntil?' · Hạn đến '+cur.promoUntil.split('-').reverse().join('/'):''}</small></div></div>`:''}
           ${USER.guest?`<div class="deal-row plain"><div class="big" style="color:var(--gold)">+5%</div><div><b>Đăng ký miễn phí để giảm thêm 5%</b><small>Tặng 100 điểm, tích điểm đổi tiền. <button type="button" class="lnk-btn" data-auth="register">Đăng ký ngay</button></small></div></div>`:`<div class="deal-row plain"><div class="big" style="color:var(--gold)">+${USER.tierPct}%</div><div><b>Hạng ${USER.tier} của bạn giảm thêm ${USER.tierPct}%</b><small>Áp dụng tại bar đối tác khi đặt qua TopChill.</small></div></div>`}
         </div>`:`<div class="h4">Đặt bàn qua TopChill</div><div class="deal-list"><div class="deal-row plain"><div class="big">📞</div><div><b>Tổng đài giữ bàn giúp bạn</b><small>Bar chưa áp dụng ưu đãi qua TopChill. Gọi, nhắn Zalo hoặc để lại số, tổng đài xác nhận trong vài phút.</small></div></div></div>`}
-        <div class="h4">Menu nổi bật</div>
-        <div class="menu">${(cur.menu&&cur.menu.length?cur.menu:isP(cur)?MENU[cur.type]||[]:[]).map(m=>`<span>${m[0]}<b class="num">${m[1]}k</b></span>`).join('')}</div>
         
       </div>
       <aside class="book" id="bookBox"></aside>
@@ -1655,8 +1653,10 @@ function renderBook(){
     bk.phone=ph;
     const code='TC-'+Math.random().toString(36).slice(2,6).toUpperCase();
     const date=bookDate().split('-').reverse().join('/');
-    const req={code,bar:cur.name,city:cityName(cur.city),date,time:bk.time,guests:bk.guests,table:TABLE[bk.table].label,name:(bk.name||'').trim().slice(0,40),phone:ph,note:(bk.note||'').trim().slice(0,300),at:new Date().toISOString()};
-    sendBooking(req);
+    const req={code,bar:cur.name,city:cityName(cur.city),addr:[cur.addr,cur.area].filter(Boolean).join(', '),date,time:bk.time,guests:bk.guests,table:TABLE[bk.table].label,name:(bk.name||'').trim().slice(0,40),phone:ph,note:(bk.note||'').trim().slice(0,300),at:new Date().toISOString()};
+    const btn=box.querySelector('#confirmBtn');btn.disabled=true;btn.textContent='Đang gửi…';
+    sendBooking(req).then(ok=>{
+    if(!ok){btn.disabled=false;btn.textContent='Gửi yêu cầu · gọi lại trong 5 phút';toast('Mạng yếu, chưa gửi được. Thử lại hoặc gọi '+CONTACT.show+'.');return}
     box.innerHTML=`<div class="success"><div class="eyebrow" style="color:var(--ok)">✓ Đã nhận yêu cầu</div><div class="code">${code}</div>
       <p><b>${escH(cur.name)}</b> · ${TABLE[bk.table].label}</p><p class="muted">${date} · ${bk.time} · ${bk.guests} khách</p>
       <p style="margin-top:12px">Tổng đài TopChill sẽ gọi <b class="num">${ph}</b> trong khoảng 5 phút để xác nhận bàn.</p>
@@ -1667,13 +1667,20 @@ function renderBook(){
     if(!USER.guest){HIST.unshift({bar:cur.name,hue:cur.hue,date:date+' · '+bk.time,st:'soon',save:0});renderHist();saveAcct()}
     box.scrollIntoView({behavior:'smooth',block:'start'});
     toast('Đã gửi yêu cầu đặt bàn '+cur.name+'. Mã '+code+'.');
+    });
   };
 }
-/* Gửi yêu cầu đặt bàn. BOOKING_ENDPOINT trống = bản demo (chỉ lưu trên máy). */
+/* Gửi yêu cầu đặt bàn về email tổng đài (FormSubmit). BOOKING_ENDPOINT trống = bản demo (chỉ lưu trên máy). */
 const BOOKING_ENDPOINT='';const BOOKING_DEMO=!BOOKING_ENDPOINT;
 function sendBooking(req){
   try{const L=JSON.parse(localStorage.getItem('topchill-requests')||'[]');L.unshift(req);localStorage.setItem('topchill-requests',JSON.stringify(L.slice(0,20)))}catch(e){}
-  if(BOOKING_ENDPOINT)fetch(BOOKING_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(req)}).catch(()=>{});
+  if(!BOOKING_ENDPOINT)return Promise.resolve(true);
+  const body={_subject:'Đặt bàn '+req.code+': '+req.bar+' · '+req.time+' '+req.date+' · '+req.phone,_template:'table',_captcha:'false',
+    'Mã':req.code,'Số điện thoại':req.phone,'Tên khách':req.name||'(không để tên)','Bar':req.bar,'Thành phố':req.city,'Địa chỉ bar':req.addr||'',
+    'Ngày':req.date,'Giờ đến':req.time,'Số khách':req.guests,'Loại bàn':req.table,'Ghi chú':req.note||'','Gửi lúc':new Date(req.at).toLocaleString('vi-VN'),'Trang':location.href};
+  const ctl=new AbortController();const t=setTimeout(()=>ctl.abort(),12000);
+  return fetch(BOOKING_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(body),signal:ctl.signal})
+    .then(r=>r.ok).catch(()=>false).finally(()=>clearTimeout(t));
 }
 document.addEventListener('click',e=>{
   const bb=e.target.closest('[data-book]');if(bb){e.stopPropagation();openBar(+bb.dataset.book,bb.dataset.time);return}
