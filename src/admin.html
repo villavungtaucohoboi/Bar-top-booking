@@ -51,7 +51,7 @@
       <ol><li>Mở <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">trang tạo khoá GitHub</a>.</li>
       <li>Token name: <b>topchill-admin</b>. Expiration: <b>1 năm</b>.</li>
       <li>Repository access: <b>Only select repositories</b> → chọn <b id="repoName"></b>.</li>
-      <li>Permissions → Repository permissions → <b>Contents: Read and write</b>.</li>
+      <li>Mục Permissions: bấm <b>+ Add permissions</b> → chọn <b>Contents</b> → đổi quyền thành <b>Read and write</b>.</li>
       <li>Bấm Generate token, copy rồi dán vào ô dưới.</li></ol></div>
     <div class="fld"><label for="tok">Khoá truy cập</label><input id="tok" type="password" autocomplete="off" placeholder="github_pat_…"></div>
     <label class="chk"><input type="checkbox" id="remember" checked> Ghi nhớ trên máy này (không bật trên máy dùng chung)</label>
@@ -145,7 +145,7 @@ function b64utf8(s){var b=new TextEncoder().encode(s),o='';for(var i=0;i<b.lengt
 function utf8b64(s){var bin=atob(s.replace(/\n/g,'')),u=new Uint8Array(bin.length);for(var i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);return new TextDecoder().decode(u)}
 function blobB64(blob){return new Promise(function(r,j){var fr=new FileReader();fr.onload=function(){r(String(fr.result).split(',')[1])};fr.onerror=j;fr.readAsDataURL(blob)})}
 function gh(path,opt){opt=opt||{};return fetch(API+path,{method:opt.method||'GET',headers:{'Authorization':'Bearer '+tok,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','Content-Type':'application/json'},body:opt.body?JSON.stringify(opt.body):undefined,cache:'no-store'}).then(function(r){if(!r.ok)return r.json().catch(function(){return{}}).then(function(j){var e=new Error(j.message||('HTTP '+r.status));e.status=r.status;throw e});return r.status===204?{}:r.json()})}
-function ghErr(e){if(e.status===401)return 'Khoá truy cập sai hoặc đã hết hạn. Bấm Ngắt kết nối rồi dán khoá mới.';if(e.status===403||e.status===404)return 'Khoá chưa có quyền ghi vào kho '+D.repo+'. Kiểm tra mục Contents: Read and write.';if(!navigator.onLine)return 'Mất mạng. Kiểm tra kết nối rồi thử lại.';return 'Lỗi: '+e.message}
+function ghErr(e){if(e.status===401)return 'Khoá truy cập sai hoặc đã hết hạn. Bấm Ngắt kết nối rồi dán khoá mới.';if(e.status===403||e.status===404)return 'Khoá chưa có quyền ghi vào kho '+D.repo+'. Kiểm tra khoá đã có quyền Contents: Read and write (nút Add permissions).';if(!navigator.onLine)return 'Mất mạng. Kiểm tra kết nối rồi thử lại.';return 'Lỗi: '+e.message}
 
 /* ---------- đăng nhập ---------- */
 $('repoName').textContent=D.repo;
