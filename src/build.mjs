@@ -9,6 +9,8 @@ import { CITY_SEO } from './seo-data.mjs';
 import { LOGO } from './logo.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+// Thư mục đầu ra: mặc định gốc repo (GitHub Pages). Cloudflare Pages dùng OUT_DIR=dist để chỉ đưa bản build lên, không kèm mã nguồn.
+const OUT = process.env.OUT_DIR ? path.resolve(ROOT, process.env.OUT_DIR) : ROOT;
 const CFG = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/config.json'), 'utf8'));
 const SITE = CFG.siteUrl.replace(/\/$/, '');
 const BASE = CFG.basePath.endsWith('/') ? CFG.basePath : CFG.basePath + '/';
@@ -25,7 +27,7 @@ const url = p => SITE + '/' + p.replace(/^\//, '');          // URL tuyệt đ�
 const href = p => BASE + p.replace(/^\//, '');              // đường dẫn trong site
 const UNS = (id, w) => /^https?:/.test(id) ? id : `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w || 800}&q=70`;
 function write(rel, html) {
-  const f = path.join(ROOT, rel);
+  const f = path.join(OUT, rel);
   fs.mkdirSync(path.dirname(f), { recursive: true });
   fs.writeFileSync(f, html);
   GENERATED.push(rel);
@@ -594,7 +596,7 @@ async function minifyAll() {
   const jsOpt = { compress: { passes: 2, drop_debugger: true }, mangle: true, format: { comments: false } };
   let saved = 0;
   for (const rel of GENERATED) {
-    const f = path.join(ROOT, rel); if (!fs.existsSync(f)) continue;
+    const f = path.join(OUT, rel); if (!fs.existsSync(f)) continue;
     const src = fs.readFileSync(f, 'utf8'); let out = src;
     try {
       if (rel.endsWith('.html')) {
@@ -615,14 +617,16 @@ async function minifyAll() {
 
 /* ---------- 13. Chạy ---------- */
 // dọn đầu ra cũ (chỉ các thư mục do build quản lý)
-for (const d of ['bar', 'blog', 'viet-bai', 'huy-hieu', 'assets', 'mau-bia', ...CITIES.map(c => c.slug)]) fs.rmSync(path.join(ROOT, d), { recursive: true, force: true });
-for (const f of fs.readdirSync(path.join(ROOT, 'public'))) { fs.copyFileSync(path.join(ROOT, 'public', f), path.join(ROOT, f)); GENERATED.push(f); }
-fs.mkdirSync(path.join(ROOT, 'assets'), { recursive: true });
-fs.copyFileSync(path.join(ROOT, 'src/site.css'), path.join(ROOT, 'assets/site.css'));
-fs.copyFileSync(path.join(ROOT, 'src/chat.css'), path.join(ROOT, 'assets/chat.css'));
-fs.copyFileSync(path.join(ROOT, 'src/chat.js'), path.join(ROOT, 'assets/chat.js'));
-fs.copyFileSync(path.join(ROOT, 'src/music.js'), path.join(ROOT, 'assets/music.js'));
-fs.copyFileSync(path.join(ROOT, 'src/install.js'), path.join(ROOT, 'assets/install.js'));
+if (OUT !== ROOT) fs.rmSync(OUT, { recursive: true, force: true });
+fs.mkdirSync(OUT, { recursive: true });
+for (const d of ['bar', 'blog', 'viet-bai', 'huy-hieu', 'assets', 'mau-bia', ...CITIES.map(c => c.slug)]) fs.rmSync(path.join(OUT, d), { recursive: true, force: true });
+for (const f of fs.readdirSync(path.join(ROOT, 'public'))) { fs.copyFileSync(path.join(ROOT, 'public', f), path.join(OUT, f)); GENERATED.push(f); }
+fs.mkdirSync(path.join(OUT, 'assets'), { recursive: true });
+fs.copyFileSync(path.join(ROOT, 'src/site.css'), path.join(OUT, 'assets/site.css'));
+fs.copyFileSync(path.join(ROOT, 'src/chat.css'), path.join(OUT, 'assets/chat.css'));
+fs.copyFileSync(path.join(ROOT, 'src/chat.js'), path.join(OUT, 'assets/chat.js'));
+fs.copyFileSync(path.join(ROOT, 'src/music.js'), path.join(OUT, 'assets/music.js'));
+fs.copyFileSync(path.join(ROOT, 'src/install.js'), path.join(OUT, 'assets/install.js'));
 GENERATED.push('assets/site.css', 'assets/chat.css', 'assets/chat.js', 'assets/music.js', 'assets/install.js');
 {
   const order = ranked(BARS);
@@ -630,7 +634,7 @@ GENERATED.push('assets/site.css', 'assets/chat.css', 'assets/chat.js', 'assets/m
     tawkPropertyId: CFG.tawkPropertyId || '', tawkWidgetId: CFG.tawkWidgetId || '',
     cities: CITIES.map(c => ({ id: c.id, name: c.name })),
     bars: BARS.map(b => ({ id: b.id, name: b.name, slug: b.slug, city: b.city, cityName: cityOf(b.city).name, type: b.type, rating: b.rating, price: b.price, deal: b.deal, gpct: b.gpct, gLabel: b.gLabel, hours: b.hours, bonus: b.bonus, rank: order.indexOf(b) })) };
-  fs.writeFileSync(path.join(ROOT, 'assets/chat-data.js'), 'window.TC_CHAT=' + JSON.stringify(data) + ';\n');
+  fs.writeFileSync(path.join(OUT, 'assets/chat-data.js'), 'window.TC_CHAT=' + JSON.stringify(data) + ';\n');
 }
 
 const pages = [{ path: '', priority: '1.0' }];
@@ -647,5 +651,23 @@ editorPage();
   write('mau-bia/index.html', '<!doctype html>\n<html lang="vi">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n<link rel="icon" href="' + href('icon.svg') + '" type="image/svg+xml">\n' + src.slice(0, i) + '\n</head>\n<body>\n' + src.slice(i) + '\n</body>\n</html>\n');
 }
 misc(pages);
+write('_headers', `/*
+  Content-Security-Policy: ${CSP}; frame-ancestors 'none'
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin
+
+/assets/*
+  Cache-Control: public, max-age=86400
+
+/*.png
+  Cache-Control: public, max-age=604800
+
+/viet-bai/*
+  X-Robots-Tag: noindex, nofollow
+`);
 await minifyAll();
 console.log(`Đã build: ${CITIES.length} trang thành phố, ${BARS.length} trang bar, ${POSTS.length} bài viết. Lập chỉ mục: ${INDEX ? 'BẬT' : 'TẮT (demo)'}.`);
