@@ -9,7 +9,7 @@ jobs:
       - shell: bash {0}
         run: |
           pip install -q gdown
-          gdown --folder "https://drive.google.com/drive/folders/1q1Ahh9kJjthGXOJt8z_rDSog28da5VHD" -O drive --remaining-ok 2>&1 | tail -30
+          gdown --folder "https://drive.google.com/drive/folders/1q1Ahh9kJjthGXOJt8z_rDSog28da5VHD" -O drive 2>&1 | tail -30
           rm -f drive/*.html
           find drive -type f | wc -l; du -sh drive
           git config user.name "TopChill import"; git config user.email "import@topchill.vn"
