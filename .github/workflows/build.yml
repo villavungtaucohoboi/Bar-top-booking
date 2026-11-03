@@ -19,6 +19,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Cài công cụ nén code
+        run: npm install --no-audit --no-fund
       - name: Build
         run: node src/build.mjs
       - name: Commit trang đã build

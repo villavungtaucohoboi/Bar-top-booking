@@ -175,6 +175,30 @@ function faqLd(list) {
 function faqHtml(list) {
   return `<div class="faq">${list.map(f => `<details><summary>${esc(f.q)}</summary><div>${esc(f.a)}</div></details>`).join('')}</div>`;
 }
+/* Bảo mật: CSP (chỉ chạy code từ nguồn cho phép), khoá tên miền, chống nhúng khung */
+const ALLOWED_HOSTS = ['topchill.vn', 'www.topchill.vn', 'localhost', '127.0.0.1'];
+const CSP = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://www.gstatic.com https://apis.google.com",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.tawk.to",
+  "font-src 'self' data: https://fonts.gstatic.com https://*.tawk.to",
+  "img-src 'self' data: blob: https://images.unsplash.com https://*.tawk.to https://*.googleusercontent.com",
+  "connect-src 'self' https://raw.githubusercontent.com https://*.tawk.to wss://*.tawk.to https://*.googleapis.com https://*.firebaseio.com",
+  "media-src 'self' data: blob:",
+  "frame-src https://*.tawk.to https://*.firebaseapp.com https://accounts.google.com",
+  "worker-src 'self' blob:",
+  "manifest-src 'self'",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  'upgrade-insecure-requests',
+].join('; ');
+const SECURITY_TAGS = `<meta http-equiv="Content-Security-Policy" content="${CSP}">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="format-detection" content="telephone=no">
+<script>(function(){var H=${JSON.stringify(ALLOWED_HOSTS)},h=location.hostname;
+if(top!==self){try{top.location.replace(self.location.href)}catch(e){document.documentElement.style.display='none'}}
+if(location.protocol!=='file:'&&H.indexOf(h)<0){document.documentElement.style.display='none';addEventListener('DOMContentLoaded',function(){document.documentElement.style.display='';document.body.innerHTML='<div style="font:16px/1.6 system-ui,sans-serif;max-width:520px;margin:18vh auto;padding:24px;color:#fff;background:#140c1e;border-radius:18px;text-align:center">Đây là bản sao trái phép của TopChill.<br>Trang chính thức: <a style="color:#ff6fb5" href="https://topchill.vn">topchill.vn</a></div>';document.body.style.background='#0b0710'});setTimeout(function(){location.replace('https://topchill.vn'+location.pathname)},4000)}})();</script>`;
 const HEAD_SCRIPT = `<script>var t='dark';try{t=localStorage.getItem('topchill-theme')||'dark'}catch(e){}document.documentElement.setAttribute('data-theme',t);
 document.addEventListener('error',function(e){var el=e.target;if(!el||el.tagName!=='IMG'||!el.dataset||el.dataset.c===undefined||el.classList.contains('ph'))return;var r=el.dataset.c.split('|').filter(Boolean);if(r.length){el.dataset.c=r.slice(1).join('|');el.src=/^https?:/.test(r[0])?r[0]:'https://images.unsplash.com/photo-'+r[0]+'?auto=format&fit=crop&w='+el.dataset.w+'&q=70'}else{el.style.visibility='hidden'}},true);</script>`;
 
@@ -185,6 +209,7 @@ function headTags({ title, desc, pathRel, image, type = 'website', noindex = fal
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <meta name="robots" content="${robots}">
+${SECURITY_TAGS}
 <link rel="canonical" href="${url(pathRel)}">
 <meta property="og:type" content="${type}">
 <meta property="og:site_name" content="${esc(CFG.siteName)}">
@@ -223,6 +248,7 @@ function footer() {
   return `<footer class="foot"><div class="wrap foot-grid">
   <div><a class="logo" href="${href('')}">${LOGO('')}</a>
     <p style="margin-top:10px">Đặt bàn bar, lounge, club khắp Việt Nam. Giảm thẳng vào bill, tặng rượu bàn VIP, tích điểm đổi tiền.</p>
+    <p class="note">© ${new Date().getFullYear()} TopChill.vn. Bảo lưu mọi quyền. Nghiêm cấm sao chép giao diện, nội dung và mã nguồn.</p>
     <p class="note">Bản demo. Tên bar, địa chỉ, số liệu và đánh giá là dữ liệu minh hoạ. Uống có trách nhiệm, không lái xe sau khi uống rượu bia.</p></div>
   <div><h4>Bar theo thành phố</h4>${cityLinks}</div>
   <div><h4>Cẩm nang</h4>${postLinks}<a href="${href('blog/')}">Tất cả bài viết</a></div>
@@ -559,6 +585,34 @@ function misc(pages) {
     : `# Đang ở chế độ demo: chặn Google lập chỉ mục.\n# Bật "allowIndexing": true trong src/config.json khi đã có dữ liệu bar thật và tên miền chính thức.\nUser-agent: *\nDisallow: /\n`);
 }
 
+/* ---------- Nén & làm rối code đầu ra ---------- */
+async function minifyAll() {
+  let terser, htmlMin;
+  try { terser = await import('terser'); htmlMin = (await import('html-minifier-terser')).minify; }
+  catch (e) { console.log('Bỏ qua nén code (chưa cài terser, html-minifier-terser). Chạy: npm install'); return; }
+  const banner = '/*! (c) TopChill.vn – Bảo lưu mọi quyền. Nghiêm cấm sao chép. */';
+  const jsOpt = { compress: { passes: 2, drop_debugger: true }, mangle: true, format: { comments: false } };
+  let saved = 0;
+  for (const rel of GENERATED) {
+    const f = path.join(ROOT, rel); if (!fs.existsSync(f)) continue;
+    const src = fs.readFileSync(f, 'utf8'); let out = src;
+    try {
+      if (rel.endsWith('.html')) {
+        out = await htmlMin(src, { collapseWhitespace: true, conservativeCollapse: true, removeComments: true, minifyCSS: true,
+          minifyJS: jsOpt, removeRedundantAttributes: true, useShortDoctype: true, keepClosingSlash: false, decodeEntities: false,
+          ignoreCustomFragments: [/<script type="application\/ld\+json">[\s\S]*?<\/script>/] });
+        out = out.replace('<head>', '<head><!-- (c) TopChill.vn – Bảo lưu mọi quyền. Nghiêm cấm sao chép giao diện và mã nguồn. -->');
+      } else if (rel.endsWith('.js') && !rel.endsWith('sw.js')) {
+        const r = await terser.minify(src, jsOpt); out = banner + '\n' + r.code;
+      } else if (rel.endsWith('.css')) {
+        out = banner + '\n' + src.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ').replace(/\s*([{}:;,>])\s*/g, '$1').replace(/;}/g, '}').trim();
+      } else continue;
+    } catch (e) { console.log('Không nén được ' + rel + ': ' + e.message); continue; }
+    saved += src.length - out.length; fs.writeFileSync(f, out);
+  }
+  console.log('Đã nén code, giảm ' + Math.round(saved / 1024) + ' KB.');
+}
+
 /* ---------- 13. Chạy ---------- */
 // dọn đầu ra cũ (chỉ các thư mục do build quản lý)
 for (const d of ['bar', 'blog', 'viet-bai', 'huy-hieu', 'assets', 'mau-bia', ...CITIES.map(c => c.slug)]) fs.rmSync(path.join(ROOT, d), { recursive: true, force: true });
@@ -569,6 +623,7 @@ fs.copyFileSync(path.join(ROOT, 'src/chat.css'), path.join(ROOT, 'assets/chat.cs
 fs.copyFileSync(path.join(ROOT, 'src/chat.js'), path.join(ROOT, 'assets/chat.js'));
 fs.copyFileSync(path.join(ROOT, 'src/music.js'), path.join(ROOT, 'assets/music.js'));
 fs.copyFileSync(path.join(ROOT, 'src/install.js'), path.join(ROOT, 'assets/install.js'));
+GENERATED.push('assets/site.css', 'assets/chat.css', 'assets/chat.js', 'assets/music.js', 'assets/install.js');
 {
   const order = ranked(BARS);
   const data = { base: BASE, hotline: CFG.hotline, demo: !!CFG.chatDemo && !(CFG.tawkPropertyId && CFG.tawkWidgetId), zalo: CFG.zalo || '', messenger: CFG.messenger || '', telegram: CFG.telegram || '',
@@ -592,4 +647,5 @@ editorPage();
   write('mau-bia/index.html', '<!doctype html>\n<html lang="vi">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n<link rel="icon" href="' + href('icon.svg') + '" type="image/svg+xml">\n' + src.slice(0, i) + '\n</head>\n<body>\n' + src.slice(i) + '\n</body>\n</html>\n');
 }
 misc(pages);
+await minifyAll();
 console.log(`Đã build: ${CITIES.length} trang thành phố, ${BARS.length} trang bar, ${POSTS.length} bài viết. Lập chỉ mục: ${INDEX ? 'BẬT' : 'TẮT (demo)'}.`);
