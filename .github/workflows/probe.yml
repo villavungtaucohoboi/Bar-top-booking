@@ -1,0 +1,9 @@
+name: Probe mail
+on: { push: { branches: [probe-mail] } }
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "== OPTIONS preflight"; curl -sS -m 30 -i -X OPTIONS https://formsubmit.co/ajax/quan.bidosago@gmail.com -H "Origin: https://topchill.vn" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: content-type" | head -30 || true
+          echo "== POST json"; time curl -sS -m 40 -i https://formsubmit.co/ajax/quan.bidosago@gmail.com -H "Origin: https://topchill.vn" -H "Referer: https://topchill.vn/" -H "Content-Type: application/json" -H "Accept: application/json" -d '{"_subject":"TopChill: kiem tra ket noi","Noi dung":"Mail thu tu he thong TopChill de kich hoat form dat ban."}' | head -40 || true
