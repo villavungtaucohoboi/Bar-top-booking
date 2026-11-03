@@ -972,6 +972,8 @@ button.user-pill{cursor:pointer;font:inherit;color:inherit;text-align:left}
 .bk-msg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .bk-msg button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:14px;color:#fff;font-weight:700;font-size:15px;border:0;cursor:pointer}
 .bk-msg .i{display:grid;place-items:center;height:26px;min-width:26px;border-radius:7px;background:#fff;font-size:11px;font-weight:800;padding:0 4px}
+.here-note{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:#3ee6a0;background:rgba(62,230,160,.12);border:1px solid rgba(62,230,160,.35);padding:3px 9px;border-radius:999px;margin-bottom:6px}.here-mini{display:block;font-size:11px;font-weight:700;color:#3ee6a0}
+.bk-fail{margin-top:10px;padding:12px;border-radius:12px;border:1px solid rgba(255,90,90,.45);background:rgba(255,60,60,.08);font-size:13.5px;line-height:1.5}.bk-fail-acts{display:flex;gap:8px;margin-top:10px}.bk-fail-acts .btn{flex:1;justify-content:center;color:#fff;border:0}
 .bk-zalo{background:#0068ff}.bk-zalo .i{color:#0068ff}.bk-tg{background:#229ed9}.bk-tg .i{color:#229ed9;font-size:14px}
 .bk-hint{font-size:12px;color:var(--muted);margin:-2px 0 0}
 .bk-or{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12.5px;margin:4px 0}
@@ -1421,28 +1423,45 @@ function imgFail(el){const r=(el.dataset.c||'').split('|').filter(Boolean);if(r.
   const c=document.createElement('canvas');c.className='ph';drawArt(c,+el.dataset.seed||1,+el.dataset.hue||300);el.replaceWith(c)}
 document.addEventListener('error',e=>{const t=e.target;if(t&&t.tagName==='IMG'&&t.classList.contains('ph'))imgFail(t)},true);
 
+/* ---------- ĐỊNH VỊ: ưu tiên bar ở thành phố khách đang đứng ---------- */
+const CITY_GEO={hn:[21.028,105.854],sg:[10.776,106.700],dn:[16.054,108.202],nt:[12.238,109.196],pq:[10.227,103.964],dl:[11.940,108.458],hp:[20.845,106.688],vt:[10.346,107.084],ql:[20.951,107.073],ct:[10.045,105.746],hue:[16.463,107.590],bd:[10.980,106.651]};
+let HERE=null;try{const s=JSON.parse(localStorage.getItem('topchill-loc')||'null');if(s&&Date.now()-s.at<6*36e5)HERE=s.city||null}catch(e){}
+const isHere=b=>!!HERE&&b.city===HERE;
+function nearCity(lat,lng){let best=null,bd=1e9;for(const id in CITY_GEO){const[a,o]=CITY_GEO[id];const dx=(lng-o)*Math.cos(lat*Math.PI/180),dy=lat-a,d=Math.hypot(dx,dy)*111;if(d<bd){bd=d;best=id}}return bd<=120?best:null}
+function locate(){
+  if(!navigator.geolocation||!window.isSecureContext)return;
+  navigator.geolocation.getCurrentPosition(p=>{
+    const c=nearCity(p.coords.latitude,p.coords.longitude);
+    try{localStorage.setItem('topchill-loc',JSON.stringify({city:c,at:Date.now()}))}catch(e){}
+    if(c!==HERE){HERE=c;renderRank();renderBars();if(c)toast('📍 Bạn đang ở '+cityName(c)+': ưu tiên hiện bar khu vực bạn.',4000)}
+  },()=>{},{enableHighAccuracy:false,timeout:15000,maximumAge:30*60000});
+}
+const hereNote=b=>isHere(b)?'<div class="here-note">📍 Bar tại khu vực bạn</div>':'';
+
 /* ---------- TRANG CHỦ: XẾP HẠNG, QUYỀN LỢI, THÀNH PHỐ ---------- */
-let RK='';
+let RK=null;
 function renderRank(){
-  const tabs=[['','Toàn quốc'],['hn','Hà Nội'],['sg','Sài Gòn'],['dn','Đà Nẵng']];
+  const rk=RK===null?(HERE||''):RK;
+  let tabs=[['','Toàn quốc'],['hn','Hà Nội'],['sg','Sài Gòn'],['dn','Đà Nẵng']];
+  if(HERE)tabs=[[HERE,'📍 '+cityName(HERE)]].concat(tabs.filter(t=>t[0]!==HERE));
   const tb=document.getElementById('rankTabs');
-  tb.innerHTML=tabs.map(([id,n])=>`<button class="chip ${RK===id?'on':''}" data-rk="${id}">${n}</button>`).join('')+'<a class="chip" href="#kham-pha">Tỉnh khác →</a>';
+  tb.innerHTML=tabs.map(([id,n])=>`<button class="chip ${rk===id?'on':''}" data-rk="${id}">${n}</button>`).join('')+'<a class="chip" href="#kham-pha">Tỉnh khác →</a>';
   tb.onclick=e=>{const b=e.target.closest('[data-rk]');if(b){RK=b.dataset.rk;renderRank()}};
   const rank={top:0,hot:1,null:2};
-  const list=BARS.filter(b=>!RK||b.city===RK).sort((a,b)=>(rank[a.boost]-rank[b.boost])||(isP(b)-isP(a))||(b.rating||0)-(a.rating||0)).slice(0,5);
+  const list=BARS.filter(b=>!rk||b.city===rk).sort((a,b)=>(isHere(b)-isHere(a))||(rank[a.boost]-rank[b.boost])||(isP(b)-isP(a))||(b.rating||0)-(a.rating||0)).slice(0,5);
   const f=list[0],rest=list.slice(1);
   document.getElementById('rank').innerHTML=`
     <article class="rk1" data-id="${f.id}" tabindex="0" role="button" aria-label="${f.name}">
-      <div class="rk1-ph">${barImg(f,1200)}<span class="rk-no">#1</span>${f.boost==='top'?'<span class="badge top">★ Top '+(RK?cityName(f.city):'toàn quốc')+'</span>':''}</div>
+      <div class="rk1-ph">${barImg(f,1200)}<span class="rk-no">#1</span>${f.boost==='top'?'<span class="badge top">★ Top '+(rk?cityName(f.city):'toàn quốc')+'</span>':''}</div>
       <div class="rk1-body">
-        <div class="meta"><span>${cityName(f.city)}</span><span>${f.area}</span><span>${f.type}</span></div>
+        ${hereNote(f)}<div class="meta"><span>${cityName(f.city)}</span><span>${f.area}</span><span>${f.type}</span></div>
         <h3>${f.name}</h3>
         <div class="rk-rate">${f.rating?`<b>★ ${f.rating.toFixed(1)}</b> <span class="muted num">· ${fmt(f.reviews)} đánh giá · ${escH(f.music)}</span>`:`<span class="muted">${escH(f.music||f.type)}</span>`}</div>
         <div class="rk-perks">${isP(f)?`<span class="pk gold">Giảm ${f.deal}% bill</span>${f.gpct?`<span class="pk neon">⚡ Giờ vàng ${f.gLabel} -${f.gpct}%</span>`:''}${f.bonus?`<span class="pk">🎁 ${escH(f.bonus)}</span>`:''}`:'<span class="pk">📞 Đặt bàn qua tổng đài TopChill</span>'}</div>
         <div class="rk-cta"><span class="price num">${f.priceKnown===false?'Giá: liên hệ':`Từ <b>${f.price[0]}k</b> / người`}</span><button class="btn btn-gold" data-book="${f.id}">Đặt bàn ngay</button></div>
       </div>
     </article>
-    <ol class="rk-list">${rest.map((b,i)=>`<li class="rk-row" data-id="${b.id}" tabindex="0" role="button" aria-label="${b.name}"><span class="rk-n">${i+2}</span><div class="rk-th">${barImg(b,300)}</div><div class="rk-info"><b>${b.name}</b><span class="meta"><span>${cityName(b.city)}</span><span>${b.type}</span></span><span class="rk-mini">${isP(b)?`${b.rating?`<span class="r">★ ${b.rating.toFixed(1)}</span> · `:''}<span class="d">-${b.deal}%</span>${b.gpct?` · <span class="g">⚡ -${b.gpct}%</span>`:''}`:'Đặt qua tổng đài'}</span></div><button class="btn btn-gold btn-sm" data-book="${b.id}">Đặt</button></li>`).join('')}</ol>`;
+    <ol class="rk-list">${rest.map((b,i)=>`<li class="rk-row" data-id="${b.id}" tabindex="0" role="button" aria-label="${b.name}"><span class="rk-n">${i+2}</span><div class="rk-th">${barImg(b,300)}</div><div class="rk-info">${isHere(b)?'<span class="here-mini">📍 Khu vực bạn</span>':''}<b>${b.name}</b><span class="meta"><span>${cityName(b.city)}</span><span>${b.type}</span></span><span class="rk-mini">${isP(b)?`${b.rating?`<span class="r">★ ${b.rating.toFixed(1)}</span> · `:''}<span class="d">-${b.deal}%</span>${b.gpct?` · <span class="g">⚡ -${b.gpct}%</span>`:''}`:'Đặt qua tổng đài'}</span></div><button class="btn btn-gold btn-sm" data-book="${b.id}">Đặt</button></li>`).join('')}</ol>`;
 }
 function renderPerks(){
   const P=[
@@ -1466,7 +1485,7 @@ function cardHTML(b){
       <div class="badges">${b.boost==='top'?'<span class="badge top">★ Top</span>':''}${b.boost==='hot'?'<span class="badge hot">Hot</span>':''}<span class="badge type">${b.type}</span></div>
       ${b.rating?`<div class="rating"><i>★</i>${b.rating.toFixed(1)} <span class="num">(${fmt(b.reviews)})</span></div>`:''}${b.images&&b.images.length?'':'<span class="demo-ph">Ảnh minh hoạ</span>'}</div>
     <div class="card-body">
-      <h3>${b.name}</h3>
+      ${hereNote(b)}<h3>${b.name}</h3>
       <div class="meta"><span>${cityName(b.city)}</span><span>${b.area}</span><span>${b.music}</span></div>
       ${isP(b)?`<div class="deal"><span class="ico">%</span>Giảm ${b.deal}% bill khi đặt qua TopChill</div>`:'<div class="deal"><span class="ico">📞</span>Đặt bàn qua tổng đài TopChill</div>'}
       ${b.gpct?`<div class="ghline"><span class="ico">⚡</span>Giờ vàng ${b.gLabel} · giảm thêm ${b.gpct}%</div>`:''}
@@ -1498,7 +1517,7 @@ function tickCd(){const el=document.getElementById('dealCd');const n=new Date();
 
 /* ---------- HOME ---------- */
 function cityChips(el,active,onPick){
-  el.innerHTML=`<button class="chip ${!active?'on':''}" data-c="">Toàn quốc <small>${fmt(CITIES.reduce((a,c)=>a+c.n,0))}</small></button>`+CITIES.map(c=>`<button class="chip ${active===c.id?'on':''}" data-c="${c.id}">${c.name} <small>${c.n}</small></button>`).join('');
+  el.innerHTML=`<button class="chip ${!active?'on':''}" data-c="">Toàn quốc <small>${fmt(CITIES.reduce((a,c)=>a+c.n,0))}</small></button>`+(HERE?[CITIES.find(c=>c.id===HERE)].concat(CITIES.filter(c=>c.id!==HERE)):CITIES).map(c=>`<button class="chip ${active===c.id?'on':''}" data-c="${c.id}">${c.id===HERE?'📍 ':''}${c.name} <small>${c.n}</small></button>`).join('');
   el.onclick=e=>{const b=e.target.closest('.chip');if(b)onPick(b.dataset.c)};
 }
 const F={city:'',type:'',sort:'top',q:''};
@@ -1507,7 +1526,7 @@ function renderBars(){
   cityChips(document.getElementById('cityRail2'),F.city,id=>{F.city=id;renderBars()});
   let list=BARS.filter(b=>(!F.city||b.city===F.city)&&(!F.type||b.type===F.type)&&(!F.q||(b.name+b.area+cityName(b.city)).toLowerCase().includes(F.q.toLowerCase())));
   const rank={top:0,hot:1,null:2};
-  list.sort((a,b)=>F.sort==='rating'?b.rating-a.rating:F.sort==='deal'?b.deal-a.deal:F.sort==='reviews'?b.reviews-a.reviews:F.sort==='golden'?(b.gpct-a.gpct)||b.rating-a.rating:(rank[a.boost]-rank[b.boost])||b.rating-a.rating);
+  list.sort((a,b)=>(!F.city&&(isHere(b)-isHere(a)))||(F.sort==='rating'?b.rating-a.rating:F.sort==='deal'?b.deal-a.deal:F.sort==='reviews'?b.reviews-a.reviews:F.sort==='golden'?(b.gpct-a.gpct)||b.rating-a.rating:(rank[a.boost]-rank[b.boost])||(b.rating||0)-(a.rating||0)));
   document.getElementById('barsTitle').textContent=F.city?`Bar ${cityName(F.city)}`:'Tất cả bar';
   document.getElementById('barsCount').textContent=`${list.length} bar${F.city?' · '+(CITIES.find(c=>c.id===F.city).n)+' bar tại '+cityName(F.city):''}`;
   mountCards(document.getElementById('barsGrid'),list);
@@ -1595,13 +1614,14 @@ function calc(){
   return {spend,d1,d2,d3,golden,after,maxPts,pts,ptsK,total,earn:Math.round(total/10*TIERS[USER.tier].earn),earnIf:Math.round(total/10)};
 }
 function bookDate(){if(bk.day==='p')return bk.date;const d=new Date();d.setDate(d.getDate()+bk.day);return d.toISOString().slice(0,10)}
-const CONTACT={tel:'0838000222',show:'0838 000 222',zalo:'0838000222',tg:'+84838000222'};
+const CONTACT={tel:'0838000222',show:'0838 000 222',zalo:'0838000222',tg:'+84838000222',tgUser:''};
 function bookMsg(){
   const date=bookDate().split('-').reverse().join('/');
   return ['Đặt bàn qua TopChill','Bar: '+cur.name+' ('+cityName(cur.city)+(cur.area?', '+cur.area:'')+')','Ngày: '+date+' · '+bk.time,'Số khách: '+bk.guests+' · '+TABLE[bk.table].label,
     bk.name?'Tên: '+bk.name:'',bk.phone?'SĐT: '+bk.phone:'',bk.note?'Ghi chú: '+bk.note:''].filter(Boolean).join('\n');
 }
-function copyText(t){return navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(t).then(()=>true,()=>false):Promise.resolve(false)}
+function copyOld(t){try{const a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:0;left:0;opacity:0';document.body.appendChild(a);a.select();a.setSelectionRange(0,t.length);const ok=document.execCommand('copy');a.remove();return ok}catch(e){return false}}
+function copyText(t){return navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(t).then(()=>true,()=>copyOld(t)):Promise.resolve(copyOld(t))}
 function renderBook(){
   document.getElementById('bookBox').innerHTML=`
     <div class="eyebrow">Đặt bàn</div><h3>${escH(cur.name)}</h3>
@@ -1644,9 +1664,9 @@ function renderBook(){
   box.querySelector('#bNote').oninput=e=>{bk.note=e.target.value};
   box.querySelector('#bName').oninput=e=>{bk.name=e.target.value};
   box.querySelector('#bPhone').oninput=e=>{bk.phone=e.target.value};
-  const viaApp=(url,app)=>{const msg=bookMsg();copyText(msg).then(ok=>{toast(ok?'Đã sao chép tin đặt bàn. Mở '+app+', dán vào ô chat rồi gửi.':'Mở '+app+'. Nhắn: '+cur.name+', '+bk.time+', '+bk.guests+' khách.');window.open(url,'_blank','noopener')})};
+  const viaApp=(url,app)=>{const msg=bookMsg();const cp=copyText(msg);window.open(url,'_blank','noopener');cp.then(ok=>toast(ok?'Đã chép sẵn tin đặt bàn. Trong '+app+': chạm giữ ô nhập → Dán → Gửi.':'Mở '+app+'. Nhắn: '+cur.name+', '+bk.time+', '+bk.guests+' khách.',6000))};
   box.querySelector('#bkZalo').onclick=()=>viaApp('https://zalo.me/'+CONTACT.zalo,'Zalo');
-  box.querySelector('#bkTg').onclick=()=>viaApp('https://t.me/'+CONTACT.tg,'Telegram');
+  box.querySelector('#bkTg').onclick=()=>{if(CONTACT.tgUser){window.open('https://t.me/'+CONTACT.tgUser+'?text='+encodeURIComponent(bookMsg()),'_blank','noopener');toast('Tin đặt bàn đã điền sẵn trong Telegram, bấm Gửi là xong.');copyText(bookMsg())}else viaApp('https://t.me/'+CONTACT.tg,'Telegram')};
   box.querySelector('#confirmBtn').onclick=()=>{
     const ph=(bk.phone||'').replace(/[^\d+]/g,'').replace(/^\+84/,'0');
     if(!/^0\d{9}$/.test(ph)){toast('Nhập số điện thoại 10 số để tổng đài gọi lại.');const f=box.querySelector('#bPhone');f.focus();f.scrollIntoView({block:'center',behavior:'smooth'});return}
@@ -1656,7 +1676,11 @@ function renderBook(){
     const req={code,bar:cur.name,city:cityName(cur.city),addr:[cur.addr,cur.area].filter(Boolean).join(', '),date,time:bk.time,guests:bk.guests,table:TABLE[bk.table].label,name:(bk.name||'').trim().slice(0,40),phone:ph,note:(bk.note||'').trim().slice(0,300),at:new Date().toISOString()};
     const btn=box.querySelector('#confirmBtn');btn.disabled=true;btn.textContent='Đang gửi…';
     sendBooking(req).then(ok=>{
-    if(!ok){btn.disabled=false;btn.textContent='Gửi yêu cầu · gọi lại trong 5 phút';toast('Mạng yếu, chưa gửi được. Thử lại hoặc gọi '+CONTACT.show+'.');return}
+    if(!ok){btn.disabled=false;btn.textContent='Gửi lại yêu cầu';
+      let fb=box.querySelector('.bk-fail');if(!fb){fb=document.createElement('div');fb.className='bk-fail';btn.after(fb)}
+      fb.innerHTML=`<b>Chưa gửi được yêu cầu.</b> Để chắc chắn giữ bàn, bạn gọi hoặc nhắn Zalo ngay nhé:<div class="bk-fail-acts"><a class="btn mob-call" href="tel:${CONTACT.tel}">📞 Gọi ${CONTACT.show}</a><button type="button" class="btn bk-zalo" data-fbzalo>Nhắn Zalo</button></div>`;
+      fb.querySelector('[data-fbzalo]').onclick=()=>viaApp('https://zalo.me/'+CONTACT.zalo,'Zalo');
+      return}
     box.innerHTML=`<div class="success"><div class="eyebrow" style="color:var(--ok)">✓ Đã nhận yêu cầu</div><div class="code">${code}</div>
       <p><b>${escH(cur.name)}</b> · ${TABLE[bk.table].label}</p><p class="muted">${date} · ${bk.time} · ${bk.guests} khách</p>
       <p style="margin-top:12px">Tổng đài TopChill sẽ gọi <b class="num">${ph}</b> trong khoảng 5 phút để xác nhận bàn.</p>
@@ -1670,17 +1694,20 @@ function renderBook(){
     });
   };
 }
-/* Gửi yêu cầu đặt bàn về email tổng đài (FormSubmit). BOOKING_ENDPOINT trống = bản demo (chỉ lưu trên máy). */
-const BOOKING_ENDPOINT='';const BOOKING_DEMO=!BOOKING_ENDPOINT;
+/* Gửi yêu cầu đặt bàn về email tổng đài. BOOKING=null: bản demo (chỉ lưu trên máy). Build điền từ config.json. */
+const BOOKING=null;const BOOKING_DEMO=!BOOKING;
 function sendBooking(req){
   try{const L=JSON.parse(localStorage.getItem('topchill-requests')||'[]');L.unshift(req);localStorage.setItem('topchill-requests',JSON.stringify(L.slice(0,20)))}catch(e){}
-  if(!BOOKING_ENDPOINT)return Promise.resolve(true);
-  const body={_subject:'Đặt bàn '+req.code+': '+req.bar+' · '+req.time+' '+req.date+' · '+req.phone,_template:'table',_captcha:'false',
-    'Mã':req.code,'Số điện thoại':req.phone,'Tên khách':req.name||'(không để tên)','Bar':req.bar,'Thành phố':req.city,'Địa chỉ bar':req.addr||'',
-    'Ngày':req.date,'Giờ đến':req.time,'Số khách':req.guests,'Loại bàn':req.table,'Ghi chú':req.note||'','Gửi lúc':new Date(req.at).toLocaleString('vi-VN'),'Trang':location.href};
-  const ctl=new AbortController();const t=setTimeout(()=>ctl.abort(),12000);
-  return fetch(BOOKING_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(body),signal:ctl.signal})
-    .then(r=>r.ok).catch(()=>false).finally(()=>clearTimeout(t));
+  if(!BOOKING)return Promise.resolve(true);
+  const subject='Đặt bàn '+req.code+': '+req.bar+' · '+req.time+' '+req.date+' · '+req.phone;
+  const f={'Mã':req.code,'Số điện thoại':req.phone,'Tên khách':req.name||'(không để tên)','Bar':req.bar,'Thành phố':req.city,'Địa chỉ bar':req.addr||'',
+    'Ngày':req.date,'Giờ đến':req.time,'Số khách':String(req.guests),'Loại bàn':req.table,'Ghi chú':req.note||'','Gửi lúc':new Date(req.at).toLocaleString('vi-VN'),'Trang':location.href};
+  const ctl=new AbortController();const t=setTimeout(()=>ctl.abort(),15000);
+  let opt;
+  if(BOOKING.kind==='w3f')opt={headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.assign({access_key:BOOKING.key,subject,from_name:'TopChill đặt bàn',botcheck:false},f))};
+  else{const q=new URLSearchParams(Object.assign({_subject:subject,_template:'table',_captcha:'false'},f));opt={headers:{Accept:'application/json'},body:q}}
+  return fetch(BOOKING.url,Object.assign({method:'POST',signal:ctl.signal},opt))
+    .then(r=>r.ok?r.json().then(j=>j.success!==false&&j.success!=='false',()=>true):false).catch(()=>false).finally(()=>clearTimeout(t));
 }
 document.addEventListener('click',e=>{
   const bb=e.target.closest('[data-book]');if(bb){e.stopPropagation();openBar(+bb.dataset.book,bb.dataset.time);return}
@@ -1877,10 +1904,10 @@ function showView(v){
   requestAnimationFrame(()=>animateView(v));
   FX.set(v);
 }
-let tt;function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),3200)}
+let tt;function toast(m,ms){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),ms||3200)}
 document.getElementById('fType').onchange=e=>{F.type=e.target.value;renderBars()};
 document.getElementById('fSort').onchange=e=>{F.sort=e.target.value;renderBars()};
 document.getElementById('fQ').oninput=e=>{F.q=e.target.value;renderBars()};
 window.addEventListener('hashchange',route);
-loadUser();initHome();applyUser();renderGroups();renderChat();renderReviews();route();
+loadUser();initHome();applyUser();renderGroups();renderChat();renderReviews();route();setTimeout(locate,1200);
 </script>

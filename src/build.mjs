@@ -49,9 +49,11 @@ let APP = fs.readFileSync(path.join(ROOT, 'src/app.html'), 'utf8');
 { const a = APP.indexOf('const BARS=['), z = APP.indexOf('\n];\n', a);
   if (a < 0 || z < 0) throw new Error('Không tìm thấy BARS trong app.html');
   APP = APP.slice(0, a) + 'const BARS=' + JSON.stringify(LIVE_BARS) + ';' + APP.slice(z + 3);
-  { const ep = CFG.bookingEndpoint || (CFG.bookingEmail ? 'https://formsubmit.co/ajax/' + CFG.bookingEmail : '');
-    APP = APP.replace("const BOOKING_ENDPOINT='';", 'const BOOKING_ENDPOINT=' + JSON.stringify(ep) + ';'); }
-  APP = APP.replace(/const CONTACT=\{[^}]*\};/, 'const CONTACT=' + JSON.stringify({ tel: CFG.hotline.replace(/\s/g, ''), show: CFG.hotline, zalo: CFG.zalo || CFG.hotline.replace(/\s/g, ''), tg: CFG.telegram || '' }) + ';');
+  { const BK = CFG.web3formsKey ? { kind: 'w3f', url: 'https://api.web3forms.com/submit', key: CFG.web3formsKey }
+      : CFG.bookingEndpoint ? { kind: 'url', url: CFG.bookingEndpoint }
+      : CFG.bookingEmail ? { kind: 'fs', url: 'https://formsubmit.co/ajax/' + CFG.bookingEmail } : null;
+    APP = APP.replace("const BOOKING=null;", 'const BOOKING=' + JSON.stringify(BK) + ';'); }
+  APP = APP.replace(/const CONTACT=\{[^}]*\};/, 'const CONTACT=' + JSON.stringify({ tel: CFG.hotline.replace(/\s/g, ''), show: CFG.hotline, zalo: CFG.zalo || CFG.hotline.replace(/\s/g, ''), tg: CFG.telegram || '', tgUser: (CFG.telegramUser || '').replace(/^@/, '') }) + ';');
   APP = APP.replace('const TICKER=[];', 'const TICKER=' + JSON.stringify(DATA.ticker || []).replace(/</g, '\\u003c') + ';'); }
 function grab(start, end) {
   const a = APP.indexOf(start); const b = APP.indexOf(end, a);
@@ -206,7 +208,7 @@ const CSP = [
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.tawk.to",
   "font-src 'self' data: https://fonts.gstatic.com https://*.tawk.to",
   "img-src 'self' data: blob: https://images.unsplash.com https://*.tawk.to https://*.googleusercontent.com",
-  "connect-src 'self' https://formsubmit.co https://api.github.com https://raw.githubusercontent.com https://*.tawk.to wss://*.tawk.to https://*.googleapis.com https://*.firebaseio.com",
+  "connect-src 'self' https://api.web3forms.com https://formsubmit.co https://api.github.com https://raw.githubusercontent.com https://*.tawk.to wss://*.tawk.to https://*.googleapis.com https://*.firebaseio.com",
   "media-src 'self' data: blob:",
   "frame-src https://*.tawk.to https://*.firebaseapp.com https://accounts.google.com",
   "worker-src 'self' blob:",
@@ -697,7 +699,7 @@ write('_headers', `/*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=31536000; includeSubDomains
-  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  Permissions-Policy: camera=(), microphone=(), geolocation=(self), payment=(), usb=(), interest-cohort=()
   Cross-Origin-Opener-Policy: same-origin
 
 /assets/*
