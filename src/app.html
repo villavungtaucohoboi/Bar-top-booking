@@ -972,6 +972,7 @@ button.user-pill{cursor:pointer;font:inherit;color:inherit;text-align:left}
 .bk-msg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .bk-msg button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:14px;color:#fff;font-weight:700;font-size:15px;border:0;cursor:pointer}
 .bk-msg .i{display:grid;place-items:center;height:26px;min-width:26px;border-radius:7px;background:#fff;font-size:11px;font-weight:800;padding:0 4px}
+.gal{display:flex;gap:8px;overflow-x:auto;margin:12px 0 4px;padding-bottom:4px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}.gal-i{flex:0 0 auto;width:96px;height:72px;border-radius:10px;overflow:hidden;border:2px solid transparent;padding:0;background:var(--surface);scroll-snap-align:start;cursor:pointer}.gal-i.on{border-color:var(--gold)}.gal-i img{width:100%;height:100%;object-fit:cover;display:block}.gal-src{font-size:11.5px;color:var(--muted,#9a90ad);margin:2px 0 6px}.gal-src a{color:inherit}
 .here-note{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:#3ee6a0;background:rgba(62,230,160,.12);border:1px solid rgba(62,230,160,.35);padding:3px 9px;border-radius:999px;margin-bottom:6px}.here-mini{display:block;font-size:11px;font-weight:700;color:#3ee6a0}
 .bk-fail{margin-top:10px;padding:12px;border-radius:12px;border:1px solid rgba(255,90,90,.45);background:rgba(255,60,60,.08);font-size:13.5px;line-height:1.5}.bk-fail-acts{display:flex;gap:8px;margin-top:10px}.bk-fail-acts .btn{flex:1;justify-content:center;color:#fff;border:0}
 .bk-zalo{background:#0068ff}.bk-zalo .i{color:#0068ff}.bk-tg{background:#229ed9}.bk-tg .i{color:#229ed9;font-size:14px}
@@ -1576,6 +1577,8 @@ function openBar(id,time){
     <div class="sheet-body">
       <div style="min-width:0">
         <p style="font-size:15.5px">${cur.desc}</p>
+        ${cur.images&&cur.images.length>1?`<div class="gal" id="gal">${cur.images.map((u,i)=>`<button type="button" class="gal-i ${i?'':'on'}" data-g="${i}" aria-label="Ảnh ${i+1}"><img src="${u}" alt="${escH(cur.name)} ảnh ${i+1}" loading="lazy" decoding="async"></button>`).join('')}</div>`:''}
+        ${cur.photoSources&&cur.photoSources.length?`<p class="gal-src">Ảnh sưu tầm từ ${cur.photoSources.slice(0,4).map((u,i)=>`<a href="${escH(u)}" target="_blank" rel="nofollow noopener">[${i+1}]</a>`).join(' ')}</p>`:''}
         <div class="info-grid">
           <div class="info"><small>Giờ mở cửa</small><b>${hrs(cur)}</b></div>
           ${cur.gpct?`<div class="info"><small>⚡ Giờ vàng</small><b style="color:var(--neon)">${cur.gLabel} · giảm thêm ${cur.gpct}%</b></div>`:`<div class="info"><small>Mức chi / người</small><b>${cur.priceKnown===false?'Liên hệ tổng đài':cur.price[0]+'k – '+cur.price[1]+'k'}</b></div>`}
@@ -1710,6 +1713,7 @@ function sendBooking(req){
     .then(r=>r.ok?r.json().then(j=>j.success!==false&&j.success!=='false',()=>true):false).catch(()=>false).finally(()=>clearTimeout(t));
 }
 document.addEventListener('click',e=>{
+  const gi=e.target.closest('.gal-i');if(gi&&cur){const u=cur.images[+gi.dataset.g];const h=document.querySelector('.sheet-art img.ph, .sheet-art img');if(h){h.src=u;h.dataset.c=''}document.querySelectorAll('.gal-i').forEach(x=>x.classList.toggle('on',x===gi));document.querySelector('.sheet-art').scrollIntoView({behavior:'smooth',block:'start'});return}
   const bb=e.target.closest('[data-book]');if(bb){e.stopPropagation();openBar(+bb.dataset.book,bb.dataset.time);return}
   const c=e.target.closest('.card[data-id],.rk1[data-id],.rk-row[data-id]');if(c){openBar(+c.dataset.id);return}
   const g=e.target.closest('.gh[data-gh]');if(g){const b=BARS.find(x=>x.id===+g.dataset.gh);openBar(b.id,b.golden[0]);return}

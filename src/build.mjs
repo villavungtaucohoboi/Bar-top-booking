@@ -425,6 +425,8 @@ function barPage(b) {
       ${b.music ? `<tr><th scope="row">Nhạc</th><td>${esc(b.music)}</td></tr>` : ''}
       ${b.dress ? `<tr><th scope="row">Dress code</th><td>${esc(b.dress)}</td></tr>` : ''}
     </tbody></table>
+    ${(b.images || []).length > 1 ? `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:18px">${b.images.map((u, i) => `<img src="${esc(BASE + u.replace(/^\//, ''))}" alt="${esc(b.name)} ${esc(c.name)} ảnh ${i + 1}" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px">`).join('')}</div>` : ''}
+    ${(b.photoSources || []).length ? `<p class="muted" style="font-size:12px;margin-top:8px">Ảnh sưu tầm từ: ${b.photoSources.slice(0, 5).map((u, i) => `<a href="${esc(u)}" target="_blank" rel="nofollow noopener">[${i + 1}]</a>`).join(' ')}. Chủ ảnh cần gỡ vui lòng liên hệ ${esc(CFG.hotline)}.</p>` : ''}
     ${srcs.length ? `<p class="muted" style="font-size:13px;margin-top:12px">Nguồn thông tin: ${srcs.map((u, i) => `<a href="${esc(u)}" target="_blank" rel="nofollow noopener">[${i + 1}]</a>`).join(' ')}. Thông tin có thể thay đổi, gọi ${esc(CFG.hotline)} để xác nhận.</p>` : ''}
   </div>
   <div>
@@ -667,7 +669,8 @@ fs.copyFileSync(path.join(ROOT, 'src/music.js'), path.join(OUT, 'assets/music.js
 fs.copyFileSync(path.join(ROOT, 'src/install.js'), path.join(OUT, 'assets/install.js'));
 // ảnh bar đã up
 { const src = path.join(ROOT, 'content/img/bars'), dst = path.join(OUT, 'img/bars');
-  if (fs.existsSync(src)) { fs.mkdirSync(dst, { recursive: true }); for (const f of fs.readdirSync(src)) if (/\.(webp|jpe?g|png)$/i.test(f)) fs.copyFileSync(path.join(src, f), path.join(dst, f)); } }
+  const cp = (a, b) => { fs.mkdirSync(b, { recursive: true }); for (const f of fs.readdirSync(a, { withFileTypes: true })) { if (f.isDirectory()) cp(path.join(a, f.name), path.join(b, f.name)); else if (/\.(webp|jpe?g|png)$/i.test(f.name)) fs.copyFileSync(path.join(a, f.name), path.join(b, f.name)); } };
+  if (fs.existsSync(src)) cp(src, dst); }
 GENERATED.push('assets/site.css', 'assets/chat.css', 'assets/chat.js', 'assets/music.js', 'assets/install.js');
 {
   const order = ranked(BARS);

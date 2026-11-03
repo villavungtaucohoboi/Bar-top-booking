@@ -861,10 +861,17 @@
    "hidden": false,
    "menu": [],
    "images": [
-    "/img/bars/a-plus-h-mw058lg3-1.webp"
+    "/img/bars/hn/19-aplus-hanoi/01.webp",
+    "/img/bars/hn/19-aplus-hanoi/02.webp",
+    "/img/bars/hn/19-aplus-hanoi/03.webp",
+    "/img/bars/hn/19-aplus-hanoi/04.webp",
+    "/img/bars/hn/19-aplus-hanoi/05.webp"
    ],
    "id": 19,
-   "hue": 305
+   "hue": 305,
+   "photoSources": [
+    "https://nightclub.com.vn/aplus-hanoi"
+   ]
   },
   {
    "id": 20,
@@ -893,14 +900,19 @@
    "boost": null,
    "hue": 100,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/bd/20-jd-s-bar-grill/01.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/binh-duong/dia-diem-phuc-vu-bia",
     "https://itchyfeetonthecheap.com/2015/04/21/a-guide-to-thu-dau-mot-and-binh-duong-province-vietnam/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/binh-duong/dia-diem-phuc-vu-bia"
+   ]
   },
   {
    "id": 21,
@@ -929,14 +941,26 @@
    "boost": null,
    "hue": 220,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/bd/21-vita-club/01.webp",
+    "/img/bars/bd/21-vita-club/02.webp",
+    "/img/bars/bd/21-vita-club/03.webp",
+    "/img/bars/bd/21-vita-club/04.webp",
+    "/img/bars/bd/21-vita-club/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/binh-duong/bar-pub",
     "https://www.foody.vn/binh-duong/bar-pub-phuc-vu-vao-buoi-toi"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://toplist.vn/top-list/quan-cafe-acoustic-o-binh-duong-41324.htm",
+    "https://mytour.vn/en/blog/bai-viet/discover-the-most-stunning-rooftop-views-in-binh-duong.html",
+    "https://bepvietdecor.vn/binh-duong-nha-hang-vita-bbq-becamex-tower.html",
+    "https://www.foody.vn/binh-duong/bar-pub"
+   ]
   },
   {
    "id": 22,
@@ -965,14 +989,20 @@
    "boost": null,
    "hue": 73,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/bd/22-imperial-dragon-lounge/01.webp",
+    "/img/bars/bd/22-imperial-dragon-lounge/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/discover-the-most-unique-bars-in-binh-duong-mytourvn.html",
     "https://toplist.vn/top-list/quan-bar-doc-dao-nhat-nen-thu-tai-binh-duong-57373.htm"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://mytour.vn/en/blog/bai-viet/discover-the-most-unique-bars-in-binh-duong-mytourvn.html"
+   ]
   },
   {
    "id": 23,
@@ -1001,14 +1031,23 @@
    "boost": null,
    "hue": 303,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/bd/23-bee-beer-cocktail/01.webp",
+    "/img/bars/bd/23-bee-beer-cocktail/02.webp",
+    "/img/bars/bd/23-bee-beer-cocktail/03.webp",
+    "/img/bars/bd/23-bee-beer-cocktail/04.webp",
+    "/img/bars/bd/23-bee-beer-cocktail/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/bee-beer-cocktail-diem-chill-hap-dan-nhat-cho-gioi-tre.html",
     "https://mia.vn/cam-nang-du-lich/bee-beer-cocktail-dia-diem-chill-bac-nhat-danh-cho-gioi-tre-6733"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://mytour.vn/vi/blog/bai-viet/bee-beer-cocktail-diem-chill-hap-dan-nhat-cho-gioi-tre.html"
+   ]
   },
   {
    "id": 24,
@@ -1037,13 +1076,19 @@
    "boost": null,
    "hue": 278,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/bd/24-chich-pub-food-beer/01.webp",
+    "/img/bars/bd/24-chich-pub-food-beer/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/binh-duong/bar-pub"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/binh-duong/bar-pub"
+   ]
   },
   {
    "id": 25,
@@ -1072,13 +1117,18 @@
    "boost": null,
    "hue": 115,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/bd/25-nha-xuong-so-3-coffee-beer-bar/01.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/binh-duong/dia-diem-phuc-vu-bia"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/binh-duong/dia-diem-phuc-vu-bia"
+   ]
   },
   {
    "id": 26,
@@ -1107,13 +1157,19 @@
    "boost": null,
    "hue": 266,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/bd/26-beer-zone-vinh-phu-41/01.webp",
+    "/img/bars/bd/26-beer-zone-vinh-phu-41/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/binh-duong/food/beer-club"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/binh-duong/food/beer-club"
+   ]
   },
   {
    "id": 27,
@@ -1142,13 +1198,18 @@
    "boost": null,
    "hue": 128,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/bd/27-ngao-coffee-beer/01.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/binh-duong/food/beer-club"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/binh-duong/food/beer-club"
+   ]
   },
   {
    "id": 28,
@@ -1177,14 +1238,26 @@
    "boost": null,
    "hue": 150,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ct/28-inu-beer-club-lounge/01.webp",
+    "/img/bars/ct/28-inu-beer-club-lounge/02.webp",
+    "/img/bars/ct/28-inu-beer-club-lounge/03.webp",
+    "/img/bars/ct/28-inu-beer-club-lounge/04.webp",
+    "/img/bars/ct/28-inu-beer-club-lounge/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-6-largest-bars-in-can-tho.html",
     "https://impresstravel.com/?p=50435"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://fme.travel/places-for-christmas-in-can-tho/",
+    "https://menuonline.vn/quan-bar-can-tho.html",
+    "https://impresstravel.com/?p=50435",
+    "https://mytour.vn/en/blog/bai-viet/top-6-largest-bars-in-can-tho.html"
+   ]
   },
   {
    "id": 29,
@@ -1213,14 +1286,26 @@
    "boost": null,
    "hue": 58,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ct/29-golf-club/01.webp",
+    "/img/bars/ct/29-golf-club/02.webp",
+    "/img/bars/ct/29-golf-club/03.webp",
+    "/img/bars/ct/29-golf-club/04.webp",
+    "/img/bars/ct/29-golf-club/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-6-largest-bars-in-can-tho.html",
     "https://impresstravel.com/?p=54991"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://thanhnien.vn/san-tap-golf-xin-xo-bac-nhat-mien-nam-mo-cua-tai-can-tho-1851365255.htm",
+    "https://lugiaco.com.vn/vi/project/du-an-hoan-thanh/tru-luoi-san-tap-mekong-golf-75.html",
+    "https://impresstravel.com/?p=54991",
+    "https://mytour.vn/en/blog/bai-viet/top-6-largest-bars-in-can-tho.html"
+   ]
   },
   {
    "id": 30,
@@ -1249,14 +1334,25 @@
    "boost": null,
    "hue": 339,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ct/30-777-club/01.webp",
+    "/img/bars/ct/30-777-club/02.webp",
+    "/img/bars/ct/30-777-club/03.webp",
+    "/img/bars/ct/30-777-club/04.webp",
+    "/img/bars/ct/30-777-club/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://toplist.vn/top-list/quan-bar-lon-nhat-tai-can-tho-14699.htm",
     "https://impresstravel.com/?p=50435"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.9life.com.vn/products/777-club-127-tran-van-kheo",
+    "https://impresstravel.com/?p=50435",
+    "https://toplist.vn/top-list/quan-bar-lon-nhat-tai-can-tho-14699.htm"
+   ]
   },
   {
    "id": 31,
@@ -1285,14 +1381,24 @@
    "boost": null,
    "hue": 41,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ct/31-xk-club/01.webp",
+    "/img/bars/ct/31-xk-club/02.webp",
+    "/img/bars/ct/31-xk-club/03.webp",
+    "/img/bars/ct/31-xk-club/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu",
     "https://www.foody.vn/can-tho/bar-pub-co-dat-ban-truoc"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://thietbisaonam.com/tin-san-pham/quan-bar-can-tho.html",
+    "https://mytour.vn/en/blog/bai-viet/discover-6-vibrant-bars-in-can-tho-for-unforgettable-nights-mytour.html",
+    "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu"
+   ]
   },
   {
    "id": 32,
@@ -1356,14 +1462,19 @@
    "boost": null,
    "hue": 294,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ct/33-mode-dj-lounge/01.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu",
     "https://www.foody.vn/can-tho/bar-pub-phuc-vu-vao-buoi-toi"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu"
+   ]
   },
   {
    "id": 34,
@@ -1392,13 +1503,18 @@
    "boost": null,
    "hue": 18,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ct/34-knight-beer-club/01.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu"
+   ]
   },
   {
    "id": 35,
@@ -1427,14 +1543,26 @@
    "boost": null,
    "hue": 108,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ct/35-iris-sky-bar/01.webp",
+    "/img/bars/ct/35-iris-sky-bar/02.webp",
+    "/img/bars/ct/35-iris-sky-bar/03.webp",
+    "/img/bars/ct/35-iris-sky-bar/04.webp",
+    "/img/bars/ct/35-iris-sky-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://evendo.com/locations/vietnam/mekong-delta/bar/iris-sky-bar",
     "https://theculturetrip.com/asia/vietnam/can-tho/articles/best-bars-can-tho-vietnam"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://khachsan.chudu24.com/ks.2180.khach-san-iris-can-tho.html",
+    "https://www.elleman.vn/van-hoa-giai-tri/quan-cafe-can-tho-view-dep/",
+    "https://toplist.vn/top-list/cafe-san-thuong-ngam-nhin-ve-dep-can-tho-18642.htm",
+    "https://evendo.com/locations/vietnam/mekong-delta/bar/iris-sky-bar"
+   ]
   },
   {
    "id": 36,
@@ -1463,14 +1591,21 @@
    "boost": null,
    "hue": 332,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ct/36-holiday-one-sky-bar/01.webp",
+    "/img/bars/ct/36-holiday-one-sky-bar/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/can-tho/holiday-one-sky-bar-pham-ngoc-thach",
     "https://theculturetrip.com/asia/vietnam/can-tho/articles/best-bars-can-tho-vietnam"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://galatravel.vn/holiday-one-can-tho-hotel.htm",
+    "https://www.booking.com/hotel/vn/holiday-one-can-tho.html"
+   ]
   },
   {
    "id": 37,
@@ -1499,14 +1634,19 @@
    "boost": null,
    "hue": 306,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ct/37-hiraeth-cocktail-bar-kitchen/01.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://impresstravel.com/?p=54991",
     "https://wanderlog.com/place/details/9260001"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://impresstravel.com/?p=54991"
+   ]
   },
   {
    "id": 38,
@@ -1535,13 +1675,22 @@
    "boost": null,
    "hue": 272,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ct/38-deja-vu-cocktail-wine-bar/01.webp",
+    "/img/bars/ct/38-deja-vu-cocktail-wine-bar/02.webp",
+    "/img/bars/ct/38-deja-vu-cocktail-wine-bar/03.webp",
+    "/img/bars/ct/38-deja-vu-cocktail-wine-bar/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://toplist.vn/top-list/quan-bar-lon-nhat-tai-can-tho-14699.htm"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://toplist.vn/top-list/quan-bar-lon-nhat-tai-can-tho-14699.htm",
+    "https://fme.travel/places-for-christmas-in-can-tho/"
+   ]
   },
   {
    "id": 39,
@@ -1570,7 +1719,10 @@
    "boost": null,
    "hue": 114,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ct/39-legi-cocktails-dining/01.webp",
+    "/img/bars/ct/39-legi-cocktails-dining/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -1578,7 +1730,10 @@
     "https://evendo.com/locations/vietnam/can-tho/bar/legi-cocktails-dining",
     "https://wanderlog.com/place/details/10838113/legi-cocktails--dining"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://evendo.com/locations/vietnam/can-tho/bar/legi-cocktails-dining"
+   ]
   },
   {
    "id": 40,
@@ -1642,13 +1797,21 @@
    "boost": null,
    "hue": 191,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ct/41-tiem-bia-nha-an/01.webp",
+    "/img/bars/ct/41-tiem-bia-nha-an/02.webp",
+    "/img/bars/ct/41-tiem-bia-nha-an/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://amthucbinhxuyen.com/post/top-19-quan-bia-tai-can-tho.p1723",
+    "https://www.foody.vn/can-tho/bar-pub-tai-quan-ninh-kieu"
+   ]
   },
   {
    "id": 42,
@@ -1677,14 +1840,24 @@
    "boost": null,
    "hue": 113,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dl/42-the-fog-bar/01.webp",
+    "/img/bars/dl/42-the-fog-bar/02.webp",
+    "/img/bars/dl/42-the-fog-bar/03.webp",
+    "/img/bars/dl/42-the-fog-bar/04.webp",
+    "/img/bars/dl/42-the-fog-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/top-6-quan-bar-o-da-lat-voi-gia-cuc-ky-hap-dan-tu-50000-vnd.html",
     "https://mytour.vn/en/blog/am-thuc/top-6-best-cocktail-bars-in-da-lat-mytour.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://mytour.vn/vi/blog/bai-viet/top-6-quan-bar-o-da-lat-voi-gia-cuc-ky-hap-dan-tu-50000-vnd.html",
+    "https://mytour.vn/en/blog/am-thuc/top-6-best-cocktail-bars-in-da-lat-mytour.html"
+   ]
   },
   {
    "id": 43,
@@ -1713,14 +1886,26 @@
    "boost": null,
    "hue": 168,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dl/43-b21-bar/01.webp",
+    "/img/bars/dl/43-b21-bar/02.webp",
+    "/img/bars/dl/43-b21-bar/03.webp",
+    "/img/bars/dl/43-b21-bar/04.webp",
+    "/img/bars/dl/43-b21-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-7-most-prestigious-cocktail-bars-in-da-lat-lam-dong-mytour.html",
     "https://www.fodors.com/world/asia/vietnam/the-south-central-coasts-and-highlands/dalat/things-to-do/nightlife"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://360dalat.com/dia-diem/bar-da-lat-653",
+    "https://kr.tgroup.vn/service/-b21--b21-bar-da-lat",
+    "https://www.9life.com.vn/products/b21-bar-68-truong-cong-dinh",
+    "https://mytour.vn/en/blog/bai-viet/top-7-most-prestigious-cocktail-bars-in-da-lat-lam-dong-mytour.html"
+   ]
   },
   {
    "id": 44,
@@ -1749,14 +1934,24 @@
    "boost": null,
    "hue": 296,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dl/44-woody-classic-bar/01.webp",
+    "/img/bars/dl/44-woody-classic-bar/02.webp",
+    "/img/bars/dl/44-woody-classic-bar/03.webp",
+    "/img/bars/dl/44-woody-classic-bar/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/top-5-quan-cocktail-dep-nhat-tai-da-lat.html",
     "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-da-lat-57085.htm"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://danhsach.vn/lam-dong/dia-diem-uy-tin/woody-classic-so-6-nguyen-chi-thanh-thanh-pho-da-lat-tinh-lam-dong-3535373264.html",
+    "https://woody-classic-bar.wheree.com/",
+    "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-da-lat-57085.htm"
+   ]
   },
   {
    "id": 45,
@@ -1785,14 +1980,26 @@
    "boost": null,
    "hue": 72,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dl/45-maze-bar-100-roofs-cafe/01.webp",
+    "/img/bars/dl/45-maze-bar-100-roofs-cafe/02.webp",
+    "/img/bars/dl/45-maze-bar-100-roofs-cafe/03.webp",
+    "/img/bars/dl/45-maze-bar-100-roofs-cafe/04.webp",
+    "/img/bars/dl/45-maze-bar-100-roofs-cafe/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://atlasobscura.com/places/100-roofs-cafe",
     "https://www.bdatrip.com/da-lat-city/travel-tips/the-weird-and-wonderful-maze-bar-of-dalat"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.bdatrip.com/da-lat-city/travel-tips/the-weird-and-wonderful-maze-bar-of-dalat",
+    "https://www.roamingunbound.com/vietnam-18-a-maze-balls-bar/",
+    "https://www.trip.com/moments/detail/dalat-1393-142602203/",
+    "https://www.adventuresofjellie.com/vietnam/da-lat-city-guide"
+   ]
   },
   {
    "id": 46,
@@ -1821,14 +2028,24 @@
    "boost": null,
    "hue": 22,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dl/46-the-balcony-speakeasy-bar/01.webp",
+    "/img/bars/dl/46-the-balcony-speakeasy-bar/02.webp",
+    "/img/bars/dl/46-the-balcony-speakeasy-bar/03.webp",
+    "/img/bars/dl/46-the-balcony-speakeasy-bar/04.webp",
+    "/img/bars/dl/46-the-balcony-speakeasy-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://znews.vn/4-khong-gian-chill-ve-dem-thu-hut-gioi-tre-o-da-lat-post1044648.html",
     "https://mytour.vn/en/blog/xep-hang/top-5-most-popular-hidden-bars-in-da-lat-mytour.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.tripadvisor.com.vn/Attraction_Review-g293922-d19254835-Reviews-The_Balcony_Speakeasy_Bar-Da_Lat_Lam_Dong_Province.html",
+    "https://mytour.vn/en/blog/xep-hang/top-5-most-popular-hidden-bars-in-da-lat-mytour.html"
+   ]
   },
   {
    "id": 47,
@@ -1857,7 +2074,11 @@
    "boost": null,
    "hue": 356,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dl/47-on-the-rocks-cocktail-bar/01.webp",
+    "/img/bars/dl/47-on-the-rocks-cocktail-bar/02.webp",
+    "/img/bars/dl/47-on-the-rocks-cocktail-bar/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -1865,7 +2086,11 @@
     "https://www.sapo.vn/khach-hang-sapo-fnb/on-the-rocks",
     "https://thedotmagazine.com/?p=20271"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.sapo.vn/khach-hang-sapo-fnb/on-the-rocks",
+    "https://www.tripadvisor.com.vn/Attraction_Review-g293922-d25593122-Reviews-On_The_Rocks_Cocktail_Bar-Da_Lat_Lam_Dong_Province.html"
+   ]
   },
   {
    "id": 48,
@@ -1894,7 +2119,13 @@
    "boost": null,
    "hue": 133,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dl/48-gemination-eatery-bar/01.webp",
+    "/img/bars/dl/48-gemination-eatery-bar/02.webp",
+    "/img/bars/dl/48-gemination-eatery-bar/03.webp",
+    "/img/bars/dl/48-gemination-eatery-bar/04.webp",
+    "/img/bars/dl/48-gemination-eatery-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -1902,7 +2133,11 @@
     "https://kupi.com/en-ae/explore/vietnam/da-lat/gemination-eatery-and-bar-da-lat",
     "https://tinhte.vn/thread/kham-pha-nhung-quan-bar-chill-da-lat-dang-trai-nghiem.4084801/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://thedotmagazine.com/we-go-native-at-dalats-gemination-cocktail-bar/",
+    "https://tinhte.vn/thread/kham-pha-nhung-quan-bar-chill-da-lat-dang-trai-nghiem.4084801/"
+   ]
   },
   {
    "id": 49,
@@ -1931,7 +2166,13 @@
    "boost": null,
    "hue": 286,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dl/49-fox-s-den/01.webp",
+    "/img/bars/dl/49-fox-s-den/02.webp",
+    "/img/bars/dl/49-fox-s-den/03.webp",
+    "/img/bars/dl/49-fox-s-den/04.webp",
+    "/img/bars/dl/49-fox-s-den/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -1939,7 +2180,11 @@
     "https://mia.vn/cam-nang-du-lich/ghe-ngay-7-quan-bar-cuc-chill-tai-da-lat-de-trai-nghiem-1577",
     "https://www.lemon8-app.com/walkherewalkthere/7218204765254156801?region=sg"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.tripadvisor.com.vn/Restaurant_Review-g293922-d19254772-Reviews-Fox_s_Den-Da_Lat_Lam_Dong_Province.html",
+    "https://mia.vn/cam-nang-du-lich/ghe-ngay-7-quan-bar-cuc-chill-tai-da-lat-de-trai-nghiem-1577"
+   ]
   },
   {
    "id": 50,
@@ -1968,14 +2213,25 @@
    "boost": null,
    "hue": 341,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dl/50-leon-bar/01.webp",
+    "/img/bars/dl/50-leon-bar/02.webp",
+    "/img/bars/dl/50-leon-bar/03.webp",
+    "/img/bars/dl/50-leon-bar/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://znews.vn/4-khong-gian-chill-ve-dem-thu-hut-gioi-tre-o-da-lat-post1044648.html",
     "https://www.foody.vn/lam-dong/bar-pub-phuc-vu-cocktail"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://toplist.vn/top-list/quan-bar-noi-tieng-nhat-o-lam-dong-22859.htm",
+    "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-da-lat-57085.htm",
+    "https://www.bachhoaxanh.com/kinh-nghiem-hay/cuc-chill-voi-9-quan-ruou-nen-ghe-khi-den-da-lat-1468321",
+    "https://vietnamtimes.thoidai.com.vn/da-lat-nightlife-the-best-bars-in-vietnams-mini-europe-39563.html"
+   ]
   },
   {
    "id": 51,
@@ -2004,14 +2260,24 @@
    "boost": null,
    "hue": 69,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dl/51-heyla-cocktail-bar/01.webp",
+    "/img/bars/dl/51-heyla-cocktail-bar/02.webp",
+    "/img/bars/dl/51-heyla-cocktail-bar/03.webp",
+    "/img/bars/dl/51-heyla-cocktail-bar/04.webp",
+    "/img/bars/dl/51-heyla-cocktail-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/lam-dong/bar-pub-phuc-vu-cocktail?vt=row",
     "https://mia.vn/cam-nang-du-lich/top-6-quan-bar-da-lat-gia-sieu-uu-dai-chi-tu-50-000-vnd-1571"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/lam-dong/bar-pub-phuc-vu-cocktail?vt=row",
+    "https://mia.vn/cam-nang-du-lich/top-6-quan-bar-da-lat-gia-sieu-uu-dai-chi-tu-50-000-vnd-1571"
+   ]
   },
   {
    "id": 52,
@@ -2040,14 +2306,22 @@
    "boost": null,
    "hue": 306,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dl/52-envy-lounge-bar/01.webp",
+    "/img/bars/dl/52-envy-lounge-bar/02.webp",
+    "/img/bars/dl/52-envy-lounge-bar/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/lam-dong/bar-pub-phu-hop-hen-ho",
     "https://www.foody.vn/lam-dong/bar-pub-phuc-vu-cocktail?vt=row"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/lam-dong/bar-pub-phu-hop-hen-ho",
+    "https://www.foody.vn/lam-dong/bar-pub-phuc-vu-cocktail?vt=row"
+   ]
   },
   {
    "id": 53,
@@ -2076,14 +2350,20 @@
    "boost": null,
    "hue": 253,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dl/53-rain-night-club/01.webp",
+    "/img/bars/dl/53-rain-night-club/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://toplist.vn/top-list/quan-bar-noi-tieng-nhat-o-lam-dong-22859.htm",
     "https://mytour.vn/en/blog/bai-viet/top-10-trendiest-bars-in-lam-dong-province.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://toplist.vn/top-list/quan-bar-noi-tieng-nhat-o-lam-dong-22859.htm"
+   ]
   },
   {
    "id": 54,
@@ -2112,14 +2392,25 @@
    "boost": null,
    "hue": 76,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dl/54-the-escape-bar-cafe/01.webp",
+    "/img/bars/dl/54-the-escape-bar-cafe/02.webp",
+    "/img/bars/dl/54-the-escape-bar-cafe/03.webp",
+    "/img/bars/dl/54-the-escape-bar-cafe/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://uk.hotels.com/go/vietnam/best-nightlife-da-lat",
     "https://wanderlog.com/place/details/1461946"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://tamtrinhcoffee.com/quan-cafe-acoustic-da-lat/",
+    "https://toplist.vn/top-list/quan-cafe-quan-ruou-nghe-nhac-acoustic-lang-man-nhat-tai-da-lat-33411.htm",
+    "https://www.vietfuntravel.com.vn/blog/buoi-toi-o-da-lat-nen-di-choi-o-dau.html",
+    "https://www.bachhoaxanh.com/kinh-nghiem-hay/10-quan-cafe-nhac-song-sieu-chat-khong-the-bo-qua-cua-da-lat-1401571"
+   ]
   },
   {
    "id": 55,
@@ -2148,13 +2439,22 @@
    "boost": null,
    "hue": 245,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/55-sky36/01.webp",
+    "/img/bars/dn/55-sky36/02.webp",
+    "/img/bars/dn/55-sky36/03.webp",
+    "/img/bars/dn/55-sky36/04.webp",
+    "/img/bars/dn/55-sky36/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://sunparadiseland.com/SunParadiseLandDaNang/tin-tuc/review-bar-sky-36-trai-nghiem-rooftop-view-cuc-dinh-23791",
     "https://therooftopguide.com/rooftop-bars-in-da-nang/sky36.html",
     "https://danangfantasticity.com/en/sky-bar-36"
+   ],
+   "photoSources": [
+    "https://therooftopguide.com/rooftop-bars-in-da-nang/sky36.html"
    ]
   },
   {
@@ -2184,14 +2484,26 @@
    "boost": null,
    "hue": 328,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/56-endless-summer-rooftop-bar-lounge/01.webp",
+    "/img/bars/dn/56-endless-summer-rooftop-bar-lounge/02.webp",
+    "/img/bars/dn/56-endless-summer-rooftop-bar-lounge/03.webp",
+    "/img/bars/dn/56-endless-summer-rooftop-bar-lounge/04.webp",
+    "/img/bars/dn/56-endless-summer-rooftop-bar-lounge/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://wink-hotels.com/?p=3557",
     "https://gtrip.vn/travel-blogs/rooftop-bars-in-da-nang"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.vietnam.vn/en/top-10-khach-san-ngam-phao-hoa-da-nang-2025-view-dep-nhat",
+    "https://www.haianriverfronthotel.com/post/top-outdoor-bars-with-the-best-view-of-dragon-bridge-in-danang",
+    "https://gtrip.vn/travel-blogs/rooftop-bars-in-da-nang",
+    "https://wink-hotels.com/?p=3557"
+   ]
   },
   {
    "id": 57,
@@ -2220,14 +2532,23 @@
    "boost": null,
    "hue": 298,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/57-horizon-bar/01.webp",
+    "/img/bars/dn/57-horizon-bar/02.webp",
+    "/img/bars/dn/57-horizon-bar/03.webp",
+    "/img/bars/dn/57-horizon-bar/04.webp",
+    "/img/bars/dn/57-horizon-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://therooftopguide.com/rooftop-bars-in-da-nang/horizon-bar.html",
     "https://mia.vn/cam-nang-du-lich/top-nhung-quan-bar-da-nang-duoc-gioi-tre-yeu-thich-nhat-11083"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://therooftopguide.com/rooftop-bars-in-da-nang/horizon-bar.html"
+   ]
   },
   {
    "id": 58,
@@ -2256,14 +2577,23 @@
    "boost": null,
    "hue": 86,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/58-brilliant-top-bar/01.webp",
+    "/img/bars/dn/58-brilliant-top-bar/02.webp",
+    "/img/bars/dn/58-brilliant-top-bar/03.webp",
+    "/img/bars/dn/58-brilliant-top-bar/04.webp",
+    "/img/bars/dn/58-brilliant-top-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://therooftopguide.com/rooftop-bars-in-da-nang/brilliant-top-bar.html",
     "https://vietnamairlines.com/at/en/useful-information/travel-guide/bar-in-danang"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://therooftopguide.com/rooftop-bars-in-da-nang/brilliant-top-bar.html"
+   ]
   },
   {
    "id": 59,
@@ -2292,14 +2622,23 @@
    "boost": null,
    "hue": 57,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/59-sky-21-bar-bistro/01.webp",
+    "/img/bars/dn/59-sky-21-bar-bistro/02.webp",
+    "/img/bars/dn/59-sky-21-bar-bistro/03.webp",
+    "/img/bars/dn/59-sky-21-bar-bistro/04.webp",
+    "/img/bars/dn/59-sky-21-bar-bistro/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.therooftopguide.com/rooftop-bars-in-da-nang/sky-21-bar-and-bistro.html",
     "https://www.pullman-danang.com/vi/kham-pha/kinh-nghiem-du-lich/bar-bien-da-nang/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.therooftopguide.com/rooftop-bars-in-da-nang/sky-21-bar-and-bistro.html"
+   ]
   },
   {
    "id": 60,
@@ -2328,14 +2667,23 @@
    "boost": null,
    "hue": 11,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/60-the-top-bar-a-la-carte-da-nang-beach/01.webp",
+    "/img/bars/dn/60-the-top-bar-a-la-carte-da-nang-beach/02.webp",
+    "/img/bars/dn/60-the-top-bar-a-la-carte-da-nang-beach/03.webp",
+    "/img/bars/dn/60-the-top-bar-a-la-carte-da-nang-beach/04.webp",
+    "/img/bars/dn/60-the-top-bar-a-la-carte-da-nang-beach/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://therooftopguide.com/rooftop-bars-in-da-nang/top-bar-at-a-la-carte-da-nang-beach.html",
     "https://danangfantasticity.com/en/bar-en/la-carte-rooftop-bar"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://therooftopguide.com/rooftop-bars-in-da-nang/top-bar-at-a-la-carte-da-nang-beach.html"
+   ]
   },
   {
    "id": 61,
@@ -2364,14 +2712,27 @@
    "boost": null,
    "hue": 218,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/61-new-phuong-dong/01.webp",
+    "/img/bars/dn/61-new-phuong-dong/02.webp",
+    "/img/bars/dn/61-new-phuong-dong/03.webp",
+    "/img/bars/dn/61-new-phuong-dong/04.webp",
+    "/img/bars/dn/61-new-phuong-dong/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinwonders.com/vi/wonderpedia/news/bar-da-nang-review-20-quan-bar-hot-va-kinh-nghiem-di-bar-chi-tiet/",
     "https://vietnam-concierge.webnode.vn/news-/da-nang-hoi-an/top-9-best-nightlife-in-da-nang/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://thanhnien.vn/da-nang-vu-truong-new-phuong-dong-cham-dut-kinh-doanh-sau-hon-20-nam-hoat-dong-185230309153515922.htm",
+    "https://tripi.vn/blog/vi/xep-hang/5-danh-gia-chat-luong-nhat-ve-new-phuong-dong-club-tripi",
+    "https://focusasiatravel.com/drinking-and-nightlife-in-da-nang-bars-clubs-and-craft-beer/",
+    "https://thanhnien.vn/vu-truong-new-phuong-dong-tags744557.html",
+    "https://www.charmingled.net/case/131.html"
+   ]
   },
   {
    "id": 62,
@@ -2400,14 +2761,25 @@
    "boost": null,
    "hue": 67,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/62-new-golden-pine-pub-club/01.webp",
+    "/img/bars/dn/62-new-golden-pine-pub-club/02.webp",
+    "/img/bars/dn/62-new-golden-pine-pub-club/03.webp",
+    "/img/bars/dn/62-new-golden-pine-pub-club/04.webp",
+    "/img/bars/dn/62-new-golden-pine-pub-club/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vietnamdiscovery.com/de/da-nang/top-lists/best-bars-in-danang/",
     "https://www.theblondtravels.com/nightlife-da-nang"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.9life.com.vn/products/new-golden-pine-pub-club-325-tran-hung-dao",
+    "https://www.nightlifevietnam.com/places/golden-pine-club-da-nang",
+    "https://vietnamdiscovery.com/de/da-nang/top-lists/best-bars-in-danang/"
+   ]
   },
   {
    "id": 63,
@@ -2436,14 +2808,24 @@
    "boost": null,
    "hue": 30,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/63-bamboo-2-bar/01.webp",
+    "/img/bars/dn/63-bamboo-2-bar/02.webp",
+    "/img/bars/dn/63-bamboo-2-bar/03.webp",
+    "/img/bars/dn/63-bamboo-2-bar/04.webp",
+    "/img/bars/dn/63-bamboo-2-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.bestpricetravel.com/travel-guide/bars-pubs-for-da-nang-nightlife-2663.html",
     "https://www.enprimeurclub.com/bars/bamboo-2-bar-thanh-khe"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.enprimeurclub.com/bars/bamboo-2-bar-thanh-khe",
+    "https://www.bestpricetravel.com/travel-guide/bars-pubs-for-da-nang-nightlife-2663.html"
+   ]
   },
   {
    "id": 64,
@@ -2472,7 +2854,13 @@
    "boost": null,
    "hue": 112,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/64-the-1920-s-lounge/01.webp",
+    "/img/bars/dn/64-the-1920-s-lounge/02.webp",
+    "/img/bars/dn/64-the-1920-s-lounge/03.webp",
+    "/img/bars/dn/64-the-1920-s-lounge/04.webp",
+    "/img/bars/dn/64-the-1920-s-lounge/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -2480,7 +2868,11 @@
     "https://danangairport.vn/news-detail-page/a-musical-journey-through-da-nang",
     "https://www.foody.vn/da-nang/the-1920-s-lounge"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vnguide.vn/restaurant/the-1920-s-lounge",
+    "https://danang.style/tourism/164"
+   ]
   },
   {
    "id": 65,
@@ -2509,14 +2901,23 @@
    "boost": null,
    "hue": 230,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/65-on-the-radio-bar/01.webp",
+    "/img/bars/dn/65-on-the-radio-bar/02.webp",
+    "/img/bars/dn/65-on-the-radio-bar/03.webp",
+    "/img/bars/dn/65-on-the-radio-bar/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://thesmartlocal.com/vietnam/8-bars-clubs-in-da-nang/",
     "https://vinpearl.com/vi/luu-ngay-16-bar-da-nang-cuc-hot-du-dua-cuc-chill-cung-hoi-ban"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://thesmartlocal.com/vietnam/8-bars-clubs-in-da-nang/",
+    "https://vinpearl.com/vi/luu-ngay-16-bar-da-nang-cuc-hot-du-dua-cuc-chill-cung-hoi-ban"
+   ]
   },
   {
    "id": 66,
@@ -2545,14 +2946,26 @@
    "boost": null,
    "hue": 175,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/66-te-cocktail-bar/01.webp",
+    "/img/bars/dn/66-te-cocktail-bar/02.webp",
+    "/img/bars/dn/66-te-cocktail-bar/03.webp",
+    "/img/bars/dn/66-te-cocktail-bar/04.webp",
+    "/img/bars/dn/66-te-cocktail-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://toplist.vn/top-list/quan-cocktail-bar-dang-cap-nhat-tai-da-nang-57706.htm",
     "https://vinpearl.com/vi/luu-ngay-16-bar-da-nang-cuc-hot-du-dua-cuc-chill-cung-hoi-ban"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://danang.style/tourism/172",
+    "https://danangleisure.com/te-bar-the-unique-and-familiar-bar-of-da-nangs-nightlife",
+    "https://toplist.vn/top-list/quan-cocktail-bar-dang-cap-nhat-tai-da-nang-57706.htm",
+    "https://vinpearl.com/vi/luu-ngay-16-bar-da-nang-cuc-hot-du-dua-cuc-chill-cung-hoi-ban"
+   ]
   },
   {
    "id": 67,
@@ -2581,14 +2994,22 @@
    "boost": null,
    "hue": 317,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/67-linger-cocktail-on-da-trolley/01.webp",
+    "/img/bars/dn/67-linger-cocktail-on-da-trolley/02.webp",
+    "/img/bars/dn/67-linger-cocktail-on-da-trolley/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-5-most-beautiful-hidden-bars-in-da-nang-mytour.html",
     "https://toplist.vn/top-list/quan-hidden-bar-dep-nhat-tai-da-nang-57707.htm"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://toplist.vn/top-list/quan-hidden-bar-dep-nhat-tai-da-nang-57707.htm",
+    "https://monandanang.vn/restaurant/g_ChIJATrb_PwZQjERO4AMR8kF2t0-linger-bespoke-cocktail-bar"
+   ]
   },
   {
    "id": 68,
@@ -2617,13 +3038,24 @@
    "boost": null,
    "hue": 142,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/68-united-bar-danang/01.webp",
+    "/img/bars/dn/68-united-bar-danang/02.webp",
+    "/img/bars/dn/68-united-bar-danang/03.webp",
+    "/img/bars/dn/68-united-bar-danang/04.webp",
+    "/img/bars/dn/68-united-bar-danang/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/top-5-quan-cocktail-bar-dang-cap-nhat-tai-da-nang.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://mindtrip.ai/restaurant/da-nang-vietnam/united-bar/re-MRl2iW0f",
+    "https://danang.style/tourism/699",
+    "https://restaurantguru.com/UNITED-BAR-Da-Nang"
+   ]
   },
   {
    "id": 69,
@@ -2652,14 +3084,21 @@
    "boost": null,
    "hue": 163,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/69-van-cocktail-bar/01.webp",
+    "/img/bars/dn/69-van-cocktail-bar/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/top-5-quan-cocktail-bar-dang-cap-nhat-tai-da-nang.html",
     "https://www.foody.vn/da-nang/dia-diem-phuc-vu-cocktail"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/da-nang/dia-diem-phuc-vu-cocktail",
+    "https://mytour.vn/vi/blog/bai-viet/top-5-quan-cocktail-bar-dang-cap-nhat-tai-da-nang.html"
+   ]
   },
   {
    "id": 70,
@@ -2688,14 +3127,23 @@
    "boost": null,
    "hue": 13,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/70-pavo-cuisine-mixology/01.webp",
+    "/img/bars/dn/70-pavo-cuisine-mixology/02.webp",
+    "/img/bars/dn/70-pavo-cuisine-mixology/03.webp",
+    "/img/bars/dn/70-pavo-cuisine-mixology/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinwonders.com/vi/wonderpedia/news/bar-da-nang-review-14-quan-bar-hot-va-kinh-nghiem-di-bar-chi-tiet/",
     "https://vinpearl.com/en/da-nang-bars-discover-the-top-hotspots-in-the-city"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vinpearl.com/en/da-nang-bars-discover-the-top-hotspots-in-the-city",
+    "https://www.tripadvisor.com.vn/Attraction_Review-g298085-d23619216-Reviews-Pavo_Bar_Cuisine_Mixology-Da_Nang.html"
+   ]
   },
   {
    "id": 71,
@@ -2724,14 +3172,23 @@
    "boost": null,
    "hue": 203,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/71-the-craftsman-cocktail-bar/01.webp",
+    "/img/bars/dn/71-the-craftsman-cocktail-bar/02.webp",
+    "/img/bars/dn/71-the-craftsman-cocktail-bar/03.webp",
+    "/img/bars/dn/71-the-craftsman-cocktail-bar/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://amthuchiendai.vn/en/best-bars-in-da-nang-a-personal-and-independent-guide/",
     "https://thesmartlocal.com/vietnam/8-bars-clubs-in-da-nang/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://thesmartlocal.com/vietnam/8-bars-clubs-in-da-nang/",
+    "https://amthuchiendai.vn/en/best-bars-in-da-nang-a-personal-and-independent-guide/"
+   ]
   },
   {
    "id": 72,
@@ -2760,14 +3217,27 @@
    "boost": null,
    "hue": 23,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/72-maia-beach-bar/01.webp",
+    "/img/bars/dn/72-maia-beach-bar/02.webp",
+    "/img/bars/dn/72-maia-beach-bar/03.webp",
+    "/img/bars/dn/72-maia-beach-bar/04.webp",
+    "/img/bars/dn/72-maia-beach-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.toplist.vn/top-list/quan-bar-bai-bien-da-nang-view-dep-nhac-hay-check-in-cuc-chat-66868.htm",
     "https://www.pullman-danang.com/vi/kham-pha/kinh-nghiem-du-lich/bar-bien-da-nang/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://mindtrip.ai/restaurant/my-vietnam/maia-beach-bar/re-Jxbnay3J",
+    "https://suongtuyet.com/dem-ghe-bai-bien-maia-beach-bar-da-nang.html",
+    "https://crystalbay.com/62-bat-mi-5-quan-bar-bo-bien-da-nang-dep-chill-het-nac-cho-hoi-me-check-in-n65059.html",
+    "https://lifeofdanang.com/places/maia",
+    "https://www.tripadvisor.com.vn/Restaurant_Review-g298085-d34342063-Reviews-Maia_Beach_Bar-Da_Nang.html"
+   ]
   },
   {
    "id": 73,
@@ -2796,14 +3266,25 @@
    "boost": null,
    "hue": 114,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/73-vive-oceane-beach-club/01.webp",
+    "/img/bars/dn/73-vive-oceane-beach-club/02.webp",
+    "/img/bars/dn/73-vive-oceane-beach-club/03.webp",
+    "/img/bars/dn/73-vive-oceane-beach-club/04.webp",
+    "/img/bars/dn/73-vive-oceane-beach-club/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.hospitalitynet.org/announcement/41009733/hyatt-regency-danang-resort-spa-unveils-vive-oceane-danangs-first-and-only-beach-club",
     "https://www.pullman-danang.com/vi/kham-pha/kinh-nghiem-du-lich/bar-bien-da-nang/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.herfavfood.com/blog/hyatt-regency-da-nang-review",
+    "https://www.hospitalitynet.org/announcement/41009733/hyatt-regency-danang-resort-spa-unveils-vive-oceane-danangs-first-and-only-beach-club",
+    "https://www.tripadvisor.com.vn/Restaurant_Review-g298085-d25457908-Reviews-Vive_Oceane_Beach_Club_Restaurant-Da_Nang.html"
+   ]
   },
   {
    "id": 74,
@@ -2832,14 +3313,27 @@
    "boost": null,
    "hue": 188,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/dn/74-esco-beach-bar-lounge-restaurant/01.webp",
+    "/img/bars/dn/74-esco-beach-bar-lounge-restaurant/02.webp",
+    "/img/bars/dn/74-esco-beach-bar-lounge-restaurant/03.webp",
+    "/img/bars/dn/74-esco-beach-bar-lounge-restaurant/04.webp",
+    "/img/bars/dn/74-esco-beach-bar-lounge-restaurant/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.pullman-danang.com/vi/kham-pha/kinh-nghiem-du-lich/bar-bien-da-nang/",
     "https://hopsa.io/en/attractions/vietnam,food-drink,esco-beach-bar-lounge-and-restaurant-73860bc5fc"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://khamphadanang.vn/dia-diem/esco-beach/",
+    "https://gtrip.vn/travel-blogs/da-nang-beach-clubs-and-bars",
+    "https://www.trip.com/moments/detail/da-nang-669-121196825/",
+    "https://www.pieceofcreative.com/fit/37824",
+    "https://suongtuyet.com/ghe-luoi-bean-bag-tai-esco-beach-da-nang.html"
+   ]
   },
   {
    "id": 75,
@@ -2868,14 +3362,23 @@
    "boost": null,
    "hue": 216,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/75-top-of-hanoi/01.webp",
+    "/img/bars/hn/75-top-of-hanoi/02.webp",
+    "/img/bars/hn/75-top-of-hanoi/03.webp",
+    "/img/bars/hn/75-top-of-hanoi/04.webp",
+    "/img/bars/hn/75-top-of-hanoi/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://lottehotel.com/hanoi-hotel/en/dining/restaurant-top-of-hanoi.html",
     "https://therooftopguide.com/rooftop-bars-in-hanoi/top-of-hanoi-at-lotte-hotel-hanoi.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://therooftopguide.com/rooftop-bars-in-hanoi/top-of-hanoi-at-lotte-hotel-hanoi.html"
+   ]
   },
   {
    "id": 76,
@@ -2904,14 +3407,23 @@
    "boost": null,
    "hue": 3,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/76-lighthouse-sky-bar/01.webp",
+    "/img/bars/hn/76-lighthouse-sky-bar/02.webp",
+    "/img/bars/hn/76-lighthouse-sky-bar/03.webp",
+    "/img/bars/hn/76-lighthouse-sky-bar/04.webp",
+    "/img/bars/hn/76-lighthouse-sky-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://therooftopguide.com/rooftop-bars-in-hanoi/lighthouse-sky-bar.html",
     "https://www.vietnamairlines.com/en/useful-information/travel-guide/hanoi-rooftop-bar"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://therooftopguide.com/rooftop-bars-in-hanoi/lighthouse-sky-bar.html"
+   ]
   },
   {
    "id": 77,
@@ -2940,14 +3452,23 @@
    "boost": null,
    "hue": 256,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/77-moonlight-sky-bar/01.webp",
+    "/img/bars/hn/77-moonlight-sky-bar/02.webp",
+    "/img/bars/hn/77-moonlight-sky-bar/03.webp",
+    "/img/bars/hn/77-moonlight-sky-bar/04.webp",
+    "/img/bars/hn/77-moonlight-sky-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://therooftopguide.com/rooftop-bars-in-hanoi/moonlight-sky-bar.html",
     "https://www.vietnamairlines.com/en/useful-information/travel-guide/hanoi-rooftop-bar"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://therooftopguide.com/rooftop-bars-in-hanoi/moonlight-sky-bar.html"
+   ]
   },
   {
    "id": 78,
@@ -2976,14 +3497,26 @@
    "boost": null,
    "hue": 134,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/78-the-summit-pan-pacific-hanoi/01.webp",
+    "/img/bars/hn/78-the-summit-pan-pacific-hanoi/02.webp",
+    "/img/bars/hn/78-the-summit-pan-pacific-hanoi/03.webp",
+    "/img/bars/hn/78-the-summit-pan-pacific-hanoi/04.webp",
+    "/img/bars/hn/78-the-summit-pan-pacific-hanoi/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://therooftopguide.com/rooftop-bars-in-hanoi/summit-lounge-at-pan-pacific-hanoi.html",
     "https://www.silverkris.com/location/the-summit-at-pan-pacific-hanoi/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vietnam.travel/things-to-do/7-stunning-rooftop-bars-vietnam",
+    "https://www.locationscout.net/vietnam/19205-hanoi-skyline-from-summit-lounge",
+    "https://www.therooftopguide.com/rooftop-bars-in-hanoi/summit-lounge-at-pan-pacific-hanoi.html",
+    "https://www.silverkris.com/location/the-summit-at-pan-pacific-hanoi/"
+   ]
   },
   {
    "id": 79,
@@ -3012,14 +3545,23 @@
    "boost": null,
    "hue": 144,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/79-cloud-sky-bar/01.webp",
+    "/img/bars/hn/79-cloud-sky-bar/02.webp",
+    "/img/bars/hn/79-cloud-sky-bar/03.webp",
+    "/img/bars/hn/79-cloud-sky-bar/04.webp",
+    "/img/bars/hn/79-cloud-sky-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://therooftopguide.com/rooftop-bars-in-hanoi/cloud-sky-bar.html",
     "https://evendo.com/locations/vietnam/northeast/bar/cloud-sky-bar-hanoi"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://therooftopguide.com/rooftop-bars-in-hanoi/cloud-sky-bar.html"
+   ]
   },
   {
    "id": 80,
@@ -3048,14 +3590,23 @@
    "boost": null,
    "hue": 169,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/80-ne-cocktail-bar/01.webp",
+    "/img/bars/hn/80-ne-cocktail-bar/02.webp",
+    "/img/bars/hn/80-ne-cocktail-bar/03.webp",
+    "/img/bars/hn/80-ne-cocktail-bar/04.webp",
+    "/img/bars/hn/80-ne-cocktail-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://theworlds50best.com/discovery/Establishments/Vietnam/Hanoi/Nê-Cocktail-Bar.html",
     "https://rustycompass.com/vietnam-travel-guide-233/hanoi-5/nightlife-17/ne-cocktail-bar-hanoi-1381"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://rustycompass.com/vietnam-travel-guide-233/hanoi-5/nightlife-17/ne-cocktail-bar-hanoi-1381"
+   ]
   },
   {
    "id": 81,
@@ -3084,14 +3635,24 @@
    "boost": null,
    "hue": 299,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/81-the-haflington/01.webp",
+    "/img/bars/hn/81-the-haflington/02.webp",
+    "/img/bars/hn/81-the-haflington/03.webp",
+    "/img/bars/hn/81-the-haflington/04.webp",
+    "/img/bars/hn/81-the-haflington/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mapstr.com/place/XC1C1YJ4Ye",
     "https://jackfruitadventure.com/best-cocktail-bar-in-hanoi/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://jackfruitadventure.com/best-cocktail-bar-in-hanoi/",
+    "https://mapstr.com/place/XC1C1YJ4Ye"
+   ]
   },
   {
    "id": 82,
@@ -3120,14 +3681,26 @@
    "boost": null,
    "hue": 161,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/82-workshop14/01.webp",
+    "/img/bars/hn/82-workshop14/02.webp",
+    "/img/bars/hn/82-workshop14/03.webp",
+    "/img/bars/hn/82-workshop14/04.webp",
+    "/img/bars/hn/82-workshop14/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.theworlds50best.com/stories/News/workshop14-hanoi-asias-50-best-bars-2025.html",
     "https://joinpearl.co/bars/hanoi/workshop14"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://au.pinterest.com/pin/softer-volumes-on-instagram-workshop14-is-a-bar-in-hanoi-that-merges-traditional-vietnamese-spatial-principles-with-contemporary-hospitality-the-veranda-serv-in-2025--13933080092185531/",
+    "https://au.pinterest.com/pin/softer-volumes-on-instagram-workshop14-is-a-bar-in-hanoi-that-merges-traditional-vietnamese-spatial-principles-with-contemporary-hospitality-the-veranda-serv-in-2025--12525705208711299/",
+    "https://joinpearl.co/bars/hanoi/workshop14",
+    "https://www.trip.com/restaurant/vietnam/hanoi/detail/workshop14-152768423/"
+   ]
   },
   {
    "id": 83,
@@ -3156,14 +3729,24 @@
    "boost": null,
    "hue": 170,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/83-the-black-sheep/01.webp",
+    "/img/bars/hn/83-the-black-sheep/02.webp",
+    "/img/bars/hn/83-the-black-sheep/03.webp",
+    "/img/bars/hn/83-the-black-sheep/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/cocktail-bars-in-hanoi/",
     "https://vinpearl.com/en/cocktail-bars-in-hanoi"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.9life.com.vn/products/the-black-sheep-cocktail-theatre-28-tong-duy-tan",
+    "https://noithatkendesign.vn/review-quan-bar-the-black-sheep.html",
+    "https://www.tripadvisor.com.vn/Attraction_Review-g293924-d19517231-Reviews-The_Black_Sheep_Cocktail_Theatre-Hanoi.html"
+   ]
   },
   {
    "id": 84,
@@ -3192,14 +3775,24 @@
    "boost": null,
    "hue": 245,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/84-polite-co/01.webp",
+    "/img/bars/hn/84-polite-co/02.webp",
+    "/img/bars/hn/84-polite-co/03.webp",
+    "/img/bars/hn/84-polite-co/04.webp",
+    "/img/bars/hn/84-polite-co/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mia.vn/cam-nang-du-lich/chill-cung-loat-quan-pub-ha-noi-co-khong-gian-cuc-an-tuong-8819",
     "https://www.esquireindia.co.in/amp/story/food-and-drinks/where-to-drink/5-best-cocktail-bars-in-hanoi-vietnam"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.tripadvisor.com.vn/Restaurant_Review-g293924-d4931772-Reviews-Polite_Co-Hanoi.html",
+    "https://mia.vn/cam-nang-du-lich/chill-cung-loat-quan-pub-ha-noi-co-khong-gian-cuc-an-tuong-8819"
+   ]
   },
   {
    "id": 85,
@@ -3228,14 +3821,24 @@
    "boost": null,
    "hue": 240,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/85-gallery-bespoke-cocktail-bar/01.webp",
+    "/img/bars/hn/85-gallery-bespoke-cocktail-bar/02.webp",
+    "/img/bars/hn/85-gallery-bespoke-cocktail-bar/03.webp",
+    "/img/bars/hn/85-gallery-bespoke-cocktail-bar/04.webp",
+    "/img/bars/hn/85-gallery-bespoke-cocktail-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinpearl.com/en/cocktail-bars-in-hanoi",
     "https://sanhotelseries.com/best-cocktail-bars-hanoi/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.asia-bars.com/2019/08/gallery-bespoke-cocktail-bar-hanoi/",
+    "https://sanhotelseries.com/best-cocktail-bars-hanoi/"
+   ]
   },
   {
    "id": 86,
@@ -3264,14 +3867,21 @@
    "boost": null,
    "hue": 61,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/86-bee-znees/01.webp",
+    "/img/bars/hn/86-bee-znees/02.webp",
+    "/img/bars/hn/86-bee-znees/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vietcetera.com/en/vietnam-bar-week-2023-9-hidden-bars-for-unparalleled-experiences",
     "https://vinpearl.com/en/cocktail-bars-in-hanoi"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.tripadvisor.com.vn/Attraction_Review-g293924-d16698522-Reviews-Bee_znees_Speakeasy_Bar-Hanoi.html"
+   ]
   },
   {
    "id": 87,
@@ -3300,14 +3910,26 @@
    "boost": null,
    "hue": 168,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/87-the-alchemist-cocktail-bar/01.webp",
+    "/img/bars/hn/87-the-alchemist-cocktail-bar/02.webp",
+    "/img/bars/hn/87-the-alchemist-cocktail-bar/03.webp",
+    "/img/bars/hn/87-the-alchemist-cocktail-bar/04.webp",
+    "/img/bars/hn/87-the-alchemist-cocktail-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://tablejourney.com/vietnam/hanoi/wine-bars/the-alchemist-bar/",
     "https://vinwonders.com/en/wonderpedia/news/bars-in-hanoi-bars-pubs/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vietcetera.com/vn/dem-noel-di-hen-ho-o-dau-tai-ha-noi",
+    "https://mindtrip.ai/restaurant/hanoi-vietnam/alchemist-cocktail-bar/re-FK8eTVgq",
+    "https://alohavietnam.net/hanoi-night-activities-top-bars-clubs-and-night-markets.html",
+    "https://noithatkendesign.vn/review-bar-the-alchemist.html"
+   ]
   },
   {
    "id": 88,
@@ -3336,14 +3958,26 @@
    "boost": null,
    "hue": 37,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/88-angelina-sofitel-legend-metropole/01.webp",
+    "/img/bars/hn/88-angelina-sofitel-legend-metropole/02.webp",
+    "/img/bars/hn/88-angelina-sofitel-legend-metropole/03.webp",
+    "/img/bars/hn/88-angelina-sofitel-legend-metropole/04.webp",
+    "/img/bars/hn/88-angelina-sofitel-legend-metropole/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.sofitel-legend-metropole-hanoi.com/news-press/whiskey-bar-hanoi/",
     "https://www.journaldespalaces.com/pressrelease-58791-metropole-hanoi-s-angelina-introduces-personality-inspired-cocktail-menu.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.cntraveler.com/story/gold-list-top-hotels-and-resorts-in-the-world",
+    "https://peaklife.in/metropole-hanoi-debuts-new-angelina-restaurant/",
+    "https://www.everydayfoodilove.co/2018/10/metropole-hanois-angelina-cocktail-bar.html",
+    "https://restaurantandbardesignawards.com/entry/7481"
+   ]
   },
   {
    "id": 89,
@@ -3372,14 +4006,21 @@
    "boost": null,
    "hue": 86,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/89-le-club-bar-sofitel-legend-metropole/01.webp",
+    "/img/bars/hn/89-le-club-bar-sofitel-legend-metropole/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://sofitel-legend-metropole-hanoi.com/dining/le-club-bar",
     "https://www.lonelyplanet.com/articles/best-jazz-bars-hanoi"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://wowweekend.vn/kham-pha-giac-mo-anh-sang-huyen-ao-va-mua-le-hoi-dieu-ky-tai-metropole-ha-noi.html",
+    "https://bkkhotel.hatenablog.com/entry/2019/12/30/110514"
+   ]
   },
   {
    "id": 90,
@@ -3408,14 +4049,23 @@
    "boost": null,
    "hue": 26,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/90-binh-minh-jazz-club/01.webp",
+    "/img/bars/hn/90-binh-minh-jazz-club/02.webp",
+    "/img/bars/hn/90-binh-minh-jazz-club/03.webp",
+    "/img/bars/hn/90-binh-minh-jazz-club/04.webp",
+    "/img/bars/hn/90-binh-minh-jazz-club/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://minhjazzvietnam.com/2023/07/06/opening-binh-minh-jazz-club/",
     "https://www.lonelyplanet.com/articles/best-jazz-bars-hanoi"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://minhjazzvietnam.com/2023/07/06/opening-binh-minh-jazz-club/"
+   ]
   },
   {
    "id": 91,
@@ -3444,14 +4094,27 @@
    "boost": null,
    "hue": 313,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/91-tadioto/01.webp",
+    "/img/bars/hn/91-tadioto/02.webp",
+    "/img/bars/hn/91-tadioto/03.webp",
+    "/img/bars/hn/91-tadioto/04.webp",
+    "/img/bars/hn/91-tadioto/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://tablejourney.com/vietnam/hanoi/nightlife/tadioto-live-music/",
     "https://chaohanoi.com/event-location/tadioto-hoan-kiem"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vieclam24h.vn/nghe-nghiep/ki-ot-vui-ve/chill-cuc-da-voi-top-12-quan-bar-ha-noi-cho-dan-van-phong",
+    "https://silverkris.singaporeair.com/inspiration/food-drink/coffee-tea/best-cafes-places-coffee-hanoi/",
+    "https://ktds.vn/quan-bar-caphe-tadioto-noi-de-ta-tua-lung-vao-qua-khu",
+    "https://www.foody.vn/ha-noi/tadioto-bar",
+    "https://bustler.net/news/3094/vu-242-n-the-garden-by-bureau-a-for-duc-nguyen-qui-s-tadioto-in-hanoi-vietnam"
+   ]
   },
   {
    "id": 92,
@@ -3480,14 +4143,27 @@
    "boost": null,
    "hue": 297,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/92-1900-le-theatre/01.webp",
+    "/img/bars/hn/92-1900-le-theatre/02.webp",
+    "/img/bars/hn/92-1900-le-theatre/03.webp",
+    "/img/bars/hn/92-1900-le-theatre/04.webp",
+    "/img/bars/hn/92-1900-le-theatre/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://djmag.com/top100clubs/2024/44/1900-le-theatre",
     "https://tablejourney.com/vietnam/hanoi/nightlife/1900-le-theatre/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://tatinta.com/en/diem-den/1900-le-theatre-mot-cau-lac-bo-dem-cho-nhung-nguoi-hoai-co/4317",
+    "https://kenh14.vn/son-tung-m-tp-cung-triple-d-lan-dau-bieu-dien-remix-lac-troi-trong-su-kien-edm-hoanh-trang-20170215194737631.chn",
+    "https://justfly.vn/attractions/vietnam/hanoi/1900-le-theatre-hoan-kiem",
+    "https://vietnamtimes.thoidai.com.vn/vietnamese-club-enters-top-46-of-the-worlds-list-by-dj-mag-43142.html",
+    "https://djmag.com/top100clubs/2024/44/1900-le-theatre"
+   ]
   },
   {
    "id": 93,
@@ -3516,14 +4192,26 @@
    "boost": null,
    "hue": 274,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/93-hero-club/01.webp",
+    "/img/bars/hn/93-hero-club/02.webp",
+    "/img/bars/hn/93-hero-club/03.webp",
+    "/img/bars/hn/93-hero-club/04.webp",
+    "/img/bars/hn/93-hero-club/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.arrivalguides.com/en/Travelguide/Hanoi/barsandnightlife/hero-club-hanoi-111381",
     "https://mytour.vn/vi/blog/bai-viet/top-10-quan-pub-noi-tieng-o-ha-noi.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.9life.com.vn/products/hero-club-42m-yen-phu",
+    "https://vietnamnightlife.com/ko/hero-club-268-16.html",
+    "https://www.arrivalguides.com/en/Travelguide/Hanoi/barsandnightlife/hero-club-hanoi-111381",
+    "https://mytour.vn/vi/blog/bai-viet/top-10-quan-pub-noi-tieng-o-ha-noi.html"
+   ]
   },
   {
    "id": 94,
@@ -3552,14 +4240,24 @@
    "boost": null,
    "hue": 257,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/94-standing-bar/01.webp",
+    "/img/bars/hn/94-standing-bar/02.webp",
+    "/img/bars/hn/94-standing-bar/03.webp",
+    "/img/bars/hn/94-standing-bar/04.webp",
+    "/img/bars/hn/94-standing-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.beerandbrewing.com/love-handles-standing-bar",
     "https://vietnamnews.vn/sunday/restaurant-review/1402815/still-standing-bar-brings-craft-beer-and-bites-galore.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.beerandbrewing.com/love-handles-standing-bar",
+    "https://vietnamnews.vn/sunday/restaurant-review/1402815/still-standing-bar-brings-craft-beer-and-bites-galore.html"
+   ]
   },
   {
    "id": 95,
@@ -3588,14 +4286,26 @@
    "boost": null,
    "hue": 276,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hn/95-turtle-lake-brewing-company/01.webp",
+    "/img/bars/hn/95-turtle-lake-brewing-company/02.webp",
+    "/img/bars/hn/95-turtle-lake-brewing-company/03.webp",
+    "/img/bars/hn/95-turtle-lake-brewing-company/04.webp",
+    "/img/bars/hn/95-turtle-lake-brewing-company/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://sanhotelseries.com/craft-beer-bars-in-hanoi/",
     "https://vietcetera.com/en/turtle-lake-brewing-co-vietnam-craft-beer-built-around-community"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.vietnamonline.com/destination/hanoi/tay-ho/tay-ho-nightlife.html",
+    "https://untappd.com/b/turtle-lake-brewing-company-hanoi-ipa/3565369",
+    "https://vietcetera.com/en/turtle-lake-brewing-co-vietnam-craft-beer-built-around-community",
+    "https://sanhotelseries.com/craft-beer-bars-in-hanoi/"
+   ]
   },
   {
    "id": 96,
@@ -3624,7 +4334,10 @@
    "boost": null,
    "hue": 328,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hp/96-endless-summer-rooftop-bar-lounge/01.webp",
+    "/img/bars/hp/96-endless-summer-rooftop-bar-lounge/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -3632,7 +4345,10 @@
     "https://www.hyatt.com/unscripted-by-hyatt/en-US/vn105-wink-hai-phong-centre/dining",
     "https://savourblackbookasia.com/wink-hai-phong-centre-unscripted-by-hyatt/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://wink-hotels.com/?p=6053"
+   ]
   },
   {
    "id": 97,
@@ -3661,7 +4377,13 @@
    "boost": null,
    "hue": 130,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hp/97-atelier-cocktail-bar/01.webp",
+    "/img/bars/hp/97-atelier-cocktail-bar/02.webp",
+    "/img/bars/hp/97-atelier-cocktail-bar/03.webp",
+    "/img/bars/hp/97-atelier-cocktail-bar/04.webp",
+    "/img/bars/hp/97-atelier-cocktail-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -3669,7 +4391,11 @@
     "https://www.toplist.vn/top-list/quan-cocktail-hai-phong-hot-trend-gioi-tre-khong-the-bo-lo-66768.htm",
     "https://wink-hotels.com/?p=6053"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vnguide.vn/restaurant/atelier-cocktail-bar",
+    "https://wink-hotels.com/?p=6053"
+   ]
   },
   {
    "id": 98,
@@ -3698,13 +4424,23 @@
    "boost": null,
    "hue": 228,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hp/98-eyeconic-cocktail-club/01.webp",
+    "/img/bars/hp/98-eyeconic-cocktail-club/02.webp",
+    "/img/bars/hp/98-eyeconic-cocktail-club/03.webp",
+    "/img/bars/hp/98-eyeconic-cocktail-club/04.webp",
+    "/img/bars/hp/98-eyeconic-cocktail-club/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinwonders.com/vi/wonderpedia/news/hai-phong-ve-dem/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vietnamnightlife.com/eyeconic-cocktails-club-hai-phong-895-16.html",
+    "https://www.tripadvisor.com.vn/Attraction_Review-g303944-d27687845-Reviews-Eyeconic_Cocktail_Club-Hai_Phong.html"
+   ]
   },
   {
    "id": 99,
@@ -3733,14 +4469,22 @@
    "boost": null,
    "hue": 306,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hp/99-eywa-cocktail-eatery/01.webp",
+    "/img/bars/hp/99-eywa-cocktail-eatery/02.webp",
+    "/img/bars/hp/99-eywa-cocktail-eatery/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.toplist.vn/top-list/quan-cocktail-hai-phong-hot-trend-gioi-tre-khong-the-bo-lo-66768.htm",
     "https://wink-hotels.com/?p=6053"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://haiphongbook.com/dia-diem/quan-eywa-cocktail-eatery",
+    "https://wink-hotels.com/?p=6053"
+   ]
   },
   {
    "id": 100,
@@ -3769,14 +4513,20 @@
    "boost": null,
    "hue": 48,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hp/100-insider-cocktail-bar/01.webp",
+    "/img/bars/hp/100-insider-cocktail-bar/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.toplist.vn/top-list/quan-cocktail-hai-phong-hot-trend-gioi-tre-khong-the-bo-lo-66768.htm",
     "https://wink-hotels.com/?p=6053"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://wink-hotels.com/?p=6053"
+   ]
   },
   {
    "id": 101,
@@ -3840,14 +4590,24 @@
    "boost": null,
    "hue": 212,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hp/102-t-pub-craft-beer-station/01.webp",
+    "/img/bars/hp/102-t-pub-craft-beer-station/02.webp",
+    "/img/bars/hp/102-t-pub-craft-beer-station/03.webp",
+    "/img/bars/hp/102-t-pub-craft-beer-station/04.webp",
+    "/img/bars/hp/102-t-pub-craft-beer-station/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/top-7-most-famous-bars-in-hai-phong-mytour",
     "https://www.kupi.com/en-ae/explore/vietnam/haiphong/t-pub-craft-beer-station"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vnguide.vn/restaurant/t-pub-craft-beer-station",
+    "https://mytour.vn/vi/blog/bai-viet/top-7-most-famous-bars-in-hai-phong-mytour"
+   ]
   },
   {
    "id": 103,
@@ -3876,14 +4636,24 @@
    "boost": null,
    "hue": 298,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hp/103-buzz-pub/01.webp",
+    "/img/bars/hp/103-buzz-pub/02.webp",
+    "/img/bars/hp/103-buzz-pub/03.webp",
+    "/img/bars/hp/103-buzz-pub/04.webp",
+    "/img/bars/hp/103-buzz-pub/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-7-most-famous-bars-in-hai-phong-mytour.html",
     "https://kupi.com/en/explore/vietnam/haiphong/buzz-pub"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vnguide.vn/restaurant/buzz-pub-van-cao-hai-phong",
+    "https://mytour.vn/en/blog/bai-viet/top-7-most-famous-bars-in-hai-phong-mytour.html"
+   ]
   },
   {
    "id": 104,
@@ -3912,14 +4682,26 @@
    "boost": null,
    "hue": 180,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hp/104-fleur-d-or-maison-bar/01.webp",
+    "/img/bars/hp/104-fleur-d-or-maison-bar/02.webp",
+    "/img/bars/hp/104-fleur-d-or-maison-bar/03.webp",
+    "/img/bars/hp/104-fleur-d-or-maison-bar/04.webp",
+    "/img/bars/hp/104-fleur-d-or-maison-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://toplist.vn/top-list/quan-bar-noi-tieng-nhat-o-hai-phong-14553.htm",
     "https://traveltriangle.com/blog/hai-phong-nightlife/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://list.vn/quan-bar-noi-tieng-nhat-tai-hai-phong-14553.htm",
+    "https://www.9life.com.vn/products/fleur-d-or-maison-bar-50-dinh-tien-hoang",
+    "https://haiphongbook.com/dia-diem/fleur-dor-space-x",
+    "https://toplist.vn/top-list/quan-bar-noi-tieng-nhat-o-hai-phong-14553.htm"
+   ]
   },
   {
    "id": 106,
@@ -3948,13 +4730,19 @@
    "boost": null,
    "hue": 293,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hp/106-royal-disco/01.webp",
+    "/img/bars/hp/106-royal-disco/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/indulge-in-the-vibrant-nightlife-scene-at-9-top-notch-bars-in-hai-phong-mytour.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://mytour.vn/en/blog/bai-viet/indulge-in-the-vibrant-nightlife-scene-at-9-top-notch-bars-in-hai-phong-mytour.html"
+   ]
   },
   {
    "id": 107,
@@ -3983,13 +4771,19 @@
    "boost": null,
    "hue": 136,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hp/107-guzzle-pub-cafe/01.webp",
+    "/img/bars/hp/107-guzzle-pub-cafe/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/hai-phong/bar-pub"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/hai-phong/bar-pub"
+   ]
   },
   {
    "id": 108,
@@ -4018,13 +4812,19 @@
    "boost": null,
    "hue": 213,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hp/108-chill-pub/01.webp",
+    "/img/bars/hp/108-chill-pub/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/hai-phong/bar-pub"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/hai-phong/bar-pub"
+   ]
   },
   {
    "id": 109,
@@ -4053,14 +4853,23 @@
    "boost": null,
    "hue": 121,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hp/109-oasis-bar-cat-ba/01.webp",
+    "/img/bars/hp/109-oasis-bar-cat-ba/02.webp",
+    "/img/bars/hp/109-oasis-bar-cat-ba/03.webp",
+    "/img/bars/hp/109-oasis-bar-cat-ba/04.webp",
+    "/img/bars/hp/109-oasis-bar-cat-ba/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://sunparadiseland.com/SunParadiseLandCatBa/tin-tuc/oasis-bar-cat-ba-dia-diem-an-choi-quen-loi-ve-2025-7692",
     "https://www.fodors.com/world/asia/vietnam/halong-bay-and-north-central-vietnam/places/cat-ba-island/things-to-do/nightlife"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://sunparadiseland.com/SunParadiseLandCatBa/tin-tuc/oasis-bar-cat-ba-dia-diem-an-choi-quen-loi-ve-2025-7692"
+   ]
   },
   {
    "id": 110,
@@ -4089,13 +4898,25 @@
    "boost": null,
    "hue": 311,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hp/110-cat-ba-sky-bar/01.webp",
+    "/img/bars/hp/110-cat-ba-sky-bar/02.webp",
+    "/img/bars/hp/110-cat-ba-sky-bar/03.webp",
+    "/img/bars/hp/110-cat-ba-sky-bar/04.webp",
+    "/img/bars/hp/110-cat-ba-sky-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/hai-phong/bar-pub-phong-cach-viet-nam"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://flamingoholdings.vn/flamingo-grand-cat-ba-kien-truc-xanh-doc-dao-tai-flamingo-cat-ba-resorts-d168",
+    "https://www.tripadvisor.de/Attraction_Review-g17674168-d28654462-Reviews-Mile_High_Club_Rooftop_Bar-Tran_Chau_Cat_Ba_Hai_Phong.html",
+    "https://www.tripadvisor.co.uk/Attraction_Review-g17674168-d28654462-Reviews-Mile_High_Club_Rooftop_Bar-Tran_Chau_Cat_Ba_Hai_Phong.html",
+    "https://www.foody.vn/hai-phong/bar-pub-phong-cach-viet-nam"
+   ]
   },
   {
    "id": 111,
@@ -4124,7 +4945,13 @@
    "boost": null,
    "hue": 185,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hue/111-dong-bar/01.webp",
+    "/img/bars/hue/111-dong-bar/02.webp",
+    "/img/bars/hue/111-dong-bar/03.webp",
+    "/img/bars/hue/111-dong-bar/04.webp",
+    "/img/bars/hue/111-dong-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -4132,7 +4959,12 @@
     "https://vinwonders.com/en/wonderpedia/news/hue-bars/",
     "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://khamphahue.com.vn/Du-lich/Chi-tiet/tid/DONG-BAR-Unlock-the-vibes.html/pid/284/cid/372",
+    "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html",
+    "https://www.tripadvisor.com.vn/Attraction_Review-g293926-d15232601-Reviews-Dong_Bar_Unlock_The_Vibes-Hue_Thua_Thien_Hue_Province.html"
+   ]
   },
   {
    "id": 112,
@@ -4161,14 +4993,21 @@
    "boost": null,
    "hue": 46,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hue/112-brown-eyes-bar/01.webp",
+    "/img/bars/hue/112-brown-eyes-bar/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinpearl.com/en/bar-in-hue",
     "https://localvietnam.com/hue/hue-nightlife-things-to-do-at-night/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vnguide.vn/restaurant/brown-eyes-bar",
+    "https://www.foody.vn/hue/brown-eyes-bar"
+   ]
   },
   {
    "id": 113,
@@ -4197,14 +5036,25 @@
    "boost": null,
    "hue": 272,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hue/113-dmz-bar-restaurant/01.webp",
+    "/img/bars/hue/113-dmz-bar-restaurant/02.webp",
+    "/img/bars/hue/113-dmz-bar-restaurant/03.webp",
+    "/img/bars/hue/113-dmz-bar-restaurant/04.webp",
+    "/img/bars/hue/113-dmz-bar-restaurant/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinpearl.com/en/bar-in-hue",
     "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vinpearl.com/en/bar-in-hue",
+    "https://www.tripadvisor.com.vn/Restaurant_Review-g293926-d1738361-Reviews-Dmz_Bar_Restaurant-Hue_Thua_Thien_Hue_Province.html",
+    "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html"
+   ]
   },
   {
    "id": 114,
@@ -4233,14 +5083,21 @@
    "boost": null,
    "hue": 275,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hue/114-secret-lounge-hue/01.webp",
+    "/img/bars/hue/114-secret-lounge-hue/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinpearl.com/en/bar-in-hue",
     "https://vinwonders.com/en/wonderpedia/news/hue-bars/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vnguide.vn/restaurant/secret-lounge-hue",
+    "https://vinpearl.com/en/bar-in-hue"
+   ]
   },
   {
    "id": 115,
@@ -4269,14 +5126,23 @@
    "boost": null,
    "hue": 120,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hue/115-imperial-craft-bia-brewpub/01.webp",
+    "/img/bars/hue/115-imperial-craft-bia-brewpub/02.webp",
+    "/img/bars/hue/115-imperial-craft-bia-brewpub/03.webp",
+    "/img/bars/hue/115-imperial-craft-bia-brewpub/04.webp",
+    "/img/bars/hue/115-imperial-craft-bia-brewpub/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/hue-bars/",
     "https://www.kupi.com/en-ae/explore/vietnam/hue/imperial-craft-bia-brewpub"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.tripadvisor.com.vn/Restaurant_Review-g293926-d17820052-Reviews-Imperial_Craft_Bia_Brewpub-Hue_Thua_Thien_Hue_Province.html"
+   ]
   },
   {
    "id": 116,
@@ -4305,14 +5171,21 @@
    "boost": null,
    "hue": 169,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hue/116-barlab/01.webp",
+    "/img/bars/hue/116-barlab/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/hue-bars/",
     "https://vinpearl.com/en/bar-in-hue"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vnguide.vn/restaurant/barlab-rooftop",
+    "https://vinpearl.com/en/bar-in-hue"
+   ]
   },
   {
    "id": 117,
@@ -4341,14 +5214,24 @@
    "boost": null,
    "hue": 56,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hue/117-century-pub-beer-garden/01.webp",
+    "/img/bars/hue/117-century-pub-beer-garden/02.webp",
+    "/img/bars/hue/117-century-pub-beer-garden/03.webp",
+    "/img/bars/hue/117-century-pub-beer-garden/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-9-best-bars-and-pubs-on-hue-s-western-street-mytour.html",
     "https://www.foody.vn/hue/bar-pub"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://khamphahue.com.vn/Du-lich/Chi-tiet/tid/Century-Pub-Beer-Garden.html/pid/11840/cid/372",
+    "https://danhsach.vn/hue/dia-diem-uy-tin/century-beer-garden-49-le-loi-thanh-pho-hue-313036343264.html",
+    "https://www.foody.vn/hue/bar-pub"
+   ]
   },
   {
    "id": 118,
@@ -4377,14 +5260,24 @@
    "boost": null,
    "hue": 65,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hue/118-asta-the-club/01.webp",
+    "/img/bars/hue/118-asta-the-club/02.webp",
+    "/img/bars/hue/118-asta-the-club/03.webp",
+    "/img/bars/hue/118-asta-the-club/04.webp",
+    "/img/bars/hue/118-asta-the-club/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html",
     "https://www.foody.vn/hue/bar-pub"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.tripadvisor.com.vn/Attraction_Review-g293926-d7950962-Reviews-Asta_The_Club-Hue_Thua_Thien_Hue_Province.html",
+    "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html"
+   ]
   },
   {
    "id": 119,
@@ -4413,14 +5306,21 @@
    "boost": null,
    "hue": 208,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hue/119-xa-ban-bar/01.webp",
+    "/img/bars/hue/119-xa-ban-bar/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html",
     "https://www.foody.vn/hue/bar-pub"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html",
+    "https://luhanhvietnam.com.vn/du-lich/checklist-nhung-quan-ngon-khu-pho-tay-hue.html"
+   ]
   },
   {
    "id": 120,
@@ -4449,14 +5349,24 @@
    "boost": null,
    "hue": 80,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hue/120-new-dtv-bar/01.webp",
+    "/img/bars/hue/120-new-dtv-bar/02.webp",
+    "/img/bars/hue/120-new-dtv-bar/03.webp",
+    "/img/bars/hue/120-new-dtv-bar/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html",
     "https://www.jakarta100bars.com/hue-nightlife"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://khamphahue.com.vn/Du-lich/Chi-tiet/tid/New-DTV-Bar.html/pid/8565/cid/372",
+    "https://mytour.vn/vi/blog/bai-viet/xa-stress-cuoi-tuan-voi-5-quan-bar-dang-cap-tai-hue.html",
+    "https://www.jakarta100bars.com/hue-nightlife"
+   ]
   },
   {
    "id": 121,
@@ -4485,14 +5395,23 @@
    "boost": null,
    "hue": 119,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hue/121-zenith-bar/01.webp",
+    "/img/bars/hue/121-zenith-bar/02.webp",
+    "/img/bars/hue/121-zenith-bar/03.webp",
+    "/img/bars/hue/121-zenith-bar/04.webp",
+    "/img/bars/hue/121-zenith-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://melia.com/en/hotels/vietnam/hue-city/melia-vinpearl-hue/restaurants",
     "https://vinwonders.com/en/wonderpedia/news/hue-bars/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://melia.com/en/hotels/vietnam/hue-city/melia-vinpearl-hue/restaurants"
+   ]
   },
   {
    "id": 122,
@@ -4521,13 +5440,20 @@
    "boost": null,
    "hue": 34,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hue/122-oasis-bar/01.webp",
+    "/img/bars/hue/122-oasis-bar/02.webp",
+    "/img/bars/hue/122-oasis-bar/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/hue/bar-pub-phuc-vu-thuc-uong"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.tripadvisor.com.vn/Restaurant_Review-g293926-d4583588-Reviews-Oasis_Bar_Restaurant-Hue_Thua_Thien_Hue_Province.html"
+   ]
   },
   {
    "id": 123,
@@ -4556,13 +5482,25 @@
    "boost": null,
    "hue": 243,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/hue/123-ta-vet-coffee-pub/01.webp",
+    "/img/bars/hue/123-ta-vet-coffee-pub/02.webp",
+    "/img/bars/hue/123-ta-vet-coffee-pub/03.webp",
+    "/img/bars/hue/123-ta-vet-coffee-pub/04.webp",
+    "/img/bars/hue/123-ta-vet-coffee-pub/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/hue/bar-pub-phuc-vu-thuc-uong"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://hue.gov.vn/Du-khach/Thong-tin-du-khach/Thong-tin-can-biet/tb/Ta-Vet-Pub-Diem-hen-doc-dao-tren-pho-Vo-Thi-Sau-773053",
+    "https://hue.aeonmall-vietnam.com/cam-nang-aeon-mall-hue/pho-tay-hue.html",
+    "https://www.vietnamcoracle.com/drinking-nightlife-in-hue/",
+    "https://www.foody.vn/hue/bar-pub-phuc-vu-thuc-uong"
+   ]
   },
   {
    "id": 124,
@@ -4591,7 +5529,13 @@
    "boost": null,
    "hue": 237,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/nt/124-skylight-nha-trang/01.webp",
+    "/img/bars/nt/124-skylight-nha-trang/02.webp",
+    "/img/bars/nt/124-skylight-nha-trang/03.webp",
+    "/img/bars/nt/124-skylight-nha-trang/04.webp",
+    "/img/bars/nt/124-skylight-nha-trang/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -4599,7 +5543,10 @@
     "https://vinwonders.com/vi/wonderpedia/news/top-quan-bar-nha-trang-quay-xuyen-man-dem-hot/",
     "https://www.waug.com/en/magazines/1329"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://mia.vn/cam-nang-du-lich/skylight-nha-trang-quay-cuc-da-tai-quan-bar-view-xin-so-noi-thanh-pho-bien-693"
+   ]
   },
   {
    "id": 125,
@@ -4628,7 +5575,13 @@
    "boost": null,
    "hue": 123,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/nt/125-altitude-rooftop-bar/01.webp",
+    "/img/bars/nt/125-altitude-rooftop-bar/02.webp",
+    "/img/bars/nt/125-altitude-rooftop-bar/03.webp",
+    "/img/bars/nt/125-altitude-rooftop-bar/04.webp",
+    "/img/bars/nt/125-altitude-rooftop-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -4636,7 +5589,12 @@
     "https://www.hotels.com/go/vietnam/best-nightlife-nha-trang",
     "https://uk.trip.com/restaurant/vietnam/nha%20trang/detail/Altitude%20Rooftop%20Bar-505801"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vietnamnightlife.com/en/altitude-rooftop-bar-308-16.html",
+    "https://www.donga.com/news/Culture/article/all/20250428/131505037/1",
+    "https://halotravel.vn/quan-cafe-cho-tinh-nhan-o-nha-trang/"
+   ]
   },
   {
    "id": 126,
@@ -4665,7 +5623,12 @@
    "boost": null,
    "hue": 298,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/nt/126-sailing-club-nha-trang/01.webp",
+    "/img/bars/nt/126-sailing-club-nha-trang/02.webp",
+    "/img/bars/nt/126-sailing-club-nha-trang/03.webp",
+    "/img/bars/nt/126-sailing-club-nha-trang/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -4673,7 +5636,11 @@
     "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-nha-trang-57083.htm",
     "https://vinwonders.com/en/wonderpedia/news/bars-nha-trang-chill-to-the-fullest-at-16-hottest-places-for-nightlife/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-nha-trang-57083.htm",
+    "https://www.waug.com/en/magazines/1329"
+   ]
   },
   {
    "id": 127,
@@ -4702,14 +5669,26 @@
    "boost": null,
    "hue": 53,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/nt/127-hk-club-nha-trang/01.webp",
+    "/img/bars/nt/127-hk-club-nha-trang/02.webp",
+    "/img/bars/nt/127-hk-club-nha-trang/03.webp",
+    "/img/bars/nt/127-hk-club-nha-trang/04.webp",
+    "/img/bars/nt/127-hk-club-nha-trang/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://pk.trip.com/toplist/tripbest/nha-trang-best-clubs-100900005351/",
     "https://mytour.vn/en/blog/bai-viet/top-10-most-famous-bars-in-nha-trang-city-khanh-hoa-mytour.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://triple.guide/attractions/10d7db1a-d173-4b99-a900-5b266d194679",
+    "https://vietnamnightlife.com/en/hk-club-formerly-havana-club-nha-trang-309-16.html",
+    "https://clubinvietnam.com/nhatrang/hk-club/",
+    "https://www.9life.com.vn/products/hk-club-38-tran-phu"
+   ]
   },
   {
    "id": 128,
@@ -4738,7 +5717,13 @@
    "boost": null,
    "hue": 261,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/nt/128-louisiane-brewhouse/01.webp",
+    "/img/bars/nt/128-louisiane-brewhouse/02.webp",
+    "/img/bars/nt/128-louisiane-brewhouse/03.webp",
+    "/img/bars/nt/128-louisiane-brewhouse/04.webp",
+    "/img/bars/nt/128-louisiane-brewhouse/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -4746,7 +5731,14 @@
     "https://www.indochinavalue.com/vietnam-travel-destinations/nha-trang-travel-guide/entertainment-in-nha-trang/louisiane-brewhouse-nha-trang",
     "https://wanderlog.com/place/details/875953"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://louisianebrewhouse.com.vn/lien-he-voi-chung-toi/",
+    "https://www.tgroup.vn/service/louisiane-brewhouse-nha-trang",
+    "https://tatinta.com/en/diem-den/nha-hang-bia-tuoi-louisiane-nha-trang/2797",
+    "https://untappd.com/louisianebrewhouse",
+    "https://epicurevietnam.com/dining/other-cities/louisiane-brewhouse-where-hops-and-dreams-come-true-6-1"
+   ]
   },
   {
    "id": 129,
@@ -4775,14 +5767,19 @@
    "boost": null,
    "hue": 291,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/nt/129-booze-cruise-sports-bar-grill/01.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.bestpricetravel.com/travel-guide/nha-trang-nightlife-2710.html",
     "https://www.indochinavalue.com/vietnam-travel-destinations/nha-trang-travel-guide/entertainment-in-nha-trang/booze-cruise-sports-bar-grill"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.bestpricetravel.com/travel-guide/nha-trang-nightlife-2710.html"
+   ]
   },
   {
    "id": 130,
@@ -4811,14 +5808,23 @@
    "boost": null,
    "hue": 37,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/nt/130-why-not-bar/01.webp",
+    "/img/bars/nt/130-why-not-bar/02.webp",
+    "/img/bars/nt/130-why-not-bar/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.indochinavalue.com/vietnam-travel-destinations/nha-trang-travel-guide/entertainment-in-nha-trang/why-not-bar",
     "https://wanderlog.com/place/details/11491918/why-not-bar-nha-trang"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://nhatrangtoday.vn/why-not-bar-nha-trang-post648",
+    "https://vinpearl.com/en/nha-trang-vietnam-nightlife-the-best-after-dark-experiences",
+    "https://www.vietnamonline.com/destination/nha-trang/nightlife/top-picks.html"
+   ]
   },
   {
    "id": 131,
@@ -4847,14 +5853,26 @@
    "boost": null,
    "hue": 325,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/nt/131-paradise-club/01.webp",
+    "/img/bars/nt/131-paradise-club/02.webp",
+    "/img/bars/nt/131-paradise-club/03.webp",
+    "/img/bars/nt/131-paradise-club/04.webp",
+    "/img/bars/nt/131-paradise-club/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://pk.trip.com/toplist/tripbest/nha-trang-best-clubs-100900005351/",
     "https://mytour.vn/en/blog/bai-viet/top-10-most-famous-bars-in-nha-trang-city-khanh-hoa-mytour.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://nashaplaneta.net/asia/vietnam/nhatrang-dostoprimechatelnosti_en",
+    "https://paradiseclub.vn/bar-nha-trang-duong-tran-phu-b26.php",
+    "https://vietnamnightlife.com/en/paradise-nha-trang-312-16.html",
+    "https://mytour.vn/en/blog/bai-viet/top-10-most-famous-bars-in-nha-trang-city-khanh-hoa-mytour.html"
+   ]
   },
   {
    "id": 132,
@@ -4919,14 +5937,23 @@
    "boost": null,
    "hue": 159,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/nt/133-riviera-rooftop-bar-restaurant/01.webp",
+    "/img/bars/nt/133-riviera-rooftop-bar-restaurant/02.webp",
+    "/img/bars/nt/133-riviera-rooftop-bar-restaurant/03.webp",
+    "/img/bars/nt/133-riviera-rooftop-bar-restaurant/04.webp",
+    "/img/bars/nt/133-riviera-rooftop-bar-restaurant/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.waug.com/en/magazines/1329",
     "https://www.foody.vn/khanh-hoa/bar-pub-phu-hop-hen-ho"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://thodianhatrang.vn/danh-muc/nha-hang/riveria-rooftop-bar-restaurant"
+   ]
   },
   {
    "id": 134,
@@ -4955,13 +5982,19 @@
    "boost": null,
    "hue": 232,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/nt/134-lunar-rooftop-bar-grill/01.webp",
+    "/img/bars/nt/134-lunar-rooftop-bar-grill/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/khanh-hoa/bar-pub-phu-hop-hen-ho"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/khanh-hoa/bar-pub-phu-hop-hen-ho"
+   ]
   },
   {
    "id": 135,
@@ -4990,7 +6023,12 @@
    "boost": null,
    "hue": 259,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/nt/135-hybrid-nha-trang/01.webp",
+    "/img/bars/nt/135-hybrid-nha-trang/02.webp",
+    "/img/bars/nt/135-hybrid-nha-trang/03.webp",
+    "/img/bars/nt/135-hybrid-nha-trang/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -4998,7 +6036,11 @@
     "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-nha-trang-57083.htm",
     "https://vietcetera.com/en/skip-the-tourist-traps-here-are-nha-trangs-5-hidden-gems-for-a-perfect-drink"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://theworlds50best.com/discovery/Establishments/Vietnam/Nha-Trang/Hybrid.html",
+    "https://toplist.vn/top-list/quan-cocktail-dep-nhat-tai-nha-trang-57083.htm"
+   ]
   },
   {
    "id": 136,
@@ -5027,14 +6069,21 @@
    "boost": null,
    "hue": 19,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/nt/136-wolpertinger-cocktail-vault/01.webp",
+    "/img/bars/nt/136-wolpertinger-cocktail-vault/02.webp",
+    "/img/bars/nt/136-wolpertinger-cocktail-vault/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://thatch.co/places/258911/wolpertinger-cocktail-vault-nha-trang---79-to-hien-thanh",
     "https://vietcetera.com/en/skip-the-tourist-traps-here-are-nha-trangs-5-hidden-gems-for-a-perfect-drink"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.tripadvisor.com.vn/Attraction_Review-g293928-d26524905-Reviews-Wolpertinger_Cocktail_Vault-Nha_Trang_Khanh_Hoa_Province.html"
+   ]
   },
   {
    "id": 137,
@@ -5063,13 +6112,21 @@
    "boost": null,
    "hue": 356,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/nt/137-oasis-bar-restaurant/01.webp",
+    "/img/bars/nt/137-oasis-bar-restaurant/02.webp",
+    "/img/bars/nt/137-oasis-bar-restaurant/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/khanh-hoa/bar-pub-phuc-vu-thit-bo?vt=row"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://news.tuoitre.vn/vietnams-nha-trang-tackles-foreign-language-only-shop-signs-103260726161107584.htm",
+    "https://www.foody.vn/khanh-hoa/bar-pub-phuc-vu-thit-bo?vt=row"
+   ]
   },
   {
    "id": 138,
@@ -5098,14 +6155,21 @@
    "boost": null,
    "hue": 189,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/nt/138-aqualine-bar/01.webp",
+    "/img/bars/nt/138-aqualine-bar/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.ihg.com/intercontinental/hotels/us/en/nha-trang/nhach/hoteldetail/dining",
     "https://joinpearl.co/bars/nha-trang/aqualine-bar"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.agoda.com/intercontinental-nha-trang/hotel/nha-trang-vn.html",
+    "https://joinpearl.co/bars/nha-trang/aqualine-bar"
+   ]
   },
   {
    "id": 139,
@@ -5169,7 +6233,13 @@
    "boost": null,
    "hue": 248,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/pq/140-ocsen-beach-bar-club/01.webp",
+    "/img/bars/pq/140-ocsen-beach-bar-club/02.webp",
+    "/img/bars/pq/140-ocsen-beach-bar-club/03.webp",
+    "/img/bars/pq/140-ocsen-beach-bar-club/04.webp",
+    "/img/bars/pq/140-ocsen-beach-bar-club/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -5177,7 +6247,11 @@
     "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/enjoy-the-sunset-and-relax-at-ocsen-beach-bar-phu-quoc-12970",
     "https://hanoivoyage.com/en/blog/7-beach-bars-in-phu-quoc.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/enjoy-the-sunset-and-relax-at-ocsen-beach-bar-phu-quoc-12970",
+    "https://hanoivoyage.com/en/blog/7-beach-bars-in-phu-quoc.html"
+   ]
   },
   {
    "id": 141,
@@ -5206,14 +6280,23 @@
    "boost": null,
    "hue": 95,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/pq/141-chuon-chuon-bistro-skybar/01.webp",
+    "/img/bars/pq/141-chuon-chuon-bistro-skybar/02.webp",
+    "/img/bars/pq/141-chuon-chuon-bistro-skybar/03.webp",
+    "/img/bars/pq/141-chuon-chuon-bistro-skybar/04.webp",
+    "/img/bars/pq/141-chuon-chuon-bistro-skybar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/bars-in-phu-quoc-12-great-places-for-good-drinks-and-chilling/",
     "https://sunparadiseland.com/en/SunParadiseLandPhuQuoc/tin-tuc/dragonfly-bistro-skybar-phu-quoc-with-a-stunning-photo-worthy-view-12984"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://sunparadiseland.com/en/SunParadiseLandPhuQuoc/tin-tuc/dragonfly-bistro-skybar-phu-quoc-with-a-stunning-photo-worthy-view-12984"
+   ]
   },
   {
    "id": 142,
@@ -5242,7 +6325,12 @@
    "boost": null,
    "hue": 113,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/pq/142-ink-360-rooftop-bar/01.webp",
+    "/img/bars/pq/142-ink-360-rooftop-bar/02.webp",
+    "/img/bars/pq/142-ink-360-rooftop-bar/03.webp",
+    "/img/bars/pq/142-ink-360-rooftop-bar/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -5250,7 +6338,10 @@
     "https://hanoivoyage.com/en/blog/7-beach-bars-in-phu-quoc.html",
     "https://vietnamisawesome.com/?p=18872"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vietnamisawesome.com/?p=18872"
+   ]
   },
   {
    "id": 143,
@@ -5279,14 +6370,27 @@
    "boost": null,
    "hue": 100,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/pq/143-sailing-club-phu-quoc/01.webp",
+    "/img/bars/pq/143-sailing-club-phu-quoc/02.webp",
+    "/img/bars/pq/143-sailing-club-phu-quoc/03.webp",
+    "/img/bars/pq/143-sailing-club-phu-quoc/04.webp",
+    "/img/bars/pq/143-sailing-club-phu-quoc/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vietnam.travel/things-to-do/sailing-club-phu-quoc",
     "https://pelago.com/en/activity/pe3vbfzso-exclusive-dining-experience-at-sailing-club-phu-quoc-beach-club-4-course-dinner-with-drinks-included-complimentary-fire-show-vietnam-phu-quoc"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.ivivu.com/khach-san-phu-quoc/khu-nghi-duong-sailing-club-signature-phu-quoc",
+    "https://www.booking.com/hotel/vn/sailing-club-signature-resort-phu-quoc.nl.html",
+    "https://www.linkedin.com/posts/michiellugt_were-hiring-assistant-food-beverage-activity-7402608112983240704-_lR4",
+    "https://pelago.com/en/activity/pe3vbfzso-exclusive-dining-experience-at-sailing-club-phu-quoc-beach-club-4-course-dinner-with-drinks-included-complimentary-fire-show-vietnam-phu-quoc",
+    "https://vietnam.travel/things-to-do/sailing-club-phu-quoc"
+   ]
   },
   {
    "id": 144,
@@ -5315,14 +6419,23 @@
    "boost": null,
    "hue": 14,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/pq/144-bittersweet-co/01.webp",
+    "/img/bars/pq/144-bittersweet-co/02.webp",
+    "/img/bars/pq/144-bittersweet-co/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/goi-y-top-10-quan-bar-phu-quoc-chill-cho-du-khach-20367",
     "https://vinwonders.com/en/wonderpedia/news/best-bars-in-phu-quoc-vietnam/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://wowweekend.vn/5-quan-bar-ton-vinh-phu-nu-khap-ba-mien.html",
+    "https://www.trip.com/moments/detail/phu-quoc-island-24779-121199163/",
+    "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/goi-y-top-10-quan-bar-phu-quoc-chill-cho-du-khach-20367"
+   ]
   },
   {
    "id": 145,
@@ -5351,14 +6464,27 @@
    "boost": null,
    "hue": 313,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/pq/145-sunset-sanato-beach-club/01.webp",
+    "/img/bars/pq/145-sunset-sanato-beach-club/02.webp",
+    "/img/bars/pq/145-sunset-sanato-beach-club/03.webp",
+    "/img/bars/pq/145-sunset-sanato-beach-club/04.webp",
+    "/img/bars/pq/145-sunset-sanato-beach-club/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/top-beach-club-phu-quoc-dep-va-soi-dong-nhat-2026-23495",
     "https://hanoivoyage.com/en/blog/7-beach-bars-in-phu-quoc.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://rootytrip.com/en/product/sunset-sanato-beach-club-ticket/",
+    "https://sunworld.vn/vi/hon-thom/check-in/top-20-dia-diem-ngam-hoang-hon-phu-quoc-dep-ngat-ngay-5890",
+    "https://thetravelintern.com/phu-quoc-itinerary/",
+    "https://www.traveloka.com/vi-vn/explore/activities/review-sunset-sanato-phu-quoc/510825",
+    "https://halongopentour.vn/blog/top-5-toa-do-ngam-hoang-hon-khi-du-lich-phu-quoc_641d60dd23450.html"
+   ]
   },
   {
    "id": 146,
@@ -5387,14 +6513,25 @@
    "boost": null,
    "hue": 19,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/pq/146-teatro-club/01.webp",
+    "/img/bars/pq/146-teatro-club/02.webp",
+    "/img/bars/pq/146-teatro-club/03.webp",
+    "/img/bars/pq/146-teatro-club/04.webp",
+    "/img/bars/pq/146-teatro-club/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://visitphuquoc.com.vn/en/teatro-club-phu-quoc-783",
     "https://blog.premierresidencesphuquoc.com/?p=3950"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vpq.vn/teatro-club-phu-quoc-thien-duong-giai-tri-dem-dang-cap.html",
+    "https://rootytrip.com/en/phu-quoc-sunset-town/",
+    "https://visitphuquoc.com.vn/en/teatro-club-phu-quoc-783"
+   ]
   },
   {
    "id": 147,
@@ -5423,13 +6560,23 @@
    "boost": null,
    "hue": 69,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/pq/147-times-corner-sky-bar/01.webp",
+    "/img/bars/pq/147-times-corner-sky-bar/02.webp",
+    "/img/bars/pq/147-times-corner-sky-bar/03.webp",
+    "/img/bars/pq/147-times-corner-sky-bar/04.webp",
+    "/img/bars/pq/147-times-corner-sky-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/top-beach-club-phu-quoc-dep-va-soi-dong-nhat-2026-23495"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://timescornerphuquoc.com/",
+    "https://www.tripadvisor.com.vn/Attraction_Review-g12520037-d33220408-Reviews-Times_Corner_Sky_Bar-An_Thoi_Phu_Quoc_Island_Kien_Giang_Province.html"
+   ]
   },
   {
    "id": 148,
@@ -5458,14 +6605,27 @@
    "boost": null,
    "hue": 131,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/pq/148-sunset-beach-bar-restaurant/01.webp",
+    "/img/bars/pq/148-sunset-beach-bar-restaurant/02.webp",
+    "/img/bars/pq/148-sunset-beach-bar-restaurant/03.webp",
+    "/img/bars/pq/148-sunset-beach-bar-restaurant/04.webp",
+    "/img/bars/pq/148-sunset-beach-bar-restaurant/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/goi-y-top-10-quan-bar-phu-quoc-chill-cho-du-khach-20367",
     "https://kupi.com/en-ae/explore/vietnam/phu-quoc/sunset-beach-bar-and-restaurant"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://znews.vn/kin-cho-ngam-dac-san-hoang-hon-tai-beach-bar-phu-quoc-post1614037.html",
+    "https://sunsetbeach.vn/sunset-beach-bar-restaurant",
+    "https://vov.vn/du-lich/tu-van/phu-quoc-hut-khach-dip-304-15-va-sunset-beach-la-diem-den-dang-trai-nghiem-post1286335.vov",
+    "https://vov.vn/du-lich/phu-quoc-bung-no-du-lich-du-khach-bao-chi-trai-nghiem-dang-cap-len-ngoi-post1158309.vov",
+    "https://kenh14.vn/dam-chim-trong-dieu-techno-house-tai-quan-bar-bien-o-phu-quoc-20230414114726346.chn"
+   ]
   },
   {
    "id": 149,
@@ -5494,13 +6654,18 @@
    "boost": null,
    "hue": 73,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/pq/149-luna-bar/01.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinwonders.com/vi/wonderpedia/news/review-chi-tiet-15-quan-bar-phu-quoc-cuc-chat-de-chay-het-dem/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.expatolife.com/bars-clubs-phu-quoc-vietnam/"
+   ]
   },
   {
    "id": 150,
@@ -5529,14 +6694,23 @@
    "boost": null,
    "hue": 235,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/pq/150-the-cheeky-traveller-english-pub-bar/01.webp",
+    "/img/bars/pq/150-the-cheeky-traveller-english-pub-bar/02.webp",
+    "/img/bars/pq/150-the-cheeky-traveller-english-pub-bar/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://kupi.com/en-ae/explore/vietnam/phu-quoc/the-cheeky-traveller-english-pub-and-bar",
     "https://www.expatolife.com/bars-clubs-phu-quoc-vietnam/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vinpearl.com/en/best-bars-in-phu-quoc",
+    "https://www.foody.vn/kien-giang/cheeky-traveller-english-pub-hem-118-tran-hung-dao",
+    "https://www.tripadvisor.com/Restaurant_Review-g1184679-d26733367-Reviews-The_Cheeky_Traveller_English_Pub_And_Bar-Duong_Dong_Phu_Quoc_Island_Kien_Giang_.html"
+   ]
   },
   {
    "id": 151,
@@ -5565,14 +6739,23 @@
    "boost": null,
    "hue": 51,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/pq/151-happy-bear-beer-bar/01.webp",
+    "/img/bars/pq/151-happy-bear-beer-bar/02.webp",
+    "/img/bars/pq/151-happy-bear-beer-bar/03.webp",
+    "/img/bars/pq/151-happy-bear-beer-bar/04.webp",
+    "/img/bars/pq/151-happy-bear-beer-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/best-bars-in-phu-quoc-vietnam/",
     "https://sites.google.com/view/happybear0325/welcome-to-happy-bear-beer-bar"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.tripadvisor.com.vn/Restaurant_Review-g1184679-d25237414-Reviews-HAPPY_BEAR_Live_Music_Bar_Bistro-Duong_Dong_Phu_Quoc_Island_Kien_Giang_Province.html"
+   ]
   },
   {
    "id": 152,
@@ -5601,13 +6784,21 @@
    "boost": null,
    "hue": 279,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/pq/152-night-beach/01.webp",
+    "/img/bars/pq/152-night-beach/02.webp",
+    "/img/bars/pq/152-night-beach/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/goi-y-top-10-quan-bar-phu-quoc-chill-cho-du-khach-20367"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://kenhhomestay.com/bar-phu-quoc/",
+    "https://www.ivivu.com/blog/2021/02/du-lich-phu-quoc-check-in-top-10-quan-bar-ngam-hoang-hon-tuyet-dep/"
+   ]
   },
   {
    "id": 153,
@@ -5636,13 +6827,26 @@
    "boost": null,
    "hue": 300,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/pq/153-shri-beach-club-bar/01.webp",
+    "/img/bars/pq/153-shri-beach-club-bar/02.webp",
+    "/img/bars/pq/153-shri-beach-club-bar/03.webp",
+    "/img/bars/pq/153-shri-beach-club-bar/04.webp",
+    "/img/bars/pq/153-shri-beach-club-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinwonders.com/vi/wonderpedia/news/review-chi-tiet-15-quan-bar-phu-quoc-cuc-chat-de-chay-het-dem/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vincom.com.vn/trend/quan-cafe-dep-o-phu-quoc",
+    "https://www.foody.vn/phu-quoc/shri-beach-bar",
+    "https://eva.vn/di-dau-xem-gi/6-quan-cafe-dep-nhat-phu-quoc-so-huu-view-dep-than-thanh-cho-cac-tin-do-song-ao-chup-anh-chay-may-c40a567547.html",
+    "https://doisongphapluat.com.vn/top-9-quan-cafe-view-dep-ngam-hoang-hon-cuc-chill-tai-phu-quoc-a619103.html",
+    "https://joysholiday.com/blogs/cam-nang-du-lich/du-lich-phu-quoc-top-15-quan-bar-ve-dem-dep-nhat-phu-quoc"
+   ]
   },
   {
    "id": 154,
@@ -5671,14 +6875,25 @@
    "boost": null,
    "hue": 58,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/pq/154-sim-bar-vinpearl-resort-spa-phu-quoc/01.webp",
+    "/img/bars/pq/154-sim-bar-vinpearl-resort-spa-phu-quoc/02.webp",
+    "/img/bars/pq/154-sim-bar-vinpearl-resort-spa-phu-quoc/03.webp",
+    "/img/bars/pq/154-sim-bar-vinpearl-resort-spa-phu-quoc/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinwonders.com/vi/wonderpedia/news/review-chi-tiet-15-quan-bar-phu-quoc-cuc-chat-de-chay-het-dem/",
     "https://sunparadiseland.com/SunParadiseLandPhuQuoc/tin-tuc/goi-y-top-10-quan-bar-phu-quoc-chill-cho-du-khach-20367"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vinpearl.com/vi/hinh-anh-vinpearl-resort-spa-phu-quoc_sim_bar4",
+    "https://vinpearl.com/vi/phu-quoc/cuisine/sim-bar",
+    "https://vinpearl.com/vi/hinh-anh-vinpearl-resort-spa-phu-quoc-cocktail-party-4",
+    "https://vinpearl.com/vi/phu-quoc/am-thuc/sim-bar"
+   ]
   },
   {
    "id": 155,
@@ -5707,14 +6922,23 @@
    "boost": null,
    "hue": 288,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/pq/155-scorpio-bar-vinholidays-fiesta/01.webp",
+    "/img/bars/pq/155-scorpio-bar-vinholidays-fiesta/02.webp",
+    "/img/bars/pq/155-scorpio-bar-vinholidays-fiesta/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/best-bars-in-phu-quoc-vietnam/",
     "https://vinpearl.com/en/best-bars-in-phu-quoc"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vinpearl.com/en/hotels/vinholidays-fiesta-phu-quoc/foods",
+    "https://vinpearl.com/ru/hotels/vinholidays-fiesta-phu-quoc",
+    "https://vinpearl.com/en/best-bars-in-phu-quoc"
+   ]
   },
   {
    "id": 156,
@@ -5743,7 +6967,13 @@
    "boost": null,
    "hue": 111,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ql/156-valley-beach-club/01.webp",
+    "/img/bars/ql/156-valley-beach-club/02.webp",
+    "/img/bars/ql/156-valley-beach-club/03.webp",
+    "/img/bars/ql/156-valley-beach-club/04.webp",
+    "/img/bars/ql/156-valley-beach-club/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -5751,7 +6981,13 @@
     "https://www.toplist.vn/top-list/quan-bar-noi-tieng-nhat-tp-ha-long-quang-ninh-54381.htm",
     "https://joytime-vn.blogspot.com/2025/04/bars-in-ha-long.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://yeah1.com/am-nhac/valley-beach-club-cau-lac-bo-bai-bien-dau-tien-tai-chau-a-trang-bi-loa-lacoustics-k1-a430-d125652.html",
+    "https://kenh14.vn/diem-den-thang-hoa-cung-am-nhac-tai-vinh-ha-long-20190813081324046.chn",
+    "https://elitetour.com.vn/top-10-quan-bar-soi-dong-duoc-yeu-thich-nhat-tai-ha-long",
+    "https://mytour.vn/en/blog/bai-viet/top-9-most-popular-bars-in-ha-long-quang-ninh-mytour.html"
+   ]
   },
   {
    "id": 157,
@@ -5780,14 +7016,26 @@
    "boost": null,
    "hue": 318,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ql/157-sky21-bar-lounge/01.webp",
+    "/img/bars/ql/157-sky21-bar-lounge/02.webp",
+    "/img/bars/ql/157-sky21-bar-lounge/03.webp",
+    "/img/bars/ql/157-sky21-bar-lounge/04.webp",
+    "/img/bars/ql/157-sky21-bar-lounge/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/experience-the-top-3-most-famous-sky-bars-in-ha-long-city-quang-ninh.html",
     "https://toplist.vn/top-list/bar-lounge-sang-trong-thuong-duoc-chon-lam-noi-tiep-khach-cua-gioi-doanh-nhan-quang-ninh-51476.htm"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://flchotelsresorts.com/sky21-bar-lounge-f39",
+    "https://flchotelsresorts.com/sky21-bar-lounge-fe39",
+    "https://toplist.vn/top-list/bar-lounge-sang-trong-thuong-duoc-chon-lam-noi-tiep-khach-cua-gioi-doanh-nhan-quang-ninh-51476.htm",
+    "https://mytour.vn/en/blog/bai-viet/experience-the-top-3-most-famous-sky-bars-in-ha-long-city-quang-ninh.html"
+   ]
   },
   {
    "id": 158,
@@ -5816,13 +7064,19 @@
    "boost": null,
    "hue": 155,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ql/158-love-drunkery-cocktail-bar/01.webp",
+    "/img/bars/ql/158-love-drunkery-cocktail-bar/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/bars-in-ha-long/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.9life.com.vn/products/love-drunkery-cocktail-more-154-to-hien-thanh"
+   ]
   },
   {
    "id": 159,
@@ -5851,14 +7105,23 @@
    "boost": null,
    "hue": 320,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ql/159-circle-mixology-bar/01.webp",
+    "/img/bars/ql/159-circle-mixology-bar/02.webp",
+    "/img/bars/ql/159-circle-mixology-bar/03.webp",
+    "/img/bars/ql/159-circle-mixology-bar/04.webp",
+    "/img/bars/ql/159-circle-mixology-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/bars-in-ha-long/",
     "https://wanderlog.com/place/details/10316704/circle-mixology--bar"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.tripadvisor.com.vn/Attraction_Review-g14776299-d25173739-Reviews-Circle_Mixology_Bar-Ha_Long_City_H_Long_Bay_Quang_Ninh_Province.html"
+   ]
   },
   {
    "id": 160,
@@ -5887,13 +7150,18 @@
    "boost": null,
    "hue": 315,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ql/160-on-the-rocks/01.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vinwonders.com/en/wonderpedia/news/bars-in-ha-long/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://travelviet.net/vn/review-du-lich/quang-ninh/kham-pha-mot-goc-nhin-moi-ve-ha-long-tu-rooftop-bar-on-the-rocks"
+   ]
   },
   {
    "id": 161,
@@ -5922,14 +7190,20 @@
    "boost": null,
    "hue": 338,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ql/161-h-club/01.webp",
+    "/img/bars/ql/161-h-club/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.toplist.vn/top-list/quan-bar-noi-tieng-nhat-tp-ha-long-quang-ninh-54381.htm",
     "https://toplist.vn/top-list/bar-lounge-sang-trong-thuong-duoc-chon-lam-noi-tiep-khach-cua-gioi-doanh-nhan-quang-ninh-51476.htm"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://toplist.vn/top-list/bar-lounge-sang-trong-thuong-duoc-chon-lam-noi-tiep-khach-cua-gioi-doanh-nhan-quang-ninh-51476.htm"
+   ]
   },
   {
    "id": 162,
@@ -5958,14 +7232,20 @@
    "boost": null,
    "hue": 327,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ql/162-new-ha-long-club/01.webp",
+    "/img/bars/ql/162-new-ha-long-club/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.toplist.vn/top-list/quan-bar-noi-tieng-nhat-tp-ha-long-quang-ninh-54381.htm",
     "https://mytour.vn/vi/blog/bai-viet/top-10-quan-beer-club-noi-tieng-o-tinh-quang-ninh.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://mytour.vn/vi/blog/bai-viet/top-10-quan-beer-club-noi-tieng-o-tinh-quang-ninh.html"
+   ]
   },
   {
    "id": 163,
@@ -5994,13 +7274,20 @@
    "boost": null,
    "hue": 343,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ql/163-new-square-bar/01.webp",
+    "/img/bars/ql/163-new-square-bar/02.webp",
+    "/img/bars/ql/163-new-square-bar/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.toplist.vn/top-list/quan-bar-noi-tieng-nhat-tp-ha-long-quang-ninh-54381.htm"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.9life.com.vn/products/new-square-bar-ha-long-khu-9-bai-chay"
+   ]
   },
   {
    "id": 164,
@@ -6029,14 +7316,25 @@
    "boost": null,
    "hue": 286,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ql/164-fom-club/01.webp",
+    "/img/bars/ql/164-fom-club/02.webp",
+    "/img/bars/ql/164-fom-club/03.webp",
+    "/img/bars/ql/164-fom-club/04.webp",
+    "/img/bars/ql/164-fom-club/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-10-most-famous-beer-clubs-in-quang-ninh-province.html",
     "https://vinpearl.com/en/bars-in-ha-long"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://elitetour.com.vn/top-10-quan-bar-soi-dong-duoc-yeu-thich-nhat-tai-ha-long",
+    "https://mytour.vn/en/blog/bai-viet/top-10-most-famous-beer-clubs-in-quang-ninh-province.html",
+    "https://www.tripadvisor.com.vn/Attraction_Review-g13163470-d27142847-Reviews-FOM_Club_H_Long-Bai_Chay_H_Long_Bay_Quang_Ninh_Province.html"
+   ]
   },
   {
    "id": 165,
@@ -6065,14 +7363,19 @@
    "boost": null,
    "hue": 252,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ql/165-the-mine-bar/01.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/quang-ninh/bar-pub",
     "https://mia.vn/cam-nang-du-lich/pho-co-bai-chay-17327"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/quang-ninh/bar-pub"
+   ]
   },
   {
    "id": 166,
@@ -6101,13 +7404,18 @@
    "boost": null,
    "hue": 202,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ql/166-brothers-pub/01.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/quang-ninh/bar-pub-tai-tp-ha-long"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://danhsach.vn/quang-ninh/dia-diem-uy-tin/top-danh-sach-dia-diem-bar-bub-beer-club-dang-cap-chat-nhat-tai-ha-long-3832383264.html"
+   ]
   },
   {
    "id": 167,
@@ -6136,13 +7444,18 @@
    "boost": null,
    "hue": 230,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ql/167-hot-pub-cafe-lounge/01.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/quang-ninh/bar-pub-tai-tp-ha-long"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/quang-ninh/bar-pub-tai-tp-ha-long"
+   ]
   },
   {
    "id": 168,
@@ -6171,13 +7484,19 @@
    "boost": null,
    "hue": 126,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ql/168-funky-bar-halong/01.webp",
+    "/img/bars/ql/168-funky-bar-halong/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/quang-ninh/bar-pub"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/quang-ninh/bar-pub"
+   ]
   },
   {
    "id": 169,
@@ -6206,13 +7525,25 @@
    "boost": null,
    "hue": 309,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ql/169-skylight-restaurant-pool-bar/01.webp",
+    "/img/bars/ql/169-skylight-restaurant-pool-bar/02.webp",
+    "/img/bars/ql/169-skylight-restaurant-pool-bar/03.webp",
+    "/img/bars/ql/169-skylight-restaurant-pool-bar/04.webp",
+    "/img/bars/ql/169-skylight-restaurant-pool-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/experience-the-top-3-most-famous-sky-bars-in-ha-long-city-quang-ninh.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://centralluxuryhalonghotel.com/skylight-restaurant-pool-bar-1-28.html",
+    "https://www.agoda.com/central-luxury-ha-long-hotel/hotel/halong-vn.html",
+    "https://centralluxuryhalonghotel.com/en/skylight-restaurant-pool-bar-1-28.html",
+    "https://mytour.vn/en/blog/bai-viet/experience-the-top-3-most-famous-sky-bars-in-ha-long-city-quang-ninh.html"
+   ]
   },
   {
    "id": 170,
@@ -6241,14 +7572,23 @@
    "boost": null,
    "hue": 295,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ql/170-sky-bar-royal-lotus-ha-long/01.webp",
+    "/img/bars/ql/170-sky-bar-royal-lotus-ha-long/02.webp",
+    "/img/bars/ql/170-sky-bar-royal-lotus-ha-long/03.webp",
+    "/img/bars/ql/170-sky-bar-royal-lotus-ha-long/04.webp",
+    "/img/bars/ql/170-sky-bar-royal-lotus-ha-long/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/quang-ninh/sky-bar-khach-san-royal-lotus-ha-long",
     "https://vietnamtravel.com/hotel/royal-lotus-hotel-ha-long"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vietnamtravel.com/hotel/royal-lotus-hotel-ha-long"
+   ]
   },
   {
    "id": 171,
@@ -6277,14 +7617,25 @@
    "boost": null,
    "hue": 169,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/ql/171-chill-beach-bar/01.webp",
+    "/img/bars/ql/171-chill-beach-bar/02.webp",
+    "/img/bars/ql/171-chill-beach-bar/03.webp",
+    "/img/bars/ql/171-chill-beach-bar/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://kupi.com/en-ae/explore/vietnam/ha-long/chill-beach-bar",
     "https://joytime-vn.blogspot.com/2025/04/bars-in-ha-long.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.sangtaoviet.com.vn/tong-thau-thi-cong-du-an-chill-beach-bar-ha-long-c2-710--153.html",
+    "https://sangtaoviet.com.vn/tong-thau-thi-cong-du-an-chill-beach-bar-ha-long-c2-710---153.html",
+    "https://iguide.ai/vi/providers/chill-beach-bar-h-long-i2dytt",
+    "https://vnguide.vn/restaurant/chill-beach-bar"
+   ]
   },
   {
    "id": 172,
@@ -6313,14 +7664,23 @@
    "boost": null,
    "hue": 298,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/172-chill-skybar/01.webp",
+    "/img/bars/sg/172-chill-skybar/02.webp",
+    "/img/bars/sg/172-chill-skybar/03.webp",
+    "/img/bars/sg/172-chill-skybar/04.webp",
+    "/img/bars/sg/172-chill-skybar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/chill-sky-bar.html",
     "https://mytour.vn/en/blog/bai-viet/indulge-in-an-epic-sleepless-night-at-chill-sky-bar.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/chill-sky-bar.html"
+   ]
   },
   {
    "id": 173,
@@ -6349,14 +7709,27 @@
    "boost": null,
    "hue": 305,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/173-social-club-rooftop-bar/01.webp",
+    "/img/bars/sg/173-social-club-rooftop-bar/02.webp",
+    "/img/bars/sg/173-social-club-rooftop-bar/03.webp",
+    "/img/bars/sg/173-social-club-rooftop-bar/04.webp",
+    "/img/bars/sg/173-social-club-rooftop-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://hoteldesartssaigon.com/?p=476",
     "https://therooftopguide.com/rooftop-bars-in-ho-chi-minh/social-club-at-hotel-des-arts-saigon.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.curatorstravel.com/hotel/detail/hotel-des-arts-saigon",
+    "https://noithatkendesign.vn/social-club-rooftop-bar.html",
+    "https://www.tourasia.ch/de/hotel/hotel-des-arts-saigon-saigon",
+    "https://www.skylevels.co/en/asia/vietnam/ho-chi-minh/social-club-rooftop-bar",
+    "https://epicurevietnam.com/bars-clubs-1/social-club-rooftop-bar"
+   ]
   },
   {
    "id": 174,
@@ -6385,7 +7758,13 @@
    "boost": null,
    "hue": 200,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/174-saigon-saigon-rooftop-bar/01.webp",
+    "/img/bars/sg/174-saigon-saigon-rooftop-bar/02.webp",
+    "/img/bars/sg/174-saigon-saigon-rooftop-bar/03.webp",
+    "/img/bars/sg/174-saigon-saigon-rooftop-bar/04.webp",
+    "/img/bars/sg/174-saigon-saigon-rooftop-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -6393,7 +7772,10 @@
     "https://vinwonders.com/vi/wonderpedia/news/quan-bar-sai-gon/",
     "https://mia.vn/cam-nang-du-lich/khach-san-caravelle-sai-gon-21257"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.asia-bars.com/?p=75375"
+   ]
   },
   {
    "id": 175,
@@ -6422,14 +7804,27 @@
    "boost": null,
    "hue": 356,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/175-banana-mama-rooftop-bar-kitchen-saigon/01.webp",
+    "/img/bars/sg/175-banana-mama-rooftop-bar-kitchen-saigon/02.webp",
+    "/img/bars/sg/175-banana-mama-rooftop-bar-kitchen-saigon/03.webp",
+    "/img/bars/sg/175-banana-mama-rooftop-bar-kitchen-saigon/04.webp",
+    "/img/bars/sg/175-banana-mama-rooftop-bar-kitchen-saigon/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mia.vn/cam-nang-du-lich/banana-mama-rooftop-bar-kitchen-saigon-18165",
     "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/banana-mama-rooftop-and-kitchen.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.cntraveler.com/story/ho-chi-minh-city-where-to-eat-drink-stay-and-play",
+    "https://www.greensm.com/vn-vi/news/banana-mama-rooftop-bar-kitchen-saigon",
+    "https://hochiminhcity.gaycities.com/bars/310197-banana-mama-rooftop-bar-kitchen-saigon",
+    "https://www.zonevietnam.com/food/316/banana-mama-rooftop-kitchen",
+    "https://www.petitfute.com/v44965-ho-chi-minh-ville/c1169-s-amuser-sortir/c182-bar-cafe/c185-bar-a-cocktail/2138775-banana-mama-rooftop-bar.html"
+   ]
   },
   {
    "id": 176,
@@ -6458,14 +7853,26 @@
    "boost": null,
    "hue": 187,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/176-the-view-rooftop-bar/01.webp",
+    "/img/bars/sg/176-the-view-rooftop-bar/02.webp",
+    "/img/bars/sg/176-the-view-rooftop-bar/03.webp",
+    "/img/bars/sg/176-the-view-rooftop-bar/04.webp",
+    "/img/bars/sg/176-the-view-rooftop-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/the-view-rooftop-bar-and-eatery.html",
     "https://www.hotels.com/go/vietnam/best-rooftop-bars-ho-chi-minh"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://forevervacation.com/the-vacationer/rooftop-bars-in-ho-chi-minh-city",
+    "https://oxalisadventure.com/bui-vien-walking-street-saigon-nightlife/",
+    "https://riviu.vn/the-view-rooftop-bar",
+    "https://in.trip.com/restaurant/vietnam/ho-chi-minh-city/detail/the-view-rooftop-bar-eatery-15013062/?rankingId=100001427745&source=uccrank"
+   ]
   },
   {
    "id": 177,
@@ -6494,14 +7901,27 @@
    "boost": null,
    "hue": 216,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/177-eon-heli-bar/01.webp",
+    "/img/bars/sg/177-eon-heli-bar/02.webp",
+    "/img/bars/sg/177-eon-heli-bar/03.webp",
+    "/img/bars/sg/177-eon-heli-bar/04.webp",
+    "/img/bars/sg/177-eon-heli-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vietnam-concierge.webnode.vn/news/eon-51-heli-bar/",
     "https://vietfuntravel.com/blog/eon-heli-bar-saigon.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://danhsach.vn/ho-chi-minh/dia-diem-uy-tin/eon-52-heli-bar-bitexco-towel-tang-50-51-52-so-02-hai-trieu-p-ben-nghe-quan-1-ho-chi-minh-3131353264.html",
+    "https://www.foody.vn/ho-chi-minh/eon-heli-bar-bitexco-tower",
+    "https://4travel.jp/os_shisetsu/10492674",
+    "https://lalakuo.com/2019/05/vietnam-ho-chi-minh-city-bar-eon-52-heli/",
+    "https://vietfuntravel.com/blog/eon-heli-bar-saigon.html"
+   ]
   },
   {
    "id": 178,
@@ -6530,14 +7950,26 @@
    "boost": null,
    "hue": 322,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/178-blank-lounge/01.webp",
+    "/img/bars/sg/178-blank-lounge/02.webp",
+    "/img/bars/sg/178-blank-lounge/03.webp",
+    "/img/bars/sg/178-blank-lounge/04.webp",
+    "/img/bars/sg/178-blank-lounge/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.therooftopguide.com/rooftop-bars-in-ho-chi-minh/blank-lounge.html",
     "https://vietcetera.com/en/video/vietcetera-spaces/blank-the-best-location-to-catch-saigons-sunset-vietcetera-spaces"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.blank-lounge.com/",
+    "https://www.vietfuntravel.com.vn/blog/quan-cafe-bar-cao-nhat-dong-nam-bo-cafe-o-landmark-81-sai-gon.html",
+    "https://www.hcm-cityguide.com/c/sights/articles/1028",
+    "https://thelandmark81.com.vn/len-landmark-81-uong-cafe/"
+   ]
   },
   {
    "id": 179,
@@ -6566,14 +7998,25 @@
    "boost": null,
    "hue": 133,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/179-rooftop-garden-bar-rex-hotel/01.webp",
+    "/img/bars/sg/179-rooftop-garden-bar-rex-hotel/02.webp",
+    "/img/bars/sg/179-rooftop-garden-bar-rex-hotel/03.webp",
+    "/img/bars/sg/179-rooftop-garden-bar-rex-hotel/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://therooftopguide.com/rooftop-bars-in-ho-chi-minh/rooftop-garden-at-rex-hotel.html",
     "https://wanderlog.com/place/details/1082570/rex-hotel-garden-bar"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://timesofindia.indiatimes.com/travel/ho-chi-minh-city/travel-guide/rex-hotel-rooftop-garden/gs44850412.cms",
+    "https://dttc.sggp.org.vn/rex-hotel-saigon-gioi-thieu-chuong-trinh-combo-happy-hour-dac-biet-tai-rooftop-garden-bar-post98452.html",
+    "https://doanhnhansaigon.vn/rex-hotel-saigon-gioi-thieu-chuong-trinh-happy-hour-203495.html",
+    "https://wowweekend.vn/rooftop-garden-bar-trai-nghiem-am-thuc-sang-trong-tai-tang-thuong-khach-san-5-sao-rex-hotel-saigon.html"
+   ]
   },
   {
    "id": 180,
@@ -6602,14 +8045,26 @@
    "boost": null,
    "hue": 337,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/180-stir/01.webp",
+    "/img/bars/sg/180-stir/02.webp",
+    "/img/bars/sg/180-stir/03.webp",
+    "/img/bars/sg/180-stir/04.webp",
+    "/img/bars/sg/180-stir/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.theworlds50best.com/stories/News/asias-50-best-bars-2025-51-100-list.html",
     "https://www.enprimeurclub.com/bars/stir-ho-chi-minh-city"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.enprimeurclub.com/bars/stir-ho-chi-minh-city",
+    "https://sanhruou.com/stir-cocktail-bar-quan-1/",
+    "https://www.trip.com/moments/detail/ho-chi-minh-city-434-121207752/",
+    "https://www.vietnamonline.com/news/hcmc-stir-bar-listed-among-asias-100-best-bars.html"
+   ]
   },
   {
    "id": 181,
@@ -6638,14 +8093,26 @@
    "boost": null,
    "hue": 0,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/181-the-enigma-mansion/01.webp",
+    "/img/bars/sg/181-the-enigma-mansion/02.webp",
+    "/img/bars/sg/181-the-enigma-mansion/03.webp",
+    "/img/bars/sg/181-the-enigma-mansion/04.webp",
+    "/img/bars/sg/181-the-enigma-mansion/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.theworlds50best.com/stories/News/asias-50-best-bars-2025-51-100-list.html",
     "https://www.enprimeurclub.com/bars/the-enigma-mansion-ho-chi-minh-city-bar"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.trip.com/moments/detail/ho-chi-minh-city-434-132189381/",
+    "https://www.bargiornale.it/spirit/il-triangolo-doro-della-mixology-i-migliori-indirizzi-fra-thailandia-vietnam-e-cambogia/",
+    "https://www.ufostravel.com/thread-1603-1-1.html",
+    "https://www.enprimeurclub.com/bars/the-enigma-mansion-ho-chi-minh-city-bar"
+   ]
   },
   {
    "id": 182,
@@ -6674,14 +8141,26 @@
    "boost": null,
    "hue": 124,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/182-drinking-healing/01.webp",
+    "/img/bars/sg/182-drinking-healing/02.webp",
+    "/img/bars/sg/182-drinking-healing/03.webp",
+    "/img/bars/sg/182-drinking-healing/04.webp",
+    "/img/bars/sg/182-drinking-healing/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.tatlerasia.com/dining/drinking-healing",
     "https://mia.vn/cam-nang-du-lich/8-quan-cocktail-bar-sai-gon-12652"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.enprimeurclub.com/bars/drinking-healing-ho-chi-minh-city",
+    "https://vietnamnightlife.com/en/drinking-healing-135-16.html",
+    "https://www.saigonshops.com/places/747/drinking-%26-healing",
+    "https://mia.vn/cam-nang-du-lich/8-quan-cocktail-bar-sai-gon-12652"
+   ]
   },
   {
    "id": 183,
@@ -6710,14 +8189,24 @@
    "boost": null,
    "hue": 347,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/183-2-lam-son/01.webp",
+    "/img/bars/sg/183-2-lam-son/02.webp",
+    "/img/bars/sg/183-2-lam-son/03.webp",
+    "/img/bars/sg/183-2-lam-son/04.webp",
+    "/img/bars/sg/183-2-lam-son/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.parkhyattsaigonrestaurants.com/2-lam-son",
     "https://www.parkhyattsaigonrestaurants.com/2-lam-son/wonders-of-vietnam-cocktail-collection"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.parkhyattsaigonrestaurants.com/2-lam-son",
+    "https://www.parkhyattsaigonrestaurants.com/2-lam-son/wonders-of-vietnam-cocktail-collection"
+   ]
   },
   {
    "id": 184,
@@ -6746,7 +8235,13 @@
    "boost": null,
    "hue": 192,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/184-snuffbox-speakeasy/01.webp",
+    "/img/bars/sg/184-snuffbox-speakeasy/02.webp",
+    "/img/bars/sg/184-snuffbox-speakeasy/03.webp",
+    "/img/bars/sg/184-snuffbox-speakeasy/04.webp",
+    "/img/bars/sg/184-snuffbox-speakeasy/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -6754,7 +8249,12 @@
     "https://www.vietnam.travel/node/497",
     "https://www.trvlogue.com/en/snuffbox-saigon-bar-live-music"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://tknt.vn/review-snuffbox-bar-kham-pha-ve-dep-bi-an-va-long-lay-523.htm",
+    "https://noithatkendesign.vn/review-snuffbox-bar-speakeasybar-an-minh.html",
+    "https://www.trvlogue.com/en/snuffbox-saigon-bar-live-music"
+   ]
   },
   {
    "id": 185,
@@ -6783,14 +8283,23 @@
    "boost": null,
    "hue": 261,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/185-madam-kew/01.webp",
+    "/img/bars/sg/185-madam-kew/02.webp",
+    "/img/bars/sg/185-madam-kew/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.tatlerasia.com/dining/madam-kew",
     "https://www.tatlerasia.com/lifestyle/travel/tatler-best-in-class-bar-vietnam-2025-bar-vn"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://madam-kew-saigon.wheree.com/",
+    "https://www.tatlerasia.com/dining/madam-kew",
+    "https://www.tatlerasia.com/lifestyle/travel/tatler-best-in-class-bar-vietnam-2025-bar-vn"
+   ]
   },
   {
    "id": 186,
@@ -6819,14 +8328,19 @@
    "boost": null,
    "hue": 208,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/186-dot-bar-drinkery-kitchen/01.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://wink-hotels.com/?p=4381",
     "https://www.tatlerasia.com/lifestyle/travel/tatler-best-in-class-bar-vietnam-2025-bar-vn"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.tatlerasia.com/lifestyle/travel/tatler-best-in-class-bar-vietnam-2025-bar"
+   ]
   },
   {
    "id": 187,
@@ -6855,14 +8369,26 @@
    "boost": null,
    "hue": 254,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/187-firkin-bar/01.webp",
+    "/img/bars/sg/187-firkin-bar/02.webp",
+    "/img/bars/sg/187-firkin-bar/03.webp",
+    "/img/bars/sg/187-firkin-bar/04.webp",
+    "/img/bars/sg/187-firkin-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vietnamisawesome.com/articles/hidden-bars-in-saigon/",
     "https://asia-bars.com/?p=82323"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://asiatop80.com/top80lists/91-98497-25/view/Firkin-Bar-1-2",
+    "https://vietnamnightlife.com/firkin-bar-215-16.html",
+    "https://www.ruoungoaisg.vn/firkin-bar-mac-thi-buoi-ben-nghe-quan-1-tphcm",
+    "https://my.trip.com/moments/detail/ho-chi-minh-city-434-121196097?locale=en-MY"
+   ]
   },
   {
    "id": 188,
@@ -6891,14 +8417,26 @@
    "boost": null,
    "hue": 275,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/188-coco-dining/01.webp",
+    "/img/bars/sg/188-coco-dining/02.webp",
+    "/img/bars/sg/188-coco-dining/03.webp",
+    "/img/bars/sg/188-coco-dining/04.webp",
+    "/img/bars/sg/188-coco-dining/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://guide.michelin.com/vn/en/ho-chi-minh/ho-chi-minh_2978179/restaurant/coco-dining",
     "https://www.enprimeurclub.com/restaurants/coco-dining-ho-chi-minh-city-restaurant"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://izitour.com/en/blog/michelin-star-restaurants-vietnam",
+    "https://epicurevietnam.com/events-1/vietnam/saigon-meets-bangkok-at-coco-dining-a-culinary-celebration-beyond-borders",
+    "https://guide.michelin.com/vn/en/article/features/the-art-of-atmosphere-at-coco-dining-ho-chi-minh-city",
+    "https://www.enprimeurclub.com/restaurants/coco-dining-ho-chi-minh-city-restaurant"
+   ]
   },
   {
    "id": 189,
@@ -6927,14 +8465,27 @@
    "boost": null,
    "hue": 240,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/189-the-rabbit-hole/01.webp",
+    "/img/bars/sg/189-the-rabbit-hole/02.webp",
+    "/img/bars/sg/189-the-rabbit-hole/03.webp",
+    "/img/bars/sg/189-the-rabbit-hole/04.webp",
+    "/img/bars/sg/189-the-rabbit-hole/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://thesmartlocal.com/vietnam/saigon-bars-and-pubs/amp/",
     "https://www.drinkmagazine.asia/?p=30212"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://noithatkendesign.vn/thiet-ke-rabbit-hole-mang-trong-minh-ve-dep-hien-dai-va-quyen-ru.html",
+    "https://www.klook.com/en-US/activity/135175-dining-experience-at-rabbit-hole-asia-s-50-best-bars/",
+    "https://www.zonevietnam.com/food/18091/rabbit-hole",
+    "https://www.klook.com/zh-TW/activity/135175-dining-experience-at-rabbit-hole-asia-s-50-best-bars/",
+    "https://www.klook.com/en-SG/activity/135175-dining-experience-at-rabbit-hole-asia-s-50-best-bars/"
+   ]
   },
   {
    "id": 190,
@@ -6963,14 +8514,27 @@
    "boost": null,
    "hue": 145,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/190-sax-n-art-jazz-club/01.webp",
+    "/img/bars/sg/190-sax-n-art-jazz-club/02.webp",
+    "/img/bars/sg/190-sax-n-art-jazz-club/03.webp",
+    "/img/bars/sg/190-sax-n-art-jazz-club/04.webp",
+    "/img/bars/sg/190-sax-n-art-jazz-club/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.nomadotravel.app/fr/guides/ho-chi-minh-city-nightlife-guide",
     "https://vietnam-concierge.webnode.vn/news/sax-n-art-jazz-club/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vietcetera.com/vn/5-quan-barcafe-chuyen-cac-the-loai-nhac-song-khac-nhau",
+    "https://travelwithchris.net/best-live-music-bars-in-saigon-vietnam/",
+    "https://triple.guide/attractions/42e8b867-34d9-4b4a-901a-2ded9a40547b",
+    "https://www.traveloka.com/vi-vn/explore/destination/nhung-quan-cafe-chat-o-sai-gon-choi-nhac/58906",
+    "https://vietnamnet.vn/en/jazz-concert-celebrates-vietnam-russia-relationships-596563.html"
+   ]
   },
   {
    "id": 191,
@@ -6999,14 +8563,23 @@
    "boost": null,
    "hue": 295,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/191-apocalypse-now/01.webp",
+    "/img/bars/sg/191-apocalypse-now/02.webp",
+    "/img/bars/sg/191-apocalypse-now/03.webp",
+    "/img/bars/sg/191-apocalypse-now/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://gtrip.vn/travel-blogs/night-clubs-in-ho-chi-minh-city",
     "https://vietnamisawesome.com/articles/night-clubs-in-saigon/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vietnamisawesome.com/articles/night-clubs-in-saigon/",
+    "https://gtrip.vn/travel-blogs/night-clubs-in-ho-chi-minh-city"
+   ]
   },
   {
    "id": 192,
@@ -7035,14 +8608,21 @@
    "boost": null,
    "hue": 237,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/192-heart-of-darkness-craft-brewery/01.webp",
+    "/img/bars/sg/192-heart-of-darkness-craft-brewery/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://vietnamguide.co.kr/place/호치민-heart-of-darkness-craft-brewery/",
     "https://www.greensm.com/vn-vi/news/quan-bia-quan-1"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://heartofdarknessbrewery.com/",
+    "https://www.trip.com/moments/detail/ho-chi-minh-city-434-119782488/"
+   ]
   },
   {
    "id": 193,
@@ -7071,13 +8651,25 @@
    "boost": null,
    "hue": 31,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/sg/193-dram-bar/01.webp",
+    "/img/bars/sg/193-dram-bar/02.webp",
+    "/img/bars/sg/193-dram-bar/03.webp",
+    "/img/bars/sg/193-dram-bar/04.webp",
+    "/img/bars/sg/193-dram-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://amthuchiendai.vn/en/our-top-7-favorite-bars-in-thao-dien-ho-chi-minh-city/"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://sanhruou.com/dram-bar-thao-dien-tp-thu-duc-q2/",
+    "https://www.zonevietnam.com/food/4343/dram-bar",
+    "https://epicurevietnam.com/bars-clubs-1/saigon-1/reviving-forgotten-cocktail-classics-in-thao-dien",
+    "https://www.ruoungoaisg.vn/dram-bar-thao-dien-tp-thu-duc-quan-2"
+   ]
   },
   {
    "id": 194,
@@ -7106,14 +8698,24 @@
    "boost": null,
    "hue": 250,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/194-oasky-restaurant-lounge/01.webp",
+    "/img/bars/vt/194-oasky-restaurant-lounge/02.webp",
+    "/img/bars/vt/194-oasky-restaurant-lounge/03.webp",
+    "/img/bars/vt/194-oasky-restaurant-lounge/04.webp",
+    "/img/bars/vt/194-oasky-restaurant-lounge/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://toplist.vn/top-list/quan-rooftop-bar-noi-tieng-o-vung-tau-56885.htm",
     "https://mia.vn/cam-nang-du-lich/ngam-canh-ngoan-muc-tren-tang-cao-oasky-restaurant-lounge-vung-tau-1263"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://mia.vn/cam-nang-du-lich/ngam-canh-ngoan-muc-tren-tang-cao-oasky-restaurant-lounge-vung-tau-1263",
+    "https://hita.com.vn/10-quan-bar-vung-tau-soi-dong-cuc-chay-ve-dem-nen-thu-mot-lan-post-2869.html"
+   ]
   },
   {
    "id": 195,
@@ -7142,14 +8744,25 @@
    "boost": null,
    "hue": 140,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/195-breeze-rooftop-bar/01.webp",
+    "/img/bars/vt/195-breeze-rooftop-bar/02.webp",
+    "/img/bars/vt/195-breeze-rooftop-bar/03.webp",
+    "/img/bars/vt/195-breeze-rooftop-bar/04.webp",
+    "/img/bars/vt/195-breeze-rooftop-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://toplist.vn/top-list/quan-rooftop-bar-noi-tieng-o-vung-tau-56885.htm",
     "https://toplist.vn/top-list/quan-bar-ngoai-troi-cuc-chill-noi-tieng-o-vung-tau-56917.htm"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://tiepthigiadinh.vn/breeze-vung-tau-d3258.html",
+    "https://toplist.vn/top-list/quan-rooftop-bar-noi-tieng-o-vung-tau-56885.htm",
+    "https://www.tripadvisor.com.vn/Attraction_Review-g303946-d28099856-Reviews-Breeze_Rooftop_Bar-Vung_Tau_Ba_Ria_Vung_Tau_Province.html"
+   ]
   },
   {
    "id": 196,
@@ -7178,14 +8791,26 @@
    "boost": null,
    "hue": 271,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/196-on-the-top-bar-ibis-styles/01.webp",
+    "/img/bars/vt/196-on-the-top-bar-ibis-styles/02.webp",
+    "/img/bars/vt/196-on-the-top-bar-ibis-styles/03.webp",
+    "/img/bars/vt/196-on-the-top-bar-ibis-styles/04.webp",
+    "/img/bars/vt/196-on-the-top-bar-ibis-styles/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://toplist.vn/top-list/quan-rooftop-bar-noi-tieng-o-vung-tau-56885.htm",
     "https://toplist.vn/top-list/quan-bar-ngoai-troi-cuc-chill-noi-tieng-o-vung-tau-56917.htm"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://khachsan.chudu24.com/review.ks.6347.350013.khach-san-ibis-styles-vung-tau.html",
+    "https://tnhelearning.edu.vn/top-10-vung-tau-hotels-on-thuy-van-street-with-the-best-view-should-not-be-missed/",
+    "https://toplist.vn/top-list/quan-rooftop-bar-noi-tieng-o-vung-tau-56885.htm",
+    "https://toplist.vn/top-list/quan-bar-ngoai-troi-cuc-chill-noi-tieng-o-vung-tau-56917.htm"
+   ]
   },
   {
    "id": 197,
@@ -7214,14 +8839,22 @@
    "boost": null,
    "hue": 112,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/197-finno-messymood/01.webp",
+    "/img/bars/vt/197-finno-messymood/02.webp",
+    "/img/bars/vt/197-finno-messymood/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/doi-song/top-6-famous-rooftop-bars-in-vung-tau-mytour.html",
     "https://toplist.vn/top-list/quan-bar-ngoai-troi-cuc-chill-noi-tieng-o-vung-tau-56917.htm"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://toplist.vn/top-list/quan-bar-ngoai-troi-cuc-chill-noi-tieng-o-vung-tau-56917.htm",
+    "https://mytour.vn/en/blog/doi-song/top-6-famous-rooftop-bars-in-vung-tau-mytour.html"
+   ]
   },
   {
    "id": 198,
@@ -7250,7 +8883,13 @@
    "boost": null,
    "hue": 150,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/198-gazebo-beach-front-lounge-cafe/01.webp",
+    "/img/bars/vt/198-gazebo-beach-front-lounge-cafe/02.webp",
+    "/img/bars/vt/198-gazebo-beach-front-lounge-cafe/03.webp",
+    "/img/bars/vt/198-gazebo-beach-front-lounge-cafe/04.webp",
+    "/img/bars/vt/198-gazebo-beach-front-lounge-cafe/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
@@ -7258,7 +8897,14 @@
     "https://mytour.vn/en/blog/bai-viet/the-most-dynamic-bars-and-beer-clubs-in-vung-tau.html",
     "https://wanderlog.com/list/geoCategory/248895"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://triphunter.vn/places/vung-tau/items/gazebo-beach-front-lounge-cafe-vung-tau",
+    "https://mytour.vn/vi/blog/bai-viet/gazebo-quan-lounge-and-cafe-ven-bien-sang-trong.html",
+    "https://justfly.vn/discovery/vietnam/vung-tau/quan-cafe-view-bien",
+    "https://cattour.vn/blog/quay-banh-vung-tau-voi-12-quan-bar-duoc-yeu-thich-nhat-1752.html",
+    "https://hotelio.vn/cafe-vung-tau.html"
+   ]
   },
   {
    "id": 199,
@@ -7287,14 +8933,25 @@
    "boost": null,
    "hue": 233,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/199-habana-colorful-beach-bar/01.webp",
+    "/img/bars/vt/199-habana-colorful-beach-bar/02.webp",
+    "/img/bars/vt/199-habana-colorful-beach-bar/03.webp",
+    "/img/bars/vt/199-habana-colorful-beach-bar/04.webp",
+    "/img/bars/vt/199-habana-colorful-beach-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mia.vn/cam-nang-du-lich/thien-duong-giai-nhiet-habana-colorful-beach-beer-vung-tau-1262",
     "https://mia.vn/cam-nang-du-lich/top-beach-bar-vung-tau-19080"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://suongtuyet.com/suong-tuyet-cung-cap-ghe-luoi-cho-habana-colorful-beach-bar-ca-phe-bien-vung-tau.html",
+    "https://mia.vn/cam-nang-du-lich/thien-duong-giai-nhiet-habana-colorful-beach-beer-vung-tau-1262",
+    "https://didau.com/chill-toi-bo-toi-ben-tai-quan-bar-day-sac-mau-ben-bo-bien-ngam-hoang-hon-sieu-dinh-tai-vung-tau"
+   ]
   },
   {
    "id": 200,
@@ -7323,13 +8980,19 @@
    "boost": null,
    "hue": 1,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/200-no-21-eatery-bar/01.webp",
+    "/img/bars/vt/200-no-21-eatery-bar/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-7-popular-cocktail-bars-in-vung-tau-mytour.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://mytour.vn/en/blog/bai-viet/top-7-popular-cocktail-bars-in-vung-tau-mytour.html"
+   ]
   },
   {
    "id": 201,
@@ -7358,14 +9021,26 @@
    "boost": null,
    "hue": 162,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/201-deja-vu-cocktail-bar/01.webp",
+    "/img/bars/vt/201-deja-vu-cocktail-bar/02.webp",
+    "/img/bars/vt/201-deja-vu-cocktail-bar/03.webp",
+    "/img/bars/vt/201-deja-vu-cocktail-bar/04.webp",
+    "/img/bars/vt/201-deja-vu-cocktail-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-7-popular-cocktail-bars-in-vung-tau-mytour.html",
     "https://mia.vn/cam-nang-du-lich/top-bar-vung-tau-de-chill-va-vui-choi-21526"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vnguide.vn/restaurant/deja-vu-cocktail-bar",
+    "https://mia.vn/cam-nang-du-lich/top-bar-vung-tau-de-chill-va-vui-choi-21526",
+    "https://mytour.vn/en/blog/bai-viet/top-7-popular-cocktail-bars-in-vung-tau-mytour.html",
+    "https://www.tripadvisor.com.vn/Restaurant_Review-g303946-d27826934-Reviews-Deja_Vu_Cocktail_Bar-Vung_Tau_Ba_Ria_Vung_Tau_Province.html"
+   ]
   },
   {
    "id": 202,
@@ -7394,13 +9069,18 @@
    "boost": null,
    "hue": 277,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/202-anora-cocktail-bar/01.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mia.vn/cam-nang-du-lich/top-bar-vung-tau-de-chill-va-vui-choi-21526"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://mia.vn/cam-nang-du-lich/top-bar-vung-tau-de-chill-va-vui-choi-21526"
+   ]
   },
   {
    "id": 203,
@@ -7429,14 +9109,22 @@
    "boost": null,
    "hue": 218,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/203-u-s-bar-the-art-of-mixology/01.webp",
+    "/img/bars/vt/203-u-s-bar-the-art-of-mixology/02.webp",
+    "/img/bars/vt/203-u-s-bar-the-art-of-mixology/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mia.vn/cam-nang-du-lich/top-bar-vung-tau-de-chill-va-vui-choi-21526",
     "https://mytour.vn/en/blog/bai-viet/top-7-popular-cocktail-bars-in-vung-tau-mytour.html"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://mia.vn/cam-nang-du-lich/top-bar-vung-tau-de-chill-va-vui-choi-21526",
+    "https://mytour.vn/en/blog/bai-viet/top-7-popular-cocktail-bars-in-vung-tau-mytour.html"
+   ]
   },
   {
    "id": 204,
@@ -7465,14 +9153,26 @@
    "boost": null,
    "hue": 7,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/204-black-pearl-bar/01.webp",
+    "/img/bars/vt/204-black-pearl-bar/02.webp",
+    "/img/bars/vt/204-black-pearl-bar/03.webp",
+    "/img/bars/vt/204-black-pearl-bar/04.webp",
+    "/img/bars/vt/204-black-pearl-bar/05.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://mytour.vn/en/blog/bai-viet/top-9-famous-bars-in-vung-tau.html",
     "https://theculturetrip.com/asia/vietnam/articles/the-5-best-bars-in-vung-tau-vietnam"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/vung-tau/black-pearl-bar",
+    "https://danhsach.vn/ba-ria-vung-tau/dia-diem-uy-tin/black-pearl-bar-64-ha-long-phuong-2-thanh-pho-vung-tau-ba-ria-vung-tau-3435333264.html",
+    "https://triphunter.vn/places/vung-tau/items/black-pearl-bar",
+    "https://qvungtau.com/black-pearl-bar-vung-tau/"
+   ]
   },
   {
    "id": 205,
@@ -7501,13 +9201,20 @@
    "boost": null,
    "hue": 124,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/205-tgt-disco-club/01.webp",
+    "/img/bars/vt/205-tgt-disco-club/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/vung-tau/bar-pub"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://pk.trip.com/restaurant/vietnam/vung-tau/detail/tgt-disco-club-142652164/",
+    "https://www.foody.vn/vung-tau/tgt-disco-club-ha-long"
+   ]
   },
   {
    "id": 206,
@@ -7536,13 +9243,21 @@
    "boost": null,
    "hue": 9,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/206-anchor-bar-thuy-van/01.webp",
+    "/img/bars/vt/206-anchor-bar-thuy-van/02.webp",
+    "/img/bars/vt/206-anchor-bar-thuy-van/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/vung-tau/bar-pub-phuc-vu-bia"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/vung-tau/bar-pub-phuc-vu-bia",
+    "https://www.tripadvisor.com.vn/Restaurant_Review-g303946-d8071331-Reviews-Anchor_Bar-Vung_Tau_Ba_Ria_Vung_Tau_Province.html"
+   ]
   },
   {
    "id": 207,
@@ -7571,13 +9286,22 @@
    "boost": null,
    "hue": 206,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/207-la-sirena-bar-grill/01.webp",
+    "/img/bars/vt/207-la-sirena-bar-grill/02.webp",
+    "/img/bars/vt/207-la-sirena-bar-grill/03.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/vung-tau/bar-pub-phuc-vu-ruou-vang"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/vung-tau/la-sirena-bar-grill",
+    "https://bazantravel.com/quan-an-ngon-ba-ria/",
+    "https://restaurantguru.com/La-Sirena-tp-Vung-Tau"
+   ]
   },
   {
    "id": 208,
@@ -7606,13 +9330,23 @@
    "boost": null,
    "hue": 251,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/208-fang-pub/01.webp",
+    "/img/bars/vt/208-fang-pub/02.webp",
+    "/img/bars/vt/208-fang-pub/03.webp",
+    "/img/bars/vt/208-fang-pub/04.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/vung-tau/bar-pub"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://vnguide.vn/restaurant/quan-fang-pub",
+    "https://www.foody.vn/vung-tau/fang-pub-vung-tau",
+    "https://www.foody.vn/vung-tau/bar-pub"
+   ]
   },
   {
    "id": 209,
@@ -7641,13 +9375,19 @@
    "boost": null,
    "hue": 280,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/209-summer-wine-corner-bar/01.webp",
+    "/img/bars/vt/209-summer-wine-corner-bar/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/vung-tau/bar-pub-phuc-vu-ruou-vang"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/vung-tau/bar-pub-phuc-vu-ruou-vang"
+   ]
   },
   {
    "id": 210,
@@ -7676,13 +9416,19 @@
    "boost": null,
    "hue": 63,
    "menu": [],
-   "images": [],
+   "images": [
+    "/img/bars/vt/210-pineapple-beach-bar/01.webp",
+    "/img/bars/vt/210-pineapple-beach-bar/02.webp"
+   ],
    "hidden": false,
    "partner": false,
    "sources": [
     "https://www.foody.vn/vung-tau/bar-pub"
    ],
-   "priceEst": true
+   "priceEst": true,
+   "photoSources": [
+    "https://www.foody.vn/vung-tau/bar-pub"
+   ]
   }
  ]
 }
