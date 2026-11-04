@@ -138,11 +138,11 @@
       return { m: out, c: ['Gợi ý bar tối nay', 'Có cần cọc không?', 'Gặp nhân viên'] };
     }
     if (/coc|huy|hoan tien/.test(t)) {
-      out.push({ t: 'bot', x: 'Hạng Gold và Black đặt bàn không cần cọc, được giữ bàn 30 phút. Hạng khác có thể cần cọc với bàn VIP tối thứ 6, thứ 7.\nHuỷ miễn phí trước 18:00 ngày đặt.' });
+      out.push({ t: 'bot', x: 'Đặt bàn qua TopChill không cần cọc, áp dụng cho mọi hạng thành viên. Tổng đài hỗ trợ 24/7.\nHuỷ miễn phí trước 18:00 ngày đặt.' });
       return { m: out, c: ['Gợi ý bar tối nay', 'Gặp nhân viên'] };
     }
-    if (/diem|doi tien|thanh vien|hang|gold|black|silver|momo/.test(t)) {
-      out.push({ t: 'bot', x: 'Mỗi 10.000đ chi tiêu = 1 điểm, 1 điểm = 500đ. Điểm đổi ra tiền về Momo, ZaloPay, ngân hàng hoặc trừ thẳng vào bill, tối đa 30% giá trị bàn.\nHạng Gold giảm thêm 10% mọi bill, Black giảm 15% và tặng 1 chai rượu mỗi tháng.' });
+    if (/diem|doi tien|thanh vien|hang|gold|vang|platinum|silver|newbie/.test(t)) {
+      out.push({ t: 'bot', x: 'Hạng thành viên TopChill (theo tổng chi tiêu khi đặt qua TopChill):\n• Newbie: hỗ trợ 24/7, đặt bàn không cần cọc.\n• Silver (20 triệu): giảm 5% bill.\n• Vàng (80 triệu): giảm 8% bill + rượu quà sinh nhật.\n• Platinum (150 triệu): giảm 10% bill, tích điểm hàng tháng, chương trình tặng rượu tại bar.' });
       return { m: out, c: ['Gợi ý bar tối nay', 'Giờ vàng là gì?'] };
     }
     if (/mac gi|dress|trang phuc|dep le/.test(t)) {

@@ -272,7 +272,7 @@ function footer() {
   const postLinks = POSTS.slice(0, 5).map(p => `<a href="${href(p.path)}">${esc(p.title.split(':')[0])}</a>`).join('');
   return `<footer class="foot"><div class="wrap foot-grid">
   <div><a class="logo" href="${href('')}">${LOGO('')}</a>
-    <p style="margin-top:10px">Đặt bàn bar, lounge, club khắp Việt Nam. Giảm thẳng vào bill, tặng rượu bàn VIP, tích điểm đổi tiền.</p>
+    <p style="margin-top:10px">Đặt bàn bar, lounge, club khắp Việt Nam. Đặt bàn không cần cọc, hỗ trợ 24/7, hạng thành viên giảm đến 10% bill.</p>
     <p class="note">© ${new Date().getFullYear()} TopChill.vn. Bảo lưu mọi quyền. Nghiêm cấm sao chép giao diện, nội dung và mã nguồn.</p>
     <p class="note">Bản demo. Tên bar, địa chỉ, số liệu và đánh giá là dữ liệu minh hoạ. Uống có trách nhiệm, không lái xe sau khi uống rượu bia.</p></div>
   <div><h4>Bar theo thành phố</h4>${cityLinks}</div>
@@ -396,7 +396,7 @@ function barPage(b) {
       <div class="perk"><b class="v">-${b.deal}%</b><div><b>Giảm thẳng vào bill</b><small>Quét mã QR tại quầy khi thanh toán.</small></div></div>
       ${b.gpct ? `<div class="perk n"><b class="v">-${b.gpct}%</b><div><b>Giờ vàng ${b.gLabel}</b><small>Đến trong khung này, giảm thêm, cộng dồn.</small></div></div>` : ''}
       ${b.bonus ? `<div class="perk"><b class="v">🎁</b><div><b>${esc(b.bonus)}</b><small>${esc(b.bonusNote || 'Tặng tại bàn theo điều kiện của bar.')}${b.promoUntil ? ' · Hạn đến ' + fmtDate(b.promoUntil) : ''}</small></div></div>` : ''}
-      <div class="perk"><b class="v">+15%</b><div><b>Hoàn điểm đổi tiền</b><small>1 điểm = 500đ, đổi về Momo hoặc trừ bill.</small></div></div>
+      <div class="perk"><b class="v">-10%</b><div><b>Giảm thêm theo hạng thành viên</b><small>Silver 5%, Vàng 8%, Platinum 10% bill. Newbie: hỗ trợ 24/7, không cần cọc.</small></div></div>
     </div>` : `<h2>Đặt bàn qua TopChill</h2>
     <div class="perkbox"><div class="perk"><b class="v">📞</b><div><b>Tổng đài giữ bàn giúp bạn</b><small>Bar chưa áp dụng ưu đãi qua TopChill. Gửi yêu cầu hoặc gọi ${esc(CFG.hotline)}, tổng đài gọi lại xác nhận.</small></div></div></div>`;
   const body = `
@@ -462,7 +462,7 @@ function postPage(p, idx) {
   <div class="cover">${img([p.cover, POOL.cocktail[0]], 1400, p.coverAlt, { eager: true, ratio: [16, 8] })}</div>
   <div class="post-grid">
     <div class="prose">${p.html}
-      <aside class="ctabox"><b>Đặt bàn qua TopChill</b><p>Giảm thẳng vào bill, giờ vàng giảm thêm đến 20%, tặng rượu bàn VIP, không cần cọc với hạng Gold.</p><a class="btn btn-gold" href="${href('')}">Đặt bàn ngay</a></aside>
+      <aside class="ctabox"><b>Đặt bàn qua TopChill</b><p>Giảm thẳng vào bill, giờ vàng giảm thêm đến 20%, đặt bàn không cần cọc, hạng thành viên giảm đến 10% bill.</p><a class="btn btn-gold" href="${href('')}">Đặt bàn ngay</a></aside>
       ${p.tags.length ? `<div class="tags">${p.tags.map(t => `<a href="${href('blog/')}#${slugify(t)}">#${esc(t)}</a>`).join('')}</div>` : ''}
       <div class="share">Chia sẻ:
         <a class="btn btn-ghost" href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" rel="noopener">Facebook</a>
