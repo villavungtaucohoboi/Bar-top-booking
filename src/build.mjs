@@ -143,7 +143,7 @@ function md(src) {
     if (/^:::cta/.test(l)) {
       const buf = []; i++; while (i < lines.length && !/^:::/.test(lines[i])) buf.push(lines[i++]); i++;
       const [title, ...rest] = buf.filter(x => x.trim());
-      out.push(`<aside class="ctabox"><b>${inline(title || 'Đặt bàn qua TopChill')}</b>${rest.length ? `<p>${inline(rest.join(' '))}</p>` : ''}<a class="btn btn-gold" href="${href('')}">Đặt bàn ngay, giảm đến 40%</a></aside>`);
+      out.push(`<aside class="ctabox"><b>${inline(title || 'Đặt bàn qua TopChill')}</b>${rest.length ? `<p>${inline(rest.join(' '))}</p>` : ''}<a class="btn btn-gold" href="${href('')}">Đặt bàn ngay, không cần cọc</a></aside>`);
       continue;
     }
     if (/^>\s?/.test(l)) {
@@ -325,7 +325,7 @@ function cityPage(c) {
   const bars = ranked(BARS.filter(b => b.city === c.id));
   const S = c.seo;
   const title = bars.length ? clip(`Bar ${c.name}: ${bars.length} bar, lounge, club nổi bật, đặt bàn nhanh (${new Date().getFullYear()})`, 65) : `Bar ${c.name}: đặt bàn bar, lounge, club giảm giá`;
-  const desc = S.description || `Danh sách bar ${c.name} nổi bật: rooftop, lounge, club. Xem giá, giờ mở cửa, ưu đãi giờ vàng và đặt bàn giảm đến 40%, tặng rượu bàn VIP.`;
+  const desc = S.description || `Danh sách bar ${c.name} nổi bật: rooftop, lounge, club. Xem giá, giờ mở cửa, giá tham khảo và đặt bàn không cần cọc qua TopChill.`;
   const crumbs = [['Trang chủ', ''], [`Bar ${c.name}`, c.path]];
   const faq = cityFaq(c, bars);
   const related = POSTS.filter(p => p.city === c.id || p.tags.some(t => slugify(t).includes(slugify(c.name)))).concat(POSTS).filter((p, i, a) => a.indexOf(p) === i).slice(0, 3);
@@ -482,7 +482,7 @@ ${related.length ? `<section class="sec"><div class="wrap"><h2>Bài viết liên
       mainEntityOfPage: url(p.path), keywords: [p.keyword, ...p.tags].filter(Boolean).join(', '), wordCount: p.words, inLanguage: 'vi-VN' },
     faqLd(p.faq.filter(f => f.a)),
   ];
-  write(p.path + 'index.html', page({ title: p.title, desc: p.description, pathRel: p.path, image: p.cover, type: 'article', ld, active: 'blog/' }, body, { mcta: mctaBar('Đặt bàn bar giảm đến 40%', href('')) }));
+  write(p.path + 'index.html', page({ title: p.title, desc: p.description, pathRel: p.path, image: p.cover, type: 'article', ld, active: 'blog/' }, body, { mcta: mctaBar('Đặt bàn bar, không cần cọc', href('')) }));
 }
 function blogIndex() {
   const crumbs = [['Trang chủ', ''], ['Cẩm nang', 'blog/']];
@@ -492,7 +492,7 @@ function blogIndex() {
   <header class="post-head narrow">
     <span class="eyebrow">Cẩm nang đi bar</span>
     <h1>Cẩm nang đi bar: kinh nghiệm, bảng giá, review bar</h1>
-    <p class="lead">Kinh nghiệm đi bar lần đầu, bảng giá đặt bàn, top bar Hà Nội, Sài Gòn, Đà Nẵng và cách đặt bàn giảm giá, nhận rượu tặng.</p>
+    <p class="lead">Kinh nghiệm đi bar lần đầu, bảng giá đặt bàn, gợi ý bar Hà Nội, Sài Gòn, Đà Nẵng và cách đặt bàn không cần cọc.</p>
   </header>
   ${tags.length ? `<div class="tags" style="margin-bottom:20px">${tags.map(t => `<a id="${slugify(t)}" href="#${slugify(t)}">#${esc(t)}</a>`).join('')}</div>` : ''}
   <div class="cards">${POSTS.length ? POSTS.map(postCard).join('') : '<p class="muted">Bài viết đang được cập nhật với thông tin bar thật. Quay lại sau nhé.</p>'}</div>
@@ -500,7 +500,7 @@ function blogIndex() {
 <section class="sec"><div class="wrap"><h2>Tìm bar theo thành phố</h2><div class="citylinks">${CITIES.filter(x => BARS.some(b => b.city === x.id)).map(x => `<a href="${href(x.path)}">Bar ${esc(x.name)}</a>`).join('')}</div></div></section>`;
   const ld = [breadcrumbLd(crumbs), { '@context': 'https://schema.org', '@type': 'Blog', name: 'Cẩm nang đi bar TopChill', url: url('blog/'), publisher: ORG,
     blogPost: POSTS.map(p => ({ '@type': 'BlogPosting', headline: p.title, url: url(p.path), datePublished: p.date })) }];
-  write('blog/index.html', page({ title: 'Cẩm nang đi bar: kinh nghiệm, bảng giá, review bar | TopChill', desc: 'Kinh nghiệm đi bar lần đầu, giá đặt bàn bar, top bar Hà Nội, Sài Gòn, Đà Nẵng, cách đặt bàn giảm giá đến 40% và nhận rượu tặng bàn VIP.', pathRel: 'blog/', ld, active: 'blog/' }, body));
+  write('blog/index.html', page({ title: 'Cẩm nang đi bar: kinh nghiệm, bảng giá, review bar | TopChill', desc: 'Kinh nghiệm đi bar lần đầu, giá đặt bàn bar, top bar Hà Nội, Sài Gòn, Đà Nẵng, kinh nghiệm chọn bar và cách đặt bàn không cần cọc.', pathRel: 'blog/', ld, active: 'blog/' }, body));
 }
 
 /* ---------- 9. Huy hiệu đối tác (backlink) ---------- */
@@ -584,13 +584,13 @@ function homePage() {
   </div></section>` : '') + `
   <section class="block"><div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Đặt bàn bar toàn quốc</div><h2>Bar Hà Nội, Sài Gòn và 12 thành phố</h2></div></div>
-    <p class="muted" style="max-width:75ch;margin-bottom:16px">TopChill là nền tảng đặt bàn bar, lounge, club tại Việt Nam. Bạn xem bảng xếp hạng bar theo lượt đặt và đánh giá thật, so sánh giá, giờ mở cửa, dress code, rồi đặt bàn trong 30 giây. Đặt qua TopChill được giảm thẳng vào bill, giảm thêm khi đến trong giờ vàng, tặng rượu cho bàn VIP và tích điểm đổi ra tiền.</p>
+    <p class="muted" style="max-width:75ch;margin-bottom:16px">TopChill là nền tảng đặt bàn bar, lounge, club tại Việt Nam. Bạn xem danh sách bar theo thành phố, địa chỉ, giá tham khảo, giờ mở cửa, rồi gọi, nhắn Zalo hoặc để lại số để tổng đài giữ bàn, không cần cọc. Thành viên được giảm đến 10% bill tại bar đối tác theo hạng.</p>
     <div class="rail" style="flex-wrap:wrap">${citiesWithBars.map(c => `<a class="chip" href="${c.path}">Bar ${esc(c.name)} <small>${c.n}</small></a>`).join('')}</div>
   </div></section>`;
   body = body.replace('<!--SEO_HOME-->', seoBlock);
   const i = body.indexOf('</style>') + 8;
-  const title = 'TopChill – Đặt bàn bar Hà Nội, Sài Gòn giảm đến 40%, tặng rượu';
-  const desc = 'Đặt bàn bar, lounge, club tại Hà Nội, Sài Gòn, Đà Nẵng và 12 thành phố. Giảm thẳng vào bill, giờ vàng giảm thêm 20%, tặng rượu bàn VIP, tích điểm đổi tiền.';
+  const title = 'TopChill – Đặt bàn bar Hà Nội, Sài Gòn, Đà Nẵng không cần cọc';
+  const desc = 'Đặt bàn bar, lounge, club tại Hà Nội, Sài Gòn, Đà Nẵng và 12 thành phố. Đặt bàn không cần cọc, tổng đài hỗ trợ 24/7, thành viên giảm đến 15% bill.';
   const ld = [
     { '@context': 'https://schema.org', '@type': 'WebSite', name: CFG.siteName, url: SITE + '/', inLanguage: 'vi-VN', publisher: ORG },
     { '@context': 'https://schema.org', ...ORG, contactPoint: { '@type': 'ContactPoint', telephone: CFG.hotline, contactType: 'customer service', areaServed: 'VN', availableLanguage: 'Vietnamese' } },

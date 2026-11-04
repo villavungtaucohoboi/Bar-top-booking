@@ -17,7 +17,8 @@
   var css = document.createElement('style');
   css.textContent =
     '.tci{position:fixed;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));top:calc(env(safe-area-inset-top,0px) + 74px);z-index:95;display:flex;align-items:center;gap:10px;padding:10px 10px 10px 12px;border-radius:18px;background:rgba(18,10,26,.92);border:1px solid rgba(255,63,174,.5);box-shadow:0 14px 40px rgba(0,0,0,.5),0 0 20px rgba(255,63,174,.25);color:#fff;font:14px/1.35 "Be Vietnam Pro",system-ui,sans-serif;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);animation:tciIn .35s ease-out;max-width:560px;margin:0 auto}' +
-    '.tci[hidden]{display:none}' +
+    '.tci[hidden],.tci [hidden]{display:none!important}' +
+    '.tci{flex-wrap:wrap;row-gap:8px}.tci .t{flex:1 1 150px}' +
     '@keyframes tciIn{from{opacity:0;transform:translateY(-10px)}}' +
     '.tci img{width:42px;height:42px;border-radius:11px;flex:none}' +
     '.tci .t{flex:1;min-width:0}.tci .t b{display:block;font-size:14.5px}.tci .t small{color:#cfc4e0;font-size:12.5px}' +
