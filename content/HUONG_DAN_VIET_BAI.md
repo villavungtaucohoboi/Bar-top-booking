@@ -68,3 +68,4 @@ Thân bài (1.000–1.600 từ):
 3. `node src/build.mjs` phải chạy không lỗi, có `blog/<slug>/index.html`. Kiểm tra mọi ảnh trong bài tồn tại.
 4. **Chỉ commit file bài viết** (không commit file build): `git checkout -- . ':!content/blog'` rồi `git add content/blog/<slug>.md`.
 5. Commit "Cẩm nang: <tiêu đề>" và `git push origin main` (thử lại tối đa 4 lần nếu lỗi mạng). GitHub Actions tự build và đăng.
+
