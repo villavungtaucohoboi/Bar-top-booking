@@ -187,7 +187,7 @@ const POSTS = fs.readdirSync(path.join(ROOT, 'content/blog')).filter(f => f.ends
 }).filter(p => !p.draft).sort((a, b) => b.date.localeCompare(a.date));
 
 /* ---------- 4. Khung trang ---------- */
-const ORG = { '@type': 'Organization', name: CFG.siteName, url: SITE + '/', logo: url('logo-topchill.jpg') };
+const ORG = { '@type': 'Organization', '@id': SITE + '/#org', name: CFG.siteName, alternateName: ['TopChill.vn', 'Top Chill'], url: SITE + '/', logo: { '@type': 'ImageObject', url: url('icon-512.png'), width: 512, height: 512 }, image: url('logo-topchill.jpg'), description: 'TopChill là nền tảng đặt bàn bar, lounge, club tại Việt Nam: tổng đài giữ bàn 24/7, không cần cọc, thông tin bar có nguồn rõ ràng.', telephone: CFG.hotline, areaServed: 'VN' };
 function breadcrumbLd(items) {
   return { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: it[0], item: url(it[1]) })) };
 }
@@ -242,11 +242,13 @@ ${SECURITY_TAGS}
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url(pathRel)}">
-<meta property="og:image" content="${esc(UNS(image || POOL.cocktail[0], 1200))}">
+<meta property="og:image" content="${esc(/^\//.test(image || '') ? url(image) : UNS(image || POOL.cocktail[0], 1200))}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0b0710">
 <meta name="color-scheme" content="dark">
-<link rel="icon" href="${href('icon.svg')}" type="image/svg+xml">
+<link rel="icon" href="${href('favicon.ico')}" sizes="48x48">
+<link rel="icon" href="${href('favicon-96.png')}" type="image/png" sizes="96x96">
+<link rel="icon" href="${href('favicon-192.png')}" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="${href('icon-192.png')}">
 <link rel="manifest" href="${href('manifest.webmanifest')}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -274,10 +276,10 @@ function footer() {
   <div><a class="logo" href="${href('')}">${LOGO('')}</a>
     <p style="margin-top:10px">Đặt bàn bar, lounge, club khắp Việt Nam. Đặt bàn không cần cọc, hỗ trợ 24/7, hạng thành viên giảm đến 10% bill.</p>
     <p class="note">© ${new Date().getFullYear()} TopChill.vn. Bảo lưu mọi quyền. Nghiêm cấm sao chép giao diện, nội dung và mã nguồn.</p>
-    <p class="note">Bản demo. Tên bar, địa chỉ, số liệu và đánh giá là dữ liệu minh hoạ. Uống có trách nhiệm, không lái xe sau khi uống rượu bia.</p></div>
+    <p class="note">Thông tin bar tổng hợp từ nguồn công khai, có thể thay đổi; gọi ${esc(CFG.hotline)} để xác nhận trước khi đi. Uống có trách nhiệm, không lái xe sau khi uống rượu bia.</p></div>
   <div><h4>Bar theo thành phố</h4>${cityLinks}</div>
   <div><h4>Cẩm nang</h4>${postLinks}<a href="${href('blog/')}">Tất cả bài viết</a></div>
-  <div><h4>TopChill</h4><a href="${href('')}#thanh-vien">Hạng thành viên</a><a href="${href('')}#chu-bar">Dành cho chủ bar</a><a href="${href('huy-hieu/')}">Huy hiệu đối tác</a><a href="tel:${CFG.hotline.replace(/\s/g, '')}">Hotline ${esc(CFG.hotline)}</a><a href="https://zalo.me/${CFG.zalo}" target="_blank" rel="noopener">Zalo ${esc(CFG.hotline)}</a><a href="https://t.me/${CFG.telegram}" target="_blank" rel="noopener">Telegram ${esc(CFG.hotline)}</a></div>
+  <div><h4>TopChill</h4><a href="${href('gioi-thieu/')}">Giới thiệu TopChill</a><a href="${href('')}#thanh-vien">Hạng thành viên</a><a href="${href('')}#chu-bar">Dành cho chủ bar</a><a href="${href('huy-hieu/')}">Huy hiệu đối tác</a><a href="tel:${CFG.hotline.replace(/\s/g, '')}">Hotline ${esc(CFG.hotline)}</a><a href="https://zalo.me/${CFG.zalo}" target="_blank" rel="noopener">Zalo ${esc(CFG.hotline)}</a><a href="https://t.me/${CFG.telegram}" target="_blank" rel="noopener">Telegram ${esc(CFG.hotline)}</a></div>
 </div></footer>`;
 }
 function page(opts, body, { mcta = '' } = {}) {
@@ -503,6 +505,56 @@ function blogIndex() {
   write('blog/index.html', page({ title: 'Cẩm nang đi bar: kinh nghiệm, bảng giá, review bar | TopChill', desc: 'Kinh nghiệm đi bar lần đầu, giá đặt bàn bar, top bar Hà Nội, Sài Gòn, Đà Nẵng, kinh nghiệm chọn bar và cách đặt bàn không cần cọc.', pathRel: 'blog/', ld, active: 'blog/' }, body));
 }
 
+/* ---------- 9b. Giới thiệu ---------- */
+function aboutPage() {
+  const crumbs = [['Trang chủ', ''], ['Giới thiệu', 'gioi-thieu/']];
+  const tel = CFG.hotline.replace(/\s/g, '');
+  const nCity = CITIES.filter(c => BARS.some(b => b.city === c.id)).length;
+  const nImg = BARS.reduce((a, b) => a + ((b.images || []).length), 0);
+  const body = `
+<div class="wrap narrow">${crumbsHtml(crumbs)}
+  <header class="post-head">
+    <span class="eyebrow">Về chúng tôi</span>
+    <h1>TopChill – đặt bàn bar, club, lounge khắp Việt Nam</h1>
+    <p class="lead">TopChill giúp bạn tìm đúng chỗ đi chơi tối nay và giữ bàn chỉ bằng một cuộc gọi. Không cần cọc, không mất phí, có người thật hỗ trợ 24/7.</p>
+  </header>
+  <div class="prose">
+    <p><img src="${href('logo-topchill.jpg')}" alt="Logo TopChill" width="220" height="220" style="position:static;border-radius:24px"></p>
+    <h2 id="topchill-la-gi">TopChill là gì?</h2>
+    <p>TopChill (topchill.vn) là nền tảng tìm và đặt bàn bar, lounge, club, rooftop, beach club tại Việt Nam. Hiện có <b>${BARS.length} địa điểm</b> ở <b>${nCity} thành phố</b>: Hà Nội, Sài Gòn, Đà Nẵng, Nha Trang, Phú Quốc, Đà Lạt, Hải Phòng, Vũng Tàu, Hạ Long, Cần Thơ, Huế và Bình Dương, kèm hơn ${Math.floor(nImg / 100) * 100} ảnh thực tế.</p>
+    <h2 id="dat-ban-the-nao">Đặt bàn qua TopChill thế nào?</h2>
+    <ol>
+      <li><b>Chọn bar:</b> lọc theo thành phố, loại hình, xem ảnh, địa chỉ, mức chi tham khảo.</li>
+      <li><b>Liên hệ theo cách bạn thích:</b> gọi <a href="tel:${tel}">${esc(CFG.hotline)}</a>, nhắn Zalo hoặc Telegram có sẵn nội dung, hoặc để lại số điện thoại.</li>
+      <li><b>Tổng đài gọi lại xác nhận</b> trong vài phút và giữ bàn cho bạn. Đến bar, báo tên hoặc mã đặt bàn là xong.</li>
+    </ol>
+    <h2 id="cam-ket">Cam kết của TopChill</h2>
+    <ul>
+      <li><b>Miễn phí cho khách:</b> không thu phí đặt bàn, không yêu cầu đặt cọc.</li>
+      <li><b>Thông tin minh bạch:</b> mỗi bar ghi rõ nguồn thông tin; giá là giá tham khảo và được tổng đài xác nhận khi đặt.</li>
+      <li><b>Không bịa đánh giá:</b> chúng tôi không đăng điểm đánh giá hay review giả cho các bar.</li>
+      <li><b>Bảo mật số điện thoại:</b> số bạn để lại chỉ dùng để gọi xác nhận đặt bàn.</li>
+      <li><b>Uống có trách nhiệm:</b> khuyến khích khách không lái xe sau khi uống rượu bia; TopChill không phục vụ người dưới 18 tuổi.</li>
+    </ul>
+    <h2 id="hang-thanh-vien">Ưu đãi thành viên</h2>
+    <p>Đăng ký miễn phí là hạng <b>Newbie</b>: hỗ trợ 24/7, đặt bàn không cần cọc. Chi tiêu qua TopChill từ 20 triệu lên <b>Silver</b> giảm 5% bill, từ 80 triệu lên <b>Vàng</b> giảm 8% kèm rượu quà sinh nhật, từ 150 triệu lên <b>Platinum</b> giảm 10%, tích điểm hàng tháng và các chương trình tặng rượu tại bar đối tác.</p>
+    <h2 id="chu-bar">Dành cho chủ bar</h2>
+    <p>Chủ bar muốn cập nhật thông tin, ảnh, khuyến mãi hoặc trở thành đối tác, vui lòng liên hệ hotline hoặc xem trang <a href="${href('')}#chu-bar">Dành cho chủ bar</a>. Nếu bạn là chủ ảnh hoặc chủ quán và muốn sửa, gỡ nội dung, chúng tôi xử lý trong 24 giờ.</p>
+    <h2 id="lien-he">Liên hệ</h2>
+    <ul>
+      <li>Hotline đặt bàn 24/7: <a href="tel:${tel}">${esc(CFG.hotline)}</a></li>
+      <li>Zalo: <a href="https://zalo.me/${CFG.zalo}" target="_blank" rel="noopener">${esc(CFG.hotline)}</a></li>
+      ${CFG.telegram ? `<li>Telegram: <a href="https://t.me/${CFG.telegram}" target="_blank" rel="noopener">${esc(CFG.telegram)}</a></li>` : ''}
+      <li>Website: <a href="${SITE}/">topchill.vn</a></li>
+    </ul>
+    <aside class="ctabox"><b>Tối nay đi đâu?</b><p>Xem ${BARS.length} bar, club, lounge và giữ bàn miễn phí, không cần cọc.</p><a class="btn btn-gold" href="${href('')}#kham-pha">Khám phá bar</a></aside>
+  </div>
+</div>`;
+  const ld = [{ '@context': 'https://schema.org', '@type': 'AboutPage', name: 'Giới thiệu TopChill', url: url('gioi-thieu/'), mainEntity: { '@id': SITE + '/#org' }, inLanguage: 'vi-VN' },
+    { '@context': 'https://schema.org', ...ORG, contactPoint: { '@type': 'ContactPoint', telephone: CFG.hotline, contactType: 'customer service', areaServed: 'VN', availableLanguage: 'Vietnamese', hoursAvailable: 'Mo-Su 00:00-23:59' } }, breadcrumbLd(crumbs)];
+  write('gioi-thieu/index.html', page({ title: 'Giới thiệu TopChill – nền tảng đặt bàn bar, club không cần cọc', desc: `TopChill giúp bạn tìm và đặt bàn ${BARS.length} bar, club, lounge tại ${nCity} thành phố. Miễn phí, không cần cọc, tổng đài ${CFG.hotline} hỗ trợ 24/7.`, pathRel: 'gioi-thieu/', image: '/logo-topchill.jpg', ld }, body));
+}
+
 /* ---------- 9. Huy hiệu đối tác (backlink) ---------- */
 function badgePage() {
   const crumbs = [['Trang chủ', ''], ['Huy hiệu đối tác', 'huy-hieu/']];
@@ -589,13 +641,13 @@ function homePage() {
   </div></section>`;
   body = body.replace('<!--SEO_HOME-->', seoBlock);
   const i = body.indexOf('</style>') + 8;
-  const title = 'TopChill – Đặt bàn bar Hà Nội, Sài Gòn, Đà Nẵng không cần cọc';
-  const desc = 'Đặt bàn bar, lounge, club tại Hà Nội, Sài Gòn, Đà Nẵng và 12 thành phố. Đặt bàn không cần cọc, tổng đài hỗ trợ 24/7, thành viên giảm đến 15% bill.';
+  const title = 'TopChill – Đặt bàn bar, club, lounge toàn quốc, không cần cọc';
+  const desc = `${BARS.length} bar, club, lounge tại 12 thành phố, ảnh thật, giá tham khảo. Gọi ${CFG.hotline} hoặc để lại số, tổng đài giữ bàn 24/7, không cần cọc.`;
   const ld = [
-    { '@context': 'https://schema.org', '@type': 'WebSite', name: CFG.siteName, url: SITE + '/', inLanguage: 'vi-VN', publisher: ORG },
+    { '@context': 'https://schema.org', '@type': 'WebSite', '@id': SITE + '/#website', name: CFG.siteName, alternateName: 'TopChill.vn', url: SITE + '/', inLanguage: 'vi-VN', publisher: { '@id': SITE + '/#org' } },
     { '@context': 'https://schema.org', ...ORG, contactPoint: { '@type': 'ContactPoint', telephone: CFG.hotline, contactType: 'customer service', areaServed: 'VN', availableLanguage: 'Vietnamese' } },
   ];
-  const head = headTags({ title, desc, pathRel: '', image: '1470337458703-46ad1756a187', ld })
+  const head = headTags({ title, desc, pathRel: '', image: '/logo-topchill.jpg', ld })
     .replace(/<link rel="stylesheet" href="[^"]*site\.css[^"]*">\n/, '')
     .replace(/<link rel="preconnect" href="https:\/\/fonts[^\n]*\n/, '').replace(/<link rel="stylesheet" href="https:\/\/fonts[^\n]*\n/, '');
   write('index.html', `<!doctype html>
@@ -659,7 +711,7 @@ async function minifyAll() {
 // dọn đầu ra cũ (chỉ các thư mục do build quản lý)
 if (OUT !== ROOT) fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
-for (const d of ['bar', 'blog', 'viet-bai', 'huy-hieu', 'assets', 'mau-bia', 'img', 'quan-ly', ...CITIES.map(c => c.slug)]) fs.rmSync(path.join(OUT, d), { recursive: true, force: true });
+for (const d of ['bar', 'blog', 'viet-bai', 'huy-hieu', 'gioi-thieu', 'assets', 'mau-bia', 'img', 'quan-ly', ...CITIES.map(c => c.slug)]) fs.rmSync(path.join(OUT, d), { recursive: true, force: true });
 for (const f of fs.readdirSync(path.join(ROOT, 'public'))) { fs.copyFileSync(path.join(ROOT, 'public', f), path.join(OUT, f)); GENERATED.push(f); }
 fs.mkdirSync(path.join(OUT, 'assets'), { recursive: true });
 fs.copyFileSync(path.join(ROOT, 'src/site.css'), path.join(OUT, 'assets/site.css'));
@@ -688,6 +740,7 @@ for (const b of BARS) { barPage(b); pages.push({ path: b.path, priority: '0.7' }
 blogIndex(); pages.push({ path: 'blog/', priority: '0.8' });
 POSTS.forEach((p, i) => { postPage(p, i); pages.push({ path: p.path, lastmod: p.updated, priority: '0.8' }); });
 badgePage(); pages.push({ path: 'huy-hieu/', priority: '0.3' });
+aboutPage(); pages.push({ path: 'gioi-thieu/', priority: '0.5' });
 editorPage();
 adminPage();
 { // trang so sánh mẫu bìa (nội bộ, noindex)
