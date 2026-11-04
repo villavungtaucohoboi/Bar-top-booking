@@ -5,7 +5,7 @@
   "repo": "villavungtaucohoboi/Bar-top-booking",
   "branch": "main",
   "hotline": "0838 000 222",
-  "allowIndexing": false,
+  "allowIndexing": true,
   "defaultAuthor": "Ban biên tập TopChill",
   "chatDemo": true,
   "zalo": "0838000222",
