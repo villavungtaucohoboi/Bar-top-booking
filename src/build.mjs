@@ -200,17 +200,23 @@ function faqLd(list) {
 function faqHtml(list) {
   return `<div class="faq">${list.map(f => `<details><summary>${esc(f.q)}</summary><div>${esc(f.a)}</div></details>`).join('')}</div>`;
 }
+/* Google Ads: thẻ toàn trang + chuyển đổi "liên hệ" khi khách bấm Gọi / Zalo / Telegram hoặc gửi số điện thoại */
+const ADS_TAG = CFG.googleAdsId ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${CFG.googleAdsId}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${CFG.googleAdsId}');
+(function(){var last=0;window.tcConv=function(kind){var now=Date.now();if(now-last<1500)return;last=now;try{gtag('event','conversion',{send_to:'${CFG.googleAdsId}/${CFG.googleAdsContactLabel}',value:1.0,currency:'VND',contact_method:kind||''})}catch(e){}};
+document.addEventListener('click',function(e){var t=e.target;if(!t||!t.closest)return;var a=t.closest('a[href^="tel:"],a[href*="zalo.me"],a[href*="t.me/"],#bkZalo,#bkTg,[data-fbzalo]');if(!a)return;var h=(a.getAttribute('href')||a.id||'');tcConv(/tel:/.test(h)?'call':/zalo|Zalo/.test(h)?'zalo':/t\.me|Tg/.test(h)?'telegram':'other')},true)})();</script>
+` : '';
 /* Bảo mật: CSP (chỉ chạy code từ nguồn cho phép), khoá tên miền, chống nhúng khung */
 const ALLOWED_HOSTS = ['topchill.vn', 'www.topchill.vn', 'localhost', '127.0.0.1'];
 const CSP = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://www.gstatic.com https://apis.google.com",
+  "script-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://www.gstatic.com https://apis.google.com https://www.googletagmanager.com https://*.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://*.doubleclick.net https://www.google.com https://*.google.com https://*.google.com.vn https://*.google-analytics.com https://*.analytics.google.com",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.tawk.to",
   "font-src 'self' data: https://fonts.gstatic.com https://*.tawk.to",
-  "img-src 'self' data: blob: https://images.unsplash.com https://*.tawk.to https://*.googleusercontent.com",
-  "connect-src 'self' https://api.web3forms.com https://formsubmit.co https://api.github.com https://raw.githubusercontent.com https://*.tawk.to wss://*.tawk.to https://*.googleapis.com https://*.firebaseio.com",
+  "img-src 'self' data: blob: https://images.unsplash.com https://*.tawk.to https://*.googleusercontent.com https://www.googletagmanager.com https://*.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://*.doubleclick.net https://www.google.com https://*.google.com https://*.google.com.vn https://*.google-analytics.com https://*.analytics.google.com",
+  "connect-src 'self' https://www.googletagmanager.com https://*.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://*.doubleclick.net https://www.google.com https://*.google.com https://*.google.com.vn https://*.google-analytics.com https://*.analytics.google.com https://api.web3forms.com https://formsubmit.co https://api.github.com https://raw.githubusercontent.com https://*.tawk.to wss://*.tawk.to https://*.googleapis.com https://*.firebaseio.com",
   "media-src 'self' data: blob:",
-  "frame-src https://*.tawk.to https://*.firebaseapp.com https://accounts.google.com",
+  "frame-src https://td.doubleclick.net https://*.doubleclick.net https://www.googletagmanager.com https://*.tawk.to https://*.firebaseapp.com https://accounts.google.com",
   "worker-src 'self' blob:",
   "manifest-src 'self'",
   "object-src 'none'",
@@ -251,7 +257,7 @@ ${SECURITY_TAGS}
 <link rel="icon" href="${href('favicon-192.png')}" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="${href('icon-192.png')}">
 <link rel="manifest" href="${href('manifest.webmanifest')}">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+${noindex ? '' : ADS_TAG}<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Fredoka:wght@600;700&display=swap">
 <link rel="stylesheet" href="${href('assets/site.css')}?v=${STAMP}">

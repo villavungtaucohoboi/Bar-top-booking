@@ -1700,6 +1700,7 @@ function renderBook(){
     if(!USER.guest){HIST.unshift({bar:cur.name,hue:cur.hue,date:date+' · '+bk.time,st:'soon',save:0});renderHist();saveAcct()}
     box.scrollIntoView({behavior:'smooth',block:'start'});
     toast('Đã gửi yêu cầu đặt bàn '+cur.name+'. Mã '+code+'.');
+    if(window.tcConv)tcConv('form');
     });
   };
 }
