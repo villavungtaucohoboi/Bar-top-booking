@@ -83,11 +83,12 @@ for (const b of BARS) {
 for (const c of CITIES) { c.n = BARS.filter(b => b.city === c.id).length; c.slug = 'bar-' + slugify(c.name); c.path = c.slug + '/'; c.seo = CITY_SEO[c.id] || {}; }
 const cityOf = id => CITIES.find(c => c.id === id);
 for (const b of BARS) if (BARS.some(x => x !== b && slugify(x.name) === slugify(b.name))) { b.slug = slugify(b.name) + '-' + slugify(cityOf(b.city).name); b.path = `bar/${b.slug}/`; }
+APP = APP.replace('const SLUGS={};', 'const SLUGS=' + JSON.stringify(Object.fromEntries(BARS.map(b => [b.id, b.slug]))) + ';');
 const rankOrder = { top: 0, hot: 1, null: 2 };
 const ranked = list => list.slice().sort((a, b) => (rankOrder[a.boost] - rankOrder[b.boost]) || (P(b) - P(a)) || (b.rating || 0) - (a.rating || 0));
 const barImgs = b => { if (b.images && b.images.length) return b.images.concat((POOL[TYPE_POOL[b.type]] || POOL.cocktail).slice(0, 1)); const p = POOL[TYPE_POOL[b.type]] || POOL.cocktail; const k = b.id % p.length; return p.slice(k).concat(p.slice(0, k)).slice(0, 3); };
 const cityImgs = c => (CITY_IMG[c.id] || []).concat(POOL.club.slice(0, 2));
-const bookHref = b => href('') + '#dat-' + b.id;
+const bookHref = b => href('') + '?dat=' + b.id;
 
 /* ảnh có dự phòng: thử lần lượt các ảnh, hết thì ẩn để lộ nền gradient */
 function img(ids, w, alt, { eager = false, ratio = [16, 9] } = {}) {
@@ -285,7 +286,7 @@ function footer() {
     <p class="note">Thông tin bar tổng hợp từ nguồn công khai, có thể thay đổi; gọi ${esc(CFG.hotline)} để xác nhận trước khi đi. Uống có trách nhiệm, không lái xe sau khi uống rượu bia.</p></div>
   <div><h4>Bar theo thành phố</h4>${cityLinks}</div>
   <div><h4>Cẩm nang</h4>${postLinks}<a href="${href('blog/')}">Tất cả bài viết</a></div>
-  <div><h4>TopChill</h4><a href="${href('gioi-thieu/')}">Giới thiệu TopChill</a><a href="${href('')}#thanh-vien">Hạng thành viên</a><a href="${href('')}#chu-bar">Dành cho chủ bar</a><a href="${href('huy-hieu/')}">Huy hiệu đối tác</a><a href="tel:${CFG.hotline.replace(/\s/g, '')}">Hotline ${esc(CFG.hotline)}</a><a href="https://zalo.me/${CFG.zalo}" target="_blank" rel="noopener">Zalo ${esc(CFG.hotline)}</a><a href="https://t.me/${CFG.telegram}" target="_blank" rel="noopener">Telegram ${esc(CFG.hotline)}</a></div>
+  <div><h4>TopChill</h4><a href="${href('gioi-thieu/')}">Giới thiệu TopChill</a><a href="${href('thanh-vien/')}">Hạng thành viên</a><a href="${href('chu-bar/')}">Dành cho chủ bar</a><a href="${href('huy-hieu/')}">Huy hiệu đối tác</a><a href="tel:${CFG.hotline.replace(/\s/g, '')}">Hotline ${esc(CFG.hotline)}</a><a href="https://zalo.me/${CFG.zalo}" target="_blank" rel="noopener">Zalo ${esc(CFG.hotline)}</a><a href="https://t.me/${CFG.telegram}" target="_blank" rel="noopener">Telegram ${esc(CFG.hotline)}</a></div>
 </div></footer>`;
 }
 function page(opts, body, { mcta = '' } = {}) {
@@ -354,7 +355,7 @@ function cityPage(c) {
       <span class="eyebrow">${fmt(c.n)} bar · cập nhật ${fmtDate(TODAY)}</span>
       <h1>Bar ${esc(c.name)}</h1>
       <p class="lead">${esc(S.intro || `Tổng hợp bar, lounge, club ở ${c.name} được khách đặt nhiều nhất trên TopChill.`)}</p>
-      <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${href('')}#tp-${c.id}">Đặt bàn bar ${esc(c.name)}</a></div>
+      <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${href('kham-pha/')}?tp=${c.id}">Đặt bàn bar ${esc(c.name)}</a></div>
     </div>
   </section>
 </div>
@@ -545,7 +546,7 @@ function aboutPage() {
     <h2 id="hang-thanh-vien">Ưu đãi thành viên</h2>
     <p>Đăng ký miễn phí là hạng <b>Newbie</b>: hỗ trợ 24/7, đặt bàn không cần cọc. Chi tiêu qua TopChill từ 20 triệu lên <b>Silver</b> giảm 5% bill, từ 80 triệu lên <b>Vàng</b> giảm 8% kèm rượu quà sinh nhật, từ 150 triệu lên <b>Platinum</b> giảm 10%, tích điểm hàng tháng và các chương trình tặng rượu tại bar đối tác.</p>
     <h2 id="chu-bar">Dành cho chủ bar</h2>
-    <p>Chủ bar muốn cập nhật thông tin, ảnh, khuyến mãi hoặc trở thành đối tác, vui lòng liên hệ hotline hoặc xem trang <a href="${href('')}#chu-bar">Dành cho chủ bar</a>. Nếu bạn là chủ ảnh hoặc chủ quán và muốn sửa, gỡ nội dung, chúng tôi xử lý trong 24 giờ.</p>
+    <p>Chủ bar muốn cập nhật thông tin, ảnh, khuyến mãi hoặc trở thành đối tác, vui lòng liên hệ hotline hoặc xem trang <a href="${href('chu-bar/')}">Dành cho chủ bar</a>. Nếu bạn là chủ ảnh hoặc chủ quán và muốn sửa, gỡ nội dung, chúng tôi xử lý trong 24 giờ.</p>
     <h2 id="lien-he">Liên hệ</h2>
     <ul>
       <li>Hotline đặt bàn 24/7: <a href="tel:${tel}">${esc(CFG.hotline)}</a></li>
@@ -553,7 +554,7 @@ function aboutPage() {
       ${CFG.telegram ? `<li>Telegram: <a href="https://t.me/${CFG.telegram}" target="_blank" rel="noopener">${esc(CFG.telegram)}</a></li>` : ''}
       <li>Website: <a href="${SITE}/">topchill.vn</a></li>
     </ul>
-    <aside class="ctabox"><b>Tối nay đi đâu?</b><p>Xem ${BARS.length} bar, club, lounge và giữ bàn miễn phí, không cần cọc.</p><a class="btn btn-gold" href="${href('')}#kham-pha">Khám phá bar</a></aside>
+    <aside class="ctabox"><b>Tối nay đi đâu?</b><p>Xem ${BARS.length} bar, club, lounge và giữ bàn miễn phí, không cần cọc.</p><a class="btn btn-gold" href="${href('kham-pha/')}">Khám phá bar</a></aside>
   </div>
 </div>`;
   const ld = [{ '@context': 'https://schema.org', '@type': 'AboutPage', name: 'Giới thiệu TopChill', url: url('gioi-thieu/'), mainEntity: { '@id': SITE + '/#org' }, inLanguage: 'vi-VN' },
@@ -673,7 +674,23 @@ ${CHAT_TAGS()}
 </body>
 </html>
 `);
+  const home = fs.readFileSync(path.join(OUT, 'index.html'), 'utf8');
+  for (const [dir, t, d] of APP_ROUTES) {
+    write(dir + 'index.html', home
+      .replace(/<title>[^<]*<\/title>/, `<title>${esc(t)}</title>`)
+      .replace(/(<meta name="description" content=")[^"]*/, `$1${esc(d)}`)
+      .replace(/(<meta property="og:title" content=")[^"]*/, `$1${esc(t)}`)
+      .replace(/(<meta property="og:description" content=")[^"]*/, `$1${esc(d)}`)
+      .replace(/(<link rel="canonical" href=")[^"]*/, `$1${url(dir)}`)
+      .replace(/(<meta property="og:url" content=")[^"]*/, `$1${url(dir)}`));
+  }
 }
+const APP_ROUTES = [
+  ['kham-pha/', 'Khám phá bar, club, lounge 12 thành phố – TopChill', 'Lọc bar theo thành phố, loại hình, xem ảnh thật, giá tham khảo và đặt bàn không cần cọc qua tổng đài TopChill 24/7.'],
+  ['thanh-vien/', 'Hạng thành viên TopChill – ưu đãi đến 15% bill', 'Newbie hỗ trợ 24/7, không cần cọc. Silver giảm 5%, Vàng giảm 8% + rượu sinh nhật, Platinum giảm 10% bill tại bar đối tác.'],
+  ['hoi-nhom/', 'Hội nhóm đi bar – TopChill', 'Rủ bạn đi bar, chia sẻ kinh nghiệm và hỏi đáp về bar, club, lounge cùng cộng đồng TopChill.'],
+  ['chu-bar/', 'Dành cho chủ bar – đưa bar lên TopChill', 'Đăng bar lên TopChill, cập nhật ảnh, khuyến mãi và nhận khách đặt bàn qua tổng đài 24/7.'],
+];
 
 /* ---------- 12. 404, sitemap, robots ---------- */
 function misc(pages) {
@@ -717,7 +734,7 @@ async function minifyAll() {
 // dọn đầu ra cũ (chỉ các thư mục do build quản lý)
 if (OUT !== ROOT) fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
-for (const d of ['bar', 'blog', 'viet-bai', 'huy-hieu', 'gioi-thieu', 'assets', 'mau-bia', 'img', 'quan-ly', ...CITIES.map(c => c.slug)]) fs.rmSync(path.join(OUT, d), { recursive: true, force: true });
+for (const d of ['bar', 'blog', 'viet-bai', 'huy-hieu', 'gioi-thieu', 'kham-pha', 'thanh-vien', 'hoi-nhom', 'chu-bar', 'assets', 'mau-bia', 'img', 'quan-ly', ...CITIES.map(c => c.slug)]) fs.rmSync(path.join(OUT, d), { recursive: true, force: true });
 for (const f of fs.readdirSync(path.join(ROOT, 'public'))) { fs.copyFileSync(path.join(ROOT, 'public', f), path.join(OUT, f)); GENERATED.push(f); }
 fs.mkdirSync(path.join(OUT, 'assets'), { recursive: true });
 fs.copyFileSync(path.join(ROOT, 'src/site.css'), path.join(OUT, 'assets/site.css'));
@@ -739,7 +756,7 @@ GENERATED.push('assets/site.css', 'assets/chat.css', 'assets/chat.js', 'assets/m
   fs.writeFileSync(path.join(OUT, 'assets/chat-data.js'), 'window.TC_CHAT=' + JSON.stringify(data) + ';\n');
 }
 
-const pages = [{ path: '', priority: '1.0' }];
+const pages = [{ path: '', priority: '1.0' }, { path: 'kham-pha/', priority: '0.9' }, { path: 'thanh-vien/', priority: '0.4' }, { path: 'chu-bar/', priority: '0.3' }];
 homePage();
 for (const c of CITIES) { const r = cityPage(c); pages.push({ path: r.path, noindex: r.noindex, priority: '0.9' }); }
 for (const b of BARS) { barPage(b); pages.push({ path: b.path, priority: '0.7' }); }
