@@ -3,7 +3,7 @@
 // Không khẳng định chi tiết riêng nào mà dữ liệu không có.
 const pick = (arr, seed, off = 0) => arr[(seed + off) % arr.length];
 
-const TYPE = {
+export const TYPE = {
   'Rooftop': {
     label: 'rooftop bar',
     space: [
@@ -105,7 +105,7 @@ const TYPE = {
   },
 };
 
-const COMMON_TIPS = [
+export const COMMON_TIPS = [
   'Đặt bàn trước vào tối thứ 6, thứ 7 và dịp lễ vì chỗ đẹp hết nhanh.',
   'Gọi tổng đài xác nhận giờ mở cửa trước khi đi, giờ có thể đổi theo mùa hoặc sự kiện.',
   'Đi nhóm nên hẹn điểm gặp và giữ điện thoại đủ pin.',
@@ -116,7 +116,7 @@ const COMMON_TIPS = [
 const sentences = t => String(t || '').replace(/\s+/g, ' ').split(/(?<=[.!?])\s+/).map(s => s.trim()).filter(Boolean);
 
 export function barStory(b, ctx) {
-  const { esc, fmt, c, href, hotline, bars, P, pk, hk, mapUrl } = ctx;
+  const { esc, fmt, land, c, href, hotline, bars, P, pk, hk, mapUrl } = ctx;
   const T = TYPE[b.type] || TYPE['Lounge'];
   const seed = b.id;
   const where = [b.addr, b.addr && b.addr.includes(b.area) ? '' : b.area, c.name].filter(Boolean).join(', ');
@@ -149,7 +149,8 @@ export function barStory(b, ctx) {
     <h2 style="margin-top:28px">Địa chỉ và đường đi</h2>
     <div class="prose"><p>${esc(b.name)} ${b.addr ? `ở ${esc(where)}` : `nằm ở khu vực ${esc(b.area)}, ${esc(c.name)}`}. Bạn có thể <a href="${esc(mapUrl)}" target="_blank" rel="noopener">xem đường đi trên Google Maps</a> hoặc báo tổng đài, nhân viên sẽ chỉ đường khi gọi xác nhận bàn.</p>
     ${sameArea.length ? `<p><b>Bar cùng khu vực ${esc(b.area)}:</b> ${sameArea.map(link).join(', ')}.</p>` : ''}
-    ${sameType.length ? `<p><b>${esc(b.type)} khác ở ${esc(c.name)}:</b> ${sameType.map(link).join(', ')}.</p>` : ''}</div>
+    ${sameType.length ? `<p><b>${esc(b.type)} khác ở ${esc(c.name)}:</b> ${sameType.map(link).join(', ')}.</p>` : ''}
+    ${land ? `<p><a href="${href(land.path)}">Xem tất cả ${esc(land.name)} →</a></p>` : ''}</div>
     <h2 style="margin-top:28px">Đặt bàn ${esc(b.name)} qua TopChill</h2>
     <div class="prose"><ol>
       <li>Bấm <b>Đặt bàn</b>, chọn ngày, giờ, số khách và loại bàn.</li>

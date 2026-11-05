@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
-import { barStory } from './bar-story.mjs';
+import { barStory, TYPE, COMMON_TIPS } from './bar-story.mjs';
 import { CITY_SEO } from './seo-data.mjs';
 import { LOGO } from './logo.mjs';
 
@@ -88,6 +88,16 @@ APP = APP.replace('const SLUGS={};', 'const SLUGS=' + JSON.stringify(Object.from
 const rankOrder = { top: 0, hot: 1, null: 2 };
 const pinOf = b => b.pin || 999;
 const ranked = list => list.slice().sort((a, b) => (pinOf(a) - pinOf(b)) || (rankOrder[a.boost] - rankOrder[b.boost]) || (P(b) - P(a)) || (b.rating || 0) - (a.rating || 0));
+const TYPE_SLUG = { 'Rooftop': 'rooftop-bar', 'Club': 'club', 'Pub': 'pub', 'Lounge': 'lounge', 'Cocktail bar': 'cocktail-bar', 'Jazz bar': 'jazz-bar', 'Whisky bar': 'whisky-bar', 'Beach club': 'beach-club', 'Garden bar': 'garden-bar' };
+const typeName = t => { const l = (TYPE[t] || {}).label || t.toLowerCase(); return l.charAt(0).toUpperCase() + l.slice(1); };
+const LAND = {};   // `${city}|${type}` -> { path, name, type, city, bars }
+for (const c of CITIES) {
+  const types = [...new Set(BARS.filter(b => b.city === c.id).map(b => b.type))];
+  for (const t of types) {
+    const list = ranked(BARS.filter(b => b.city === c.id && b.type === t));
+    if (list.length >= 2 && TYPE_SLUG[t]) LAND[c.id + '|' + t] = { path: `${TYPE_SLUG[t]}-${slugify(c.name)}/`, name: `${typeName(t)} ${c.name}`, type: t, city: c.id, bars: list };
+  }
+}
 const barImgs = b => { if (b.images && b.images.length) return b.images.concat((POOL[TYPE_POOL[b.type]] || POOL.cocktail).slice(0, 1)); const p = POOL[TYPE_POOL[b.type]] || POOL.cocktail; const k = b.id % p.length; return p.slice(k).concat(p.slice(0, k)).slice(0, 3); };
 const cityImgs = c => (CITY_IMG[c.id] || []).concat(POOL.club.slice(0, 2));
 const bookHref = b => href('') + '?dat=' + b.id;
@@ -332,15 +342,77 @@ function cityFaq(c, bars) {
   if (golds.length) { const g = golds.slice().sort((a, b) => b.gpct - a.gpct)[0]; out.push({ q: `Giờ vàng ở bar ${c.name} là gì?`, a: `Giờ vàng là 2 giờ đầu sau khi bar đối tác mở cửa. Đến trong khung này được giảm thêm. Hiện ${g.name} giảm giờ vàng ${g.gpct}% từ ${g.gLabel}.` }); }
   return out;
 }
-function cityPage(c) {
-  const bars = ranked(BARS.filter(b => b.city === c.id));
-  const S = c.seo;
-  const title = bars.length ? clip(`Bar ${c.name}: ${bars.length} bar, lounge, club nổi bật, đặt bàn nhanh (${new Date().getFullYear()})`, 65) : `Bar ${c.name}: đặt bàn bar, lounge, club giảm giá`;
-  const desc = S.description || `Danh sách bar ${c.name} nổi bật: rooftop, lounge, club. Xem giá, giờ mở cửa, giá tham khảo và đặt bàn không cần cọc qua TopChill.`;
-  const crumbs = [['Trang chủ', ''], [`Bar ${c.name}`, c.path]];
-  const faq = cityFaq(c, bars);
-  const related = POSTS.filter(p => p.city === c.id || p.tags.some(t => slugify(t).includes(slugify(c.name)))).concat(POSTS).filter((p, i, a) => a.indexOf(p) === i).slice(0, 3);
-  const list = bars.map((b, i) => `<li class="bitem ${b.boost === 'top' ? 'top' : ''}">
+
+/* ---------- 7b. Trang loại hình × thành phố (pub-ha-noi, rooftop-bar-sai-gon...) ---------- */
+function landingPage(L) {
+  const c = cityOf(L.city), t = L.type, T = TYPE[t], bars = L.bars, n = bars.length;
+  const seed = c.n + t.length + n;
+  const label = typeName(t);
+  const crumbs = [['Trang chủ', ''], [`Bar ${c.name}`, c.path], [L.name, L.path]];
+  const priced = bars.filter(b => b.priceKnown !== false && b.price && b.price[1] > 0);
+  const lo = priced.length ? Math.min(...priced.map(b => b.price[0])) : 0, hi = priced.length ? Math.max(...priced.map(b => b.price[1])) : 0;
+  const areas = [...new Set(bars.map(b => b.area))];
+  const names = bars.slice(0, 3).map(b => b.name);
+  const title = clip(`${L.name}: ${n} quán nổi bật, địa chỉ, giá tham khảo`, 65);
+  const desc = clip(`${L.name}: ${n} quán ở ${areas.slice(0, 3).join(', ')}. Xem địa chỉ, ảnh, mức chi${lo ? ` ${fmt(lo * 1000)}đ–${fmt(hi * 1000)}đ` : ''} và đặt bàn không cần cọc qua TopChill.`, 158);
+  const intro = `${n} ${T.label} ở ${c.name} được TopChill tổng hợp, nằm ở ${areas.slice(0, 3).join(', ')}${areas.length > 3 ? ' và các khu khác' : ''}.${lo ? ` Mức chi tham khảo khoảng ${fmt(lo * 1000)}đ đến ${fmt(hi * 1000)}đ mỗi người.` : ''} Gọi ${CFG.hotline} hoặc để lại số, tổng đài giữ bàn, không cần cọc.`;
+  const rowTable = `<div class="tbl"><table><thead><tr><th>Quán</th><th>Khu vực</th><th>Âm nhạc</th><th>Mức chi tham khảo</th></tr></thead><tbody>${bars.map(b => `<tr><td><a href="${href(b.path)}">${esc(b.name)}</a></td><td>${esc(b.area)}</td><td>${esc(b.music || '–')}</td><td>${b.priceKnown !== false && b.price[1] > 0 ? `${fmt(b.price[0] * 1000)}đ – ${fmt(b.price[1] * 1000)}đ` : 'Liên hệ'}</td></tr>`).join('')}</tbody></table></div>`;
+  const byArea = areas.map(a => { const xs = bars.filter(b => b.area === a); return `<li><b>${esc(a)}:</b> ${xs.map(b => `<a href="${href(b.path)}">${esc(b.name)}</a>`).join(', ')}</li>`; }).join('');
+  const others = Object.values(LAND).filter(x => x.city === L.city && x !== L);
+  const sameType = Object.values(LAND).filter(x => x.type === t && x.city !== L.city);
+  const tips = [...T.tips, COMMON_TIPS[seed % COMMON_TIPS.length], COMMON_TIPS[1], COMMON_TIPS[4]].filter((x, i, a) => a.indexOf(x) === i).slice(0, 5);
+  const faq = [
+    { q: `${L.name} nào đáng đi?`, a: `${names.join(', ')} là những quán đang nằm đầu danh sách ${L.name} trên TopChill. Bạn chọn theo khu vực và mức chi, rồi gọi ${CFG.hotline} để tổng đài giữ bàn.` },
+    ...(lo ? [{ q: `Đi ${T.label} ở ${c.name} hết bao nhiêu tiền?`, a: `Mức chi tham khảo khoảng ${fmt(lo * 1000)}đ đến ${fmt(hi * 1000)}đ mỗi người cho 2–3 đồ uống. Đây là giá tham khảo, giá thực tế tuỳ đồ uống và ngày đi.` }] : []),
+    { q: `Có cần đặt bàn trước khi đi ${T.label} ở ${c.name} không?`, a: `Nên đặt trước vào tối thứ 6, thứ 7 và dịp lễ. Đặt qua TopChill không cần cọc: bạn gọi ${CFG.hotline}, nhắn Zalo hoặc để lại số, tổng đài gọi lại xác nhận.` },
+    { q: `Nên đi ${T.label} ở ${c.name} vào lúc nào?`, a: `Thời điểm thường được chọn là ${T.best}.` },
+  ];
+  const body = `
+<div class="wrap">${crumbsHtml(crumbs)}
+  <section class="phero">${img(cityImgs(c), 1400, `${L.name} về đêm`, { eager: true })}
+    <div class="phero-in">
+      <span class="eyebrow">${n} quán · cập nhật ${fmtDate(TODAY)}</span>
+      <h1>${esc(L.name)}</h1>
+      <p class="lead">${esc(intro)}</p>
+      <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${href('kham-pha/')}?tp=${c.id}">Đặt bàn ${esc(L.name)}</a></div>
+    </div>
+  </section>
+</div>
+<section class="sec"><div class="wrap">
+  <h2>${n} ${esc(T.label)} ${esc(c.name)} nổi bật</h2>
+  <p class="lead-p" style="margin-bottom:18px">Thông tin tổng hợp từ nguồn công khai và có thể thay đổi. Gọi ${esc(CFG.hotline)} để xác nhận giờ mở cửa và giữ bàn.</p>
+  <ol class="blist">${bitems(bars, c)}</ol>
+</div></section>
+<section class="sec"><div class="wrap narrow">
+  <h2>So sánh nhanh ${esc(L.name)}</h2>
+  ${rowTable}
+</div></section>
+<section class="sec"><div class="wrap narrow">
+  <h2>Đi ${esc(T.label)} ở ${esc(c.name)}: nên biết gì?</h2>
+  <div class="prose">
+    <p>${esc(T.space[seed % T.space.length])}</p>
+    <p>Các quán ${esc(T.label)} ở ${esc(c.name)} thường hợp với ${esc(T.who)}. Thời điểm hay được chọn là ${esc(T.best)}.</p>
+    <h3>Khu vực có ${esc(T.label)} ở ${esc(c.name)}</h3>
+    <ul>${byArea}</ul>
+    <h3>Lưu ý khi đi</h3>
+    <ul>${tips.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+  </div>
+  <aside class="ctabox"><b>Đặt bàn ${esc(L.name)}</b><p>Gọi ${esc(CFG.hotline)} hoặc để lại số điện thoại, tổng đài TopChill giữ bàn giúp bạn, không cần cọc.</p><a class="btn btn-gold" href="${href('kham-pha/')}?tp=${c.id}">Đặt bàn ngay</a></aside>
+</div></section>
+<section class="sec"><div class="wrap narrow"><h2>Câu hỏi thường gặp về ${esc(L.name)}</h2>${faqHtml(faq)}</div></section>
+<section class="sec"><div class="wrap">
+  <h2>Loại hình khác ở ${esc(c.name)}</h2>
+  <div class="citylinks"><a href="${href(c.path)}">Tất cả bar ${esc(c.name)}</a>${others.map(x => `<a href="${href(x.path)}">${esc(x.name)}</a>`).join('')}</div>
+  ${sameType.length ? `<h2 style="margin-top:28px">${esc(label)} ở thành phố khác</h2><div class="citylinks">${sameType.map(x => `<a href="${href(x.path)}">${esc(x.name)}</a>`).join('')}</div>` : ''}
+</div></section>`;
+  const ld = [breadcrumbLd(crumbs),
+    { '@context': 'https://schema.org', '@type': 'ItemList', name: L.name, itemListElement: bars.map((b, i) => ({ '@type': 'ListItem', position: i + 1, url: url(b.path), name: b.name })) },
+    faqLd(faq)];
+  write(L.path + 'index.html', page({ title, desc, pathRel: L.path, image: cityImgs(c)[0], ld, active: c.path }, body, { mcta: mctaBar(`Đặt bàn ${L.name}`, href('kham-pha/') + '?tp=' + c.id) }));
+}
+
+function bitems(bars, c) {
+  return bars.map((b, i) => `<li class="bitem ${b.boost === 'top' ? 'top' : ''}">
     <div class="bitem-ph">${img(barImgs(b), 600, `${b.name} – ${b.type} ở ${b.area}, ${c.name}`, { eager: i === 0 })}<span class="rk">#${i + 1}</span></div>
     <div class="bitem-b">
       <span class="meta">${b.rating ? `<span class="rate">★ ${b.rating.toFixed(1)}</span><span>${fmt(b.reviews)} đánh giá</span>` : ''}<span>${esc(b.area)}</span><span>${esc(b.type)}</span></span>
@@ -350,6 +422,16 @@ function cityPage(c) {
       <span class="meta"><span>Giờ mở ${hoursTxt(b)}</span><span>${priceTxtS(b)}</span>${b.music ? `<span>${esc(b.music)}</span>` : ''}${b.addr ? `<span>${esc(b.addr)}</span>` : ''}</span>
       <div class="acts"><a class="btn btn-gold" href="${bookHref(b)}">Đặt bàn</a><a class="btn btn-ghost" href="${href(b.path)}">Xem chi tiết</a></div>
     </div></li>`).join('');
+}
+function cityPage(c) {
+  const bars = ranked(BARS.filter(b => b.city === c.id));
+  const S = c.seo;
+  const title = bars.length ? clip(`Bar ${c.name}: ${bars.length} bar, lounge, club nổi bật, đặt bàn nhanh (${new Date().getFullYear()})`, 65) : `Bar ${c.name}: đặt bàn bar, lounge, club giảm giá`;
+  const desc = S.description || `Danh sách bar ${c.name} nổi bật: rooftop, lounge, club. Xem giá, giờ mở cửa, giá tham khảo và đặt bàn không cần cọc qua TopChill.`;
+  const crumbs = [['Trang chủ', ''], [`Bar ${c.name}`, c.path]];
+  const faq = cityFaq(c, bars);
+  const related = POSTS.filter(p => p.city === c.id || p.tags.some(t => slugify(t).includes(slugify(c.name)))).concat(POSTS).filter((p, i, a) => a.indexOf(p) === i).slice(0, 3);
+  const list = bitems(bars, c);
   const body = `
 <div class="wrap">${crumbsHtml(crumbs)}
   <section class="phero">${img(cityImgs(c), 1400, `Bar ${c.name} về đêm`, { eager: true })}
@@ -376,6 +458,7 @@ ${S.tips ? `<section class="sec"><div class="wrap narrow">
 </div></section>` : ''}
 ${faq.length ? `<section class="sec"><div class="wrap narrow"><h2>Câu hỏi thường gặp về bar ${esc(c.name)}</h2>${faqHtml(faq)}</div></section>` : ''}
 ${related.length ? `<section class="sec"><div class="wrap"><h2>Cẩm nang đi bar</h2><div class="cards">${related.map(postCard).join('')}</div></div></section>` : ''}
+${Object.values(LAND).filter(x => x.city === c.id).length ? `<section class="sec"><div class="wrap"><h2>Tìm bar ${esc(c.name)} theo loại hình</h2><div class="citylinks">${Object.values(LAND).filter(x => x.city === c.id).map(x => `<a href="${href(x.path)}">${esc(x.name)} <small>${x.bars.length}</small></a>`).join('')}</div></div></section>` : ''}
 <section class="sec"><div class="wrap"><h2>Bar ở thành phố khác</h2><div class="citylinks">${CITIES.filter(x => x.id !== c.id && BARS.some(b => b.city === x.id)).map(x => `<a href="${href(x.path)}">Bar ${esc(x.name)}</a>`).join('')}</div></div></section>`;
   const ld = [
     breadcrumbLd(crumbs),
@@ -400,7 +483,7 @@ function barPage(b) {
   if (b.dress || b.music) faq.push({ q: `${b.name} có dress code không?`, a: `${b.dress ? `Dress code: ${b.dress}.` : 'Nên mặc lịch sự, smart casual.'}${b.music ? ` Nhạc: ${b.music}.` : ''}` });
   faq.push({ q: `${b.name} ở đâu?`, a: `${b.name} nằm tại ${where}.` });
   const mapUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent([b.name, b.addr, b.area, c.name].filter(Boolean).join(', '));
-  const story = barStory(b, { esc, fmt, c, href, hotline: CFG.hotline, bars: ranked(BARS), P, pk, hk, mapUrl });
+  const story = barStory(b, { esc, fmt, land: LAND[b.city + '|' + b.type], c, href, hotline: CFG.hotline, bars: ranked(BARS), P, pk, hk, mapUrl });
   faq.push(...story.extraFaq);
   const others = ranked(BARS.filter(x => x.city === b.city && x.id !== b.id)).slice(0, 3);
   const morePosts = POSTS.filter(x => x.bars.includes(b.slug) || x.city === b.city).concat(POSTS).filter((x, i, arr) => arr.indexOf(x) === i).slice(0, 3);
@@ -645,13 +728,15 @@ function homePage() {
   body = body.replace(/<title>[^<]*<\/title>\n?/, '');
   const citiesWithBars = CITIES.filter(c => BARS.some(b => b.city === c.id));
   const seoBlock = (POSTS.length ? `<section class="block"><div class="wrap">
-    <div class="sec-head"><div><div class="eyebrow">Cẩm nang đi bar</div><h2>Kinh nghiệm &amp; review bar</h2></div><a class="lnk" href="blog/">Xem tất cả bài viết →</a></div>
-    <div class="grid">${POSTS.slice(0, 3).map(p => `<a class="card" href="${p.path}" style="text-decoration:none"><div class="art"><img class="ph" src="${esc(UNS(p.cover, 700))}" data-c="${esc(POOL.cocktail[0])}" data-w="700" data-seed="${p.title.length}" data-hue="${p.title.length * 13 % 360}" alt="${esc(p.coverAlt)}" loading="lazy" decoding="async"></div><div class="card-body"><h3 style="font-size:21px">${esc(p.title)}</h3><p class="bonus">${esc(p.description)}</p></div></a>`).join('')}</div>
+    <div class="sec-head"><div><div class="eyebrow">Cẩm nang đi bar</div><h2>Kinh nghiệm &amp; review bar</h2></div><a class="lnk" href="${href('blog/')}">Xem tất cả bài viết →</a></div>
+    <div class="grid">${POSTS.slice(0, 3).map(p => `<a class="card" href="${href(p.path)}" style="text-decoration:none"><div class="art"><img class="ph" src="${esc(UNS(p.cover, 700))}" data-c="${esc(POOL.cocktail[0])}" data-w="700" data-seed="${p.title.length}" data-hue="${p.title.length * 13 % 360}" alt="${esc(p.coverAlt)}" loading="lazy" decoding="async"></div><div class="card-body"><h3 style="font-size:21px">${esc(p.title)}</h3><p class="bonus">${esc(p.description)}</p></div></a>`).join('')}</div>
   </div></section>` : '') + `
   <section class="block"><div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Đặt bàn bar toàn quốc</div><h2>Bar Hà Nội, Sài Gòn và 12 thành phố</h2></div></div>
     <p class="muted" style="max-width:75ch;margin-bottom:16px">TopChill là nền tảng đặt bàn bar, lounge, club tại Việt Nam. Bạn xem danh sách bar theo thành phố, địa chỉ, giá tham khảo, giờ mở cửa, rồi gọi, nhắn Zalo hoặc để lại số để tổng đài giữ bàn, không cần cọc. Thành viên được giảm đến 10% bill tại bar đối tác theo hạng.</p>
-    <div class="rail" style="flex-wrap:wrap">${citiesWithBars.map(c => `<a class="chip" href="${c.path}">Bar ${esc(c.name)} <small>${c.n}</small></a>`).join('')}</div>
+    <div class="rail" style="flex-wrap:wrap">${citiesWithBars.map(c => `<a class="chip" href="${href(c.path)}">Bar ${esc(c.name)} <small>${c.n}</small></a>`).join('')}</div>
+    <h3 style="margin:22px 0 10px;font-size:17px">Tìm theo loại hình</h3>
+    <div class="rail" style="flex-wrap:wrap">${Object.values(LAND).sort((x, y) => y.bars.length - x.bars.length).slice(0, 24).map(x => `<a class="chip" href="${href(x.path)}">${esc(x.name)} <small>${x.bars.length}</small></a>`).join('')}</div>
   </div></section>`;
   body = body.replace('<!--SEO_HOME-->', seoBlock);
   const i = body.indexOf('</style>') + 8;
@@ -741,7 +826,7 @@ async function minifyAll() {
 // dọn đầu ra cũ (chỉ các thư mục do build quản lý)
 if (OUT !== ROOT) fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
-for (const d of ['bar', 'blog', 'viet-bai', 'huy-hieu', 'gioi-thieu', 'kham-pha', 'thanh-vien', 'hoi-nhom', 'chu-bar', 'assets', 'mau-bia', 'img', 'quan-ly', ...CITIES.map(c => c.slug)]) fs.rmSync(path.join(OUT, d), { recursive: true, force: true });
+for (const d of [...Object.values(LAND).map(x => x.path.replace(/\/$/, '')), 'bar', 'blog', 'viet-bai', 'huy-hieu', 'gioi-thieu', 'kham-pha', 'thanh-vien', 'hoi-nhom', 'chu-bar', 'assets', 'mau-bia', 'img', 'quan-ly', ...CITIES.map(c => c.slug)]) fs.rmSync(path.join(OUT, d), { recursive: true, force: true });
 for (const f of fs.readdirSync(path.join(ROOT, 'public'))) { fs.copyFileSync(path.join(ROOT, 'public', f), path.join(OUT, f)); GENERATED.push(f); }
 fs.mkdirSync(path.join(OUT, 'assets'), { recursive: true });
 fs.copyFileSync(path.join(ROOT, 'src/site.css'), path.join(OUT, 'assets/site.css'));
@@ -766,6 +851,7 @@ GENERATED.push('assets/site.css', 'assets/chat.css', 'assets/chat.js', 'assets/m
 const pages = [{ path: '', priority: '1.0' }, { path: 'kham-pha/', priority: '0.9' }, { path: 'thanh-vien/', priority: '0.4' }, { path: 'chu-bar/', priority: '0.3' }];
 homePage();
 for (const c of CITIES) { const r = cityPage(c); pages.push({ path: r.path, noindex: r.noindex, priority: '0.9' }); }
+for (const L of Object.values(LAND)) { landingPage(L); pages.push({ path: L.path, priority: '0.8' }); }
 for (const b of BARS) { barPage(b); pages.push({ path: b.path, priority: '0.7' }); }
 blogIndex(); pages.push({ path: 'blog/', priority: '0.8' });
 POSTS.forEach((p, i) => { postPage(p, i); pages.push({ path: p.path, lastmod: p.updated, priority: '0.8' }); });
