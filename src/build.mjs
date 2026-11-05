@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
+import { barStory } from './bar-story.mjs';
 import { CITY_SEO } from './seo-data.mjs';
 import { LOGO } from './logo.mjs';
 
@@ -325,7 +326,7 @@ function cityFaq(c, bars) {
   const priced = bars.filter(b => b.priceKnown !== false), timed = bars.filter(b => b.hoursKnown !== false), partners = bars.filter(P), golds = partners.filter(b => b.gpct);
   const close = b => +b.hours.slice(8, 10) + (+b.hours.slice(8, 10) < 12 ? 24 : 0);
   const out = [];
-  if (priced.length) out.push({ q: `Giá đi bar ở ${c.name} khoảng bao nhiêu?`, a: `Mức chi phổ biến tại các bar trong danh sách ở ${c.name} từ ${Math.min(...priced.map(b => b.price[0]))}.000đ đến ${Math.max(...priced.map(b => b.price[1]))}.000đ mỗi người. Bàn VIP thường có mức chi tối thiểu cao hơn.${partners.length ? ` Đặt qua TopChill tại bar đối tác được giảm thẳng vào bill.` : ''}` });
+  if (priced.length) out.push({ q: `Giá đi bar ở ${c.name} khoảng bao nhiêu?`, a: `Mức chi phổ biến tại các bar trong danh sách ở ${c.name} từ ${fmt(Math.min(...priced.map(b => b.price[0])) * 1000)}đ đến ${fmt(Math.max(...priced.map(b => b.price[1])) * 1000)}đ mỗi người. Bàn VIP thường có mức chi tối thiểu cao hơn.${partners.length ? ` Đặt qua TopChill tại bar đối tác được giảm thẳng vào bill.` : ''}` });
   if (timed.length) { const late = timed.slice().sort((a, b) => close(b) - close(a))[0]; out.push({ q: `Bar ở ${c.name} mở cửa đến mấy giờ?`, a: `Phần lớn bar ở ${c.name} mở từ chiều tối đến khuya. ${late.name} mở muộn nhất trong danh sách, khung giờ ${late.hours}.` }); }
   out.push({ q: `Đặt bàn bar ${c.name} qua TopChill như thế nào?`, a: `Chọn bar, chọn ngày giờ và số khách rồi gửi yêu cầu. Tổng đài TopChill gọi lại xác nhận. Có thể gọi hoặc nhắn Zalo ${CFG.hotline} để đặt nhanh.` });
   if (golds.length) { const g = golds.slice().sort((a, b) => b.gpct - a.gpct)[0]; out.push({ q: `Giờ vàng ở bar ${c.name} là gì?`, a: `Giờ vàng là 2 giờ đầu sau khi bar đối tác mở cửa. Đến trong khung này được giảm thêm. Hiện ${g.name} giảm giờ vàng ${g.gpct}% từ ${g.gLabel}.` }); }
@@ -392,12 +393,15 @@ function barPage(b) {
   const desc = clip(`${b.name}, ${b.type.toLowerCase()} ở ${b.area}, ${c.name}.${hk ? ` Mở ${b.hours}.` : ''}${pk ? ` ${b.price[0]}k–${b.price[1]}k/người.` : ''} ${p ? `Đặt qua TopChill giảm ${b.deal}%${b.gpct ? `, giờ vàng giảm thêm ${b.gpct}%` : ''}${b.bonus ? ', ' + b.bonus.toLowerCase() : ''}.` : `${b.desc} Đặt bàn nhanh qua tổng đài TopChill.`}`, 160);
   const crumbs = [['Trang chủ', ''], [`Bar ${c.name}`, c.path], [b.name, b.path]];
   const menu = [];
-  const where = [b.addr, b.area, c.name].filter(Boolean).join(', ');
+  const where = [b.addr, b.addr && b.addr.includes(b.area) ? '' : b.area, c.name].filter(Boolean).join(', ');
   const faq = [];
   if (hk) faq.push({ q: `${b.name} mở cửa mấy giờ?`, a: `${b.name} mở cửa từ ${b.hours}.${b.gpct ? ` Giờ vàng ${b.gLabel} được giảm thêm ${b.gpct}% khi đặt bàn qua TopChill.` : ''} Giờ có thể thay đổi vào dịp lễ, nên gọi ${CFG.hotline} để xác nhận.` });
-  if (pk || menu.length) faq.push({ q: `Đi ${b.name} hết bao nhiêu tiền?`, a: `${pk ? `Mức chi tham khảo ${b.price[0]}.000đ–${b.price[1]}.000đ mỗi người.` : ''} ${menu.length ? `Đồ uống nổi bật: ${menu.map(m => `${m[0]} ${fmt(m[1])}.000đ`).join(', ')}.` : ''}${p ? ` Đặt qua TopChill được giảm ${b.deal}% tổng bill.` : ''}`.trim() });
+  if (pk || menu.length) faq.push({ q: `Đi ${b.name} hết bao nhiêu tiền?`, a: `${pk ? `Mức chi tham khảo ${fmt(b.price[0] * 1000)}đ–${fmt(b.price[1] * 1000)}đ mỗi người.` : ''} ${menu.length ? `Đồ uống nổi bật: ${menu.map(m => `${m[0]} ${fmt(m[1])}.000đ`).join(', ')}.` : ''}${p ? ` Đặt qua TopChill được giảm ${b.deal}% tổng bill.` : ''}`.trim() });
   if (b.dress || b.music) faq.push({ q: `${b.name} có dress code không?`, a: `${b.dress ? `Dress code: ${b.dress}.` : 'Nên mặc lịch sự, smart casual.'}${b.music ? ` Nhạc: ${b.music}.` : ''}` });
   faq.push({ q: `${b.name} ở đâu?`, a: `${b.name} nằm tại ${where}.` });
+  const mapUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent([b.name, b.addr, b.area, c.name].filter(Boolean).join(', '));
+  const story = barStory(b, { esc, fmt, c, href, hotline: CFG.hotline, bars: ranked(BARS), P, pk, hk, mapUrl });
+  faq.push(...story.extraFaq);
   const others = ranked(BARS.filter(x => x.city === b.city && x.id !== b.id)).slice(0, 3);
   const morePosts = POSTS.filter(x => x.bars.includes(b.slug) || x.city === b.city).concat(POSTS).filter((x, i, arr) => arr.indexOf(x) === i).slice(0, 3);
   const srcs = (b.sources || []).filter(u => /^https:\/\//.test(u)).slice(0, 4);
@@ -431,16 +435,18 @@ function barPage(b) {
       <tr><th scope="row">Địa chỉ</th><td>${esc(where)}</td></tr>
       <tr><th scope="row">Giờ mở cửa</th><td>${esc(hoursTxt(b))}</td></tr>
       ${b.gpct ? `<tr><th scope="row">Giờ vàng</th><td>${b.gLabel}, giảm thêm ${b.gpct}%</td></tr>` : ''}
-      <tr><th scope="row">Mức chi</th><td>${pk ? `${b.price[0]}.000đ – ${b.price[1]}.000đ / người` : 'Liên hệ tổng đài'}</td></tr>
+      <tr><th scope="row">Mức chi</th><td>${pk ? `${fmt(b.price[0] * 1000)}đ – ${fmt(b.price[1] * 1000)}đ / người` : 'Liên hệ tổng đài'}</td></tr>
       ${b.music ? `<tr><th scope="row">Nhạc</th><td>${esc(b.music)}</td></tr>` : ''}
       ${b.dress ? `<tr><th scope="row">Dress code</th><td>${esc(b.dress)}</td></tr>` : ''}
     </tbody></table>
     ${(b.images || []).length > 1 ? `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:18px">${b.images.map((u, i) => `<img src="${esc(BASE + u.replace(/^\//, ''))}" alt="${esc(b.name)} ${esc(c.name)} ảnh ${i + 1}" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px">`).join('')}</div>` : ''}
     ${(b.photoSources || []).length ? `<p class="muted" style="font-size:12px;margin-top:8px">Ảnh sưu tầm từ: ${b.photoSources.slice(0, 5).map((u, i) => `<a href="${esc(u)}" target="_blank" rel="nofollow noopener">[${i + 1}]</a>`).join(' ')}. Chủ ảnh cần gỡ vui lòng liên hệ ${esc(CFG.hotline)}.</p>` : ''}
     ${srcs.length ? `<p class="muted" style="font-size:13px;margin-top:12px">Nguồn thông tin: ${srcs.map((u, i) => `<a href="${esc(u)}" target="_blank" rel="nofollow noopener">[${i + 1}]</a>`).join(' ')}. Thông tin có thể thay đổi, gọi ${esc(CFG.hotline)} để xác nhận.</p>` : ''}
+    ${story.html}
   </div>
-  <div>
+  <div class="side-sticky">
     ${offers}
+    <div class="sidebox"><b>Cần giữ bàn gấp?</b><p>Gọi <a href="tel:${CFG.hotline.replace(/\s/g, '')}">${esc(CFG.hotline)}</a> hoặc để lại số, tổng đài gọi lại trong vài phút.</p><a class="btn btn-gold" href="${bookHref(b)}">Đặt bàn ${esc(b.name)}</a></div>
   </div>
 </div></section>
 <section class="sec"><div class="wrap narrow"><h2>Câu hỏi thường gặp về ${esc(b.name)}</h2>${faqHtml(faq)}</div></section>
@@ -449,7 +455,7 @@ ${morePosts.length ? `<section class="sec"><div class="wrap"><h2>Cẩm nang đi 
   const biz = { '@context': 'https://schema.org', '@type': 'BarOrPub', name: b.name, url: url(b.path), image: UNS(barImgs(b)[0], 1200),
     address: { '@type': 'PostalAddress', streetAddress: b.addr || b.area, addressLocality: `${b.area}, ${c.name}`, addressCountry: 'VN' } };
   if (hk) biz.openingHours = `Mo-Su ${b.hours.replace(/\s/g, '').replace('–', '-')}`;
-  if (pk) biz.priceRange = `${b.price[0]}.000đ–${b.price[1]}.000đ`;
+  if (pk) biz.priceRange = `${fmt(b.price[0] * 1000)}đ–${fmt(b.price[1] * 1000)}đ`;
   const ld = [breadcrumbLd(crumbs), biz, faqLd(faq)];
   write(b.path + 'index.html', page({ title, desc, pathRel: b.path, image: barImgs(b)[0], ld, active: c.path }, body, { mcta: mctaBar(p ? `Đặt bàn · giảm ${b.deal}%` : 'Đặt bàn qua tổng đài', bookHref(b)) }));
 }
