@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -33,3 +35,15 @@ jobs:
           if git diff --cached --quiet; then echo "Không có thay đổi"; exit 0; fi
           git commit -m "Build tự động: cập nhật trang"
           git push
+      - name: Báo Bing, Copilot, ChatGPT, DuckDuckGo (IndexNow)
+        if: github.event_name != 'schedule'
+        continue-on-error: true
+        run: |
+          # đợi GitHub Pages đăng xong rồi mới báo
+          sleep 100
+          MSG="$(git log -1 --format=%B HEAD~1 2>/dev/null; git log -1 --format=%B HEAD)"
+          if echo "$MSG" | grep -q '\[indexnow-all\]'; then
+            node src/indexnow.mjs all
+          else
+            node src/indexnow.mjs $(git diff --name-only HEAD~1 HEAD | grep -E '\.html$' | head -150)
+          fi
