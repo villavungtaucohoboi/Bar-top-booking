@@ -1442,7 +1442,7 @@ function renderRank(){
   tb.innerHTML=tabs.map(([id,n])=>`<button class="chip ${rk===id?'on':''}" data-rk="${id}">${n}</button>`).join('')+'<a class="chip" href="/kham-pha/">Tỉnh khác →</a>';
   tb.onclick=e=>{const b=e.target.closest('[data-rk]');if(b){RK=b.dataset.rk;renderRank()}};
   const rank={top:0,hot:1,null:2};
-  const list=BARS.filter(b=>!rk||b.city===rk).sort((a,b)=>(isHere(b)-isHere(a))||(rank[a.boost]-rank[b.boost])||(isP(b)-isP(a))||(b.rating||0)-(a.rating||0)).slice(0,5);
+  const list=BARS.filter(b=>!rk||b.city===rk).sort((a,b)=>(isHere(b)-isHere(a))||((a.pin||999)-(b.pin||999))||(rank[a.boost]-rank[b.boost])||(isP(b)-isP(a))||(b.rating||0)-(a.rating||0)).slice(0,5);
   const f=list[0],rest=list.slice(1);
   document.getElementById('rank').innerHTML=`
     <article class="rk1" data-id="${f.id}" tabindex="0" role="button" aria-label="${f.name}">
@@ -1521,7 +1521,7 @@ function renderBars(){
   cityChips(document.getElementById('cityRail2'),F.city,id=>{F.city=id;if(curView==='bars')history.replaceState(null,'','/kham-pha/'+(id?'?tp='+id:''));renderBars()});
   let list=BARS.filter(b=>(!F.city||b.city===F.city)&&(!F.type||b.type===F.type)&&(!F.q||(b.name+b.area+cityName(b.city)).toLowerCase().includes(F.q.toLowerCase())));
   const rank={top:0,hot:1,null:2};
-  list.sort((a,b)=>(!F.city&&(isHere(b)-isHere(a)))||(F.sort==='rating'?b.rating-a.rating:F.sort==='deal'?b.deal-a.deal:F.sort==='reviews'?b.reviews-a.reviews:F.sort==='golden'?(b.gpct-a.gpct)||b.rating-a.rating:(rank[a.boost]-rank[b.boost])||(b.rating||0)-(a.rating||0)));
+  list.sort((a,b)=>(!F.city&&(isHere(b)-isHere(a)))||(F.sort==='rating'?b.rating-a.rating:F.sort==='deal'?b.deal-a.deal:F.sort==='reviews'?b.reviews-a.reviews:F.sort==='golden'?(b.gpct-a.gpct)||b.rating-a.rating:((a.pin||999)-(b.pin||999))||(rank[a.boost]-rank[b.boost])||(b.rating||0)-(a.rating||0)));
   document.getElementById('barsTitle').textContent=F.city?`Bar ${cityName(F.city)}`:'Tất cả bar';
   document.getElementById('barsCount').textContent=`${list.length} bar${F.city?' · '+(CITIES.find(c=>c.id===F.city).n)+' bar tại '+cityName(F.city):''}`;
   mountCards(document.getElementById('barsGrid'),list);

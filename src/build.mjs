@@ -85,7 +85,8 @@ const cityOf = id => CITIES.find(c => c.id === id);
 for (const b of BARS) if (BARS.some(x => x !== b && slugify(x.name) === slugify(b.name))) { b.slug = slugify(b.name) + '-' + slugify(cityOf(b.city).name); b.path = `bar/${b.slug}/`; }
 APP = APP.replace('const SLUGS={};', 'const SLUGS=' + JSON.stringify(Object.fromEntries(BARS.map(b => [b.id, b.slug]))) + ';');
 const rankOrder = { top: 0, hot: 1, null: 2 };
-const ranked = list => list.slice().sort((a, b) => (rankOrder[a.boost] - rankOrder[b.boost]) || (P(b) - P(a)) || (b.rating || 0) - (a.rating || 0));
+const pinOf = b => b.pin || 999;
+const ranked = list => list.slice().sort((a, b) => (pinOf(a) - pinOf(b)) || (rankOrder[a.boost] - rankOrder[b.boost]) || (P(b) - P(a)) || (b.rating || 0) - (a.rating || 0));
 const barImgs = b => { if (b.images && b.images.length) return b.images.concat((POOL[TYPE_POOL[b.type]] || POOL.cocktail).slice(0, 1)); const p = POOL[TYPE_POOL[b.type]] || POOL.cocktail; const k = b.id % p.length; return p.slice(k).concat(p.slice(0, k)).slice(0, 3); };
 const cityImgs = c => (CITY_IMG[c.id] || []).concat(POOL.club.slice(0, 2));
 const bookHref = b => href('') + '?dat=' + b.id;

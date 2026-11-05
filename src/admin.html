@@ -122,6 +122,7 @@
       <div class="fld"><label for="f_note">Điều kiện nhận quà</label><input id="f_note" maxlength="160" placeholder="Áp dụng thứ 2 – thứ 5, đặt trước 20h"></div>
       <div class="g3">
         <div class="fld"><label for="f_boost">Đẩy top</label><select id="f_boost"><option value="">Không</option><option value="hot">HOT</option><option value="top">TOP (đứng đầu)</option></select></div>
+        <div class="fld"><label for="f_pin">Thứ hạng ghim (1 = đứng đầu, để trống = không ghim)</label><input id="f_pin" type="number" min="1" max="99" step="1" placeholder="VD: 1"></div>
         <div class="fld"><label for="f_rating">Điểm đánh giá</label><input id="f_rating" type="number" inputmode="decimal" min="1" max="5" step="0.1"></div>
         <div class="fld"><label for="f_reviews">Số đánh giá</label><input id="f_reviews" type="number" inputmode="numeric" min="0"></div>
       </div>
@@ -169,7 +170,7 @@ function cityName(id){var c=D.cities.filter(function(x){return x.id===id})[0];re
 function renderList(){var q=slug($('q').value||'');
   $('list').innerHTML=data.bars.filter(function(b){return !q||slug(b.name+' '+b.area+' '+cityName(b.city)).indexOf(q)>=0}).map(function(b){
     var th=b.images&&b.images[0]?'<img src="'+esc(imgUrl(b.images[0]))+'" alt="">':'<span class="ph0"></span>';
-    var tg=b.hidden?'<span class="tag off">ẨN</span>':b.partner===false?'<span class="tag off">CHƯA HT</span>':b.boost==='top'?'<span class="tag top">TOP</span>':b.boost==='hot'?'<span class="tag hot">HOT</span>':'';
+    var tg=b.hidden?'<span class="tag off">ẨN</span>':b.partner===false?'<span class="tag off">CHƯA HT</span>':b.pin?'<span class="tag top">TOP '+b.pin+'</span>':b.boost==='top'?'<span class="tag top">TOP</span>':b.boost==='hot'?'<span class="tag hot">HOT</span>':'';
     return '<button type="button" class="it'+(cur&&cur.id===b.id?' on':'')+'" data-id="'+b.id+'">'+th+'<span><b>'+esc(b.name)+'</b><small>'+esc(cityName(b.city))+' · '+esc(b.type)+' · -'+b.deal+'%</small></span>'+tg+'</button>'}).join('')||'<p class="help">Không có bar nào khớp.</p>'}
 $('q').oninput=renderList;
 $('list').onclick=function(e){var b=e.target.closest('[data-id]');if(!b)return;if(dirty&&!confirmLeave())return;edit(+b.dataset.id);if(matchMedia('(max-width:900px)').matches)$('form').scrollIntoView({behavior:'smooth'})};
@@ -187,7 +188,7 @@ function edit(id){
   F.forEach(function(k){$('f_'+k).value=cur[k]==null?'':cur[k]});
   $('f_open').value=cur.hours.slice(0,5);$('f_close').value=cur.hours.slice(8,13);
   $('f_pmin').value=cur.price[0];$('f_pmax').value=cur.price[1];
-  $('f_note').value=cur.bonusNote||'';$('f_partner').checked=cur.partner!==false;$('f_nohours').checked=cur.hoursKnown===false;$('partnerHint').hidden=$('f_partner').checked;$('f_until').value=cur.promoUntil||'';$('f_boost').value=cur.boost||'';$('f_hidden').checked=!!cur.hidden;
+  $('f_note').value=cur.bonusNote||'';$('f_partner').checked=cur.partner!==false;$('f_nohours').checked=cur.hoursKnown===false;$('partnerHint').hidden=$('f_partner').checked;$('f_until').value=cur.promoUntil||'';$('f_boost').value=cur.boost||'';$('f_pin').value=cur.pin||'';$('f_hidden').checked=!!cur.hidden;
   pics=(cur.images||[]).map(function(p){return{path:p,url:imgUrl(p)}});
   renderPics();renderMenu();$('descC').textContent=($('f_desc').value.length)+'/400';
   say($('msg'),'');dirty=false;renderList();
@@ -244,7 +245,7 @@ $('form').onsubmit=function(e){e.preventDefault();
   var b={};F.forEach(function(k){b[k]=$('f_'+k).value.trim()});
   b.name=name;b.deal=deal;b.gpct=gp;b.rating=Math.max(1,Math.min(5,+b.rating||4.5));b.reviews=Math.max(0,parseInt(b.reviews)||0);
   b.hours=$('f_open').value+' – '+$('f_close').value;b.hoursKnown=!$('f_nohours').checked;b.price=[pmin,pmax||pmin];b.priceKnown=!!(pmin||pmax);b.partner=$('f_partner').checked;
-  b.bonusNote=$('f_note').value.trim();b.promoUntil=$('f_until').value||'';b.boost=$('f_boost').value||null;b.hidden=$('f_hidden').checked;
+  b.bonusNote=$('f_note').value.trim();b.promoUntil=$('f_until').value||'';b.boost=$('f_boost').value||null;{const pn=parseInt($('f_pin').value,10);if(pn>0)b.pin=pn;else delete b.pin;}b.hidden=$('f_hidden').checked;
   b.menu=(cur.menu||[]).filter(function(m){return String(m[0]).trim()}).map(function(m){return[String(m[0]).trim(),+m[1]||0]});
   var isNew=!cur.id,sl=slug(name)||'bar',files=[],stamp=Date.now().toString(36);
   var btn=$('save');btn.disabled=true;say($('msg'),'Đang tải ảnh và đăng…','wait');

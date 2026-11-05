@@ -871,7 +871,8 @@
    "hue": 305,
    "photoSources": [
     "https://nightclub.com.vn/aplus-hanoi"
-   ]
+   ],
+   "pin": 1
   },
   {
    "id": 20,
@@ -4140,7 +4141,7 @@
    "bonus": "",
    "bonusNote": "",
    "promoUntil": "",
-   "boost": null,
+   "boost": "top",
    "hue": 297,
    "menu": [],
    "images": [
@@ -4163,7 +4164,8 @@
     "https://justfly.vn/attractions/vietnam/hanoi/1900-le-theatre-hoan-kiem",
     "https://vietnamtimes.thoidai.com.vn/vietnamese-club-enters-top-46-of-the-worlds-list-by-dj-mag-43142.html",
     "https://djmag.com/top100clubs/2024/44/1900-le-theatre"
-   ]
+   ],
+   "pin": 2
   },
   {
    "id": 93,
@@ -4189,7 +4191,7 @@
    "bonus": "",
    "bonusNote": "",
    "promoUntil": "",
-   "boost": null,
+   "boost": "top",
    "hue": 274,
    "menu": [],
    "images": [
@@ -4211,7 +4213,8 @@
     "https://vietnamnightlife.com/ko/hero-club-268-16.html",
     "https://www.arrivalguides.com/en/Travelguide/Hanoi/barsandnightlife/hero-club-hanoi-111381",
     "https://mytour.vn/vi/blog/bai-viet/top-10-quan-pub-noi-tieng-o-ha-noi.html"
-   ]
+   ],
+   "pin": 3
   },
   {
    "id": 94,
@@ -9429,6 +9432,116 @@
    "photoSources": [
     "https://www.foody.vn/vung-tau/bar-pub"
    ]
+  },
+  {
+   "dress": "",
+   "deal": 0,
+   "gpct": 0,
+   "bonus": "",
+   "bonusNote": "",
+   "promoUntil": "",
+   "rating": null,
+   "reviews": 0,
+   "hidden": false,
+   "partner": false,
+   "menu": [],
+   "images": [],
+   "hoursKnown": false,
+   "priceKnown": true,
+   "priceEst": true,
+   "boost": "top",
+   "id": 211,
+   "name": "Track 42",
+   "type": "Club",
+   "city": "hn",
+   "area": "Ba Đình",
+   "addr": "42 Yên Phụ, Ba Đình",
+   "music": "Mainstream, EDM",
+   "hours": "21:00 – 03:00",
+   "price": [
+    500,
+    1200
+   ],
+   "hue": 280,
+   "desc": "Track 42 là club phong cách \"mainstream luxury\" trên phố Yên Phụ, Ba Đình, cùng tuyến phố với nhiều club lớn của Hà Nội. Club có các loại bàn SVIP, bàn đứng và bàn quầy kèm dịch vụ chai, hợp nhóm bạn muốn quẩy theo nhạc mainstream và EDM. Gọi tổng đài để giữ bàn và xác nhận lịch DJ trước khi đến.",
+   "sources": [
+    "https://www.track42vietnam.com/"
+   ],
+   "pin": 4
+  },
+  {
+   "dress": "",
+   "deal": 0,
+   "gpct": 0,
+   "bonus": "",
+   "bonusNote": "",
+   "promoUntil": "",
+   "rating": null,
+   "reviews": 0,
+   "hidden": false,
+   "partner": false,
+   "menu": [],
+   "images": [],
+   "hoursKnown": false,
+   "priceKnown": true,
+   "priceEst": true,
+   "boost": "top",
+   "id": 212,
+   "name": "Maxx Bar & Lounge",
+   "type": "Lounge",
+   "city": "hn",
+   "area": "Hoàn Kiếm",
+   "addr": "25 Ngô Văn Sở, Hoàn Kiếm",
+   "music": "DJ, nhạc sàn",
+   "hours": "20:00 – 02:00",
+   "price": [
+    400,
+    1000
+   ],
+   "hue": 330,
+   "desc": "Maxx Bar & Lounge (còn gọi New Fame Bar) nằm ở số 25 Ngô Văn Sở, Hoàn Kiếm, gần khu trung tâm và hồ Hoàn Kiếm. Quán theo phong cách bar lounge có DJ, đặt bàn theo nhóm, hợp các buổi tụ tập bạn bè hay sinh nhật buổi tối. Gọi tổng đài để giữ bàn và xác nhận giờ mở cửa.",
+   "sources": [
+    "https://www.facebook.com/jetlimaxx/",
+    "https://www.facebook.com/Maxx25nvs/"
+   ],
+   "pin": 5
+  },
+  {
+   "dress": "",
+   "deal": 0,
+   "gpct": 0,
+   "bonus": "",
+   "bonusNote": "",
+   "promoUntil": "",
+   "rating": null,
+   "reviews": 0,
+   "hidden": false,
+   "partner": false,
+   "menu": [],
+   "images": [],
+   "hoursKnown": true,
+   "priceKnown": true,
+   "priceEst": true,
+   "boost": "top",
+   "id": 213,
+   "name": "Cosmos Club",
+   "type": "Club",
+   "city": "hn",
+   "area": "Hoàn Kiếm",
+   "addr": "21 Tràng Tiền, Hoàn Kiếm",
+   "music": "House, tech house, EDM",
+   "hours": "21:00 – 04:00",
+   "price": [
+    500,
+    1300
+   ],
+   "hue": 200,
+   "desc": "Cosmos Club nằm ở 21 Tràng Tiền, Hoàn Kiếm, cách hồ Hoàn Kiếm vài phút đi bộ. Club tập trung vào house, tech house và EDM, nổi bật với mái vòm LED và màn hình LED cong 360 độ bao quanh sân khấu. Mở cửa từ 21:00 đến 04:00, hợp nhóm bạn muốn quẩy khuya ngay trung tâm phố cổ.",
+   "sources": [
+    "https://cosmosclubhanoi.com/",
+    "https://vietnamnightlife.com/cosmos-club-ha-noi-991-15.html"
+   ],
+   "pin": 6
   }
  ]
 }
