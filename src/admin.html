@@ -61,7 +61,7 @@
 
   <div class="ad" id="app" hidden>
     <aside class="box">
-      <div class="tabs" role="tablist"><button type="button" class="on" data-tab="bars">Bar</button><button type="button" data-tab="ticker">Dải tin</button></div>
+      <div class="tabs" role="tablist"><button type="button" class="on" data-tab="bars">Bar</button><button type="button" data-tab="events">Sự kiện</button><button type="button" data-tab="ticker">Dải tin</button></div>
       <div id="tabBars" style="display:flex;flex-direction:column;gap:10px">
         <button class="btn btn-gold" id="newBar" type="button">+ Thêm bar mới</button>
         <div class="fld"><label for="q">Tìm bar</label><input id="q" placeholder="Tên, khu vực…"></div>
@@ -69,6 +69,28 @@
       </div>
       <div class="help">Đăng nhập: <b id="who"></b> · <button type="button" id="logout" style="background:none;border:0;color:var(--link);cursor:pointer;font:inherit;text-decoration:underline">Ngắt kết nối</button></div>
     </aside>
+
+    <section id="paneEvents" class="box" hidden>
+      <h2>Sự kiện &amp; lịch DJ</h2>
+      <p class="help">Chỉ nhập sự kiện có thật, đã xác nhận với quán (fanpage hoặc gọi điện). Sự kiện đã qua ngày tự ẩn khỏi web. Sự kiện hiện ở trang <b>/su-kien/</b>, trang thành phố và trang của bar.</p>
+      <div id="evList" style="display:flex;flex-direction:column;gap:8px;margin:12px 0 18px"></div>
+      <h3 id="evTitle" style="margin:0 0 10px">Thêm sự kiện mới</h3>
+      <div class="fld"><label for="ev_bar">Bar tổ chức</label><select id="ev_bar"></select></div>
+      <div class="fld" style="margin-top:10px"><label for="ev_name">Tên sự kiện <small>VD: Halloween Night ft. DJ ABC</small></label><input id="ev_name" maxlength="90"></div>
+      <div class="g3" style="margin-top:10px">
+        <div class="fld"><label for="ev_date">Ngày</label><input id="ev_date" type="date"></div>
+        <div class="fld"><label for="ev_start">Giờ bắt đầu</label><input id="ev_start" type="time" value="21:00"></div>
+        <div class="fld"><label for="ev_end">Giờ kết thúc <small>không bắt buộc</small></label><input id="ev_end" type="time"></div>
+      </div>
+      <div class="fld" style="margin-top:10px"><label for="ev_artist">DJ / nghệ sĩ <small>không bắt buộc</small></label><input id="ev_artist" maxlength="90"></div>
+      <div class="fld" style="margin-top:10px"><label for="ev_desc">Mô tả ngắn</label><textarea id="ev_desc" maxlength="500" style="min-height:90px"></textarea></div>
+      <div class="g2" style="margin-top:10px">
+        <div class="fld"><label for="ev_price">Vé vào cửa / mức chi <small>không bắt buộc</small></label><input id="ev_price" maxlength="80" placeholder="VD: Miễn phí vào cửa"></div>
+        <div class="fld"><label for="ev_src">Link nguồn <small>fanpage quán</small></label><input id="ev_src" type="url" placeholder="https://facebook.com/..."></div>
+      </div>
+      <div class="bar-acts" style="margin-top:14px"><button class="btn btn-gold" id="evSave" type="button">Lưu &amp; đăng sự kiện</button><button class="btn" id="evNew" type="button">Làm mới</button></div>
+      <p class="msg" id="evMsg" role="status"></p>
+    </section>
 
     <section id="paneTicker" class="box" hidden>
       <h2>Dải tin chạy trên bìa trang chủ</h2>
@@ -268,7 +290,38 @@ $('del').onclick=function(){if(!cur||!cur.id)return;
 
 /* ---------- dải tin ---------- */
 document.querySelector('.tabs').onclick=function(e){var b=e.target.closest('[data-tab]');if(!b)return;document.querySelectorAll('.tabs button').forEach(function(x){x.classList.toggle('on',x===b)});
-  var tk=b.dataset.tab==='ticker';$('tabBars').style.display=tk?'none':'flex';$('form').hidden=tk;$('paneTicker').hidden=!tk};
+  var t=b.dataset.tab;$('tabBars').style.display=t==='bars'?'flex':'none';$('form').hidden=t!=='bars';$('paneTicker').hidden=t!=='ticker';$('paneEvents').hidden=t!=='events';if(t==='events')renderEvents()};
+
+/* ---------- sự kiện ---------- */
+var evId=null;
+function todayVN(){return new Date(Date.now()+7*3600e3).toISOString().slice(0,10)}
+function barName(id){var b=(data.bars||[]).find(function(x){return x.id===id});return b?b.name:'(bar đã xoá)'}
+function renderEvents(){
+  var bars=(data.bars||[]).filter(function(b){return !b.hidden}).slice().sort(function(a,b){return a.name.localeCompare(b.name,'vi')});
+  $('ev_bar').innerHTML=bars.map(function(b){return '<option value="'+b.id+'">'+esc(b.name)+' – '+esc(b.area||'')+'</option>'}).join('');
+  var ev=(data.events||[]).slice().sort(function(a,b){return (a.date+a.start).localeCompare(b.date+b.start)}),t=todayVN();
+  $('evList').innerHTML=ev.length?ev.map(function(e){var past=e.date<t;return '<div style="display:flex;gap:8px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:10px;'+(past?'opacity:.5':'')+'"><div style="flex:1;min-width:0"><b>'+esc(e.name)+'</b><br><small>'+e.date.split('-').reverse().join('/')+' · '+esc(e.start)+' · '+esc(barName(e.barId))+(past?' · đã qua':'')+'</small></div><button type="button" class="btn" data-evedit="'+e.id+'">Sửa</button><button type="button" class="btn" data-evdel="'+e.id+'">Xoá</button></div>'}).join(''):'<p class="help">Chưa có sự kiện nào.</p>';
+}
+function evFill(e){evId=e?e.id:null;$('evTitle').textContent=e?'Sửa sự kiện':'Thêm sự kiện mới';
+  if(e)$('ev_bar').value=e.barId;$('ev_name').value=e?e.name:'';$('ev_date').value=e?e.date:'';$('ev_start').value=e?e.start:'21:00';$('ev_end').value=e?(e.end||''):'';
+  $('ev_artist').value=e?(e.artist||''):'';$('ev_desc').value=e?(e.desc||''):'';$('ev_price').value=e?(e.price||''):'';$('ev_src').value=e?(e.source||''):'';say($('evMsg'),'')}
+$('evList').onclick=function(ev){var b=ev.target.closest('[data-evedit],[data-evdel]');if(!b)return;
+  if(b.dataset.evedit){evFill((data.events||[]).find(function(x){return x.id===b.dataset.evedit}));return}
+  var id=b.dataset.evdel;if(!confirm('Xoá sự kiện này?'))return;say($('evMsg'),'Đang xoá…','wait');
+  commitRetry([],'Xoá sự kiện',function(f){f.events=(f.events||[]).filter(function(x){return x.id!==id})}).then(function(){renderEvents();evFill(null);say($('evMsg'),'Đã xoá.','ok')}).catch(function(e){say($('evMsg'),ghErr(e),'err')})};
+$('evNew').onclick=function(){evFill(null)};
+$('evSave').onclick=function(){
+  var e={id:evId||('ev'+Date.now().toString(36)),barId:+$('ev_bar').value,name:$('ev_name').value.trim(),date:$('ev_date').value,start:$('ev_start').value,end:$('ev_end').value,
+    artist:$('ev_artist').value.trim(),desc:$('ev_desc').value.trim(),price:$('ev_price').value.trim(),source:$('ev_src').value.trim()};
+  if(e.name.length<3){say($('evMsg'),'Nhập tên sự kiện.','err');return}
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(e.date)){say($('evMsg'),'Chọn ngày diễn ra.','err');return}
+  if(e.date<todayVN()){say($('evMsg'),'Ngày đã qua, kiểm tra lại.','err');return}
+  if(!/^\d{2}:\d{2}$/.test(e.start)){say($('evMsg'),'Chọn giờ bắt đầu.','err');return}
+  if(e.source&&!/^https:\/\//.test(e.source)){say($('evMsg'),'Link nguồn phải bắt đầu bằng https://','err');return}
+  Object.keys(e).forEach(function(k){if(e[k]==='')delete e[k]});
+  say($('evMsg'),'Đang đăng…','wait');
+  commitRetry([],(evId?'Sửa':'Thêm')+' sự kiện: '+e.name,function(f){f.events=(f.events||[]).filter(function(x){return x.id!==e.id});f.events.push(e)})
+  .then(function(){renderEvents();evFill(null);say($('evMsg'),'Đã đăng. Web cập nhật sau 1–2 phút.','ok')}).catch(function(err){say($('evMsg'),ghErr(err),'err')})};
 $('saveTk').onclick=function(){var lines=$('tk').value.split('\n').map(function(s){return s.trim().slice(0,140)}).filter(Boolean).slice(0,15);
   say($('tkMsg'),'Đang đăng…','wait');commitRetry([],'Cập nhật dải tin',function(fresh){fresh.ticker=lines})
   .then(function(){say($('tkMsg'),'Đã đăng '+lines.length+' tin. Web cập nhật sau 1–2 phút.','ok')}).catch(function(e){say($('tkMsg'),ghErr(e),'err')})};

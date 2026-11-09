@@ -241,3 +241,10 @@ p{margin:0}
 .tc-logo.big .tc-eq{height:.9em;gap:.08em}
 @media (max-width:720px){.logo .tc-logo{--lf:19px}.tc-logo.big{--lf:56px}}
 @media (prefers-reduced-motion:reduce){.tc-eq i,.tc-sw{animation:none}}
+
+.evlist{display:flex;flex-direction:column;gap:14px;margin-top:12px}
+.evitem{display:grid;grid-template-columns:86px 1fr;gap:16px;padding:16px;border-radius:16px;background:var(--surface);border:1px solid var(--line2)}
+.evdate{display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:12px;background:linear-gradient(135deg,#ff6fb5,#a855f7);color:#fff;padding:10px 6px;text-align:center;align-self:start}
+.evdate b{font-size:22px;line-height:1.1}.evdate small{font-size:12px;opacity:.9;margin-top:4px}
+.evb h3{margin:0 0 6px;font-size:18px}.evb p{margin:6px 0}.evb .btn{margin-top:8px}
+@media(max-width:560px){.evitem{grid-template-columns:70px 1fr;gap:12px;padding:12px}}
