@@ -251,8 +251,13 @@ function faqHtml(list) {
 /* Google Ads: thẻ toàn trang + chuyển đổi "liên hệ" khi khách bấm Gọi / Zalo / Telegram hoặc gửi số điện thoại */
 const ADS_TAG = CFG.googleAdsId ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${CFG.googleAdsId}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${CFG.googleAdsId}');
-(function(){var last=0;window.tcConv=function(kind){var now=Date.now();if(now-last<1500)return;last=now;try{gtag('event','conversion',{send_to:'${CFG.googleAdsId}/${CFG.googleAdsContactLabel}',value:1.0,currency:'VND',contact_method:kind||''})}catch(e){}};
-document.addEventListener('click',function(e){var t=e.target;if(!t||!t.closest)return;var a=t.closest('a[href^="tel:"],a[href*="zalo.me"],a[href*="t.me/"],#bkZalo,#bkTg,[data-fbzalo]');if(!a)return;var h=(a.getAttribute('href')||a.id||'');tcConv(/tel:/.test(h)?'call':/zalo|Zalo/.test(h)?'zalo':/t\.me|Tg/.test(h)?'telegram':'other')},true)})();</script>
+(function(){var ID='${CFG.googleAdsId}/',L=${JSON.stringify(CFG.googleAdsLabels || {})};
+function conv(label){if(label)try{gtag('event','conversion',{send_to:ID+label})}catch(e){}}
+var last=0;window.tcConv=function(kind){var now=Date.now();if(now-last<1500)return;last=now;conv(L[kind])};
+document.addEventListener('click',function(e){var t=e.target;if(!t||!t.closest)return;var a=t.closest('a[href^="tel:"],a[href*="zalo.me"],a[href*="t.me/"],#bkZalo,#bkTg,[data-fbzalo]');if(!a)return;var h=a.getAttribute('href')||'';
+tcConv(h.indexOf('tel:')===0?'call':(h.indexOf('zalo.me')>-1||a.id==='bkZalo'||a.hasAttribute('data-fbzalo'))?'zalo':(h.indexOf('t.me/')>-1||a.id==='bkTg')?'telegram':'')},true);
+var sc=false;addEventListener('scroll',function(){if(sc)return;var d=document.documentElement;if((scrollY+innerHeight)/d.scrollHeight>=0.75){sc=true;conv(L.scroll75)}},{passive:true});
+var sec=0,tm=setInterval(function(){if(document.visibilityState!=='visible')return;if(++sec>=30){conv(L.stay30s);clearInterval(tm)}},1000)})();</script>
 ` : '';
 /* Bảo mật: CSP (chỉ chạy code từ nguồn cho phép), khoá tên miền, chống nhúng khung */
 const ALLOWED_HOSTS = ['topchill.vn', 'www.topchill.vn', 'localhost', '127.0.0.1'];

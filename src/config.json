@@ -18,5 +18,12 @@
   "web3formsKey": "f56ec32d-4bee-4f63-b4f0-35806705766d",
   "telegramUser": "",
   "googleAdsId": "AW-18557210312",
-  "googleAdsContactLabel": "zqVACIiburIdEMid4pBF"
+  "googleAdsLabels": {
+    "call": "IDRICI-jsLUdEMid4pBF",
+    "zalo": "0PCxCImjsLUdEMid4pBF",
+    "telegram": "8Pw1CIyjsLUdEMid4pBF",
+    "form": "Fxb_CI6isLUdEMid4pBF",
+    "scroll75": "kJEPCLvBs7UdEMid4pBF",
+    "stay30s": "MEwDCL7Bs7UdEMid4pBF"
+  }
 }
