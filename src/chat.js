@@ -60,7 +60,7 @@
   function barCard(b) {
     return '<div class="tcc-card"><b>' + esc(b.name) + '</b><span class="mt">' + (b.rating ? '★ ' + b.rating + ' · ' : '') + esc(b.cityName) + ' · ' + esc(b.type) + (b.priceKnown === false ? '' : ' · ' + b.price[0] + 'k–' + b.price[1] + 'k/người') + '</span>' +
       (b.partner === false ? '<span class="dl">📞 Đặt bàn qua tổng đài</span>' : '<span class="dl">Giảm ' + b.deal + '% bill' + (b.gpct ? ' · <i>⚡ ' + b.gLabel + ' -' + b.gpct + '%</i>' : '') + '</span>') +
-      '<span class="ac"><a class="go" href="' + B + '?dat=' + b.id + '" data-tcbook data-id="' + b.id + '">Đặt bàn</a><a class="vw" href="' + B + 'bar/' + b.slug + '/">Xem bar</a></span></div>';
+      '<span class="ac"><a class="go" href="' + B + '?dat=' + b.id + '" data-tcbook data-id="' + b.id + '">Đặt Bàn Ngay</a><a class="vw" href="' + B + 'bar/' + b.slug + '/">Xem bar</a></span></div>';
   }
   function contacts() {
     var h = '<div class="tcc-contacts">';

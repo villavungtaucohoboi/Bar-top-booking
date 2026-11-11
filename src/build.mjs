@@ -191,7 +191,7 @@ function md(src) {
     if (/^:::cta/.test(l)) {
       const buf = []; i++; while (i < lines.length && !/^:::/.test(lines[i])) buf.push(lines[i++]); i++;
       const [title, ...rest] = buf.filter(x => x.trim());
-      out.push(`<aside class="ctabox"><b>${inline(title || 'Đặt bàn qua TopChill')}</b>${rest.length ? `<p>${inline(rest.join(' '))}</p>` : ''}<a class="btn btn-gold" href="${href('')}">Đặt bàn ngay, không cần cọc</a></aside>`);
+      out.push(`<aside class="ctabox"><b>${inline(title || 'Đặt bàn qua TopChill')}</b>${rest.length ? `<p>${inline(rest.join(' '))}</p>` : ''}<a class="btn btn-gold" href="${href('')}">Đặt Bàn Ngay</a></aside>`);
       continue;
     }
     if (/^>\s?/.test(l)) {
@@ -325,7 +325,7 @@ function header(active) {
   return `<header class="hdr"><div class="wrap hdr-in">
   <a class="logo" href="${href('')}" aria-label="TopChill trang chủ">${LOGO('')}</a>
   <nav class="nav" aria-label="Chính">${links}</nav>
-  <a class="btn btn-gold" href="${href('')}">Đặt bàn</a>
+  <a class="btn btn-gold" href="${href('')}">Đặt Bàn Ngay</a>
 </div><div class="wrap subnav">${links}</div></header>`;
 }
 function footer() {
@@ -367,7 +367,7 @@ function postCard(p) {
 }
 function barCardSmall(b) {
   const c = cityOf(b.city);
-  return `<a class="card" href="${href(b.path)}"><div class="card-ph">${img(barImgs(b), 640, `${b.name} – ${b.type} ${c.name}`)}</div><div class="card-b"><span class="meta">${b.rating ? `<span class="rate">★ ${b.rating.toFixed(1)}</span>` : ''}<span>${esc(c.name)}</span><span>${esc(b.type)}</span></span><h3>${esc(b.name)}</h3><p>${P(b) ? `Giảm ${b.deal}% bill${b.gpct ? ` · giờ vàng ${b.gLabel} giảm thêm ${b.gpct}%` : ''}` : esc(b.area + ' · đặt bàn qua tổng đài')}</p></div></a>`;
+  return `<a class="card" href="${href(b.path)}"><div class="card-ph">${img(barImgs(b), 640, `${b.name} – ${b.type} ${c.name}`)}</div><div class="card-b"><span class="meta">${b.rating ? `<span class="rate">★ ${b.rating.toFixed(1)}</span>` : ''}<span>${esc(c.name)}</span><span>${esc(b.type)}</span></span><h3>${esc(b.name)}</h3><p class="muted" style="font-size:13px">📍 ${esc([b.addr, b.addr && b.addr.includes(b.area) ? '' : b.area, c.name].filter(Boolean).join(', '))}</p><p>${P(b) ? `Giảm ${b.deal}% bill${b.gpct ? ` · giờ vàng ${b.gLabel} giảm thêm ${b.gpct}%` : ''}` : 'Đặt bàn qua tổng đài, không cần cọc'}</p></div></a>`;
 }
 
 /* ---------- 6. Trang thành phố ---------- */
@@ -414,7 +414,7 @@ function landingPage(L) {
       <span class="eyebrow">${n} quán · cập nhật ${fmtDate(TODAY)}</span>
       <h1>${esc(L.name)}</h1>
       <p class="lead">${esc(intro)}</p>
-      <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${href('kham-pha/')}?tp=${c.id}">Đặt bàn ${esc(L.name)}</a></div>
+      <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${href('kham-pha/')}?tp=${c.id}">Đặt Bàn Ngay</a></div>
     </div>
   </section>
 </div>
@@ -437,7 +437,7 @@ function landingPage(L) {
     <h3>Lưu ý khi đi</h3>
     <ul>${tips.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
   </div>
-  <aside class="ctabox"><b>Đặt bàn ${esc(L.name)}</b><p>Gọi ${esc(CFG.hotline)} hoặc để lại số điện thoại, tổng đài TopChill giữ bàn giúp bạn, không cần cọc.</p><a class="btn btn-gold" href="${href('kham-pha/')}?tp=${c.id}">Đặt bàn ngay</a></aside>
+  <aside class="ctabox"><b>Đặt bàn ${esc(L.name)}</b><p>Gọi ${esc(CFG.hotline)} hoặc để lại số điện thoại, tổng đài TopChill giữ bàn giúp bạn, không cần cọc.</p><a class="btn btn-gold" href="${href('kham-pha/')}?tp=${c.id}">Đặt Bàn Ngay</a></aside>
 </div></section>
 <section class="sec"><div class="wrap narrow"><h2>Câu hỏi thường gặp về ${esc(L.name)}</h2>${faqHtml(faq)}</div></section>
 <section class="sec"><div class="wrap">
@@ -448,7 +448,7 @@ function landingPage(L) {
   const ld = [breadcrumbLd(crumbs),
     { '@context': 'https://schema.org', '@type': 'ItemList', name: L.name, itemListElement: bars.map((b, i) => ({ '@type': 'ListItem', position: i + 1, url: url(b.path), name: b.name })) },
     faqLd(faq)];
-  write(L.path + 'index.html', page({ title, desc, pathRel: L.path, image: cityImgs(c)[0], ld, active: c.path }, body, { mcta: mctaBar(`Đặt bàn ${L.name}`, href('kham-pha/') + '?tp=' + c.id) }));
+  write(L.path + 'index.html', page({ title, desc, pathRel: L.path, image: cityImgs(c)[0], ld, active: c.path }, body, { mcta: mctaBar('Đặt Bàn Ngay', href('kham-pha/') + '?tp=' + c.id) }));
 }
 
 
@@ -484,7 +484,7 @@ function areaPage(A) {
       <span class="eyebrow">${n} quán · ${esc(c.name)} · cập nhật ${fmtDate(TODAY)}</span>
       <h1>Bar ${esc(A.name)}</h1>
       <p class="lead">${esc(A.intro)} TopChill tổng hợp ${n} quán ở đây${lo ? `, mức chi tham khảo ${fmt(lo * 1000)}đ–${fmt(hi * 1000)}đ mỗi người` : ''}.</p>
-      <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${href('kham-pha/')}?tp=${c.id}">Đặt bàn bar ${esc(A.name)}</a></div>
+      <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${href('kham-pha/')}?tp=${c.id}">Đặt Bàn Ngay</a></div>
     </div>
   </section>
 </div>
@@ -501,7 +501,7 @@ ${evs.length ? `<section class="sec"><div class="wrap narrow"><h2>Sự kiện s�
     <h3>Lưu ý khi đi</h3>
     <ul>${[COMMON_TIPS[0], COMMON_TIPS[1], 'Các quán trong khu khá gần nhau, nên đi bộ hoặc gọi xe thay vì tự lái.', COMMON_TIPS[3], COMMON_TIPS[4]].map(x => `<li>${esc(x)}</li>`).join('')}</ul>
   </div>
-  <aside class="ctabox"><b>Đặt bàn bar ${esc(A.name)}</b><p>Gọi ${esc(CFG.hotline)} hoặc để lại số điện thoại, tổng đài TopChill giữ bàn giúp bạn, không cần cọc.</p><a class="btn btn-gold" href="${href('kham-pha/')}?tp=${c.id}">Đặt bàn ngay</a></aside>
+  <aside class="ctabox"><b>Đặt bàn bar ${esc(A.name)}</b><p>Gọi ${esc(CFG.hotline)} hoặc để lại số điện thoại, tổng đài TopChill giữ bàn giúp bạn, không cần cọc.</p><a class="btn btn-gold" href="${href('kham-pha/')}?tp=${c.id}">Đặt Bàn Ngay</a></aside>
 </div></section>
 <section class="sec"><div class="wrap narrow"><h2>Câu hỏi thường gặp về bar ${esc(A.name)}</h2>${faqHtml(faq)}</div></section>
 <section class="sec"><div class="wrap">
@@ -511,7 +511,7 @@ ${evs.length ? `<section class="sec"><div class="wrap narrow"><h2>Sự kiện s�
   const ld = [breadcrumbLd(crumbs),
     { '@context': 'https://schema.org', '@type': 'ItemList', name: `Bar ${A.name}`, itemListElement: bars.map((b, i) => ({ '@type': 'ListItem', position: i + 1, url: url(b.path), name: b.name })) },
     faqLd(faq), ...evs.map(eventLd)];
-  write(A.path + 'index.html', page({ title, desc, pathRel: A.path, image: barImgs(bars[0])[0], ld, active: c.path }, body, { mcta: mctaBar(`Đặt bàn bar ${A.name}`, href('kham-pha/') + '?tp=' + c.id) }));
+  write(A.path + 'index.html', page({ title, desc, pathRel: A.path, image: barImgs(bars[0])[0], ld, active: c.path }, body, { mcta: mctaBar('Đặt Bàn Ngay', href('kham-pha/') + '?tp=' + c.id) }));
 }
 
 /* ---------- 7d. Sự kiện & lịch DJ ---------- */
@@ -536,7 +536,7 @@ function eventList(evs) {
       <p class="meta"><span>${evDate(e.date)}</span><span><a href="${href(b.path)}">${esc(b.name)}</a></span><span>${esc(b.area)}, ${esc(c.name)}</span>${e.artist ? `<span>${esc(e.artist)}</span>` : ''}</p>
       ${e.desc ? `<p>${esc(e.desc)}</p>` : ''}
       <p class="meta">${e.price ? `<span>${esc(e.price)}</span>` : ''}${e.source ? `<span><a href="${esc(e.source)}" target="_blank" rel="nofollow noopener">Nguồn</a></span>` : ''}</p>
-      <a class="btn btn-gold" href="${bookHref(b)}">Giữ bàn ${esc(b.name)}</a>
+      <a class="btn btn-gold" href="${bookHref(b)}">Đặt Bàn Ngay</a>
     </div></article>`; }).join('')}</div>`;
 }
 function eventsPage() {
@@ -567,7 +567,7 @@ function bitems(bars, c) {
       <p>${esc(b.desc)}</p>
       ${P(b) ? `<div class="chips on-surface"><span class="chip gold">Giảm ${b.deal}% bill</span>${b.gpct ? `<span class="chip neon">⚡ Giờ vàng ${b.gLabel} -${b.gpct}%</span>` : ''}${b.bonus ? `<span class="chip">🎁 ${esc(b.bonus)}</span>` : ''}</div>` : ''}
       <span class="meta"><span>Giờ mở ${hoursTxt(b)}</span><span>${priceTxtS(b)}</span>${b.music ? `<span>${esc(b.music)}</span>` : ''}${b.addr ? `<span>${esc(b.addr)}</span>` : ''}</span>
-      <div class="acts"><a class="btn btn-gold" href="${bookHref(b)}">Đặt bàn</a><a class="btn btn-ghost" href="${href(b.path)}">Xem chi tiết</a></div>
+      <div class="acts"><a class="btn btn-gold" href="${bookHref(b)}">Đặt Bàn Ngay</a><a class="btn btn-ghost" href="${href(b.path)}">Xem chi tiết</a></div>
     </div></li>`).join('');
 }
 function cityPage(c) {
@@ -586,7 +586,7 @@ function cityPage(c) {
       <span class="eyebrow">${fmt(c.n)} bar · cập nhật ${fmtDate(TODAY)}</span>
       <h1>Bar ${esc(c.name)}</h1>
       <p class="lead">${esc(S.intro || `Tổng hợp bar, lounge, club ở ${c.name} được khách đặt nhiều nhất trên TopChill.`)}</p>
-      <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${href('kham-pha/')}?tp=${c.id}">Đặt bàn bar ${esc(c.name)}</a></div>
+      <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${href('kham-pha/')}?tp=${c.id}">Đặt Bàn Ngay</a></div>
     </div>
   </section>
 </div>
@@ -614,7 +614,7 @@ ${Object.values(LAND).filter(x => x.city === c.id).length ? `<section class="sec
     bars.length ? { '@context': 'https://schema.org', '@type': 'ItemList', name: `Top bar ${c.name}`, itemListElement: bars.map((b, i) => ({ '@type': 'ListItem', position: i + 1, url: url(b.path), name: b.name })) } : null,
     faqLd(faq),
   ];
-  write(c.path + 'index.html', page({ title, desc, pathRel: c.path, image: cityImgs(c)[0], ld, active: c.path, noindex: !bars.length }, body, { mcta: bars.length ? mctaBar(`Đặt bàn bar ${c.name}`, href('') + '#tp-' + c.id) : '' }));
+  write(c.path + 'index.html', page({ title, desc, pathRel: c.path, image: cityImgs(c)[0], ld, active: c.path, noindex: !bars.length }, body, { mcta: bars.length ? mctaBar('Đặt Bàn Ngay', href('') + '#tp-' + c.id) : '' }));
   return { path: c.path, noindex: !bars.length };
 }
 
@@ -653,7 +653,7 @@ function barPage(b) {
       <h1>${esc(b.name)}</h1>
       <p class="lead">${b.rating ? `<span class="rate">★ ${b.rating.toFixed(1)}</span> · ${fmt(b.reviews)} đánh giá trên TopChill · ` : ''}${esc(b.music || b.type)}</p>
       ${p ? `<div class="chips"><span class="chip gold">Giảm ${b.deal}% bill</span>${b.gpct ? `<span class="chip neon">⚡ Giờ vàng ${b.gLabel} -${b.gpct}%</span>` : ''}${b.bonus ? `<span class="chip">🎁 ${esc(b.bonus)}</span>` : ''}</div>` : ''}
-      <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${bookHref(b)}">Đặt bàn ${esc(b.name)}</a></div>
+      <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${bookHref(b)}">Đặt Bàn Ngay</a></div>
       ${b.images && b.images.length ? '' : '<span class="muted" style="font-size:12px;color:#cfc6dd">Ảnh minh hoạ</span>'}
     </div>
   </section>
@@ -679,7 +679,7 @@ function barPage(b) {
   </div>
   <div class="side-sticky">
     ${offers}
-    <div class="sidebox"><b>Cần giữ bàn gấp?</b><p>Gọi <a href="tel:${CFG.hotline.replace(/\s/g, '')}">${esc(CFG.hotline)}</a> hoặc để lại số, tổng đài gọi lại trong vài phút.</p><a class="btn btn-gold" href="${bookHref(b)}">Đặt bàn ${esc(b.name)}</a></div>
+    <div class="sidebox"><b>Cần giữ bàn gấp?</b><p>Gọi <a href="tel:${CFG.hotline.replace(/\s/g, '')}">${esc(CFG.hotline)}</a> hoặc để lại số, tổng đài gọi lại trong vài phút.</p><a class="btn btn-gold" href="${bookHref(b)}">Đặt Bàn Ngay</a></div>
   </div>
 </div></section>
 <section class="sec"><div class="wrap narrow"><h2>Câu hỏi thường gặp về ${esc(b.name)}</h2>${faqHtml(faq)}</div></section>
@@ -690,7 +690,7 @@ ${morePosts.length ? `<section class="sec"><div class="wrap"><h2>Cẩm nang đi 
   if (hk) biz.openingHours = `Mo-Su ${b.hours.replace(/\s/g, '').replace('–', '-')}`;
   if (pk) biz.priceRange = `${fmt(b.price[0] * 1000)}đ–${fmt(b.price[1] * 1000)}đ`;
   const ld = [breadcrumbLd(crumbs), biz, faqLd(faq), ...EVENTS.filter(e => e.bar === b).map(eventLd)];
-  write(b.path + 'index.html', page({ title, desc, pathRel: b.path, image: barImgs(b)[0], ld, active: c.path }, body, { mcta: mctaBar(p ? `Đặt bàn · giảm ${b.deal}%` : 'Đặt bàn qua tổng đài', bookHref(b)) }));
+  write(b.path + 'index.html', page({ title, desc, pathRel: b.path, image: barImgs(b)[0], ld, active: c.path }, body, { mcta: mctaBar('Đặt Bàn Ngay', bookHref(b)) }));
 }
 
 /* ---------- 8. Blog ---------- */
@@ -711,7 +711,7 @@ function postPage(p, idx) {
   <div class="cover">${img([p.cover, POOL.cocktail[0]], 1400, p.coverAlt, { eager: true, ratio: [16, 8] })}</div>
   <div class="post-grid">
     <div class="prose">${p.html}
-      <aside class="ctabox"><b>Đặt bàn qua TopChill</b><p>Giảm thẳng vào bill, giờ vàng giảm thêm đến 20%, đặt bàn không cần cọc, hạng thành viên giảm đến 10% bill.</p><a class="btn btn-gold" href="${href('')}">Đặt bàn ngay</a></aside>
+      <aside class="ctabox"><b>Đặt bàn qua TopChill</b><p>Giảm thẳng vào bill, giờ vàng giảm thêm đến 20%, đặt bàn không cần cọc, hạng thành viên giảm đến 10% bill.</p><a class="btn btn-gold" href="${href('')}">Đặt Bàn Ngay</a></aside>
       ${p.tags.length ? `<div class="tags">${p.tags.map(t => `<a href="${href('blog/')}#${slugify(t)}">#${esc(t)}</a>`).join('')}</div>` : ''}
       <div class="share">Chia sẻ:
         <a class="btn btn-ghost" href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" rel="noopener">Facebook</a>
@@ -731,7 +731,7 @@ ${related.length ? `<section class="sec"><div class="wrap"><h2>Bài viết liên
       mainEntityOfPage: url(p.path), keywords: [p.keyword, ...p.tags].filter(Boolean).join(', '), wordCount: p.words, inLanguage: 'vi-VN' },
     faqLd(p.faq.filter(f => f.a)),
   ];
-  write(p.path + 'index.html', page({ title: p.title, desc: p.description, pathRel: p.path, image: p.cover, type: 'article', ld, active: 'blog/' }, body, { mcta: mctaBar('Đặt bàn bar, không cần cọc', href('')) }));
+  write(p.path + 'index.html', page({ title: p.title, desc: p.description, pathRel: p.path, image: p.cover, type: 'article', ld, active: 'blog/' }, body, { mcta: mctaBar('Đặt Bàn Ngay', href('')) }));
 }
 function blogIndex() {
   const crumbs = [['Trang chủ', ''], ['Cẩm nang', 'blog/']];

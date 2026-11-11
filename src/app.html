@@ -988,6 +988,7 @@ button.user-pill{cursor:pointer;font:inherit;color:inherit;text-align:left}
 @media (max-width:760px){.sheet-art.has-real{aspect-ratio:4/3}.lb-nav{display:none}}
 .gal{display:flex;gap:8px;overflow-x:auto;margin:12px 0 4px;padding-bottom:4px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}.gal-i{flex:0 0 auto;width:96px;height:72px;border-radius:10px;overflow:hidden;border:2px solid transparent;padding:0;background:var(--surface);scroll-snap-align:start;cursor:pointer}.gal-i.on{border-color:var(--gold)}.gal-i img{width:100%;height:100%;object-fit:cover;display:block}.gal-src{font-size:11.5px;color:var(--muted,#9a90ad);margin:2px 0 6px}.gal-src a{color:inherit}
 .share-bar{position:absolute;left:14px;top:14px;z-index:4;display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#fff;font:inherit;font-size:13.5px;font-weight:700;cursor:pointer}
+.addr{display:flex;gap:6px;align-items:flex-start;font-size:13px;line-height:1.45;color:var(--fg);opacity:.88;margin:6px 0}.addr .ico{flex:none}.rk-addr{display:block;font-size:12px;line-height:1.4;color:var(--muted,#b9b0c9);margin:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .here-note{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:#3ee6a0;background:rgba(62,230,160,.12);border:1px solid rgba(62,230,160,.35);padding:3px 9px;border-radius:999px;margin-bottom:6px}.here-mini{display:block;font-size:11px;font-weight:700;color:#3ee6a0}
 .bk-fail{margin-top:10px;padding:12px;border-radius:12px;border:1px solid rgba(255,90,90,.45);background:rgba(255,60,60,.08);font-size:13.5px;line-height:1.5}.bk-fail-acts{display:flex;gap:8px;margin-top:10px}.bk-fail-acts .btn{flex:1;justify-content:center;color:#fff;border:0}
 .bk-zalo{background:#0068ff}.bk-zalo .i{color:#0068ff}.bk-tg{background:#229ed9}.bk-tg .i{color:#229ed9;font-size:14px}
@@ -1044,7 +1045,7 @@ button.user-pill{cursor:pointer;font:inherit;color:inherit;text-align:left}
           <div class="field"><label for="sCity">Thành phố</label><select id="sCity"></select></div>
           <div class="field"><label for="sDate">Ngày</label><input type="date" id="sDate"></div>
           <div class="field"><label for="sGuests">Số người</label><select id="sGuests"><option>2 người</option><option selected>4 người</option><option>6 người</option><option>8 người</option><option>10+ người</option></select></div>
-          <button class="btn btn-gold" type="submit">Đặt bàn ngay</button>
+          <button class="btn btn-gold" type="submit">Đặt Bàn Ngay</button>
         </form>
         <div class="m-quick">
           <div class="mq-label">Chạm vào thành phố để xem bar</div>
@@ -1336,7 +1337,7 @@ const BARS=[
 ];
 const pad=n=>String(n).padStart(2,'0');
 /* Khung giờ: mở cửa → đóng cửa, 2 giờ đầu là giờ vàng */
-const isP=b=>b.partner!==false;const hrs=b=>b.hoursKnown===false?'Liên hệ tổng đài':b.hours;const priceTxt=b=>b.priceKnown===false?'Giá: liên hệ tổng đài':`Từ <b>${b.price[0]}k</b> – ${b.price[1]}k / người`;
+const isP=b=>b.partner!==false;const addrTxt=b=>[b.addr,b.addr&&b.addr.includes(b.area)?'':b.area,cityName(b.city)].filter(Boolean).join(', ');const addrHTML=b=>`<div class="addr"><span class="ico">📍</span>${escH(addrTxt(b))}</div>`;const hrs=b=>b.hoursKnown===false?'Liên hệ tổng đài':b.hours;const priceTxt=b=>b.priceKnown===false?'Giá: liên hệ tổng đài':`Từ <b>${b.price[0]}k</b> – ${b.price[1]}k / người`;
 CITIES.forEach(c=>{c.n=BARS.filter(b=>b.city===c.id).length});
 BARS.forEach(b=>{if(!isP(b)){b.deal=0;b.gpct=0;b.bonus='';b.rating=null;b.reviews=0}const o=+b.hours.slice(0,2);let c=+b.hours.slice(8,10);if(c<=o)c+=24;b.open=o;b.close=c;b.slots=[];for(let t=o;t<c;t++)b.slots.push(pad(t%24)+':00');b.golden=b.gpct?b.slots.slice(0,2):[];b.gLabel=`${b.golden[0]}–${pad((o+2)%24)}:00`});
 
@@ -1450,12 +1451,13 @@ function renderRank(){
       <div class="rk1-body">
         ${hereNote(f)}<div class="meta"><span>${cityName(f.city)}</span><span>${f.area}</span><span>${f.type}</span></div>
         <h3>${f.name}</h3>
+        ${addrHTML(f)}
         <div class="rk-rate">${f.rating?`<b>★ ${f.rating.toFixed(1)}</b> <span class="muted num">· ${fmt(f.reviews)} đánh giá · ${escH(f.music)}</span>`:`<span class="muted">${escH(f.music||f.type)}</span>`}</div>
         <div class="rk-perks">${isP(f)?`<span class="pk gold">Giảm ${f.deal}% bill</span>${f.gpct?`<span class="pk neon">⚡ Giờ vàng ${f.gLabel} -${f.gpct}%</span>`:''}${f.bonus?`<span class="pk">🎁 ${escH(f.bonus)}</span>`:''}`:'<span class="pk">📞 Đặt bàn qua tổng đài TopChill</span>'}</div>
-        <div class="rk-cta"><span class="price num">${f.priceKnown===false?'Giá: liên hệ':`Từ <b>${f.price[0]}k</b> / người`}</span><button class="btn btn-gold" data-book="${f.id}">Đặt bàn ngay</button></div>
+        <div class="rk-cta"><span class="price num">${f.priceKnown===false?'Giá: liên hệ':`Từ <b>${f.price[0]}k</b> / người`}</span><button class="btn btn-gold" data-book="${f.id}">Đặt Bàn Ngay</button></div>
       </div>
     </article>
-    <ol class="rk-list">${rest.map((b,i)=>`<li class="rk-row" data-id="${b.id}" tabindex="0" role="button" aria-label="${b.name}"><span class="rk-n">${i+2}</span><div class="rk-th">${barImg(b,300)}</div><div class="rk-info">${isHere(b)?'<span class="here-mini">📍 Khu vực bạn</span>':''}<b>${b.name}</b><span class="meta"><span>${cityName(b.city)}</span><span>${b.type}</span></span><span class="rk-mini">${isP(b)?`${b.rating?`<span class="r">★ ${b.rating.toFixed(1)}</span> · `:''}<span class="d">-${b.deal}%</span>${b.gpct?` · <span class="g">⚡ -${b.gpct}%</span>`:''}`:'Đặt qua tổng đài'}</span></div><button class="btn btn-gold btn-sm" data-book="${b.id}">Đặt</button></li>`).join('')}</ol>`;
+    <ol class="rk-list">${rest.map((b,i)=>`<li class="rk-row" data-id="${b.id}" tabindex="0" role="button" aria-label="${b.name}"><span class="rk-n">${i+2}</span><div class="rk-th">${barImg(b,300)}</div><div class="rk-info">${isHere(b)?'<span class="here-mini">📍 Khu vực bạn</span>':''}<b>${b.name}</b><span class="rk-addr">📍 ${escH(addrTxt(b))}</span><span class="meta"><span>${cityName(b.city)}</span><span>${b.type}</span></span><span class="rk-mini">${isP(b)?`${b.rating?`<span class="r">★ ${b.rating.toFixed(1)}</span> · `:''}<span class="d">-${b.deal}%</span>${b.gpct?` · <span class="g">⚡ -${b.gpct}%</span>`:''}`:'Đặt qua tổng đài'}</span></div><button class="btn btn-gold btn-sm" data-book="${b.id}">Đặt Bàn Ngay</button></li>`).join('')}</ol>`;
 }
 function renderPerks(){
   const P=[
@@ -1484,8 +1486,9 @@ function cardHTML(b){
       <div class="meta"><span>${cityName(b.city)}</span><span>${b.area}</span><span>${b.music}</span></div>
       ${isP(b)?`<div class="deal"><span class="ico">%</span>Giảm ${b.deal}% bill khi đặt qua TopChill</div>`:'<div class="deal"><span class="ico">📞</span>Đặt bàn qua tổng đài TopChill</div>'}
       ${b.gpct?`<div class="ghline"><span class="ico">⚡</span>Giờ vàng ${b.gLabel} · giảm thêm ${b.gpct}%</div>`:''}
-      ${b.bonus?`<div class="bonus">🎁 ${escH(b.bonus)}</div>`:`<div class="bonus">${escH(b.addr||b.area)}</div>`}
-      <div class="card-foot"><div class="price num">${priceTxt(b)}</div><button class="btn btn-gold btn-sm" data-book="${b.id}">Đặt bàn</button></div>
+      ${addrHTML(b)}
+      ${b.bonus?`<div class="bonus">🎁 ${escH(b.bonus)}</div>`:''}
+      <div class="card-foot"><div class="price num">${priceTxt(b)}</div><button class="btn btn-gold btn-sm" data-book="${b.id}">Đặt Bàn Ngay</button></div>
     </div></article>`;
 }
 function paintCanvases(root){root.querySelectorAll('canvas[data-seed]').forEach(c=>{if(!c.dataset.done){drawArt(c,+c.dataset.seed,+c.dataset.hue);c.dataset.done=1}})}
@@ -1505,7 +1508,7 @@ function renderGH(){
   document.getElementById('ghRail').innerHTML=list.map(b=>{const s=ghStatus(b);return `<div class="gh" data-gh="${b.id}" role="button" tabindex="0"><div class="gh-ph">${barImg(b,600)}</div><div class="gh-in">
     <div class="top"><div><h3>${b.name}</h3><div class="meta" style="margin-top:2px"><span>${cityName(b.city)}</span><span>${b.type}</span></div></div><div class="pct">-${b.gpct}%<small>giảm thêm</small></div></div>
     <div class="slot">⚡ ${b.gLabel}<span class="cd ${s.cls}">${s.txt}</span></div>
-    <div class="foot"><span class="meta">Cộng dồn deal -${b.deal}% + hạng thành viên đến -10%</span><button class="btn btn-gold btn-sm" data-book="${b.id}" data-time="${b.golden[0]}">Đặt giờ vàng</button></div>
+    <div class="foot"><span class="meta">Cộng dồn deal -${b.deal}% + hạng thành viên đến -10%</span><button class="btn btn-gold btn-sm" data-book="${b.id}" data-time="${b.golden[0]}">Đặt Bàn Ngay</button></div>
   </div></div>`}).join('');
 }
 function tickCd(){const el=document.getElementById('dealCd');const n=new Date();let s=(20*60+0)*60-(n.getHours()*3600+n.getMinutes()*60+n.getSeconds());if(s<0)s+=86400;el.textContent='còn '+pad(Math.floor(s/3600))+':'+pad(Math.floor(s%3600/60))+':'+pad(s%60)}
@@ -1604,7 +1607,7 @@ function openBar(id,time,fromRoute){
       </div>
       <aside class="book" id="bookBox"></aside>
     </div>
-    <div class="mob-cta" id="mobCta"><a class="btn mob-call" href="tel:${CONTACT.tel}" aria-label="Gọi đặt bàn ${CONTACT.show}">📞 Gọi</a><button class="btn btn-gold" id="mobGo">Đặt bàn ngay</button></div>`;
+    <div class="mob-cta" id="mobCta"><a class="btn mob-call" href="tel:${CONTACT.tel}" aria-label="Gọi đặt bàn ${CONTACT.show}">📞 Gọi</a><button class="btn btn-gold" id="mobGo">Đặt Bàn Ngay</button></div>`;
   paintCanvases(document.getElementById('sheet'));
   renderBook();
   const m=document.getElementById('modal');m.hidden=false;document.body.style.overflow='hidden';
