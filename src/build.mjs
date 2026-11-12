@@ -687,6 +687,7 @@ function barPage(b) {
 ${others.length ? `<section class="sec"><div class="wrap"><h2>Bar khác ở ${esc(c.name)}</h2><div class="cards">${others.map(barCardSmall).join('')}</div><p style="margin-top:16px"><a class="btn btn-ghost" href="${href(c.path)}">Xem tất cả bar ${esc(c.name)}</a></p></div></section>` : ''}
 ${morePosts.length ? `<section class="sec"><div class="wrap"><h2>Cẩm nang đi bar</h2><div class="cards">${morePosts.map(postCard).join('')}</div></div></section>` : ''}`;
   const biz = { '@context': 'https://schema.org', '@type': 'BarOrPub', name: b.name, url: url(b.path), image: UNS(barImgs(b)[0], 1200),
+    telephone: CFG.hotline,
     address: { '@type': 'PostalAddress', streetAddress: b.addr || b.area, addressLocality: `${b.area}, ${c.name}`, addressCountry: 'VN' } };
   if (hk) biz.openingHours = `Mo-Su ${b.hours.replace(/\s/g, '').replace('–', '-')}`;
   if (pk) biz.priceRange = `${fmt(b.price[0] * 1000)}đ–${fmt(b.price[1] * 1000)}đ`;
