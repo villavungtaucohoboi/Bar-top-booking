@@ -249,11 +249,12 @@ function faqHtml(list) {
   return `<div class="faq">${list.map(f => `<details><summary>${esc(f.q)}</summary><div>${esc(f.a)}</div></details>`).join('')}</div>`;
 }
 /* Google Ads: thẻ toàn trang + chuyển đổi "liên hệ" khi khách bấm Gọi / Zalo / Telegram hoặc gửi số điện thoại */
-const ADS_TAG = CFG.googleAdsId ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${CFG.googleAdsId}"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${CFG.googleAdsId}');
+const ADS_TAG = (CFG.googleAdsId || CFG.ga4Id) ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${CFG.ga4Id || CFG.googleAdsId}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());${CFG.ga4Id ? `gtag('config','${CFG.ga4Id}');` : ''}${CFG.googleAdsId ? `gtag('config','${CFG.googleAdsId}');` : ''}
 (function(){var ID='${CFG.googleAdsId}/',L=${JSON.stringify(CFG.googleAdsLabels || {})};
 function conv(label){if(label)try{gtag('event','conversion',{send_to:ID+label})}catch(e){}}
-var last=0;window.tcConv=function(kind){var now=Date.now();if(now-last<1500)return;last=now;conv(L[kind])};
+var GA={call:'click_call',zalo:'click_zalo',telegram:'click_telegram',form:'generate_lead'};
+var last=0;window.tcConv=function(kind){var now=Date.now();if(now-last<1500)return;last=now;conv(L[kind]);if(GA[kind])try{gtag('event',GA[kind],{method:kind,page_path:location.pathname})}catch(e){}};
 document.addEventListener('click',function(e){var t=e.target;if(!t||!t.closest)return;var a=t.closest('a[href^="tel:"],a[href*="zalo.me"],a[href*="t.me/"],#bkZalo,#bkTg,[data-fbzalo]');if(!a)return;var h=a.getAttribute('href')||'';
 tcConv(h.indexOf('tel:')===0?'call':(h.indexOf('zalo.me')>-1||a.id==='bkZalo'||a.hasAttribute('data-fbzalo'))?'zalo':(h.indexOf('t.me/')>-1||a.id==='bkTg')?'telegram':'')},true);
 var sc=false;addEventListener('scroll',function(){if(sc)return;var d=document.documentElement;if((scrollY+innerHeight)/d.scrollHeight>=0.75){sc=true;conv(L.scroll75)}},{passive:true});
