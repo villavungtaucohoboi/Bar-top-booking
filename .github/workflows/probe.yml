@@ -1,0 +1,15 @@
+name: Probe site
+on: { push: { branches: [probe-mail] } }
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash {0}
+        run: |
+          echo "== DNS"; dig +short topchill.vn A; dig +short www.topchill.vn
+          UA="Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+          for u in https://topchill.vn/ https://www.topchill.vn/ http://topchill.vn/ https://topchill.vn/robots.txt https://topchill.vn/sitemap.xml https://topchill.vn/bar/aplus-hanoi/ https://topchill.vn/kham-pha/; do
+            echo "== $u"; curl -sS -m 30 -A "$UA" -o /tmp/b -D /tmp/h -w "HTTP %{http_code} -> %{redirect_url} (%{time_total}s)\n" "$u"; grep -i "^location\|^content-type\|^x-robots" /tmp/h; head -c 0 /tmp/b
+          done
+          echo "== meta robots trang chủ"; curl -sS -m 30 -A "$UA" https://topchill.vn/ | grep -o '<meta name="robots"[^>]*>\|<title>[^<]*</title>' | head -3
+          echo "== cert"; echo | openssl s_client -servername topchill.vn -connect topchill.vn:443 2>/dev/null | openssl x509 -noout -subject -dates
