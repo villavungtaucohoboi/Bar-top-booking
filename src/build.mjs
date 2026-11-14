@@ -995,7 +995,7 @@ fs.copyFileSync(path.join(ROOT, 'src/install.js'), path.join(OUT, 'assets/instal
 GENERATED.push('assets/site.css', 'assets/chat.css', 'assets/chat.js', 'assets/music.js', 'assets/install.js');
 {
   const order = ranked(BARS);
-  const data = { base: BASE, hotline: CFG.hotline, demo: !!CFG.chatDemo && !(CFG.tawkPropertyId && CFG.tawkWidgetId), zalo: CFG.zalo || '', messenger: CFG.messenger || '', telegram: CFG.telegram || '',
+  const data = { base: BASE, w3f: CFG.web3formsKey || '', hotline: CFG.hotline, demo: !!CFG.chatDemo && !(CFG.tawkPropertyId && CFG.tawkWidgetId), zalo: CFG.zalo || '', messenger: CFG.messenger || '', telegram: CFG.telegram || '',
     tawkPropertyId: CFG.tawkPropertyId || '', tawkWidgetId: CFG.tawkWidgetId || '',
     cities: CITIES.map(c => ({ id: c.id, name: c.name })),
     bars: BARS.map(b => ({ id: b.id, name: b.name, slug: b.slug, city: b.city, cityName: cityOf(b.city).name, type: b.type, rating: b.rating, partner: P(b), price: b.price, priceKnown: b.priceKnown !== false, hoursKnown: b.hoursKnown !== false, deal: b.deal, gpct: b.gpct, gLabel: b.gLabel, hours: b.hours, bonus: b.bonus, rank: order.indexOf(b) })) };

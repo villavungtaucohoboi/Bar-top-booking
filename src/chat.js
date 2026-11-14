@@ -5,12 +5,16 @@
  * Gọi từ ngoài: TCChat.open(), TCChat.close(). */
 (function () {
   var C = window.TC_CHAT; if (!C || window.TCChat) return;
-  var B = C.base, KEY = 'topchill-chat';
+  var B = C.base, KEY = 'topchill-chat-v2';
+  try { localStorage.removeItem('topchill-chat'); } catch (e) {}
   var norm = function (s) { return String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'd').toLowerCase(); };
   var esc = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); };
   var fmt = function (n) { return Number(n).toLocaleString('vi-VN'); };
   var st = { msgs: [], agent: false, miss: 0, seen: false };
   try { var sv = JSON.parse(localStorage.getItem(KEY) || 'null'); if (sv && sv.msgs) st = sv; } catch (e) {}
+  /* bỏ thẻ bar không còn trong dữ liệu (tránh khung trống) */
+  st.msgs = st.msgs.filter(function (m) { if (m.t !== 'cards') return true; m.ids = m.ids.filter(function (id) { return C.bars.some(function (b) { return b.id === id; }); }); return m.ids.length > 0; });
+  st.sent = st.sent || 0;
   var save = function () { try { st.msgs = st.msgs.slice(-60); localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} };
   var tawk = C.tawkPropertyId && C.tawkWidgetId;
   var AGENT = 'Linh';
@@ -200,10 +204,45 @@
     if (r.m) say(r.m.map(function (m) { return m.t === 'bot' ? { t: 'agent', x: m.x } : m; }), r.c);
   }
 
+
+  /* ---------- gửi tin khách nhắn về email tổng đài (Web3Forms) + GA4 ---------- */
+  var PHONE = /(?:\+?84|0)(?:[\s.\-]?\d){9}/;
+  function ga(name, p) { try { if (window.gtag) gtag('event', name, p || {}); } catch (e) {} }
+  function transcript() {
+    return st.msgs.filter(function (m) { return m.x || m.t === 'cards'; }).map(function (m) {
+      if (m.t === 'cards') return '   [gợi ý: ' + m.ids.map(function (id) { var b = C.bars.filter(function (x) { return x.id === id; })[0]; return b ? b.name : id; }).join(', ') + ']';
+      return (m.t === 'me' ? 'KHÁCH: ' : m.t === 'sys' ? '-- ' : 'Tổng đài: ') + m.x;
+    }).join('\n');
+  }
+  function mail(subject, beacon) {
+    if (!C.w3f) return;
+    var mine = st.msgs.filter(function (m) { return m.t === 'me'; });
+    var body = JSON.stringify({ access_key: C.w3f, subject: subject, from_name: 'TopChill chat web', botcheck: false,
+      'Khách đã nhắn': mine.map(function (m) { return m.x; }).join(' | '), 'Toàn bộ cuộc chat': transcript(), 'Trang': location.href, 'Lúc': new Date().toLocaleString('vi-VN') });
+    st.sent = mine.length; save();
+    try { fetch('https://api.web3forms.com/submit', { method: 'POST', keepalive: !!beacon, headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: body }).catch(function () {}); } catch (e) {}
+  }
+  function flush() {
+    var mine = st.msgs.filter(function (m) { return m.t === 'me'; });
+    if (mine.length > st.sent) mail('Chat web: khách nhắn "' + mine[mine.length - 1].x.slice(0, 60) + '"', true);
+  }
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') flush(); });
+  window.addEventListener('pagehide', flush);
+
   /* ---------- sự kiện ---------- */
   function send(text) {
     text = String(text).trim(); if (!text) return;
     push({ t: 'me', x: text }); Q.innerHTML = '';
+    var cid = findCity(norm(text));
+    ga('chat_message', { city: cid ? cityName(cid) : '', chip: DEF_CHIPS.indexOf(text) > -1 ? 1 : 0 });
+    var ph = text.match(PHONE);
+    if (ph) {
+      var num = ph[0].replace(/[^\d+]/g, '');
+      mail('📞 Khách để lại SĐT qua chat: ' + num);
+      ga('generate_lead', { method: 'chat' }); if (window.tcConv) try { tcConv('form'); } catch (e) {}
+      say([{ t: st.agent ? 'agent' : 'bot', x: 'Cảm ơn bạn! Tổng đài đã nhận số ' + num + ' và sẽ gọi lại trong vài phút để giữ bàn.' }, { t: 'contacts' }], ['Gợi ý bar tối nay']);
+      return;
+    }
     if (text === 'Gặp nhân viên' || text === 'Đặt giúp mình' || text === 'Đặt bàn giúp mình') { toAgent(); return; }
     if (text === 'Gửi số điện thoại') { say([{ t: st.agent ? 'agent' : 'bot', x: 'Bạn nhập số điện thoại vào ô bên dưới nhé, ví dụ 0912345678.' }]); IN.setAttribute('inputmode', 'tel'); IN.focus(); return; }
     if (text === 'Gợi ý bar tối nay') { say([{ t: st.agent ? 'agent' : 'bot', x: 'Top bar được đặt nhiều nhất tối nay:' }, { t: 'cards', ids: topBars(null, 3).map(function (b) { return b.id; }) }], ['Hà Nội', 'Sài Gòn', 'Đà Nẵng']); return; }
