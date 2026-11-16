@@ -610,6 +610,9 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
   .mq-cities button small{font-size:11.5px;color:#d9d0e6}
   .mq-cities button:active{background:#f0b545;color:#1a1206}
   .mq-call{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:62px;margin:10px 0;border-radius:16px;background:#22c55e;color:#fff;font-weight:800;font-size:18px;text-decoration:none;box-shadow:0 0 22px rgba(34,197,94,.45)}
+  .mq-promo{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0 0;padding:12px 10px;border-radius:16px;background:linear-gradient(100deg,#5b1240,#2a0f3d);border:1px solid rgba(255,209,102,.55);text-decoration:none;text-align:center}
+  .mq-promo b{font-size:28px;font-weight:900;color:#ffd166;line-height:1.05;text-shadow:0 0 18px rgba(255,209,102,.45)}
+  .mq-promo span{font-size:14px;color:#ffe3f1}
   .mq-call small{font-weight:600;font-size:12.5px;opacity:.9}
   .mq-acts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
   .mq-acts button,.mq-acts a{min-height:72px;border-radius:16px;background:linear-gradient(160deg,#ffd98a,#f0b545);color:#1a1206;font-weight:800;font-size:12.5px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;line-height:1.1}
@@ -1052,7 +1055,8 @@ button.user-pill{cursor:pointer;font:inherit;color:inherit;text-align:left}
         <div class="m-quick">
           <div class="mq-label">Chạm vào thành phố để xem bar</div>
           <div class="mq-cities" id="mqCities"></div>
-          <a class="mq-call" href="tel:__TEL__">📞 Gọi tổng đài __HOTLINE__<small>Giữ bàn trong 1 phút · không cần cọc · 24/7</small></a>
+          <a class="mq-promo" href="tel:__TEL__"><b>GIẢM ĐẾN __PROMO_MAX__% BILL</b><span>Đặt bàn __PROMO_ADV__ hoặc đến giờ vàng __PROMO_GOLDEN__</span></a>
+          <a class="mq-call" href="tel:__TEL__">📞 Gọi giữ ưu đãi __HOTLINE__<small>Mức giảm tuỳ bar, tổng đài báo khi gọi · không cần cọc · 24/7</small></a>
           <div class="mq-acts">
             <button type="button" data-jump="rankSec"><i>🔥</i>Top bar</button>
             <button type="button" data-jump="ghSec"><i>⚡</i>Giờ vàng</button>
@@ -1060,7 +1064,7 @@ button.user-pill{cursor:pointer;font:inherit;color:inherit;text-align:left}
             <button type="button" data-chat="1"><i>💬</i>Chat tổng đài</button>
           </div>
         </div>
-        <div class="nw-perks"><span>Giảm đến 15% bill</span><span>Hỗ trợ 24/7</span><span>0đ tiền cọc</span><span>Huỷ miễn phí trước 18:00</span></div>
+        <div class="nw-perks"><span>Giảm đến __PROMO_MAX__% bill</span><span>Hỗ trợ 24/7</span><span>0đ tiền cọc</span><span>Huỷ miễn phí trước 18:00</span></div>
       </div>
       <div class="nw-side" aria-hidden="true">
         <div class="nw-open">OPEN</div>
@@ -1456,7 +1460,7 @@ function renderRank(){
         <h3>${f.name}</h3>
         ${addrHTML(f)}
         <div class="rk-rate">${f.rating?`<b>★ ${f.rating.toFixed(1)}</b> <span class="muted num">· ${fmt(f.reviews)} đánh giá · ${escH(f.music)}</span>`:`<span class="muted">${escH(f.music||f.type)}</span>`}</div>
-        <div class="rk-perks">${isP(f)?`<span class="pk gold">Giảm ${f.deal}% bill</span>${f.gpct?`<span class="pk neon">⚡ Giờ vàng ${f.gLabel} -${f.gpct}%</span>`:''}${f.bonus?`<span class="pk">🎁 ${escH(f.bonus)}</span>`:''}`:'<span class="pk">📞 Đặt bàn qua tổng đài TopChill</span>'}</div>
+        <div class="rk-perks">${isP(f)?`<span class="pk gold">Giảm ${f.deal}% bill</span>${f.gpct?`<span class="pk neon">⚡ Giờ vàng ${f.gLabel} -${f.gpct}%</span>`:''}${f.bonus?`<span class="pk">🎁 ${escH(f.bonus)}</span>`:''}`:'<span class="pk gold">📞 Gọi nhận ưu đãi đến __PROMO_MAX__%</span>'}</div>
         <div class="rk-cta"><span class="price num">${f.priceKnown===false?'Giá: liên hệ':`Từ <b>${f.price[0]}k</b> / người`}</span><button class="btn btn-gold" data-book="${f.id}">Đặt Bàn Ngay</button></div>
       </div>
     </article>
@@ -1487,7 +1491,7 @@ function cardHTML(b){
     <div class="card-body">
       ${hereNote(b)}<h3>${b.name}</h3>
       <div class="meta"><span>${cityName(b.city)}</span><span>${b.area}</span><span>${b.music}</span></div>
-      ${isP(b)?`<div class="deal"><span class="ico">%</span>Giảm ${b.deal}% bill khi đặt qua TopChill</div>`:'<div class="deal"><span class="ico">📞</span>Đặt bàn qua tổng đài TopChill</div>'}
+      ${isP(b)?`<div class="deal"><span class="ico">%</span>Giảm ${b.deal}% bill khi đặt qua TopChill</div>`:'<div class="deal"><span class="ico">%</span>Giảm đến __PROMO_MAX__% khi đặt __PROMO_ADV__ hoặc giờ vàng __PROMO_GOLDEN__. Gọi tổng đài để giữ ưu đãi</div>'}
       ${b.gpct?`<div class="ghline"><span class="ico">⚡</span>Giờ vàng ${b.gLabel} · giảm thêm ${b.gpct}%</div>`:''}
       ${addrHTML(b)}
       ${b.bonus?`<div class="bonus">🎁 ${escH(b.bonus)}</div>`:''}
@@ -1605,12 +1609,12 @@ function openBar(id,time,fromRoute){
           ${cur.gpct?`<div class="deal-row neon"><div class="big">⚡ -${cur.gpct}%</div><div><b>Khung giờ vàng ${cur.gLabel}</b><small>Đến trong 2 giờ đầu mở cửa, giảm thêm ${cur.gpct}%. Cộng dồn với deal bar.</small></div></div>`:''}
           ${cur.bonus?`<div class="deal-row neon"><div class="big">🎁</div><div><b>${escH(cur.bonus)}</b><small>${escH(cur.bonusNote||'Tặng tại bàn, không cộng dồn với voucher khác.')}${cur.promoUntil?' · Hạn đến '+cur.promoUntil.split('-').reverse().join('/'):''}</small></div></div>`:''}
           ${USER.guest?`<div class="deal-row plain"><div class="big" style="color:var(--gold)">24/7</div><div><b>Đăng ký miễn phí: hỗ trợ 24/7, không cần cọc</b><small>Chi tiêu từ 20 triệu lên Silver giảm 5%, cao nhất Platinum giảm 10% bill. <button type="button" class="lnk-btn" data-auth="register">Đăng ký ngay</button></small></div></div>`:USER.tierPct?`<div class="deal-row plain"><div class="big" style="color:var(--gold)">-${USER.tierPct}%</div><div><b>Hạng ${USER.tier==='Gold'?'Vàng':USER.tier} của bạn giảm thêm ${USER.tierPct}%</b><small>Áp dụng tại bar đối tác khi đặt qua TopChill.</small></div></div>`:`<div class="deal-row plain"><div class="big" style="color:var(--gold)">24/7</div><div><b>Hạng Newbie: hỗ trợ 24/7, không cần cọc</b><small>Chi tiêu từ 20 triệu lên Silver, giảm 5% bill.</small></div></div>`}
-        </div>`:`<div class="h4">Đặt bàn qua TopChill</div><div class="deal-list"><div class="deal-row plain"><div class="big">📞</div><div><b>Tổng đài giữ bàn giúp bạn</b><small>Bar chưa áp dụng ưu đãi qua TopChill. Gọi, nhắn Zalo hoặc để lại số, tổng đài xác nhận trong vài phút.</small></div></div></div>`}
+        </div>`:`<div class="h4">Đặt bàn qua TopChill</div><div class="deal-list"><div class="deal-row plain"><div class="big">📞</div><div><b>Tổng đài giữ bàn giúp bạn</b><small>Giảm đến __PROMO_MAX__% bill khi đặt __PROMO_ADV__ hoặc đến giờ vàng __PROMO_GOLDEN__, mức giảm tuỳ bar. Gọi tổng đài để được báo ưu đãi và giữ bàn.</small></div></div></div>`}
         
       </div>
       <aside class="book" id="bookBox"></aside>
     </div>
-    <div class="mob-cta" id="mobCta"><a class="btn mob-call" href="tel:${CONTACT.tel}" aria-label="Gọi đặt bàn ${CONTACT.show}">📞 Gọi ngay</a><button class="btn btn-gold" id="mobGo" style="flex:1">Đặt Bàn Ngay</button></div>`;
+    <div class="mob-cta" id="mobCta"><a class="btn mob-call" href="tel:${CONTACT.tel}" aria-label="Gọi đặt bàn ${CONTACT.show}">📞 Gọi nhận ưu đãi</a><button class="btn btn-gold" id="mobGo" style="flex:1">Đặt Bàn Ngay</button></div>`;
   paintCanvases(document.getElementById('sheet'));
   renderBook();
   const m=document.getElementById('modal');m.hidden=false;document.body.style.overflow='hidden';

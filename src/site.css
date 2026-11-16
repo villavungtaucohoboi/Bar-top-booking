@@ -248,3 +248,12 @@ p{margin:0}
 .evdate b{font-size:22px;line-height:1.1}.evdate small{font-size:12px;opacity:.9;margin-top:4px}
 .evb h3{margin:0 0 6px;font-size:18px}.evb p{margin:6px 0}.evb .btn{margin-top:8px}
 @media(max-width:560px){.evitem{grid-template-columns:70px 1fr;gap:12px;padding:12px}}
+
+/* Dải khuyến mãi kéo khách gọi */
+.promo{background:linear-gradient(100deg,#3a0d2a,#5b1240 45%,#2a0f3d);border-bottom:1px solid rgba(255,63,174,.45)}
+.promo-in{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;padding-top:12px;padding-bottom:12px}
+.promo-t{display:flex;flex-direction:column;gap:2px;flex:1 1 260px;color:#fff}
+.promo-pct{font-size:clamp(24px,6vw,32px);line-height:1.05;font-weight:900;letter-spacing:.5px;color:#ffd166;text-shadow:0 0 18px rgba(255,209,102,.45)}
+.promo-t span{font-size:15px;color:#ffe3f1}.promo-t span b{color:#fff}
+.promo-call{flex:1 1 220px;display:flex;align-items:center;justify-content:center;min-height:52px;padding:0 16px;border-radius:14px;background:#22c55e;color:#fff;font-weight:800;font-size:17px;text-decoration:none;box-shadow:0 0 18px rgba(34,197,94,.45)}
+.promo-n{flex:1 1 100%;font-size:12.5px;color:#d9c8e6}

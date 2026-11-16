@@ -13,6 +13,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 // Thư mục đầu ra: mặc định gốc repo (GitHub Pages). Cloudflare Pages dùng OUT_DIR=dist để chỉ đưa bản build lên, không kèm mã nguồn.
 const OUT = process.env.OUT_DIR ? path.resolve(ROOT, process.env.OUT_DIR) : ROOT;
 const CFG = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/config.json'), 'utf8'));
+const PROMO = CFG.promo || { max: 15, golden: '19:00–21:00', advance: 'trước 24h' };
 const SITE = CFG.siteUrl.replace(/\/$/, '');
 const BASE = CFG.basePath.endsWith('/') ? CFG.basePath : CFG.basePath + '/';
 const INDEX = !!CFG.allowIndexing;
@@ -54,6 +55,7 @@ let APP = fs.readFileSync(path.join(ROOT, 'src/app.html'), 'utf8');
       : CFG.bookingEndpoint ? { kind: 'url', url: CFG.bookingEndpoint }
       : CFG.bookingEmail ? { kind: 'fs', url: 'https://formsubmit.co/ajax/' + CFG.bookingEmail } : null;
     APP = APP.replace("const BOOKING=null;", 'const BOOKING=' + JSON.stringify(BK) + ';'); }
+  APP = APP.split('__PROMO_MAX__').join(String(PROMO.max)).split('__PROMO_GOLDEN__').join(PROMO.golden).split('__PROMO_ADV__').join(PROMO.advance);
   APP = APP.split('__TEL__').join(CFG.hotline.replace(/\s/g, '')).split('__HOTLINE__').join(CFG.hotline);
   APP = APP.replace(/const CONTACT=\{[^}]*\};/, 'const CONTACT=' + JSON.stringify({ tel: CFG.hotline.replace(/\s/g, ''), show: CFG.hotline, zalo: CFG.zalo || CFG.hotline.replace(/\s/g, ''), tg: CFG.telegram || '', tgUser: (CFG.telegramUser || '').replace(/^@/, '') }) + ';');
   APP = APP.replace('const TICKER=[];', 'const TICKER=' + JSON.stringify(DATA.ticker || []).replace(/</g, '\\u003c') + ';'); }
@@ -343,6 +345,10 @@ function footer() {
   <div><h4>TopChill</h4><a href="${href('gioi-thieu/')}">Giới thiệu TopChill</a><a href="${href('su-kien/')}">Sự kiện &amp; lịch DJ</a><a href="${href('thanh-vien/')}">Hạng thành viên</a><a href="${href('chu-bar/')}">Dành cho chủ bar</a><a href="${href('huy-hieu/')}">Huy hiệu đối tác</a><a href="tel:${CFG.hotline.replace(/\s/g, '')}">Hotline ${esc(CFG.hotline)}</a><a href="https://zalo.me/${CFG.zalo}" target="_blank" rel="noopener">Zalo ${esc(CFG.hotline)}</a><a href="https://t.me/${CFG.telegram}" target="_blank" rel="noopener">Telegram ${esc(CFG.hotline)}</a></div>
 </div></footer>`;
 }
+
+const TELN = CFG.hotline.replace(/\s/g, '');
+/* Dải khuyến mãi kéo khách gọi điện: % to + điều kiện đặt trước / giờ vàng. */
+const promoStrip = () => `<aside class="promo" aria-label="Ưu đãi đặt bàn"><div class="wrap promo-in"><div class="promo-t"><b class="promo-pct">GIẢM ĐẾN ${PROMO.max}% BILL</b><span>Đặt bàn ${esc(PROMO.advance)} hoặc đến <b>giờ vàng ${esc(PROMO.golden)}</b></span></div><a class="promo-call" href="tel:${TELN}">📞 Gọi giữ ưu đãi ${esc(CFG.hotline)}</a><small class="promo-n">Mức giảm tuỳ bar, tổng đài báo cụ thể khi bạn gọi. Không cần cọc, hỗ trợ 24/7.</small></div></aside>`;
 function page(opts, body, { mcta = '' } = {}) {
   return `<!doctype html>
 <html lang="vi">
@@ -352,6 +358,7 @@ ${headTags(opts)}
 <body>
 ${header(opts.active)}
 <main>
+${promoStrip()}
 ${body}
 </main>
 ${footer()}
@@ -361,7 +368,7 @@ ${CHAT_TAGS()}
 </html>
 `;
 }
-const mctaBar = (label, link) => `<div class="mcta"><a class="btn call" href="tel:${CFG.hotline.replace(/\s/g, '')}" aria-label="Gọi tổng đài ${esc(CFG.hotline)}">📞 Gọi ngay</a><a class="btn btn-gold" href="${link}">${esc(label)}</a></div>`;
+const mctaBar = (label, link) => `<div class="mcta"><a class="btn call" href="tel:${CFG.hotline.replace(/\s/g, '')}" aria-label="Gọi tổng đài ${esc(CFG.hotline)}">📞 Gọi nhận ưu đãi</a><a class="btn btn-gold" href="${link}">${esc(label)}</a></div>`;
 
 /* ---------- 5. Thẻ dùng chung ---------- */
 function postCard(p) {
@@ -369,7 +376,7 @@ function postCard(p) {
 }
 function barCardSmall(b) {
   const c = cityOf(b.city);
-  return `<a class="card" href="${href(b.path)}"><div class="card-ph">${img(barImgs(b), 640, `${b.name} – ${b.type} ${c.name}`)}</div><div class="card-b"><span class="meta">${b.rating ? `<span class="rate">★ ${b.rating.toFixed(1)}</span>` : ''}<span>${esc(c.name)}</span><span>${esc(b.type)}</span></span><h3>${esc(b.name)}</h3><p class="muted" style="font-size:13px">📍 ${esc([b.addr, b.addr && b.addr.includes(b.area) ? '' : b.area, c.name].filter(Boolean).join(', '))}</p><p>${P(b) ? `Giảm ${b.deal}% bill${b.gpct ? ` · giờ vàng ${b.gLabel} giảm thêm ${b.gpct}%` : ''}` : 'Đặt bàn qua tổng đài, không cần cọc'}</p></div></a>`;
+  return `<a class="card" href="${href(b.path)}"><div class="card-ph">${img(barImgs(b), 640, `${b.name} – ${b.type} ${c.name}`)}</div><div class="card-b"><span class="meta">${b.rating ? `<span class="rate">★ ${b.rating.toFixed(1)}</span>` : ''}<span>${esc(c.name)}</span><span>${esc(b.type)}</span></span><h3>${esc(b.name)}</h3><p class="muted" style="font-size:13px">📍 ${esc([b.addr, b.addr && b.addr.includes(b.area) ? '' : b.area, c.name].filter(Boolean).join(', '))}</p><p>${P(b) ? `Giảm ${b.deal}% bill${b.gpct ? ` · giờ vàng ${b.gLabel} giảm thêm ${b.gpct}%` : ''}` : `📞 Gọi tổng đài nhận ưu đãi đến ${PROMO.max}%, không cần cọc`}</p></div></a>`;
 }
 
 /* ---------- 6. Trang thành phố ---------- */
@@ -646,7 +653,7 @@ function barPage(b) {
       ${b.bonus ? `<div class="perk"><b class="v">🎁</b><div><b>${esc(b.bonus)}</b><small>${esc(b.bonusNote || 'Tặng tại bàn theo điều kiện của bar.')}${b.promoUntil ? ' · Hạn đến ' + fmtDate(b.promoUntil) : ''}</small></div></div>` : ''}
       <div class="perk"><b class="v">-10%</b><div><b>Giảm thêm theo hạng thành viên</b><small>Silver 5%, Vàng 8%, Platinum 10% bill. Newbie: hỗ trợ 24/7, không cần cọc.</small></div></div>
     </div>` : `<h2>Đặt bàn qua TopChill</h2>
-    <div class="perkbox"><div class="perk"><b class="v">📞</b><div><b>Tổng đài giữ bàn giúp bạn</b><small>Bar chưa áp dụng ưu đãi qua TopChill. Gửi yêu cầu hoặc gọi ${esc(CFG.hotline)}, tổng đài gọi lại xác nhận.</small></div></div></div>`;
+    <div class="perkbox"><div class="perk"><b class="v">📞</b><div><b>Tổng đài giữ bàn giúp bạn</b><small>Giảm đến ${PROMO.max}% bill khi đặt ${esc(PROMO.advance)} hoặc đến giờ vàng ${esc(PROMO.golden)}, mức giảm tuỳ bar. Gọi <a href="tel:${TELN}">${esc(CFG.hotline)}</a> để tổng đài báo ưu đãi và giữ bàn.</small></div></div></div>`;
   const body = `
 <div class="wrap">${crumbsHtml(crumbs)}
   <section class="phero">${img(barImgs(b), 1400, `${b.name} – ${b.type} ở ${b.area}, ${c.name}`, { eager: true })}
@@ -996,7 +1003,7 @@ fs.copyFileSync(path.join(ROOT, 'src/install.js'), path.join(OUT, 'assets/instal
 GENERATED.push('assets/site.css', 'assets/chat.css', 'assets/chat.js', 'assets/music.js', 'assets/install.js');
 {
   const order = ranked(BARS);
-  const data = { base: BASE, w3f: CFG.web3formsKey || '', hotline: CFG.hotline, demo: !!CFG.chatDemo && !(CFG.tawkPropertyId && CFG.tawkWidgetId), zalo: CFG.zalo || '', messenger: CFG.messenger || '', telegram: CFG.telegram || '',
+  const data = { base: BASE, promoMax: PROMO.max, w3f: CFG.web3formsKey || '', hotline: CFG.hotline, demo: !!CFG.chatDemo && !(CFG.tawkPropertyId && CFG.tawkWidgetId), zalo: CFG.zalo || '', messenger: CFG.messenger || '', telegram: CFG.telegram || '',
     tawkPropertyId: CFG.tawkPropertyId || '', tawkWidgetId: CFG.tawkWidgetId || '',
     cities: CITIES.map(c => ({ id: c.id, name: c.name })),
     bars: BARS.map(b => ({ id: b.id, name: b.name, slug: b.slug, city: b.city, cityName: cityOf(b.city).name, type: b.type, rating: b.rating, partner: P(b), price: b.price, priceKnown: b.priceKnown !== false, hoursKnown: b.hoursKnown !== false, deal: b.deal, gpct: b.gpct, gLabel: b.gLabel, hours: b.hours, bonus: b.bonus, rank: order.indexOf(b) })) };

@@ -26,5 +26,10 @@
     "scroll75": "kJEPCLvBs7UdEMid4pBF",
     "stay30s": "MEwDCL7Bs7UdEMid4pBF"
   },
-  "ga4Id": "G-7XB5ELC2YX"
+  "ga4Id": "G-7XB5ELC2YX",
+  "promo": {
+    "max": 15,
+    "golden": "19:00–21:00",
+    "advance": "trước 24h"
+  }
 }
