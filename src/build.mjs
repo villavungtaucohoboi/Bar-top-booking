@@ -579,6 +579,21 @@ function bitems(bars, c) {
       <div class="acts"><a class="btn btn-gold" href="${bookHref(b)}">Đặt Bàn Ngay</a><a class="btn btn-ghost" href="${href(b.path)}">Xem chi tiết</a></div>
     </div></li>`).join('');
 }
+
+/* Flash sale: top 5 bar của thành phố + đếm ngược giờ vàng thật (theo giờ máy khách). */
+const FS_JS = `<script>(function(){var g=${JSON.stringify(PROMO.golden)}.match(/(\\d{1,2}):\\d{2}\\D+(\\d{1,2}):\\d{2}/)||[0,19,21],a=+g[1],z=+g[2];function p(v){return(v<10?'0':'')+v}function t(){var n=new Date(),h=n.getHours(),x=new Date(n),l,live=0;if(h<a){x.setHours(a,0,0,0);l='Giờ vàng bắt đầu sau'}else if(h<z){x.setHours(z,0,0,0);l='Giờ vàng kết thúc sau';live=1}else{x.setDate(x.getDate()+1);x.setHours(a,0,0,0);l='Giờ vàng tối mai bắt đầu sau'}var s=Math.max(0,Math.floor((x-n)/1000));document.querySelectorAll('[data-fscd]').forEach(function(e){e.querySelector('[data-fslbl]').innerHTML=(live?'<span class="fs-live">ĐANG DIỄN RA</span> ':'')+l;e.querySelector('[data-fsclk]').innerHTML='<i>'+p(Math.floor(s/3600))+'</i><i>'+p(Math.floor(s%3600/60))+'</i><i>'+p(s%60)+'</i>'})}t();setInterval(t,1000)})();</script>`;
+function flashBlock(c, bars) {
+  const top = bars.slice(0, 5); if (!top.length) return '';
+  const cards = top.map((b, i) => `<article class="fs-card"><a class="fs-ph" href="${href(b.path)}">${img(barImgs(b), 640, `${b.name} – ${b.type} ${c.name}`, { ratio: [16, 10] })}<span class="fs-no">#${i + 1}</span><span class="fs-off">${P(b) && b.deal ? `<small>GIẢM</small>${b.deal + (b.gpct || 0)}%` : `<small>GIẢM ĐẾN</small>${PROMO.max}%`}</span><span class="fs-gv">⚡ Giờ vàng ${esc(PROMO.golden)}</span></a>
+  <div class="fs-b"><h3><a href="${href(b.path)}">${esc(b.name)}</a></h3><div class="fs-ad">📍 ${esc([b.addr, b.addr && b.addr.includes(b.area) ? '' : b.area].filter(Boolean).join(', '))}</div>
+  <a class="fs-call" href="tel:${TELN}">📞 GỌI GIỮ ƯU ĐÃI</a><a class="fs-bk" href="${bookHref(b)}">hoặc đặt bàn online</a></div></article>`).join('');
+  return `<section class="flash" aria-label="Flash sale bar ${esc(c.name)}"><div class="wrap">
+  <div class="fs-head"><span class="fs-bolt" aria-hidden="true">⚡</span><div class="fs-ttl"><h2>FLASH SALE BAR ${esc(c.name.toUpperCase())}</h2><p>Top 5 tối nay · giảm đến <b>${PROMO.max}% bill</b> khi đặt ${esc(PROMO.advance)} hoặc giờ vàng ${esc(PROMO.golden)}</p></div>
+  <div class="fs-cd" data-fscd><small><span data-fslbl>Giờ vàng bắt đầu sau</span></small><div class="fs-clock" data-fsclk><i>00</i><i>00</i><i>00</i></div></div></div>
+  <div class="fs-row">${cards}</div>
+  <p class="fs-note">Mức giảm tuỳ bar, tổng đài báo cụ thể khi bạn gọi. Không cần cọc, hỗ trợ 24/7.</p>
+</div></section>${FS_JS}`;
+}
 function cityPage(c) {
   const bars = ranked(BARS.filter(b => b.city === c.id));
   const S = c.seo;
@@ -599,6 +614,7 @@ function cityPage(c) {
     </div>
   </section>
 </div>
+${flashBlock(c, bars)}
 <section class="sec"><div class="wrap">
   <h2>${bars.length || ''} bar ${esc(c.name)} nổi bật</h2>
   <p class="lead-p" style="margin-bottom:18px">Bar đối tác có ưu đãi khi đặt qua TopChill được xếp trước. Các bar còn lại đặt bàn qua tổng đài, thông tin tổng hợp từ nguồn công khai và có thể thay đổi.</p>

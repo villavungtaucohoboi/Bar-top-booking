@@ -1008,6 +1008,41 @@ button.user-pill{cursor:pointer;font:inherit;color:inherit;text-align:left}
 .hist-empty{padding:18px;border-radius:14px;background:var(--bg2);border:1px dashed var(--line2);color:var(--muted);font-size:14px}
 @media (max-width:980px){.tiers2{grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.nw-glass path,.nw-glass circle{stroke-dashoffset:0}}
+
+/* ===== FLASH SALE ===== */
+.flash{position:relative;padding:18px 0 14px;background:radial-gradient(120% 90% at 0% 0%,rgba(255,70,120,.28),transparent 60%),radial-gradient(120% 90% at 100% 0%,rgba(255,196,0,.18),transparent 55%),#14070f;border-top:1px solid rgba(255,90,140,.45);border-bottom:1px solid rgba(255,90,140,.45);overflow:hidden}
+.fs-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.fs-bolt{font-size:34px;filter:drop-shadow(0 0 10px #ffcf33);animation:fsZap 1.2s infinite}
+@keyframes fsZap{0%,100%{transform:scale(1) rotate(-6deg)}50%{transform:scale(1.18) rotate(6deg)}}
+.fs-ttl{flex:1 1 200px;min-width:0}
+.fs-ttl h2{margin:0;font-size:clamp(22px,5.4vw,30px);line-height:1.05;font-weight:900;letter-spacing:.5px;background:linear-gradient(90deg,#ffe066,#ff7a45,#ff3f8e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.fs-ttl p{margin:4px 0 0;font-size:14px;color:#ffd9e8}
+.fs-cd{display:flex;flex-direction:column;align-items:flex-end;gap:3px}
+.fs-cd small{font-size:12px;color:#ffc2d9;font-weight:600}
+.fs-clock{display:flex;gap:4px;font-variant-numeric:tabular-nums}
+.fs-clock i{font-style:normal;min-width:34px;padding:5px 4px;border-radius:8px;background:#000;color:#ffe066;font-weight:900;font-size:19px;text-align:center;box-shadow:inset 0 0 0 1px rgba(255,224,102,.35)}
+.fs-live{display:inline-block;padding:2px 8px;border-radius:99px;background:#ff2d55;color:#fff;font-size:11px;font-weight:800;animation:fsBlink 1s infinite}
+@keyframes fsBlink{50%{opacity:.45}}
+.fs-tabs{display:flex;gap:8px;overflow-x:auto;padding:12px 0 4px;scrollbar-width:none}.fs-tabs::-webkit-scrollbar{display:none}
+.fs-tabs button,.fs-tabs a{flex:none;padding:7px 14px;border-radius:99px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font-weight:700;font-size:13.5px;cursor:pointer;text-decoration:none}
+.fs-tabs .on{background:linear-gradient(90deg,#ff7a45,#ff3f8e);border-color:transparent;box-shadow:0 0 14px rgba(255,63,142,.5)}
+.fs-row{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 2px 6px;scrollbar-width:none}.fs-row::-webkit-scrollbar{display:none}
+.fs-card{flex:0 0 min(78vw,290px);scroll-snap-align:start;border-radius:18px;overflow:hidden;background:#1d0c18;border:1px solid rgba(255,120,160,.35);box-shadow:0 10px 30px rgba(0,0,0,.45);display:flex;flex-direction:column;color:#fff}
+.fs-ph{position:relative;aspect-ratio:16/10;overflow:hidden;display:block;background:#2a1020}
+.fs-ph img{width:100%;height:100%;object-fit:cover;display:block}
+.fs-no{position:absolute;left:8px;top:8px;padding:3px 9px;border-radius:9px;background:rgba(0,0,0,.72);font-weight:900;font-size:14px;color:#ffe066}
+.fs-off{position:absolute;right:-4px;top:10px;padding:6px 12px 6px 14px;background:linear-gradient(90deg,#ff2d55,#ff7a45);font-weight:900;font-size:15px;line-height:1;border-radius:10px 0 0 10px;box-shadow:0 4px 14px rgba(255,45,85,.55)}
+.fs-off small{display:block;font-size:10px;font-weight:700;opacity:.9;margin-bottom:2px}
+.fs-gv{position:absolute;left:8px;bottom:8px;padding:3px 8px;border-radius:8px;background:rgba(255,224,102,.95);color:#2a1500;font-weight:800;font-size:12px}
+.fs-b{padding:10px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.fs-b h3{margin:0;font-size:17px;line-height:1.2}
+.fs-b h3 a{color:#fff;text-decoration:none}
+.fs-ad{font-size:12.5px;color:#d9c3d2;line-height:1.35}
+.fs-call{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:6px;min-height:50px;border-radius:14px;background:#22c55e;color:#fff;font-weight:900;font-size:16px;text-decoration:none;box-shadow:0 0 0 0 rgba(34,197,94,.7);animation:fsPulse 1.8s infinite}
+@keyframes fsPulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.65)}70%{box-shadow:0 0 0 12px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.fs-bk{display:block;text-align:center;font-size:13px;color:#ffb3d1;font-weight:700;text-decoration:underline;background:none;border:0;cursor:pointer;padding:2px}
+.fs-note{margin:6px 0 0;font-size:12px;color:#c9b2c2}
+@media (prefers-reduced-motion:reduce){.fs-bolt,.fs-call,.fs-live{animation:none}}
 </style>
 
 <header class="hdr"><div class="wrap hdr-in">
@@ -1075,6 +1110,14 @@ button.user-pill{cursor:pointer;font:inherit;color:inherit;text-align:left}
     <div class="nw-crowd" aria-hidden="true"><svg id="crowd" viewBox="0 0 1600 150" preserveAspectRatio="xMidYMax slice"></svg></div>
     <div class="nw-ticker" aria-label="Hoạt động mới"><div class="nw-track" id="ticker"></div></div>
   </section>
+
+  <section class="flash" id="flashSec" aria-label="Flash sale đặt bàn"><div class="wrap">
+    <div class="fs-head"><span class="fs-bolt" aria-hidden="true">⚡</span><div class="fs-ttl"><h2>FLASH SALE TỐI NAY</h2><p>Giảm đến <b>__PROMO_MAX__% bill</b> · đặt __PROMO_ADV__ hoặc giờ vàng __PROMO_GOLDEN__</p></div>
+      <div class="fs-cd" data-fscd><small><span data-fslbl>Giờ vàng bắt đầu sau</span></small><div class="fs-clock" data-fsclk><i>00</i><i>00</i><i>00</i></div></div></div>
+    <div class="fs-tabs" id="fsTabs"></div>
+    <div class="fs-row" id="fsRow"></div>
+    <p class="fs-note">Mức giảm tuỳ bar, tổng đài báo cụ thể khi bạn gọi. Không cần cọc, hỗ trợ 24/7.</p>
+  </div></section>
 
   <section class="block" id="rankSec"><div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Đối tác nổi bật &amp; bar hot</div><h2>Bar nổi bật</h2></div><a class="lnk" href="/kham-pha/">Xem tất cả bar →</a></div>
@@ -1435,10 +1478,36 @@ function locate(){
   navigator.geolocation.getCurrentPosition(p=>{
     const c=nearCity(p.coords.latitude,p.coords.longitude);
     try{localStorage.setItem('topchill-loc',JSON.stringify({city:c,at:Date.now()}))}catch(e){}
-    if(c!==HERE){HERE=c;renderRank();renderBars();if(c)toast('📍 Bạn đang ở '+cityName(c)+': ưu tiên hiện bar khu vực bạn.',4000)}
+    if(c!==HERE){HERE=c;renderRank();renderFlash();renderBars();if(c)toast('📍 Bạn đang ở '+cityName(c)+': ưu tiên hiện bar khu vực bạn.',4000)}
   },()=>{},{enableHighAccuracy:false,timeout:15000,maximumAge:30*60000});
 }
 const hereNote=b=>isHere(b)?'<div class="here-note">📍 Bar tại khu vực bạn</div>':'';
+
+
+/* ---------- FLASH SALE: top 5 mỗi khu vực + đếm ngược giờ vàng thật ---------- */
+let FS=null;
+function renderFlash(){
+  const row=document.getElementById('fsRow');if(!row)return;
+  const have=CITIES.filter(c=>BARS.some(b=>b.city===c.id));
+  const cur=FS||HERE||'hn';
+  let tabs=have.map(c=>[c.id,c.name]);if(HERE)tabs=[[HERE,'📍 '+cityName(HERE)]].concat(tabs.filter(t=>t[0]!==HERE));
+  const tb=document.getElementById('fsTabs');
+  tb.innerHTML=tabs.map(([id,n])=>`<button type="button" class="${id===cur?'on':''}" data-fs="${id}">${n}</button>`).join('');
+  tb.onclick=e=>{const b=e.target.closest('[data-fs]');if(b){FS=b.dataset.fs;renderFlash()}};
+  const rank={top:0,hot:1,null:2};
+  const list=BARS.filter(b=>b.city===cur).sort((a,b)=>((a.pin||999)-(b.pin||999))||(rank[a.boost]-rank[b.boost])||(isP(b)-isP(a))||(b.rating||0)-(a.rating||0)).slice(0,5);
+  row.innerHTML=list.map((b,i)=>{
+    const ph=barImg(b,600);
+    const off=isP(b)&&b.deal?`<small>GIẢM</small>${b.deal+(b.gpct||0)}%`:`<small>GIẢM ĐẾN</small>__PROMO_MAX__%`;
+    return `<article class="fs-card"><a class="fs-ph" href="/bar/${slugOf(b)}/">${ph}<span class="fs-no">#${i+1}</span><span class="fs-off">${off}</span><span class="fs-gv">⚡ Giờ vàng __PROMO_GOLDEN__</span></a>
+      <div class="fs-b"><h3><a href="/bar/${slugOf(b)}/">${escH(b.name)}</a></h3><div class="fs-ad">📍 ${escH(addrTxt(b))}</div>
+      <a class="fs-call" href="tel:${CONTACT.tel}">📞 GỌI GIỮ ƯU ĐÃI</a><button type="button" class="fs-bk" data-book="${b.id}">hoặc đặt bàn online</button></div></article>`}).join('');
+}
+function fsTick(){const g='__PROMO_GOLDEN__'.match(/(\d{1,2}):\d{2}\D+(\d{1,2}):\d{2}/)||[0,19,21];const a=+g[1],z=+g[2];const n=new Date(),h=n.getHours(),t=new Date(n);let l,live=false;
+  if(h<a){t.setHours(a,0,0,0);l='Giờ vàng bắt đầu sau'}else if(h<z){t.setHours(z,0,0,0);l='Giờ vàng kết thúc sau';live=true}else{t.setDate(t.getDate()+1);t.setHours(a,0,0,0);l='Giờ vàng tối mai bắt đầu sau'}
+  const s=Math.max(0,Math.floor((t-n)/1000)),p=v=>String(v).padStart(2,'0');
+  document.querySelectorAll('[data-fscd]').forEach(el=>{el.querySelector('[data-fslbl]').innerHTML=(live?'<span class="fs-live">ĐANG DIỄN RA</span> ':'')+l;el.querySelector('[data-fsclk]').innerHTML=`<i>${p(Math.floor(s/3600))}</i><i>${p(Math.floor(s%3600/60))}</i><i>${p(s%60)}</i>`})}
+fsTick();setInterval(fsTick,1000);
 
 /* ---------- TRANG CHỦ: XẾP HẠNG, QUYỀN LỢI, THÀNH PHỐ ---------- */
 let RK=null;
@@ -1556,7 +1625,7 @@ function initHome(){
   document.getElementById('regCity').innerHTML=sc.innerHTML;
   const d=new Date();document.getElementById('sDate').value=d.toISOString().slice(0,10);
   document.getElementById('searchForm').onsubmit=e=>{e.preventDefault();setCity(sc.value)};
-  renderRank();renderPerks();renderCityTiles();
+  renderRank();renderFlash();renderPerks();renderCityTiles();
   const mq=document.getElementById('mqCities');
   mq.innerHTML=['hn','sg','dn','nt','pq','vt'].map(id=>{const c=CITIES.find(x=>x.id===id);return `<button type="button" data-c="${id}"><b>${c.name}</b><small>${c.n} bar</small></button>`}).join('');
   mq.onclick=e=>{const b=e.target.closest('button');if(b)setCity(b.dataset.c)};
