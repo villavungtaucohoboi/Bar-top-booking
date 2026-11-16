@@ -54,6 +54,7 @@ let APP = fs.readFileSync(path.join(ROOT, 'src/app.html'), 'utf8');
       : CFG.bookingEndpoint ? { kind: 'url', url: CFG.bookingEndpoint }
       : CFG.bookingEmail ? { kind: 'fs', url: 'https://formsubmit.co/ajax/' + CFG.bookingEmail } : null;
     APP = APP.replace("const BOOKING=null;", 'const BOOKING=' + JSON.stringify(BK) + ';'); }
+  APP = APP.split('__TEL__').join(CFG.hotline.replace(/\s/g, '')).split('__HOTLINE__').join(CFG.hotline);
   APP = APP.replace(/const CONTACT=\{[^}]*\};/, 'const CONTACT=' + JSON.stringify({ tel: CFG.hotline.replace(/\s/g, ''), show: CFG.hotline, zalo: CFG.zalo || CFG.hotline.replace(/\s/g, ''), tg: CFG.telegram || '', tgUser: (CFG.telegramUser || '').replace(/^@/, '') }) + ';');
   APP = APP.replace('const TICKER=[];', 'const TICKER=' + JSON.stringify(DATA.ticker || []).replace(/</g, '\\u003c') + ';'); }
 function grab(start, end) {
@@ -360,7 +361,7 @@ ${CHAT_TAGS()}
 </html>
 `;
 }
-const mctaBar = (label, link) => `<div class="mcta"><a class="btn btn-gold" href="${link}">${esc(label)}</a><a class="btn call" href="tel:${CFG.hotline.replace(/\s/g, '')}" aria-label="Gọi tổng đài ${esc(CFG.hotline)}">📞</a></div>`;
+const mctaBar = (label, link) => `<div class="mcta"><a class="btn call" href="tel:${CFG.hotline.replace(/\s/g, '')}" aria-label="Gọi tổng đài ${esc(CFG.hotline)}">📞 Gọi ngay</a><a class="btn btn-gold" href="${link}">${esc(label)}</a></div>`;
 
 /* ---------- 5. Thẻ dùng chung ---------- */
 function postCard(p) {

@@ -47,8 +47,12 @@
 
   function hidden() { try { return +localStorage.getItem(KEY) > Date.now(); } catch (e) { return false; } }
   function hide() { bar.hidden = true; try { localStorage.setItem(KEY, Date.now() + 7 * 864e5); } catch (e) {} }
+  /* Chỉ gợi ý cài app từ lượt ghé thứ 3 và không bao giờ với khách vừa bấm quảng cáo: tránh che nút gọi/đặt bàn. */
+  var visits = 0; try { visits = +localStorage.getItem('topchill-visits') || 0; if (!sessionStorage.getItem('tc-v')) { visits++; localStorage.setItem('topchill-visits', visits); sessionStorage.setItem('tc-v', '1'); } } catch (e) {}
+  var fromAd = /[?&](gclid|gbraid|wbraid|fbclid)=|utm_medium=(cpc|paid)/i.test(location.search);
+  try { if (fromAd) sessionStorage.setItem('tc-ad', '1'); fromAd = fromAd || !!sessionStorage.getItem('tc-ad'); } catch (e) {}
   function show() {
-    if (hidden() || !isMobile) return;
+    if (hidden() || !isMobile || fromAd || visits < 3) return;
     if (deferred) { small.textContent = 'Cài app 1 chạm, ẩn thanh địa chỉ, tràn viền'; go.hidden = false; }
     else if (isIOS) { small.textContent = 'Thêm vào màn hình chính để tràn viền như app'; go.textContent = 'Cách cài'; go.hidden = false; }
     else { small.textContent = 'Ẩn thanh địa chỉ và thanh trạng thái'; go.hidden = true; }

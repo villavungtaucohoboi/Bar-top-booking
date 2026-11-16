@@ -217,7 +217,7 @@ p{margin:0}
   .foot{padding-bottom:110px}
   .mcta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:10px;align-items:center;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:var(--hdr-bg);backdrop-filter:blur(14px);border-top:1px solid var(--line)}
   .mcta .btn{flex:1;min-height:54px;font-size:17px;border-radius:16px}
-  .mcta .call{flex:none;width:54px;padding:0;border-radius:16px;background:#22c55e;color:#fff;font-size:22px}
+  .mcta .call{flex:1;padding:0 10px;border-radius:16px;background:#22c55e;color:#fff;font-size:17px;font-weight:800;box-shadow:0 0 18px rgba(34,197,94,.45)}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 
