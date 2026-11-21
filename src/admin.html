@@ -61,7 +61,7 @@
 
   <div class="ad" id="app" hidden>
     <aside class="box">
-      <div class="tabs" role="tablist"><button type="button" class="on" data-tab="bars">Bar</button><button type="button" data-tab="events">Sự kiện</button><button type="button" data-tab="ticker">Dải tin</button></div>
+      <div class="tabs" role="tablist"><button type="button" class="on" data-tab="bars">Bar</button><button type="button" data-tab="events">Sự kiện</button><button type="button" data-tab="ghep">Ghép bàn</button><button type="button" data-tab="ticker">Dải tin</button></div>
       <div id="tabBars" style="display:flex;flex-direction:column;gap:10px">
         <button class="btn btn-gold" id="newBar" type="button">+ Thêm bar mới</button>
         <div class="fld"><label for="q">Tìm bar</label><input id="q" placeholder="Tên, khu vực…"></div>
@@ -90,6 +90,26 @@
       </div>
       <div class="bar-acts" style="margin-top:14px"><button class="btn btn-gold" id="evSave" type="button">Lưu &amp; đăng sự kiện</button><button class="btn" id="evNew" type="button">Làm mới</button></div>
       <p class="msg" id="evMsg" role="status"></p>
+    </section>
+
+    <section id="paneGhep" class="box" hidden>
+      <h2>Ghép bàn – duyệt tin</h2>
+      <p class="help">Khách gửi yêu cầu ở trang <b>/ghep-ban/</b>, email về hộp thư đặt bàn kèm <b>mã GB-xxxx</b> và SĐT. Gọi xác nhận khách xong, nhập thông tin vào đây để đăng công khai. <b>Không nhập SĐT, tên thật hay link</b> vào đây (dữ liệu này công khai). Tin quá ngày tự ẩn.</p>
+      <div id="gbAdList" style="display:flex;flex-direction:column;gap:8px;margin:12px 0 18px"></div>
+      <h3 id="gbAdTitle" style="margin:0 0 10px">Đăng tin ghép bàn</h3>
+      <div class="g3"><div class="fld"><label for="gb_code">Mã ghép bàn</label><input id="gb_code" maxlength="10" placeholder="GB-XXXX"></div>
+        <div class="fld"><label for="gb_city">Thành phố</label><select id="gb_city"></select></div>
+        <div class="fld"><label for="gb_bar">Quán</label><select id="gb_bar"></select></div></div>
+      <div class="g3" style="margin-top:10px"><div class="fld"><label for="gb_date">Ngày</label><input id="gb_date" type="date"></div>
+        <div class="fld"><label for="gb_time">Giờ đến</label><input id="gb_time" type="time" value="21:00"></div>
+        <div class="fld"><label for="gb_age">Độ tuổi <small>không bắt buộc</small></label><input id="gb_age" maxlength="20" placeholder="22–30"></div></div>
+      <div class="g3" style="margin-top:10px"><div class="fld"><label for="gb_hn">Bàn có: nam</label><input id="gb_hn" type="number" min="0" max="20" value="2"></div>
+        <div class="fld"><label for="gb_hu">Bàn có: nữ</label><input id="gb_hu" type="number" min="0" max="20" value="0"></div>
+        <div class="fld"><label for="gb_nn">Cần thêm: nam</label><input id="gb_nn" type="number" min="0" max="20" value="0"></div></div>
+      <div class="g3" style="margin-top:10px"><div class="fld"><label for="gb_nu">Cần thêm: nữ</label><input id="gb_nu" type="number" min="0" max="20" value="2"></div>
+        <div class="fld" style="grid-column:span 2"><label for="gb_note">Ghi chú công khai <small>không SĐT/link</small></label><input id="gb_note" maxlength="140"></div></div>
+      <div class="bar-acts" style="margin-top:14px"><button class="btn btn-gold" id="gbSave" type="button">Duyệt &amp; đăng tin</button><button class="btn" id="gbNew" type="button">Làm mới</button></div>
+      <p class="msg" id="gbAdMsg" role="status"></p>
     </section>
 
     <section id="paneTicker" class="box" hidden>
@@ -290,7 +310,7 @@ $('del').onclick=function(){if(!cur||!cur.id)return;
 
 /* ---------- dải tin ---------- */
 document.querySelector('.tabs').onclick=function(e){var b=e.target.closest('[data-tab]');if(!b)return;document.querySelectorAll('.tabs button').forEach(function(x){x.classList.toggle('on',x===b)});
-  var t=b.dataset.tab;$('tabBars').style.display=t==='bars'?'flex':'none';$('form').hidden=t!=='bars';$('paneTicker').hidden=t!=='ticker';$('paneEvents').hidden=t!=='events';if(t==='events')renderEvents()};
+  var t=b.dataset.tab;$('tabBars').style.display=t==='bars'?'flex':'none';$('form').hidden=t!=='bars';$('paneTicker').hidden=t!=='ticker';$('paneEvents').hidden=t!=='events';$('paneGhep').hidden=t!=='ghep';if(t==='events')renderEvents();if(t==='ghep')renderGhep()};
 
 /* ---------- sự kiện ---------- */
 var evId=null;
@@ -322,6 +342,35 @@ $('evSave').onclick=function(){
   say($('evMsg'),'Đang đăng…','wait');
   commitRetry([],(evId?'Sửa':'Thêm')+' sự kiện: '+e.name,function(f){f.events=(f.events||[]).filter(function(x){return x.id!==e.id});f.events.push(e)})
   .then(function(){renderEvents();evFill(null);say($('evMsg'),'Đã đăng. Web cập nhật sau 1–2 phút.','ok')}).catch(function(err){say($('evMsg'),ghErr(err),'err')})};
+
+/* ---------- ghép bàn ---------- */
+var gbId=null;
+function gbWho(a,b){a=+a||0;b=+b||0;return [a?a+' nam':'',b?b+' nữ':''].filter(Boolean).join(' + ')||'—'}
+function gbBars(){var c=$('gb_city').value;$('gb_bar').innerHTML='<option value="">Chưa chọn quán</option>'+(data.bars||[]).filter(function(b){return !b.hidden&&b.city===c}).sort(function(a,b){return a.name.localeCompare(b.name,'vi')}).map(function(b){return '<option value="'+b.id+'">'+esc(b.name)+'</option>'}).join('')}
+function renderGhep(){
+  if(!$('gb_city').options.length){var cs=(D&&D.cities)||[];$('gb_city').innerHTML=cs.map(function(c){return '<option value="'+c.id+'">'+esc(c.name)+'</option>'}).join('');$('gb_city').onchange=gbBars;gbBars();$('gb_date').value=todayVN()}
+  var L=(data.ghepban||[]).slice().sort(function(a,b){return (a.date+a.time).localeCompare(b.date+b.time)}),t=todayVN();
+  $('gbAdList').innerHTML=L.length?L.map(function(g){var past=g.date<t;return '<div style="display:flex;gap:8px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:10px;'+(past?'opacity:.5':'')+'"><div style="flex:1;min-width:0"><b>'+esc(g.code)+'</b> · '+esc(gbWho(g.haveNam,g.haveNu))+' cần '+esc(gbWho(g.needNam,g.needNu))+'<br><small>'+g.date.split('-').reverse().join('/')+' · '+esc(g.time||'')+' · '+esc(g.barId?barName(g.barId):'Chưa chọn quán')+(past?' · đã qua':'')+'</small></div><button type="button" class="btn" data-gbedit="'+g.id+'">Sửa</button><button type="button" class="btn" data-gbdel="'+g.id+'">Gỡ</button></div>'}).join(''):'<p class="help">Chưa có tin ghép bàn nào.</p>';
+}
+function gbFill(g){gbId=g?g.id:null;$('gbAdTitle').textContent=g?'Sửa tin ghép bàn':'Đăng tin ghép bàn';
+  $('gb_code').value=g?g.code:'';if(g){$('gb_city').value=g.city;gbBars();$('gb_bar').value=g.barId||''}$('gb_date').value=g?g.date:todayVN();$('gb_time').value=g?(g.time||'21:00'):'21:00';
+  $('gb_age').value=g?(g.age||''):'';$('gb_hn').value=g?(g.haveNam||0):2;$('gb_hu').value=g?(g.haveNu||0):0;$('gb_nn').value=g?(g.needNam||0):0;$('gb_nu').value=g?(g.needNu||0):2;$('gb_note').value=g?(g.note||''):'';say($('gbAdMsg'),'')}
+$('gbAdList').onclick=function(ev){var b=ev.target.closest('[data-gbedit],[data-gbdel]');if(!b)return;
+  if(b.dataset.gbedit){gbFill((data.ghepban||[]).find(function(x){return x.id===b.dataset.gbedit}));return}
+  var id=b.dataset.gbdel;if(!confirm('Gỡ tin ghép bàn này?'))return;say($('gbAdMsg'),'Đang gỡ…','wait');
+  commitRetry([],'Gỡ tin ghép bàn',function(f){f.ghepban=(f.ghepban||[]).filter(function(x){return x.id!==id})}).then(function(){renderGhep();gbFill(null);say($('gbAdMsg'),'Đã gỡ.','ok')}).catch(function(e){say($('gbAdMsg'),ghErr(e),'err')})};
+$('gbNew').onclick=function(){gbFill(null)};
+$('gbSave').onclick=function(){
+  var g={id:gbId||('gb'+Date.now().toString(36)),code:$('gb_code').value.trim().toUpperCase(),city:$('gb_city').value,barId:+$('gb_bar').value||0,date:$('gb_date').value,time:$('gb_time').value,age:$('gb_age').value.trim(),
+    haveNam:+$('gb_hn').value||0,haveNu:+$('gb_hu').value||0,needNam:+$('gb_nn').value||0,needNu:+$('gb_nu').value||0,note:$('gb_note').value.trim()};
+  if(!/^GB-[A-Z0-9]{3,6}$/.test(g.code)){say($('gbAdMsg'),'Nhập mã dạng GB-XXXX (trong email khách gửi).','err');return}
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(g.date)||g.date<todayVN()){say($('gbAdMsg'),'Chọn ngày hôm nay hoặc sau.','err');return}
+  if(!(g.needNam||g.needNu)){say($('gbAdMsg'),'Nhập số người cần ghép thêm.','err');return}
+  if(/(\d[\s.\-]?){8,}|https?:|zalo|facebook|t\.me|@/i.test(g.note)){say($('gbAdMsg'),'Ghi chú không được có SĐT, link hay tài khoản mạng xã hội.','err');return}
+  if(!g.barId)delete g.barId;Object.keys(g).forEach(function(k){if(g[k]==='')delete g[k]});
+  say($('gbAdMsg'),'Đang đăng…','wait');
+  commitRetry([],(gbId?'Sửa':'Đăng')+' ghép bàn '+g.code,function(f){f.ghepban=(f.ghepban||[]).filter(function(x){return x.id!==g.id});f.ghepban.push(g)})
+  .then(function(){renderGhep();gbFill(null);say($('gbAdMsg'),'Đã đăng. Trang /ghep-ban/ cập nhật sau 1–2 phút.','ok')}).catch(function(e){say($('gbAdMsg'),ghErr(e),'err')})};
 $('saveTk').onclick=function(){var lines=$('tk').value.split('\n').map(function(s){return s.trim().slice(0,140)}).filter(Boolean).slice(0,15);
   say($('tkMsg'),'Đang đăng…','wait');commitRetry([],'Cập nhật dải tin',function(fresh){fresh.ticker=lines})
   .then(function(){say($('tkMsg'),'Đã đăng '+lines.length+' tin. Web cập nhật sau 1–2 phút.','ok')}).catch(function(e){say($('tkMsg'),ghErr(e),'err')})};

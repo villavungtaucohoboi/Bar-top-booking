@@ -323,7 +323,7 @@ ${HEAD_SCRIPT}`;
 }
 const STAMP = Date.now().toString(36);
 const CHAT_TAGS = () => `<link rel="stylesheet" href="${href('assets/chat.css')}?v=${STAMP}">\n<script src="${href('assets/chat-data.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/chat.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/music.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/install.js')}?v=${STAMP}" defer></script>`;
-const NAV = [['bar-ha-noi/', 'Bar Hà Nội'], ['bar-sai-gon/', 'Bar Sài Gòn'], ['bar-da-nang/', 'Bar Đà Nẵng'], ['blog/', 'Cẩm nang']];
+const NAV = [['bar-ha-noi/', 'Bar Hà Nội'], ['bar-sai-gon/', 'Bar Sài Gòn'], ['bar-da-nang/', 'Bar Đà Nẵng'], ['ghep-ban/', '🔥 Ghép bàn'], ['blog/', 'Cẩm nang']];
 function header(active) {
   const links = NAV.map(([p, t]) => `<a href="${href(p)}"${active === p ? ' aria-current="page"' : ''}>${t}</a>`).join('');
   return `<header class="hdr"><div class="wrap hdr-in">
@@ -342,7 +342,7 @@ function footer() {
     <p class="note">Thông tin bar tổng hợp từ nguồn công khai, có thể thay đổi; gọi ${esc(CFG.hotline)} để xác nhận trước khi đi. Uống có trách nhiệm, không lái xe sau khi uống rượu bia.</p></div>
   <div><h4>Bar theo thành phố</h4>${cityLinks}</div>
   <div><h4>Cẩm nang</h4>${postLinks}<a href="${href('blog/')}">Tất cả bài viết</a></div>
-  <div><h4>TopChill</h4><a href="${href('gioi-thieu/')}">Giới thiệu TopChill</a><a href="${href('su-kien/')}">Sự kiện &amp; lịch DJ</a><a href="${href('thanh-vien/')}">Hạng thành viên</a><a href="${href('chu-bar/')}">Dành cho chủ bar</a><a href="${href('huy-hieu/')}">Huy hiệu đối tác</a><a href="tel:${CFG.hotline.replace(/\s/g, '')}">Hotline ${esc(CFG.hotline)}</a><a href="https://zalo.me/${CFG.zalo}" target="_blank" rel="noopener">Zalo ${esc(CFG.hotline)}</a><a href="https://t.me/${CFG.telegram}" target="_blank" rel="noopener">Telegram ${esc(CFG.hotline)}</a></div>
+  <div><h4>TopChill</h4><a href="${href('gioi-thieu/')}">Giới thiệu TopChill</a><a href="${href('ghep-ban/')}">Ghép bàn online</a><a href="${href('su-kien/')}">Sự kiện &amp; lịch DJ</a><a href="${href('thanh-vien/')}">Hạng thành viên</a><a href="${href('chu-bar/')}">Dành cho chủ bar</a><a href="${href('huy-hieu/')}">Huy hiệu đối tác</a><a href="tel:${CFG.hotline.replace(/\s/g, '')}">Hotline ${esc(CFG.hotline)}</a><a href="https://zalo.me/${CFG.zalo}" target="_blank" rel="noopener">Zalo ${esc(CFG.hotline)}</a><a href="https://t.me/${CFG.telegram}" target="_blank" rel="noopener">Telegram ${esc(CFG.hotline)}</a></div>
 </div></footer>`;
 }
 
@@ -547,6 +547,86 @@ function eventList(evs) {
       <p class="meta">${e.price ? `<span>${esc(e.price)}</span>` : ''}${e.source ? `<span><a href="${esc(e.source)}" target="_blank" rel="nofollow noopener">Nguồn</a></span>` : ''}</p>
       <a class="btn btn-gold" href="${bookHref(b)}">Đặt Bàn Ngay</a>
     </div></article>`; }).join('')}</div>`;
+}
+
+/* ---------- GHÉP BÀN: bảng tin đã duyệt (data.ghepban) + form gửi yêu cầu về email tổng đài ---------- */
+const GHEP = (DATA.ghepban || []).filter(g => g.date >= TODAY_VN).map(g => ({ ...g, bar: BARS.find(b => b.id === g.barId) })).sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
+const ghepWho = (nam, nu) => [nam ? `${nam} nam` : '', nu ? `${nu} nữ` : ''].filter(Boolean).join(' + ') || '—';
+function ghepPage() {
+  const crumbs = [['Trang chủ', ''], ['Ghép bàn', 'ghep-ban/']];
+  const cityOpts = CITIES.filter(c => BARS.some(b => b.city === c.id)).map(c => `<option value="${c.id}">${esc(c.name)}</option>`).join('');
+  const barsJs = JSON.stringify(BARS.map(b => [b.id, b.city, b.name]));
+  const cards = GHEP.map(g => { const c = cityOf(g.city || (g.bar && g.bar.city)); return `<article class="gb-card" data-date="${g.date}" data-city="${esc(g.city || '')}">
+    <div class="gb-top"><span class="gb-code">${esc(g.code)}</span><span class="gb-when">📅 ${g.date.split('-').reverse().join('/')} · ${esc(g.time || '')}</span></div>
+    <h3><span class="gb-have">Bàn ${esc(ghepWho(g.haveNam, g.haveNu))}</span> <span class="gb-need">cần thêm ${esc(ghepWho(g.needNam, g.needNu))}</span></h3>
+    <p class="gb-where">📍 ${g.bar ? `<a href="${href(g.bar.path)}">${esc(g.bar.name)}</a> · ` : 'Chưa chọn quán · '}${esc(c ? c.name : '')}</p>
+    ${g.age ? `<p class="gb-meta">Độ tuổi: ${esc(g.age)}</p>` : ''}${g.note ? `<p class="gb-note">“${esc(g.note)}”</p>` : ''}
+    <div class="gb-acts"><a class="gb-call" href="tel:${TELN}">🙋 Tham gia – gọi tổng đài</a><a class="gb-zalo" href="https://zalo.me/${esc(CFG.zalo)}" target="_blank" rel="noopener" data-code="${esc(g.code)}">Nhắn Zalo mã ${esc(g.code)}</a></div>
+  </article>`; }).join('');
+  const body = `
+<div class="wrap">${crumbsHtml(crumbs)}
+  <header class="post-head gb-head">
+    <span class="eyebrow">Mới · Ghép bàn online</span>
+    <h1>Ghép bàn đi bar: bàn nam tìm nữ, bàn nữ tìm nam</h1>
+    <p class="lead">Đi ít người mà muốn bàn vui hơn? Đăng yêu cầu ghép bàn, tổng đài TopChill duyệt tin, kết nối hai bàn hợp nhau và giữ bàn giúp bạn. Số điện thoại của bạn <b>không</b> hiện công khai.</p>
+    <div class="gb-cta"><a class="btn btn-gold btn-lg" href="#dang-tin">✍️ Đăng yêu cầu ghép bàn</a><a class="gb-call" href="tel:${TELN}">📞 Gọi ${esc(CFG.hotline)}</a></div>
+  </header>
+</div>
+<section class="sec"><div class="wrap">
+  <div class="gb-bar"><h2>Bàn đang tìm người ghép</h2><div class="gb-filter" id="gbFilter"><button type="button" class="on" data-c="">Tất cả</button>${CITIES.filter(c => GHEP.some(g => (g.city || (g.bar && g.bar.city)) === c.id)).map(c => `<button type="button" data-c="${c.id}">${esc(c.name)}</button>`).join('')}</div></div>
+  <div class="gb-list" id="gbList">${cards}</div>
+  <p class="gb-empty" id="gbEmpty"${GHEP.length ? ' hidden' : ''}>Chưa có bàn nào đang tìm người ghép. Hãy là người đầu tiên đăng yêu cầu bên dưới, hoặc gọi <a href="tel:${TELN}">${esc(CFG.hotline)}</a> để tổng đài tìm giúp.</p>
+</div></section>
+<section class="sec" id="dang-tin"><div class="wrap narrow">
+  <form class="gb-form" id="gbForm" novalidate>
+    <h2>Đăng yêu cầu ghép bàn</h2>
+    <p class="help">Tổng đài duyệt và gọi lại xác nhận trong vài phút. Tin được duyệt hiện trên trang này với <b>mã ghép bàn</b>, không kèm tên hay số điện thoại.</p>
+    <div class="gb-g2"><label>Thành phố<select name="city" required>${cityOpts}</select></label><label>Quán muốn đi<select name="bar"><option value="">Chưa chọn, nhờ tổng đài gợi ý</option></select></label></div>
+    <div class="gb-g2"><label>Ngày<input type="date" name="date" required></label><label>Giờ đến<input type="time" name="time" value="21:00" required></label></div>
+    <fieldset><legend>Bàn của bạn đang có</legend><div class="gb-g2"><label>Nam<input type="number" name="haveNam" min="0" max="20" value="2" inputmode="numeric"></label><label>Nữ<input type="number" name="haveNu" min="0" max="20" value="0" inputmode="numeric"></label></div></fieldset>
+    <fieldset><legend>Cần ghép thêm</legend><div class="gb-quick" id="gbQuick"><button type="button" data-q="0,2">Cần 2 nữ</button><button type="button" data-q="2,0">Cần 2 nam</button><button type="button" data-q="0,3">Cần 3 nữ</button><button type="button" data-q="3,0">Cần 3 nam</button></div><div class="gb-g2"><label>Nam<input type="number" name="needNam" min="0" max="20" value="0" inputmode="numeric"></label><label>Nữ<input type="number" name="needNu" min="0" max="20" value="2" inputmode="numeric"></label></div></fieldset>
+    <div class="gb-g2"><label>Độ tuổi mong muốn<input name="age" maxlength="20" placeholder="VD: 22–30"></label><label>Tên gọi<input name="name" maxlength="40" placeholder="Không bắt buộc"></label></div>
+    <label>Ghi chú cho bàn ghép <small>(hiện công khai, không ghi SĐT/link)</small><input name="note" maxlength="140" placeholder="VD: Nhóm vui vẻ, thích EDM, chia bill"></label>
+    <label>Số điện thoại <small>(chỉ tổng đài thấy)</small><input name="phone" type="tel" inputmode="tel" maxlength="15" placeholder="09xx xxx xxx" required></label>
+    <label class="gb-chk"><input type="checkbox" name="adult" required> Tất cả thành viên trong bàn đã đủ 18 tuổi</label>
+    <label class="gb-chk"><input type="checkbox" name="rules" required> Tôi đồng ý quy định: ghép bàn để giao lưu, chia bill; không môi giới, không mua bán dâm, không quấy rối. Tin vi phạm bị xoá và chặn số.</label>
+    <input type="checkbox" name="botcheck" class="gb-hp" tabindex="-1" autocomplete="off">
+    <button class="btn btn-gold btn-lg" type="submit">Gửi yêu cầu ghép bàn</button>
+    <p class="gb-msg" id="gbMsg" role="status"></p>
+  </form>
+  <div class="prose" style="margin-top:22px">
+    <h2>Ghép bàn trên TopChill hoạt động thế nào?</h2>
+    <ol><li><b>Đăng yêu cầu:</b> chọn thành phố, quán, giờ đến, bàn bạn có bao nhiêu nam, nữ và cần ghép thêm ai.</li><li><b>Tổng đài duyệt:</b> gọi lại xác nhận, sau đó tin hiện trên bảng với mã ghép bàn.</li><li><b>Kết nối:</b> bàn khác bấm "Tham gia" gọi tổng đài kèm mã, tổng đài hỏi ý hai bên rồi giữ một bàn chung, không cần cọc.</li></ol>
+    <h2>Quy định an toàn</h2>
+    <ul><li>Chỉ dành cho người từ 18 tuổi, quán có thể kiểm tra CCCD.</li><li>Không đăng số điện thoại, link, tài khoản mạng xã hội trong ghi chú.</li><li>Nghiêm cấm môi giới, mua bán dâm, gạ gẫm, quấy rối. TopChill xoá tin và chặn số vi phạm.</li><li>Gặp mặt ở nơi công cộng, tự giữ đồ uống của mình, về bằng taxi hoặc xe công nghệ.</li><li>Gặp sự cố, gọi ngay tổng đài ${esc(CFG.hotline)}.</li></ul>
+  </div>
+</div></section>
+<script>(function(){var K=${JSON.stringify(CFG.web3formsKey || '')},B=${barsJs},f=document.getElementById('gbForm'),m=document.getElementById('gbMsg');
+function vn(){return new Date(Date.now()+7*3600e3).toISOString().slice(0,10)}
+var t=vn();document.querySelectorAll('#gbList .gb-card').forEach(function(c){if(c.dataset.date<t)c.remove()});
+function empty(){var v=[].slice.call(document.querySelectorAll('#gbList .gb-card')).filter(function(c){return !c.hidden});document.getElementById('gbEmpty').hidden=!!v.length}empty();
+document.getElementById('gbFilter').onclick=function(e){var b=e.target.closest('[data-c]');if(!b)return;[].forEach.call(this.children,function(x){x.classList.toggle('on',x===b)});document.querySelectorAll('#gbList .gb-card').forEach(function(c){c.hidden=!!b.dataset.c&&c.dataset.city!==b.dataset.c});empty()};
+document.getElementById('gbList').onclick=function(e){var z=e.target.closest('[data-code]');if(z&&navigator.clipboard)navigator.clipboard.writeText('Mình muốn tham gia ghép bàn mã '+z.dataset.code).catch(function(){})};
+var cs=f.city,bs=f.bar;function fill(){bs.innerHTML='<option value="">Chưa chọn, nhờ tổng đài gợi ý</option>'+B.filter(function(x){return x[1]===cs.value}).map(function(x){return '<option value="'+x[0]+'">'+x[2].replace(/</g,'&lt;')+'</option>'}).join('')}
+try{var h=localStorage.getItem('topchill-city');if(h&&[].some.call(cs.options,function(o){return o.value===h}))cs.value=h}catch(e){}fill();cs.onchange=fill;f.date.value=t;f.date.min=t;
+document.getElementById('gbQuick').onclick=function(e){var b=e.target.closest('[data-q]');if(!b)return;var q=b.dataset.q.split(',');f.needNam.value=q[0];f.needNu.value=q[1]};
+function who(a,b){a=+a||0;b=+b||0;return [a?a+' nam':'',b?b+' nữ':''].filter(Boolean).join(' + ')||'—'}
+f.onsubmit=function(e){e.preventDefault();if(f.botcheck.checked)return;var ph=f.phone.value.replace(/\\D/g,'');
+ if(!/^(0|84)\\d{9}$/.test(ph)){m.textContent='Nhập số điện thoại hợp lệ để tổng đài gọi lại.';m.className='gb-msg bad';return}
+ if(!(+f.needNam.value||+f.needNu.value)){m.textContent='Chọn số người cần ghép thêm.';m.className='gb-msg bad';return}
+ if(!f.adult.checked||!f.rules.checked){m.textContent='Vui lòng xác nhận đủ 18 tuổi và đồng ý quy định.';m.className='gb-msg bad';return}
+ if(/(\\d[\\s.\\-]?){8,}|https?:|zalo|facebook|fb\\.|t\\.me|@/i.test(f.note.value)){m.textContent='Ghi chú không được chứa số điện thoại, link hay tài khoản mạng xã hội.';m.className='gb-msg bad';return}
+ var code='GB-'+Math.random().toString(36).slice(2,6).toUpperCase(),bar=bs.value?bs.options[bs.selectedIndex].text:'Chưa chọn',city=cs.options[cs.selectedIndex].text,d=f.date.value.split('-').reverse().join('/');
+ var subj='Ghép bàn '+code+': '+who(f.haveNam.value,f.haveNu.value)+' cần '+who(f.needNam.value,f.needNu.value)+' · '+bar+' · '+f.time.value+' '+d+' · '+ph;
+ var body={access_key:K,subject:subj,from_name:'TopChill ghép bàn','Mã ghép bàn':code,'SĐT':ph,'Tên':f.name.value||'(không để tên)','Thành phố':city,'Quán':bar,'barId':bs.value,'Ngày':d,'Giờ':f.time.value,'Bàn đang có':who(f.haveNam.value,f.haveNu.value),'Cần thêm':who(f.needNam.value,f.needNu.value),'Độ tuổi':f.age.value,'Ghi chú (công khai)':f.note.value,'Đủ 18 tuổi':'Có','Duyệt':'Vào /quan-ly/ → tab Ghép bàn → nhập mã '+code+' để đăng tin'};
+ m.textContent='Đang gửi…';m.className='gb-msg';
+ fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(body)}).then(function(r){return r.json()}).then(function(j){if(j.success===false)throw 0;
+  m.innerHTML='✅ Đã gửi! Mã ghép bàn của bạn: <b>'+code+'</b>. Tổng đài sẽ gọi lại xác nhận trong vài phút. Cần gấp, gọi <a href="tel:${TELN}">${esc(CFG.hotline)}</a> và đọc mã.';m.className='gb-msg ok';f.reset();f.date.value=t;fill();
+  try{window.tcConv&&tcConv('form');gtag('event','generate_lead',{method:'ghep_ban'})}catch(e){}
+ }).catch(function(){m.innerHTML='Chưa gửi được. Gọi <a href="tel:${TELN}">${esc(CFG.hotline)}</a> hoặc nhắn Zalo, đọc mã <b>'+code+'</b> và nội dung ghép bàn.';m.className='gb-msg bad'})};
+})();</script>`;
+  const ld = [breadcrumbLd(crumbs)];
+  write('ghep-ban/index.html', page({ title: 'Ghép bàn đi bar: bàn nam tìm nữ, bàn nữ tìm nam | TopChill', desc: 'Ghép bàn đi bar, club online: đăng yêu cầu bàn nam cần thêm nữ, bàn nữ cần thêm nam. Tổng đài TopChill duyệt tin, kết nối và giữ bàn, không cần cọc.', pathRel: 'ghep-ban/', ld, active: 'ghep-ban/' }, body, { mcta: mctaBar('Đăng ghép bàn', '#dang-tin') }));
 }
 function eventsPage() {
   const crumbs = [['Trang chủ', ''], ['Sự kiện & lịch DJ', 'su-kien/']];
@@ -1032,6 +1112,7 @@ for (const c of CITIES) { const r = cityPage(c); pages.push({ path: r.path, noin
 for (const L of Object.values(LAND)) { landingPage(L); pages.push({ path: L.path, priority: '0.8' }); }
 for (const A of AREAS) { areaPage(A); pages.push({ path: A.path, priority: '0.8' }); }
 { const ni = eventsPage(); pages.push({ path: 'su-kien/', priority: '0.7', noindex: ni }); }
+ghepPage(); pages.push({ path: 'ghep-ban/', priority: '0.7' });
 for (const b of BARS) { barPage(b); pages.push({ path: b.path, priority: '0.7' }); }
 blogIndex(); pages.push({ path: 'blog/', priority: '0.8' });
 POSTS.forEach((p, i) => { postPage(p, i); pages.push({ path: p.path, lastmod: p.updated, priority: '0.8' }); });
