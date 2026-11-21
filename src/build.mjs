@@ -271,7 +271,7 @@ const CSP = [
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.tawk.to",
   "font-src 'self' data: https://fonts.gstatic.com https://*.tawk.to",
   "img-src 'self' data: blob: https://images.unsplash.com https://*.tawk.to https://*.googleusercontent.com https://www.googletagmanager.com https://*.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://*.doubleclick.net https://www.google.com https://*.google.com https://*.google.com.vn https://*.google-analytics.com https://*.analytics.google.com",
-  "connect-src 'self' https://www.googletagmanager.com https://*.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://*.doubleclick.net https://www.google.com https://*.google.com https://*.google.com.vn https://*.google-analytics.com https://*.analytics.google.com https://api.web3forms.com https://formsubmit.co https://api.github.com https://raw.githubusercontent.com https://*.tawk.to wss://*.tawk.to https://*.googleapis.com https://*.firebaseio.com",
+  "connect-src 'self' https://www.googletagmanager.com https://*.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://*.doubleclick.net https://www.google.com https://*.google.com https://*.google.com.vn https://*.google-analytics.com https://*.analytics.google.com https://api.web3forms.com https://ntfy.sh https://formsubmit.co https://api.github.com https://raw.githubusercontent.com https://*.tawk.to wss://*.tawk.to https://*.googleapis.com https://*.firebaseio.com",
   "media-src 'self' data: blob:",
   "frame-src https://td.doubleclick.net https://*.doubleclick.net https://www.googletagmanager.com https://*.tawk.to https://*.firebaseapp.com https://accounts.google.com",
   "worker-src 'self' blob:",
@@ -551,12 +551,15 @@ function eventList(evs) {
 
 /* ---------- GHÉP BÀN: bảng tin đã duyệt (data.ghepban) + form gửi yêu cầu về email tổng đài ---------- */
 const GHEP = (DATA.ghepban || []).filter(g => g.date >= TODAY_VN).map(g => ({ ...g, bar: BARS.find(b => b.id === g.barId) })).sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
+const GHEP_OK = (DATA.ghepok || []).slice().sort((a, b) => b.date.localeCompare(a.date)).map(g => ({ ...g, bar: BARS.find(b => b.id === g.barId) }));
 const ghepWho = (nam, nu) => [nam ? `${nam} nam` : '', nu ? `${nu} nữ` : ''].filter(Boolean).join(' + ') || '—';
 function ghepPage() {
   const crumbs = [['Trang chủ', ''], ['Ghép bàn', 'ghep-ban/']];
   const cityOpts = CITIES.filter(c => BARS.some(b => b.city === c.id)).map(c => `<option value="${c.id}">${esc(c.name)}</option>`).join('');
   const barsJs = JSON.stringify(BARS.map(b => [b.id, b.city, b.name, href(b.path)]));
   const FB = (CFG.firebase && CFG.firebase.apiKey && CFG.firebase.projectId) ? CFG.firebase : null;
+  const NT = CFG.ntfyTopic || '';
+  const LIVE = !!(FB || NT);
   const cityJs = JSON.stringify(Object.fromEntries(CITIES.map(c => [c.id, c.name])));
   const cards = GHEP.map(g => { const c = cityOf(g.city || (g.bar && g.bar.city)); return `<article class="gb-card" data-date="${g.date}" data-city="${esc(g.city || '')}">
     <div class="gb-top"><span class="gb-code">${esc(g.code)}</span><span class="gb-when">📅 ${g.date.split('-').reverse().join('/')} · ${esc(g.time || '')}</span></div>
@@ -570,7 +573,7 @@ function ghepPage() {
   <header class="post-head gb-head">
     <span class="eyebrow">Mới · Ghép bàn online</span>
     <h1>Ghép bàn đi bar: bàn nam tìm nữ, bàn nữ tìm nam</h1>
-    <p class="lead">Đi ít người mà muốn bàn vui hơn? Đăng yêu cầu ghép bàn${FB ? ', tin hiện ngay trên bảng' : ', tổng đài TopChill duyệt tin'}; tổng đài kết nối hai bàn hợp nhau và giữ bàn giúp bạn. Số điện thoại của bạn <b>không</b> hiện công khai.</p>
+    <p class="lead">Đi ít người mà muốn bàn vui hơn? Đăng yêu cầu ghép bàn${LIVE ? ', tin hiện ngay trên bảng' : ', tổng đài TopChill duyệt tin'}; tổng đài kết nối hai bàn hợp nhau và giữ bàn giúp bạn. Số điện thoại của bạn <b>không</b> hiện công khai.</p>
     <div class="gb-cta"><a class="btn btn-gold btn-lg" href="#dang-tin">✍️ Đăng yêu cầu ghép bàn</a><a class="gb-call" href="tel:${TELN}">📞 Gọi ${esc(CFG.hotline)}</a></div>
   </header>
 </div>
@@ -579,10 +582,14 @@ function ghepPage() {
   <div class="gb-list" id="gbList">${cards}</div>
   <p class="gb-empty" id="gbEmpty"${GHEP.length ? ' hidden' : ''}>Chưa có bàn nào đang tìm người ghép. Hãy là người đầu tiên đăng yêu cầu bên dưới, hoặc gọi <a href="tel:${TELN}">${esc(CFG.hotline)}</a> để tổng đài tìm giúp.</p>
 </div></section>
+${GHEP_OK.length ? `<section class="sec gb-done"><div class="wrap">
+  <div class="gb-bar"><h2>✅ Bàn đã ghép thành công <small>${GHEP_OK.length} lượt</small></h2></div>
+  <div class="gb-oklist">${GHEP_OK.slice(0, 12).map(g => `<div class="gb-okc"><span class="gb-okb">✅ ĐÃ GHÉP</span><b>${esc(g.summary || '')}</b><span>📍 ${g.bar ? `<a href="${href(g.bar.path)}">${esc(g.bar.name)}</a>` : esc((cityOf(g.city) || {}).name || '')} · ${g.date.split('-').reverse().join('/')}</span><small>${(g.codes || []).map(esc).join(' + ')}</small></div>`).join('')}</div>
+</div></section>` : ''}
 <section class="sec" id="dang-tin"><div class="wrap narrow">
   <form class="gb-form" id="gbForm" novalidate>
     <h2>Đăng yêu cầu ghép bàn</h2>
-    <p class="help">${FB ? 'Tin hiện ngay trên bảng' : 'Tổng đài duyệt rồi tin hiện trên trang này'} với <b>mã ghép bàn</b>, không kèm tên hay số điện thoại. Số của bạn chỉ gửi riêng cho tổng đài.</p>
+    <p class="help">${LIVE ? 'Tin hiện ngay trên bảng' : 'Tổng đài duyệt rồi tin hiện trên trang này'} với <b>mã ghép bàn</b>, không kèm tên hay số điện thoại. Số của bạn chỉ gửi riêng cho tổng đài.</p>
     <div class="gb-g2"><label>Thành phố<select name="city" required>${cityOpts}</select></label><label>Quán muốn đi<select name="bar"><option value="">Chưa chọn, nhờ tổng đài gợi ý</option></select></label></div>
     <div class="gb-g2"><label>Ngày<input type="date" name="date" required></label><label>Giờ đến<input type="time" name="time" value="21:00" required></label></div>
     <fieldset><legend>Bàn của bạn đang có</legend><div class="gb-g2"><label>Nam<input type="number" name="haveNam" min="0" max="20" value="2" inputmode="numeric"></label><label>Nữ<input type="number" name="haveNu" min="0" max="20" value="0" inputmode="numeric"></label></div></fieldset>
@@ -598,20 +605,23 @@ function ghepPage() {
   </form>
   <div class="prose" style="margin-top:22px">
     <h2>Ghép bàn trên TopChill hoạt động thế nào?</h2>
-    <ol><li><b>Đăng yêu cầu:</b> chọn thành phố, quán, giờ đến, bàn bạn có bao nhiêu nam, nữ và cần ghép thêm ai.</li><li><b>${FB ? 'Hiện ngay:' : 'Tổng đài duyệt:'}</b> ${FB ? 'tin lên bảng ngay với mã ghép bàn, quá ngày tự ẩn.' : 'gọi lại xác nhận, sau đó tin hiện trên bảng với mã ghép bàn.'}</li><li><b>Kết nối:</b> bàn khác bấm "Tham gia" gọi tổng đài kèm mã, tổng đài hỏi ý hai bên rồi giữ một bàn chung, không cần cọc.</li></ol>
+    <ol><li><b>Đăng yêu cầu:</b> chọn thành phố, quán, giờ đến, bàn bạn có bao nhiêu nam, nữ và cần ghép thêm ai.</li><li><b>${LIVE ? 'Hiện ngay:' : 'Tổng đài duyệt:'}</b> ${LIVE ? 'tin lên bảng ngay với mã ghép bàn, tự ẩn sau 12 tiếng hoặc khi qua ngày.' : 'gọi lại xác nhận, sau đó tin hiện trên bảng với mã ghép bàn.'}</li><li><b>Kết nối:</b> bàn khác bấm "Tham gia" gọi tổng đài kèm mã, tổng đài hỏi ý hai bên rồi giữ một bàn chung, không cần cọc.</li></ol>
     <h2>Quy định an toàn</h2>
     <ul><li>Chỉ dành cho người từ 18 tuổi, quán có thể kiểm tra CCCD.</li><li>Không đăng số điện thoại, link, tài khoản mạng xã hội trong ghi chú.</li><li>Nghiêm cấm môi giới, mua bán dâm, gạ gẫm, quấy rối. TopChill xoá tin và chặn số vi phạm.</li><li>Gặp mặt ở nơi công cộng, tự giữ đồ uống của mình, về bằng taxi hoặc xe công nghệ.</li><li>Gặp sự cố, gọi ngay tổng đài ${esc(CFG.hotline)}.</li></ul>
   </div>
 </div></section>
-<script>(function(){var K=${JSON.stringify(CFG.web3formsKey || '')},FB=${JSON.stringify(FB)},CN=${cityJs},TEL=${JSON.stringify(TELN)},ZL=${JSON.stringify(CFG.zalo || '')},B=${barsJs},f=document.getElementById('gbForm'),m=document.getElementById('gbMsg');
+<script>(function(){var K=${JSON.stringify(CFG.web3formsKey || '')},FB=${JSON.stringify(FB)},NT=${JSON.stringify(NT)},OK=${JSON.stringify(GHEP_OK.map(g => g.codes).flat())},CN=${cityJs},TEL=${JSON.stringify(TELN)},ZL=${JSON.stringify(CFG.zalo || '')},B=${barsJs},f=document.getElementById('gbForm'),m=document.getElementById('gbMsg');
 function vn(){return new Date(Date.now()+7*3600e3).toISOString().slice(0,10)}
 function E(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function W(a,b){a=+a||0;b=+b||0;return [a?a+' nam':'',b?b+' nữ':''].filter(Boolean).join(' + ')||'—'}
-function card(g){var b=B.filter(function(x){return x[0]===+g.barId})[0];return '<article class="gb-card" data-date="'+E(g.date)+'" data-city="'+E(g.city)+'"><div class="gb-top"><span class="gb-code">'+E(g.code)+'</span><span class="gb-when">📅 '+E(g.date.split('-').reverse().join('/'))+' · '+E(g.time)+'</span></div><h3><span class="gb-have">Bàn '+E(W(g.haveNam,g.haveNu))+'</span> <span class="gb-need">cần thêm '+E(W(g.needNam,g.needNu))+'</span></h3><p class="gb-where">📍 '+(b?'<a href="'+b[3]+'">'+E(b[2])+'</a> · ':'Chưa chọn quán · ')+E(CN[g.city]||'')+'</p>'+(g.age?'<p class="gb-meta">Độ tuổi: '+E(g.age)+'</p>':'')+(g.note?'<p class="gb-note">“'+E(g.note)+'”</p>':'')+'<div class="gb-acts"><a class="gb-call" href="tel:'+TEL+'">🙋 Tham gia – gọi tổng đài</a><a class="gb-zalo" href="https://zalo.me/'+E(ZL)+'" target="_blank" rel="noopener" data-code="'+E(g.code)+'">Nhắn Zalo mã '+E(g.code)+'</a></div></article>'}
+function ok(g){return g&&/^GB-[A-Z0-9]{4}$/.test(g.code)&&CN[g.city]&&/^\\d{4}-\\d{2}-\\d{2}$/.test(g.date)&&/^\\d{2}:\\d{2}$/.test(g.time)&&['haveNam','haveNu','needNam','needNu'].every(function(k){g[k]=+g[k]||0;return g[k]>=0&&g[k]<=20})&&(g.needNam+g.needNu>0)&&String(g.note||'').length<=140&&String(g.age||'').length<=20&&!BAD.test(g.note||'')&&!BAD.test(g.age||'')}
+var BAD=/(\\d[\\s.\\-]?){8,}|https?:|zalo|facebook|fb\\.|t\\.me|@/i;
+function card(g){var b=B.filter(function(x){return x[0]===+g.barId})[0];return '<article class="gb-card'+(OK.indexOf(g.code)>-1?' done':'')+'" data-date="'+E(g.date)+'" data-city="'+E(g.city)+'"><div class="gb-top"><span class="gb-code">'+E(g.code)+(OK.indexOf(g.code)>-1?' <span class="gb-ok">✅ Đã ghép</span>':'')+'</span><span class="gb-when">📅 '+E(g.date.split('-').reverse().join('/'))+' · '+E(g.time)+'</span></div><h3><span class="gb-have">Bàn '+E(W(g.haveNam,g.haveNu))+'</span> <span class="gb-need">cần thêm '+E(W(g.needNam,g.needNu))+'</span></h3><p class="gb-where">📍 '+(b?'<a href="'+b[3]+'">'+E(b[2])+'</a> · ':'Chưa chọn quán · ')+E(CN[g.city]||'')+'</p>'+(g.age?'<p class="gb-meta">Độ tuổi: '+E(g.age)+'</p>':'')+(g.note?'<p class="gb-note">“'+E(g.note)+'”</p>':'')+'<div class="gb-acts"><a class="gb-call" href="tel:'+TEL+'">🙋 Tham gia – gọi tổng đài</a><a class="gb-zalo" href="https://zalo.me/'+E(ZL)+'" target="_blank" rel="noopener" data-code="'+E(g.code)+'">Nhắn Zalo mã '+E(g.code)+'</a></div></article>'}
 function fv(v){return v.stringValue!=null?v.stringValue:v.integerValue!=null?+v.integerValue:v.doubleValue!=null?v.doubleValue:''}
 var FBU=FB?'https://firestore.googleapis.com/v1/projects/'+FB.projectId+'/databases/(default)/documents':'';
-function addCards(list){var L=document.getElementById('gbList'),have={};[].forEach.call(L.querySelectorAll('.gb-code'),function(x){have[x.textContent]=1});list.forEach(function(g){if(!have[g.code]&&g.date>=vn()){L.insertAdjacentHTML('beforeend',card(g));have[g.code]=1}});var cs=[].slice.call(L.children).sort(function(a,b){return (a.dataset.date+(a.querySelector('.gb-when')||{}).textContent).localeCompare(b.dataset.date+(b.querySelector('.gb-when')||{}).textContent)});cs.forEach(function(c){L.appendChild(c)});mkFilter();empty()}
+function addCards(list){var L=document.getElementById('gbList'),have={};[].forEach.call(L.querySelectorAll('.gb-code'),function(x){have[x.textContent]=1});list.forEach(function(g){if(ok(g)&&!have[g.code]&&g.date>=vn()){L.insertAdjacentHTML('beforeend',card(g));have[g.code]=1}});var cs=[].slice.call(L.children).sort(function(a,b){return (a.dataset.date+(a.querySelector('.gb-when')||{}).textContent).localeCompare(b.dataset.date+(b.querySelector('.gb-when')||{}).textContent)});cs.forEach(function(c){L.appendChild(c)});mkFilter();empty()}
 function mkFilter(){var F=document.getElementById('gbFilter'),on=(F.querySelector('.on')||{}).dataset,cur=on?on.c:'',ids={};[].forEach.call(document.querySelectorAll('#gbList .gb-card'),function(c){ids[c.dataset.city]=1});F.innerHTML='<button type="button" data-c="">Tất cả</button>'+Object.keys(CN).filter(function(k){return ids[k]}).map(function(k){return '<button type="button" data-c="'+k+'">'+E(CN[k])+'</button>'}).join('');[].forEach.call(F.children,function(x){x.classList.toggle('on',x.dataset.c===(cur||''))})}
+if(!FB&&NT)fetch('https://ntfy.sh/'+NT+'/json?poll=1&since=12h').then(function(r){return r.text()}).then(function(t){addCards(t.split('\\n').map(function(l){try{var o=JSON.parse(l);return o.event==='message'?JSON.parse(o.message):null}catch(e){return null}}).filter(Boolean))}).catch(function(){});
 if(FB)fetch(FBU+':runQuery?key='+FB.apiKey,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({structuredQuery:{from:[{collectionId:'ghepban'}],where:{fieldFilter:{field:{fieldPath:'date'},op:'GREATER_THAN_OR_EQUAL',value:{stringValue:vn()}}},orderBy:[{field:{fieldPath:'date'}}],limit:80}})}).then(function(r){return r.json()}).then(function(rows){addCards(rows.filter(function(r){return r.document}).map(function(r){var o={},F=r.document.fields;for(var k in F)o[k]=fv(F[k]);return o}))}).catch(function(){});
 var t=vn();document.querySelectorAll('#gbList .gb-card').forEach(function(c){if(c.dataset.date<t)c.remove()});
 function empty(){var v=[].slice.call(document.querySelectorAll('#gbList .gb-card')).filter(function(c){return !c.hidden});document.getElementById('gbEmpty').hidden=!!v.length}empty();
@@ -632,8 +642,8 @@ f.onsubmit=function(e){e.preventDefault();if(f.botcheck.checked)return;var ph=f.
  m.textContent='Đang gửi…';m.className='gb-msg';
  var n=0;try{var day=vn(),R=JSON.parse(localStorage.getItem('tc-gb')||'{}');n=R[day]||0;if(n>=3){m.textContent='Mỗi máy đăng tối đa 3 tin/ngày. Gọi tổng đài nếu cần thêm.';m.className='gb-msg bad';return}}catch(e){}
  var pub={code:code,city:cs.value,barId:+bs.value||0,date:f.date.value,time:f.time.value,age:f.age.value.trim().slice(0,20),haveNam:+f.haveNam.value||0,haveNu:+f.haveNu.value||0,needNam:+f.needNam.value||0,needNu:+f.needNu.value||0,note:f.note.value.trim().slice(0,140)};
- var live=FB?fetch(FBU+'/ghepban?key='+FB.apiKey,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:Object.keys(pub).reduce(function(o,k){o[k]=typeof pub[k]==='number'?{integerValue:String(pub[k])}:{stringValue:pub[k]};return o},{})})}).then(function(r){if(!r.ok)throw 0;addCards([pub]);try{R[day]=n+1;localStorage.setItem('tc-gb',JSON.stringify(R))}catch(e){}return 1}).catch(function(){return 0}):Promise.resolve(0);
- if(FB)body['Duyệt']='Tin đã tự đăng công khai. Muốn gỡ: Firebase console → Firestore → ghepban → xoá tài liệu có code '+code;
+ var live=(!FB&&NT)?fetch('https://ntfy.sh/'+NT,{method:'POST',body:JSON.stringify(pub)}).then(function(r){if(!r.ok)throw 0;addCards([pub]);try{R[day]=n+1;localStorage.setItem('tc-gb',JSON.stringify(R))}catch(e){}return 1}).catch(function(){return 0}):FB?fetch(FBU+'/ghepban?key='+FB.apiKey,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:Object.keys(pub).reduce(function(o,k){o[k]=typeof pub[k]==='number'?{integerValue:String(pub[k])}:{stringValue:pub[k]};return o},{})})}).then(function(r){if(!r.ok)throw 0;addCards([pub]);try{R[day]=n+1;localStorage.setItem('tc-gb',JSON.stringify(R))}catch(e){}return 1}).catch(function(){return 0}):Promise.resolve(0);
+ if(FB||NT)body['Duyệt']='Tin đã tự hiện trên topchill.vn/ghep-ban/ (tự ẩn sau 12 tiếng). Ghép xong: vào /quan-ly/ → tab Ghép bàn → mục Ghép thành công, nhập mã '+code+'.';
  var mail=fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(body)}).then(function(r){return r.json()}).then(function(j){return j.success!==false?1:0}).catch(function(){return 0});
  Promise.all([live,mail]).then(function(x){if(!x[0]&&!x[1])throw 0;
   m.innerHTML='✅ '+(x[0]?'Đã đăng lên bảng ghép bàn!':'Đã gửi!')+' Mã ghép bàn của bạn: <b>'+code+'</b>. '+(x[0]?'Bàn khác bấm Tham gia, tổng đài sẽ gọi bạn để ghép.':'Tổng đài sẽ gọi lại xác nhận trong vài phút.')+' Cần gấp, gọi <a href="tel:${TELN}">${esc(CFG.hotline)}</a> và đọc mã.';m.className='gb-msg ok';f.reset();f.date.value=t;fill();

@@ -35,5 +35,6 @@
   "firebase": {
     "apiKey": "",
     "projectId": ""
-  }
+  },
+  "ntfyTopic": "topchill-ghepban-514f3679cd1e"
 }

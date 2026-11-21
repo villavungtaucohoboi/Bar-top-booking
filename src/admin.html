@@ -110,6 +110,15 @@
         <div class="fld" style="grid-column:span 2"><label for="gb_note">Ghi chú công khai <small>không SĐT/link</small></label><input id="gb_note" maxlength="140"></div></div>
       <div class="bar-acts" style="margin-top:14px"><button class="btn btn-gold" id="gbSave" type="button">Duyệt &amp; đăng tin</button><button class="btn" id="gbNew" type="button">Làm mới</button></div>
       <p class="msg" id="gbAdMsg" role="status"></p>
+      <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+      <h3 style="margin:0 0 6px">✅ Ghép thành công</h3>
+      <p class="help">Chỉ nhập khi hai bàn đã thật sự ngồi chung. Hiện ở mục "Bàn đã ghép thành công" trên /ghep-ban/ và gắn nhãn ✅ cho tin có mã tương ứng. Dùng Thành phố, Quán, Ngày ở form phía trên.</p>
+      <div id="okList" style="display:flex;flex-direction:column;gap:8px;margin:10px 0"></div>
+      <div class="g3"><div class="fld"><label for="ok_c1">Mã bàn 1</label><input id="ok_c1" maxlength="10" placeholder="GB-XXXX"></div>
+        <div class="fld"><label for="ok_c2">Mã bàn 2 <small>nếu có</small></label><input id="ok_c2" maxlength="10" placeholder="GB-YYYY"></div>
+        <div class="fld"><label for="ok_sum">Kết quả</label><input id="ok_sum" maxlength="60" placeholder="3 nam + 2 nữ"></div></div>
+      <div class="bar-acts" style="margin-top:12px"><button class="btn btn-gold" id="okSave" type="button">Đăng ghép thành công</button></div>
+      <p class="msg" id="okMsg" role="status"></p>
     </section>
 
     <section id="paneTicker" class="box" hidden>
@@ -347,7 +356,7 @@ $('evSave').onclick=function(){
 var gbId=null;
 function gbWho(a,b){a=+a||0;b=+b||0;return [a?a+' nam':'',b?b+' nữ':''].filter(Boolean).join(' + ')||'—'}
 function gbBars(){var c=$('gb_city').value;$('gb_bar').innerHTML='<option value="">Chưa chọn quán</option>'+(data.bars||[]).filter(function(b){return !b.hidden&&b.city===c}).sort(function(a,b){return a.name.localeCompare(b.name,'vi')}).map(function(b){return '<option value="'+b.id+'">'+esc(b.name)+'</option>'}).join('')}
-function renderGhep(){
+function renderGhep(){setTimeout(renderOk);
   if(!$('gb_city').options.length){var cs=(D&&D.cities)||[];$('gb_city').innerHTML=cs.map(function(c){return '<option value="'+c.id+'">'+esc(c.name)+'</option>'}).join('');$('gb_city').onchange=gbBars;gbBars();$('gb_date').value=todayVN()}
   var L=(data.ghepban||[]).slice().sort(function(a,b){return (a.date+a.time).localeCompare(b.date+b.time)}),t=todayVN();
   $('gbAdList').innerHTML=L.length?L.map(function(g){var past=g.date<t;return '<div style="display:flex;gap:8px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:10px;'+(past?'opacity:.5':'')+'"><div style="flex:1;min-width:0"><b>'+esc(g.code)+'</b> · '+esc(gbWho(g.haveNam,g.haveNu))+' cần '+esc(gbWho(g.needNam,g.needNu))+'<br><small>'+g.date.split('-').reverse().join('/')+' · '+esc(g.time||'')+' · '+esc(g.barId?barName(g.barId):'Chưa chọn quán')+(past?' · đã qua':'')+'</small></div><button type="button" class="btn" data-gbedit="'+g.id+'">Sửa</button><button type="button" class="btn" data-gbdel="'+g.id+'">Gỡ</button></div>'}).join(''):'<p class="help">Chưa có tin ghép bàn nào.</p>';
@@ -360,6 +369,17 @@ $('gbAdList').onclick=function(ev){var b=ev.target.closest('[data-gbedit],[data-
   var id=b.dataset.gbdel;if(!confirm('Gỡ tin ghép bàn này?'))return;say($('gbAdMsg'),'Đang gỡ…','wait');
   commitRetry([],'Gỡ tin ghép bàn',function(f){f.ghepban=(f.ghepban||[]).filter(function(x){return x.id!==id})}).then(function(){renderGhep();gbFill(null);say($('gbAdMsg'),'Đã gỡ.','ok')}).catch(function(e){say($('gbAdMsg'),ghErr(e),'err')})};
 $('gbNew').onclick=function(){gbFill(null)};
+function renderOk(){var L=(data.ghepok||[]).slice().sort(function(a,b){return b.date.localeCompare(a.date)});
+  $('okList').innerHTML=L.length?L.map(function(g){return '<div style="display:flex;gap:8px;align-items:center;padding:8px 10px;border:1px solid var(--line);border-radius:10px"><div style="flex:1;min-width:0"><b>'+esc((g.codes||[]).join(' + '))+'</b> · '+esc(g.summary||'')+'<br><small>'+g.date.split('-').reverse().join('/')+' · '+esc(g.barId?barName(g.barId):'')+'</small></div><button type="button" class="btn" data-okdel="'+g.id+'">Xoá</button></div>'}).join(''):'<p class="help">Chưa có lượt ghép thành công nào.</p>'}
+$('okList').onclick=function(ev){var b=ev.target.closest('[data-okdel]');if(!b||!confirm('Xoá lượt ghép này?'))return;var id=b.dataset.okdel;
+  commitRetry([],'Xoá ghép thành công',function(f){f.ghepok=(f.ghepok||[]).filter(function(x){return x.id!==id})}).then(function(){renderOk();say($('okMsg'),'Đã xoá.','ok')}).catch(function(e){say($('okMsg'),ghErr(e),'err')})};
+$('okSave').onclick=function(){var codes=[$('ok_c1').value,$('ok_c2').value].map(function(x){return x.trim().toUpperCase()}).filter(Boolean);
+  if(!codes.length||!codes.every(function(c){return /^GB-[A-Z0-9]{3,6}$/.test(c)})){say($('okMsg'),'Nhập mã dạng GB-XXXX.','err');return}
+  var g={id:'ok'+Date.now().toString(36),codes:codes,city:$('gb_city').value,barId:+$('gb_bar').value||0,date:$('gb_date').value||todayVN(),summary:$('ok_sum').value.trim()};
+  if(!g.summary){say($('okMsg'),'Nhập kết quả, ví dụ 3 nam + 2 nữ.','err');return}if(!g.barId)delete g.barId;
+  say($('okMsg'),'Đang đăng…','wait');
+  commitRetry([],'Ghép thành công '+codes.join('+'),function(f){f.ghepok=(f.ghepok||[]);f.ghepok.push(g)}).then(function(){renderOk();$('ok_c1').value=$('ok_c2').value=$('ok_sum').value='';say($('okMsg'),'Đã đăng. Web cập nhật sau 1–2 phút.','ok')}).catch(function(e){say($('okMsg'),ghErr(e),'err')})};
+
 $('gbSave').onclick=function(){
   var g={id:gbId||('gb'+Date.now().toString(36)),code:$('gb_code').value.trim().toUpperCase(),city:$('gb_city').value,barId:+$('gb_bar').value||0,date:$('gb_date').value,time:$('gb_time').value,age:$('gb_age').value.trim(),
     haveNam:+$('gb_hn').value||0,haveNu:+$('gb_hu').value||0,needNam:+$('gb_nn').value||0,needNu:+$('gb_nu').value||0,note:$('gb_note').value.trim()};
