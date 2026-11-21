@@ -31,5 +31,9 @@
     "max": 15,
     "golden": "19:00–21:00",
     "advance": "trước 24h"
+  },
+  "firebase": {
+    "apiKey": "",
+    "projectId": ""
   }
 }
