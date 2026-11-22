@@ -610,13 +610,10 @@ footer{border-top:1px solid var(--line);padding-block:36px 40px;color:var(--mute
   .mq-cities button b{font-size:16px}
   .mq-cities button small{font-size:11.5px;color:#d9d0e6}
   .mq-cities button:active{background:#f0b545;color:#1a1206}
-  .mq-call{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:62px;margin:10px 0;border-radius:16px;background:#22c55e;color:#fff;font-weight:800;font-size:18px;text-decoration:none;box-shadow:0 0 22px rgba(34,197,94,.45)}
-  .mq-promo{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0 0;padding:12px 10px;border-radius:16px;background:linear-gradient(100deg,#5b1240,#2a0f3d);border:1px solid rgba(255,209,102,.55);text-decoration:none;text-align:center}
-  .mq-promo b{font-size:28px;font-weight:900;color:#ffd166;line-height:1.05;text-shadow:0 0 18px rgba(255,209,102,.45)}
-  .mq-promo span{font-size:14px;color:#ffe3f1}
-  .mq-call small{font-weight:600;font-size:12.5px;opacity:.9}
+  .mq-call{display:flex;align-items:center;justify-content:center;gap:6px;min-height:50px;margin:10px 0 4px;padding:0 12px;border-radius:14px;background:#22c55e;color:#fff;font-weight:800;font-size:16px;white-space:nowrap;text-decoration:none;box-shadow:0 0 14px rgba(34,197,94,.4)}
+  .mq-call b{font-weight:900}
   .mq-acts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-  .mq-acts button,.mq-acts a{min-height:72px;border-radius:16px;background:linear-gradient(160deg,#ffd98a,#f0b545);color:#1a1206;font-weight:800;font-size:12.5px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;line-height:1.1}
+  .mq-acts button,.mq-acts a{min-height:62px;border-radius:16px;background:linear-gradient(160deg,#ffd98a,#f0b545);color:#1a1206;font-weight:800;font-size:12.5px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;line-height:1.1}
   .mq-acts i{font-style:normal;font-size:24px}
 
   /* xếp hạng: mỗi bar một thẻ to */
@@ -1070,6 +1067,8 @@ html,body{overflow-x:hidden}@supports (overflow:clip){html,body{overflow-x:clip}
   .tc-eq i{box-shadow:none!important}
   .hdr,.bnav,.mcta,.mob-cta,.tci,.gb-hero,.music-w,.mus{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
   .bnav,.mob-cta{background:rgba(14,8,20,.96)!important}
+  html:not(.on-hero) .hdr{background:#0c0712}
+  .nw-crowd{display:none!important}
   .gb-hero{background:rgba(18,8,28,.82)}
 }
 @media (max-width:560px){.hdr-r .gb-pill{display:none}}
@@ -1123,8 +1122,7 @@ html,body{overflow-x:hidden}@supports (overflow:clip){html,body{overflow-x:clip}
         <div class="m-quick">
           <div class="mq-label">Chạm vào thành phố để xem bar</div>
           <div class="mq-cities" id="mqCities"></div>
-          <a class="mq-promo" href="tel:__TEL__"><b>GIẢM ĐẾN __PROMO_MAX__% BILL</b><span>Đặt bàn __PROMO_ADV__ hoặc đến giờ vàng __PROMO_GOLDEN__</span></a>
-          <a class="mq-call" href="tel:__TEL__">📞 Gọi giữ ưu đãi __HOTLINE__<small>Mức giảm tuỳ bar, tổng đài báo khi gọi · không cần cọc · 24/7</small></a>
+          <a class="mq-call" href="tel:__TEL__">📞 Gọi giữ ưu đãi <b>__HOTLINE__</b></a>
           <div class="mq-acts">
             <button type="button" data-jump="rankSec"><i>🔥</i>Top bar</button>
             <a href="/ghep-ban/"><i>👥</i>Ghép bàn</a>
