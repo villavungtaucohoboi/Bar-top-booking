@@ -287,7 +287,9 @@ p{margin:0}
 .fs-b h3{margin:0;font-size:17px;line-height:1.2}
 .fs-b h3 a{color:#fff;text-decoration:none}
 .fs-ad{font-size:12.5px;color:#d9c3d2;line-height:1.35}
-.fs-call{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:6px;min-height:50px;border-radius:14px;background:#22c55e;color:#fff;font-weight:900;font-size:16px;text-decoration:none;box-shadow:0 0 0 0 rgba(34,197,94,.7);animation:fsPulse 1.8s infinite}
+.fs-call{position:relative;margin-top:auto;display:flex;align-items:center;justify-content:center;gap:6px;min-height:50px;border-radius:14px;background:#22c55e;color:#fff;font-weight:900;font-size:16px;text-decoration:none}
+.fs-call::after{content:'';position:absolute;inset:0;border-radius:inherit;border:2px solid rgba(34,197,94,.8);animation:fsRing 1.8s ease-out infinite;pointer-events:none}
+@keyframes fsRing{from{transform:scale(1);opacity:.9}to{transform:scale(1.12,1.35);opacity:0}}
 @keyframes fsPulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.65)}70%{box-shadow:0 0 0 12px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
 .fs-bk{display:block;text-align:center;font-size:13px;color:#ffb3d1;font-weight:700;text-decoration:underline;background:none;border:0;cursor:pointer;padding:2px}
 .fs-note{margin:6px 0 0;font-size:12px;color:#c9b2c2}
@@ -361,3 +363,9 @@ p{margin:0}
 .gb-m.me{align-self:flex-end;border-radius:12px 12px 4px 12px;background:linear-gradient(135deg,rgba(255,79,184,.35),rgba(124,58,237,.35))}
 .gb-cf{display:flex;gap:6px}.gb-cf input{flex:1;min-width:0;min-height:42px;padding:0 10px;border-radius:12px;border:1px solid var(--line);background:var(--bg,#0f0a14);color:inherit;font:inherit}
 .gb-cf button{border:0;border-radius:12px;padding:0 14px;background:#45d5ff;color:#05131a;font-weight:800;cursor:pointer}
+
+/* ===== hiệu năng & chống tràn ngang trên điện thoại ===== */
+html,body{overflow-x:hidden}@supports (overflow:clip){html,body{overflow-x:clip}}
+@media (max-width:420px){.hdr-cta .btn{display:none}}
+@media (max-width:720px),(pointer:coarse){.hdr,.mcta{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}.mcta{background:rgba(14,8,20,.96)}}
+@media (max-width:380px){.mcta{gap:8px}.mcta .btn,.mcta .call{font-size:14.5px;padding:0 8px;white-space:nowrap;min-width:0}}
