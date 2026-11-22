@@ -329,7 +329,7 @@ function header(active) {
   return `<header class="hdr"><div class="wrap hdr-in">
   <a class="logo" href="${href('')}" aria-label="TopChill trang chủ">${LOGO('')}</a>
   <nav class="nav" aria-label="Chính">${links}</nav>
-  <a class="btn btn-gold" href="${href('')}">Đặt Bàn Ngay</a>
+  <div class="hdr-cta"><a class="gb-pill" href="${href('ghep-ban/')}">🔥 Ghép bàn</a><a class="btn btn-gold" href="${href('')}">Đặt Bàn Ngay</a></div>
 </div><div class="wrap subnav">${links}</div></header>`;
 }
 function footer() {
