@@ -93,8 +93,15 @@
     </section>
 
     <section id="paneGhep" class="box" hidden>
-      <h2>Ghép bàn – duyệt tin</h2>
-      <p class="help">Khách gửi yêu cầu ở trang <b>/ghep-ban/</b>, email về hộp thư đặt bàn kèm <b>mã GB-xxxx</b> và SĐT. Gọi xác nhận khách xong, nhập thông tin vào đây để đăng công khai. <b>Không nhập SĐT, tên thật hay link</b> vào đây (dữ liệu này công khai). Tin quá ngày tự ẩn.</p>
+      <h2>📡 Ghép bàn trực tiếp</h2>
+      <div id="gbKeyBox" class="help" style="padding:12px;border:1px solid var(--line);border-radius:12px"></div>
+      <p class="help" id="gbAdmStat" style="font-weight:700"></p>
+      <div class="gb-filter" id="gbFilter" style="margin:8px 0"></div>
+      <div class="gb-list" id="gbList"></div>
+      <p class="help" id="gbEmpty">Chưa có bàn nào đang mở.</p>
+      <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+      <h2>Đăng tin thủ công (khách gọi điện)</h2>
+      <p class="help">Dùng khi khách <b>gọi điện</b> nhờ tổng đài đăng bàn. Không nhập SĐT, tên thật hay link (dữ liệu này công khai). Tin quá ngày tự ẩn.</p>
       <div id="gbAdList" style="display:flex;flex-direction:column;gap:8px;margin:12px 0 18px"></div>
       <h3 id="gbAdTitle" style="margin:0 0 10px">Đăng tin ghép bàn</h3>
       <div class="g3"><div class="fld"><label for="gb_code">Mã ghép bàn</label><input id="gb_code" maxlength="10" placeholder="GB-XXXX"></div>
@@ -356,7 +363,7 @@ $('evSave').onclick=function(){
 var gbId=null;
 function gbWho(a,b){a=+a||0;b=+b||0;return [a?a+' nam':'',b?b+' nữ':''].filter(Boolean).join(' + ')||'—'}
 function gbBars(){var c=$('gb_city').value;$('gb_bar').innerHTML='<option value="">Chưa chọn quán</option>'+(data.bars||[]).filter(function(b){return !b.hidden&&b.city===c}).sort(function(a,b){return a.name.localeCompare(b.name,'vi')}).map(function(b){return '<option value="'+b.id+'">'+esc(b.name)+'</option>'}).join('')}
-function renderGhep(){setTimeout(renderOk);
+function renderGhep(){setTimeout(renderOk);setTimeout(gbKeyUI);
   if(!$('gb_city').options.length){var cs=(D&&D.cities)||[];$('gb_city').innerHTML=cs.map(function(c){return '<option value="'+c.id+'">'+esc(c.name)+'</option>'}).join('');$('gb_city').onchange=gbBars;gbBars();$('gb_date').value=todayVN()}
   var L=(data.ghepban||[]).slice().sort(function(a,b){return (a.date+a.time).localeCompare(b.date+b.time)}),t=todayVN();
   $('gbAdList').innerHTML=L.length?L.map(function(g){var past=g.date<t;return '<div style="display:flex;gap:8px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:10px;'+(past?'opacity:.5':'')+'"><div style="flex:1;min-width:0"><b>'+esc(g.code)+'</b> · '+esc(gbWho(g.haveNam,g.haveNu))+' cần '+esc(gbWho(g.needNam,g.needNu))+'<br><small>'+g.date.split('-').reverse().join('/')+' · '+esc(g.time||'')+' · '+esc(g.barId?barName(g.barId):'Chưa chọn quán')+(past?' · đã qua':'')+'</small></div><button type="button" class="btn" data-gbedit="'+g.id+'">Sửa</button><button type="button" class="btn" data-gbdel="'+g.id+'">Gỡ</button></div>'}).join(''):'<p class="help">Chưa có tin ghép bàn nào.</p>';
@@ -391,6 +398,24 @@ $('gbSave').onclick=function(){
   say($('gbAdMsg'),'Đang đăng…','wait');
   commitRetry([],(gbId?'Sửa':'Đăng')+' ghép bàn '+g.code,function(f){f.ghepban=(f.ghepban||[]).filter(function(x){return x.id!==g.id});f.ghepban.push(g)})
   .then(function(){renderGhep();gbFill(null);say($('gbAdMsg'),'Đã đăng. Trang /ghep-ban/ cập nhật sau 1–2 phút.','ok')}).catch(function(e){say($('gbAdMsg'),ghErr(e),'err')})};
+
+/* ---------- khoá admin ghép bàn (mã hoá đầu-cuối) ---------- */
+function gbKeyUI(){var box=$('gbKeyBox');if(!box)return;var k=null;try{k=JSON.parse(localStorage.getItem('tc-admin')||'null')}catch(e){}
+  var pubOk=k&&data&&data.ghepAdmin&&data.ghepAdmin.d&&data.ghepAdmin.d.x===k.dpub.x;var nt=(window.GB_CFG||{}).nt||'';
+  box.innerHTML=(k?(pubOk?'✅ <b>Khoá admin đang hoạt động trên máy này.</b> Bạn đọc được SĐT chủ bàn, người xin vào, chat trong bàn; duyệt/từ chối thay chủ bàn; ẩn tin xấu.':'⚠️ Máy này có khoá nhưng web đang dùng khoá khác. Nhập đúng khoá sao lưu hoặc tạo khoá mới.')
+    :'🔐 <b>Chưa có khoá admin trên máy này.</b> Tạo khoá để đọc SĐT và duyệt ghép bàn ngay trên trang này (không qua email).')
+    +'<div class="bar-acts" style="margin-top:10px">'+(k?'<button class="btn" type="button" id="gbBak">Sao lưu khoá</button>':'')+'<button class="btn'+(k?'':' btn-gold')+'" type="button" id="gbNewKey">'+(k?'Tạo khoá mới':'Tạo khoá admin')+'</button><button class="btn" type="button" id="gbImp">Nhập khoá sao lưu</button></div>'
+    +(nt?'<p style="margin-top:10px">📲 <b>Nhận thông báo trên điện thoại:</b> cài app <b>ntfy</b> (Android/iOS) → bấm + → nhập chủ đề <code>'+esc(nt)+'</code> → Subscribe. Mỗi bàn mới, yêu cầu xin vào, lượt duyệt đều báo về máy (không kèm SĐT).</p>':'');
+  if($('gbBak'))$('gbBak').onclick=function(){prompt('Lưu đoạn mã này ở nơi an toàn (Ghi chú/Zalo cá nhân). Dùng để đăng nhập admin ghép bàn trên máy khác:',btoa(unescape(encodeURIComponent(JSON.stringify(k)))))};
+  $('gbImp').onclick=function(){var c=prompt('Dán mã sao lưu khoá admin:');if(!c)return;try{var o=JSON.parse(decodeURIComponent(escape(atob(c.trim()))));if(!o.s||!o.d||!o.dpub)throw 0;localStorage.setItem('tc-admin',JSON.stringify(o));alert('Đã nhập khoá. Trang sẽ tải lại.');location.reload()}catch(e){alert('Mã không đúng.')}};
+  $('gbNewKey').onclick=function(){if(k&&!confirm('Tạo khoá mới sẽ KHÔNG đọc được các bàn đã đăng bằng khoá cũ. Tiếp tục?'))return;var S=crypto.subtle,EC={name:'ECDSA',namedCurve:'P-256'},DH={name:'ECDH',namedCurve:'P-256'};
+    say($('gbAdMsg'),'Đang tạo khoá…','wait');
+    Promise.all([S.generateKey(EC,true,['sign','verify']),S.generateKey(DH,true,['deriveKey'])]).then(function(r){return Promise.all([S.exportKey('jwk',r[0].publicKey),S.exportKey('jwk',r[0].privateKey),S.exportKey('jwk',r[1].publicKey),S.exportKey('jwk',r[1].privateKey)])}).then(function(j){
+      var priv={s:j[1],d:j[3],spub:{x:j[0].x,y:j[0].y},dpub:{x:j[2].x,y:j[2].y}},pubs={s:priv.spub,d:priv.dpub};
+      return commitRetry([],'Khoá admin ghép bàn',function(f){f.ghepAdmin=pubs}).then(function(){localStorage.setItem('tc-admin',JSON.stringify(priv));
+        prompt('Đã tạo khoá. LƯU NGAY mã sao lưu này (mất là phải tạo khoá mới). Web cập nhật sau 1–2 phút:',btoa(unescape(encodeURIComponent(JSON.stringify(priv)))));location.reload()})
+    }).catch(function(e){say($('gbAdMsg'),ghErr(e),'err')})};
+}
 $('saveTk').onclick=function(){var lines=$('tk').value.split('\n').map(function(s){return s.trim().slice(0,140)}).filter(Boolean).slice(0,15);
   say($('tkMsg'),'Đang đăng…','wait');commitRetry([],'Cập nhật dải tin',function(fresh){fresh.ticker=lines})
   .then(function(){say($('tkMsg'),'Đã đăng '+lines.length+' tin. Web cập nhật sau 1–2 phút.','ok')}).catch(function(e){say($('tkMsg'),ghErr(e),'err')})};

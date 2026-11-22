@@ -553,15 +553,19 @@ function eventList(evs) {
 const GHEP = (DATA.ghepban || []).filter(g => g.date >= TODAY_VN).map(g => ({ ...g, bar: BARS.find(b => b.id === g.barId) })).sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
 const GHEP_OK = (DATA.ghepok || []).slice().sort((a, b) => b.date.localeCompare(a.date)).map(g => ({ ...g, bar: BARS.find(b => b.id === g.barId) }));
 const ghepWho = (nam, nu) => [nam ? `${nam} nam` : '', nu ? `${nu} nữ` : ''].filter(Boolean).join(' + ') || '—';
+function ghepCfg(extra) {
+  return Object.assign({ nt: CFG.ntfyTopic || '', tel: TELN, hotline: CFG.hotline,
+    cities: Object.fromEntries(CITIES.map(c => [c.id, c.name])), bars: BARS.map(b => [b.id, b.city, b.name, href(b.path)]),
+    adminPub: DATA.ghepAdmin || null,
+    static: GHEP.map(g => ({ t: 'post', code: g.code, city: g.city || (g.bar && g.bar.city), barId: g.barId || 0, date: g.date, time: g.time || '21:00', age: g.age || '', haveNam: g.haveNam || 0, haveNu: g.haveNu || 0, needNam: g.needNam || 0, needNu: g.needNu || 0, note: g.note || '' })),
+    okList: GHEP_OK.slice(0, 12).map(g => ({ summary: g.summary || '', place: g.bar ? g.bar.name : ((cityOf(g.city) || {}).name || ''), date: g.date })) }, extra || {});
+}
 function ghepPage() {
   const crumbs = [['Trang chủ', ''], ['Ghép bàn', 'ghep-ban/']];
   const cityOpts = CITIES.filter(c => BARS.some(b => b.city === c.id)).map(c => `<option value="${c.id}">${esc(c.name)}</option>`).join('');
   const NT = CFG.ntfyTopic || '';
   const LIVE = !!NT;
-  const cfg = { nt: NT, w3f: CFG.web3formsKey || '', tel: TELN, hotline: CFG.hotline, zalo: CFG.zalo || '',
-    cities: Object.fromEntries(CITIES.map(c => [c.id, c.name])), bars: BARS.map(b => [b.id, b.city, b.name, href(b.path)]),
-    static: GHEP.map(g => ({ t: 'post', code: g.code, city: g.city || (g.bar && g.bar.city), barId: g.barId || 0, date: g.date, time: g.time || '21:00', age: g.age || '', haveNam: g.haveNam || 0, haveNu: g.haveNu || 0, needNam: g.needNam || 0, needNu: g.needNu || 0, note: g.note || '' })),
-    okList: GHEP_OK.slice(0, 12).map(g => ({ codes: g.codes || [], summary: g.summary || '', place: g.bar ? g.bar.name : ((cityOf(g.city) || {}).name || ''), date: g.date })) };
+  const cfg = ghepCfg();
   const body = `
 <div class="wrap">${crumbsHtml(crumbs)}
   <header class="post-head gb-head">
@@ -583,14 +587,14 @@ function ghepPage() {
 <section class="sec" id="dang-tin"><div class="wrap narrow">
   <form class="gb-form" id="gbForm" novalidate>
     <h2>Đăng bàn của bạn</h2>
-    <p class="help">${LIVE ? 'Tin hiện ngay trên bảng' : 'Tổng đài duyệt rồi tin hiện trên trang này'} với <b>mã ghép bàn</b>, không kèm tên hay số điện thoại. Số của bạn chỉ gửi riêng cho tổng đài.</p>
+    <p class="help">${LIVE ? 'Tin hiện ngay trên bảng' : 'Tổng đài duyệt rồi tin hiện trên trang này'} với <b>mã ghép bàn</b>. Số điện thoại của bạn luôn ẩn, chỉ hiện cho người bạn duyệt vào bàn.</p>
     <div class="gb-g2"><label>Thành phố<select name="city" required>${cityOpts}</select></label><label>Quán muốn đi<select name="bar"><option value="">Chưa chọn, nhờ tổng đài gợi ý</option></select></label></div>
     <div class="gb-g2"><label>Ngày<input type="date" name="date" required></label><label>Giờ đến<input type="time" name="time" value="21:00" required></label></div>
     <fieldset><legend>Bàn của bạn đang có</legend><div class="gb-g2"><label>Nam<input type="number" name="haveNam" min="0" max="20" value="2" inputmode="numeric"></label><label>Nữ<input type="number" name="haveNu" min="0" max="20" value="0" inputmode="numeric"></label></div></fieldset>
     <fieldset><legend>Cần ghép thêm</legend><div class="gb-quick" id="gbQuick"><button type="button" data-q="0,2">Cần 2 nữ</button><button type="button" data-q="2,0">Cần 2 nam</button><button type="button" data-q="0,3">Cần 3 nữ</button><button type="button" data-q="3,0">Cần 3 nam</button></div><div class="gb-g2"><label>Nam<input type="number" name="needNam" min="0" max="20" value="0" inputmode="numeric"></label><label>Nữ<input type="number" name="needNu" min="0" max="20" value="2" inputmode="numeric"></label></div></fieldset>
     <div class="gb-g2"><label>Độ tuổi mong muốn<input name="age" maxlength="20" placeholder="VD: 22–30"></label><label>Tên gọi<input name="name" maxlength="40" placeholder="Không bắt buộc"></label></div>
     <label>Ghi chú cho bàn ghép <small>(hiện công khai, không ghi SĐT/link)</small><input name="note" maxlength="140" placeholder="VD: Nhóm vui vẻ, thích EDM, chia bill"></label>
-    <label>Số điện thoại <small>(chỉ tổng đài thấy)</small><input name="phone" type="tel" inputmode="tel" maxlength="15" placeholder="09xx xxx xxx" required></label>
+    <label>Số điện thoại <small>(luôn ẩn, chỉ hiện cho người bạn duyệt vào bàn)</small><input name="phone" type="tel" inputmode="tel" maxlength="15" placeholder="09xx xxx xxx" required></label>
     <label class="gb-chk"><input type="checkbox" name="adult" required> Tất cả thành viên trong bàn đã đủ 18 tuổi</label>
     <label class="gb-chk"><input type="checkbox" name="rules" required> Tôi đồng ý quy định: ghép bàn để giao lưu, chia bill; không môi giới, không mua bán dâm, không quấy rối. Tin vi phạm bị xoá và chặn số.</label>
     <input type="checkbox" name="botcheck" class="gb-hp" tabindex="-1" autocomplete="off">
@@ -599,9 +603,9 @@ function ghepPage() {
   </form>
   <div class="prose" style="margin-top:22px">
     <h2>Ghép bàn trên TopChill hoạt động thế nào?</h2>
-    <ol><li><b>Đăng yêu cầu:</b> chọn thành phố, quán, giờ đến, bàn bạn có bao nhiêu nam, nữ và cần ghép thêm ai.</li><li><b>${LIVE ? 'Hiện ngay:' : 'Tổng đài duyệt:'}</b> ${LIVE ? 'tin lên bảng ngay với mã ghép bàn, tự ẩn sau 12 tiếng hoặc khi qua ngày.' : 'gọi lại xác nhận, sau đó tin hiện trên bảng với mã ghép bàn.'}</li><li><b>Xin vào bàn:</b> người khác bấm "Xin vào bàn", chọn nhóm mấy nam mấy nữ.</li><li><b>Chủ bàn duyệt:</b> bạn bấm Duyệt hoặc Từ chối ngay trên thẻ bàn (dùng đúng máy đã đăng). Bàn đủ người tự hiện ở mục "Bàn đã ghép thành công".</li><li><b>Chốt bàn:</b> tổng đài gọi cả hai bên, giữ một bàn chung, không cần cọc.</li></ol>
+    <ol><li><b>Đăng yêu cầu:</b> chọn thành phố, quán, giờ đến, bàn bạn có bao nhiêu nam, nữ và cần ghép thêm ai.</li><li><b>${LIVE ? 'Hiện ngay:' : 'Tổng đài duyệt:'}</b> ${LIVE ? 'tin lên bảng ngay với mã ghép bàn, tự ẩn sau 12 tiếng hoặc khi qua ngày.' : 'gọi lại xác nhận, sau đó tin hiện trên bảng với mã ghép bàn.'}</li><li><b>Xin vào bàn:</b> người khác bấm "Xin vào bàn", chọn nhóm mấy nam mấy nữ.</li><li><b>Chủ bàn duyệt:</b> bạn bấm Duyệt hoặc Từ chối ngay trên thẻ bàn (dùng đúng máy đã đăng). Bàn đủ người tự hiện ở mục "Bàn đã ghép thành công".</li><li><b>Hẹn nhau:</b> sau khi duyệt, hai bên thấy số điện thoại của nhau và chat riêng trong thẻ bàn để hẹn giờ, chỗ gặp. Tổng đài giữ bàn, không cần cọc.</li></ol>
     <h2>Quy định an toàn</h2>
-    <ul><li>Chỉ dành cho người từ 18 tuổi, quán có thể kiểm tra CCCD.</li><li>Không đăng số điện thoại, link, tài khoản mạng xã hội trong ghi chú.</li><li>Nghiêm cấm môi giới, mua bán dâm, gạ gẫm, quấy rối. TopChill xoá tin và chặn số vi phạm.</li><li>Gặp mặt ở nơi công cộng, tự giữ đồ uống của mình, về bằng taxi hoặc xe công nghệ.</li><li>Gặp sự cố, gọi ngay tổng đài ${esc(CFG.hotline)}.</li></ul>
+    <ul><li>Chỉ dành cho người từ 18 tuổi, quán có thể kiểm tra CCCD.</li><li>Số điện thoại và tin nhắn trong bàn được mã hoá, chỉ người trong bàn và tổng đài TopChill đọc được. Không đăng số điện thoại, link, mạng xã hội trong ghi chú công khai.</li><li>Nghiêm cấm môi giới, mua bán dâm, gạ gẫm, quấy rối. TopChill xoá tin và chặn số vi phạm.</li><li>Gặp mặt ở nơi công cộng, tự giữ đồ uống của mình, về bằng taxi hoặc xe công nghệ.</li><li>Gặp sự cố, gọi ngay tổng đài ${esc(CFG.hotline)}.</li></ul>
   </div>
 </div></section>
 <script>window.GB_CFG=${JSON.stringify(cfg).replace(/</g, '\\u003c')};</script><script src="${href('assets/ghep.js')}?v=${STAMP}" defer></script>`;
@@ -953,6 +957,7 @@ ${headTags({ title: 'Quản lý bar – TopChill', desc: 'Trang quản lý nội
 <body>
 ${header('')}
 ${tpl.replace('/*__ADMIN_DATA__*/null', JSON.stringify(data))}
+<script>window.GB_CFG=${JSON.stringify(ghepCfg({ admin: true })).replace(/</g, '\\u003c')};</script><script src="${href('assets/ghep.js')}?v=${STAMP}" defer></script>
 </body>
 </html>
 `);
