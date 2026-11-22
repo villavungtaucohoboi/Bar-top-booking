@@ -338,3 +338,17 @@ p{margin:0}
 .hdr-cta{display:flex;align-items:center;gap:8px}
 .gb-pill{display:inline-flex;align-items:center;padding:9px 14px;border-radius:99px;color:#ffe3f4;font-weight:800;font-size:14px;text-decoration:none;white-space:nowrap;background:rgba(18,8,28,.45);border:1.5px solid #ff4fb8;text-shadow:0 0 6px #ff4fb8;box-shadow:0 0 10px rgba(255,79,184,.5)}
 @media (max-width:720px){.gb-pill{padding:8px 11px;font-size:13px}.hdr-cta .btn{padding-inline:14px}}
+.gb-prog{height:7px;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden}.gb-prog i{display:block;height:100%;background:linear-gradient(90deg,#ff4fb8,#45d5ff);border-radius:99px}
+.gb-okt{color:#4ade80}
+.gb-mine{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:99px;background:#7c3aed;color:#fff;font-size:11.5px}
+.gb-card.own{border-color:#a78bfa;box-shadow:0 0 16px rgba(167,139,250,.35)}
+.gb-join{min-height:48px;border-radius:14px;border:1.5px solid #ff4fb8;background:rgba(255,79,184,.12);color:#ffe3f4;font:inherit;font-weight:800;font-size:16px;cursor:pointer;text-shadow:0 0 6px #ff4fb8;box-shadow:0 0 10px rgba(255,79,184,.35)}
+.gb-jf{display:flex;flex-direction:column;gap:8px}.gb-jf label{display:flex;flex-direction:column;gap:4px;font-weight:700;font-size:13.5px}
+.gb-jf input{min-height:44px;padding:0 10px;border-radius:12px;border:1px solid var(--line);background:var(--bg,#0f0a14);color:inherit;font:inherit;width:100%;box-sizing:border-box;min-width:0}
+.gb-jf .gb-chk{flex-direction:row;align-items:center;gap:8px;font-weight:500}.gb-jf .gb-chk input{width:20px;height:20px;min-height:0;flex:none}
+.gb-own{display:flex;flex-direction:column;gap:6px;padding:10px;border-radius:12px;background:rgba(124,58,237,.12);border:1px dashed #a78bfa}
+.gb-req{display:flex;align-items:center;gap:6px}.gb-req span{flex:1}.gb-req small{opacity:.6}
+.gb-yes,.gb-no{border:0;border-radius:10px;padding:8px 12px;font:inherit;font-weight:800;cursor:pointer;color:#fff}.gb-yes{background:#22c55e}.gb-no{background:#475569}
+.gb-st{padding:10px;border-radius:12px;background:rgba(255,255,255,.06);font-weight:700}.gb-st.y{background:rgba(34,197,94,.15);color:#4ade80}.gb-st.n{opacity:.75}
+.gb-tel{text-align:center;font-size:13px;font-weight:700;color:#86efac}
+.gb-done[hidden]{display:none}
