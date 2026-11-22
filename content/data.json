@@ -10360,6 +10360,86 @@
    "images": [],
    "pin": null,
    "hidden": false
+  },
+  {
+   "id": 17,
+   "name": "Sing KTV – Thái Thịnh",
+   "slug": "sing-ktv-thai-thinh",
+   "city": "hn",
+   "area": "Đống Đa",
+   "addr": "Phố Thái Thịnh",
+   "segment": "Đối tác",
+   "hours": "",
+   "price": [],
+   "features": [
+    "Đối tác ưu tiên của TopChill",
+    "Đặt phòng qua tổng đài, không cần cọc"
+   ],
+   "desc": "Sing KTV cơ sở Thái Thịnh là quán karaoke trên phố Thái Thịnh, quận Đống Đa, Hà Nội, nằm trong hệ thống Sing KTV. Đặt phòng qua tổng đài TopChill để được giữ phòng và báo giá theo khung giờ.",
+   "sources": [],
+   "images": [],
+   "pin": 1,
+   "hidden": false
+  },
+  {
+   "id": 18,
+   "name": "Sing KTV – Tố Hữu",
+   "slug": "sing-ktv-to-huu",
+   "city": "hn",
+   "area": "Hà Đông",
+   "addr": "Đường Tố Hữu",
+   "segment": "Đối tác",
+   "hours": "",
+   "price": [],
+   "features": [
+    "Đối tác ưu tiên của TopChill",
+    "Đặt phòng qua tổng đài, không cần cọc"
+   ],
+   "desc": "Sing KTV cơ sở Tố Hữu là quán karaoke trên trục đường Tố Hữu, khu vực Hà Đông, Hà Nội, thuộc hệ thống Sing KTV. Gọi tổng đài TopChill để giữ phòng và được chỉ đường.",
+   "sources": [],
+   "images": [],
+   "pin": 2,
+   "hidden": false
+  },
+  {
+   "id": 19,
+   "name": "Karaoke Level Hà Đông",
+   "slug": "karaoke-level-ha-dong",
+   "city": "hn",
+   "area": "Hà Đông",
+   "addr": "Quận Hà Đông",
+   "segment": "Đối tác",
+   "hours": "",
+   "price": [],
+   "features": [
+    "Đối tác ưu tiên của TopChill",
+    "Đặt phòng qua tổng đài, không cần cọc"
+   ],
+   "desc": "Karaoke Level là quán karaoke ở quận Hà Đông, Hà Nội. Gọi tổng đài TopChill để được báo giá phòng, giữ phòng và chỉ đường.",
+   "sources": [],
+   "images": [],
+   "pin": 3,
+   "hidden": false
+  },
+  {
+   "id": 20,
+   "name": "Karaoke London Phú Lương",
+   "slug": "karaoke-london-phu-luong",
+   "city": "hn",
+   "area": "Hà Đông",
+   "addr": "Phường Phú Lương",
+   "segment": "Đối tác",
+   "hours": "",
+   "price": [],
+   "features": [
+    "Đối tác ưu tiên của TopChill",
+    "Đặt phòng qua tổng đài, không cần cọc"
+   ],
+   "desc": "Karaoke London là quán karaoke ở phường Phú Lương, quận Hà Đông, Hà Nội. Gọi tổng đài TopChill để được báo giá phòng, giữ phòng và chỉ đường.",
+   "sources": [],
+   "images": [],
+   "pin": 4,
+   "hidden": false
   }
  ]
 }

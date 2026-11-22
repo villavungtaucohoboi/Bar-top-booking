@@ -1572,7 +1572,7 @@ fsTick();setInterval(fsTick,1000);
 
 /* ---------- KARAOKE: dải quán trên trang chủ ---------- */
 function renderKtv(){const box=document.getElementById('kvRow');if(!box||!KTV.length)return;document.getElementById('kvStrip').hidden=false;
-  box.innerHTML=KTV.slice(0,6).map(k=>`<a class="kvs-card" href="/karaoke/${k.s}/"><span class="kvs-ph">${k.i?`<img src="${escH(k.i)}" alt="${escH(k.n)}" loading="lazy">`:'<b>🎤</b>'}<i>${escH(k.g)}</i></span><span class="kvs-b"><b>${escH(k.n)}</b><small>📍 ${escH(k.ad)}, ${escH(k.a)}</small><small>💰 ${k.p.length===2?k.p[0]+'k–'+k.p[1]+'k/giờ':'Gọi để báo giá'}</small></span></a>`).join('')+`<a class="kvs-card more" href="/karaoke-ha-noi/"><b>🎤</b><span>Xem ${KTV.length>=8?'thêm':'tất cả'} quán karaoke →</span></a>`}
+  box.innerHTML=KTV.slice(0,6).map(k=>`<a class="kvs-card" href="/karaoke/${k.s}/"><span class="kvs-ph">${k.i?`<img src="${escH(k.i)}" alt="${escH(k.n)}" loading="lazy">`:'<b>🎤</b>'}<i>${k.g==='Đối tác'?'⭐ TOP':escH(k.g)}</i></span><span class="kvs-b"><b>${escH(k.n)}</b><small>📍 ${escH(k.ad)}, ${escH(k.a)}</small><small>💰 ${k.p.length===2?k.p[0]+'k–'+k.p[1]+'k/giờ':'Gọi để báo giá'}</small></span></a>`).join('')+`<a class="kvs-card more" href="/karaoke-ha-noi/"><b>🎤</b><span>Xem ${KTV.length>=8?'thêm':'tất cả'} quán karaoke →</span></a>`}
 /* ---------- TRANG CHỦ: XẾP HẠNG, QUYỀN LỢI, THÀNH PHỐ ---------- */
 let RK=null;
 function renderRank(){

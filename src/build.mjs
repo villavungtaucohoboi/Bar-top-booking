@@ -51,7 +51,7 @@ let APP = fs.readFileSync(path.join(ROOT, 'src/app.html'), 'utf8');
 { const a = APP.indexOf('const BARS=['), z = APP.indexOf('\n];\n', a);
   if (a < 0 || z < 0) throw new Error('Không tìm thấy BARS trong app.html');
   APP = APP.slice(0, a) + 'const BARS=' + JSON.stringify(LIVE_BARS) + ';' + APP.slice(z + 3);
-  APP = APP.replace('const KTV=[];', 'const KTV=' + JSON.stringify((DATA.ktv || []).filter(k => !k.hidden).slice(0, 8).map(k => ({ n: k.name, s: k.slug, a: k.area, ad: k.addr, g: k.segment, p: k.price || [], h: k.hours || '', i: (k.images || [])[0] || '' }))).replace(/</g, '\\u003c') + ';');
+  APP = APP.replace('const KTV=[];', 'const KTV=' + JSON.stringify((DATA.ktv || []).filter(k => !k.hidden).sort((a, b) => (a.pin || 999) - (b.pin || 999)).slice(0, 8).map(k => ({ n: k.name, s: k.slug, a: k.area, ad: k.addr, g: k.segment, p: k.price || [], h: k.hours || '', i: (k.images || [])[0] || '' }))).replace(/</g, '\\u003c') + ';');
   { const BK = CFG.web3formsKey ? { kind: 'w3f', url: 'https://api.web3forms.com/submit', key: CFG.web3formsKey }
       : CFG.bookingEndpoint ? { kind: 'url', url: CFG.bookingEndpoint }
       : CFG.bookingEmail ? { kind: 'fs', url: 'https://formsubmit.co/ajax/' + CFG.bookingEmail } : null;
@@ -615,14 +615,14 @@ function ghepPage() {
 }
 
 /* ================= KARAOKE / KTV (tách riêng khỏi bar) ================= */
-const KTV_SEG = ['VIP', 'Tầm trung', 'Bình dân'];
+const KTV_SEG = ['Đối tác', 'VIP', 'Tầm trung', 'Bình dân'];
 const KTV = (DATA.ktv || []).filter(k => !k.hidden).map(k => ({ ...k, path: `karaoke/${k.slug}/`, images: (k.images || []).map(p => p.startsWith('/') ? (CFG.basePath.replace(/\/$/, '') + p) : p) }))
   .sort((a, b) => ((a.pin || 999) - (b.pin || 999)) || (KTV_SEG.indexOf(a.segment) - KTV_SEG.indexOf(b.segment)));
 const ktvPrice = k => k.price && k.price.length === 2 ? `${k.price[0]}k–${k.price[1]}k/giờ` : 'Gọi để báo giá';
 const ktvPh = (k, w = 640) => k.images && k.images.length ? img(k.images, w, `${k.name} – karaoke ${k.area}, Hà Nội`, { ratio: [16, 10] }) : `<div class="kv-ph" aria-hidden="true"><span>🎤</span><i>${esc(k.segment)}</i></div>`;
 function ktvCard(k, i) {
   return `<article class="kv-card" data-seg="${esc(k.segment)}" data-area="${esc(k.area)}">
-  <a class="kv-img" href="${href(k.path)}">${ktvPh(k)}<span class="kv-seg">${esc(k.segment)}</span>${i != null ? `<span class="kv-no">#${i + 1}</span>` : ''}</a>
+  <a class="kv-img" href="${href(k.path)}">${ktvPh(k)}<span class="kv-seg">${k.segment === 'Đối tác' ? '⭐ TOP ĐỐI TÁC' : esc(k.segment)}</span>${i != null ? `<span class="kv-no">#${i + 1}</span>` : ''}</a>
   <div class="kv-b"><h3><a href="${href(k.path)}">${esc(k.name)}</a></h3>
   <p class="kv-ad">📍 ${esc(k.addr)}, ${esc(k.area)}</p>
   <p class="kv-meta"><span>💰 ${esc(ktvPrice(k))}</span>${k.hours ? `<span>🕘 ${esc(k.hours)}</span>` : ''}</p>
@@ -646,7 +646,7 @@ function ktvListPage() {
   <div class="kv-cta"><a class="kv-call big" href="tel:${TELN}">📞 Gọi giữ phòng ${esc(CFG.hotline)}</a></div>
 </div></div>
 <section class="sec"><div class="wrap">
-  <div class="kv-filter" id="kvSeg"><button type="button" class="on" data-s="">Tất cả</button>${KTV_SEG.filter(sg => KTV.some(k => k.segment === sg)).map(sg => `<button type="button" data-s="${sg}">${sg === 'VIP' ? '👑 ' : ''}${sg}</button>`).join('')}</div>
+  <div class="kv-filter" id="kvSeg"><button type="button" class="on" data-s="">Tất cả</button>${KTV_SEG.filter(sg => KTV.some(k => k.segment === sg)).map(sg => `<button type="button" data-s="${sg}">${sg === 'VIP' ? '👑 ' : sg === 'Đối tác' ? '⭐ ' : ''}${sg === 'Đối tác' ? 'Top đối tác' : sg}</button>`).join('')}</div>
   <div class="kv-filter sm" id="kvArea"><button type="button" class="on" data-a="">Mọi quận</button>${areas.map(a => `<button type="button" data-a="${esc(a)}">${esc(a)}</button>`).join('')}</div>
   <div class="kv-grid" id="kvGrid">${KTV.map((k, i) => ktvCard(k, i)).join('')}</div>
   <p class="kv-note">Giá phòng và giờ mở cửa là thông tin tham khảo từ nguồn công khai, có thể thay đổi. Gọi ${esc(CFG.hotline)} để tổng đài xác nhận trước khi đến.</p>
