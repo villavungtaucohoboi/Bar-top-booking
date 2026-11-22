@@ -51,6 +51,7 @@ let APP = fs.readFileSync(path.join(ROOT, 'src/app.html'), 'utf8');
 { const a = APP.indexOf('const BARS=['), z = APP.indexOf('\n];\n', a);
   if (a < 0 || z < 0) throw new Error('Không tìm thấy BARS trong app.html');
   APP = APP.slice(0, a) + 'const BARS=' + JSON.stringify(LIVE_BARS) + ';' + APP.slice(z + 3);
+  APP = APP.replace('const KTV=[];', 'const KTV=' + JSON.stringify((DATA.ktv || []).filter(k => !k.hidden).slice(0, 8).map(k => ({ n: k.name, s: k.slug, a: k.area, ad: k.addr, g: k.segment, p: k.price || [], h: k.hours || '', i: (k.images || [])[0] || '' }))).replace(/</g, '\\u003c') + ';');
   { const BK = CFG.web3formsKey ? { kind: 'w3f', url: 'https://api.web3forms.com/submit', key: CFG.web3formsKey }
       : CFG.bookingEndpoint ? { kind: 'url', url: CFG.bookingEndpoint }
       : CFG.bookingEmail ? { kind: 'fs', url: 'https://formsubmit.co/ajax/' + CFG.bookingEmail } : null;
@@ -323,7 +324,7 @@ ${HEAD_SCRIPT}`;
 }
 const STAMP = Date.now().toString(36);
 const CHAT_TAGS = () => `<link rel="stylesheet" href="${href('assets/chat.css')}?v=${STAMP}">\n<script src="${href('assets/chat-data.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/chat.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/music.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/install.js')}?v=${STAMP}" defer></script>`;
-const NAV = [['bar-ha-noi/', 'Bar Hà Nội'], ['bar-sai-gon/', 'Bar Sài Gòn'], ['bar-da-nang/', 'Bar Đà Nẵng'], ['ghep-ban/', '🔥 Ghép bàn'], ['blog/', 'Cẩm nang']];
+const NAV = [['bar-ha-noi/', 'Bar Hà Nội'], ['bar-sai-gon/', 'Bar Sài Gòn'], ['bar-da-nang/', 'Bar Đà Nẵng'], ['ghep-ban/', '🔥 Ghép bàn'], ['karaoke-ha-noi/', '🎤 Karaoke'], ['blog/', 'Cẩm nang']];
 function header(active) {
   const links = NAV.map(([p, t]) => `<a href="${href(p)}"${active === p ? ' aria-current="page"' : ''}>${t}</a>`).join('');
   return `<header class="hdr"><div class="wrap hdr-in">
@@ -349,7 +350,7 @@ function footer() {
 const TELN = CFG.hotline.replace(/\s/g, '');
 /* Dải khuyến mãi kéo khách gọi điện: % to + điều kiện đặt trước / giờ vàng. */
 const promoStrip = () => `<aside class="promo" aria-label="Ưu đãi đặt bàn"><div class="wrap promo-in"><div class="promo-t"><b class="promo-pct">GIẢM ĐẾN ${PROMO.max}% BILL</b><span>Đặt bàn ${esc(PROMO.advance)} hoặc đến <b>giờ vàng ${esc(PROMO.golden)}</b></span></div><a class="promo-call" href="tel:${TELN}">📞 Gọi giữ ưu đãi ${esc(CFG.hotline)}</a><small class="promo-n">Mức giảm tuỳ bar, tổng đài báo cụ thể khi bạn gọi. Không cần cọc, hỗ trợ 24/7.</small></div></aside>`;
-function page(opts, body, { mcta = '' } = {}) {
+function page(opts, body, { mcta = '', promo = true } = {}) {
   return `<!doctype html>
 <html lang="vi">
 <head>
@@ -358,7 +359,7 @@ ${headTags(opts)}
 <body>
 ${header(opts.active)}
 <main>
-${promoStrip()}
+${promo ? promoStrip() : ''}
 ${body}
 </main>
 ${footer()}
@@ -368,7 +369,7 @@ ${CHAT_TAGS()}
 </html>
 `;
 }
-const mctaBar = (label, link) => `<div class="mcta"><a class="btn call" href="tel:${CFG.hotline.replace(/\s/g, '')}" aria-label="Gọi tổng đài ${esc(CFG.hotline)}">📞 Gọi nhận ưu đãi</a><a class="btn btn-gold" href="${link}">${esc(label)}</a></div>`;
+const mctaBar = (label, link, callLabel = 'Gọi nhận ưu đãi') => `<div class="mcta"><a class="btn call" href="tel:${CFG.hotline.replace(/\s/g, '')}" aria-label="Gọi tổng đài ${esc(CFG.hotline)}">📞 ${callLabel}</a><a class="btn btn-gold" href="${link}">${esc(label)}</a></div>`;
 
 /* ---------- 5. Thẻ dùng chung ---------- */
 function postCard(p) {
@@ -612,6 +613,91 @@ function ghepPage() {
   const ld = [breadcrumbLd(crumbs)];
   write('ghep-ban/index.html', page({ title: 'Ghép bàn đi bar: bàn nam tìm nữ, bàn nữ tìm nam | TopChill', desc: 'Ghép bàn đi bar, club online: bàn nam cần thêm nữ, bàn nữ cần thêm nam. Xin vào bàn, chủ bàn tự duyệt, tổng đài TopChill giữ bàn, không cần cọc.', pathRel: 'ghep-ban/', ld, active: 'ghep-ban/' }, body, { mcta: mctaBar('Đăng bàn ghép', '#dang-tin') }));
 }
+
+/* ================= KARAOKE / KTV (tách riêng khỏi bar) ================= */
+const KTV_SEG = ['VIP', 'Tầm trung', 'Bình dân'];
+const KTV = (DATA.ktv || []).filter(k => !k.hidden).map(k => ({ ...k, path: `karaoke/${k.slug}/`, images: (k.images || []).map(p => p.startsWith('/') ? (CFG.basePath.replace(/\/$/, '') + p) : p) }))
+  .sort((a, b) => ((a.pin || 999) - (b.pin || 999)) || (KTV_SEG.indexOf(a.segment) - KTV_SEG.indexOf(b.segment)));
+const ktvPrice = k => k.price && k.price.length === 2 ? `${k.price[0]}k–${k.price[1]}k/giờ` : 'Gọi để báo giá';
+const ktvPh = (k, w = 640) => k.images && k.images.length ? img(k.images, w, `${k.name} – karaoke ${k.area}, Hà Nội`, { ratio: [16, 10] }) : `<div class="kv-ph" aria-hidden="true"><span>🎤</span><i>${esc(k.segment)}</i></div>`;
+function ktvCard(k, i) {
+  return `<article class="kv-card" data-seg="${esc(k.segment)}" data-area="${esc(k.area)}">
+  <a class="kv-img" href="${href(k.path)}">${ktvPh(k)}<span class="kv-seg">${esc(k.segment)}</span>${i != null ? `<span class="kv-no">#${i + 1}</span>` : ''}</a>
+  <div class="kv-b"><h3><a href="${href(k.path)}">${esc(k.name)}</a></h3>
+  <p class="kv-ad">📍 ${esc(k.addr)}, ${esc(k.area)}</p>
+  <p class="kv-meta"><span>💰 ${esc(ktvPrice(k))}</span>${k.hours ? `<span>🕘 ${esc(k.hours)}</span>` : ''}</p>
+  <div class="kv-acts"><a class="kv-call" href="tel:${TELN}">📞 Gọi giữ phòng</a><a class="kv-book" href="${href(k.path)}#dat-phong">Đặt phòng</a></div></div></article>`;
+}
+function ktvListPage() {
+  if (!KTV.length) return;
+  const crumbs = [['Trang chủ', ''], ['Karaoke Hà Nội', 'karaoke-ha-noi/']];
+  const areas = [...new Set(KTV.map(k => k.area))];
+  const faq = [
+    { q: 'Karaoke ở Hà Nội giá bao nhiêu một giờ?', a: 'Tuỳ phân khúc. Quán bình dân thường khoảng 100.000–200.000đ/giờ, tầm trung 100.000–300.000đ/giờ, phòng VIP từ khoảng 350.000đ/giờ trở lên. Giá thay đổi theo giờ và ngày, gọi tổng đài để được báo giá chính xác.' },
+    { q: 'Đặt phòng karaoke qua TopChill có cần cọc không?', a: `Không. Gọi ${CFG.hotline} hoặc để lại số trên trang quán, tổng đài giữ phòng và gọi lại xác nhận.` },
+    { q: 'Karaoke Hà Nội nào mở xuyên đêm?', a: 'Một số quán mở 24/7 hoặc đến 2–4 giờ sáng. Xem giờ mở cửa trên từng thẻ quán và gọi tổng đài để xác nhận.' }];
+  const ld = [breadcrumbLd(crumbs), { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Karaoke Hà Nội', itemListElement: KTV.map((k, i) => ({ '@type': 'ListItem', position: i + 1, url: url(k.path), name: k.name })) },
+    { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }];
+  const body = `
+<div class="kv-hero"><div class="wrap">${crumbsHtml(crumbs)}
+  <div class="kv-switch"><a href="${href('bar-ha-noi/')}">🍸 Đi Bar</a><a class="on" href="${href('karaoke-ha-noi/')}" aria-current="page">🎤 Hát Karaoke</a></div>
+  <h1>Karaoke Hà Nội <span>– đặt phòng KTV nhanh</span></h1>
+  <p class="lead">${KTV.length} quán karaoke, KTV ở Hà Nội từ phòng VIP sang trọng đến quán bình dân cho nhóm bạn. Gọi tổng đài giữ phòng, không cần cọc.</p>
+  <div class="kv-cta"><a class="kv-call big" href="tel:${TELN}">📞 Gọi giữ phòng ${esc(CFG.hotline)}</a></div>
+</div></div>
+<section class="sec"><div class="wrap">
+  <div class="kv-filter" id="kvSeg"><button type="button" class="on" data-s="">Tất cả</button>${KTV_SEG.filter(sg => KTV.some(k => k.segment === sg)).map(sg => `<button type="button" data-s="${sg}">${sg === 'VIP' ? '👑 ' : ''}${sg}</button>`).join('')}</div>
+  <div class="kv-filter sm" id="kvArea"><button type="button" class="on" data-a="">Mọi quận</button>${areas.map(a => `<button type="button" data-a="${esc(a)}">${esc(a)}</button>`).join('')}</div>
+  <div class="kv-grid" id="kvGrid">${KTV.map((k, i) => ktvCard(k, i)).join('')}</div>
+  <p class="kv-note">Giá phòng và giờ mở cửa là thông tin tham khảo từ nguồn công khai, có thể thay đổi. Gọi ${esc(CFG.hotline)} để tổng đài xác nhận trước khi đến.</p>
+</div></section>
+<section class="sec"><div class="wrap narrow prose">
+  <h2>Chọn quán karaoke Hà Nội thế nào?</h2>
+  <ul><li><b>Đi nhóm đông, tổ chức sinh nhật, tiếp khách:</b> chọn quán VIP có phòng lớn, âm thanh tốt, phục vụ đồ ăn.</li><li><b>Nhóm bạn, sinh viên:</b> quán bình dân, tầm trung ở Cầu Giấy, Đống Đa giá mềm, nhiều phòng.</li><li><b>Hát xuyên đêm:</b> ưu tiên quán mở 24/7 hoặc đến 2–4 giờ sáng.</li></ul>
+  <h2>Câu hỏi thường gặp</h2>${faq.map(f => `<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>`).join('')}
+  <p>Muốn đi bar sau khi hát? Xem <a href="${href('bar-ha-noi/')}">bar Hà Nội</a>, <a href="${href('blog/club-ha-noi/')}">club Hà Nội</a> hoặc <a href="${href('ghep-ban/')}">ghép bàn</a>.</p>
+</div></section>
+<script>(function(){var s='',a='';function f(){[].forEach.call(document.querySelectorAll('#kvGrid .kv-card'),function(c){c.hidden=(s&&c.dataset.seg!==s)||(a&&c.dataset.area!==a)})}
+function on(box,b){[].forEach.call(box.children,function(x){x.classList.toggle('on',x===b)})}
+document.getElementById('kvSeg').onclick=function(e){var b=e.target.closest('button');if(!b)return;s=b.dataset.s;on(this,b);f()};
+document.getElementById('kvArea').onclick=function(e){var b=e.target.closest('button');if(!b)return;a=b.dataset.a;on(this,b);f()}})();</script>`;
+  write('karaoke-ha-noi/index.html', page({ title: `Karaoke Hà Nội: ${KTV.length} quán KTV, phòng VIP, giá phòng (${new Date().getFullYear()})`, desc: 'Karaoke Hà Nội: quán KTV VIP, tầm trung, bình dân ở Cầu Giấy, Đống Đa, Ba Đình, Thanh Xuân kèm địa chỉ, giá phòng/giờ, giờ mở cửa. Đặt phòng không cần cọc.', pathRel: 'karaoke-ha-noi/', ld, active: 'karaoke-ha-noi/' }, body, { mcta: mctaBar('Đặt phòng karaoke', '#kvGrid', 'Gọi giữ phòng'), promo: false }));
+}
+function ktvPage(k) {
+  const crumbs = [['Trang chủ', ''], ['Karaoke Hà Nội', 'karaoke-ha-noi/'], [k.name, k.path]];
+  const near = KTV.filter(x => x !== k && (x.area === k.area || x.segment === k.segment)).slice(0, 3);
+  const maps = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(k.name + ', ' + k.addr + ', ' + k.area + ', Hà Nội');
+  const ld = [breadcrumbLd(crumbs), { '@context': 'https://schema.org', '@type': 'EntertainmentBusiness', name: k.name, url: url(k.path), address: { '@type': 'PostalAddress', streetAddress: k.addr, addressLocality: k.area, addressRegion: 'Hà Nội', addressCountry: 'VN' }, ...(k.price && k.price.length === 2 ? { priceRange: `${k.price[0]}.000–${k.price[1]}.000 VND/giờ` } : {}) }];
+  const body = `
+<div class="kv-hero"><div class="wrap">${crumbsHtml(crumbs)}
+  <div class="kv-head"><div class="kv-img big">${ktvPh(k, 1200)}<span class="kv-seg">${esc(k.segment)}</span></div>
+  <div><span class="eyebrow">🎤 Karaoke · ${esc(k.area)}, Hà Nội</span><h1>${esc(k.name)}</h1>
+  <p class="kv-ad">📍 ${esc(k.addr)}, ${esc(k.area)}, Hà Nội · <a href="${maps}" target="_blank" rel="noopener">Chỉ đường</a></p>
+  <p class="kv-meta"><span>💰 ${esc(ktvPrice(k))}</span>${k.hours ? `<span>🕘 ${esc(k.hours)}</span>` : ''}<span>⭐ ${esc(k.segment)}</span></p>
+  <div class="kv-cta"><a class="kv-call big" href="tel:${TELN}">📞 Gọi giữ phòng</a><a class="kv-book big" href="#dat-phong">Đặt phòng online</a></div></div></div>
+</div></div>
+<section class="sec"><div class="wrap narrow prose">
+  <h2>Giới thiệu ${esc(k.name)}</h2><p>${esc(k.desc)}</p>
+  ${k.features && k.features.length ? `<h3>Điểm nổi bật</h3><ul>${k.features.map(f => `<li>${esc(f)}</li>`).join('')}</ul>` : ''}
+  <table class="kv-tb"><tr><th>Địa chỉ</th><td>${esc(k.addr)}, ${esc(k.area)}, Hà Nội</td></tr><tr><th>Phân khúc</th><td>${esc(k.segment)}</td></tr><tr><th>Giá phòng tham khảo</th><td>${esc(ktvPrice(k))}</td></tr><tr><th>Giờ mở cửa</th><td>${esc(k.hours || 'Gọi tổng đài để xác nhận')}</td></tr></table>
+  <p class="kv-note">Thông tin tổng hợp từ nguồn công khai, giá và giờ có thể thay đổi. Gọi ${esc(CFG.hotline)} để xác nhận trước khi đến.</p>
+</div></section>
+<section class="sec" id="dat-phong"><div class="wrap narrow">
+  <form class="gb-form kv-form" id="kvForm" novalidate><h2>🎤 Đặt phòng ${esc(k.name)}</h2>
+    <div class="gb-g2"><label>Ngày<input type="date" name="date"></label><label>Giờ đến<input type="time" name="time" value="20:00"></label></div>
+    <div class="gb-g2"><label>Số người<input type="number" name="n" min="1" max="50" value="6"></label><label>Loại phòng<select name="room"><option>Phòng thường</option><option>Phòng VIP</option><option>Phòng tiệc lớn</option></select></label></div>
+    <label>Số điện thoại<input name="phone" type="tel" inputmode="tel" maxlength="15" placeholder="09xx xxx xxx"></label>
+    <input type="checkbox" name="botcheck" class="gb-hp" tabindex="-1" autocomplete="off">
+    <button class="btn btn-gold btn-lg" type="submit">Gửi yêu cầu giữ phòng</button><p class="gb-msg" id="kvMsg" role="status"></p></form>
+</div></section>
+${near.length ? `<section class="sec"><div class="wrap"><h2>Karaoke gần đây</h2><div class="kv-grid">${near.map(x => ktvCard(x)).join('')}</div><p style="margin-top:12px"><a href="${href('karaoke-ha-noi/')}">Xem tất cả karaoke Hà Nội →</a></p></div></section>` : ''}
+<script>(function(){var f=document.getElementById('kvForm'),m=document.getElementById('kvMsg'),t=new Date(Date.now()+7*3600e3).toISOString().slice(0,10);f.date.value=t;f.date.min=t;
+f.onsubmit=function(e){e.preventDefault();if(f.botcheck.checked)return;var ph=f.phone.value.replace(/\\D/g,'');if(!/^(0|84)\\d{9}$/.test(ph)){m.textContent='Nhập số điện thoại hợp lệ để tổng đài gọi lại.';m.className='gb-msg bad';return}
+m.textContent='Đang gửi…';m.className='gb-msg';var d=f.date.value.split('-').reverse().join('/');
+fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({access_key:${JSON.stringify(CFG.web3formsKey || '')},subject:'Đặt phòng karaoke: '+${JSON.stringify(k.name)}+' · '+f.time.value+' '+d+' · '+f.n.value+' người · '+ph,from_name:'TopChill karaoke','Quán':${JSON.stringify(k.name + ' – ' + k.addr + ', ' + k.area)},'Ngày':d,'Giờ':f.time.value,'Số người':f.n.value,'Loại phòng':f.room.value,'SĐT':ph})}).then(function(r){return r.json()}).then(function(j){if(j.success===false)throw 0;m.innerHTML='✅ Đã gửi! Tổng đài sẽ gọi lại xác nhận phòng trong vài phút.';m.className='gb-msg ok';try{window.tcConv&&tcConv('form');gtag('event','generate_lead',{method:'karaoke'})}catch(e){}})
+.catch(function(){m.innerHTML='Chưa gửi được. Gọi <a href="tel:${TELN}">${esc(CFG.hotline)}</a> để giữ phòng.';m.className='gb-msg bad'})}})();</script>`;
+  write(k.path + 'index.html', page({ title: clip(`${k.name} – karaoke ${k.area}, Hà Nội: giá phòng, đặt phòng`, 65), desc: clip(`${k.name} ở ${k.addr}, ${k.area}, Hà Nội. ${k.segment}, ${ktvPrice(k)}. Xem giờ mở cửa và đặt phòng karaoke không cần cọc qua TopChill.`, 160), pathRel: k.path, ld, active: 'karaoke-ha-noi/' }, body, { mcta: mctaBar('Đặt phòng', '#dat-phong', 'Gọi giữ phòng'), promo: false }));
+}
 function eventsPage() {
   const crumbs = [['Trang chủ', ''], ['Sự kiện & lịch DJ', 'su-kien/']];
   const byCity = CITIES.map(c => ({ c, evs: EVENTS.filter(e => e.bar.city === c.id) })).filter(x => x.evs.length);
@@ -672,6 +758,7 @@ function cityPage(c) {
   <section class="phero">${img(cityImgs(c), 1400, `Bar ${c.name} về đêm`, { eager: true })}
     <div class="phero-in">
       <span class="eyebrow">${fmt(c.n)} bar · cập nhật ${fmtDate(TODAY)}</span>
+      ${c.id === 'hn' && KTV.length ? `<div class="kv-switch"><a class="on bar" href="${href(c.path)}" aria-current="page">🍸 Đi Bar</a><a href="${href('karaoke-ha-noi/')}">🎤 Hát Karaoke</a></div>` : ''}
       <h1>Bar ${esc(c.name)}</h1>
       <p class="lead">${esc(S.intro || `Tổng hợp bar, lounge, club ở ${c.name} được khách đặt nhiều nhất trên TopChill.`)}</p>
       <div class="hero-cta"><a class="btn btn-gold btn-lg" href="${href('kham-pha/')}?tp=${c.id}">Đặt Bàn Ngay</a></div>
@@ -1099,6 +1186,7 @@ for (const L of Object.values(LAND)) { landingPage(L); pages.push({ path: L.path
 for (const A of AREAS) { areaPage(A); pages.push({ path: A.path, priority: '0.8' }); }
 { const ni = eventsPage(); pages.push({ path: 'su-kien/', priority: '0.7', noindex: ni }); }
 ghepPage(); pages.push({ path: 'ghep-ban/', priority: '0.7' });
+if (KTV.length) { ktvListPage(); pages.push({ path: 'karaoke-ha-noi/', priority: '0.8' }); for (const k of KTV) { ktvPage(k); pages.push({ path: k.path, priority: '0.6' }); } }
 for (const b of BARS) { barPage(b); pages.push({ path: b.path, priority: '0.7' }); }
 blogIndex(); pages.push({ path: 'blog/', priority: '0.8' });
 POSTS.forEach((p, i) => { postPage(p, i); pages.push({ path: p.path, lastmod: p.updated, priority: '0.8' }); });

@@ -9979,5 +9979,387 @@
     "https://nightclub.com.vn/weeknd-sgn"
    ]
   }
+ ],
+ "ktv": [
+  {
+   "id": 1,
+   "name": "Karaoke Top One KTV - Ngọc Khánh",
+   "slug": "karaoke-top-one-ktv-ngoc-khanh",
+   "city": "hn",
+   "area": "Ba Đình",
+   "addr": "168 Ngọc Khánh",
+   "segment": "VIP",
+   "hours": "",
+   "price": [],
+   "features": [
+    "Không gian dát vàng phong cách hoàng gia, nội thất kiểu châu Âu",
+    "Thực đơn từ đồ ăn nhẹ đến món Á – Âu",
+    "Phù hợp tổ chức tiệc"
+   ],
+   "desc": "Top One KTV là quán karaoke cao cấp tại 168 Ngọc Khánh, phường Giảng Võ, quận Ba Đình. Không gian được thiết kế theo phong cách hoàng gia dát vàng, kết hợp nội thất châu Âu. Quán phục vụ thực đơn đa dạng từ đồ ăn nhẹ đến các món Á – Âu và phù hợp tổ chức tiệc.",
+   "sources": [
+    "https://www.foody.vn/ha-noi/karaoke-phu-hop-dai-tiec",
+    "https://mytour.vn/en/blog/bai-viet/discover-the-top-7-vip-karaoke-venues-in-hanoi.html",
+    "https://mia.vn/cam-nang-du-lich/quan-karaoke-ha-noi-19146",
+    "https://blog.raynatours.com/?p=49605"
+   ],
+   "images": [],
+   "pin": null,
+   "hidden": false
+  },
+  {
+   "id": 2,
+   "name": "Pattaya Karaoke Lounge",
+   "slug": "pattaya-karaoke-lounge",
+   "city": "hn",
+   "area": "Thanh Xuân",
+   "addr": "192 Nguyễn Tuân",
+   "segment": "VIP",
+   "hours": "",
+   "price": [],
+   "features": [
+    "Karaoke lounge cao cấp",
+    "Hoạt động cả ngày, đông khách nhất sau 22h",
+    "Thường kèm đĩa trái cây, hạt miễn phí"
+   ],
+   "desc": "Pattaya Karaoke Lounge nằm tại 192 Nguyễn Tuân, phường Nhân Chính, quận Thanh Xuân. Quán được các cẩm nang du lịch xếp vào nhóm karaoke VIP của Hà Nội, hoạt động cả ngày và thường đông khách nhất sau 22 giờ. Khách thường được phục vụ kèm trái cây và các loại hạt.",
+   "sources": [
+    "https://mytour.vn/en/blog/bai-viet/discover-the-top-7-vip-karaoke-venues-in-hanoi.html",
+    "https://mia.vn/cam-nang-du-lich/quan-karaoke-ha-noi-19146"
+   ],
+   "images": [],
+   "pin": null,
+   "hidden": false
+  },
+  {
+   "id": 3,
+   "name": "Karaoke Kenz Club",
+   "slug": "karaoke-kenz-club",
+   "city": "hn",
+   "area": "Cầu Giấy",
+   "addr": "202 Trung Kính",
+   "segment": "VIP",
+   "hours": "",
+   "price": [],
+   "features": [
+    "Khoảng 20 phòng VIP, sức chứa đến 80 người/phòng (GreenSM)",
+    "Phòng VIP trên 50 người (Foody)",
+    "Phòng phong cách cổ điển với đèn chùm, sofa da và phòng phong cách hiện đại",
+    "Mở cả ngày; giá liên hệ báo giá"
+   ],
+   "desc": "Kenz Club (còn gọi Karaoke 202 Trung Kính) nằm tại 202 Trung Kính, phường Yên Hòa, quận Cầu Giấy. Quán có hệ thống phòng VIP lớn, với hai phong cách cổ điển (đèn chùm, sofa da) và hiện đại, phù hợp nhóm đông người. Giá phòng không công bố, cần liên hệ để được báo giá.",
+   "sources": [
+    "https://www.greensm.com/vn-vi/news/quan-karaoke-trung-kinh-cau-giay",
+    "https://www.foody.vn/ha-noi/entertain/karaoke"
+   ],
+   "images": [],
+   "pin": null,
+   "hidden": false
+  },
+  {
+   "id": 4,
+   "name": "Karaoke Hoàng Gia (Karaoke Royal)",
+   "slug": "karaoke-hoang-gia-karaoke-royal",
+   "city": "hn",
+   "area": "Cầu Giấy",
+   "addr": "31 Nguyễn Khang",
+   "segment": "VIP",
+   "hours": "",
+   "price": [],
+   "features": [
+    "15 phòng hát sang trọng phong cách minibar",
+    "Sức chứa đến 50 người",
+    "Loa, micro cao cấp, hệ thống đèn LED đa dạng"
+   ],
+   "desc": "Karaoke Hoàng Gia (Karaoke Royal) nằm tại 31 Nguyễn Khang, phường Trung Hòa, quận Cầu Giấy. Quán có 15 phòng hát sang trọng theo phong cách minibar, sức chứa đến 50 người. Mỗi phòng được trang bị loa, micro cao cấp và hệ thống đèn LED.",
+   "sources": [
+    "https://www.greensm.com/vn-vi/news/quan-karaoke-cau-giay",
+    "https://www.greensm.com/vn-vi/news/quan-karaoke-trung-hoa-cau-giay"
+   ],
+   "images": [],
+   "pin": null,
+   "hidden": false
+  },
+  {
+   "id": 5,
+   "name": "Karaoke Star World",
+   "slug": "karaoke-star-world",
+   "city": "hn",
+   "area": "Ba Đình",
+   "addr": "107 Đào Tấn",
+   "segment": "VIP",
+   "hours": "",
+   "price": [],
+   "features": [
+    "Hạng phòng từ VIP đến Deluxe",
+    "Không gian rộng, nội thất tương đối cao cấp"
+   ],
+   "desc": "Karaoke Star World tọa lạc tại 107 Đào Tấn, quận Ba Đình. Quán được giới thiệu là một trong những địa chỉ karaoke cao cấp, với các hạng phòng từ VIP đến Deluxe. Không gian rộng rãi, nội thất tương đối sang trọng.",
+   "sources": [
+    "https://mia.vn/cam-nang-du-lich/quan-karaoke-ha-noi-19146",
+    "https://www.foody.vn/ha-noi/karaoke-co-tra-bang-the"
+   ],
+   "images": [],
+   "pin": null,
+   "hidden": false
+  },
+  {
+   "id": 6,
+   "name": "Golden Crown Karaoke",
+   "slug": "golden-crown-karaoke",
+   "city": "hn",
+   "area": "Đống Đa",
+   "addr": "299 Xã Đàn",
+   "segment": "VIP",
+   "hours": "",
+   "price": [],
+   "features": [
+    "16 phòng nhiều kích cỡ",
+    "Tông màu vàng ấm, mỗi phòng một phong cách",
+    "Nhiều phòng có sân khấu ở giữa"
+   ],
+   "desc": "Golden Crown Karaoke nằm tại 299 Xã Đàn, quận Đống Đa. Quán có 16 phòng với nhiều kích cỡ, thiết kế tông vàng ấm và mỗi phòng mang một phong cách riêng. Nhiều phòng có sân khấu ở giữa, phù hợp cả nhóm nhỏ lẫn nhóm đông.",
+   "sources": [
+    "https://mytour.vn/en/blog/bai-viet/discover-the-top-7-vip-karaoke-venues-in-hanoi.html"
+   ],
+   "images": [],
+   "pin": null,
+   "hidden": false
+  },
+  {
+   "id": 7,
+   "name": "Sunny Royal Karaoke - Xã Đàn",
+   "slug": "sunny-royal-karaoke-xa-dan",
+   "city": "hn",
+   "area": "Đống Đa",
+   "addr": "215 Xã Đàn",
+   "segment": "VIP",
+   "hours": "10:00 – 23:30",
+   "price": [],
+   "features": [
+    "Hai cơ sở trên phố Xã Đàn (cơ sở I lớn hơn)",
+    "Sức chứa khoảng 250 khách (Foody)",
+    "Có combo 2 giờ hát kèm trái cây, đồ ăn vặt"
+   ],
+   "desc": "Sunny Royal là hệ thống karaoke có hai cơ sở trên phố Xã Đàn, quận Đống Đa, trong đó cơ sở I mở trước và có quy mô lớn hơn. Quán được Mytour xếp vào nhóm karaoke VIP ở Hà Nội. Khách đánh giá phòng đẹp, âm thanh tốt, giá nhỉnh hơn mặt bằng chung.",
+   "sources": [
+    "https://www.foody.vn/ha-noi/sunny-royal-karaoke-xa-dan",
+    "https://www.foody.vn/ha-noi/sunny-royal-karaoke-ii-xa-dan",
+    "https://mytour.vn/en/blog/bai-viet/discover-the-top-7-vip-karaoke-venues-in-hanoi.html"
+   ],
+   "images": [],
+   "pin": null,
+   "hidden": false
+  },
+  {
+   "id": 8,
+   "name": "Karaoke Vương Miện",
+   "slug": "karaoke-vuong-mien",
+   "city": "hn",
+   "area": "Cầu Giấy",
+   "addr": "118 Hồ Tùng Mậu",
+   "segment": "VIP",
+   "hours": "Mở 24/7",
+   "price": [
+    350,
+    600
+   ],
+   "features": [
+    "Mở 24/7",
+    "Phòng có nhà vệ sinh riêng",
+    "Wifi"
+   ],
+   "desc": "Karaoke Vương Miện nằm tại 118 Hồ Tùng Mậu, quận Cầu Giấy và mở cửa 24/7. Mỗi phòng có nhà vệ sinh riêng và wifi. Giá tham khảo khoảng 350.000–600.000 đồng/giờ (số liệu tháng 1/2025).",
+   "sources": [
+    "https://www.greensm.com/vn-vi/news/quan-karaoke-cau-giay"
+   ],
+   "images": [],
+   "pin": null,
+   "hidden": false
+  },
+  {
+   "id": 9,
+   "name": "Karaoke Las Vegas",
+   "slug": "karaoke-las-vegas",
+   "city": "hn",
+   "area": "Cầu Giấy",
+   "addr": "1 Nguyễn Khánh Toàn",
+   "segment": "Tầm trung",
+   "hours": "Mở 24/7",
+   "price": [
+    100,
+    300
+   ],
+   "features": [
+    "Mở 24/7",
+    "16 phòng hát rộng, sạch sẽ",
+    "Sức chứa đến 50 người"
+   ],
+   "desc": "Karaoke Las Vegas nằm tại số 1 Nguyễn Khánh Toàn, phường Quan Hoa, quận Cầu Giấy và mở cửa 24/24. Quán có 16 phòng hát rộng rãi, sức chứa đến 50 người, kèm menu đồ uống và đồ ăn vặt. Giá tham khảo khoảng 100.000–300.000 đồng/giờ.",
+   "sources": [
+    "https://mytour.vn/en/blog/bai-viet/compilation-of-affordable-24-7-karaoke-spots-in-hanoi.html",
+    "https://www.greensm.com/vn-vi/news/quan-karaoke-cau-giay"
+   ],
+   "images": [],
+   "pin": null,
+   "hidden": false
+  },
+  {
+   "id": 10,
+   "name": "Karaoke KTV Trung Kính",
+   "slug": "karaoke-ktv-trung-kinh",
+   "city": "hn",
+   "area": "Cầu Giấy",
+   "addr": "190 Trung Kính",
+   "segment": "Tầm trung",
+   "hours": "11:00 – 02:00",
+   "price": [],
+   "features": [
+    "Mở đến 2 giờ sáng",
+    "Giá liên hệ hotline"
+   ],
+   "desc": "Karaoke KTV Trung Kính nằm tại 190 Trung Kính, phường Yên Hòa, quận Cầu Giấy. Quán mở cửa từ 11:00 đến 02:00. Giá phòng không công bố, khách cần gọi hotline để được báo giá.",
+   "sources": [
+    "https://www.greensm.com/vn-vi/news/quan-karaoke-trung-kinh-cau-giay"
+   ],
+   "images": [],
+   "pin": null,
+   "hidden": false
+  },
+  {
+   "id": 11,
+   "name": "Karaoke Magic",
+   "slug": "karaoke-magic",
+   "city": "hn",
+   "area": "Đống Đa",
+   "addr": "65 Thái Thịnh",
+   "segment": "Tầm trung",
+   "hours": "",
+   "price": [],
+   "features": [
+    "Đặt phòng qua điện thoại, fanpage, Zalo"
+   ],
+   "desc": "Karaoke Magic nằm tại 65 Thái Thịnh, quận Đống Đa. Quán có nhiều hạng phòng từ khoảng 10 đến 40 người. Theo GreenSM, giá tính từ 50.000 đồng/giờ/người và khách có thể đặt phòng qua điện thoại, fanpage hoặc Zalo.",
+   "sources": [
+    "https://www.greensm.com/vn-vi/news/karaoke-magic"
+   ],
+   "images": [],
+   "pin": null,
+   "hidden": false
+  },
+  {
+   "id": 12,
+   "name": "Karaoke Monaco Mỹ Đình",
+   "slug": "karaoke-monaco-my-dinh",
+   "city": "hn",
+   "area": "Nam Từ Liêm",
+   "addr": "235 Lê Đức Thọ",
+   "segment": "Tầm trung",
+   "hours": "",
+   "price": [],
+   "features": [],
+   "desc": "Karaoke Monaco nằm tại 235 Lê Đức Thọ, phường Mỹ Đình, quận Nam Từ Liêm. Đây là địa điểm karaoke ở khu vực Mỹ Đình, có trang giới thiệu riêng của quán.",
+   "sources": [
+    "https://sites.google.com/view/karaoke-monaco-my-dinh/home/",
+    "https://karaokemonaco.blogspot.com/2025/06/discover-best-karaoke-my-inh-spots-for.html"
+   ],
+   "images": [],
+   "pin": null,
+   "hidden": false
+  },
+  {
+   "id": 13,
+   "name": "Karaoke Point 33 Nguyễn Khang",
+   "slug": "karaoke-point-33-nguyen-khang",
+   "city": "hn",
+   "area": "Cầu Giấy",
+   "addr": "33 Nguyễn Khang",
+   "segment": "Bình dân",
+   "hours": "10:00 – 04:00",
+   "price": [
+    100,
+    200
+   ],
+   "features": [
+    "Sức chứa đến 40 người/phòng",
+    "Mở đến 4 giờ sáng"
+   ],
+   "desc": "Karaoke Point 33 nằm tại 33 Nguyễn Khang, phường Trung Hòa, quận Cầu Giấy, mở cửa từ 10:00 đến 04:00. Phòng có sức chứa đến 40 người. Giá tham khảo khoảng 100.000–200.000 đồng/giờ, phù hợp nhóm bạn và sinh viên.",
+   "sources": [
+    "https://www.greensm.com/vn-vi/news/quan-karaoke-trung-hoa-cau-giay",
+    "https://www.greensm.com/vn-vi/news/quan-karaoke-cau-giay"
+   ],
+   "images": [],
+   "pin": null,
+   "hidden": false
+  },
+  {
+   "id": 14,
+   "name": "Karaoke Babylon",
+   "slug": "karaoke-babylon",
+   "city": "hn",
+   "area": "Cầu Giấy",
+   "addr": "114 Trung Hòa",
+   "segment": "Bình dân",
+   "hours": "11:00 – 02:00",
+   "price": [
+    100,
+    200
+   ],
+   "features": [
+    "Mở đến 2 giờ sáng"
+   ],
+   "desc": "Karaoke Babylon nằm tại 114 Trung Hòa, phường Trung Hòa, quận Cầu Giấy. Quán mở cửa từ 11:00 đến 02:00. Giá tham khảo khoảng 100.000–200.000 đồng/giờ.",
+   "sources": [
+    "https://www.greensm.com/vn-vi/news/quan-karaoke-trung-hoa-cau-giay"
+   ],
+   "images": [],
+   "pin": null,
+   "hidden": false
+  },
+  {
+   "id": 15,
+   "name": "iSing Karaoke - Trần Duy Hưng",
+   "slug": "ising-karaoke-tran-duy-hung",
+   "city": "hn",
+   "area": "Cầu Giấy",
+   "addr": "116 Trần Duy Hưng",
+   "segment": "Bình dân",
+   "hours": "09:00 – 23:30",
+   "price": [
+    50,
+    330
+   ],
+   "features": [],
+   "desc": "iSing Karaoke nằm tại 116 Trần Duy Hưng, phường Trung Hòa, quận Cầu Giấy. Quán mở cửa từ 09:00 đến 23:30. Giá phòng dao động khoảng 50.000–330.000 đồng/giờ.",
+   "sources": [
+    "https://www.foody.vn/ha-noi/ising-karaoke",
+    "https://www.greensm.com/vn-vi/news/quan-karaoke-tran-duy-hung-cau-giay"
+   ],
+   "images": [],
+   "pin": null,
+   "hidden": false
+  },
+  {
+   "id": 16,
+   "name": "Karaoke Nàng Tiên Cá",
+   "slug": "karaoke-nang-tien-ca",
+   "city": "hn",
+   "area": "Cầu Giấy",
+   "addr": "41 Trung Hòa",
+   "segment": "Bình dân",
+   "hours": "",
+   "price": [],
+   "features": [
+    "Điểm hẹn quen thuộc của giới trẻ khu Trung Hòa"
+   ],
+   "desc": "Karaoke Nàng Tiên Cá nằm tại 41 Trung Hòa, phường Trung Hòa, quận Cầu Giấy. Quán là điểm hẹn quen thuộc của giới trẻ trên phố Trung Hòa.",
+   "sources": [
+    "https://www.greensm.com/vn-vi/news/quan-karaoke-trung-hoa-cau-giay"
+   ],
+   "images": [],
+   "pin": null,
+   "hidden": false
+  }
  ]
 }

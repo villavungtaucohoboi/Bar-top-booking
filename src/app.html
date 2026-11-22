@@ -1073,6 +1073,26 @@ html,body{overflow-x:hidden}@supports (overflow:clip){html,body{overflow-x:clip}
 }
 @media (max-width:560px){.hdr-r .gb-pill{display:none}}
 @media (max-width:380px){.bnav a{font-size:10px;padding:6px 0}.mob-cta .btn{font-size:14.5px;padding-inline:10px;white-space:nowrap}}
+
+/* ===== KARAOKE (tông tím – xanh, tách biệt bar) ===== */
+.kv-switch{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:5px;margin:14px 0 4px;border-radius:18px;background:rgba(10,6,16,.55);border:1px solid rgba(255,255,255,.14);max-width:560px}
+.kv-switch a{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:14px;font-weight:900;font-size:16px;color:#e9dcff;text-decoration:none}
+.kv-switch a.on{background:linear-gradient(135deg,#ff6fb5,#ff3f8e);color:#fff;box-shadow:0 0 14px rgba(255,63,142,.45)}
+.kv-switch a:not(.on){background:linear-gradient(135deg,rgba(124,92,255,.35),rgba(34,211,238,.25));border:1px solid rgba(124,92,255,.6)}
+.kvs{padding:22px 0 8px;background:linear-gradient(180deg,rgba(76,29,149,.35),rgba(8,47,73,.25));border-top:1px solid rgba(124,92,255,.45);border-bottom:1px solid rgba(34,211,238,.3)}
+.kvs[hidden]{display:none}
+.kvs-head{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-bottom:10px}
+.kvs-eb{font-size:12px;font-weight:800;color:#67e8f9;letter-spacing:.6px;text-transform:uppercase}
+.kvs-head h2{margin:2px 0 0;font-size:clamp(24px,6vw,32px);background:linear-gradient(90deg,#c4b5fd,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kvs-all{color:#67e8f9;font-weight:800;text-decoration:none;white-space:nowrap}
+.kvs-row{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;scrollbar-width:none}.kvs-row::-webkit-scrollbar{display:none}
+.kvs-card{flex:0 0 min(66vw,240px);scroll-snap-align:start;display:flex;flex-direction:column;border-radius:16px;overflow:hidden;background:#140d26;border:1px solid rgba(124,92,255,.5);color:#fff;text-decoration:none}
+.kvs-ph{position:relative;aspect-ratio:16/10;display:grid;place-items:center;background:radial-gradient(circle at 30% 30%,rgba(34,211,238,.45),transparent 55%),linear-gradient(135deg,#4c1d95,#0e7490)}
+.kvs-ph b{font-size:44px}.kvs-ph img{width:100%;height:100%;object-fit:cover}
+.kvs-ph i{position:absolute;left:8px;top:8px;font-style:normal;padding:2px 9px;border-radius:99px;background:rgba(0,0,0,.6);color:#fde68a;font-size:12px;font-weight:800}
+.kvs-b{display:flex;flex-direction:column;gap:3px;padding:10px 12px 12px}.kvs-b b{font-size:15px;line-height:1.25}.kvs-b small{color:#c7d2fe;font-size:12.5px}
+.kvs-card.more{align-items:center;justify-content:center;gap:8px;padding:20px;text-align:center;font-weight:800;color:#67e8f9}.kvs-card.more b{font-size:40px}
+.bnav a.bn-kv{color:#a5f3fc;font-weight:800}
 </style>
 
 <header class="hdr"><div class="wrap hdr-in">
@@ -1082,6 +1102,7 @@ html,body{overflow-x:hidden}@supports (overflow:clip){html,body{overflow-x:clip}
     <a href="/kham-pha/" data-v="bars">Khám phá bar</a>
     <a href="/thanh-vien/" data-v="member">Thành viên</a>
     <a href="/hoi-nhom/" data-v="community">Hội nhóm</a>
+    <a href="/karaoke-ha-noi/">🎤 Karaoke</a>
     <a href="/chu-bar/" data-v="partner">Chủ bar</a>
     <a href="/blog/">Cẩm nang</a>
   </nav>
@@ -1118,6 +1139,7 @@ html,body{overflow-x:hidden}@supports (overflow:clip){html,body{overflow-x:clip}
           <div class="field"><label for="sGuests">Số người</label><select id="sGuests"><option>2 người</option><option selected>4 người</option><option>6 người</option><option>8 người</option><option>10+ người</option></select></div>
           <button class="btn btn-gold" type="submit">Đặt Bàn Ngay</button>
         </form>
+        <div class="kv-switch home"><a class="on" href="/kham-pha/">🍸 Đi Bar</a><a href="/karaoke-ha-noi/">🎤 Hát Karaoke</a></div>
         <a class="gb-hero" href="/ghep-ban/"><span class="gbh-ic" aria-hidden="true">👥</span><span class="gbh-t"><b>GHÉP BÀN NGAY</b><small>Nam tìm nữ · nữ tìm nam · miễn phí</small></span><span class="gbh-go" aria-hidden="true">→</span></a>
         <div class="m-quick">
           <div class="mq-label">Chạm vào thành phố để xem bar</div>
@@ -1148,6 +1170,11 @@ html,body{overflow-x:hidden}@supports (overflow:clip){html,body{overflow-x:clip}
     <div class="fs-tabs" id="fsTabs"></div>
     <div class="fs-row" id="fsRow"></div>
     <p class="fs-note">Mức giảm tuỳ bar, tổng đài báo cụ thể khi bạn gọi. Không cần cọc, hỗ trợ 24/7.</p>
+  </div></section>
+
+  <section class="kvs" id="kvStrip" hidden><div class="wrap">
+    <div class="kvs-head"><div><span class="kvs-eb">🎤 Mới · Hệ sinh thái TopChill</span><h2>Karaoke Hà Nội</h2></div><a class="kvs-all" href="/karaoke-ha-noi/">Xem tất cả →</a></div>
+    <div class="kvs-row" id="kvRow"></div>
   </div></section>
 
   <section class="block" id="rankSec"><div class="wrap">
@@ -1341,7 +1368,7 @@ html,body{overflow-x:hidden}@supports (overflow:clip){html,body{overflow-x:clip}
 <nav class="bnav" id="bnav">
   <a href="/" data-v="home"><i>⌂</i>Trang chủ</a>
   <a href="/kham-pha/" data-v="bars"><i>◎</i>Khám phá</a>
-  <a href="/hoi-nhom/" data-v="community"><i>✎</i>Hội nhóm</a>
+  <a href="/karaoke-ha-noi/" class="bn-kv"><i>🎤</i>Karaoke</a>
   <a href="/ghep-ban/" class="bn-gb"><i>👥</i>Ghép bàn</a>
   <a href="/thanh-vien/" data-v="member"><i>★</i>Hạng</a>
   <a href="/chu-bar/" data-v="partner"><i>▲</i>Chủ bar</a>
@@ -1397,6 +1424,7 @@ const CITIES=[
  {id:'ql',name:'Hạ Long',n:27},{id:'ct',name:'Cần Thơ',n:22},{id:'hue',name:'Huế',n:19},{id:'bd',name:'Bình Dương',n:16}];
 const cityName=id=>CITIES.find(c=>c.id===id)?.name||'';
 
+const KTV=[];
 const BARS=[
  {id:1,name:'Mộc Sky Bar',city:'hn',area:'Tây Hồ',type:'Rooftop',rating:4.8,reviews:1240,price:[350,700],deal:20,bonus:'Tặng 1 chai Chivas 18 cho bàn VIP từ 5 triệu',boost:'top',hue:42,music:'Deep house · R&B',dress:'Smart casual',hours:'18:00 – 02:00',addr:'Tầng 26, phố Trích Sài',desc:'View toàn cảnh Hồ Tây 360°, DJ quốc tế cuối tuần. Bar rooftop được đặt nhiều nhất Hà Nội 3 tháng liên tiếp.',gpct:15},
  {id:2,name:'Ngõ Nhỏ Cocktail',city:'hn',area:'Hoàn Kiếm',type:'Cocktail bar',rating:4.7,reviews:860,price:[180,350],deal:15,bonus:'Free 2 cocktail signature cho nhóm từ 4 người',boost:'hot',hue:300,music:'Jazz-hop · Soul',dress:'Tự do',hours:'17:00 – 01:00',addr:'Ngõ Hàng Bạc',desc:'Bar giấu mình trong ngõ phố cổ, 12 ghế quầy, bartender từng thi World Class. Hợp hẹn hò và nhóm nhỏ.',gpct:10},
@@ -1541,6 +1569,10 @@ function fsTick(){const g='__PROMO_GOLDEN__'.match(/(\d{1,2}):\d{2}\D+(\d{1,2}):
   document.querySelectorAll('[data-fscd]').forEach(el=>{el.querySelector('[data-fslbl]').innerHTML=(live?'<span class="fs-live">ĐANG DIỄN RA</span> ':'')+l;el.querySelector('[data-fsclk]').innerHTML=`<i>${p(Math.floor(s/3600))}</i><i>${p(Math.floor(s%3600/60))}</i><i>${p(s%60)}</i>`})}
 fsTick();setInterval(fsTick,1000);
 
+
+/* ---------- KARAOKE: dải quán trên trang chủ ---------- */
+function renderKtv(){const box=document.getElementById('kvRow');if(!box||!KTV.length)return;document.getElementById('kvStrip').hidden=false;
+  box.innerHTML=KTV.slice(0,6).map(k=>`<a class="kvs-card" href="/karaoke/${k.s}/"><span class="kvs-ph">${k.i?`<img src="${escH(k.i)}" alt="${escH(k.n)}" loading="lazy">`:'<b>🎤</b>'}<i>${escH(k.g)}</i></span><span class="kvs-b"><b>${escH(k.n)}</b><small>📍 ${escH(k.ad)}, ${escH(k.a)}</small><small>💰 ${k.p.length===2?k.p[0]+'k–'+k.p[1]+'k/giờ':'Gọi để báo giá'}</small></span></a>`).join('')+`<a class="kvs-card more" href="/karaoke-ha-noi/"><b>🎤</b><span>Xem ${KTV.length>=8?'thêm':'tất cả'} quán karaoke →</span></a>`}
 /* ---------- TRANG CHỦ: XẾP HẠNG, QUYỀN LỢI, THÀNH PHỐ ---------- */
 let RK=null;
 function renderRank(){
@@ -1657,7 +1689,7 @@ function initHome(){
   document.getElementById('regCity').innerHTML=sc.innerHTML;
   const d=new Date();document.getElementById('sDate').value=d.toISOString().slice(0,10);
   document.getElementById('searchForm').onsubmit=e=>{e.preventDefault();setCity(sc.value)};
-  renderRank();renderFlash();renderPerks();renderCityTiles();
+  renderRank();renderFlash();renderKtv();renderPerks();renderCityTiles();
   const mq=document.getElementById('mqCities');
   mq.innerHTML=['hn','sg','dn','nt','pq','vt'].map(id=>{const c=CITIES.find(x=>x.id===id);return `<button type="button" data-c="${id}"><b>${c.name}</b><small>${c.n} bar</small></button>`}).join('');
   mq.onclick=e=>{const b=e.target.closest('button');if(b)setCity(b.dataset.c)};
