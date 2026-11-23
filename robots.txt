@@ -4,5 +4,7 @@ Disallow: /viet-bai/
 Disallow: /quan-ly/
 Disallow: /src/
 Disallow: /content/
+Disallow: /*?dat=
+Disallow: /*?tp=
 
 Sitemap: https://topchill.vn/sitemap.xml
