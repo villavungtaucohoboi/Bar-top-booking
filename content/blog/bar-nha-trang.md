@@ -1,6 +1,6 @@
 ---
 title: "Bar Nha Trang: 12 quán rooftop, beach club, phố Tây nên đi"
-description: "Bar Nha Trang nào đáng đi? 12 quán rooftop ngắm vịnh, beach club đường Trần Phú, club và cocktail bar phố Tây kèm địa chỉ, mức chi tham khảo và cách đặt bàn không cần cọc."
+description: "Bar Nha Trang nào đáng đi? 12 rooftop ngắm vịnh, beach club Trần Phú, club, cocktail bar phố Tây kèm địa chỉ, mức chi tham khảo, đặt bàn không cần cọc."
 keyword: "bar nha trang"
 date: 2026-11-07
 updated: 2026-11-07
