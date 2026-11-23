@@ -20,7 +20,7 @@
   function fmtPh(p) { p = String(p || ''); return p.replace(/^(\d{4})(\d{3})(\d+)$/, '$1 $2 $3'); }
   var BAD = /(\d[\s.\-]?){8,}|https?:|zalo|facebook|fb\.|t\.me|@/i;
   var own = ld('tc-own2', {}), mine = ld('tc-join2', {}), AK = ADMIN ? ld('tc-admin', null) : null;
-  var posts = {}, joins = {}, decs = {}, msgs = {}, hides = {}, cur = '';
+  var posts = {}, joins = {}, decs = {}, msgs = {}, hides = {}, closes = {}, cur = '', seenJ = ld('tc-seenj', {}), firstPull = true;
   var okv = {}, jph = {}, myBox = {}, adm = {}, tkey = {}, plain = {}, hidden = {}, busy = {};
 
   /* ---------- mã hoá ---------- */
@@ -56,6 +56,7 @@
     } else if (t === 'dec') { k = o.code + '|' + o.jid; if (o.code && o.jid && typeof o.sig === 'string' && !decs[k]) decs[k] = o; }
     else if (t === 'msg') { if (o.code && o.mid && o.box && !(msgs[o.code] = msgs[o.code] || []).some(function (x) { return x.mid === o.mid; })) msgs[o.code].push(o); }
     else if (t === 'hide') { if (o.code && o.sig) hides[o.code] = o; }
+    else if (t === 'close') { if (o.code && o.sig) closes[o.code] = o; }
   }
   (C.static || []).forEach(ingest);
 
@@ -64,6 +65,7 @@
     if (!SUB) return Promise.resolve();
     var jobs = [];
     Object.keys(hides).forEach(function (code) { if (hidden[code] === undefined && AP) jobs.push(verify(AP.s, 'hide|' + code, hides[code].sig).then(function (v) { hidden[code] = v; }).catch(function () { hidden[code] = false; })); });
+    Object.keys(closes).forEach(function (code) { var p = posts[code]; if (hidden[code] || !p || !p.pk) return; jobs.push(verify(p.pk, 'close|' + code, closes[code].sig).then(function (v) { if (v) hidden[code] = true; }).catch(function () {})); });
     Object.keys(decs).forEach(function (k) {
       if (k in okv) return; var d = decs[k], p = posts[d.code]; if (!p) return;
       var pk = d.by === 'a' ? (AP && AP.s) : p.pk; if (!pk) return;
@@ -117,11 +119,12 @@
     h += '<h3><span class="gb-have">Bàn ' + E(W(p.haveNam, p.haveNu)) + '</span> ' + (s.full ? '<span class="gb-okt">✅ ĐÃ ĐỦ NGƯỜI</span>' : '<span class="gb-need">đang thiếu ' + E(W(s.ln, s.lu)) + '</span>') + '</h3>';
     h += '<div class="gb-prog"><i style="width:' + pct + '%"></i></div>';
     h += '<p class="gb-where">📍 ' + where(p) + '</p>' + (p.age ? '<p class="gb-meta">Độ tuổi: ' + E(p.age) + '</p>' : '') + (p.note ? '<p class="gb-note">“' + E(p.note) + '”</p>' : '');
-    if (isAdm) h += '<div class="gb-adm">🛡️ Chủ bàn: ' + (adm[code] && adm[code].phone ? telA(adm[code].phone) : '<i>không đọc được</i>') + ' <button type="button" class="gb-no" data-hide="1">Ẩn tin</button></div>';
+    if (isAdm) h += '<div class="gb-adm">🛡️ Chủ bàn: ' + (adm[code] && adm[code].phone ? telA(adm[code].phone) : '<i>không đọc được</i>') + ' <button type="button" class="gb-no" data-hide="1">🗑️ Ẩn / xoá bàn</button></div>';
     if (isOwn || isAdm) {
       h += '<div class="gb-own"><b>Yêu cầu xin vào bàn</b>';
       if (s.pend.length) h += s.pend.map(function (j) { var ph = jph[code + '|' + j.jid]; return '<div class="gb-req"><span>🙋 ' + E(W(j.nam, j.nu)) + (ph ? '<br>' + telA(ph) : '') + '</span><button type="button" class="gb-yes" data-dec="1" data-jid="' + E(j.jid) + '">Duyệt</button><button type="button" class="gb-no" data-dec="0" data-jid="' + E(j.jid) + '">Từ chối</button></div>'; }).join('');
       else h += '<p class="gb-meta">' + (s.full ? 'Bàn đã đủ người.' : 'Chưa có yêu cầu mới. Trang tự cập nhật.') + '</p>';
+      if (isOwn) h += '<div class="gb-tools"><button type="button" class="gb-bell" data-bell="1">' + (window.Notification && Notification.permission === 'granted' ? '🔔 Đã bật thông báo' : '🔔 Bật thông báo khi có người xin vào') + '</button><a class="gb-ntfy" href="https://ntfy.sh/' + E(NT + '-' + code.toLowerCase()) + '" target="_blank" rel="noopener">📲 Nhận báo qua app ntfy</a><button type="button" class="gb-no" data-close="1">Đóng bàn</button></div>';
       if (s.acc.length) h += '<p class="gb-meta">Đã duyệt:</p>' + s.acc.map(function (j) { var ph = jph[code + '|' + j.jid]; return '<div class="gb-req"><span>✅ ' + E(W(j.nam, j.nu)) + (ph ? ' · ' + telA(ph) : '') + '</span></div>'; }).join('');
       h += '</div>';
     } else if (jid) {
@@ -165,7 +168,16 @@
     return fetch('https://ntfy.sh/' + NT + '/json?poll=1&since=12h').then(function (r) { return r.text(); }).then(function (t) {
       t.split('\n').forEach(function (l) { try { var o = JSON.parse(l); if (o.event === 'message') { var x = JSON.parse(o.message); if (!x.ts) x.ts = o.time * 1000; ingest(x); } } catch (e) {} });
       return process();
-    }).then(function () { render(); }).catch(function () { render(); });
+    }).then(function () { alertOwner(); render(); }).catch(function () { render(); });
+  }
+  function alertOwner() {
+    var fresh = [];
+    Object.keys(own).forEach(function (code) { (joins[code] || []).forEach(function (j) { var k = code + '|' + j.jid; if (!seenJ[k] && !(k in okv)) { seenJ[k] = 1; fresh.push([code, j]); } }); });
+    if (!fresh.length) return; sv('tc-seenj', seenJ); if (firstPull) { firstPull = false; }
+    var txt = fresh.map(function (x) { return 'Nhóm ' + W(x[1].nam, x[1].nu) + ' xin vào bàn ' + x[0]; }).join('\n');
+    try { if (window.Notification && Notification.permission === 'granted') new Notification('🙋 Có người xin vào bàn của bạn', { body: txt, tag: 'gb-join' }); } catch (e) {}
+    try { var A = new (window.AudioContext || window.webkitAudioContext)(), o = A.createOscillator(), g = A.createGain(); o.frequency.value = 880; o.connect(g); g.connect(A.destination); g.gain.setValueAtTime(.2, A.currentTime); g.gain.exponentialRampToValueAtTime(.001, A.currentTime + .6); o.start(); o.stop(A.currentTime + .6); } catch (e) {}
+    var t0 = document.title, n = 0; clearInterval(window.__gbT); window.__gbT = setInterval(function () { document.title = n++ % 2 ? t0 : '🙋 (' + fresh.length + ') Có người xin vào bàn!'; if (n > 20) { clearInterval(window.__gbT); document.title = t0; } }, 1000);
   }
   pull(); setInterval(function () { if (document.visibilityState !== 'hidden') pull(); }, 10000);
   window.GBPull = pull;
@@ -176,6 +188,8 @@
     var cardEl = e.target.closest('.gb-card'); if (!cardEl) return; var code = cardEl.dataset.code;
     var op = e.target.closest('[data-open]'); if (op) { cardEl.querySelector('.gb-jf').hidden = false; op.hidden = true; return; }
     var d = e.target.closest('[data-dec]'); if (d) return decide(code, d.dataset.jid, d.dataset.dec === '1', d);
+    if (e.target.closest('[data-bell]')) { if (window.Notification) Notification.requestPermission().then(function () { render(true); }); else alert('Trình duyệt không hỗ trợ thông báo. Dùng app ntfy bên cạnh.'); return; }
+    if (e.target.closest('[data-close]') && own[code] && confirm('Đóng bàn ' + code + '? Bàn sẽ ẩn khỏi bảng.')) { sign(own[code].s, 'close|' + code).then(function (sig) { return pub({ t: 'close', code: code, sig: sig }); }).then(function () { hidden[code] = true; render(true); }).catch(function () { alert('Chưa đóng được, thử lại.'); }); return; }
     if (e.target.closest('[data-hide]') && AK && confirm('Ẩn tin ' + code + ' khỏi bảng ghép bàn?')) sign(AK.s, 'hide|' + code).then(function (sig) { return pub({ t: 'hide', code: code, sig: sig }); }).then(function () { hidden[code] = true; render(true); }).catch(function () { alert('Chưa ẩn được, thử lại.'); });
   });
   list.addEventListener('submit', function (e) {
@@ -204,6 +218,7 @@
     gen(DH, ['deriveKey']).then(function (kp) {
       return Promise.all([shared(kp[1], p.dh).then(function (k) { return enc(k, { phone: ph }); }), AP ? shared(kp[1], AP.d).then(function (k) { return enc(k, { phone: ph }); }) : null]).then(function (bx) {
         var o = { t: 'join', code: code, jid: jid, nam: nam, nu: nu, dh: pubOf(kp[0]), own: bx[0] }; if (bx[1]) o.adm = bx[1];
+        try { fetch('https://ntfy.sh/' + NT + '-' + code.toLowerCase() + '?title=' + encodeURIComponent('🙋 Có người xin vào bàn ' + code) + '&tags=raising_hand&click=' + encodeURIComponent(location.origin + '/ghep-ban/'), { method: 'POST', body: 'Nhóm ' + W(nam, nu) + ' xin vào bàn ' + code + '. Mở topchill.vn/ghep-ban trên máy đã đăng bàn để duyệt.' }).catch(function () {}); } catch (er) {}
         return pub(o, 'Xin vào bàn ' + code + ': ' + W(nam, nu)).then(function () { mine[jid] = { c: code, d: kp[1] }; sv('tc-join2', mine); R[day] = (R[day] || 0) + 1; sv('tc-jn', R); render(true); try { window.tcConv && tcConv('form'); gtag('event', 'generate_lead', { method: 'ghep_ban_join' }); } catch (er) {} });
       });
     }).catch(function () { bad('Chưa gửi được. Gọi ' + HOT + ' và đọc mã ' + code + '.'); });
