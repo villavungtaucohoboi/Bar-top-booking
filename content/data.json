@@ -10377,7 +10377,13 @@
    ],
    "desc": "Sing KTV cơ sở Thái Thịnh là quán karaoke trên phố Thái Thịnh, quận Đống Đa, Hà Nội, nằm trong hệ thống Sing KTV. Đặt phòng qua tổng đài TopChill để được giữ phòng và báo giá theo khung giờ.",
    "sources": [],
-   "images": [],
+   "images": [
+    "/img/ktv/sing-ktv-thai-thinh/01.webp",
+    "/img/ktv/sing-ktv-thai-thinh/02.webp",
+    "/img/ktv/sing-ktv-thai-thinh/03.webp",
+    "/img/ktv/sing-ktv-thai-thinh/04.webp",
+    "/img/ktv/sing-ktv-thai-thinh/05.webp"
+   ],
    "pin": 1,
    "hidden": false
   },
@@ -10397,7 +10403,13 @@
    ],
    "desc": "Sing KTV cơ sở Tố Hữu là quán karaoke trên trục đường Tố Hữu, khu vực Hà Đông, Hà Nội, thuộc hệ thống Sing KTV. Gọi tổng đài TopChill để giữ phòng và được chỉ đường.",
    "sources": [],
-   "images": [],
+   "images": [
+    "/img/ktv/sing-ktv-to-huu/01.webp",
+    "/img/ktv/sing-ktv-to-huu/02.webp",
+    "/img/ktv/sing-ktv-to-huu/03.webp",
+    "/img/ktv/sing-ktv-to-huu/04.webp",
+    "/img/ktv/sing-ktv-to-huu/05.webp"
+   ],
    "pin": 2,
    "hidden": false
   },
@@ -10417,7 +10429,13 @@
    ],
    "desc": "Karaoke Level là quán karaoke ở quận Hà Đông, Hà Nội. Gọi tổng đài TopChill để được báo giá phòng, giữ phòng và chỉ đường.",
    "sources": [],
-   "images": [],
+   "images": [
+    "/img/ktv/karaoke-level-ha-dong/01.webp",
+    "/img/ktv/karaoke-level-ha-dong/02.webp",
+    "/img/ktv/karaoke-level-ha-dong/03.webp",
+    "/img/ktv/karaoke-level-ha-dong/04.webp",
+    "/img/ktv/karaoke-level-ha-dong/05.webp"
+   ],
    "pin": 3,
    "hidden": false
   },
@@ -10437,7 +10455,14 @@
    ],
    "desc": "Karaoke London là quán karaoke ở phường Phú Lương, quận Hà Đông, Hà Nội. Gọi tổng đài TopChill để được báo giá phòng, giữ phòng và chỉ đường.",
    "sources": [],
-   "images": [],
+   "images": [
+    "/img/ktv/karaoke-london-phu-luong/01.webp",
+    "/img/ktv/karaoke-london-phu-luong/02.webp",
+    "/img/ktv/karaoke-london-phu-luong/03.webp",
+    "/img/ktv/karaoke-london-phu-luong/04.webp",
+    "/img/ktv/karaoke-london-phu-luong/05.webp",
+    "/img/ktv/karaoke-london-phu-luong/06.webp"
+   ],
    "pin": 4,
    "hidden": false
   }

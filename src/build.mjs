@@ -670,7 +670,7 @@ function ktvPage(k) {
   const ld = [breadcrumbLd(crumbs), { '@context': 'https://schema.org', '@type': 'EntertainmentBusiness', name: k.name, url: url(k.path), address: { '@type': 'PostalAddress', streetAddress: k.addr, addressLocality: k.area, addressRegion: 'Hà Nội', addressCountry: 'VN' }, ...(k.price && k.price.length === 2 ? { priceRange: `${k.price[0]}.000–${k.price[1]}.000 VND/giờ` } : {}) }];
   const body = `
 <div class="kv-hero"><div class="wrap">${crumbsHtml(crumbs)}
-  <div class="kv-head"><div class="kv-img big">${ktvPh(k, 1200)}<span class="kv-seg">${esc(k.segment)}</span></div>
+  <div class="kv-head"><div class="kv-img big">${ktvPh(k, 1200)}<span class="kv-seg">${k.segment === 'Đối tác' ? '⭐ TOP ĐỐI TÁC' : esc(k.segment)}</span></div>
   <div><span class="eyebrow">🎤 Karaoke · ${esc(k.area)}, Hà Nội</span><h1>${esc(k.name)}</h1>
   <p class="kv-ad">📍 ${esc(k.addr)}, ${esc(k.area)}, Hà Nội · <a href="${maps}" target="_blank" rel="noopener">Chỉ đường</a></p>
   <p class="kv-meta"><span>💰 ${esc(ktvPrice(k))}</span>${k.hours ? `<span>🕘 ${esc(k.hours)}</span>` : ''}<span>⭐ ${esc(k.segment)}</span></p>
@@ -678,6 +678,7 @@ function ktvPage(k) {
 </div></div>
 <section class="sec"><div class="wrap narrow prose">
   <h2>Giới thiệu ${esc(k.name)}</h2><p>${esc(k.desc)}</p>
+  ${k.images && k.images.length > 1 ? `<h3>Ảnh ${esc(k.name)}</h3><div class="kv-gal">${k.images.map((u, i) => `<a href="${u}" target="_blank" rel="noopener"><img src="${u}" alt="${esc(k.name)} – ảnh ${i + 1}" loading="lazy" decoding="async"></a>`).join('')}</div>` : ''}
   ${k.features && k.features.length ? `<h3>Điểm nổi bật</h3><ul>${k.features.map(f => `<li>${esc(f)}</li>`).join('')}</ul>` : ''}
   <table class="kv-tb"><tr><th>Địa chỉ</th><td>${esc(k.addr)}, ${esc(k.area)}, Hà Nội</td></tr><tr><th>Phân khúc</th><td>${esc(k.segment)}</td></tr><tr><th>Giá phòng tham khảo</th><td>${esc(ktvPrice(k))}</td></tr><tr><th>Giờ mở cửa</th><td>${esc(k.hours || 'Gọi tổng đài để xác nhận')}</td></tr></table>
   <p class="kv-note">Thông tin tổng hợp từ nguồn công khai, giá và giờ có thể thay đổi. Gọi ${esc(CFG.hotline)} để xác nhận trước khi đến.</p>
@@ -1168,7 +1169,8 @@ fs.copyFileSync(path.join(ROOT, 'src/install.js'), path.join(OUT, 'assets/instal
 // ảnh bar đã up
 { const src = path.join(ROOT, 'content/img/bars'), dst = path.join(OUT, 'img/bars');
   const cp = (a, b) => { fs.mkdirSync(b, { recursive: true }); for (const f of fs.readdirSync(a, { withFileTypes: true })) { if (f.isDirectory()) cp(path.join(a, f.name), path.join(b, f.name)); else if (/\.(webp|jpe?g|png)$/i.test(f.name)) fs.copyFileSync(path.join(a, f.name), path.join(b, f.name)); } };
-  if (fs.existsSync(src)) cp(src, dst); }
+  if (fs.existsSync(src)) cp(src, dst);
+  const ks = path.join(ROOT, 'content/img/ktv'); if (fs.existsSync(ks)) cp(ks, path.join(OUT, 'img/ktv')); }
 GENERATED.push('assets/site.css', 'assets/chat.css', 'assets/chat.js', 'assets/ghep.js', 'assets/music.js', 'assets/install.js');
 {
   const order = ranked(BARS);
