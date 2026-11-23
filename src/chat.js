@@ -31,7 +31,7 @@
     '<div class="tcc-m" aria-live="polite"></div>' +
     '<div class="tcc-q"></div>' +
     '<form class="tcc-f"><input type="text" placeholder="Nhắn cho tổng đài…" aria-label="Tin nhắn" autocomplete="off" enterkeyhint="send"><button type="submit" aria-label="Gửi">➤</button></form>' +
-    (C.demo ? '<div class="tcc-note">Bản demo: trả lời tự động, nhân viên là mô phỏng.</div>' : '');
+    (C.demo && !(C.nt && C.ap && C.ap.d) ? '<div class="tcc-note">Bản demo: trả lời tự động, nhân viên là mô phỏng.</div>' : '');
   /* Nút Tư vấn: bấm vào bung ngang 4 lựa chọn Gọi · Zalo · Telegram · Chat */
   var tel = C.hotline.replace(/\s/g, '');
   var wrap = document.createElement('div'); wrap.className = 'tcw';
@@ -79,7 +79,7 @@
       if (m.t === 'sys') return '<div class="tcc-sys">' + esc(m.x) + '</div>';
       if (m.t === 'cards') return '<div class="tcc-cards">' + m.ids.map(function (id) { var b = C.bars.filter(function (x) { return x.id === id; })[0]; return b ? barCard(b) : ''; }).join('') + '</div>';
       if (m.t === 'contacts') return contacts();
-      var who = m.t === 'agent' ? '<span class="who">' + AGENT + ' · nhân viên tổng đài</span>' : m.t === 'bot' ? '<span class="who">Trợ lý TopChill</span>' : '';
+      var who = m.t === 'agent' ? '<span class="who">' + AGENT + (AGENT === 'Linh' ? ' · nhân viên tổng đài' : '') + '</span>' : m.t === 'bot' ? '<span class="who">Trợ lý TopChill</span>' : '';
       return '<div class="tcc-b ' + m.t + '">' + who + esc(m.x) + '</div>';
     }).join('');
     M.scrollTop = M.scrollHeight;
@@ -179,6 +179,14 @@
       try { Tawk_API.showWidget(); Tawk_API.maximize(); } catch (e) {}
       close(); return;
     }
+    if (LIVE) {
+      liveSay('[Khách bấm Gặp nhân viên]');
+      if (!st.agent) { st.agent = true; save(); box.querySelector('#tccSt').textContent = 'Đã chuyển tới nhân viên tổng đài';
+        say([{ t: 'sys', x: 'Đã chuyển tới nhân viên tổng đài TopChill' }, { t: 'bot', x: 'Nhân viên sẽ trả lời ngay trong khung chat này, thường trong vài phút. Bạn cứ nhắn: thành phố, số người, giờ đến. Cần gấp thì gọi hoặc nhắn Zalo:' }, { t: 'contacts' }], ['Gửi số điện thoại']); }
+      else say([{ t: 'bot', x: 'Nhân viên đã nhận tin và sẽ trả lời bạn ngay tại đây.' }]);
+      try { if (window.Notification && Notification.permission === 'default') Notification.requestPermission(); } catch (e) {}
+      return;
+    }
     if (st.agent) { say([{ t: 'agent', x: 'Mình vẫn đang ở đây. Bạn cần mình đặt bàn ở bar nào, mấy người, mấy giờ ạ?' }], ['Gửi số điện thoại', 'Gợi ý bar tối nay']); return; }
     st.agent = true; save();
     push({ t: 'sys', x: 'Đang kết nối nhân viên tổng đài…' });
@@ -193,6 +201,7 @@
     }, 1400);
   }
   function agentReply(raw) {
+    if (LIVE) return;
     var r = answer(raw);
     if (r.agent) { toAgent(); return; }
     var t = norm(raw);
@@ -223,16 +232,61 @@
     try { fetch('https://api.web3forms.com/submit', { method: 'POST', keepalive: !!beacon, headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: body }).catch(function () {}); } catch (e) {}
   }
   function flush() {
+    if (LIVE) return;
     var mine = st.msgs.filter(function (m) { return m.t === 'me'; });
     if (mine.length > st.sent) mail('Chat web: khách nhắn "' + mine[mine.length - 1].x.slice(0, 60) + '"', true);
   }
   document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') flush(); });
   window.addEventListener('pagehide', flush);
 
+
+  /* ---------- TỔNG ĐÀI THẬT: tin nhắn mã hoá gửi tới trang admin (ntfy.sh, chỉ admin đọc được) ---------- */
+  var SUB = window.crypto && crypto.subtle, LIVE = !!(C.nt && C.ap && C.ap.d && SUB), TOPIC = (C.nt || '') + '-tc';
+  var DHA = { name: 'ECDH', namedCurve: 'P-256' };
+  function b64(buf) { return btoa(String.fromCharCode.apply(null, new Uint8Array(buf))); }
+  function ub64(s) { var b = atob(s), a = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; }
+  function rnd(n) { var s = ''; while (s.length < n) s += Math.random().toString(36).slice(2).toUpperCase(); return s.slice(0, n); }
+  var keyP = null;
+  function myKey() {
+    if (keyP) return keyP;
+    keyP = (st.dh ? Promise.resolve() : SUB.generateKey(DHA, true, ['deriveKey']).then(function (kp) { return Promise.all([SUB.exportKey('jwk', kp.publicKey), SUB.exportKey('jwk', kp.privateKey)]); }).then(function (k) { st.dh = k[1]; st.dhPub = { x: k[0].x, y: k[0].y }; st.sid = st.sid || 'C' + rnd(7); save(); }))
+      .then(function () { var pr = Object.assign({}, st.dh); delete pr.key_ops; return Promise.all([SUB.importKey('jwk', pr, DHA, false, ['deriveKey']), SUB.importKey('jwk', { kty: 'EC', crv: 'P-256', x: C.ap.d.x, y: C.ap.d.y, ext: true }, DHA, false, [])]); })
+      .then(function (k) { return SUB.deriveKey({ name: 'ECDH', public: k[1] }, k[0], { name: 'AES-GCM', length: 256 }, false, ['encrypt', 'decrypt']); });
+    return keyP;
+  }
+  function enc(key, obj) { var iv = crypto.getRandomValues(new Uint8Array(12)); return SUB.encrypt({ name: 'AES-GCM', iv: iv }, key, new TextEncoder().encode(JSON.stringify(obj))).then(function (c) { return { iv: b64(iv), ct: b64(c) }; }); }
+  function dec(key, box) { return SUB.decrypt({ name: 'AES-GCM', iv: ub64(box.iv) }, key, ub64(box.ct)).then(function (b) { return JSON.parse(new TextDecoder().decode(b)); }); }
+  function livePost(kind, obj, title) {
+    if (!LIVE) return Promise.resolve(0);
+    return myKey().then(function (key) { return enc(key, obj); }).then(function (box) {
+      var o = { t: kind, sid: st.sid, dh: st.dhPub, box: box, ts: Date.now(), mid: 'M' + rnd(8) };
+      return fetch('https://ntfy.sh/' + TOPIC + '?title=' + encodeURIComponent(title) + '&tags=speech_balloon', { method: 'POST', body: JSON.stringify(o) }).then(function (r) { return r.ok ? 1 : 0; });
+    }).catch(function () { return 0; });
+  }
+  function liveSay(text) { return livePost('cmsg', { text: text, page: location.pathname }, '💬 Khách nhắn tổng đài'); }
+  st.got = st.got || [];
+  function poll() {
+    if (!LIVE || !st.sid) return;
+    fetch('https://ntfy.sh/' + TOPIC + '/json?poll=1&since=12h').then(function (r) { return r.text(); }).then(function (t) {
+      var mine = t.split('\n').map(function (l) { try { var o = JSON.parse(l); return o.event === 'message' ? JSON.parse(o.message) : null; } catch (e) { return null; } })
+        .filter(function (o) { return o && o.t === 'creply' && o.sid === st.sid && st.got.indexOf(o.mid) < 0; });
+      if (!mine.length) return;
+      return myKey().then(function (key) { return Promise.all(mine.map(function (o) { return dec(key, o.box).then(function (x) { return { o: o, x: x }; }).catch(function () { return null; }); })); }).then(function (rs) {
+        rs.filter(Boolean).sort(function (a, b) { return a.o.ts - b.o.ts; }).forEach(function (r) { st.got.push(r.o.mid); st.agent = true; st.msgs.push({ t: 'agent', x: r.x.text }); });
+        save(); render(); box.querySelector('#tccSt').textContent = AGENT + ' đang hỗ trợ bạn';
+        if (box.hidden) { var bd = fab.querySelector('.badge'); bd.hidden = false; bd.textContent = '1'; }
+        try { if (document.hidden && window.Notification && Notification.permission === 'granted') new Notification('Tổng đài TopChill trả lời bạn', { body: rs.filter(Boolean).slice(-1)[0].x.text }); } catch (e) {}
+      });
+    }).catch(function () {});
+  }
+  if (LIVE) { AGENT = '🎧 Nhân viên tổng đài TopChill'; setInterval(function () { if (document.visibilityState !== 'hidden' && st.sid && (!box.hidden || st.agent)) poll(); }, 6000); setTimeout(poll, 1500); }
+  window.TCLive = { on: LIVE, book: function (req) { return livePost('book', req, '📋 Yêu cầu đặt bàn mới'); } };
+
   /* ---------- sự kiện ---------- */
   function send(text) {
     text = String(text).trim(); if (!text) return;
     push({ t: 'me', x: text }); Q.innerHTML = '';
+    if (LIVE) liveSay(text);
     var cid = findCity(norm(text));
     ga('chat_message', { city: cid ? cityName(cid) : '', chip: DEF_CHIPS.indexOf(text) > -1 ? 1 : 0 });
     var ph = text.match(PHONE);

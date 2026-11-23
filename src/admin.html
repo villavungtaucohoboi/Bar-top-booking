@@ -61,7 +61,7 @@
 
   <div class="ad" id="app" hidden>
     <aside class="box">
-      <div class="tabs" role="tablist"><button type="button" class="on" data-tab="bars">Bar</button><button type="button" data-tab="events">Sự kiện</button><button type="button" data-tab="ghep">Ghép bàn</button><button type="button" data-tab="ticker">Dải tin</button></div>
+      <div class="tabs" role="tablist"><button type="button" data-tab="tc">💬 Tổng đài <b id="tcBadge" class="tc-badge" hidden></b></button><button type="button" class="on" data-tab="bars">Bar</button><button type="button" data-tab="events">Sự kiện</button><button type="button" data-tab="ghep">Ghép bàn</button><button type="button" data-tab="ticker">Dải tin</button></div>
       <div id="tabBars" style="display:flex;flex-direction:column;gap:10px">
         <button class="btn btn-gold" id="newBar" type="button">+ Thêm bar mới</button>
         <div class="fld"><label for="q">Tìm bar</label><input id="q" placeholder="Tên, khu vực…"></div>
@@ -126,6 +126,17 @@
         <div class="fld"><label for="ok_sum">Kết quả</label><input id="ok_sum" maxlength="60" placeholder="3 nam + 2 nữ"></div></div>
       <div class="bar-acts" style="margin-top:12px"><button class="btn btn-gold" id="okSave" type="button">Đăng ghép thành công</button></div>
       <p class="msg" id="okMsg" role="status"></p>
+    </section>
+
+    <section id="paneTc" class="box" hidden>
+      <h2>💬 Tổng đài trực tuyến</h2>
+      <p class="help" id="tcHelp"></p>
+      <div class="tc-wrap">
+        <div class="tc-side"><b>Cuộc chat</b><div id="tcList" class="tc-list"></div><b style="margin-top:14px;display:block">📋 Yêu cầu đặt bàn / phòng</b><div id="tcBook" class="tc-list"></div></div>
+        <div class="tc-main"><div id="tcHead" class="tc-head">Chọn một cuộc chat bên trái</div><div id="tcLog" class="tc-log"></div>
+          <form id="tcForm" class="tc-form" hidden><input id="tcIn" maxlength="500" placeholder="Trả lời khách…" autocomplete="off"><button class="btn btn-gold" type="submit">Gửi</button></form>
+          <div class="tc-quick" id="tcQuick" hidden><button type="button">Dạ TopChill chào bạn, bạn đi mấy người, mấy giờ ạ?</button><button type="button">Bạn để lại số điện thoại, tổng đài gọi lại giữ bàn ngay nhé.</button><button type="button">Dạ bàn đã giữ cho bạn rồi ạ, không cần cọc.</button></div></div>
+      </div>
     </section>
 
     <section id="paneTicker" class="box" hidden>
@@ -326,7 +337,7 @@ $('del').onclick=function(){if(!cur||!cur.id)return;
 
 /* ---------- dải tin ---------- */
 document.querySelector('.tabs').onclick=function(e){var b=e.target.closest('[data-tab]');if(!b)return;document.querySelectorAll('.tabs button').forEach(function(x){x.classList.toggle('on',x===b)});
-  var t=b.dataset.tab;$('tabBars').style.display=t==='bars'?'flex':'none';$('form').hidden=t!=='bars';$('paneTicker').hidden=t!=='ticker';$('paneEvents').hidden=t!=='events';$('paneGhep').hidden=t!=='ghep';if(t==='events')renderEvents();if(t==='ghep')renderGhep()};
+  var t=b.dataset.tab;$('tabBars').style.display=t==='bars'?'flex':'none';$('form').hidden=t!=='bars';$('paneTicker').hidden=t!=='ticker';$('paneEvents').hidden=t!=='events';$('paneGhep').hidden=t!=='ghep';$('paneTc').hidden=t!=='tc';if(t==='tc')tcOpen();if(t==='events')renderEvents();if(t==='ghep')renderGhep()};
 
 /* ---------- sự kiện ---------- */
 var evId=null;
@@ -416,6 +427,49 @@ function gbKeyUI(){var box=$('gbKeyBox');if(!box)return;var k=null;try{k=JSON.pa
         prompt('Đã tạo khoá. LƯU NGAY mã sao lưu này (mất là phải tạo khoá mới). Web cập nhật sau 1–2 phút:',btoa(unescape(encodeURIComponent(JSON.stringify(priv)))));location.reload()})
     }).catch(function(e){say($('gbAdMsg'),ghErr(e),'err')})};
 }
+
+/* ---------- TỔNG ĐÀI: đọc & trả lời chat khách, xem yêu cầu đặt bàn (mã hoá, chỉ admin đọc) ---------- */
+var TC={db:JSON.parse(localStorage.getItem('tc-admin-chat')||'{"s":{},"b":[]}'),cur:null,keys:{},started:false};
+function tcSave(){try{localStorage.setItem('tc-admin-chat',JSON.stringify(TC.db))}catch(e){}}
+function tcAK(){try{return JSON.parse(localStorage.getItem('tc-admin')||'null')}catch(e){return null}}
+function tcB64(b){return btoa(String.fromCharCode.apply(null,new Uint8Array(b)))}function tcU(s){var b=atob(s),a=new Uint8Array(b.length);for(var i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a}
+function tcKey(dh){var id=dh.x;if(TC.keys[id])return TC.keys[id];var AK=tcAK(),S=crypto.subtle,D={name:'ECDH',namedCurve:'P-256'},pr=Object.assign({},AK.d);delete pr.key_ops;
+  TC.keys[id]=Promise.all([S.importKey('jwk',pr,D,false,['deriveKey']),S.importKey('jwk',{kty:'EC',crv:'P-256',x:dh.x,y:dh.y,ext:true},D,false,[])]).then(function(k){return S.deriveKey({name:'ECDH',public:k[1]},k[0],{name:'AES-GCM',length:256},false,['encrypt','decrypt'])});return TC.keys[id]}
+function tcDec(dh,box){return tcKey(dh).then(function(k){return crypto.subtle.decrypt({name:'AES-GCM',iv:tcU(box.iv)},k,tcU(box.ct))}).then(function(b){return JSON.parse(new TextDecoder().decode(b))})}
+function tcEnc(dh,obj){var iv=crypto.getRandomValues(new Uint8Array(12));return tcKey(dh).then(function(k){return crypto.subtle.encrypt({name:'AES-GCM',iv:iv},k,new TextEncoder().encode(JSON.stringify(obj)))}).then(function(c){return{iv:tcB64(iv),ct:tcB64(c)}})}
+function tcTopic(){return ((window.GB_CFG||{}).nt||'')+'-tc'}
+function tcT(ts){var d=new Date(ts);return d.toLocaleTimeString('vi-VN',{hour:'2-digit',minute:'2-digit'})+' '+d.toLocaleDateString('vi-VN',{day:'2-digit',month:'2-digit'})}
+function tcPull(){var AK=tcAK();if(!AK||!(window.GB_CFG||{}).nt)return;
+  fetch('https://ntfy.sh/'+tcTopic()+'/json?poll=1&since=12h').then(function(r){return r.text()}).then(function(t){
+    var L=t.split('\n').map(function(l){try{var o=JSON.parse(l);return o.event==='message'?JSON.parse(o.message):null}catch(e){return null}}).filter(function(o){return o&&o.dh&&o.box&&o.sid});
+    var seen={};Object.keys(TC.db.s).forEach(function(k){TC.db.s[k].m.forEach(function(x){seen[x.mid]=1})});TC.db.b.forEach(function(x){seen[x.mid]=1});
+    var fresh=L.filter(function(o){return !seen[o.mid]});if(!fresh.length)return;
+    return Promise.all(fresh.map(function(o){return tcDec(o.dh,o.box).then(function(x){return{o:o,x:x}}).catch(function(){return null})})).then(function(rs){var nNew=0;
+      rs.filter(Boolean).sort(function(a,b){return a.o.ts-b.o.ts}).forEach(function(r){var o=r.o;
+        if(o.t==='book'){TC.db.b.unshift({mid:o.mid,ts:o.ts,sid:o.sid,x:r.x});nNew++;return}
+        var S=TC.db.s[o.sid]=TC.db.s[o.sid]||{dh:o.dh,m:[],unread:0,last:0};S.dh=S.dh||o.dh;
+        S.m.push({mid:o.mid,ts:o.ts,from:o.t==='creply'?'a':'v',text:r.x.text,page:r.x.page||''});S.last=Math.max(S.last,o.ts);if(o.t==='cmsg'&&TC.cur!==o.sid){S.unread++;nNew++}});
+      TC.db.b=TC.db.b.slice(0,200);tcSave();tcRender();
+      if(nNew&&TC.started){try{var A=new(window.AudioContext||window.webkitAudioContext)(),os=A.createOscillator(),g=A.createGain();os.frequency.value=880;os.connect(g);g.connect(A.destination);g.gain.setValueAtTime(.2,A.currentTime);g.gain.exponentialRampToValueAtTime(.001,A.currentTime+.5);os.start();os.stop(A.currentTime+.5)}catch(e){}
+        try{if(document.hidden&&window.Notification&&Notification.permission==='granted')new Notification('TopChill: có tin mới từ khách',{body:nNew+' tin nhắn / yêu cầu mới'})}catch(e){}}
+      TC.started=true;
+    })}).catch(function(){})}
+function tcRender(){var S=TC.db.s,ids=Object.keys(S).sort(function(a,b){return S[b].last-S[a].last}),un=ids.reduce(function(n,k){return n+(S[k].unread||0)},0);
+  var bd=$('tcBadge');if(bd){bd.hidden=!un;bd.textContent=un}
+  if(!$('tcList'))return;
+  $('tcList').innerHTML=ids.length?ids.map(function(k){var c=S[k],l=c.m[c.m.length-1]||{};return '<button type="button" class="tc-it'+(k===TC.cur?' on':'')+'" data-sid="'+k+'"><b>Khách '+esc(k.slice(-4))+(c.unread?' <i>'+c.unread+'</i>':'')+'</b><small>'+esc((l.from==='a'?'Bạn: ':'')+(l.text||'').slice(0,50))+'</small><small>'+tcT(c.last)+'</small></button>'}).join(''):'<p class="help">Chưa có cuộc chat nào trong 12 giờ qua.</p>';
+  $('tcBook').innerHTML=TC.db.b.length?TC.db.b.slice(0,30).map(function(b){var x=b.x;return '<div class="tc-bk"><b>'+esc(x.kind||'Đặt bàn')+'</b> · '+tcT(b.ts)+'<br>'+esc(x.bar||'')+(x.city?' · '+esc(x.city):'')+'<br>📅 '+esc(x.date||'')+' '+esc(x.time||'')+' · 👥 '+esc(String(x.guests||''))+(x.table?' · '+esc(x.table):'')+'<br>'+(x.phone?'<a class="tc-ph" href="tel:'+esc(x.phone)+'">📞 '+esc(x.phone)+'</a> ':'')+(x.name?esc(x.name):'')+(x.note?'<br><i>'+esc(x.note)+'</i>':'')+(x.code?'<br><small>Mã '+esc(x.code)+'</small>':'')+'</div>'}).join(''):'<p class="help">Chưa có yêu cầu đặt bàn nào.</p>';
+  var c=TC.cur&&S[TC.cur];$('tcForm').hidden=$('tcQuick').hidden=!c;
+  if(c){c.unread=0;$('tcHead').innerHTML='<b>Khách '+esc(TC.cur.slice(-4))+'</b>'+(c.m.length&&c.m[c.m.length-1].page?' · đang xem '+esc(c.m[c.m.length-1].page):'');
+    var lg=$('tcLog');lg.innerHTML=c.m.map(function(x){return '<div class="tc-m '+(x.from==='a'?'a':'v')+'"><small>'+(x.from==='a'?'Bạn':'Khách')+' · '+tcT(x.ts)+'</small>'+esc(x.text).replace(/((?:\+?84|0)(?:[\s.\-]?\d){9})/g,'<a href="tel:$1">$1</a>')+'</div>'}).join('');lg.scrollTop=1e6;tcSave()}}
+function tcSend(text){var c=TC.db.s[TC.cur];if(!c||!text)return;var sid=TC.cur,mid='M'+Math.random().toString(36).slice(2,10).toUpperCase(),ts=Date.now();
+  tcEnc(c.dh,{text:text}).then(function(box){return fetch('https://ntfy.sh/'+tcTopic(),{method:'POST',body:JSON.stringify({t:'creply',sid:sid,box:box,ts:ts,mid:mid,dh:c.dh})})}).then(function(r){if(!r.ok)throw 0;c.m.push({mid:mid,ts:ts,from:'a',text:text});c.last=ts;tcSave();tcRender()}).catch(function(){alert('Chưa gửi được, thử lại.')})}
+function tcOpen(){var AK=tcAK();$('tcHelp').innerHTML=AK?'Tin khách nhắn ở khung chat trên web hiện ở đây, cập nhật mỗi 6 giây. Bấm vào cuộc chat để trả lời, khách thấy ngay trên web. Lịch sử lưu trên máy này. 📲 Nhận báo về điện thoại: app ntfy → đăng ký chủ đề <code>'+esc(tcTopic())+'</code>.':'🔐 Chưa có khoá admin trên máy này. Vào tab <b>Ghép bàn</b> → <b>Tạo khoá admin</b> (hoặc Nhập khoá sao lưu) rồi quay lại.';
+  try{if(window.Notification&&Notification.permission==='default')Notification.requestPermission()}catch(e){}tcRender();tcPull()}
+$('tcList').onclick=function(e){var b=e.target.closest('[data-sid]');if(!b)return;TC.cur=b.dataset.sid;tcRender();$('tcIn').focus()};
+$('tcForm').onsubmit=function(e){e.preventDefault();var v=$('tcIn').value.trim();if(v){tcSend(v);$('tcIn').value=''}};
+$('tcQuick').onclick=function(e){var b=e.target.closest('button');if(b)tcSend(b.textContent)};
+setInterval(function(){if(!document.hidden||TC.started)tcPull()},6000);setTimeout(function(){tcRender();tcPull()},800);
 $('saveTk').onclick=function(){var lines=$('tk').value.split('\n').map(function(s){return s.trim().slice(0,140)}).filter(Boolean).slice(0,15);
   say($('tkMsg'),'Đang đăng…','wait');commitRetry([],'Cập nhật dải tin',function(fresh){fresh.ticker=lines})
   .then(function(){say($('tkMsg'),'Đã đăng '+lines.length+' tin. Web cập nhật sau 1–2 phút.','ok')}).catch(function(e){say($('tkMsg'),ghErr(e),'err')})};

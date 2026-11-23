@@ -1854,6 +1854,7 @@ function renderBook(){
 /* Gửi yêu cầu đặt bàn về email tổng đài. BOOKING=null: bản demo (chỉ lưu trên máy). Build điền từ config.json. */
 const BOOKING=null;const BOOKING_DEMO=!BOOKING;
 function sendBooking(req){
+  try{window.TCLive&&TCLive.book(Object.assign({kind:'Đặt bàn bar'},req))}catch(e){}
   try{const L=JSON.parse(localStorage.getItem('topchill-requests')||'[]');L.unshift(req);localStorage.setItem('topchill-requests',JSON.stringify(L.slice(0,20)))}catch(e){}
   if(!BOOKING)return Promise.resolve(true);
   const subject='Đặt bàn '+req.code+': '+req.bar+' · '+req.time+' '+req.date+' · '+req.phone;
