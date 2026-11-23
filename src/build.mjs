@@ -798,7 +798,7 @@ ${Object.values(LAND).filter(x => x.city === c.id).length ? `<section class="sec
 /* ---------- 7. Trang bar ---------- */
 function barPage(b) {
   const c = cityOf(b.city), p = P(b), hk = b.hoursKnown !== false, pk = b.priceKnown !== false;
-  const title = clip(p ? `${b.name} ${c.name}: giá, menu, đặt bàn giảm ${b.deal}%` : `${b.name} ${c.name}: địa chỉ, giờ mở cửa, đặt bàn`, 65);
+  const title = clip(p ? `${b.name} ${c.name}: giá, menu, đặt bàn giảm ${b.deal}%` : (`${b.name} ${c.name}: giá, địa chỉ, giờ mở cửa, đặt bàn`.length <= 65 ? `${b.name} ${c.name}: giá, địa chỉ, giờ mở cửa, đặt bàn` : `${b.name} ${c.name}: giá, địa chỉ, đặt bàn`), 65);
   const desc = clip(`${b.name}, ${b.type.toLowerCase()} ở ${b.area}, ${c.name}.${hk ? ` Mở ${b.hours}.` : ''}${pk ? ` ${b.price[0]}k–${b.price[1]}k/người.` : ''} ${p ? `Đặt qua TopChill giảm ${b.deal}%${b.gpct ? `, giờ vàng giảm thêm ${b.gpct}%` : ''}${b.bonus ? ', ' + b.bonus.toLowerCase() : ''}.` : `${b.desc} Đặt bàn nhanh qua tổng đài TopChill.`}`, 160);
   const crumbs = [['Trang chủ', ''], [`Bar ${c.name}`, c.path], [b.name, b.path]];
   const menu = [];
@@ -1121,7 +1121,7 @@ function misc(pages) {
   const urls = pages.filter(p => !p.noindex).map(p => `  <url><loc>${url(p.path)}</loc><lastmod>${p.lastmod || TODAY}</lastmod>${p.priority ? `<priority>${p.priority}</priority>` : ''}</url>`).join('\n');
   write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
   write('robots.txt', INDEX
-    ? `User-agent: *\nAllow: /\nDisallow: ${BASE}viet-bai/\nDisallow: ${BASE}quan-ly/\nDisallow: ${BASE}src/\nDisallow: ${BASE}content/\n\nSitemap: ${url('sitemap.xml')}\n`
+    ? `User-agent: *\nAllow: /\nDisallow: ${BASE}viet-bai/\nDisallow: ${BASE}quan-ly/\nDisallow: ${BASE}src/\nDisallow: ${BASE}content/\nDisallow: ${BASE}*?dat=\nDisallow: ${BASE}*?tp=\n\nSitemap: ${url('sitemap.xml')}\n`
     : `# Đang ở chế độ demo: chặn Google lập chỉ mục.\n# Bật "allowIndexing": true trong src/config.json khi đã có dữ liệu bar thật và tên miền chính thức.\nUser-agent: *\nDisallow: /\n`);
 }
 
