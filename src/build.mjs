@@ -343,7 +343,7 @@ function footer() {
     <p class="note">Thông tin bar tổng hợp từ nguồn công khai, có thể thay đổi; gọi ${esc(CFG.hotline)} để xác nhận trước khi đi. Uống có trách nhiệm, không lái xe sau khi uống rượu bia.</p></div>
   <div><h4>Bar theo thành phố</h4>${cityLinks}</div>
   <div><h4>Cẩm nang</h4>${postLinks}<a href="${href('blog/')}">Tất cả bài viết</a></div>
-  <div><h4>TopChill</h4><a href="${href('gioi-thieu/')}">Giới thiệu TopChill</a><a href="${href('ghep-ban/')}">Ghép bàn online</a><a href="${href('su-kien/')}">Sự kiện &amp; lịch DJ</a><a href="${href('thanh-vien/')}">Hạng thành viên</a><a href="${href('chu-bar/')}">Dành cho chủ bar</a><a href="${href('huy-hieu/')}">Huy hiệu đối tác</a><a href="tel:${CFG.hotline.replace(/\s/g, '')}">Hotline ${esc(CFG.hotline)}</a><a href="https://zalo.me/${CFG.zalo}" target="_blank" rel="noopener">Zalo ${esc(CFG.hotline)}</a><a href="https://t.me/${CFG.telegram}" target="_blank" rel="noopener">Telegram ${esc(CFG.hotline)}</a></div>
+  <div><h4>TopChill</h4><a href="${href('gioi-thieu/')}">Giới thiệu TopChill</a><a href="${href('ghep-ban/')}">Ghép bàn online</a><a href="${href('so-do-web/')}">Sơ đồ web</a><a href="${href('su-kien/')}">Sự kiện &amp; lịch DJ</a><a href="${href('thanh-vien/')}">Hạng thành viên</a><a href="${href('chu-bar/')}">Dành cho chủ bar</a><a href="${href('huy-hieu/')}">Huy hiệu đối tác</a><a href="tel:${CFG.hotline.replace(/\s/g, '')}">Hotline ${esc(CFG.hotline)}</a><a href="https://zalo.me/${CFG.zalo}" target="_blank" rel="noopener">Zalo ${esc(CFG.hotline)}</a><a href="https://t.me/${CFG.telegram}" target="_blank" rel="noopener">Telegram ${esc(CFG.hotline)}</a></div>
 </div></footer>`;
 }
 
@@ -698,6 +698,23 @@ m.textContent='Đang gửi…';m.className='gb-msg';var d=f.date.value.split('-'
 fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({access_key:${JSON.stringify(CFG.web3formsKey || '')},subject:'Đặt phòng karaoke: '+${JSON.stringify(k.name)}+' · '+f.time.value+' '+d+' · '+f.n.value+' người · '+ph,from_name:'TopChill karaoke','Quán':${JSON.stringify(k.name + ' – ' + k.addr + ', ' + k.area)},'Ngày':d,'Giờ':f.time.value,'Số người':f.n.value,'Loại phòng':f.room.value,'SĐT':ph})}).then(function(r){return r.json()}).then(function(j){if(j.success===false)throw 0;m.innerHTML='✅ Đã gửi! Tổng đài sẽ gọi lại xác nhận phòng trong vài phút.';m.className='gb-msg ok';try{window.tcConv&&tcConv('form');gtag('event','generate_lead',{method:'karaoke'})}catch(e){}})
 .catch(function(){m.innerHTML='Chưa gửi được. Gọi <a href="tel:${TELN}">${esc(CFG.hotline)}</a> để giữ phòng.';m.className='gb-msg bad'})}})();</script>`;
   write(k.path + 'index.html', page({ title: clip(`${k.name} – karaoke ${k.area}, Hà Nội: giá phòng, đặt phòng`, 65), desc: clip(`${k.name} ở ${k.addr}, ${k.area}, Hà Nội. ${k.segment}, ${ktvPrice(k)}. Xem giờ mở cửa và đặt phòng karaoke không cần cọc qua TopChill.`, 160), pathRel: k.path, ld, active: 'karaoke-ha-noi/' }, body, { mcta: mctaBar('Đặt phòng', '#dat-phong', 'Gọi giữ phòng'), promo: false }));
+}
+
+/* Sơ đồ web dạng HTML: mọi trang bar, karaoke, bài viết đều có liên kết nội bộ từ một trang được thu thập thường xuyên. */
+function sitemapPage() {
+  const crumbs = [['Trang chủ', ''], ['Sơ đồ web', 'so-do-web/']];
+  const byCity = CITIES.map(c => ({ c, bars: ranked(BARS.filter(b => b.city === c.id)) })).filter(x => x.bars.length);
+  const body = `
+<div class="wrap">${crumbsHtml(crumbs)}
+  <header class="post-head"><h1>Sơ đồ web TopChill</h1><p class="lead">Tất cả bar, lounge, club, quán karaoke và bài cẩm nang trên TopChill.</p></header>
+  <section class="sm-sec"><h2>Trang chính</h2><ul class="sm-list"><li><a href="${href('')}">Trang chủ</a></li><li><a href="${href('ghep-ban/')}">Ghép bàn đi bar</a></li>${KTV.length ? `<li><a href="${href('karaoke-ha-noi/')}">Karaoke Hà Nội</a></li>` : ''}<li><a href="${href('blog/')}">Cẩm nang đi bar</a></li><li><a href="${href('su-kien/')}">Sự kiện &amp; lịch DJ</a></li><li><a href="${href('gioi-thieu/')}">Giới thiệu</a></li></ul></section>
+  ${byCity.map(x => `<section class="sm-sec"><h2><a href="${href(x.c.path)}">Bar ${esc(x.c.name)}</a> <small>${x.bars.length}</small></h2><ul class="sm-list">${x.bars.map(b => `<li><a href="${href(b.path)}">${esc(b.name)}</a></li>`).join('')}</ul></section>`).join('')}
+  ${KTV.length ? `<section class="sm-sec"><h2><a href="${href('karaoke-ha-noi/')}">Karaoke Hà Nội</a> <small>${KTV.length}</small></h2><ul class="sm-list">${KTV.map(k => `<li><a href="${href(k.path)}">${esc(k.name)}</a></li>`).join('')}</ul></section>` : ''}
+  <section class="sm-sec"><h2>Theo loại hình</h2><ul class="sm-list">${Object.values(LAND).map(L => `<li><a href="${href(L.path)}">${esc(L.name)}</a></li>`).join('')}</ul></section>
+  <section class="sm-sec"><h2>Theo khu vực</h2><ul class="sm-list">${AREAS.map(A => `<li><a href="${href(A.path)}">${esc(A.name)}</a></li>`).join('')}</ul></section>
+  <section class="sm-sec"><h2>Cẩm nang</h2><ul class="sm-list">${POSTS.map(p => `<li><a href="${href(p.path)}">${esc(p.title)}</a></li>`).join('')}</ul></section>
+</div>`;
+  write('so-do-web/index.html', page({ title: 'Sơ đồ web TopChill: tất cả bar, club, karaoke, cẩm nang', desc: 'Danh sách đầy đủ bar, lounge, club theo thành phố, quán karaoke Hà Nội và bài cẩm nang đi bar trên TopChill.', pathRel: 'so-do-web/', ld: [breadcrumbLd(crumbs)] }, body, { promo: false }));
 }
 function eventsPage() {
   const crumbs = [['Trang chủ', ''], ['Sự kiện & lịch DJ', 'su-kien/']];
@@ -1188,6 +1205,7 @@ for (const L of Object.values(LAND)) { landingPage(L); pages.push({ path: L.path
 for (const A of AREAS) { areaPage(A); pages.push({ path: A.path, priority: '0.8' }); }
 { const ni = eventsPage(); pages.push({ path: 'su-kien/', priority: '0.7', noindex: ni }); }
 ghepPage(); pages.push({ path: 'ghep-ban/', priority: '0.7' });
+sitemapPage(); pages.push({ path: 'so-do-web/', priority: '0.5' });
 if (KTV.length) { ktvListPage(); pages.push({ path: 'karaoke-ha-noi/', priority: '0.8' }); for (const k of KTV) { ktvPage(k); pages.push({ path: k.path, priority: '0.6' }); } }
 for (const b of BARS) { barPage(b); pages.push({ path: b.path, priority: '0.7' }); }
 blogIndex(); pages.push({ path: 'blog/', priority: '0.8' });

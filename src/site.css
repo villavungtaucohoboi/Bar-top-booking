@@ -427,3 +427,4 @@ html,body{overflow-x:hidden}@supports (overflow:clip){html,body{overflow-x:clip}
 .tc-form{display:flex;gap:8px}.tc-form input{flex:1;min-height:44px;padding:0 12px;border-radius:12px;border:1px solid var(--line);background:var(--bg,#0f0a14);color:inherit;font:inherit}
 .tc-quick{display:flex;flex-wrap:wrap;gap:6px}.tc-quick button{padding:6px 10px;border-radius:99px;border:1px solid var(--line);background:transparent;color:inherit;font:inherit;font-size:12.5px;cursor:pointer}
 #app .tabs{display:flex;flex-wrap:wrap;gap:6px}#app .tabs button{white-space:nowrap;flex:1 1 auto}
+.sm-sec{margin:18px 0}.sm-sec h2{font-size:20px;margin:0 0 8px}.sm-sec h2 small{font-size:13px;opacity:.6}.sm-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:4px 16px;padding-left:18px;margin:0}.sm-list a{font-size:14px}
