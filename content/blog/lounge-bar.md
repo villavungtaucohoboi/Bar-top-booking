@@ -129,7 +129,7 @@ Gọi 0838 000 222 hoặc để lại số điện thoại, tổng đài TopChil
 4. **Hỏi trước mức chi tối thiểu** cho bàn VIP hoặc khu riêng.
 5. **Uống có trách nhiệm,** không lái xe sau khi uống rượu bia.
 
-Xem thêm [rooftop bar Sài Gòn](/blog/rooftop-bar-sai-gon/), [rooftop bar Hà Nội](/blog/rooftop-bar-ha-noi/) và [cocktail bar Hà Nội](/blog/cocktail-bar-ha-noi/).
+Xem thêm [bar Sài Gòn](/blog/bar-sai-gon/), [rooftop bar Hà Nội](/blog/rooftop-bar-ha-noi/) và [cocktail bar Hà Nội](/blog/cocktail-bar-ha-noi/).
 
 ## Câu hỏi thường gặp
 
