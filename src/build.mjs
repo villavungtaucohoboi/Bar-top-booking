@@ -51,7 +51,7 @@ let APP = fs.readFileSync(path.join(ROOT, 'src/app.html'), 'utf8');
 { const a = APP.indexOf('const BARS=['), marker = APP.indexOf('const pad=', a), z = APP.lastIndexOf('];', marker);
   if (a < 0 || z < 0) throw new Error('Không tìm thấy BARS trong app.html');
   APP = APP.slice(0, a) + 'const BARS=' + JSON.stringify(LIVE_BARS) + ';' + APP.slice(z + 2);
-  APP = APP.replace('const KTV=[];', 'const KTV=' + JSON.stringify((DATA.ktv || []).filter(k => !k.hidden).sort((a, b) => (a.pin || 999) - (b.pin || 999)).slice(0, 8).map(k => ({ n: k.name, s: k.slug, a: k.area, ad: k.addr, g: k.segment, p: k.price || [], h: k.hours || '', i: (k.images || [])[0] || '' }))).replace(/</g, '\\u003c') + ';');
+  APP = APP.replace('const KTV=[];', 'const KTV=' + JSON.stringify((DATA.ktv || []).filter(k => !k.hidden).sort((a, b) => (a.pin || 999) - (b.pin || 999)).slice(0, 8).map(k => ({ n: k.name, s: k.slug, a: String(k.area || '').replace(/^(Quận|Huyện|Thị xã)\s*/i, ''), ad: String(k.addr || '').split(', Phường')[0], g: k.segment, p: k.price || [], h: k.hours || '', i: (k.images || [])[0] || '' }))).replace(/</g, '\\u003c') + ';');
   { const BK = CFG.web3formsKey ? { kind: 'w3f', url: 'https://api.web3forms.com/submit', key: CFG.web3formsKey }
       : CFG.bookingEndpoint ? { kind: 'url', url: CFG.bookingEndpoint }
       : CFG.bookingEmail ? { kind: 'fs', url: 'https://formsubmit.co/ajax/' + CFG.bookingEmail } : null;
@@ -616,22 +616,26 @@ function ghepPage() {
 
 /* ================= KARAOKE / KTV (tách riêng khỏi bar) ================= */
 const KTV_SEG = ['Đối tác', 'VIP', 'Tầm trung', 'Bình dân'];
-const KTV = (DATA.ktv || []).filter(k => !k.hidden).map(k => ({ ...k, path: `karaoke/${k.slug}/`, images: (k.images || []).map(p => p.startsWith('/') ? (CFG.basePath.replace(/\/$/, '') + p) : p) }))
+const ktvArea = a => String(a || '').replace(/^(Quận|Huyện|Thị xã|Q\.|H\.)\s*/i, '').trim();
+const ktvSlug = k => k.slug || slugify(k.name + (k.addr ? '-' + k.addr.split(',')[0] : ''));
+const KTV = (DATA.ktv || []).filter(k => !k.hidden).map(k => ({ ...k, area: ktvArea(k.area), addr: String(k.addr || '').replace(/,?\s*(TP\.?|Thành phố)\s*Hà Nội\s*$/i, ''), slug: ktvSlug(k), path: `karaoke/${ktvSlug(k)}/`, images: (k.images || []).map(p => p.startsWith('/') ? (CFG.basePath.replace(/\/$/, '') + p) : p) }))
   .sort((a, b) => ((a.pin || 999) - (b.pin || 999)) || (KTV_SEG.indexOf(a.segment) - KTV_SEG.indexOf(b.segment)));
+const ktvAddr = k => (k.addr && k.addr.toLowerCase().includes(k.area.toLowerCase())) ? k.addr : [k.addr, k.area].filter(Boolean).join(', ');
 const ktvPrice = k => k.price && k.price.length === 2 ? `${k.price[0]}k–${k.price[1]}k/giờ` : 'Gọi để báo giá';
 const ktvPh = (k, w = 640) => k.images && k.images.length ? img(k.images, w, `${k.name} – karaoke ${k.area}, Hà Nội`, { ratio: [16, 10] }) : `<div class="kv-ph" aria-hidden="true"><span>🎤</span><i>${esc(k.segment)}</i></div>`;
 function ktvCard(k, i) {
   return `<article class="kv-card" data-seg="${esc(k.segment)}" data-area="${esc(k.area)}">
   <a class="kv-img" href="${href(k.path)}">${ktvPh(k)}<span class="kv-seg">${k.segment === 'Đối tác' ? '⭐ TOP ĐỐI TÁC' : esc(k.segment)}</span>${i != null ? `<span class="kv-no">#${i + 1}</span>` : ''}</a>
   <div class="kv-b"><h3><a href="${href(k.path)}">${esc(k.name)}</a></h3>
-  <p class="kv-ad">📍 ${esc(k.addr)}, ${esc(k.area)}</p>
+  <p class="kv-ad">📍 ${esc(ktvAddr(k))}</p>
   <p class="kv-meta"><span>💰 ${esc(ktvPrice(k))}</span>${k.hours ? `<span>🕘 ${esc(k.hours)}</span>` : ''}</p>
   <div class="kv-acts"><a class="kv-call" href="tel:${TELN}">📞 Gọi giữ phòng</a><a class="kv-book" href="${href(k.path)}#dat-phong">Đặt phòng</a></div></div></article>`;
 }
 function ktvListPage() {
   if (!KTV.length) return;
   const crumbs = [['Trang chủ', ''], ['Karaoke Hà Nội', 'karaoke-ha-noi/']];
-  const areas = [...new Set(KTV.map(k => k.area))];
+  const areaCount = KTV.reduce((m, k) => (m[k.area] = (m[k.area] || 0) + 1, m), {});
+  const areas = Object.keys(areaCount).sort((a, b) => areaCount[b] - areaCount[a]);
   const faq = [
     { q: 'Karaoke ở Hà Nội giá bao nhiêu một giờ?', a: 'Tuỳ phân khúc. Quán bình dân thường khoảng 100.000–200.000đ/giờ, tầm trung 100.000–300.000đ/giờ, phòng VIP từ khoảng 350.000đ/giờ trở lên. Giá thay đổi theo giờ và ngày, gọi tổng đài để được báo giá chính xác.' },
     { q: 'Đặt phòng karaoke qua TopChill có cần cọc không?', a: `Không. Gọi ${CFG.hotline} hoặc để lại số trên trang quán, tổng đài giữ phòng và gọi lại xác nhận.` },
@@ -647,7 +651,7 @@ function ktvListPage() {
 </div></div>
 <section class="sec"><div class="wrap">
   <div class="kv-filter" id="kvSeg"><button type="button" class="on" data-s="">Tất cả</button>${KTV_SEG.filter(sg => KTV.some(k => k.segment === sg)).map(sg => `<button type="button" data-s="${sg}">${sg === 'VIP' ? '👑 ' : sg === 'Đối tác' ? '⭐ ' : ''}${sg === 'Đối tác' ? 'Top đối tác' : sg}</button>`).join('')}</div>
-  <div class="kv-filter sm" id="kvArea"><button type="button" class="on" data-a="">Mọi quận</button>${areas.map(a => `<button type="button" data-a="${esc(a)}">${esc(a)}</button>`).join('')}</div>
+  <div class="kv-filter sm" id="kvArea"><button type="button" class="on" data-a="">Mọi quận</button>${areas.map(a => `<button type="button" data-a="${esc(a)}">${esc(a)} <small>${areaCount[a]}</small></button>`).join('')}</div>
   <div class="kv-grid" id="kvGrid">${KTV.map((k, i) => ktvCard(k, i)).join('')}</div>
   <p class="kv-note">Giá phòng và giờ mở cửa là thông tin tham khảo từ nguồn công khai, có thể thay đổi. Gọi ${esc(CFG.hotline)} để tổng đài xác nhận trước khi đến.</p>
 </div></section>
@@ -672,7 +676,7 @@ function ktvPage(k) {
 <div class="kv-hero"><div class="wrap">${crumbsHtml(crumbs)}
   <div class="kv-head"><div class="kv-img big">${ktvPh(k, 1200)}<span class="kv-seg">${k.segment === 'Đối tác' ? '⭐ TOP ĐỐI TÁC' : esc(k.segment)}</span></div>
   <div><span class="eyebrow">🎤 Karaoke · ${esc(k.area)}, Hà Nội</span><h1>${esc(k.name)}</h1>
-  <p class="kv-ad">📍 ${esc(k.addr)}, ${esc(k.area)}, Hà Nội · <a href="${maps}" target="_blank" rel="noopener">Chỉ đường</a></p>
+  <p class="kv-ad">📍 ${esc(ktvAddr(k))}, Hà Nội · <a href="${maps}" target="_blank" rel="noopener">Chỉ đường</a></p>
   <p class="kv-meta"><span>💰 ${esc(ktvPrice(k))}</span>${k.hours ? `<span>🕘 ${esc(k.hours)}</span>` : ''}<span>⭐ ${esc(k.segment)}</span></p>
   <div class="kv-cta"><a class="kv-call big" href="tel:${TELN}">📞 Gọi giữ phòng</a><a class="kv-book big" href="#dat-phong">Đặt phòng online</a></div></div></div>
 </div></div>
@@ -680,7 +684,7 @@ function ktvPage(k) {
   <h2>Giới thiệu ${esc(k.name)}</h2><p>${esc(k.desc)}</p>
   ${k.images && k.images.length > 1 ? `<h3>Ảnh ${esc(k.name)}</h3><div class="kv-gal">${k.images.map((u, i) => `<a href="${u}" target="_blank" rel="noopener"><img src="${u}" alt="${esc(k.name)} – ảnh ${i + 1}" loading="lazy" decoding="async"></a>`).join('')}</div>` : ''}
   ${k.features && k.features.length ? `<h3>Điểm nổi bật</h3><ul>${k.features.map(f => `<li>${esc(f)}</li>`).join('')}</ul>` : ''}
-  <table class="kv-tb"><tr><th>Địa chỉ</th><td>${esc(k.addr)}, ${esc(k.area)}, Hà Nội</td></tr><tr><th>Phân khúc</th><td>${esc(k.segment)}</td></tr><tr><th>Giá phòng tham khảo</th><td>${esc(ktvPrice(k))}</td></tr><tr><th>Giờ mở cửa</th><td>${esc(k.hours || 'Gọi tổng đài để xác nhận')}</td></tr></table>
+  <table class="kv-tb"><tr><th>Địa chỉ</th><td>${esc(ktvAddr(k))}, Hà Nội</td></tr><tr><th>Phân khúc</th><td>${esc(k.segment)}</td></tr><tr><th>Giá phòng tham khảo</th><td>${esc(ktvPrice(k))}</td></tr><tr><th>Giờ mở cửa</th><td>${esc(k.hours || 'Gọi tổng đài để xác nhận')}</td></tr></table>
   <p class="kv-note">Thông tin tổng hợp từ nguồn công khai, giá và giờ có thể thay đổi. Gọi ${esc(CFG.hotline)} để xác nhận trước khi đến.</p>
 </div></section>
 <section class="sec" id="dat-phong"><div class="wrap narrow">
