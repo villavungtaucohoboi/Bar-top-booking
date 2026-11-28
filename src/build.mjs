@@ -48,9 +48,9 @@ const LIVE_BARS = DATA.bars.filter(b => !b.hidden).map(b => {
   return x;
 });
 let APP = fs.readFileSync(path.join(ROOT, 'src/app.html'), 'utf8');
-{ const a = APP.indexOf('const BARS=['), z = APP.indexOf('\n];\n', a);
+{ const a = APP.indexOf('const BARS=['), marker = APP.indexOf('const pad=', a), z = APP.lastIndexOf('];', marker);
   if (a < 0 || z < 0) throw new Error('Không tìm thấy BARS trong app.html');
-  APP = APP.slice(0, a) + 'const BARS=' + JSON.stringify(LIVE_BARS) + ';' + APP.slice(z + 3);
+  APP = APP.slice(0, a) + 'const BARS=' + JSON.stringify(LIVE_BARS) + ';' + APP.slice(z + 2);
   APP = APP.replace('const KTV=[];', 'const KTV=' + JSON.stringify((DATA.ktv || []).filter(k => !k.hidden).sort((a, b) => (a.pin || 999) - (b.pin || 999)).slice(0, 8).map(k => ({ n: k.name, s: k.slug, a: k.area, ad: k.addr, g: k.segment, p: k.price || [], h: k.hours || '', i: (k.images || [])[0] || '' }))).replace(/</g, '\\u003c') + ';');
   { const BK = CFG.web3formsKey ? { kind: 'w3f', url: 'https://api.web3forms.com/submit', key: CFG.web3formsKey }
       : CFG.bookingEndpoint ? { kind: 'url', url: CFG.bookingEndpoint }

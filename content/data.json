@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-28",
+  "updated": "2026-11-28T02:23:42.507Z",
   "ticker": [
     "🔥 Đặt bàn bar Hà Nội, Sài Gòn, Đà Nẵng chỉ trong 30 giây",
     "📞 Tổng đài 0838 000 222 giữ bàn giúp bạn mỗi tối",
@@ -16893,7 +16893,7 @@
       "city": "hn",
       "area": "Ba Đình",
       "addr": "168 Ngọc Khánh",
-      "segment": "VIP",
+      "segment": "Đối tác",
       "hours": "",
       "price": [],
       "features": [
@@ -16906,11 +16906,15 @@
         "https://www.foody.vn/ha-noi/karaoke-phu-hop-dai-tiec",
         "https://mytour.vn/en/blog/bai-viet/discover-the-top-7-vip-karaoke-venues-in-hanoi.html",
         "https://mia.vn/cam-nang-du-lich/quan-karaoke-ha-noi-19146",
-        "https://blog.raynatours.com/?p=49605"
+        "https://blog.raynatours.com/?p=49605",
+        "https://www.9life.com.vn/products/karaoke-top-one-ktv-168-ngoc-khanh"
       ],
-      "images": [],
+      "images": [
+        "/img/ktv/karaoke-top-one-ktv-ngoc-khanh/9life.webp"
+      ],
       "pin": null,
-      "hidden": false
+      "hidden": false,
+      "source9lifeId": "1039891369"
     },
     {
       "id": 2,
@@ -16919,7 +16923,7 @@
       "city": "hn",
       "area": "Thanh Xuân",
       "addr": "192 Nguyễn Tuân",
-      "segment": "VIP",
+      "segment": "Đối tác",
       "hours": "",
       "price": [],
       "features": [
@@ -16930,11 +16934,15 @@
       "desc": "Pattaya Karaoke Lounge nằm tại 192 Nguyễn Tuân, phường Nhân Chính, quận Thanh Xuân. Quán được các cẩm nang du lịch xếp vào nhóm karaoke VIP của Hà Nội, hoạt động cả ngày và thường đông khách nhất sau 22 giờ. Khách thường được phục vụ kèm trái cây và các loại hạt.",
       "sources": [
         "https://mytour.vn/en/blog/bai-viet/discover-the-top-7-vip-karaoke-venues-in-hanoi.html",
-        "https://mia.vn/cam-nang-du-lich/quan-karaoke-ha-noi-19146"
+        "https://mia.vn/cam-nang-du-lich/quan-karaoke-ha-noi-19146",
+        "https://www.9life.com.vn/products/karaoke-pattaya-192-nguyen-tuan"
       ],
-      "images": [],
+      "images": [
+        "/img/ktv/pattaya-karaoke-lounge/9life.webp"
+      ],
       "pin": null,
-      "hidden": false
+      "hidden": false,
+      "source9lifeId": "1039865832"
     },
     {
       "id": 3,
@@ -16943,7 +16951,7 @@
       "city": "hn",
       "area": "Cầu Giấy",
       "addr": "202 Trung Kính",
-      "segment": "VIP",
+      "segment": "Đối tác",
       "hours": "",
       "price": [],
       "features": [
@@ -16955,11 +16963,15 @@
       "desc": "Kenz Club (còn gọi Karaoke 202 Trung Kính) nằm tại 202 Trung Kính, phường Yên Hòa, quận Cầu Giấy. Quán có hệ thống phòng VIP lớn, với hai phong cách cổ điển (đèn chùm, sofa da) và hiện đại, phù hợp nhóm đông người. Giá phòng không công bố, cần liên hệ để được báo giá.",
       "sources": [
         "https://www.greensm.com/vn-vi/news/quan-karaoke-trung-kinh-cau-giay",
-        "https://www.foody.vn/ha-noi/entertain/karaoke"
+        "https://www.foody.vn/ha-noi/entertain/karaoke",
+        "https://www.9life.com.vn/products/karaoke-kenz-club-202-trung-kinh"
       ],
-      "images": [],
+      "images": [
+        "/img/ktv/karaoke-kenz-club/9life.webp"
+      ],
       "pin": null,
-      "hidden": false
+      "hidden": false,
+      "source9lifeId": "1039950593"
     },
     {
       "id": 4,
@@ -16992,7 +17004,7 @@
       "city": "hn",
       "area": "Ba Đình",
       "addr": "107 Đào Tấn",
-      "segment": "VIP",
+      "segment": "Đối tác",
       "hours": "",
       "price": [],
       "features": [
@@ -17002,11 +17014,15 @@
       "desc": "Karaoke Star World tọa lạc tại 107 Đào Tấn, quận Ba Đình. Quán được giới thiệu là một trong những địa chỉ karaoke cao cấp, với các hạng phòng từ VIP đến Deluxe. Không gian rộng rãi, nội thất tương đối sang trọng.",
       "sources": [
         "https://mia.vn/cam-nang-du-lich/quan-karaoke-ha-noi-19146",
-        "https://www.foody.vn/ha-noi/karaoke-co-tra-bang-the"
+        "https://www.foody.vn/ha-noi/karaoke-co-tra-bang-the",
+        "https://www.9life.com.vn/products/karaoke-star-world-107-dao-tan"
       ],
-      "images": [],
+      "images": [
+        "/img/ktv/karaoke-star-world/9life.webp"
+      ],
       "pin": null,
-      "hidden": false
+      "hidden": false,
+      "source9lifeId": "1039914686"
     },
     {
       "id": 6,
@@ -17015,7 +17031,7 @@
       "city": "hn",
       "area": "Đống Đa",
       "addr": "299 Xã Đàn",
-      "segment": "VIP",
+      "segment": "Đối tác",
       "hours": "",
       "price": [],
       "features": [
@@ -17025,11 +17041,15 @@
       ],
       "desc": "Golden Crown Karaoke nằm tại 299 Xã Đàn, quận Đống Đa. Quán có 16 phòng với nhiều kích cỡ, thiết kế tông vàng ấm và mỗi phòng mang một phong cách riêng. Nhiều phòng có sân khấu ở giữa, phù hợp cả nhóm nhỏ lẫn nhóm đông.",
       "sources": [
-        "https://mytour.vn/en/blog/bai-viet/discover-the-top-7-vip-karaoke-venues-in-hanoi.html"
+        "https://mytour.vn/en/blog/bai-viet/discover-the-top-7-vip-karaoke-venues-in-hanoi.html",
+        "https://www.9life.com.vn/products/karaoke-golden-crown-299-xa-dan"
       ],
-      "images": [],
+      "images": [
+        "/img/ktv/golden-crown-karaoke/9life.webp"
+      ],
       "pin": null,
-      "hidden": false
+      "hidden": false,
+      "source9lifeId": "1053103681"
     },
     {
       "id": 7,
@@ -17063,7 +17083,7 @@
       "city": "hn",
       "area": "Cầu Giấy",
       "addr": "118 Hồ Tùng Mậu",
-      "segment": "VIP",
+      "segment": "Đối tác",
       "hours": "Mở 24/7",
       "price": [
         350,
@@ -17076,11 +17096,15 @@
       ],
       "desc": "Karaoke Vương Miện nằm tại 118 Hồ Tùng Mậu, quận Cầu Giấy và mở cửa 24/7. Mỗi phòng có nhà vệ sinh riêng và wifi. Giá tham khảo khoảng 350.000–600.000 đồng/giờ (số liệu tháng 1/2025).",
       "sources": [
-        "https://www.greensm.com/vn-vi/news/quan-karaoke-cau-giay"
+        "https://www.greensm.com/vn-vi/news/quan-karaoke-cau-giay",
+        "https://www.9life.com.vn/products/karaoke-crown-118-ho-tung-mau"
       ],
-      "images": [],
+      "images": [
+        "/img/ktv/karaoke-vuong-mien/9life.webp"
+      ],
       "pin": null,
-      "hidden": false
+      "hidden": false,
+      "source9lifeId": "1076246358"
     },
     {
       "id": 9,
@@ -17089,7 +17113,7 @@
       "city": "hn",
       "area": "Cầu Giấy",
       "addr": "1 Nguyễn Khánh Toàn",
-      "segment": "Tầm trung",
+      "segment": "Đối tác",
       "hours": "Mở 24/7",
       "price": [
         100,
@@ -17103,11 +17127,15 @@
       "desc": "Karaoke Las Vegas nằm tại số 1 Nguyễn Khánh Toàn, phường Quan Hoa, quận Cầu Giấy và mở cửa 24/24. Quán có 16 phòng hát rộng rãi, sức chứa đến 50 người, kèm menu đồ uống và đồ ăn vặt. Giá tham khảo khoảng 100.000–300.000 đồng/giờ.",
       "sources": [
         "https://mytour.vn/en/blog/bai-viet/compilation-of-affordable-24-7-karaoke-spots-in-hanoi.html",
-        "https://www.greensm.com/vn-vi/news/quan-karaoke-cau-giay"
+        "https://www.greensm.com/vn-vi/news/quan-karaoke-cau-giay",
+        "https://www.9life.com.vn/products/karaoke-las-vegas-1-nguyen-khanh-toan"
       ],
-      "images": [],
+      "images": [
+        "/img/ktv/karaoke-las-vegas/9life.webp"
+      ],
       "pin": null,
-      "hidden": false
+      "hidden": false,
+      "source9lifeId": "1039914520"
     },
     {
       "id": 10,
@@ -17138,7 +17166,7 @@
       "city": "hn",
       "area": "Đống Đa",
       "addr": "65 Thái Thịnh",
-      "segment": "Tầm trung",
+      "segment": "Đối tác",
       "hours": "",
       "price": [],
       "features": [
@@ -17146,11 +17174,15 @@
       ],
       "desc": "Karaoke Magic nằm tại 65 Thái Thịnh, quận Đống Đa. Quán có nhiều hạng phòng từ khoảng 10 đến 40 người. Theo GreenSM, giá tính từ 50.000 đồng/giờ/người và khách có thể đặt phòng qua điện thoại, fanpage hoặc Zalo.",
       "sources": [
-        "https://www.greensm.com/vn-vi/news/karaoke-magic"
+        "https://www.greensm.com/vn-vi/news/karaoke-magic",
+        "https://www.9life.com.vn/products/karaoke-sing-ktv-65-thai-thinh"
       ],
-      "images": [],
+      "images": [
+        "/img/ktv/karaoke-magic/9life.webp"
+      ],
       "pin": null,
-      "hidden": false
+      "hidden": false,
+      "source9lifeId": "1074884285"
     },
     {
       "id": 12,
@@ -17159,18 +17191,22 @@
       "city": "hn",
       "area": "Nam Từ Liêm",
       "addr": "235 Lê Đức Thọ",
-      "segment": "Tầm trung",
+      "segment": "Đối tác",
       "hours": "",
       "price": [],
       "features": [],
       "desc": "Karaoke Monaco nằm tại 235 Lê Đức Thọ, phường Mỹ Đình, quận Nam Từ Liêm. Đây là địa điểm karaoke ở khu vực Mỹ Đình, có trang giới thiệu riêng của quán.",
       "sources": [
         "https://sites.google.com/view/karaoke-monaco-my-dinh/home/",
-        "https://karaokemonaco.blogspot.com/2025/06/discover-best-karaoke-my-inh-spots-for.html"
+        "https://karaokemonaco.blogspot.com/2025/06/discover-best-karaoke-my-inh-spots-for.html",
+        "https://www.9life.com.vn/products/karaoke-monaco-235-le-duc-tho"
       ],
-      "images": [],
+      "images": [
+        "/img/ktv/karaoke-monaco-my-dinh/9life.webp"
+      ],
       "pin": null,
-      "hidden": false
+      "hidden": false,
+      "source9lifeId": "1039946439"
     },
     {
       "id": 13,
@@ -17179,7 +17215,7 @@
       "city": "hn",
       "area": "Cầu Giấy",
       "addr": "33 Nguyễn Khang",
-      "segment": "Bình dân",
+      "segment": "Đối tác",
       "hours": "10:00 – 04:00",
       "price": [
         100,
@@ -17192,11 +17228,15 @@
       "desc": "Karaoke Point 33 nằm tại 33 Nguyễn Khang, phường Trung Hòa, quận Cầu Giấy, mở cửa từ 10:00 đến 04:00. Phòng có sức chứa đến 40 người. Giá tham khảo khoảng 100.000–200.000 đồng/giờ, phù hợp nhóm bạn và sinh viên.",
       "sources": [
         "https://www.greensm.com/vn-vi/news/quan-karaoke-trung-hoa-cau-giay",
-        "https://www.greensm.com/vn-vi/news/quan-karaoke-cau-giay"
+        "https://www.greensm.com/vn-vi/news/quan-karaoke-cau-giay",
+        "https://www.9life.com.vn/products/karaoke-royal-31-33-nguyen-khang"
       ],
-      "images": [],
+      "images": [
+        "/img/ktv/karaoke-point-33-nguyen-khang/9life.webp"
+      ],
       "pin": null,
-      "hidden": false
+      "hidden": false,
+      "source9lifeId": "1039851692"
     },
     {
       "id": 14,
@@ -17205,7 +17245,7 @@
       "city": "hn",
       "area": "Cầu Giấy",
       "addr": "114 Trung Hòa",
-      "segment": "Bình dân",
+      "segment": "Đối tác",
       "hours": "11:00 – 02:00",
       "price": [
         100,
@@ -17216,11 +17256,15 @@
       ],
       "desc": "Karaoke Babylon nằm tại 114 Trung Hòa, phường Trung Hòa, quận Cầu Giấy. Quán mở cửa từ 11:00 đến 02:00. Giá tham khảo khoảng 100.000–200.000 đồng/giờ.",
       "sources": [
-        "https://www.greensm.com/vn-vi/news/quan-karaoke-trung-hoa-cau-giay"
+        "https://www.greensm.com/vn-vi/news/quan-karaoke-trung-hoa-cau-giay",
+        "https://www.9life.com.vn/products/karaoke-babylon-114-trung-hoa"
       ],
-      "images": [],
+      "images": [
+        "/img/ktv/karaoke-babylon/9life.webp"
+      ],
       "pin": null,
-      "hidden": false
+      "hidden": false,
+      "source9lifeId": "1053864337"
     },
     {
       "id": 15,
@@ -17359,8 +17403,11 @@
         "Đặt phòng qua tổng đài, không cần cọc"
       ],
       "desc": "Karaoke London là quán karaoke ở phường Phú Lương, quận Hà Đông, Hà Nội. Gọi tổng đài TopChill để được báo giá phòng, giữ phòng và chỉ đường.",
-      "sources": [],
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-london-phu-luong-89-hoang-don-hoa"
+      ],
       "images": [
+        "/img/ktv/karaoke-london-phu-luong/9life.webp",
         "/img/ktv/karaoke-london-phu-luong/01.webp",
         "/img/ktv/karaoke-london-phu-luong/02.webp",
         "/img/ktv/karaoke-london-phu-luong/03.webp",
@@ -17369,7 +17416,3610 @@
         "/img/ktv/karaoke-london-phu-luong/06.webp"
       ],
       "pin": 4,
-      "hidden": false
+      "hidden": false,
+      "source9lifeId": "1076005826"
+    },
+    {
+      "id": 21,
+      "name": "Karaoke 132",
+      "slug": "karaoke-132",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "132 Hào Nam, Phường Ô Chợ Dừa, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke 132 là địa điểm karaoke tại 132 Hào Nam, Phường Ô Chợ Dừa, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-132-132-hao-nam"
+      ],
+      "images": [
+        "/img/ktv/karaoke-132/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1070169278"
+    },
+    {
+      "id": 22,
+      "name": "Karaoke 156",
+      "slug": "karaoke-156",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "156 Chùa Láng, Phường Láng Thượng, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke 156 là địa điểm karaoke tại 156 Chùa Láng, Phường Láng Thượng, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-156-156-chua-lang"
+      ],
+      "images": [
+        "/img/ktv/karaoke-156/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1051769763"
+    },
+    {
+      "id": 23,
+      "name": "Karaoke 16",
+      "slug": "karaoke-16",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "16 Tuệ Tĩnh, Phường Bùi Thị Xuân, Quận Hai Bà Trưng",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke 16 là địa điểm karaoke tại 16 Tuệ Tĩnh, Phường Bùi Thị Xuân, Quận Hai Bà Trưng, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-16-16-tue-tinh"
+      ],
+      "images": [
+        "/img/ktv/karaoke-16/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039962348"
+    },
+    {
+      "id": 24,
+      "name": "Karaoke 2B",
+      "slug": "karaoke-2b",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "2B Nguyễn Khang, Phường Yên Hòa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke 2B là địa điểm karaoke tại 2B Nguyễn Khang, Phường Yên Hòa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-2b-2b-nguyen-khang"
+      ],
+      "images": [
+        "/img/ktv/karaoke-2b/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1030723964"
+    },
+    {
+      "id": 25,
+      "name": "Karaoke 36",
+      "slug": "karaoke-36",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "36 Bùi Thị Xuân, Phường Bùi Thị Xuân, Quận Hai Bà Trưng",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke 36 là địa điểm karaoke tại 36 Bùi Thị Xuân, Phường Bùi Thị Xuân, Quận Hai Bà Trưng, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-36-36-bui-thi-xuan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-36/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1068103949"
+    },
+    {
+      "id": 26,
+      "name": "Karaoke 36",
+      "slug": "karaoke-36-26",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "36 Ngô Thì Nhậm, Phường Ngô Thì Nhậm, Quận Hai Bà Trưng",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke 36 là địa điểm karaoke tại 36 Ngô Thì Nhậm, Phường Ngô Thì Nhậm, Quận Hai Bà Trưng, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-36-36-ngo-thi-nham"
+      ],
+      "images": [
+        "/img/ktv/karaoke-36-26/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1030724088"
+    },
+    {
+      "id": 27,
+      "name": "Karaoke 39",
+      "slug": "karaoke-39",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "39 Bùi Thị Xuân, Phường Nguyễn Du, Quận Hai Bà Trưng",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke 39 là địa điểm karaoke tại 39 Bùi Thị Xuân, Phường Nguyễn Du, Quận Hai Bà Trưng, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-39-39-bui-thi-xuan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-39/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1054184396"
+    },
+    {
+      "id": 28,
+      "name": "Karaoke 5 Sao",
+      "slug": "karaoke-5-sao",
+      "city": "hn",
+      "area": "Quận Hà Đông",
+      "addr": "148 Trần Phú, Phường Mộ Lao, Quận Hà Đông",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke 5 Sao là địa điểm karaoke tại 148 Trần Phú, Phường Mộ Lao, Quận Hà Đông, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-5-sao-148-tran-phu"
+      ],
+      "images": [
+        "/img/ktv/karaoke-5-sao/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039891863"
+    },
+    {
+      "id": 29,
+      "name": "Karaoke 5 Sao",
+      "slug": "karaoke-5-sao-29",
+      "city": "hn",
+      "area": "Huyện Gia Lâm",
+      "addr": "16 Cửu Việt, Thị trấn Trâu Quỳ, Huyện Gia Lâm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke 5 Sao là địa điểm karaoke tại 16 Cửu Việt, Thị trấn Trâu Quỳ, Huyện Gia Lâm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-5-sao-16-cuu-viet"
+      ],
+      "images": [
+        "/img/ktv/karaoke-5-sao-29/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1074298986"
+    },
+    {
+      "id": 30,
+      "name": "Karaoke 5 Sao",
+      "slug": "karaoke-5-sao-30",
+      "city": "hn",
+      "area": "Quận Nam Từ Liêm",
+      "addr": "16 Trịnh Văn Bô, Phường Xuân Phương, Quận Nam Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke 5 Sao là địa điểm karaoke tại 16 Trịnh Văn Bô, Phường Xuân Phương, Quận Nam Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-5-sao-16-trinh-van-bo"
+      ],
+      "images": [
+        "/img/ktv/karaoke-5-sao-30/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039891957"
+    },
+    {
+      "id": 31,
+      "name": "Karaoke 5 Sao",
+      "slug": "karaoke-5-sao-31",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "265 Giảng Võ, Phường Chợ Dừa, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke 5 Sao là địa điểm karaoke tại 265 Giảng Võ, Phường Chợ Dừa, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-5-sao-265-giang-vo"
+      ],
+      "images": [
+        "/img/ktv/karaoke-5-sao-31/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1071648795"
+    },
+    {
+      "id": 32,
+      "name": "Karaoke 5 Sao",
+      "slug": "karaoke-5-sao-32",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "473 Hoàng Quốc Việt, Phường Cổ Nhuế, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke 5 Sao là địa điểm karaoke tại 473 Hoàng Quốc Việt, Phường Cổ Nhuế, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-5-sao-473-hoang-quoc-viet"
+      ],
+      "images": [
+        "/img/ktv/karaoke-5-sao-32/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039891898"
+    },
+    {
+      "id": 33,
+      "name": "Karaoke 5 Sao",
+      "slug": "karaoke-5-sao-33",
+      "city": "hn",
+      "area": "Quận Hoàng Mai",
+      "addr": "645 Tân Mai, Phường Tân Mai, Quận Hoàng Mai",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke 5 Sao là địa điểm karaoke tại 645 Tân Mai, Phường Tân Mai, Quận Hoàng Mai, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-5-sao-645-tan-mai"
+      ],
+      "images": [
+        "/img/ktv/karaoke-5-sao-33/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039891998"
+    },
+    {
+      "id": 34,
+      "name": "Karaoke 5 Sao",
+      "slug": "karaoke-5-sao-34",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "66 Bạch Mai, Phường Cầu Dền, Quận Hai Bà Trưng",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke 5 Sao là địa điểm karaoke tại 66 Bạch Mai, Phường Cầu Dền, Quận Hai Bà Trưng, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-5-sao-66-bach-mai"
+      ],
+      "images": [
+        "/img/ktv/karaoke-5-sao-34/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1074298865"
+    },
+    {
+      "id": 35,
+      "name": "Karaoke 5 Sao",
+      "slug": "karaoke-5-sao-35",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "96 Thái Thịnh, Phường Ngã Tư Sở, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke 5 Sao là địa điểm karaoke tại 96 Thái Thịnh, Phường Ngã Tư Sở, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-5-sao-96-thai-thinh"
+      ],
+      "images": [
+        "/img/ktv/karaoke-5-sao-35/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039891810"
+    },
+    {
+      "id": 36,
+      "name": "Karaoke 68",
+      "slug": "karaoke-68",
+      "city": "hn",
+      "area": "Huyện Thanh Trì",
+      "addr": "110 Cầu Bươu, Phường Tân Triều, Huyện Thanh Trì",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke 68 là địa điểm karaoke tại 110 Cầu Bươu, Phường Tân Triều, Huyện Thanh Trì, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-68-110-cau-buou"
+      ],
+      "images": [
+        "/img/ktv/karaoke-68/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039955918"
+    },
+    {
+      "id": 37,
+      "name": "Karaoke A99",
+      "slug": "karaoke-a99",
+      "city": "hn",
+      "area": "Quận Nam Từ Liêm",
+      "addr": "28 Lê Đức Thọ, Phường Mỹ Đình, Quận Nam Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke A99 là địa điểm karaoke tại 28 Lê Đức Thọ, Phường Mỹ Đình, Quận Nam Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-a99-28-le-duc-tho"
+      ],
+      "images": [
+        "/img/ktv/karaoke-a99/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039851856"
+    },
+    {
+      "id": 38,
+      "name": "Karaoke A999",
+      "slug": "karaoke-a999",
+      "city": "hn",
+      "area": "Quận Nam Từ Liêm",
+      "addr": "51 Nguyễn Hoàng, Phường Mỹ Đình 2, Quận Nam Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke A999 là địa điểm karaoke tại 51 Nguyễn Hoàng, Phường Mỹ Đình 2, Quận Nam Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-a999-51-nguyen-hoang"
+      ],
+      "images": [
+        "/img/ktv/karaoke-a999/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039890772"
+    },
+    {
+      "id": 39,
+      "name": "Karaoke Amigo",
+      "slug": "karaoke-amigo",
+      "city": "hn",
+      "area": "Quận Nam Từ Liêm",
+      "addr": "233 Lê Đức Thọ, Phường Mỹ Đình 2, Quận Nam Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Amigo là địa điểm karaoke tại 233 Lê Đức Thọ, Phường Mỹ Đình 2, Quận Nam Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-amigo-233-le-duc-tho"
+      ],
+      "images": [
+        "/img/ktv/karaoke-amigo/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039892018"
+    },
+    {
+      "id": 40,
+      "name": "Karaoke Amigo KTV",
+      "slug": "karaoke-amigo-ktv",
+      "city": "hn",
+      "area": "Huyện Hoài Đức",
+      "addr": "6 Lô A7 Lê Trọng Tấn, Khu đô thị Nam An Khánh, Huyện Hoài Đức",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Amigo KTV là địa điểm karaoke tại 6 Lô A7 Lê Trọng Tấn, Khu đô thị Nam An Khánh, Huyện Hoài Đức, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-amigo-ktv-6-lo-a7-le-trong-tan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-amigo-ktv/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1057984579"
+    },
+    {
+      "id": 41,
+      "name": "Karaoke Apollo",
+      "slug": "karaoke-apollo",
+      "city": "hn",
+      "area": "Quận Tây Hồ",
+      "addr": "40 Xuân La, Phường Xuân La, Quận Tây Hồ",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Apollo là địa điểm karaoke tại 40 Xuân La, Phường Xuân La, Quận Tây Hồ, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-apollo-40-xuan-la"
+      ],
+      "images": [
+        "/img/ktv/karaoke-apollo/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1053798996"
+    },
+    {
+      "id": 42,
+      "name": "Karaoke Athena",
+      "slug": "karaoke-athena",
+      "city": "hn",
+      "area": "Quận Bắc Từ Liêm",
+      "addr": "91 Đường 23, Khu đô thị Thành Phố Giao Lưu, Phường Cổ Nhuế, Quận Bắc Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Athena là địa điểm karaoke tại 91 Đường 23, Khu đô thị Thành Phố Giao Lưu, Phường Cổ Nhuế, Quận Bắc Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-athena-kdt-thanh-pho-giao-luu-pham-van-dong"
+      ],
+      "images": [
+        "/img/ktv/karaoke-athena/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039953663"
+    },
+    {
+      "id": 43,
+      "name": "Karaoke Avatar",
+      "slug": "karaoke-avatar",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "419 Trần Khát Chân, Phường Thanh Nhàn, Quận Hai Bà Trưng",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Avatar là địa điểm karaoke tại 419 Trần Khát Chân, Phường Thanh Nhàn, Quận Hai Bà Trưng, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-avatar-419-tran-khat-chan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-avatar/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1041949648"
+    },
+    {
+      "id": 44,
+      "name": "Karaoke Avenue",
+      "slug": "karaoke-avenue",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "54 Trần Thái Tông, Phường Dịch Vọng Hậu, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Avenue là địa điểm karaoke tại 54 Trần Thái Tông, Phường Dịch Vọng Hậu, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-avenue-54-tran-thai-tong"
+      ],
+      "images": [
+        "/img/ktv/karaoke-avenue/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1030729843"
+    },
+    {
+      "id": 45,
+      "name": "Karaoke Bali",
+      "slug": "karaoke-bali",
+      "city": "hn",
+      "area": "Quận Thanh Xuân",
+      "addr": "196 Khương Đình, Phường Hạ Đình, Quận Thanh Xuân",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Bali là địa điểm karaoke tại 196 Khương Đình, Phường Hạ Đình, Quận Thanh Xuân, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-bali-196-khuong-dinh"
+      ],
+      "images": [
+        "/img/ktv/karaoke-bali/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1056742169"
+    },
+    {
+      "id": 46,
+      "name": "Karaoke Begin",
+      "slug": "karaoke-begin",
+      "city": "hn",
+      "area": "Quận Long Biên",
+      "addr": "159 Nguyễn Văn Cừ, Phường Ngọc Lâm, Quận Long Biên",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Begin là địa điểm karaoke tại 159 Nguyễn Văn Cừ, Phường Ngọc Lâm, Quận Long Biên, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-begin-159-nguyen-van-cu"
+      ],
+      "images": [
+        "/img/ktv/karaoke-begin/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1054174499"
+    },
+    {
+      "id": 47,
+      "name": "Karaoke Big Sky",
+      "slug": "karaoke-big-sky",
+      "city": "hn",
+      "area": "Quận Hoàn Kiếm",
+      "addr": "292 Bạch Đằng, Phường Chương Dương, Quận Hoàn Kiếm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Big Sky là địa điểm karaoke tại 292 Bạch Đằng, Phường Chương Dương, Quận Hoàn Kiếm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-big-sky-292-bach-dang"
+      ],
+      "images": [
+        "/img/ktv/karaoke-big-sky/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1030723769"
+    },
+    {
+      "id": 48,
+      "name": "Karaoke BinBo - Ngõ 81 Láng Hạ",
+      "slug": "karaoke-binbo-ngo-81-lang-ha",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "11 Ngõ 81 Láng Hạ, Phường Láng Hạ, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke BinBo - Ngõ 81 Láng Hạ là địa điểm karaoke tại 11 Ngõ 81 Láng Hạ, Phường Láng Hạ, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-binbo-ngo-81-lang-ha"
+      ],
+      "images": [
+        "/img/ktv/karaoke-binbo-ngo-81-lang-ha/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039862014"
+    },
+    {
+      "id": 49,
+      "name": "Karaoke Bingo",
+      "slug": "karaoke-bingo",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "142 Triệu Việt Vương, Phường Nguyễn Du, Quận Hai Bà Trưng",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Bingo là địa điểm karaoke tại 142 Triệu Việt Vương, Phường Nguyễn Du, Quận Hai Bà Trưng, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-bingo-142-trieu-viet-vuong"
+      ],
+      "images": [
+        "/img/ktv/karaoke-bingo/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1040035070"
+    },
+    {
+      "id": 50,
+      "name": "Karaoke Blue - Lô G4 Khu Đấu Giá",
+      "slug": "karaoke-blue-lo-g4-khu-dau-gia",
+      "city": "hn",
+      "area": "Huyện Thanh Trì",
+      "addr": "Lô G4 Khu Đấu Giá, Xã Thanh Liệt, Huyện Thanh Trì, TP. Hà Nội",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Blue - Lô G4 Khu Đấu Giá là địa điểm karaoke tại Lô G4 Khu Đấu Giá, Xã Thanh Liệt, Huyện Thanh Trì, TP. Hà Nội, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-blue-lo-g4-khu-dau-gia"
+      ],
+      "images": [
+        "/img/ktv/karaoke-blue-lo-g4-khu-dau-gia/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1077202876"
+    },
+    {
+      "id": 51,
+      "name": "Karaoke Blue Flash - Yên Xá",
+      "slug": "karaoke-blue-flash-yen-xa",
+      "city": "hn",
+      "area": "Huyện Thanh Trì",
+      "addr": "Yên Xá, Xã Tân Triều, Huyện Thanh Trì",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Blue Flash - Yên Xá là địa điểm karaoke tại Yên Xá, Xã Tân Triều, Huyện Thanh Trì, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-blue-flash-yen-xa"
+      ],
+      "images": [
+        "/img/ktv/karaoke-blue-flash-yen-xa/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1077292246"
+    },
+    {
+      "id": 52,
+      "name": "Karaoke Bom Club 3",
+      "slug": "karaoke-bom-club-3",
+      "city": "hn",
+      "area": "Quận Long Biên",
+      "addr": "2 Ngõ 58 Việt Hưng, Phường Việt Hưng, Quận Long Biên",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Bom Club 3 là địa điểm karaoke tại 2 Ngõ 58 Việt Hưng, Phường Việt Hưng, Quận Long Biên, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-bom-club-3-2-ngo-58-viet-hung"
+      ],
+      "images": [
+        "/img/ktv/karaoke-bom-club-3/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1071143561"
+    },
+    {
+      "id": 53,
+      "name": "Karaoke Chachacha",
+      "slug": "karaoke-chachacha",
+      "city": "hn",
+      "area": "Quận Nam Từ Liêm",
+      "addr": "48 Nhổn, Phường Xuân Phương, Quận Nam Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Chachacha là địa điểm karaoke tại 48 Nhổn, Phường Xuân Phương, Quận Nam Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-chachacha-48-nhon"
+      ],
+      "images": [
+        "/img/ktv/karaoke-chachacha/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1056897312"
+    },
+    {
+      "id": 54,
+      "name": "Karaoke Chachacha",
+      "slug": "karaoke-chachacha-54",
+      "city": "hn",
+      "area": "Quận Nam Từ Liêm",
+      "addr": "57 Nhổn, Phường Xuân Phương, Quận Nam Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Chachacha là địa điểm karaoke tại 57 Nhổn, Phường Xuân Phương, Quận Nam Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-chachacha-57-nhon"
+      ],
+      "images": [
+        "/img/ktv/karaoke-chachacha-54/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1056898498"
+    },
+    {
+      "id": 55,
+      "name": "Karaoke Chợt Nhớ",
+      "slug": "karaoke-chot-nho",
+      "city": "hn",
+      "area": "Quận Ba Đình",
+      "addr": "140 Kim Mã, Phường Kim Mã, Quận Ba Đình",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Chợt Nhớ là địa điểm karaoke tại 140 Kim Mã, Phường Kim Mã, Quận Ba Đình, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-chot-nho-140-kim-ma"
+      ],
+      "images": [
+        "/img/ktv/karaoke-chot-nho/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1040036605"
+    },
+    {
+      "id": 56,
+      "name": "Karaoke Dubai",
+      "slug": "karaoke-dubai",
+      "city": "hn",
+      "area": "Huyện Hoài Đức",
+      "addr": "72 Phương Quan, Xã Vân Côn, Huyện Hoài Đức",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Dubai là địa điểm karaoke tại 72 Phương Quan, Xã Vân Côn, Huyện Hoài Đức, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-dubai-72-phuong-quan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-dubai/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1062872660"
+    },
+    {
+      "id": 57,
+      "name": "Karaoke Dubai",
+      "slug": "karaoke-dubai-57",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "86 Trúc Khê, Phường Láng Hạ, Quận Đống Đa, TP. Hà Nội",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Dubai là địa điểm karaoke tại 86 Trúc Khê, Phường Láng Hạ, Quận Đống Đa, TP. Hà Nội, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-dubai-86-truc-khe"
+      ],
+      "images": [
+        "/img/ktv/karaoke-dubai-57/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1077368103"
+    },
+    {
+      "id": 58,
+      "name": "Karaoke Dubai Club",
+      "slug": "karaoke-dubai-club",
+      "city": "hn",
+      "area": "Quận Hà Đông",
+      "addr": "88 Tố Hữu, Phường Vạn Phúc, Quận Hà Đông",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Dubai Club là địa điểm karaoke tại 88 Tố Hữu, Phường Vạn Phúc, Quận Hà Đông, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-dubai-club-88-to-huu"
+      ],
+      "images": [
+        "/img/ktv/karaoke-dubai-club/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1065189607"
+    },
+    {
+      "id": 59,
+      "name": "Karaoke Eiffel",
+      "slug": "karaoke-eiffel",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "33 Nam Đồng, Phường Nam Đồng, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Eiffel là địa điểm karaoke tại 33 Nam Đồng, Phường Nam Đồng, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-eiffel-33-nam-dong"
+      ],
+      "images": [
+        "/img/ktv/karaoke-eiffel/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1057712193"
+    },
+    {
+      "id": 60,
+      "name": "Karaoke Elite",
+      "slug": "karaoke-elite",
+      "city": "hn",
+      "area": "Quận Hà Đông",
+      "addr": "V5A 34, KĐT Văn Phú, Phường Phú La, Quận Hà Đông",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Elite là địa điểm karaoke tại V5A 34, KĐT Văn Phú, Phường Phú La, Quận Hà Đông, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-elite-kdt-van-phu"
+      ],
+      "images": [
+        "/img/ktv/karaoke-elite/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1054137216"
+    },
+    {
+      "id": 61,
+      "name": "Karaoke F5 Plus",
+      "slug": "karaoke-f5-plus",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "5 Trần Duy Hưng, Phường Trung Hòa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke F5 Plus là địa điểm karaoke tại 5 Trần Duy Hưng, Phường Trung Hòa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-f5-plus-5-tran-duy-hung"
+      ],
+      "images": [
+        "/img/ktv/karaoke-f5-plus/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1030723170"
+    },
+    {
+      "id": 62,
+      "name": "Karaoke F5 Plus",
+      "slug": "karaoke-f5-plus-62",
+      "city": "hn",
+      "area": "Quận Hà Đông",
+      "addr": "66 Tố Hữu, Phường Vạn Phúc, Quận Hà Đông",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke F5 Plus là địa điểm karaoke tại 66 Tố Hữu, Phường Vạn Phúc, Quận Hà Đông, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-f5-plus-66-to-huu",
+        "https://www.9life.com.vn/products/karaoke-sing-ktv-66-to-huu"
+      ],
+      "images": [
+        "/img/ktv/karaoke-f5-plus-62/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1062010964"
+    },
+    {
+      "id": 63,
+      "name": "Karaoke Flamenco KTV",
+      "slug": "karaoke-flamenco-ktv",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "16 18 Vũ Phạm Hàm, Phường Trung Hoà, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Flamenco KTV là địa điểm karaoke tại 16 18 Vũ Phạm Hàm, Phường Trung Hoà, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-flamenco-ktv-16-18-vu-pham-ham"
+      ],
+      "images": [
+        "/img/ktv/karaoke-flamenco-ktv/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1062372328"
+    },
+    {
+      "id": 64,
+      "name": "Karaoke G7",
+      "slug": "karaoke-g7",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "38/178 Thái Hà, Phường Láng Hạ, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke G7 là địa điểm karaoke tại 38/178 Thái Hà, Phường Láng Hạ, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-g7-38-178-thai-ha"
+      ],
+      "images": [
+        "/img/ktv/karaoke-g7/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039948586"
+    },
+    {
+      "id": 65,
+      "name": "Karaoke Grand",
+      "slug": "karaoke-grand",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "300 Xã Đàn, Phường Nam Đồng, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Grand là địa điểm karaoke tại 300 Xã Đàn, Phường Nam Đồng, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-grand-300-xa-dan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-grand/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039867152"
+    },
+    {
+      "id": 66,
+      "name": "Karaoke Han Gang",
+      "slug": "karaoke-han-gang",
+      "city": "hn",
+      "area": "Quận Nam Từ Liêm",
+      "addr": "54 Ngõ 39 Đình Thôn, Phường Mỹ Đình 1, Quận Nam Từ Liêm, TP. Hà Nội",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Han Gang là địa điểm karaoke tại 54 Ngõ 39 Đình Thôn, Phường Mỹ Đình 1, Quận Nam Từ Liêm, TP. Hà Nội, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-han-gang-54-ngo-39-dinh-thon"
+      ],
+      "images": [
+        "/img/ktv/karaoke-han-gang/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1076692087"
+    },
+    {
+      "id": 67,
+      "name": "Karaoke Heaven",
+      "slug": "karaoke-heaven",
+      "city": "hn",
+      "area": "Huyện Hoài Đức",
+      "addr": "BT FB61, Khu đô thị Thiên Đường Bảo Sơn, xã An Khánh, huyện Hoài Đức, thành phố Hà Nội",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Heaven là địa điểm karaoke tại BT FB61, Khu đô thị Thiên Đường Bảo Sơn, xã An Khánh, huyện Hoài Đức, thành phố Hà Nội, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-heaven-kdt-thien-duong-bao-son"
+      ],
+      "images": [
+        "/img/ktv/karaoke-heaven/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1073983013"
+    },
+    {
+      "id": 68,
+      "name": "Karaoke Hero",
+      "slug": "karaoke-hero",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "117 Trung Hòa, Phường Trung Hòa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Hero là địa điểm karaoke tại 117 Trung Hòa, Phường Trung Hòa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-hero-117-trung-hoa"
+      ],
+      "images": [
+        "/img/ktv/karaoke-hero/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039851738"
+    },
+    {
+      "id": 69,
+      "name": "Karaoke Hoa Cỏ May",
+      "slug": "karaoke-hoa-co-may",
+      "city": "hn",
+      "area": "Huyện Hoài Đức",
+      "addr": "236 Vân Côn, Xã Vân Côn, Huyện Hoài Đức",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Hoa Cỏ May là địa điểm karaoke tại 236 Vân Côn, Xã Vân Côn, Huyện Hoài Đức, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-hoa-co-may-236-van-con"
+      ],
+      "images": [
+        "/img/ktv/karaoke-hoa-co-may/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1056909366"
+    },
+    {
+      "id": 70,
+      "name": "Karaoke Hoa Sang - BT25 Ngõ 60 Nguyễn Thị Định",
+      "slug": "karaoke-hoa-sang-bt25-ngo-60-nguyen-thi-dinh",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "BT25 Ngõ 60 Nguyễn Thị Định, Phường Trung Hòa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Hoa Sang - BT25 Ngõ 60 Nguyễn Thị Định là địa điểm karaoke tại BT25 Ngõ 60 Nguyễn Thị Định, Phường Trung Hòa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-hoa-sang-bt25-ngo-60-nguyen-thi-dinh"
+      ],
+      "images": [
+        "/img/ktv/karaoke-hoa-sang-bt25-ngo-60-nguyen-thi-dinh/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1056897809"
+    },
+    {
+      "id": 71,
+      "name": "Karaoke Hoàng Gia",
+      "slug": "karaoke-hoang-gia",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "85 Nguyễn Khang, Phường Yên Hòa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Hoàng Gia là địa điểm karaoke tại 85 Nguyễn Khang, Phường Yên Hòa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-hoang-gia-85-nguyen-khang"
+      ],
+      "images": [
+        "/img/ktv/karaoke-hoang-gia/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039890343"
+    },
+    {
+      "id": 72,
+      "name": "Karaoke Hoàng Gia 03",
+      "slug": "karaoke-hoang-gia-03",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "3 Nguyễn Thị Định, Phường Trung Hòa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Hoàng Gia 03 là địa điểm karaoke tại 3 Nguyễn Thị Định, Phường Trung Hòa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-hoang-gia-03-3-nguyen-thi-dinh"
+      ],
+      "images": [
+        "/img/ktv/karaoke-hoang-gia-03/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1030723818"
+    },
+    {
+      "id": 73,
+      "name": "Karaoke Hương Giang Club",
+      "slug": "karaoke-huong-giang-club",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "79 Thái Thịnh, Phường Thịnh Quang, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Hương Giang Club là địa điểm karaoke tại 79 Thái Thịnh, Phường Thịnh Quang, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-huong-giang-club-79-thai-thinh"
+      ],
+      "images": [
+        "/img/ktv/karaoke-huong-giang-club/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1030720069"
+    },
+    {
+      "id": 74,
+      "name": "Karaoke Idol",
+      "slug": "karaoke-idol",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "16 Nguyễn Khang, Phường Yên Hòa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Idol là địa điểm karaoke tại 16 Nguyễn Khang, Phường Yên Hòa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-idol-16-nguyen-khang"
+      ],
+      "images": [
+        "/img/ktv/karaoke-idol/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1030719588"
+    },
+    {
+      "id": 75,
+      "name": "Karaoke Idol Vip Club",
+      "slug": "karaoke-idol-vip-club",
+      "city": "hn",
+      "area": "Quận Hà Đông",
+      "addr": "174 Vạn Phúc, Phường Vạn Phúc, Quận Hà Đông",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Idol Vip Club là địa điểm karaoke tại 174 Vạn Phúc, Phường Vạn Phúc, Quận Hà Đông, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-idol-vip-club-174-van-phuc"
+      ],
+      "images": [
+        "/img/ktv/karaoke-idol-vip-club/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1031628323"
+    },
+    {
+      "id": 76,
+      "name": "Karaoke IONE",
+      "slug": "karaoke-ione",
+      "city": "hn",
+      "area": "Quận Thanh Xuân",
+      "addr": "180 Nguyễn Tuân, Phường Nhân Chính, Quận Thanh Xuân",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke IONE là địa điểm karaoke tại 180 Nguyễn Tuân, Phường Nhân Chính, Quận Thanh Xuân, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-ione-180-nguyen-tuan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-ione/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039867003"
+    },
+    {
+      "id": 77,
+      "name": "Karaoke JOKER KTV",
+      "slug": "karaoke-joker-ktv",
+      "city": "hn",
+      "area": "Quận Long Biên",
+      "addr": "36 Hồng Tiến, Phường Bồ Đề, Quận Long Biên",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke JOKER KTV là địa điểm karaoke tại 36 Hồng Tiến, Phường Bồ Đề, Quận Long Biên, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-joker-ktv-36-hong-tien"
+      ],
+      "images": [
+        "/img/ktv/karaoke-joker-ktv/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1074914555"
+    },
+    {
+      "id": 78,
+      "name": "Karaoke Ken New KTV",
+      "slug": "karaoke-ken-new-ktv",
+      "city": "hn",
+      "area": "Quận Hà Đông",
+      "addr": "252 Chiến Thắng, Phường Văn Quán, Quận Hà Đông",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Ken New KTV là địa điểm karaoke tại 252 Chiến Thắng, Phường Văn Quán, Quận Hà Đông, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-ken-new-ktv-252-chien-thang"
+      ],
+      "images": [
+        "/img/ktv/karaoke-ken-new-ktv/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1054370104"
+    },
+    {
+      "id": 79,
+      "name": "Karaoke Kevin",
+      "slug": "karaoke-kevin",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "56 Trần Thái Tông, Phường Dịch Vọng Hậu, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Kevin là địa điểm karaoke tại 56 Trần Thái Tông, Phường Dịch Vọng Hậu, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-kevin-56-tran-thai-tong"
+      ],
+      "images": [
+        "/img/ktv/karaoke-kevin/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1030719823"
+    },
+    {
+      "id": 80,
+      "name": "Karaoke King",
+      "slug": "karaoke-king",
+      "city": "hn",
+      "area": "Quận Nam Từ Liêm",
+      "addr": "10 Hàm Nghi, Phường Cầu Diễn, Quận Nam Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke King là địa điểm karaoke tại 10 Hàm Nghi, Phường Cầu Diễn, Quận Nam Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-king-10-ham-nghi"
+      ],
+      "images": [
+        "/img/ktv/karaoke-king/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039914406"
+    },
+    {
+      "id": 81,
+      "name": "Karaoke King KTV",
+      "slug": "karaoke-king-ktv",
+      "city": "hn",
+      "area": "Quận Tây Hồ",
+      "addr": "412 Lạc Long Quân, Phường Nhật Tân, Quận Tây Hồ",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke King KTV là địa điểm karaoke tại 412 Lạc Long Quân, Phường Nhật Tân, Quận Tây Hồ, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-king-ktv-412-lac-long-quan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-king-ktv/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1058095213"
+    },
+    {
+      "id": 82,
+      "name": "Karaoke KTV",
+      "slug": "karaoke-ktv",
+      "city": "hn",
+      "area": "Quận Thanh Xuân",
+      "addr": "18 Nguyễn Lân, Phường Phương Liệt, Quận Thanh Xuân, TP. Hà Nội",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke KTV là địa điểm karaoke tại 18 Nguyễn Lân, Phường Phương Liệt, Quận Thanh Xuân, TP. Hà Nội, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-ktv-18-nguyen-lan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-ktv/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1076686991"
+    },
+    {
+      "id": 83,
+      "name": "Karaoke KTV Enter",
+      "slug": "karaoke-ktv-enter",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "69 71 Triệu Việt Vương, Phường Bùi Thị Xuân, Quận Hai Bà Trưng",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke KTV Enter là địa điểm karaoke tại 69 71 Triệu Việt Vương, Phường Bùi Thị Xuân, Quận Hai Bà Trưng, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-ktv-enter-69-71-trieu-viet-vuong"
+      ],
+      "images": [
+        "/img/ktv/karaoke-ktv-enter/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1055419706"
+    },
+    {
+      "id": 84,
+      "name": "Karaoke Lan Quế Phường",
+      "slug": "karaoke-lan-que-phuong",
+      "city": "hn",
+      "area": "Quận Hoàng Mai",
+      "addr": "36A Nguyễn Hữu Thọ, Phường Đại Kim, Quận Hoàng Mai",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Lan Quế Phường là địa điểm karaoke tại 36A Nguyễn Hữu Thọ, Phường Đại Kim, Quận Hoàng Mai, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-lan-que-phuong-36a-nguyen-huu-tho"
+      ],
+      "images": [
+        "/img/ktv/karaoke-lan-que-phuong/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1075722937"
+    },
+    {
+      "id": 85,
+      "name": "Karaoke Let‘s Sing II",
+      "slug": "karaoke-let-s-sing-ii",
+      "city": "hn",
+      "area": "Huyện Thanh Trì",
+      "addr": "89 Đường 70, Xã Tân Triều, Huyện Thanh Trì",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Let‘s Sing II là địa điểm karaoke tại 89 Đường 70, Xã Tân Triều, Huyện Thanh Trì, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-let-s-sing-ii-89-duong-70"
+      ],
+      "images": [
+        "/img/ktv/karaoke-let-s-sing-ii/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1045110189"
+    },
+    {
+      "id": 86,
+      "name": "Karaoke Level",
+      "slug": "karaoke-level",
+      "city": "hn",
+      "area": "Quận Hà Đông",
+      "addr": "36 Vũ Trọng Khánh, Phường Mộ Lao, Quận Hà Đông",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Level là địa điểm karaoke tại 36 Vũ Trọng Khánh, Phường Mộ Lao, Quận Hà Đông, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-level-36-vu-trong-khanh"
+      ],
+      "images": [
+        "/img/ktv/karaoke-level/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039950048"
+    },
+    {
+      "id": 87,
+      "name": "Karaoke London",
+      "slug": "karaoke-london",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "156 Hoàng Quốc Việt, Phường Cổ Nhuế, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke London là địa điểm karaoke tại 156 Hoàng Quốc Việt, Phường Cổ Nhuế, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-london-156-hoang-quoc-viet"
+      ],
+      "images": [
+        "/img/ktv/karaoke-london/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1067942899"
+    },
+    {
+      "id": 88,
+      "name": "Karaoke London",
+      "slug": "karaoke-london-88",
+      "city": "hn",
+      "area": "Huyện Hoài Đức",
+      "addr": "20 Lê Trọng Tấn, Xã An Khánh, Huyện Hoài Đức",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke London là địa điểm karaoke tại 20 Lê Trọng Tấn, Xã An Khánh, Huyện Hoài Đức, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-london-20-le-trong-tan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-london-88/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1061870810"
+    },
+    {
+      "id": 89,
+      "name": "Karaoke London",
+      "slug": "karaoke-london-89",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "28B Thành Thái, Phường Dịch Vọng, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke London là địa điểm karaoke tại 28B Thành Thái, Phường Dịch Vọng, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-london-28b-thanh-thai"
+      ],
+      "images": [
+        "/img/ktv/karaoke-london-89/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1049976061"
+    },
+    {
+      "id": 90,
+      "name": "Karaoke Lục Giác",
+      "slug": "karaoke-luc-giac",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "20 22 Nguyễn Thị Định, Phường Trung Hòa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Lục Giác là địa điểm karaoke tại 20 22 Nguyễn Thị Định, Phường Trung Hòa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-luc-giac-20-22-nguyen-thi-dinh"
+      ],
+      "images": [
+        "/img/ktv/karaoke-luc-giac/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1030720024"
+    },
+    {
+      "id": 91,
+      "name": "Karaoke Lucky",
+      "slug": "karaoke-lucky",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "10 Hoà Mã, Phường Phạm Đình Hổ, Quận Hai Bà Trưng",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Lucky là địa điểm karaoke tại 10 Hoà Mã, Phường Phạm Đình Hổ, Quận Hai Bà Trưng, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-lucky-10-hoa-ma"
+      ],
+      "images": [
+        "/img/ktv/karaoke-lucky/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1062122279"
+    },
+    {
+      "id": 92,
+      "name": "Karaoke Luxury",
+      "slug": "karaoke-luxury",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "66 Nguyễn Phong Sắc, Phường Dịch Vọng, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Luxury là địa điểm karaoke tại 66 Nguyễn Phong Sắc, Phường Dịch Vọng, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-luxury-66-nguyen-phong-sac"
+      ],
+      "images": [
+        "/img/ktv/karaoke-luxury/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1040036237"
+    },
+    {
+      "id": 93,
+      "name": "Karaoke Luxury Hà Thành",
+      "slug": "karaoke-luxury-ha-thanh",
+      "city": "hn",
+      "area": "Huyện Thanh Trì",
+      "addr": "668 Kim Giang, Xã Thanh Liệt, Huyện Thanh Trì",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Luxury Hà Thành là địa điểm karaoke tại 668 Kim Giang, Xã Thanh Liệt, Huyện Thanh Trì, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-luxury-ha-thanh-668-kim-giang"
+      ],
+      "images": [
+        "/img/ktv/karaoke-luxury-ha-thanh/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1030724067"
+    },
+    {
+      "id": 94,
+      "name": "Karaoke LV",
+      "slug": "karaoke-lv",
+      "city": "hn",
+      "area": "Huyện Gia Lâm",
+      "addr": "314 Kiêu Kỵ, Xã Kiêu Kỵ, Huyện Gia Lâm, TP. Hà Nội",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke LV là địa điểm karaoke tại 314 Kiêu Kỵ, Xã Kiêu Kỵ, Huyện Gia Lâm, TP. Hà Nội, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-lv-314-kieu-ky"
+      ],
+      "images": [
+        "/img/ktv/karaoke-lv/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1077173422"
+    },
+    {
+      "id": 95,
+      "name": "Karaoke Mai Phương",
+      "slug": "karaoke-mai-phuong",
+      "city": "hn",
+      "area": "Quận Hoàn Kiếm",
+      "addr": "446 Bạch Đằng, Phường Chương Dương, Quận Hoàn Kiếm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Mai Phương là địa điểm karaoke tại 446 Bạch Đằng, Phường Chương Dương, Quận Hoàn Kiếm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-mai-phuong-446-bach-dang"
+      ],
+      "images": [
+        "/img/ktv/karaoke-mai-phuong/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1060702278"
+    },
+    {
+      "id": 96,
+      "name": "Karaoke Mai Phương",
+      "slug": "karaoke-mai-phuong-96",
+      "city": "hn",
+      "area": "Quận Hoàn Kiếm",
+      "addr": "609 Bạch Đằng, Phường Chương Dương, Quận Hoàn Kiếm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Mai Phương là địa điểm karaoke tại 609 Bạch Đằng, Phường Chương Dương, Quận Hoàn Kiếm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-mai-phuong-609-bach-dang"
+      ],
+      "images": [
+        "/img/ktv/karaoke-mai-phuong-96/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1060707982"
+    },
+    {
+      "id": 97,
+      "name": "Karaoke MAX 1987",
+      "slug": "karaoke-max-1987",
+      "city": "hn",
+      "area": "Quận Nam Từ Liêm",
+      "addr": "15 Lê Quang Đạo, Phường Mễ Trì, Quận Nam Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke MAX 1987 là địa điểm karaoke tại 15 Lê Quang Đạo, Phường Mễ Trì, Quận Nam Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-max-1987-15-le-quang-dao"
+      ],
+      "images": [
+        "/img/ktv/karaoke-max-1987/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1072509823"
+    },
+    {
+      "id": 98,
+      "name": "Karaoke Max Bar",
+      "slug": "karaoke-max-bar",
+      "city": "hn",
+      "area": "Huyện Đông Anh",
+      "addr": "22 Hậu Dưỡng, Xã Kim Chung, Huyện Đông Anh",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Max Bar là địa điểm karaoke tại 22 Hậu Dưỡng, Xã Kim Chung, Huyện Đông Anh, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-max-bar-22-hau-duong"
+      ],
+      "images": [
+        "/img/ktv/karaoke-max-bar/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1056909534"
+    },
+    {
+      "id": 99,
+      "name": "Karaoke Max Bar 2 - KCN Bắc Thăng Long",
+      "slug": "karaoke-max-bar-2-kcn-bac-thang-long",
+      "city": "hn",
+      "area": "Huyện Đông Anh",
+      "addr": "KCN Bắc Thăng Long, Xã Kim Chung, Huyện Đông Anh",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Max Bar 2 - KCN Bắc Thăng Long là địa điểm karaoke tại KCN Bắc Thăng Long, Xã Kim Chung, Huyện Đông Anh, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-max-bar-2-kcn-bac-thang-long"
+      ],
+      "images": [
+        "/img/ktv/karaoke-max-bar-2-kcn-bac-thang-long/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1056911529"
+    },
+    {
+      "id": 100,
+      "name": "Karaoke MAXXX",
+      "slug": "karaoke-maxxx",
+      "city": "hn",
+      "area": "Quận Hoàng Mai",
+      "addr": "36 Đền Lừ 2, Phường Hoàng Văn Thụ, Quận Hoàng Mai",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke MAXXX là địa điểm karaoke tại 36 Đền Lừ 2, Phường Hoàng Văn Thụ, Quận Hoàng Mai, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-maxxx-36-den-lu-2"
+      ],
+      "images": [
+        "/img/ktv/karaoke-maxxx/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1075737250"
+    },
+    {
+      "id": 101,
+      "name": "Karaoke Maxxx",
+      "slug": "karaoke-maxxx-101",
+      "city": "hn",
+      "area": "Quận Hoàng Mai",
+      "addr": "6 8 đường Bờ Sông Sét, Phường Giáp Bát, Quận Hoàng Mai",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Maxxx là địa điểm karaoke tại 6 8 đường Bờ Sông Sét, Phường Giáp Bát, Quận Hoàng Mai, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-maxxx-6-8-bo-song-set"
+      ],
+      "images": [
+        "/img/ktv/karaoke-maxxx-101/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1042987756"
+    },
+    {
+      "id": 102,
+      "name": "Karaoke McQueen",
+      "slug": "karaoke-mcqueen",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "29 Đê La Thành, Phường Chợ Dừa, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke McQueen là địa điểm karaoke tại 29 Đê La Thành, Phường Chợ Dừa, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-mcqueen-29-la-thanh"
+      ],
+      "images": [
+        "/img/ktv/karaoke-mcqueen/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1053675488"
+    },
+    {
+      "id": 103,
+      "name": "Karaoke Melia KTV",
+      "slug": "karaoke-melia-ktv",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "58 Trần Thái Tông, Phường Dịch Vọng Hậu, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Melia KTV là địa điểm karaoke tại 58 Trần Thái Tông, Phường Dịch Vọng Hậu, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-melia-ktv-58-tran-thai-tong"
+      ],
+      "images": [
+        "/img/ktv/karaoke-melia-ktv/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1062048466"
+    },
+    {
+      "id": 104,
+      "name": "Karaoke Melody",
+      "slug": "karaoke-melody",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "98 Trung Hòa, Phường Trung Hòa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Melody là địa điểm karaoke tại 98 Trung Hòa, Phường Trung Hòa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-melody-98-trung-hoa"
+      ],
+      "images": [
+        "/img/ktv/karaoke-melody/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1040837152"
+    },
+    {
+      "id": 105,
+      "name": "Karaoke Mercury",
+      "slug": "karaoke-mercury",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "254 Minh Khai, Phường Mai Động, Quận Hai Bà Trưng",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Mercury là địa điểm karaoke tại 254 Minh Khai, Phường Mai Động, Quận Hai Bà Trưng, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-mercury-254-minh-khai"
+      ],
+      "images": [
+        "/img/ktv/karaoke-mercury/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039947064"
+    },
+    {
+      "id": 106,
+      "name": "Karaoke Miss Teen KTV",
+      "slug": "karaoke-miss-teen-ktv",
+      "city": "hn",
+      "area": "Quận Ba Đình",
+      "addr": "53 Nguyễn Khắc Hiếu, Phường Trúc Bạch, Quận Ba Đình",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Miss Teen KTV là địa điểm karaoke tại 53 Nguyễn Khắc Hiếu, Phường Trúc Bạch, Quận Ba Đình, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-miss-teen-ktv-55a-nguyen-khac-hieu"
+      ],
+      "images": [
+        "/img/ktv/karaoke-miss-teen-ktv/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1075624427"
+    },
+    {
+      "id": 107,
+      "name": "Karaoke Monaco",
+      "slug": "karaoke-monaco",
+      "city": "hn",
+      "area": "Quận Long Biên",
+      "addr": "56 Ngô Gia Tự, Phường Ngô Gia Tự, Quận Long Biên",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Monaco là địa điểm karaoke tại 56 Ngô Gia Tự, Phường Ngô Gia Tự, Quận Long Biên, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-monaco-56-ngo-gia-tu"
+      ],
+      "images": [
+        "/img/ktv/karaoke-monaco/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1071484834"
+    },
+    {
+      "id": 108,
+      "name": "Karaoke Moonstar Club",
+      "slug": "karaoke-moonstar-club",
+      "city": "hn",
+      "area": "Quận Nam Từ Liêm",
+      "addr": "44 Mỹ Đình, Phường Mỹ Đình, Quận Nam Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Moonstar Club là địa điểm karaoke tại 44 Mỹ Đình, Phường Mỹ Đình, Quận Nam Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-moonstar-club-44-my-dinh"
+      ],
+      "images": [
+        "/img/ktv/karaoke-moonstar-club/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1041256618"
+    },
+    {
+      "id": 109,
+      "name": "Karaoke Napoleon",
+      "slug": "karaoke-napoleon",
+      "city": "hn",
+      "area": "Quận Nam Từ Liêm",
+      "addr": "8 Miếu Đầm, Phường Mễ Trì, Quận Nam Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Napoleon là địa điểm karaoke tại 8 Miếu Đầm, Phường Mễ Trì, Quận Nam Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-napoleon-8-mieu-dam"
+      ],
+      "images": [
+        "/img/ktv/karaoke-napoleon/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039954077"
+    },
+    {
+      "id": 110,
+      "name": "Karaoke New Ising",
+      "slug": "karaoke-new-ising",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "158 Lê Duẩn, Phường Khâm Thiên, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke New Ising là địa điểm karaoke tại 158 Lê Duẩn, Phường Khâm Thiên, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-new-ising-158-le-duan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-new-ising/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1030724160"
+    },
+    {
+      "id": 111,
+      "name": "Karaoke New King Club",
+      "slug": "karaoke-new-king-club",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "188 Nguyễn Văn Tuyết, Phường Trung Liệt, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke New King Club là địa điểm karaoke tại 188 Nguyễn Văn Tuyết, Phường Trung Liệt, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-new-king-club-188-nguyen-van-tuyet"
+      ],
+      "images": [
+        "/img/ktv/karaoke-new-king-club/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1058254517"
+    },
+    {
+      "id": 112,
+      "name": "Karaoke New Life",
+      "slug": "karaoke-new-life",
+      "city": "hn",
+      "area": "Quận Thanh Xuân",
+      "addr": "378 Kim Giang, Phường Đại Kim, Quận Thanh Xuân",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke New Life là địa điểm karaoke tại 378 Kim Giang, Phường Đại Kim, Quận Thanh Xuân, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-new-life-378-kim-giang"
+      ],
+      "images": [
+        "/img/ktv/karaoke-new-life/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039914122"
+    },
+    {
+      "id": 113,
+      "name": "Karaoke Nhất Thống",
+      "slug": "karaoke-nhat-thong",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "18 Thi Sách, Phường Ngô Thì Nhậm, Quận Hai Bà Trưng, Hà Nội ​​​​​​​",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Nhất Thống là địa điểm karaoke tại 18 Thi Sách, Phường Ngô Thì Nhậm, Quận Hai Bà Trưng, Hà Nội ​​​​​​​, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-nhat-thong-18-thi-sach"
+      ],
+      "images": [
+        "/img/ktv/karaoke-nhat-thong/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1049538813"
+    },
+    {
+      "id": 114,
+      "name": "Karaoke Nobel",
+      "slug": "karaoke-nobel",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "175 Trần Đăng Ninh, Phường Dịch Vọng, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Nobel là địa điểm karaoke tại 175 Trần Đăng Ninh, Phường Dịch Vọng, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-nobel-175-tran-dang-ninh"
+      ],
+      "images": [
+        "/img/ktv/karaoke-nobel/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1071629626"
+    },
+    {
+      "id": 115,
+      "name": "Karaoke Nobel",
+      "slug": "karaoke-nobel-115",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "39 Trung Hòa, Phường Trung Hòa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Nobel là địa điểm karaoke tại 39 Trung Hòa, Phường Trung Hòa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-nobel-39-trung-hoa"
+      ],
+      "images": [
+        "/img/ktv/karaoke-nobel-115/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1054061063"
+    },
+    {
+      "id": 116,
+      "name": "Karaoke Ocean",
+      "slug": "karaoke-ocean",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "45 Lê Ngọc Hân, Phường Phạm Đình Hổ, Quận Hai Bà Trưng",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Ocean là địa điểm karaoke tại 45 Lê Ngọc Hân, Phường Phạm Đình Hổ, Quận Hai Bà Trưng, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-ocean-45-le-ngoc-han"
+      ],
+      "images": [
+        "/img/ktv/karaoke-ocean/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1077007973"
+    },
+    {
+      "id": 117,
+      "name": "Karaoke Olala",
+      "slug": "karaoke-olala",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "62 Nguyên Hồng, Phường Láng Hạ, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Olala là địa điểm karaoke tại 62 Nguyên Hồng, Phường Láng Hạ, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-olala-62-nguyen-hong"
+      ],
+      "images": [
+        "/img/ktv/karaoke-olala/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1054060342"
+    },
+    {
+      "id": 118,
+      "name": "Karaoke Olala",
+      "slug": "karaoke-olala-118",
+      "city": "hn",
+      "area": "Quận Nam Từ Liêm",
+      "addr": "86 Nguyễn Hoàng, Phường Mỹ Đình, Quận Nam Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Olala là địa điểm karaoke tại 86 Nguyễn Hoàng, Phường Mỹ Đình, Quận Nam Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-olala-86-nguyen-hoang"
+      ],
+      "images": [
+        "/img/ktv/karaoke-olala-118/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039954239"
+    },
+    {
+      "id": 119,
+      "name": "Karaoke Opera",
+      "slug": "karaoke-opera",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "19 Hào Nam, Phường Chợ Dừa, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Opera là địa điểm karaoke tại 19 Hào Nam, Phường Chợ Dừa, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-opera-19-hao-nam"
+      ],
+      "images": [
+        "/img/ktv/karaoke-opera/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1065078715"
+    },
+    {
+      "id": 120,
+      "name": "Karaoke Palace KTV",
+      "slug": "karaoke-palace-ktv",
+      "city": "hn",
+      "area": "Quận Tây Hồ",
+      "addr": "135 Nghi Tàm, Phường Yên Phụ, Quận Tây Hồ",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Palace KTV là địa điểm karaoke tại 135 Nghi Tàm, Phường Yên Phụ, Quận Tây Hồ, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-palace-ktv-135-nghi-tam"
+      ],
+      "images": [
+        "/img/ktv/karaoke-palace-ktv/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039851594"
+    },
+    {
+      "id": 121,
+      "name": "Karaoke Paris",
+      "slug": "karaoke-paris",
+      "city": "hn",
+      "area": "Huyện Thanh Trì",
+      "addr": "502 Kim Giang, Xã Thanh Liệt, Huyện Thanh Trì",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Paris là địa điểm karaoke tại 502 Kim Giang, Xã Thanh Liệt, Huyện Thanh Trì, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-paris-502-kim-giang",
+        "https://www.9life.com.vn/products/karaoke-paris-club-kdt-tay-nam-linh-dam"
+      ],
+      "images": [
+        "/img/ktv/karaoke-paris/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1057538565"
+    },
+    {
+      "id": 122,
+      "name": "Karaoke Paris",
+      "slug": "karaoke-paris-122",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "69 Trần Thái Tông, Phường Dịch Vọng Hậu, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Paris là địa điểm karaoke tại 69 Trần Thái Tông, Phường Dịch Vọng Hậu, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-paris-69-tran-thai-tong"
+      ],
+      "images": [
+        "/img/ktv/karaoke-paris-122/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1076930414"
+    },
+    {
+      "id": 123,
+      "name": "Karaoke Pattaya",
+      "slug": "karaoke-pattaya",
+      "city": "hn",
+      "area": "Quận Thanh Xuân",
+      "addr": "204 Nguyễn Tuân, Phường Nhân Chính, Quận Thanh Xuân",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Pattaya là địa điểm karaoke tại 204 Nguyễn Tuân, Phường Nhân Chính, Quận Thanh Xuân, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-pattaya-204-nguyen-tuan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-pattaya/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1054641399"
+    },
+    {
+      "id": 124,
+      "name": "Karaoke Phi Thuyền Club - Cù Sơn",
+      "slug": "karaoke-phi-thuyen-club-cu-son",
+      "city": "hn",
+      "area": "Huyện Hoài Đức",
+      "addr": "Đường Cù Sơn, Xã Vân Côn, Huyện Hoài Đức",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Phi Thuyền Club - Cù Sơn là địa điểm karaoke tại Đường Cù Sơn, Xã Vân Côn, Huyện Hoài Đức, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-phi-thuyen-club-cu-son"
+      ],
+      "images": [
+        "/img/ktv/karaoke-phi-thuyen-club-cu-son/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1058074901"
+    },
+    {
+      "id": 125,
+      "name": "Karaoke Phú Hương",
+      "slug": "karaoke-phu-huong",
+      "city": "hn",
+      "area": "Quận Hoàn Kiếm",
+      "addr": "18 Liên Trì, Phường Trần Hưng Đạo, Quận Hoàn Kiếm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Phú Hương là địa điểm karaoke tại 18 Liên Trì, Phường Trần Hưng Đạo, Quận Hoàn Kiếm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-phu-huong-18-lien-tri"
+      ],
+      "images": [
+        "/img/ktv/karaoke-phu-huong/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1054252914"
+    },
+    {
+      "id": 126,
+      "name": "Karaoke Phương Anh",
+      "slug": "karaoke-phuong-anh",
+      "city": "hn",
+      "area": "Quận Hoàn Kiếm",
+      "addr": "29 32 Nguyên Khiết, Phường Phúc Tân, Quận Hoàn Kiếm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Phương Anh là địa điểm karaoke tại 29 32 Nguyên Khiết, Phường Phúc Tân, Quận Hoàn Kiếm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-phuong-anh-29-32-nguyen-khiet"
+      ],
+      "images": [
+        "/img/ktv/karaoke-phuong-anh/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039914282"
+    },
+    {
+      "id": 127,
+      "name": "Karaoke Q7",
+      "slug": "karaoke-q7",
+      "city": "hn",
+      "area": "Quận Hoàng Mai",
+      "addr": "61 Kim Đồng, Phường Giáp Bát, Quận Hoàng Mai",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Q7 là địa điểm karaoke tại 61 Kim Đồng, Phường Giáp Bát, Quận Hoàng Mai, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-q7-61-kim-dong"
+      ],
+      "images": [
+        "/img/ktv/karaoke-q7/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1030729977"
+    },
+    {
+      "id": 128,
+      "name": "Karaoke Raptor",
+      "slug": "karaoke-raptor",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "116 Bùi Thị Xuân, Phường Bùi Thị Xuân, Quận Hai Bà Trưng",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Raptor là địa điểm karaoke tại 116 Bùi Thị Xuân, Phường Bùi Thị Xuân, Quận Hai Bà Trưng, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-raptor-116-bui-thi-xuan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-raptor/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1057451849"
+    },
+    {
+      "id": 129,
+      "name": "Karaoke Rome",
+      "slug": "karaoke-rome",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "454 Trần Khát Chân, Phường Phố Huế, Quận Hai Bà Trưng",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Rome là địa điểm karaoke tại 454 Trần Khát Chân, Phường Phố Huế, Quận Hai Bà Trưng, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-rome-454-tran-khat-chan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-rome/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1076005640"
+    },
+    {
+      "id": 130,
+      "name": "Karaoke Royal Club",
+      "slug": "karaoke-royal-club",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "97 Đường Cầu Giấy, Phường Quan Hoa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Royal Club là địa điểm karaoke tại 97 Đường Cầu Giấy, Phường Quan Hoa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-royal-club-97-cau-giay"
+      ],
+      "images": [
+        "/img/ktv/karaoke-royal-club/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1066218779"
+    },
+    {
+      "id": 131,
+      "name": "Karaoke Ruby Club",
+      "slug": "karaoke-ruby-club",
+      "city": "hn",
+      "area": "Quận Hà Đông",
+      "addr": "4 Tô Hiệu, Phường Nguyễn Trãi, Quận Hà Đông",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Ruby Club là địa điểm karaoke tại 4 Tô Hiệu, Phường Nguyễn Trãi, Quận Hà Đông, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-ruby-club-4-to-hieu"
+      ],
+      "images": [
+        "/img/ktv/karaoke-ruby-club/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1055262494"
+    },
+    {
+      "id": 132,
+      "name": "Karaoke S KTV",
+      "slug": "karaoke-s-ktv",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "12 Nguyễn Khang, Phường Yên Hòa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke S KTV là địa điểm karaoke tại 12 Nguyễn Khang, Phường Yên Hòa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-s-ktv-12-nguyen-khang"
+      ],
+      "images": [
+        "/img/ktv/karaoke-s-ktv/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1068030973"
+    },
+    {
+      "id": 133,
+      "name": "Karaoke Santana",
+      "slug": "karaoke-santana",
+      "city": "hn",
+      "area": "Quận Nam Từ Liêm",
+      "addr": "199 Trần Bình, Phường Mỹ Đình, Quận Nam Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Santana là địa điểm karaoke tại 199 Trần Bình, Phường Mỹ Đình, Quận Nam Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-santana-199-tran-binh"
+      ],
+      "images": [
+        "/img/ktv/karaoke-santana/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039953584"
+    },
+    {
+      "id": 134,
+      "name": "Karaoke Sentosa",
+      "slug": "karaoke-sentosa",
+      "city": "hn",
+      "area": "Quận Ba Đình",
+      "addr": "133 Trúc Bạch, Phường Trúc Bạch, Quận Ba Đình",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Sentosa là địa điểm karaoke tại 133 Trúc Bạch, Phường Trúc Bạch, Quận Ba Đình, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-sentosa-133-truc-bach"
+      ],
+      "images": [
+        "/img/ktv/karaoke-sentosa/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039866822"
+    },
+    {
+      "id": 135,
+      "name": "Karaoke Seoul",
+      "slug": "karaoke-seoul",
+      "city": "hn",
+      "area": "Quận Nam Từ Liêm",
+      "addr": "12 Phú Mỹ, Phường Mỹ Đình, Quận Nam Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Seoul là địa điểm karaoke tại 12 Phú Mỹ, Phường Mỹ Đình, Quận Nam Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-seoul-12-63-phu-my"
+      ],
+      "images": [
+        "/img/ktv/karaoke-seoul/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1056773251"
+    },
+    {
+      "id": 136,
+      "name": "Karaoke Sol",
+      "slug": "karaoke-sol",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "172 Nguyễn Khánh Toàn, Phường Quan Hoa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Sol là địa điểm karaoke tại 172 Nguyễn Khánh Toàn, Phường Quan Hoa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-sol-172-nguyen-khanh-toan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-sol/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1053824400"
+    },
+    {
+      "id": 137,
+      "name": "Karaoke Star KTV",
+      "slug": "karaoke-star-ktv",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "100/360 Xã Đàn, Phường Phương Liên, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Star KTV là địa điểm karaoke tại 100/360 Xã Đàn, Phường Phương Liên, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-star-ktv-100-360-xa-dan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-star-ktv/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1072407114"
+    },
+    {
+      "id": 138,
+      "name": "Karaoke T KTV",
+      "slug": "karaoke-t-ktv",
+      "city": "hn",
+      "area": "Quận Hà Đông",
+      "addr": "21 Phan Hiền, Khu Đô Thị An Hưng, Phường Dương Nội, Quận Hà Đông, TP. Hà Nội",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke T KTV là địa điểm karaoke tại 21 Phan Hiền, Khu Đô Thị An Hưng, Phường Dương Nội, Quận Hà Đông, TP. Hà Nội, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-t-ktv-21-phan-hien"
+      ],
+      "images": [
+        "/img/ktv/karaoke-t-ktv/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1076449059"
+    },
+    {
+      "id": 139,
+      "name": "Karaoke The Park",
+      "slug": "karaoke-the-park",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "116 Tuệ Tĩnh, Phường Nguyễn Du, Quận Hai Bà Trưng",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke The Park là địa điểm karaoke tại 116 Tuệ Tĩnh, Phường Nguyễn Du, Quận Hai Bà Trưng, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-the-park-116-tue-tinh"
+      ],
+      "images": [
+        "/img/ktv/karaoke-the-park/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1074344240"
+    },
+    {
+      "id": 140,
+      "name": "Karaoke The Voice",
+      "slug": "karaoke-the-voice",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "171 Quan Hoa, Phường Quan Hoa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke The Voice là địa điểm karaoke tại 171 Quan Hoa, Phường Quan Hoa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-the-voice-173-quan-hoa"
+      ],
+      "images": [
+        "/img/ktv/karaoke-the-voice/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039953300"
+    },
+    {
+      "id": 141,
+      "name": "Karaoke The World",
+      "slug": "karaoke-the-world",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "408 Trần Khát Chân, Phường Thanh Nhàn, Quận Hai Bà Trưng",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke The World là địa điểm karaoke tại 408 Trần Khát Chân, Phường Thanh Nhàn, Quận Hai Bà Trưng, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-the-world-408-tran-khat-chan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-the-world/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039914169"
+    },
+    {
+      "id": 142,
+      "name": "Karaoke Thượng Hải KTV",
+      "slug": "karaoke-thuong-hai-ktv",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "229 Tây Sơn, Phường Ngã Tư Sở, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Thượng Hải KTV là địa điểm karaoke tại 229 Tây Sơn, Phường Ngã Tư Sở, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-thuong-hai-ktv-229-tay-son"
+      ],
+      "images": [
+        "/img/ktv/karaoke-thuong-hai-ktv/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1068013053"
+    },
+    {
+      "id": 143,
+      "name": "Karaoke Tiptop",
+      "slug": "karaoke-tiptop",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "85G Nguyễn Khang, Phường Yên Hòa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Tiptop là địa điểm karaoke tại 85G Nguyễn Khang, Phường Yên Hòa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-tiptop-85g-nguyen-khang"
+      ],
+      "images": [
+        "/img/ktv/karaoke-tiptop/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039891121"
+    },
+    {
+      "id": 144,
+      "name": "Karaoke Titan",
+      "slug": "karaoke-titan",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "14 Vũ Phạm Hàm, Phường Trung Hòa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Titan là địa điểm karaoke tại 14 Vũ Phạm Hàm, Phường Trung Hòa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-titan-14-vu-pham-ham"
+      ],
+      "images": [
+        "/img/ktv/karaoke-titan/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039891653"
+    },
+    {
+      "id": 145,
+      "name": "Karaoke Titan",
+      "slug": "karaoke-titan-145",
+      "city": "hn",
+      "area": "Quận Tây Hồ",
+      "addr": "244 Võ Chí Công, Phường Xuân La, Quận Tây Hồ",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Titan là địa điểm karaoke tại 244 Võ Chí Công, Phường Xuân La, Quận Tây Hồ, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-titan-244-vo-chi-cong"
+      ],
+      "images": [
+        "/img/ktv/karaoke-titan-145/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1061870579"
+    },
+    {
+      "id": 146,
+      "name": "Karaoke Titanic",
+      "slug": "karaoke-titanic",
+      "city": "hn",
+      "area": "Quận Bắc Từ Liêm",
+      "addr": "31 Ngõ 31 Văn Hội, Phường Đông Ngạc, Quận Bắc Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Titanic là địa điểm karaoke tại 31 Ngõ 31 Văn Hội, Phường Đông Ngạc, Quận Bắc Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-titanic-31-ngo-31-van-hoi"
+      ],
+      "images": [
+        "/img/ktv/karaoke-titanic/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1056858138"
+    },
+    {
+      "id": 147,
+      "name": "Karaoke Titanic",
+      "slug": "karaoke-titanic-147",
+      "city": "hn",
+      "area": "Quận Thanh Xuân",
+      "addr": "45 Giáp Nhất, Phường Thượng Đình, Quận Thanh Xuân",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Titanic là địa điểm karaoke tại 45 Giáp Nhất, Phường Thượng Đình, Quận Thanh Xuân, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-titanic-45-giap-nhat"
+      ],
+      "images": [
+        "/img/ktv/karaoke-titanic-147/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039866076"
+    },
+    {
+      "id": 148,
+      "name": "Karaoke Titanic",
+      "slug": "karaoke-titanic-148",
+      "city": "hn",
+      "area": "Quận Bắc Từ Liêm",
+      "addr": "485 An Dương Vương, Phường Đông Ngạc, Quận Bắc Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Titanic là địa điểm karaoke tại 485 An Dương Vương, Phường Đông Ngạc, Quận Bắc Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-titanic-485-an-duong-vuong"
+      ],
+      "images": [
+        "/img/ktv/karaoke-titanic-148/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1056856740"
+    },
+    {
+      "id": 149,
+      "name": "Karaoke Titanic KTV",
+      "slug": "karaoke-titanic-ktv",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "51, 53 Thái Thịnh, Phường Thịnh Quang, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Titanic KTV là địa điểm karaoke tại 51, 53 Thái Thịnh, Phường Thịnh Quang, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-titanic-ktv-51-53-thai-thinh"
+      ],
+      "images": [
+        "/img/ktv/karaoke-titanic-ktv/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1069994862"
+    },
+    {
+      "id": 150,
+      "name": "Karaoke V Party",
+      "slug": "karaoke-v-party",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "5 Hồ Đắc Di, Phường Nam Đồng, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke V Party là địa điểm karaoke tại 5 Hồ Đắc Di, Phường Nam Đồng, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-v-party-05-ho-dac-di"
+      ],
+      "images": [
+        "/img/ktv/karaoke-v-party/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1072179942"
+    },
+    {
+      "id": 151,
+      "name": "Karaoke V-Max",
+      "slug": "karaoke-v-max",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "402 Đê La Thành, Phường Chợ Dừa, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke V-Max là địa điểm karaoke tại 402 Đê La Thành, Phường Chợ Dừa, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-v-max-402-de-la-thanh"
+      ],
+      "images": [
+        "/img/ktv/karaoke-v-max/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1077707212"
+    },
+    {
+      "id": 152,
+      "name": "Karaoke Vertu",
+      "slug": "karaoke-vertu",
+      "city": "hn",
+      "area": "Quận Hai Bà Trưng",
+      "addr": "306 Trần Khát Chân, Phường Đống Mác, Quận Hai Bà Trưng",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Vertu là địa điểm karaoke tại 306 Trần Khát Chân, Phường Đống Mác, Quận Hai Bà Trưng, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-vertu-306-tran-khat-chan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-vertu/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039913557"
+    },
+    {
+      "id": 153,
+      "name": "Karaoke Victory",
+      "slug": "karaoke-victory",
+      "city": "hn",
+      "area": "Huyện Thanh Trì",
+      "addr": "22 Nghiêm Xuân Yêm, Xã Thanh Liệt, Huyện Thanh Trì",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Victory là địa điểm karaoke tại 22 Nghiêm Xuân Yêm, Xã Thanh Liệt, Huyện Thanh Trì, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-victory-22-nghiem-xuan-yem"
+      ],
+      "images": [
+        "/img/ktv/karaoke-victory/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1068892927"
+    },
+    {
+      "id": 154,
+      "name": "Karaoke Vip KTV",
+      "slug": "karaoke-vip-ktv",
+      "city": "hn",
+      "area": "Quận Thanh Xuân",
+      "addr": "L4, 38 Khu đô thị Đại Kim, Phường Đại Kim, Quận Thanh Xuân",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Vip KTV là địa điểm karaoke tại L4, 38 Khu đô thị Đại Kim, Phường Đại Kim, Quận Thanh Xuân, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-vip-ktv-l4-38-kdt-dai-kim"
+      ],
+      "images": [
+        "/img/ktv/karaoke-vip-ktv/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1066735552"
+    },
+    {
+      "id": 155,
+      "name": "Karaoke Vol 1",
+      "slug": "karaoke-vol-1",
+      "city": "hn",
+      "area": "Quận Thanh Xuân",
+      "addr": "20 Nguyễn Lân, Phường Phương Liệt, Quận Thanh Xuân",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Vol 1 là địa điểm karaoke tại 20 Nguyễn Lân, Phường Phương Liệt, Quận Thanh Xuân, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-vol1-20-nguyen-lan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-vol-1/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039913713"
+    },
+    {
+      "id": 156,
+      "name": "Karaoke Voll 2",
+      "slug": "karaoke-voll-2",
+      "city": "hn",
+      "area": "Quận Hoàng Mai",
+      "addr": "99 Nguyễn Hữu Thọ, Phường Đại Kim, Quận Hoàng Mai",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Voll 2 là địa điểm karaoke tại 99 Nguyễn Hữu Thọ, Phường Đại Kim, Quận Hoàng Mai, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-voll-2-99-nguyen-huu-tho"
+      ],
+      "images": [
+        "/img/ktv/karaoke-voll-2/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1052945287"
+    },
+    {
+      "id": 157,
+      "name": "Karaoke Volume",
+      "slug": "karaoke-volume",
+      "city": "hn",
+      "area": "Quận Nam Từ Liêm",
+      "addr": "Tầng 2 3, Tòa Volume, KĐT Hateco Apollo, Phường Xuân Phương, Quận Nam Từ Liêm",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Volume là địa điểm karaoke tại Tầng 2 3, Tòa Volume, KĐT Hateco Apollo, Phường Xuân Phương, Quận Nam Từ Liêm, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-volume-kdt-hateco-apollo-xuan-phuong"
+      ],
+      "images": [
+        "/img/ktv/karaoke-volume/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1054409077"
+    },
+    {
+      "id": 158,
+      "name": "Karaoke VPop",
+      "slug": "karaoke-vpop",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "50 Trung Hòa, Phường Trung Hoà, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke VPop là địa điểm karaoke tại 50 Trung Hòa, Phường Trung Hoà, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-vpop-50-trung-hoa"
+      ],
+      "images": [
+        "/img/ktv/karaoke-vpop/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1052925451"
+    },
+    {
+      "id": 159,
+      "name": "Karaoke Vũ Hải - Ngõ 143 Quan Hoa",
+      "slug": "karaoke-vu-hai-ngo-143-quan-hoa",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "23/143 Quan Hoa, Phường Quan Hoa, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Vũ Hải - Ngõ 143 Quan Hoa là địa điểm karaoke tại 23/143 Quan Hoa, Phường Quan Hoa, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-vu-hai-ngo-143-quan-hoa"
+      ],
+      "images": [
+        "/img/ktv/karaoke-vu-hai-ngo-143-quan-hoa/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1030724125"
+    },
+    {
+      "id": 160,
+      "name": "Karaoke X9 - Ngõ 66B Triều Khúc",
+      "slug": "karaoke-x9-ngo-66b-trieu-khuc",
+      "city": "hn",
+      "area": "Quận Thanh Xuân",
+      "addr": "6A, Ngõ 66B Triều Khúc, Phường Thanh Xuân Nam, Quận Thanh Xuân",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke X9 - Ngõ 66B Triều Khúc là địa điểm karaoke tại 6A, Ngõ 66B Triều Khúc, Phường Thanh Xuân Nam, Quận Thanh Xuân, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-x9-ngo-66b-trieu-khuc"
+      ],
+      "images": [
+        "/img/ktv/karaoke-x9-ngo-66b-trieu-khuc/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1054059353"
+    },
+    {
+      "id": 161,
+      "name": "Karaoke Zenpearl Club",
+      "slug": "karaoke-zenpearl-club",
+      "city": "hn",
+      "area": "Quận Hà Đông",
+      "addr": "15A Nguyễn Văn Lộc, Phường Mộ Lao, Quận Hà Đông",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Zenpearl Club là địa điểm karaoke tại 15A Nguyễn Văn Lộc, Phường Mộ Lao, Quận Hà Đông, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-zenpearl-club-15a-nguyen-van-loc"
+      ],
+      "images": [
+        "/img/ktv/karaoke-zenpearl-club/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1065452133"
+    },
+    {
+      "id": 162,
+      "name": "Karaoke Zone 9",
+      "slug": "karaoke-zone-9",
+      "city": "hn",
+      "area": "Quận Thanh Xuân",
+      "addr": "179 Nguyễn Tuân, Phường Nhân Chính, Quận Thanh Xuân",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Zone 9 là địa điểm karaoke tại 179 Nguyễn Tuân, Phường Nhân Chính, Quận Thanh Xuân, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-zone-9-179-nguyen-tuan"
+      ],
+      "images": [
+        "/img/ktv/karaoke-zone-9/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1059362463"
+    },
+    {
+      "id": 163,
+      "name": "Karaoke Zozo",
+      "slug": "karaoke-zozo",
+      "city": "hn",
+      "area": "Quận Cầu Giấy",
+      "addr": "12 Trần Kim Xuyến, Phường Yên Hoà, Quận Cầu Giấy",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Zozo là địa điểm karaoke tại 12 Trần Kim Xuyến, Phường Yên Hoà, Quận Cầu Giấy, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-zozo-12-tran-kim-xuyen"
+      ],
+      "images": [
+        "/img/ktv/karaoke-zozo/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1049422180"
+    },
+    {
+      "id": 164,
+      "name": "Karaoke Zozo",
+      "slug": "karaoke-zozo-164",
+      "city": "hn",
+      "area": "Quận Đống Đa",
+      "addr": "544 Láng, Phường Láng Hạ, Quận Đống Đa",
+      "segment": "Đối tác",
+      "hours": "",
+      "price": [],
+      "features": [
+        "Địa điểm karaoke đối tác từ 9Life",
+        "Liên hệ TopChill để xác nhận giá phòng và ưu đãi"
+      ],
+      "desc": "Karaoke Zozo là địa điểm karaoke tại 544 Láng, Phường Láng Hạ, Quận Đống Đa, Hà Nội. Quán thuộc hệ thống đối tác được 9Life công bố. Bạn nên gọi tổng đài TopChill để xác nhận giờ mở cửa, giá phòng, loại phòng và ưu đãi hiện tại trước khi đến.",
+      "sources": [
+        "https://www.9life.com.vn/products/karaoke-zozo-544-lang"
+      ],
+      "images": [
+        "/img/ktv/karaoke-zozo-164/9life.webp"
+      ],
+      "pin": null,
+      "hidden": false,
+      "source9lifeId": "1039891555"
     }
   ],
   "ghepAdmin": {
