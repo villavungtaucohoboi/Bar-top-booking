@@ -323,7 +323,7 @@ ${ld.filter(Boolean).map(x => `<script type="application/ld+json">${JSON.stringi
 ${HEAD_SCRIPT}`;
 }
 const STAMP = Date.now().toString(36);
-const CHAT_TAGS = () => `<link rel="stylesheet" href="${href('assets/chat.css')}?v=${STAMP}">\n<script src="${href('assets/chat-data.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/chat.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/music.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/install.js')}?v=${STAMP}" defer></script>`;
+const CHAT_TAGS = () => `<link rel="stylesheet" href="${href('assets/chat.css')}?v=${STAMP}">\n<script src="${href('assets/chat-data.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/chat.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/music.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/install.js')}?v=${STAMP}" defer></script>\n<script src="${href('assets/hscroll.js')}?v=${STAMP}" defer></script>`;
 const NAV = [['bar-ha-noi/', 'Bar Hà Nội'], ['bar-sai-gon/', 'Bar Sài Gòn'], ['bar-da-nang/', 'Bar Đà Nẵng'], ['ghep-ban/', '🔥 Ghép bàn'], ['karaoke-ha-noi/', '🎤 Karaoke'], ['blog/', 'Cẩm nang']];
 function header(active) {
   const links = NAV.map(([p, t]) => `<a href="${href(p)}"${active === p ? ' aria-current="page"' : ''}>${t}</a>`).join('');
@@ -1185,6 +1185,7 @@ fs.copyFileSync(path.join(ROOT, 'src/site.css'), path.join(OUT, 'assets/site.css
 fs.copyFileSync(path.join(ROOT, 'src/chat.css'), path.join(OUT, 'assets/chat.css'));
 fs.copyFileSync(path.join(ROOT, 'src/chat.js'), path.join(OUT, 'assets/chat.js'));
 fs.copyFileSync(path.join(ROOT, 'src/ghep.js'), path.join(OUT, 'assets/ghep.js'));
+fs.copyFileSync(path.join(ROOT, 'src/hscroll.js'), path.join(OUT, 'assets/hscroll.js'));
 fs.copyFileSync(path.join(ROOT, 'src/music.js'), path.join(OUT, 'assets/music.js'));
 fs.copyFileSync(path.join(ROOT, 'src/install.js'), path.join(OUT, 'assets/install.js'));
 // ảnh bar đã up
@@ -1192,7 +1193,7 @@ fs.copyFileSync(path.join(ROOT, 'src/install.js'), path.join(OUT, 'assets/instal
   const cp = (a, b) => { fs.mkdirSync(b, { recursive: true }); for (const f of fs.readdirSync(a, { withFileTypes: true })) { if (f.isDirectory()) cp(path.join(a, f.name), path.join(b, f.name)); else if (/\.(webp|jpe?g|png)$/i.test(f.name)) fs.copyFileSync(path.join(a, f.name), path.join(b, f.name)); } };
   if (fs.existsSync(src)) cp(src, dst);
   const ks = path.join(ROOT, 'content/img/ktv'); if (fs.existsSync(ks)) cp(ks, path.join(OUT, 'img/ktv')); }
-GENERATED.push('assets/site.css', 'assets/chat.css', 'assets/chat.js', 'assets/ghep.js', 'assets/music.js', 'assets/install.js');
+GENERATED.push('assets/site.css', 'assets/chat.css', 'assets/chat.js', 'assets/ghep.js', 'assets/hscroll.js', 'assets/music.js', 'assets/install.js');
 {
   const order = ranked(BARS);
   const data = { base: BASE, nt: CFG.ntfyTopic || '', ap: DATA.ghepAdmin || null, promoMax: PROMO.max, w3f: CFG.web3formsKey || '', hotline: CFG.hotline, demo: !!CFG.chatDemo && !(CFG.tawkPropertyId && CFG.tawkWidgetId), zalo: CFG.zalo || '', messenger: CFG.messenger || '', telegram: CFG.telegram || '',
