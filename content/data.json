@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03",
+ "updated": "2026-11-28",
  "ticker": [
   "🔥 Đặt bàn bar Hà Nội, Sài Gòn, Đà Nẵng chỉ trong 30 giây",
   "📞 Tổng đài 0838 000 222 giữ bàn giúp bạn mỗi tối",
@@ -10466,5 +10466,15 @@
    "pin": 4,
    "hidden": false
   }
- ]
+ ],
+ "ghepAdmin": {
+  "s": {
+   "x": "cbs2OFzgdU59gVL9aDvQcKKcZHm-xDbNhJJ_9lE5i0c",
+   "y": "zbUo2SpyroT31a-ArVDjWgEoKMcF43zbg7k5zb7VcsI"
+  },
+  "d": {
+   "x": "dDbo-mOsPbpYqYouczQ6lXykcepK5FkQINlyHrnMLj8",
+   "y": "BUVDpoKdP48eGe2dicCbpoIPHlV2mVubzQl4gCxpXtU"
+  }
+ }
 }
